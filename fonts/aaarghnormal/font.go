@@ -18,30 +18,6 @@ var aaarghnormalFont = &fonts.Font{
 	Descent:          -300,
 	MissingHorizAdvX: 467,
 	Glyphs: map[string]*fonts.Glyph{
-		"\r": {
-			HorizAdvX: 467,
-			Unicode:   "\r",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		" ": {
-			HorizAdvX: 467,
-			Unicode:   " ",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\t": {
-			HorizAdvX: 467,
-			Unicode:   "\t",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u00a0": {
-			HorizAdvX: 467,
-			Unicode:   "\u00a0",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
 		"!": {
 			HorizAdvX: 262,
 			Unicode:   "!",
@@ -3265,24 +3241,6 @@ var aaarghnormalFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d2": {
-			HorizAdvX: 0,
-			Unicode:   "\u00d2",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u00d3": {
-			HorizAdvX: 0,
-			Unicode:   "\u00d3",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u00d6": {
-			HorizAdvX: 0,
-			Unicode:   "\u00d6",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
 		"\u00d7": {
 			HorizAdvX: 459,
 			Unicode:   "\u00d7",
@@ -3999,72 +3957,6 @@ var aaarghnormalFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2000": {
-			HorizAdvX: 483,
-			Unicode:   "\u2000",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2001": {
-			HorizAdvX: 967,
-			Unicode:   "\u2001",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2002": {
-			HorizAdvX: 483,
-			Unicode:   "\u2002",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2003": {
-			HorizAdvX: 967,
-			Unicode:   "\u2003",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2004": {
-			HorizAdvX: 322,
-			Unicode:   "\u2004",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2005": {
-			HorizAdvX: 241,
-			Unicode:   "\u2005",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2006": {
-			HorizAdvX: 161,
-			Unicode:   "\u2006",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2007": {
-			HorizAdvX: 161,
-			Unicode:   "\u2007",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2008": {
-			HorizAdvX: 120,
-			Unicode:   "\u2008",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2009": {
-			HorizAdvX: 193,
-			Unicode:   "\u2009",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u200a": {
-			HorizAdvX: 53,
-			Unicode:   "\u200a",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
 		"\u2010": {
 			HorizAdvX: 377,
 			Unicode:   "\u2010",
@@ -4129,18 +4021,6 @@ var aaarghnormalFont = &fonts.Font{
 				{C: 'v', P: []float64{-49}},
 				{C: 'z'},
 			},
-		},
-		"\u202f": {
-			HorizAdvX: 193,
-			Unicode:   "\u202f",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u205f": {
-			HorizAdvX: 241,
-			Unicode:   "\u205f",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
 		},
 		"\u20ac": {
 			HorizAdvX: 699,

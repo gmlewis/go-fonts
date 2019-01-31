@@ -18,24 +18,6 @@ var pacificoFont = &fonts.Font{
 	Descent:          -610,
 	MissingHorizAdvX: 545,
 	Glyphs: map[string]*fonts.Glyph{
-		" ": {
-			HorizAdvX: 545,
-			Unicode:   " ",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\t": {
-			HorizAdvX: 545,
-			Unicode:   "\t",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u00a0": {
-			HorizAdvX: 545,
-			Unicode:   "\u00a0",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
 		"!": {
 			HorizAdvX: 1184,
 			Unicode:   "!",
@@ -7563,72 +7545,6 @@ var pacificoFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2000": {
-			HorizAdvX: 993,
-			Unicode:   "\u2000",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2001": {
-			HorizAdvX: 1987,
-			Unicode:   "\u2001",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2002": {
-			HorizAdvX: 993,
-			Unicode:   "\u2002",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2003": {
-			HorizAdvX: 1987,
-			Unicode:   "\u2003",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2004": {
-			HorizAdvX: 662,
-			Unicode:   "\u2004",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2005": {
-			HorizAdvX: 496,
-			Unicode:   "\u2005",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2006": {
-			HorizAdvX: 331,
-			Unicode:   "\u2006",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2007": {
-			HorizAdvX: 331,
-			Unicode:   "\u2007",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2008": {
-			HorizAdvX: 248,
-			Unicode:   "\u2008",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u2009": {
-			HorizAdvX: 397,
-			Unicode:   "\u2009",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u200a": {
-			HorizAdvX: 110,
-			Unicode:   "\u200a",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
 		"\u2010": {
 			HorizAdvX: 768,
 			Unicode:   "\u2010",
@@ -8027,18 +7943,6 @@ var pacificoFont = &fonts.Font{
 				{C: 't', P: []float64{43, -120}},
 				{C: 'z'},
 			},
-		},
-		"\u202f": {
-			HorizAdvX: 397,
-			Unicode:   "\u202f",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
-		},
-		"\u205f": {
-			HorizAdvX: 496,
-			Unicode:   "\u205f",
-			GerberLP:  "",
-			PathSteps: []*fonts.PathStep{},
 		},
 		"\u20ac": {
 			HorizAdvX: 1857,

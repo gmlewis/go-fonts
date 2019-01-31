@@ -29,6 +29,25 @@ type Polygon struct {
 	Pts  []Pt
 }
 
+func (p *Polygon) Area() float64 {
+	var xmin, xmax, ymin, ymax float64
+	for i, pt := range p.Pts {
+		if i == 0 || pt.X < xmin {
+			xmin = pt.X
+		}
+		if i == 0 || pt.X > xmax {
+			xmax = pt.X
+		}
+		if i == 0 || pt.Y < ymin {
+			ymin = pt.Y
+		}
+		if i == 0 || pt.Y > ymax {
+			ymax = pt.Y
+		}
+	}
+	return (xmax - xmin) * (ymax - ymin)
+}
+
 // Pt represents a 2D Point.
 type Pt struct {
 	X, Y float64
@@ -60,7 +79,11 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 		log.Printf("Could not find font %q: using %q instead", fontName, name)
 	}
 
-	fsf := 1.0 / font.HorizAdvX
+	if font.HorizAdvX == 0 {
+		font.HorizAdvX = font.UnitsPerEm
+	}
+
+	fsf := 1.0 / font.UnitsPerEm
 	t := &TextT{
 		x:      xPos,
 		y:      yPos,
@@ -86,7 +109,7 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 			x += t.xScale * t.font.HorizAdvX
 			continue
 		}
-		dx, r := g.render(x, y, t.xScale, t.yScale)
+		dx, r := g.Render(x, y, t.xScale, t.yScale)
 		if len(result.Polygons) == 0 || r.Xmin < result.Xmin {
 			result.Xmin = r.Xmin
 		}
@@ -108,8 +131,8 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 	return result, nil
 }
 
-// render renders a glyph to polygons.
-func (g *Glyph) render(x, y, xScale, yScale float64) (float64, *Render) {
+// Render renders a glyph to polygons.
+func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 	oX, oY := x, y         // origin for this glyph
 	var pts []Pt           // Current polygon
 	currentPolarity := "d" // d=dark, c=clear

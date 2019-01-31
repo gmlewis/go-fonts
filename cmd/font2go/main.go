@@ -12,6 +12,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"regexp"
 	"sort"
 	"strings"
 	"text/template"
@@ -28,6 +29,8 @@ var (
 		"orEmpty": orEmpty,
 		"utf8":    utf8Escape,
 	}
+
+	digitRE = regexp.MustCompile(`^\d`)
 )
 
 func main() {
@@ -47,9 +50,19 @@ func main() {
 
 		fontData.Font.ID = strings.ToLower(fontData.Font.ID)
 		fontData.Font.ID = strings.Replace(fontData.Font.ID, "-", "_", -1)
+		if digitRE.MatchString(fontData.Font.ID) {
+			fontData.Font.ID = "f" + fontData.Font.ID
+		}
 
 		sort.Slice(fontData.Font.Glyphs, func(a, b int) bool {
-			return strings.Compare(*fontData.Font.Glyphs[a].Unicode, *fontData.Font.Glyphs[b].Unicode) < 0
+			sa, sb := "", ""
+			if fontData.Font.Glyphs[a].Unicode != nil {
+				sa = *fontData.Font.Glyphs[a].Unicode
+			}
+			if fontData.Font.Glyphs[b].Unicode != nil {
+				sb = *fontData.Font.Glyphs[b].Unicode
+			}
+			return strings.Compare(sa, sb) < 0
 		})
 
 		for _, g := range fontData.Font.Glyphs {
@@ -118,7 +131,7 @@ var {{ .ID }}Font = &fonts.Font{
 	Ascent:     {{ .FontFace.Ascent }},
 	Descent:    {{ .FontFace.Descent }},
 	MissingHorizAdvX: {{ .MissingGlyph.HorizAdvX }},
-	Glyphs: map[string]*fonts.Glyph{ {{ range .Glyphs }}{{ if .Unicode }}
+	Glyphs: map[string]*fonts.Glyph{ {{ range .Glyphs }}{{ if .Unicode }}{{ if .PathSteps }}
 		{{ .Unicode | utf8 }}: {
 			HorizAdvX: {{ .HorizAdvX }},
 			Unicode: {{ .Unicode | utf8 }},
@@ -126,7 +139,7 @@ var {{ .ID }}Font = &fonts.Font{
 			PathSteps: []*fonts.PathStep{ {{ range .PathSteps }}
 				{ C: '{{ .C }}'{{ if .P }}, P: {{ .P | floats }}{{ end }} },{{ end }}
 			},
-		},{{ end }}{{ end }}
+		},{{ end }}{{ end }}{{ end }}
 	},
 }
 `
