@@ -12,11 +12,13 @@ import (
 const (
 	resolution = 0.01 // ems
 	minSteps   = 4
-	maxSteps   = 100
+	// If more resolution is needed in the rendered polygons,
+	// MaxSteps could be increased.
+	MaxSteps = 100
 )
 
-// Render represents a slice of polygons with the
-// minimum bounding box.
+// Render represents a collection of polygons and includes
+// the minimum bounding box of their union.
 type Render struct {
 	Xmin, Ymin float64
 	Xmax, Ymax float64
@@ -29,6 +31,9 @@ type Polygon struct {
 	Pts  []Pt
 }
 
+// Area calculates the area of the polygon by iterating
+// over all its points. Therefore, don't call this
+// function in a loop (such as a sort, for example).
 func (p *Polygon) Area() float64 {
 	var xmin, xmax, ymin, ymax float64
 	for i, pt := range p.Pts {
@@ -51,13 +56,6 @@ func (p *Polygon) Area() float64 {
 // Pt represents a 2D Point.
 type Pt struct {
 	X, Y float64
-}
-
-// TextT represents text and satisfies the Primitive interface.
-type TextT struct {
-	x, y           float64
-	xScale, yScale float64
-	font           *Font
 }
 
 // Text returns a Render representing the rendered text.
@@ -83,33 +81,28 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 		font.HorizAdvX = font.UnitsPerEm
 	}
 
+	x, y := xPos, yPos
 	fsf := 1.0 / font.UnitsPerEm
-	t := &TextT{
-		x:      xPos,
-		y:      yPos,
-		xScale: fsf * xScale,
-		yScale: fsf * yScale,
-		font:   font,
-	}
+	xScale *= fsf
+	yScale *= fsf
 
 	result := &Render{}
-	x, y := t.x, t.y
 	for _, c := range message {
 		if c == rune('\n') {
-			x, y = t.x, y-t.yScale*(t.font.Ascent-t.font.Descent)
+			x, y = xPos, y-yScale*(font.Ascent-font.Descent)
 			continue
 		}
 		if c == rune('\t') {
-			x += 2.0 * t.xScale * t.font.HorizAdvX
+			x += 2.0 * xScale * font.HorizAdvX
 			continue
 		}
-		g, ok := t.font.Glyphs[string(c)]
+		g, ok := font.Glyphs[string(c)]
 		if !ok {
 			log.Printf("Warning: missing glyph %+q: skipping", c)
-			x += t.xScale * t.font.HorizAdvX
+			x += xScale * font.HorizAdvX
 			continue
 		}
-		dx, r := g.Render(x, y, t.xScale, t.yScale)
+		dx, r := g.Render(x, y, xScale, yScale)
 		if len(result.Polygons) == 0 || r.Xmin < result.Xmin {
 			result.Xmin = r.Xmin
 		}
@@ -124,9 +117,9 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 		}
 		result.Polygons = append(result.Polygons, r.Polygons...)
 		if dx == 0 {
-			dx = t.font.HorizAdvX
+			dx = font.HorizAdvX
 		}
-		x += dx * t.xScale
+		x += dx * xScale
 	}
 	return result, nil
 }
@@ -244,8 +237,8 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 				if steps < minSteps {
 					steps = minSteps
 				}
-				if steps > maxSteps {
-					steps = maxSteps
+				if steps > MaxSteps {
+					steps = MaxSteps
 				}
 				for j := 1; j <= steps; j++ {
 					t := float64(j) / float64(steps)
@@ -269,8 +262,8 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 				if steps < minSteps {
 					steps = minSteps
 				}
-				if steps > maxSteps {
-					steps = maxSteps
+				if steps > MaxSteps {
+					steps = MaxSteps
 				}
 				for j := 1; j <= steps; j++ {
 					t := float64(j) / float64(steps)
@@ -299,8 +292,8 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 				if steps < minSteps {
 					steps = minSteps
 				}
-				if steps > maxSteps {
-					steps = maxSteps
+				if steps > MaxSteps {
+					steps = MaxSteps
 				}
 				for j := 1; j <= steps; j++ {
 					t := float64(j) / float64(steps)
@@ -324,8 +317,8 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 				if steps < minSteps {
 					steps = minSteps
 				}
-				if steps > maxSteps {
-					steps = maxSteps
+				if steps > MaxSteps {
+					steps = MaxSteps
 				}
 				for j := 1; j <= steps; j++ {
 					t := float64(j) / float64(steps)
@@ -353,8 +346,8 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 				if steps < minSteps {
 					steps = minSteps
 				}
-				if steps > maxSteps {
-					steps = maxSteps
+				if steps > MaxSteps {
+					steps = MaxSteps
 				}
 				for j := 1; j <= steps; j++ {
 					t := float64(j) / float64(steps)
