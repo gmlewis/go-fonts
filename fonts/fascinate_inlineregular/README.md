@@ -12,7 +12,7 @@ import (
 
 func main() {
 	// ...
-	Text(x, y, 1.0, message, "fascinate_inlineregular", pts),
+	render, err := Text(x, y, xs, ys, message, "fascinate_inlineregular"),
 	// ...
 }
 ```

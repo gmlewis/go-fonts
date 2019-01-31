@@ -12,7 +12,7 @@ import (
 
 func main() {
 	// ...
-	Text(x, y, 1.0, message, "loversquarrel_regular", pts),
+	render, err := Text(x, y, xs, ys, message, "loversquarrel_regular"),
 	// ...
 }
 ```

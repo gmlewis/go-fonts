@@ -12,7 +12,7 @@ import (
 
 func main() {
 	// ...
-	Text(x, y, 1.0, message, "allura_regular", pts),
+	render, err := Text(x, y, xs, ys, message, "allura_regular"),
 	// ...
 }
 ```
