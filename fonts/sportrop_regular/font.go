@@ -11,16 +11,16 @@ func init() {
 }
 
 var sportrop_regularFont = &fonts.Font{
-	// ID: "sportrop_regular",
+	ID:               "sportrop_regular",
 	HorizAdvX:        680,
 	UnitsPerEm:       960,
 	Ascent:           800,
 	Descent:          -160,
 	MissingHorizAdvX: 660,
-	Glyphs: map[string]*fonts.Glyph{
-		"!": {
+	Glyphs: map[rune]*fonts.Glyph{
+		'!': {
 			HorizAdvX: 200,
-			Unicode:   "!",
+			Unicode:   '!',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -58,9 +58,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\"": {
+		'"': {
 			HorizAdvX: 440,
-			Unicode:   "\"",
+			Unicode:   '"',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{400, 840}},
@@ -97,9 +97,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"#": {
+		'#': {
 			HorizAdvX: 600,
-			Unicode:   "#",
+			Unicode:   '#',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 520}},
@@ -169,9 +169,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"$": {
+		'$': {
 			HorizAdvX: 0,
-			Unicode:   "$",
+			Unicode:   '$',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -260,9 +260,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"%": {
+		'%': {
 			HorizAdvX: 640,
-			Unicode:   "%",
+			Unicode:   '%',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{345, 339}},
@@ -312,9 +312,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"&": {
+		'&': {
 			HorizAdvX: 0,
-			Unicode:   "&",
+			Unicode:   '&',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{200, 80}},
@@ -409,9 +409,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"'": {
+		'\'': {
 			HorizAdvX: 240,
-			Unicode:   "'",
+			Unicode:   '\'',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{200, 840}},
@@ -432,9 +432,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"(": {
+		'(': {
 			HorizAdvX: 300,
-			Unicode:   "(",
+			Unicode:   '(',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -472,9 +472,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		")": {
+		')': {
 			HorizAdvX: 300,
-			Unicode:   ")",
+			Unicode:   ')',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 600}},
@@ -511,9 +511,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"*": {
+		'*': {
 			HorizAdvX: 600,
-			Unicode:   "*",
+			Unicode:   '*',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 480}},
@@ -558,9 +558,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"+": {
+		'+': {
 			HorizAdvX: 600,
-			Unicode:   "+",
+			Unicode:   '+',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{320, 240}},
@@ -598,9 +598,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		",": {
+		',': {
 			HorizAdvX: 200,
-			Unicode:   ",",
+			Unicode:   ',',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 80}},
@@ -621,9 +621,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"-": {
+		'-': {
 			HorizAdvX: 600,
-			Unicode:   "-",
+			Unicode:   '-',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, 480}},
@@ -640,9 +640,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		".": {
+		'.': {
 			HorizAdvX: 200,
-			Unicode:   ".",
+			Unicode:   '.',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{100, -40}},
@@ -662,9 +662,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"/": {
+		'/': {
 			HorizAdvX: 640,
-			Unicode:   "/",
+			Unicode:   '/',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 327}},
@@ -690,9 +690,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"0": {
+		'0': {
 			HorizAdvX: 0,
-			Unicode:   "0",
+			Unicode:   '0',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 603}},
@@ -745,9 +745,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"1": {
+		'1': {
 			HorizAdvX: 360,
-			Unicode:   "1",
+			Unicode:   '1',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 240}},
@@ -779,9 +779,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"2": {
+		'2': {
 			HorizAdvX: 0,
-			Unicode:   "2",
+			Unicode:   '2',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 240}},
@@ -840,9 +840,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"3": {
+		'3': {
 			HorizAdvX: 0,
-			Unicode:   "3",
+			Unicode:   '3',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -907,9 +907,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"4": {
+		'4': {
 			HorizAdvX: 0,
-			Unicode:   "4",
+			Unicode:   '4',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, 240}},
@@ -954,9 +954,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"5": {
+		'5': {
 			HorizAdvX: 0,
-			Unicode:   "5",
+			Unicode:   '5',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 241}},
@@ -1003,9 +1003,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"6": {
+		'6': {
 			HorizAdvX: 0,
-			Unicode:   "6",
+			Unicode:   '6',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -1071,9 +1071,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"7": {
+		'7': {
 			HorizAdvX: 0,
-			Unicode:   "7",
+			Unicode:   '7',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{440, 640}},
@@ -1112,9 +1112,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"8": {
+		'8': {
 			HorizAdvX: 0,
-			Unicode:   "8",
+			Unicode:   '8',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -1192,9 +1192,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"9": {
+		'9': {
 			HorizAdvX: 0,
-			Unicode:   "9",
+			Unicode:   '9',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -1259,9 +1259,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		":": {
+		':': {
 			HorizAdvX: 200,
-			Unicode:   ":",
+			Unicode:   ':',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{100, 520}},
@@ -1296,9 +1296,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		";": {
+		';': {
 			HorizAdvX: 200,
-			Unicode:   ";",
+			Unicode:   ';',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 80}},
@@ -1334,9 +1334,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"<": {
+		'<': {
 			HorizAdvX: 400,
-			Unicode:   "<",
+			Unicode:   '<',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{150.814, 276.491}},
@@ -1371,9 +1371,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"=": {
+		'=': {
 			HorizAdvX: 600,
-			Unicode:   "=",
+			Unicode:   '=',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, 560}},
@@ -1402,9 +1402,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		">": {
+		'>': {
 			HorizAdvX: 400,
-			Unicode:   ">",
+			Unicode:   '>',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{221, 281}},
@@ -1441,9 +1441,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"?": {
+		'?': {
 			HorizAdvX: 0,
-			Unicode:   "?",
+			Unicode:   '?',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{60, 600}},
@@ -1509,9 +1509,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"@": {
+		'@': {
 			HorizAdvX: 1080,
-			Unicode:   "@",
+			Unicode:   '@',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{320, 221}},
@@ -1588,9 +1588,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"A": {
+		'A': {
 			HorizAdvX: 0,
-			Unicode:   "A",
+			Unicode:   'A',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -1641,9 +1641,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"B": {
+		'B': {
 			HorizAdvX: 0,
-			Unicode:   "B",
+			Unicode:   'B',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -1703,9 +1703,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"C": {
+		'C': {
 			HorizAdvX: 0,
-			Unicode:   "C",
+			Unicode:   'C',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 603}},
@@ -1760,9 +1760,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"D": {
+		'D': {
 			HorizAdvX: 0,
-			Unicode:   "D",
+			Unicode:   'D',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119.958, 235.442}},
@@ -1805,9 +1805,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"E": {
+		'E': {
 			HorizAdvX: 0,
-			Unicode:   "E",
+			Unicode:   'E',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -1848,9 +1848,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"F": {
+		'F': {
 			HorizAdvX: 0,
-			Unicode:   "F",
+			Unicode:   'F',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -1886,9 +1886,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"G": {
+		'G': {
 			HorizAdvX: 0,
-			Unicode:   "G",
+			Unicode:   'G',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -1947,9 +1947,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"H": {
+		'H': {
 			HorizAdvX: 0,
-			Unicode:   "H",
+			Unicode:   'H',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -1989,9 +1989,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"I": {
+		'I': {
 			HorizAdvX: 200,
-			Unicode:   "I",
+			Unicode:   'I',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -2015,9 +2015,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"J": {
+		'J': {
 			HorizAdvX: 480,
-			Unicode:   "J",
+			Unicode:   'J',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{400, 240}},
@@ -2048,9 +2048,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"K": {
+		'K': {
 			HorizAdvX: 0,
-			Unicode:   "K",
+			Unicode:   'K',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 239}},
@@ -2092,9 +2092,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"L": {
+		'L': {
 			HorizAdvX: 600,
-			Unicode:   "L",
+			Unicode:   'L',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -2124,9 +2124,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"M": {
+		'M': {
 			HorizAdvX: 720,
-			Unicode:   "M",
+			Unicode:   'M',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -2173,9 +2173,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"N": {
+		'N': {
 			HorizAdvX: 0,
-			Unicode:   "N",
+			Unicode:   'N',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -2222,9 +2222,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"O": {
+		'O': {
 			HorizAdvX: 0,
-			Unicode:   "O",
+			Unicode:   'O',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -2277,9 +2277,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"P": {
+		'P': {
 			HorizAdvX: 0,
-			Unicode:   "P",
+			Unicode:   'P',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -2323,9 +2323,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Q": {
+		'Q': {
 			HorizAdvX: 0,
-			Unicode:   "Q",
+			Unicode:   'Q',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{420, 800}},
@@ -2382,9 +2382,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"R": {
+		'R': {
 			HorizAdvX: 0,
-			Unicode:   "R",
+			Unicode:   'R',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -2436,9 +2436,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"S": {
+		'S': {
 			HorizAdvX: 0,
-			Unicode:   "S",
+			Unicode:   'S',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -2496,9 +2496,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"T": {
+		'T': {
 			HorizAdvX: 0,
-			Unicode:   "T",
+			Unicode:   'T',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{360, 240}},
@@ -2529,9 +2529,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"U": {
+		'U': {
 			HorizAdvX: 0,
-			Unicode:   "U",
+			Unicode:   'U',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -2569,9 +2569,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"V": {
+		'V': {
 			HorizAdvX: 0,
-			Unicode:   "V",
+			Unicode:   'V',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -2604,9 +2604,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"W": {
+		'W': {
 			HorizAdvX: 720,
-			Unicode:   "W",
+			Unicode:   'W',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -2652,9 +2652,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"X": {
+		'X': {
 			HorizAdvX: 0,
-			Unicode:   "X",
+			Unicode:   'X',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -2707,9 +2707,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Y": {
+		'Y': {
 			HorizAdvX: 0,
-			Unicode:   "Y",
+			Unicode:   'Y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -2748,9 +2748,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Z": {
+		'Z': {
 			HorizAdvX: 0,
-			Unicode:   "Z",
+			Unicode:   'Z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437.364, 635.154}},
@@ -2792,9 +2792,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"[": {
+		'[': {
 			HorizAdvX: 280,
-			Unicode:   "[",
+			Unicode:   '[',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -2825,9 +2825,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\\": {
+		'\\': {
 			HorizAdvX: 640,
-			Unicode:   "\\",
+			Unicode:   '\\',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 840}},
@@ -2849,9 +2849,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"]": {
+		']': {
 			HorizAdvX: 280,
-			Unicode:   "]",
+			Unicode:   ']',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{200, 240}},
@@ -2882,9 +2882,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"^": {
+		'^': {
 			HorizAdvX: 600,
-			Unicode:   "^",
+			Unicode:   '^',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 840}},
@@ -2905,9 +2905,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"_": {
+		'_': {
 			HorizAdvX: 640,
-			Unicode:   "_",
+			Unicode:   '_',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, -41}},
@@ -2923,9 +2923,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"`": {
+		'`': {
 			HorizAdvX: 600,
-			Unicode:   "`",
+			Unicode:   '`',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{175, 732}},
@@ -2945,9 +2945,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a": {
+		'a': {
 			HorizAdvX: 600,
-			Unicode:   "a",
+			Unicode:   'a',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -3000,9 +3000,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"b": {
+		'b': {
 			HorizAdvX: 600,
-			Unicode:   "b",
+			Unicode:   'b',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -3048,9 +3048,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c": {
+		'c': {
 			HorizAdvX: 600,
-			Unicode:   "c",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -3096,9 +3096,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"d": {
+		'd': {
 			HorizAdvX: 600,
-			Unicode:   "d",
+			Unicode:   'd',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -3147,9 +3147,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"e": {
+		'e': {
 			HorizAdvX: 600,
-			Unicode:   "e",
+			Unicode:   'e',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -3201,9 +3201,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"f": {
+		'f': {
 			HorizAdvX: 360,
-			Unicode:   "f",
+			Unicode:   'f',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -3242,9 +3242,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"g": {
+		'g': {
 			HorizAdvX: 600,
-			Unicode:   "g",
+			Unicode:   'g',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -3301,9 +3301,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"h": {
+		'h': {
 			HorizAdvX: 600,
-			Unicode:   "h",
+			Unicode:   'h',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -3346,9 +3346,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"i": {
+		'i': {
 			HorizAdvX: 200,
-			Unicode:   "i",
+			Unicode:   'i',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -3387,9 +3387,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"j": {
+		'j': {
 			HorizAdvX: 240,
-			Unicode:   "j",
+			Unicode:   'j',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 240}},
@@ -3431,9 +3431,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"k": {
+		'k': {
 			HorizAdvX: 600,
-			Unicode:   "k",
+			Unicode:   'k',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -3479,9 +3479,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"l": {
+		'l': {
 			HorizAdvX: 360,
-			Unicode:   "l",
+			Unicode:   'l',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -3511,9 +3511,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"m": {
+		'm': {
 			HorizAdvX: 840,
-			Unicode:   "m",
+			Unicode:   'm',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -3564,9 +3564,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"n": {
+		'n': {
 			HorizAdvX: 600,
-			Unicode:   "n",
+			Unicode:   'n',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -3603,9 +3603,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"o": {
+		'o': {
 			HorizAdvX: 600,
-			Unicode:   "o",
+			Unicode:   'o',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -3653,9 +3653,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"p": {
+		'p': {
 			HorizAdvX: 600,
-			Unicode:   "p",
+			Unicode:   'p',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{480, 240}},
@@ -3706,9 +3706,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"q": {
+		'q': {
 			HorizAdvX: 600,
-			Unicode:   "q",
+			Unicode:   'q',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -3756,9 +3756,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"r": {
+		'r': {
 			HorizAdvX: 360,
-			Unicode:   "r",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -3787,9 +3787,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"s": {
+		's': {
 			HorizAdvX: 600,
-			Unicode:   "s",
+			Unicode:   's',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 480}},
@@ -3837,9 +3837,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"t": {
+		't': {
 			HorizAdvX: 360,
-			Unicode:   "t",
+			Unicode:   't',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 325}},
@@ -3886,9 +3886,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"u": {
+		'u': {
 			HorizAdvX: 600,
-			Unicode:   "u",
+			Unicode:   'u',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -3924,9 +3924,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"v": {
+		'v': {
 			HorizAdvX: 600,
-			Unicode:   "v",
+			Unicode:   'v',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{158, 263}},
@@ -3958,9 +3958,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"w": {
+		'w': {
 			HorizAdvX: 840,
-			Unicode:   "w",
+			Unicode:   'w',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{580, 120}},
@@ -4011,9 +4011,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"x": {
+		'x': {
 			HorizAdvX: 600,
-			Unicode:   "x",
+			Unicode:   'x',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, 640}},
@@ -4064,9 +4064,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"y": {
+		'y': {
 			HorizAdvX: 600,
-			Unicode:   "y",
+			Unicode:   'y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 120}},
@@ -4112,9 +4112,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"z": {
+		'z': {
 			HorizAdvX: 600,
-			Unicode:   "z",
+			Unicode:   'z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 474}},
@@ -4156,9 +4156,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"{": {
+		'{': {
 			HorizAdvX: 320,
-			Unicode:   "{",
+			Unicode:   '{',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{60, 643}},
@@ -4198,9 +4198,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"|": {
+		'|': {
 			HorizAdvX: 200,
-			Unicode:   "|",
+			Unicode:   '|',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -4223,9 +4223,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"}": {
+		'}': {
 			HorizAdvX: 320,
-			Unicode:   "}",
+			Unicode:   '}',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 600}},
@@ -4264,9 +4264,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"~": {
+		'~': {
 			HorizAdvX: 600,
-			Unicode:   "~",
+			Unicode:   '~',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{227, 527}},
@@ -4295,9 +4295,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a1": {
+		'¡': {
 			HorizAdvX: 200,
-			Unicode:   "\u00a1",
+			Unicode:   '¡',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -4335,9 +4335,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a2": {
+		'¢': {
 			HorizAdvX: 600,
-			Unicode:   "\u00a2",
+			Unicode:   '¢',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{239, 81}},
@@ -4403,9 +4403,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a3": {
+		'£': {
 			HorizAdvX: 720,
-			Unicode:   "\u00a3",
+			Unicode:   '£',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{460, 800}},
@@ -4480,9 +4480,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a4": {
+		'¤': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a4",
+			Unicode:   '¤',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{224, 389}},
@@ -4540,9 +4540,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a5": {
+		'¥': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a5",
+			Unicode:   '¥',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{400, 324}},
@@ -4591,9 +4591,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a6": {
+		'¦': {
 			HorizAdvX: 200,
-			Unicode:   "\u00a6",
+			Unicode:   '¦',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -4628,9 +4628,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a7": {
+		'§': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a7",
+			Unicode:   '§',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 640}},
@@ -4717,9 +4717,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a8": {
+		'¨': {
 			HorizAdvX: 600,
-			Unicode:   "\u00a8",
+			Unicode:   '¨',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{460, 680}},
@@ -4754,9 +4754,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a9": {
+		'©': {
 			HorizAdvX: 1080,
-			Unicode:   "\u00a9",
+			Unicode:   '©',
 			GerberLP:  "dcdcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{540, 840}},
@@ -4826,9 +4826,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00aa": {
+		'ª': {
 			HorizAdvX: 600,
-			Unicode:   "\u00aa",
+			Unicode:   'ª',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -4881,9 +4881,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ab": {
+		'«': {
 			HorizAdvX: 0,
-			Unicode:   "\u00ab",
+			Unicode:   '«',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418.814, 276.491}},
@@ -4948,9 +4948,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ae": {
+		'®': {
 			HorizAdvX: 1080,
-			Unicode:   "\u00ae",
+			Unicode:   '®',
 			GerberLP:  "dcdcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{540, 840}},
@@ -5028,9 +5028,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00af": {
+		'¯': {
 			HorizAdvX: 600,
-			Unicode:   "\u00af",
+			Unicode:   '¯',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, 800}},
@@ -5047,9 +5047,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b0": {
+		'°': {
 			HorizAdvX: 280,
-			Unicode:   "\u00b0",
+			Unicode:   '°',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 700}},
@@ -5066,9 +5066,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b1": {
+		'±': {
 			HorizAdvX: 600,
-			Unicode:   "\u00b1",
+			Unicode:   '±',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{320, 240}},
@@ -5118,9 +5118,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b4": {
+		'´': {
 			HorizAdvX: 600,
-			Unicode:   "\u00b4",
+			Unicode:   '´',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{502, 732}},
@@ -5139,9 +5139,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b5": {
+		'µ': {
 			HorizAdvX: 600,
-			Unicode:   "\u00b5",
+			Unicode:   'µ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -5189,9 +5189,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b6": {
+		'¶': {
 			HorizAdvX: 500,
-			Unicode:   "\u00b6",
+			Unicode:   '¶',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{176, 281}},
@@ -5218,9 +5218,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b7": {
+		'·': {
 			HorizAdvX: 200,
-			Unicode:   "\u00b7",
+			Unicode:   '·',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{100, 360}},
@@ -5240,9 +5240,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b8": {
+		'¸': {
 			HorizAdvX: 0,
-			Unicode:   "\u00b8",
+			Unicode:   '¸',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{400, 40}},
@@ -5266,9 +5266,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b9": {
+		'¹': {
 			HorizAdvX: 500,
-			Unicode:   "\u00b9",
+			Unicode:   '¹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{176, 281}},
@@ -5295,9 +5295,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ba": {
+		'º': {
 			HorizAdvX: 500,
-			Unicode:   "\u00ba",
+			Unicode:   'º',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{176, 281}},
@@ -5324,9 +5324,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bb": {
+		'»': {
 			HorizAdvX: 0,
-			Unicode:   "\u00bb",
+			Unicode:   '»',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{489, 281}},
@@ -5391,9 +5391,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bf": {
+		'¿': {
 			HorizAdvX: 0,
-			Unicode:   "\u00bf",
+			Unicode:   '¿',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 40}},
@@ -5459,9 +5459,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c0": {
+		'À': {
 			HorizAdvX: 0,
-			Unicode:   "\u00c0",
+			Unicode:   'À',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -5527,9 +5527,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c1": {
+		'Á': {
 			HorizAdvX: 0,
-			Unicode:   "\u00c1",
+			Unicode:   'Á',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -5594,9 +5594,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c2": {
+		'Â': {
 			HorizAdvX: 0,
-			Unicode:   "\u00c2",
+			Unicode:   'Â',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -5663,9 +5663,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c3": {
+		'Ã': {
 			HorizAdvX: 0,
-			Unicode:   "\u00c3",
+			Unicode:   'Ã',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -5740,9 +5740,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c4": {
+		'Ä': {
 			HorizAdvX: 0,
-			Unicode:   "\u00c4",
+			Unicode:   'Ä',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -5823,9 +5823,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c5": {
+		'Å': {
 			HorizAdvX: 0,
-			Unicode:   "\u00c5",
+			Unicode:   'Å',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{220, 880}},
@@ -5892,9 +5892,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c6": {
+		'Æ': {
 			HorizAdvX: 1160,
-			Unicode:   "\u00c6",
+			Unicode:   'Æ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{780, 80}},
@@ -5963,9 +5963,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c7": {
+		'Ç': {
 			HorizAdvX: 0,
-			Unicode:   "\u00c7",
+			Unicode:   'Ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 603}},
@@ -6036,9 +6036,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c8": {
+		'È': {
 			HorizAdvX: 0,
-			Unicode:   "\u00c8",
+			Unicode:   'È',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6094,9 +6094,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c9": {
+		'É': {
 			HorizAdvX: 0,
-			Unicode:   "\u00c9",
+			Unicode:   'É',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6151,9 +6151,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ca": {
+		'Ê': {
 			HorizAdvX: 0,
-			Unicode:   "\u00ca",
+			Unicode:   'Ê',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6210,9 +6210,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cb": {
+		'Ë': {
 			HorizAdvX: 0,
-			Unicode:   "\u00cb",
+			Unicode:   'Ë',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6283,9 +6283,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cc": {
+		'Ì': {
 			HorizAdvX: 200,
-			Unicode:   "\u00cc",
+			Unicode:   'Ì',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6324,9 +6324,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cd": {
+		'Í': {
 			HorizAdvX: 200,
-			Unicode:   "\u00cd",
+			Unicode:   'Í',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6364,9 +6364,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ce": {
+		'Î': {
 			HorizAdvX: 200,
-			Unicode:   "\u00ce",
+			Unicode:   'Î',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6406,9 +6406,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cf": {
+		'Ï': {
 			HorizAdvX: 200,
-			Unicode:   "\u00cf",
+			Unicode:   'Ï',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6462,9 +6462,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d0": {
+		'Ð': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d0",
+			Unicode:   'Ð',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 600}},
@@ -6523,9 +6523,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d1": {
+		'Ñ': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d1",
+			Unicode:   'Ñ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -6596,9 +6596,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d2": {
+		'Ò': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d2",
+			Unicode:   'Ò',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6666,9 +6666,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d3": {
+		'Ó': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d3",
+			Unicode:   'Ó',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6735,9 +6735,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d4": {
+		'Ô': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d4",
+			Unicode:   'Ô',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6806,9 +6806,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d5": {
+		'Õ': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d5",
+			Unicode:   'Õ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6885,9 +6885,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d6": {
+		'Ö': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d6",
+			Unicode:   'Ö',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -6970,9 +6970,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d7": {
+		'×': {
 			HorizAdvX: 600,
-			Unicode:   "\u00d7",
+			Unicode:   '×',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194.992, 341.693}},
@@ -7015,9 +7015,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d8": {
+		'Ø': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d8",
+			Unicode:   'Ø',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -7095,9 +7095,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d9": {
+		'Ù': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d9",
+			Unicode:   'Ù',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -7150,9 +7150,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00da": {
+		'Ú': {
 			HorizAdvX: 0,
-			Unicode:   "\u00da",
+			Unicode:   'Ú',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -7204,9 +7204,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00db": {
+		'Û': {
 			HorizAdvX: 0,
-			Unicode:   "\u00db",
+			Unicode:   'Û',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -7260,9 +7260,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dc": {
+		'Ü': {
 			HorizAdvX: 0,
-			Unicode:   "\u00dc",
+			Unicode:   'Ü',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -7330,9 +7330,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dd": {
+		'Ý': {
 			HorizAdvX: 0,
-			Unicode:   "\u00dd",
+			Unicode:   'Ý',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{360, 240}},
@@ -7381,9 +7381,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00de": {
+		'Þ': {
 			HorizAdvX: 0,
-			Unicode:   "\u00de",
+			Unicode:   'Þ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 521}},
@@ -7431,9 +7431,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00df": {
+		'ß': {
 			HorizAdvX: 640,
-			Unicode:   "\u00df",
+			Unicode:   'ß',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 201}},
@@ -7499,9 +7499,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e0": {
+		'à': {
 			HorizAdvX: 600,
-			Unicode:   "\u00e0",
+			Unicode:   'à',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -7569,9 +7569,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e1": {
+		'á': {
 			HorizAdvX: 600,
-			Unicode:   "\u00e1",
+			Unicode:   'á',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -7638,9 +7638,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e2": {
+		'â': {
 			HorizAdvX: 600,
-			Unicode:   "\u00e2",
+			Unicode:   'â',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -7709,9 +7709,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e3": {
+		'ã': {
 			HorizAdvX: 600,
-			Unicode:   "\u00e3",
+			Unicode:   'ã',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -7788,9 +7788,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e4": {
+		'ä': {
 			HorizAdvX: 600,
-			Unicode:   "\u00e4",
+			Unicode:   'ä',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -7873,9 +7873,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e5": {
+		'å': {
 			HorizAdvX: 600,
-			Unicode:   "\u00e5",
+			Unicode:   'å',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -7943,9 +7943,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e6": {
+		'æ': {
 			HorizAdvX: 1000,
-			Unicode:   "\u00e6",
+			Unicode:   'æ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{700, 120}},
@@ -8030,9 +8030,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e7": {
+		'ç': {
 			HorizAdvX: 600,
-			Unicode:   "\u00e7",
+			Unicode:   'ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 201}},
@@ -8093,9 +8093,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e8": {
+		'è': {
 			HorizAdvX: 600,
-			Unicode:   "\u00e8",
+			Unicode:   'è',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -8162,9 +8162,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e9": {
+		'é': {
 			HorizAdvX: 600,
-			Unicode:   "\u00e9",
+			Unicode:   'é',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -8230,9 +8230,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ea": {
+		'ê': {
 			HorizAdvX: 600,
-			Unicode:   "\u00ea",
+			Unicode:   'ê',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -8300,9 +8300,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00eb": {
+		'ë': {
 			HorizAdvX: 600,
-			Unicode:   "\u00eb",
+			Unicode:   'ë',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -8384,9 +8384,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ec": {
+		'ì': {
 			HorizAdvX: 200,
-			Unicode:   "\u00ec",
+			Unicode:   'ì',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -8426,9 +8426,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ed": {
+		'í': {
 			HorizAdvX: 200,
-			Unicode:   "\u00ed",
+			Unicode:   'í',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -8467,9 +8467,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ee": {
+		'î': {
 			HorizAdvX: 280,
-			Unicode:   "\u00ee",
+			Unicode:   'î',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{139, 737}},
@@ -8510,9 +8510,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ef": {
+		'ï': {
 			HorizAdvX: 200,
-			Unicode:   "\u00ef",
+			Unicode:   'ï',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -8566,9 +8566,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f0": {
+		'ð': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f0",
+			Unicode:   'ð',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{343, 40}},
@@ -8640,9 +8640,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f1": {
+		'ñ': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f1",
+			Unicode:   'ñ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -8703,9 +8703,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f2": {
+		'ò': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f2",
+			Unicode:   'ò',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -8768,9 +8768,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3": {
+		'ó': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f3",
+			Unicode:   'ó',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -8832,9 +8832,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f4": {
+		'ô': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f4",
+			Unicode:   'ô',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -8898,9 +8898,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f5": {
+		'õ': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f5",
+			Unicode:   'õ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -8972,9 +8972,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f6": {
+		'ö': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f6",
+			Unicode:   'ö',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -9052,9 +9052,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f7": {
+		'÷': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f7",
+			Unicode:   '÷',
 			GerberLP:  "dcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, 480}},
@@ -9101,9 +9101,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f8": {
+		'ø': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f8",
+			Unicode:   'ø',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, 180}},
@@ -9177,9 +9177,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f9": {
+		'ù': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f9",
+			Unicode:   'ù',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -9237,9 +9237,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fa": {
+		'ú': {
 			HorizAdvX: 600,
-			Unicode:   "\u00fa",
+			Unicode:   'ú',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -9289,9 +9289,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fb": {
+		'û': {
 			HorizAdvX: 600,
-			Unicode:   "\u00fb",
+			Unicode:   'û',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -9343,9 +9343,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fc": {
+		'ü': {
 			HorizAdvX: 600,
-			Unicode:   "\u00fc",
+			Unicode:   'ü',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -9411,9 +9411,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fd": {
+		'ý': {
 			HorizAdvX: 600,
-			Unicode:   "\u00fd",
+			Unicode:   'ý',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 120}},
@@ -9473,9 +9473,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fe": {
+		'þ': {
 			HorizAdvX: 600,
-			Unicode:   "\u00fe",
+			Unicode:   'þ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 439}},
@@ -9524,9 +9524,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ff": {
+		'ÿ': {
 			HorizAdvX: 600,
-			Unicode:   "\u00ff",
+			Unicode:   'ÿ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 120}},
@@ -9602,9 +9602,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0100": {
+		'Ā': {
 			HorizAdvX: 0,
-			Unicode:   "\u0100",
+			Unicode:   'Ā',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -9667,9 +9667,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0101": {
+		'ā': {
 			HorizAdvX: 600,
-			Unicode:   "\u0101",
+			Unicode:   'ā',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -9734,9 +9734,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0102": {
+		'Ă': {
 			HorizAdvX: 0,
-			Unicode:   "\u0102",
+			Unicode:   'Ă',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -9805,9 +9805,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0103": {
+		'ă': {
 			HorizAdvX: 600,
-			Unicode:   "\u0103",
+			Unicode:   'ă',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -9878,9 +9878,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0104": {
+		'Ą': {
 			HorizAdvX: 0,
-			Unicode:   "\u0104",
+			Unicode:   'Ą',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -9942,9 +9942,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0105": {
+		'ą': {
 			HorizAdvX: 600,
-			Unicode:   "\u0105",
+			Unicode:   'ą',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, -74}},
@@ -10012,9 +10012,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0106": {
+		'Ć': {
 			HorizAdvX: 0,
-			Unicode:   "\u0106",
+			Unicode:   'Ć',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 603}},
@@ -10083,9 +10083,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0107": {
+		'ć': {
 			HorizAdvX: 600,
-			Unicode:   "\u0107",
+			Unicode:   'ć',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -10145,9 +10145,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0108": {
+		'Ĉ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0108",
+			Unicode:   'Ĉ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 603}},
@@ -10218,9 +10218,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0109": {
+		'ĉ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0109",
+			Unicode:   'ĉ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -10282,9 +10282,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010a": {
+		'Ċ': {
 			HorizAdvX: 0,
-			Unicode:   "\u010a",
+			Unicode:   'Ċ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 603}},
@@ -10354,9 +10354,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010b": {
+		'ċ': {
 			HorizAdvX: 600,
-			Unicode:   "\u010b",
+			Unicode:   'ċ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -10417,9 +10417,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010c": {
+		'Č': {
 			HorizAdvX: 0,
-			Unicode:   "\u010c",
+			Unicode:   'Č',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 603}},
@@ -10490,9 +10490,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010d": {
+		'č': {
 			HorizAdvX: 600,
-			Unicode:   "\u010d",
+			Unicode:   'č',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -10554,9 +10554,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010e": {
+		'Ď': {
 			HorizAdvX: 0,
-			Unicode:   "\u010e",
+			Unicode:   'Ď',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119.958, 235.442}},
@@ -10615,9 +10615,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010f": {
+		'ď': {
 			HorizAdvX: 760,
-			Unicode:   "\u010f",
+			Unicode:   'ď',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -10682,9 +10682,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0110": {
+		'Đ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0110",
+			Unicode:   'Đ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 600}},
@@ -10743,9 +10743,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0111": {
+		'đ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0111",
+			Unicode:   'đ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 201}},
@@ -10817,9 +10817,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0112": {
+		'Ē': {
 			HorizAdvX: 0,
-			Unicode:   "\u0112",
+			Unicode:   'Ē',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -10872,9 +10872,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0113": {
+		'ē': {
 			HorizAdvX: 600,
-			Unicode:   "\u0113",
+			Unicode:   'ē',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -10938,9 +10938,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0114": {
+		'Ĕ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0114",
+			Unicode:   'Ĕ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -10999,9 +10999,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0115": {
+		'ĕ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0115",
+			Unicode:   'ĕ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -11071,9 +11071,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0116": {
+		'Ė': {
 			HorizAdvX: 0,
-			Unicode:   "\u0116",
+			Unicode:   'Ė',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -11129,9 +11129,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0117": {
+		'ė': {
 			HorizAdvX: 600,
-			Unicode:   "\u0117",
+			Unicode:   'ė',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -11198,9 +11198,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0118": {
+		'Ę': {
 			HorizAdvX: 0,
-			Unicode:   "\u0118",
+			Unicode:   'Ę',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -11256,9 +11256,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0119": {
+		'ę': {
 			HorizAdvX: 600,
-			Unicode:   "\u0119",
+			Unicode:   'ę',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 120}},
@@ -11325,9 +11325,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011a": {
+		'Ě': {
 			HorizAdvX: 0,
-			Unicode:   "\u011a",
+			Unicode:   'Ě',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -11384,9 +11384,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011b": {
+		'ě': {
 			HorizAdvX: 600,
-			Unicode:   "\u011b",
+			Unicode:   'ě',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -11454,9 +11454,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011c": {
+		'Ĝ': {
 			HorizAdvX: 0,
-			Unicode:   "\u011c",
+			Unicode:   'Ĝ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -11531,9 +11531,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011d": {
+		'ĝ': {
 			HorizAdvX: 600,
-			Unicode:   "\u011d",
+			Unicode:   'ĝ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -11606,9 +11606,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011e": {
+		'Ğ': {
 			HorizAdvX: 0,
-			Unicode:   "\u011e",
+			Unicode:   'Ğ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -11685,9 +11685,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011f": {
+		'ğ': {
 			HorizAdvX: 600,
-			Unicode:   "\u011f",
+			Unicode:   'ğ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -11762,9 +11762,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0120": {
+		'Ġ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0120",
+			Unicode:   'Ġ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -11838,9 +11838,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0121": {
+		'ġ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0121",
+			Unicode:   'ġ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -11912,9 +11912,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0122": {
+		'Ģ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0122",
+			Unicode:   'Ģ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -11989,9 +11989,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0123": {
+		'ģ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0123",
+			Unicode:   'ģ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -12062,9 +12062,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0124": {
+		'Ĥ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0124",
+			Unicode:   'Ĥ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -12120,9 +12120,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0125": {
+		'ĥ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0125",
+			Unicode:   'ĥ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -12181,9 +12181,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0126": {
+		'Ħ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0126",
+			Unicode:   'Ħ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -12252,9 +12252,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0127": {
+		'ħ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0127",
+			Unicode:   'ħ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -12312,9 +12312,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0128": {
+		'Ĩ': {
 			HorizAdvX: 200,
-			Unicode:   "\u0128",
+			Unicode:   'Ĩ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -12362,9 +12362,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0129": {
+		'ĩ': {
 			HorizAdvX: 200,
-			Unicode:   "\u0129",
+			Unicode:   'ĩ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -12412,9 +12412,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012a": {
+		'Ī': {
 			HorizAdvX: 200,
-			Unicode:   "\u012a",
+			Unicode:   'Ī',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -12450,9 +12450,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012b": {
+		'ī': {
 			HorizAdvX: 200,
-			Unicode:   "\u012b",
+			Unicode:   'ī',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -12489,9 +12489,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012c": {
+		'Ĭ': {
 			HorizAdvX: 200,
-			Unicode:   "\u012c",
+			Unicode:   'Ĭ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -12533,9 +12533,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012d": {
+		'ĭ': {
 			HorizAdvX: 200,
-			Unicode:   "\u012d",
+			Unicode:   'ĭ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -12578,9 +12578,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012e": {
+		'Į': {
 			HorizAdvX: 200,
-			Unicode:   "\u012e",
+			Unicode:   'Į',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -12616,9 +12616,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012f": {
+		'į': {
 			HorizAdvX: 200,
-			Unicode:   "\u012f",
+			Unicode:   'į',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -12669,9 +12669,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0130": {
+		'İ': {
 			HorizAdvX: 200,
-			Unicode:   "\u0130",
+			Unicode:   'İ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -12710,9 +12710,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0131": {
+		'ı': {
 			HorizAdvX: 200,
-			Unicode:   "\u0131",
+			Unicode:   'ı',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -12736,9 +12736,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0134": {
+		'Ĵ': {
 			HorizAdvX: 480,
-			Unicode:   "\u0134",
+			Unicode:   'Ĵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{400, 240}},
@@ -12785,9 +12785,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0135": {
+		'ĵ': {
 			HorizAdvX: 240,
-			Unicode:   "\u0135",
+			Unicode:   'ĵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 240}},
@@ -12830,9 +12830,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0136": {
+		'Ķ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0136",
+			Unicode:   'Ķ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 239}},
@@ -12890,9 +12890,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0137": {
+		'ķ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0137",
+			Unicode:   'ķ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -12954,9 +12954,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0138": {
+		'ĸ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0138",
+			Unicode:   'ĸ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 239}},
@@ -12996,9 +12996,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0139": {
+		'Ĺ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0139",
+			Unicode:   'Ĺ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -13042,9 +13042,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013a": {
+		'ĺ': {
 			HorizAdvX: 360,
-			Unicode:   "\u013a",
+			Unicode:   'ĺ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -13088,9 +13088,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013b": {
+		'Ļ': {
 			HorizAdvX: 600,
-			Unicode:   "\u013b",
+			Unicode:   'Ļ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -13136,9 +13136,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013c": {
+		'ļ': {
 			HorizAdvX: 360,
-			Unicode:   "\u013c",
+			Unicode:   'ļ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -13184,9 +13184,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013d": {
+		'Ľ': {
 			HorizAdvX: 600,
-			Unicode:   "\u013d",
+			Unicode:   'Ľ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -13232,9 +13232,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013e": {
+		'ľ': {
 			HorizAdvX: 400,
-			Unicode:   "\u013e",
+			Unicode:   'ľ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -13280,9 +13280,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013f": {
+		'Ŀ': {
 			HorizAdvX: 600,
-			Unicode:   "\u013f",
+			Unicode:   'Ŀ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -13327,9 +13327,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0140": {
+		'ŀ': {
 			HorizAdvX: 440,
-			Unicode:   "\u0140",
+			Unicode:   'ŀ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -13374,9 +13374,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0141": {
+		'Ł': {
 			HorizAdvX: 0,
-			Unicode:   "\u0141",
+			Unicode:   'Ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -13416,9 +13416,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0142": {
+		'ł': {
 			HorizAdvX: 440,
-			Unicode:   "\u0142",
+			Unicode:   'ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{200, 240}},
@@ -13459,9 +13459,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0143": {
+		'Ń': {
 			HorizAdvX: 0,
-			Unicode:   "\u0143",
+			Unicode:   'Ń',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -13522,9 +13522,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0144": {
+		'ń': {
 			HorizAdvX: 600,
-			Unicode:   "\u0144",
+			Unicode:   'ń',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -13575,9 +13575,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0145": {
+		'Ņ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0145",
+			Unicode:   'Ņ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -13640,9 +13640,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0146": {
+		'ņ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0146",
+			Unicode:   'ņ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -13695,9 +13695,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0147": {
+		'Ň': {
 			HorizAdvX: 0,
-			Unicode:   "\u0147",
+			Unicode:   'Ň',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -13760,9 +13760,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0148": {
+		'ň': {
 			HorizAdvX: 600,
-			Unicode:   "\u0148",
+			Unicode:   'ň',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -13815,9 +13815,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0149": {
+		'ŉ': {
 			HorizAdvX: 760,
-			Unicode:   "\u0149",
+			Unicode:   'ŉ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 241}},
@@ -13870,9 +13870,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014a": {
+		'Ŋ': {
 			HorizAdvX: 0,
-			Unicode:   "\u014a",
+			Unicode:   'Ŋ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{505, 419}},
@@ -13926,9 +13926,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014b": {
+		'ŋ': {
 			HorizAdvX: 600,
-			Unicode:   "\u014b",
+			Unicode:   'ŋ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -13973,9 +13973,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014c": {
+		'Ō': {
 			HorizAdvX: 0,
-			Unicode:   "\u014c",
+			Unicode:   'Ō',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -14040,9 +14040,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014d": {
+		'ō': {
 			HorizAdvX: 600,
-			Unicode:   "\u014d",
+			Unicode:   'ō',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -14102,9 +14102,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014e": {
+		'Ŏ': {
 			HorizAdvX: 0,
-			Unicode:   "\u014e",
+			Unicode:   'Ŏ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -14175,9 +14175,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014f": {
+		'ŏ': {
 			HorizAdvX: 600,
-			Unicode:   "\u014f",
+			Unicode:   'ŏ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -14243,9 +14243,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0150": {
+		'Ő': {
 			HorizAdvX: 0,
-			Unicode:   "\u0150",
+			Unicode:   'Ő',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -14326,9 +14326,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0151": {
+		'ő': {
 			HorizAdvX: 600,
-			Unicode:   "\u0151",
+			Unicode:   'ő',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -14404,9 +14404,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0152": {
+		'Œ': {
 			HorizAdvX: 1360,
-			Unicode:   "\u0152",
+			Unicode:   'Œ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -14480,9 +14480,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0153": {
+		'œ': {
 			HorizAdvX: 1200,
-			Unicode:   "\u0153",
+			Unicode:   'œ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{499, 583}},
@@ -14558,9 +14558,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0154": {
+		'Ŕ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0154",
+			Unicode:   'Ŕ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -14626,9 +14626,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0155": {
+		'ŕ': {
 			HorizAdvX: 360,
-			Unicode:   "\u0155",
+			Unicode:   'ŕ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -14671,9 +14671,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0156": {
+		'Ŗ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0156",
+			Unicode:   'Ŗ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, 477}},
@@ -14741,9 +14741,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0157": {
+		'ŗ': {
 			HorizAdvX: 360,
-			Unicode:   "\u0157",
+			Unicode:   'ŗ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -14788,9 +14788,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0158": {
+		'Ř': {
 			HorizAdvX: 0,
-			Unicode:   "\u0158",
+			Unicode:   'Ř',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -14858,9 +14858,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0159": {
+		'ř': {
 			HorizAdvX: 360,
-			Unicode:   "\u0159",
+			Unicode:   'ř',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -14905,9 +14905,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015a": {
+		'Ś': {
 			HorizAdvX: 0,
-			Unicode:   "\u015a",
+			Unicode:   'Ś',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -14979,9 +14979,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015b": {
+		'ś': {
 			HorizAdvX: 600,
-			Unicode:   "\u015b",
+			Unicode:   'ś',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 480}},
@@ -15043,9 +15043,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015c": {
+		'Ŝ': {
 			HorizAdvX: 0,
-			Unicode:   "\u015c",
+			Unicode:   'Ŝ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -15119,9 +15119,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015d": {
+		'ŝ': {
 			HorizAdvX: 600,
-			Unicode:   "\u015d",
+			Unicode:   'ŝ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 480}},
@@ -15185,9 +15185,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015e": {
+		'Ş': {
 			HorizAdvX: 0,
-			Unicode:   "\u015e",
+			Unicode:   'Ş',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -15262,9 +15262,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015f": {
+		'ş': {
 			HorizAdvX: 600,
-			Unicode:   "\u015f",
+			Unicode:   'ş',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{344, 320}},
@@ -15328,9 +15328,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0160": {
+		'Š': {
 			HorizAdvX: 0,
-			Unicode:   "\u0160",
+			Unicode:   'Š',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -15404,9 +15404,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0161": {
+		'š': {
 			HorizAdvX: 600,
-			Unicode:   "\u0161",
+			Unicode:   'š',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 480}},
@@ -15470,9 +15470,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0162": {
+		'Ţ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0162",
+			Unicode:   'Ţ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{360, 240}},
@@ -15512,9 +15512,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0163": {
+		'ţ': {
 			HorizAdvX: 360,
-			Unicode:   "\u0163",
+			Unicode:   'ţ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -15576,9 +15576,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0164": {
+		'Ť': {
 			HorizAdvX: 0,
-			Unicode:   "\u0164",
+			Unicode:   'Ť',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{360, 240}},
@@ -15625,9 +15625,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0165": {
+		'ť': {
 			HorizAdvX: 460,
-			Unicode:   "\u0165",
+			Unicode:   'ť',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 325}},
@@ -15690,9 +15690,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0166": {
+		'Ŧ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0166",
+			Unicode:   'Ŧ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{360, 240}},
@@ -15739,9 +15739,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0167": {
+		'ŧ': {
 			HorizAdvX: 360,
-			Unicode:   "\u0167",
+			Unicode:   'ŧ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -15798,9 +15798,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0168": {
+		'Ũ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0168",
+			Unicode:   'Ũ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -15862,9 +15862,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0169": {
+		'ũ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0169",
+			Unicode:   'ũ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -15924,9 +15924,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016a": {
+		'Ū': {
 			HorizAdvX: 0,
-			Unicode:   "\u016a",
+			Unicode:   'Ū',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -15976,9 +15976,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016b": {
+		'ū': {
 			HorizAdvX: 600,
-			Unicode:   "\u016b",
+			Unicode:   'ū',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -16026,9 +16026,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016c": {
+		'Ŭ': {
 			HorizAdvX: 0,
-			Unicode:   "\u016c",
+			Unicode:   'Ŭ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -16084,9 +16084,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016d": {
+		'ŭ': {
 			HorizAdvX: 600,
-			Unicode:   "\u016d",
+			Unicode:   'ŭ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -16140,9 +16140,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016e": {
+		'Ů': {
 			HorizAdvX: 0,
-			Unicode:   "\u016e",
+			Unicode:   'Ů',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -16198,9 +16198,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016f": {
+		'ů': {
 			HorizAdvX: 600,
-			Unicode:   "\u016f",
+			Unicode:   'ů',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -16254,9 +16254,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0170": {
+		'Ű': {
 			HorizAdvX: 0,
-			Unicode:   "\u0170",
+			Unicode:   'Ű',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -16322,9 +16322,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0171": {
+		'ű': {
 			HorizAdvX: 600,
-			Unicode:   "\u0171",
+			Unicode:   'ű',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -16388,9 +16388,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0172": {
+		'Ų': {
 			HorizAdvX: 0,
-			Unicode:   "\u0172",
+			Unicode:   'Ų',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -16442,9 +16442,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0173": {
+		'ų': {
 			HorizAdvX: 600,
-			Unicode:   "\u0173",
+			Unicode:   'ų',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -16493,9 +16493,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0174": {
+		'Ŵ': {
 			HorizAdvX: 720,
-			Unicode:   "\u0174",
+			Unicode:   'Ŵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -16557,9 +16557,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0175": {
+		'ŵ': {
 			HorizAdvX: 840,
-			Unicode:   "\u0175",
+			Unicode:   'ŵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{580, 120}},
@@ -16626,9 +16626,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0176": {
+		'Ŷ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0176",
+			Unicode:   'Ŷ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -16683,9 +16683,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0177": {
+		'ŷ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0177",
+			Unicode:   'ŷ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 120}},
@@ -16747,9 +16747,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0178": {
+		'Ÿ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0178",
+			Unicode:   'Ÿ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -16818,9 +16818,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0179": {
+		'Ź': {
 			HorizAdvX: 0,
-			Unicode:   "\u0179",
+			Unicode:   'Ź',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437.364, 635.154}},
@@ -16876,9 +16876,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017a": {
+		'ź': {
 			HorizAdvX: 600,
-			Unicode:   "\u017a",
+			Unicode:   'ź',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 474}},
@@ -16934,9 +16934,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017b": {
+		'Ż': {
 			HorizAdvX: 0,
-			Unicode:   "\u017b",
+			Unicode:   'Ż',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437.364, 635.154}},
@@ -16993,9 +16993,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017c": {
+		'ż': {
 			HorizAdvX: 600,
-			Unicode:   "\u017c",
+			Unicode:   'ż',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 474}},
@@ -17052,9 +17052,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017d": {
+		'Ž': {
 			HorizAdvX: 0,
-			Unicode:   "\u017d",
+			Unicode:   'Ž',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437.364, 635.154}},
@@ -17112,9 +17112,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017e": {
+		'ž': {
 			HorizAdvX: 600,
-			Unicode:   "\u017e",
+			Unicode:   'ž',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 474}},
@@ -17172,9 +17172,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0189": {
+		'Ɖ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0189",
+			Unicode:   'Ɖ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 600}},
@@ -17233,9 +17233,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01cd": {
+		'Ǎ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01cd",
+			Unicode:   'Ǎ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -17302,9 +17302,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ce": {
+		'ǎ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01ce",
+			Unicode:   'ǎ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -17373,9 +17373,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01cf": {
+		'Ǐ': {
 			HorizAdvX: 200,
-			Unicode:   "\u01cf",
+			Unicode:   'Ǐ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -17415,9 +17415,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d0": {
+		'ǐ': {
 			HorizAdvX: 200,
-			Unicode:   "\u01d0",
+			Unicode:   'ǐ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119, 240}},
@@ -17457,9 +17457,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d1": {
+		'Ǒ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01d1",
+			Unicode:   'Ǒ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -17528,9 +17528,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d2": {
+		'ǒ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01d2",
+			Unicode:   'ǒ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -17594,9 +17594,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d3": {
+		'Ǔ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01d3",
+			Unicode:   'Ǔ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -17650,9 +17650,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d4": {
+		'ǔ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01d4",
+			Unicode:   'ǔ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -17704,9 +17704,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d5": {
+		'Ǖ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01d5",
+			Unicode:   'Ǖ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -17786,9 +17786,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d6": {
+		'ǖ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01d6",
+			Unicode:   'ǖ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -17866,9 +17866,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d7": {
+		'Ǘ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01d7",
+			Unicode:   'Ǘ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -17950,9 +17950,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d8": {
+		'ǘ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01d8",
+			Unicode:   'ǘ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -18032,9 +18032,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d9": {
+		'Ǚ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01d9",
+			Unicode:   'Ǚ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -18118,9 +18118,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01da": {
+		'ǚ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01da",
+			Unicode:   'ǚ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -18202,9 +18202,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01db": {
+		'Ǜ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01db",
+			Unicode:   'Ǜ',
 			GerberLP:  "ddddccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -18287,9 +18287,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01dc": {
+		'ǜ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01dc",
+			Unicode:   'ǜ',
 			GerberLP:  "ddddccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -18370,9 +18370,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01de": {
+		'Ǟ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01de",
+			Unicode:   'Ǟ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -18465,9 +18465,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01df": {
+		'ǟ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01df",
+			Unicode:   'ǟ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -18562,9 +18562,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e0": {
+		'Ǡ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01e0",
+			Unicode:   'Ǡ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -18642,9 +18642,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e1": {
+		'ǡ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01e1",
+			Unicode:   'ǡ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -18724,9 +18724,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e2": {
+		'Ǣ': {
 			HorizAdvX: 1160,
-			Unicode:   "\u01e2",
+			Unicode:   'Ǣ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{780, 80}},
@@ -18807,9 +18807,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e3": {
+		'ǣ': {
 			HorizAdvX: 1000,
-			Unicode:   "\u01e3",
+			Unicode:   'ǣ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{700, 120}},
@@ -18906,9 +18906,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e4": {
+		'Ǥ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01e4",
+			Unicode:   'Ǥ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{423, 40}},
@@ -18980,9 +18980,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e5": {
+		'ǥ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01e5",
+			Unicode:   'ǥ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 560}},
@@ -19054,9 +19054,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e6": {
+		'Ǧ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01e6",
+			Unicode:   'Ǧ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -19131,9 +19131,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e7": {
+		'ǧ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01e7",
+			Unicode:   'ǧ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -19206,9 +19206,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e8": {
+		'Ǩ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01e8",
+			Unicode:   'Ǩ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 239}},
@@ -19266,9 +19266,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e9": {
+		'ǩ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01e9",
+			Unicode:   'ǩ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -19330,9 +19330,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ea": {
+		'Ǫ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01ea",
+			Unicode:   'Ǫ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{439, -75}},
@@ -19398,9 +19398,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01eb": {
+		'ǫ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01eb",
+			Unicode:   'ǫ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{399, -159}},
@@ -19464,9 +19464,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ec": {
+		'Ǭ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01ec",
+			Unicode:   'Ǭ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{439, -75}},
@@ -19544,9 +19544,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ed": {
+		'ǭ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01ed",
+			Unicode:   'ǭ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{399, -159}},
@@ -19622,9 +19622,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01f0": {
+		'ǰ': {
 			HorizAdvX: 240,
-			Unicode:   "\u01f0",
+			Unicode:   'ǰ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 61}},
@@ -19667,9 +19667,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01f4": {
+		'Ǵ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01f4",
+			Unicode:   'Ǵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -19742,9 +19742,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01f5": {
+		'ǵ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01f5",
+			Unicode:   'ǵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -19815,9 +19815,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01f8": {
+		'Ǹ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01f8",
+			Unicode:   'Ǹ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -19879,9 +19879,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01f9": {
+		'ǹ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01f9",
+			Unicode:   'ǹ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -19933,9 +19933,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fa": {
+		'Ǻ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01fa",
+			Unicode:   'Ǻ',
 			GerberLP:  "ddccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{220, 880}},
@@ -20016,9 +20016,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fb": {
+		'ǻ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01fb",
+			Unicode:   'ǻ',
 			GerberLP:  "ddccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -20100,9 +20100,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fc": {
+		'Ǽ': {
 			HorizAdvX: 1160,
-			Unicode:   "\u01fc",
+			Unicode:   'Ǽ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{780, 80}},
@@ -20185,9 +20185,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fd": {
+		'ǽ': {
 			HorizAdvX: 1000,
-			Unicode:   "\u01fd",
+			Unicode:   'ǽ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{700, 120}},
@@ -20286,9 +20286,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fe": {
+		'Ǿ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01fe",
+			Unicode:   'Ǿ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -20380,9 +20380,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ff": {
+		'ǿ': {
 			HorizAdvX: 600,
-			Unicode:   "\u01ff",
+			Unicode:   'ǿ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, 180}},
@@ -20470,9 +20470,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0200": {
+		'Ȁ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0200",
+			Unicode:   'Ȁ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -20549,9 +20549,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0201": {
+		'ȁ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0201",
+			Unicode:   'ȁ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -20630,9 +20630,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0202": {
+		'Ȃ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0202",
+			Unicode:   'Ȃ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -20701,9 +20701,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0203": {
+		'ȃ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0203",
+			Unicode:   'ȃ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -20774,9 +20774,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0204": {
+		'Ȅ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0204",
+			Unicode:   'Ȅ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -20843,9 +20843,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0205": {
+		'ȅ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0205",
+			Unicode:   'ȅ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -20923,9 +20923,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0206": {
+		'Ȇ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0206",
+			Unicode:   'Ȇ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -20984,9 +20984,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0207": {
+		'ȇ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0207",
+			Unicode:   'ȇ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -21056,9 +21056,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0208": {
+		'Ȉ': {
 			HorizAdvX: 200,
-			Unicode:   "\u0208",
+			Unicode:   'Ȉ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -21108,9 +21108,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0209": {
+		'ȉ': {
 			HorizAdvX: 200,
-			Unicode:   "\u0209",
+			Unicode:   'ȉ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -21160,9 +21160,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020a": {
+		'Ȋ': {
 			HorizAdvX: 200,
-			Unicode:   "\u020a",
+			Unicode:   'Ȋ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -21204,9 +21204,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020b": {
+		'ȋ': {
 			HorizAdvX: 200,
-			Unicode:   "\u020b",
+			Unicode:   'ȋ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -21248,9 +21248,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020c": {
+		'Ȍ': {
 			HorizAdvX: 0,
-			Unicode:   "\u020c",
+			Unicode:   'Ȍ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -21329,9 +21329,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020d": {
+		'ȍ': {
 			HorizAdvX: 600,
-			Unicode:   "\u020d",
+			Unicode:   'ȍ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -21405,9 +21405,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020e": {
+		'Ȏ': {
 			HorizAdvX: 0,
-			Unicode:   "\u020e",
+			Unicode:   'Ȏ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -21478,9 +21478,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020f": {
+		'ȏ': {
 			HorizAdvX: 600,
-			Unicode:   "\u020f",
+			Unicode:   'ȏ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -21546,9 +21546,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0210": {
+		'Ȑ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0210",
+			Unicode:   'Ȑ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -21626,9 +21626,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0211": {
+		'ȑ': {
 			HorizAdvX: 360,
-			Unicode:   "\u0211",
+			Unicode:   'ȑ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -21683,9 +21683,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0212": {
+		'Ȓ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0212",
+			Unicode:   'Ȓ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -21755,9 +21755,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0213": {
+		'ȓ': {
 			HorizAdvX: 360,
-			Unicode:   "\u0213",
+			Unicode:   'ȓ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -21804,9 +21804,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0214": {
+		'Ȕ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0214",
+			Unicode:   'Ȕ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -21870,9 +21870,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0215": {
+		'ȕ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0215",
+			Unicode:   'ȕ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -21934,9 +21934,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0216": {
+		'Ȗ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0216",
+			Unicode:   'Ȗ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -21992,9 +21992,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0217": {
+		'ȗ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0217",
+			Unicode:   'ȗ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -22048,9 +22048,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0218": {
+		'Ș': {
 			HorizAdvX: 0,
-			Unicode:   "\u0218",
+			Unicode:   'Ș',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -22124,9 +22124,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0219": {
+		'ș': {
 			HorizAdvX: 600,
-			Unicode:   "\u0219",
+			Unicode:   'ș',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 480}},
@@ -22190,9 +22190,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021a": {
+		'Ț': {
 			HorizAdvX: 0,
-			Unicode:   "\u021a",
+			Unicode:   'Ț',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{360, 240}},
@@ -22239,9 +22239,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021b": {
+		'ț': {
 			HorizAdvX: 360,
-			Unicode:   "\u021b",
+			Unicode:   'ț',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 325}},
@@ -22304,9 +22304,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021e": {
+		'Ȟ': {
 			HorizAdvX: 0,
-			Unicode:   "\u021e",
+			Unicode:   'Ȟ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -22362,9 +22362,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021f": {
+		'ȟ': {
 			HorizAdvX: 600,
-			Unicode:   "\u021f",
+			Unicode:   'ȟ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -22423,9 +22423,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0226": {
+		'Ȧ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0226",
+			Unicode:   'Ȧ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -22491,9 +22491,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0227": {
+		'ȧ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0227",
+			Unicode:   'ȧ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -22561,9 +22561,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0228": {
+		'Ȩ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0228",
+			Unicode:   'Ȩ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -22620,9 +22620,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0229": {
+		'ȩ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0229",
+			Unicode:   'ȩ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -22689,9 +22689,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u022a": {
+		'Ȫ': {
 			HorizAdvX: 0,
-			Unicode:   "\u022a",
+			Unicode:   'Ȫ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -22786,9 +22786,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u022b": {
+		'ȫ': {
 			HorizAdvX: 600,
-			Unicode:   "\u022b",
+			Unicode:   'ȫ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -22878,9 +22878,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u022c": {
+		'Ȭ': {
 			HorizAdvX: 0,
-			Unicode:   "\u022c",
+			Unicode:   'Ȭ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -22969,9 +22969,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u022d": {
+		'ȭ': {
 			HorizAdvX: 600,
-			Unicode:   "\u022d",
+			Unicode:   'ȭ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -23055,9 +23055,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u022e": {
+		'Ȯ': {
 			HorizAdvX: 0,
-			Unicode:   "\u022e",
+			Unicode:   'Ȯ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -23125,9 +23125,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u022f": {
+		'ȯ': {
 			HorizAdvX: 600,
-			Unicode:   "\u022f",
+			Unicode:   'ȯ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -23190,9 +23190,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0230": {
+		'Ȱ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0230",
+			Unicode:   'Ȱ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -23272,9 +23272,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0231": {
+		'ȱ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0231",
+			Unicode:   'ȱ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -23349,9 +23349,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0232": {
+		'Ȳ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0232",
+			Unicode:   'Ȳ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -23402,9 +23402,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0233": {
+		'ȳ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0233",
+			Unicode:   'ȳ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 120}},
@@ -23462,9 +23462,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02b0": {
+		'ʰ': {
 			HorizAdvX: 600,
-			Unicode:   "\u02b0",
+			Unicode:   'ʰ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -23507,9 +23507,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02b2": {
+		'ʲ': {
 			HorizAdvX: 240,
-			Unicode:   "\u02b2",
+			Unicode:   'ʲ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 240}},
@@ -23551,9 +23551,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02b3": {
+		'ʳ': {
 			HorizAdvX: 360,
-			Unicode:   "\u02b3",
+			Unicode:   'ʳ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -23582,9 +23582,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02b7": {
+		'ʷ': {
 			HorizAdvX: 840,
-			Unicode:   "\u02b7",
+			Unicode:   'ʷ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{580, 120}},
@@ -23635,9 +23635,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02b8": {
+		'ʸ': {
 			HorizAdvX: 600,
-			Unicode:   "\u02b8",
+			Unicode:   'ʸ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 120}},
@@ -23683,9 +23683,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c6": {
+		'ˆ': {
 			HorizAdvX: 600,
-			Unicode:   "\u02c6",
+			Unicode:   'ˆ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{299, 697}},
@@ -23706,9 +23706,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c7": {
+		'ˇ': {
 			HorizAdvX: 600,
-			Unicode:   "\u02c7",
+			Unicode:   'ˇ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{299, 783}},
@@ -23729,9 +23729,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d8": {
+		'˘': {
 			HorizAdvX: 600,
-			Unicode:   "\u02d8",
+			Unicode:   '˘',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{382, 840}},
@@ -23754,9 +23754,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d9": {
+		'˙': {
 			HorizAdvX: 600,
-			Unicode:   "\u02d9",
+			Unicode:   '˙',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 680}},
@@ -23776,9 +23776,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02da": {
+		'˚': {
 			HorizAdvX: 280,
-			Unicode:   "\u02da",
+			Unicode:   '˚',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{20, 720}},
@@ -23801,9 +23801,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02db": {
+		'˛': {
 			HorizAdvX: 1000,
-			Unicode:   "\u02db",
+			Unicode:   '˛',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, -160}},
@@ -23825,9 +23825,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dc": {
+		'˜': {
 			HorizAdvX: 600,
-			Unicode:   "\u02dc",
+			Unicode:   '˜',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{374, 662}},
@@ -23856,9 +23856,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dd": {
+		'˝': {
 			HorizAdvX: 600,
-			Unicode:   "\u02dd",
+			Unicode:   '˝',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{290, 732}},
@@ -23891,9 +23891,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02e1": {
+		'ˡ': {
 			HorizAdvX: 360,
-			Unicode:   "\u02e1",
+			Unicode:   'ˡ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -23923,9 +23923,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02e2": {
+		'ˢ': {
 			HorizAdvX: 600,
-			Unicode:   "\u02e2",
+			Unicode:   'ˢ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 480}},
@@ -23973,9 +23973,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02e3": {
+		'ˣ': {
 			HorizAdvX: 600,
-			Unicode:   "\u02e3",
+			Unicode:   'ˣ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, 640}},
@@ -24026,9 +24026,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u030f": {
+		'̏': {
 			HorizAdvX: 600,
-			Unicode:   "\u030f",
+			Unicode:   '̏',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{365, 840}},
@@ -24059,9 +24059,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0311": {
+		'̑': {
 			HorizAdvX: 600,
-			Unicode:   "\u0311",
+			Unicode:   '̑',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{218, 640}},
@@ -24084,9 +24084,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0327": {
+		'̧': {
 			HorizAdvX: 0,
-			Unicode:   "\u0327",
+			Unicode:   '̧',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{400, 40}},
@@ -24110,9 +24110,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e00": {
+		'Ḁ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e00",
+			Unicode:   'Ḁ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -24181,9 +24181,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e01": {
+		'ḁ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e01",
+			Unicode:   'ḁ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -24254,9 +24254,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e02": {
+		'Ḃ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e02",
+			Unicode:   'Ḃ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -24331,9 +24331,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e03": {
+		'ḃ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e03",
+			Unicode:   'ḃ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -24394,9 +24394,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e04": {
+		'Ḅ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e04",
+			Unicode:   'Ḅ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -24471,9 +24471,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e05": {
+		'ḅ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e05",
+			Unicode:   'ḅ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -24534,9 +24534,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e06": {
+		'Ḇ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e06",
+			Unicode:   'Ḇ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -24608,9 +24608,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e07": {
+		'ḇ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e07",
+			Unicode:   'ḇ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -24668,9 +24668,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e08": {
+		'Ḉ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e08",
+			Unicode:   'Ḉ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 603}},
@@ -24755,9 +24755,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e09": {
+		'ḉ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e09",
+			Unicode:   'ḉ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 201}},
@@ -24832,9 +24832,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0a": {
+		'Ḋ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e0a",
+			Unicode:   'Ḋ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119.958, 235.442}},
@@ -24892,9 +24892,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0b": {
+		'ḋ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e0b",
+			Unicode:   'ḋ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -24958,9 +24958,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0c": {
+		'Ḍ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e0c",
+			Unicode:   'Ḍ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119.958, 235.442}},
@@ -25018,9 +25018,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0d": {
+		'ḍ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e0d",
+			Unicode:   'ḍ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -25084,9 +25084,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0e": {
+		'Ḏ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e0e",
+			Unicode:   'Ḏ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119.958, 235.442}},
@@ -25141,9 +25141,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0f": {
+		'ḏ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e0f",
+			Unicode:   'ḏ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -25204,9 +25204,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e10": {
+		'Ḑ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e10",
+			Unicode:   'Ḑ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -25265,9 +25265,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e11": {
+		'ḑ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e11",
+			Unicode:   'ḑ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -25332,9 +25332,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e12": {
+		'Ḓ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e12",
+			Unicode:   'Ḓ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119.958, 235.442}},
@@ -25393,9 +25393,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e13": {
+		'ḓ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e13",
+			Unicode:   'ḓ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -25460,9 +25460,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e14": {
+		'Ḕ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e14",
+			Unicode:   'Ḕ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -25530,9 +25530,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e15": {
+		'ḕ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e15",
+			Unicode:   'ḕ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -25611,9 +25611,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e16": {
+		'Ḗ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e16",
+			Unicode:   'Ḗ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -25680,9 +25680,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e17": {
+		'ḗ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e17",
+			Unicode:   'ḗ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -25760,9 +25760,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e18": {
+		'Ḙ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e18",
+			Unicode:   'Ḙ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -25819,9 +25819,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e19": {
+		'ḙ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e19",
+			Unicode:   'ḙ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -25889,9 +25889,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e1a": {
+		'Ḛ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e1a",
+			Unicode:   'Ḛ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -25956,9 +25956,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e1b": {
+		'ḛ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e1b",
+			Unicode:   'ḛ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -26034,9 +26034,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e1c": {
+		'Ḝ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e1c",
+			Unicode:   'Ḝ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -26111,9 +26111,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e1d": {
+		'ḝ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e1d",
+			Unicode:   'ḝ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -26198,9 +26198,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e1e": {
+		'Ḟ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e1e",
+			Unicode:   'Ḟ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -26251,9 +26251,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e1f": {
+		'ḟ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e1f",
+			Unicode:   'ḟ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -26307,9 +26307,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e20": {
+		'Ḡ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e20",
+			Unicode:   'Ḡ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -26380,9 +26380,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e21": {
+		'ḡ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e21",
+			Unicode:   'ḡ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -26451,9 +26451,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e22": {
+		'Ḣ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e22",
+			Unicode:   'Ḣ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -26508,9 +26508,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e23": {
+		'ḣ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e23",
+			Unicode:   'ḣ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -26568,9 +26568,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e24": {
+		'Ḥ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e24",
+			Unicode:   'Ḥ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -26625,9 +26625,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e25": {
+		'ḥ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e25",
+			Unicode:   'ḥ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -26685,9 +26685,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e26": {
+		'Ḧ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e26",
+			Unicode:   'Ḧ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -26757,9 +26757,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e27": {
+		'ḧ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e27",
+			Unicode:   'ḧ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -26832,9 +26832,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e28": {
+		'Ḩ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e28",
+			Unicode:   'Ḩ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -26893,9 +26893,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e29": {
+		'ḩ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e29",
+			Unicode:   'ḩ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -26957,9 +26957,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2a": {
+		'Ḫ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e2a",
+			Unicode:   'Ḫ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27017,9 +27017,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2b": {
+		'ḫ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e2b",
+			Unicode:   'ḫ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -27080,9 +27080,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2c": {
+		'Ḭ': {
 			HorizAdvX: 200,
-			Unicode:   "\u1e2c",
+			Unicode:   'Ḭ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27130,9 +27130,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2d": {
+		'ḭ': {
 			HorizAdvX: 200,
-			Unicode:   "\u1e2d",
+			Unicode:   'ḭ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27195,9 +27195,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2e": {
+		'Ḯ': {
 			HorizAdvX: 200,
-			Unicode:   "\u1e2e",
+			Unicode:   'Ḯ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27265,9 +27265,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2f": {
+		'ḯ': {
 			HorizAdvX: 200,
-			Unicode:   "\u1e2f",
+			Unicode:   'ḯ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27335,9 +27335,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e30": {
+		'Ḱ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e30",
+			Unicode:   'Ḱ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 239}},
@@ -27393,9 +27393,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e31": {
+		'ḱ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e31",
+			Unicode:   'ḱ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27455,9 +27455,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e32": {
+		'Ḳ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e32",
+			Unicode:   'Ḳ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 239}},
@@ -27514,9 +27514,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e33": {
+		'ḳ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e33",
+			Unicode:   'ḳ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27577,9 +27577,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e34": {
+		'Ḵ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e34",
+			Unicode:   'Ḵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 239}},
@@ -27633,9 +27633,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e35": {
+		'ḵ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e35",
+			Unicode:   'ḵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27693,9 +27693,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e36": {
+		'Ḷ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e36",
+			Unicode:   'Ḷ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27740,9 +27740,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e37": {
+		'ḷ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e37",
+			Unicode:   'ḷ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27787,9 +27787,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e38": {
+		'Ḹ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e38",
+			Unicode:   'Ḹ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27846,9 +27846,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e39": {
+		'ḹ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e39",
+			Unicode:   'ḹ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27905,9 +27905,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e3a": {
+		'Ḻ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e3a",
+			Unicode:   'Ḻ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27949,9 +27949,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e3b": {
+		'ḻ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e3b",
+			Unicode:   'ḻ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -27993,9 +27993,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e3c": {
+		'Ḽ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e3c",
+			Unicode:   'Ḽ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -28041,9 +28041,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e3d": {
+		'ḽ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e3d",
+			Unicode:   'ḽ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -28089,9 +28089,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e3e": {
+		'Ḿ': {
 			HorizAdvX: 720,
-			Unicode:   "\u1e3e",
+			Unicode:   'Ḿ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -28152,9 +28152,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e3f": {
+		'ḿ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1e3f",
+			Unicode:   'ḿ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -28219,9 +28219,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e40": {
+		'Ṁ': {
 			HorizAdvX: 720,
-			Unicode:   "\u1e40",
+			Unicode:   'Ṁ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -28283,9 +28283,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e41": {
+		'ṁ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1e41",
+			Unicode:   'ṁ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -28351,9 +28351,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e42": {
+		'Ṃ': {
 			HorizAdvX: 720,
-			Unicode:   "\u1e42",
+			Unicode:   'Ṃ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -28415,9 +28415,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e43": {
+		'ṃ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1e43",
+			Unicode:   'ṃ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -28483,9 +28483,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e44": {
+		'Ṅ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e44",
+			Unicode:   'Ṅ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -28547,9 +28547,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e45": {
+		'ṅ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e45",
+			Unicode:   'ṅ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -28601,9 +28601,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e46": {
+		'Ṇ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e46",
+			Unicode:   'Ṇ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -28665,9 +28665,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e47": {
+		'ṇ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e47",
+			Unicode:   'ṇ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -28719,9 +28719,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e48": {
+		'Ṉ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e48",
+			Unicode:   'Ṉ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -28780,9 +28780,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e49": {
+		'ṉ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e49",
+			Unicode:   'ṉ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -28831,9 +28831,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e4a": {
+		'Ṋ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e4a",
+			Unicode:   'Ṋ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -28896,9 +28896,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e4b": {
+		'ṋ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e4b",
+			Unicode:   'ṋ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -28951,9 +28951,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e4c": {
+		'Ṍ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e4c",
+			Unicode:   'Ṍ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -29044,9 +29044,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e4d": {
+		'ṍ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e4d",
+			Unicode:   'ṍ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -29132,9 +29132,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e4e": {
+		'Ṏ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e4e",
+			Unicode:   'Ṏ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -29241,9 +29241,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e4f": {
+		'ṏ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e4f",
+			Unicode:   'ṏ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -29345,9 +29345,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e50": {
+		'Ṑ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e50",
+			Unicode:   'Ṑ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -29427,9 +29427,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e51": {
+		'ṑ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e51",
+			Unicode:   'ṑ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -29504,9 +29504,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e52": {
+		'Ṓ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e52",
+			Unicode:   'Ṓ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -29585,9 +29585,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e53": {
+		'ṓ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e53",
+			Unicode:   'ṓ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -29661,9 +29661,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e54": {
+		'Ṕ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e54",
+			Unicode:   'Ṕ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -29721,9 +29721,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e55": {
+		'ṕ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e55",
+			Unicode:   'ṕ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{480, 240}},
@@ -29788,9 +29788,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e56": {
+		'Ṗ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e56",
+			Unicode:   'Ṗ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -29849,9 +29849,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e57": {
+		'ṗ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e57",
+			Unicode:   'ṗ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{480, 240}},
@@ -29917,9 +29917,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e58": {
+		'Ṙ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e58",
+			Unicode:   'Ṙ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -29986,9 +29986,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e59": {
+		'ṙ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e59",
+			Unicode:   'ṙ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -30032,9 +30032,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5a": {
+		'Ṛ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e5a",
+			Unicode:   'Ṛ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -30101,9 +30101,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5b": {
+		'ṛ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e5b",
+			Unicode:   'ṛ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -30147,9 +30147,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5c": {
+		'Ṝ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e5c",
+			Unicode:   'Ṝ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -30228,9 +30228,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5d": {
+		'ṝ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e5d",
+			Unicode:   'ṝ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -30286,9 +30286,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5e": {
+		'Ṟ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e5e",
+			Unicode:   'Ṟ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -30352,9 +30352,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5f": {
+		'ṟ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e5f",
+			Unicode:   'ṟ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -30395,9 +30395,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e60": {
+		'Ṡ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e60",
+			Unicode:   'Ṡ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -30470,9 +30470,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e61": {
+		'ṡ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e61",
+			Unicode:   'ṡ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 480}},
@@ -30535,9 +30535,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e62": {
+		'Ṣ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e62",
+			Unicode:   'Ṣ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -30610,9 +30610,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e63": {
+		'ṣ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e63",
+			Unicode:   'ṣ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 480}},
@@ -30675,9 +30675,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e64": {
+		'Ṥ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e64",
+			Unicode:   'Ṥ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -30764,9 +30764,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e65": {
+		'ṥ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e65",
+			Unicode:   'ṥ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 480}},
@@ -30843,9 +30843,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e66": {
+		'Ṧ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e66",
+			Unicode:   'Ṧ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -30934,9 +30934,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e67": {
+		'ṧ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e67",
+			Unicode:   'ṧ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 480}},
@@ -31015,9 +31015,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e68": {
+		'Ṩ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e68",
+			Unicode:   'Ṩ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 600}},
@@ -31105,9 +31105,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e69": {
+		'ṩ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e69",
+			Unicode:   'ṩ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 480}},
@@ -31185,9 +31185,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6a": {
+		'Ṫ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e6a",
+			Unicode:   'Ṫ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{360, 240}},
@@ -31233,9 +31233,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6b": {
+		'ṫ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e6b",
+			Unicode:   'ṫ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 325}},
@@ -31297,9 +31297,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6c": {
+		'Ṭ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e6c",
+			Unicode:   'Ṭ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{360, 240}},
@@ -31345,9 +31345,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6d": {
+		'ṭ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e6d",
+			Unicode:   'ṭ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 325}},
@@ -31409,9 +31409,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6e": {
+		'Ṯ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e6e",
+			Unicode:   'Ṯ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{360, 240}},
@@ -31454,9 +31454,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6f": {
+		'ṯ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e6f",
+			Unicode:   'ṯ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 325}},
@@ -31515,9 +31515,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e70": {
+		'Ṱ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e70",
+			Unicode:   'Ṱ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{360, 240}},
@@ -31564,9 +31564,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e71": {
+		'ṱ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e71",
+			Unicode:   'ṱ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 325}},
@@ -31629,9 +31629,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e72": {
+		'Ṳ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e72",
+			Unicode:   'Ṳ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -31699,9 +31699,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e73": {
+		'ṳ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e73",
+			Unicode:   'ṳ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -31767,9 +31767,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e74": {
+		'Ṵ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e74",
+			Unicode:   'Ṵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -31831,9 +31831,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e75": {
+		'ṵ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e75",
+			Unicode:   'ṵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -31893,9 +31893,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e76": {
+		'Ṷ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e76",
+			Unicode:   'Ṷ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -31949,9 +31949,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e77": {
+		'ṷ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e77",
+			Unicode:   'ṷ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -32003,9 +32003,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e78": {
+		'Ṹ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e78",
+			Unicode:   'Ṹ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -32081,9 +32081,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e79": {
+		'ṹ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e79",
+			Unicode:   'ṹ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -32157,9 +32157,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e7a": {
+		'Ṻ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e7a",
+			Unicode:   'Ṻ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -32239,9 +32239,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e7b": {
+		'ṻ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e7b",
+			Unicode:   'ṻ',
 			GerberLP:  "ddcddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -32319,9 +32319,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e7c": {
+		'Ṽ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e7c",
+			Unicode:   'Ṽ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -32378,9 +32378,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e7d": {
+		'ṽ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e7d",
+			Unicode:   'ṽ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{158, 263}},
@@ -32436,9 +32436,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e7e": {
+		'Ṿ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e7e",
+			Unicode:   'Ṿ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -32486,9 +32486,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e7f": {
+		'ṿ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e7f",
+			Unicode:   'ṿ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{158, 263}},
@@ -32535,9 +32535,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e80": {
+		'Ẁ': {
 			HorizAdvX: 720,
-			Unicode:   "\u1e80",
+			Unicode:   'Ẁ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -32598,9 +32598,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e81": {
+		'ẁ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1e81",
+			Unicode:   'ẁ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{580, 120}},
@@ -32666,9 +32666,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e82": {
+		'Ẃ': {
 			HorizAdvX: 720,
-			Unicode:   "\u1e82",
+			Unicode:   'Ẃ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -32728,9 +32728,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e83": {
+		'ẃ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1e83",
+			Unicode:   'ẃ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{580, 120}},
@@ -32795,9 +32795,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e84": {
+		'Ẅ': {
 			HorizAdvX: 720,
-			Unicode:   "\u1e84",
+			Unicode:   'Ẅ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -32873,9 +32873,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e85": {
+		'ẅ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1e85",
+			Unicode:   'ẅ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{580, 120}},
@@ -32956,9 +32956,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e86": {
+		'Ẇ': {
 			HorizAdvX: 720,
-			Unicode:   "\u1e86",
+			Unicode:   'Ẇ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -33019,9 +33019,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e87": {
+		'ẇ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1e87",
+			Unicode:   'ẇ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{580, 120}},
@@ -33087,9 +33087,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e88": {
+		'Ẉ': {
 			HorizAdvX: 720,
-			Unicode:   "\u1e88",
+			Unicode:   'Ẉ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 276}},
@@ -33150,9 +33150,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e89": {
+		'ẉ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1e89",
+			Unicode:   'ẉ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{580, 120}},
@@ -33218,9 +33218,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8a": {
+		'Ẋ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e8a",
+			Unicode:   'Ẋ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -33288,9 +33288,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8b": {
+		'ẋ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e8b",
+			Unicode:   'ẋ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, 640}},
@@ -33356,9 +33356,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8c": {
+		'Ẍ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e8c",
+			Unicode:   'Ẍ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -33441,9 +33441,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8d": {
+		'ẍ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e8d",
+			Unicode:   'ẍ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{560, 640}},
@@ -33524,9 +33524,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8e": {
+		'Ẏ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e8e",
+			Unicode:   'Ẏ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -33580,9 +33580,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8f": {
+		'ẏ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e8f",
+			Unicode:   'ẏ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 120}},
@@ -33643,9 +33643,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e90": {
+		'Ẑ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e90",
+			Unicode:   'Ẑ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437.364, 635.154}},
@@ -33703,9 +33703,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e91": {
+		'ẑ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e91",
+			Unicode:   'ẑ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 474}},
@@ -33763,9 +33763,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e92": {
+		'Ẓ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e92",
+			Unicode:   'Ẓ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437.364, 635.154}},
@@ -33822,9 +33822,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e93": {
+		'ẓ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e93",
+			Unicode:   'ẓ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 474}},
@@ -33881,9 +33881,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e94": {
+		'Ẕ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e94",
+			Unicode:   'Ẕ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437.364, 635.154}},
@@ -33937,9 +33937,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e95": {
+		'ẕ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e95",
+			Unicode:   'ẕ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 474}},
@@ -33993,9 +33993,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e96": {
+		'ẖ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e96",
+			Unicode:   'ẖ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 241}},
@@ -34050,9 +34050,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e97": {
+		'ẗ': {
 			HorizAdvX: 360,
-			Unicode:   "\u1e97",
+			Unicode:   'ẗ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 325}},
@@ -34129,9 +34129,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e98": {
+		'ẘ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1e98",
+			Unicode:   'ẘ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{580, 120}},
@@ -34200,9 +34200,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e99": {
+		'ẙ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e99",
+			Unicode:   'ẙ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 120}},
@@ -34266,9 +34266,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea0": {
+		'Ạ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ea0",
+			Unicode:   'Ạ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -34334,9 +34334,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea1": {
+		'ạ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ea1",
+			Unicode:   'ạ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -34404,9 +34404,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea4": {
+		'Ấ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ea4",
+			Unicode:   'Ấ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -34487,9 +34487,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea5": {
+		'ấ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ea5",
+			Unicode:   'ấ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -34572,9 +34572,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea6": {
+		'Ầ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ea6",
+			Unicode:   'Ầ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -34656,9 +34656,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea7": {
+		'ầ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ea7",
+			Unicode:   'ầ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -34742,9 +34742,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eaa": {
+		'Ẫ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eaa",
+			Unicode:   'Ẫ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -34835,9 +34835,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eab": {
+		'ẫ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1eab",
+			Unicode:   'ẫ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -34930,9 +34930,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eac": {
+		'Ậ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eac",
+			Unicode:   'Ậ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -35014,9 +35014,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ead": {
+		'ậ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ead",
+			Unicode:   'ậ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -35100,9 +35100,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eae": {
+		'Ắ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eae",
+			Unicode:   'Ắ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -35185,9 +35185,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eaf": {
+		'ắ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1eaf",
+			Unicode:   'ắ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -35272,9 +35272,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb0": {
+		'Ằ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eb0",
+			Unicode:   'Ằ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -35358,9 +35358,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb1": {
+		'ằ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1eb1",
+			Unicode:   'ằ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -35446,9 +35446,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb4": {
+		'Ẵ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eb4",
+			Unicode:   'Ẵ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -35541,9 +35541,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb5": {
+		'ẵ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1eb5",
+			Unicode:   'ẵ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -35638,9 +35638,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb6": {
+		'Ặ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eb6",
+			Unicode:   'Ặ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -35724,9 +35724,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb7": {
+		'ặ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1eb7",
+			Unicode:   'ặ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 200}},
@@ -35812,9 +35812,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb8": {
+		'Ẹ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eb8",
+			Unicode:   'Ẹ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -35870,9 +35870,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb9": {
+		'ẹ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1eb9",
+			Unicode:   'ẹ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -35939,9 +35939,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebc": {
+		'Ẽ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ebc",
+			Unicode:   'Ẽ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -36006,9 +36006,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebd": {
+		'ẽ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ebd",
+			Unicode:   'ẽ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -36084,9 +36084,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebe": {
+		'Ế': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ebe",
+			Unicode:   'Ế',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -36157,9 +36157,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebf": {
+		'ế': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ebf",
+			Unicode:   'ế',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -36241,9 +36241,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec0": {
+		'Ề': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ec0",
+			Unicode:   'Ề',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -36315,9 +36315,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec1": {
+		'ề': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ec1",
+			Unicode:   'ề',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -36400,9 +36400,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec4": {
+		'Ễ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ec4",
+			Unicode:   'Ễ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -36483,9 +36483,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec5": {
+		'ễ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ec5",
+			Unicode:   'ễ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -36577,9 +36577,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec6": {
+		'Ệ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ec6",
+			Unicode:   'Ệ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -36651,9 +36651,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec7": {
+		'ệ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ec7",
+			Unicode:   'ệ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 440}},
@@ -36736,9 +36736,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eca": {
+		'Ị': {
 			HorizAdvX: 200,
-			Unicode:   "\u1eca",
+			Unicode:   'Ị',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -36777,9 +36777,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ecb": {
+		'ị': {
 			HorizAdvX: 200,
-			Unicode:   "\u1ecb",
+			Unicode:   'ị',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -36833,9 +36833,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ecc": {
+		'Ọ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ecc",
+			Unicode:   'Ọ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -36903,9 +36903,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ecd": {
+		'ọ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ecd",
+			Unicode:   'ọ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -36968,9 +36968,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed0": {
+		'Ố': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ed0",
+			Unicode:   'Ố',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -37053,9 +37053,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed1": {
+		'ố': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ed1",
+			Unicode:   'ố',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -37133,9 +37133,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed2": {
+		'Ồ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ed2",
+			Unicode:   'Ồ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -37219,9 +37219,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed3": {
+		'ồ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ed3",
+			Unicode:   'ồ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -37300,9 +37300,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed6": {
+		'Ỗ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ed6",
+			Unicode:   'Ỗ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -37395,9 +37395,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed7": {
+		'ỗ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ed7",
+			Unicode:   'ỗ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -37485,9 +37485,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed8": {
+		'Ộ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ed8",
+			Unicode:   'Ộ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 240}},
@@ -37571,9 +37571,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed9": {
+		'ộ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ed9",
+			Unicode:   'ộ',
 			GerberLP:  "ddcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 444}},
@@ -37652,9 +37652,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee4": {
+		'Ụ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ee4",
+			Unicode:   'Ụ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -37707,9 +37707,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee5": {
+		'ụ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ee5",
+			Unicode:   'ụ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 360}},
@@ -37760,9 +37760,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef2": {
+		'Ỳ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ef2",
+			Unicode:   'Ỳ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -37816,9 +37816,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef3": {
+		'ỳ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ef3",
+			Unicode:   'ỳ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 120}},
@@ -37879,9 +37879,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef4": {
+		'Ỵ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ef4",
+			Unicode:   'Ỵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -37935,9 +37935,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef5": {
+		'ỵ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ef5",
+			Unicode:   'ỵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 120}},
@@ -37998,9 +37998,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef8": {
+		'Ỹ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ef8",
+			Unicode:   'Ỹ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 800}},
@@ -38063,9 +38063,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef9": {
+		'ỹ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ef9",
+			Unicode:   'ỹ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 120}},
@@ -38135,9 +38135,9 @@ var sportrop_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20ac": {
+		'€': {
 			HorizAdvX: 720,
-			Unicode:   "\u20ac",
+			Unicode:   '€',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{460, 800}},

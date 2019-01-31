@@ -11,16 +11,16 @@ func init() {
 }
 
 var sniglet_regularFont = &fonts.Font{
-	// ID: "sniglet_regular",
+	ID:               "sniglet_regular",
 	HorizAdvX:        564,
 	UnitsPerEm:       1000,
 	Ascent:           800,
 	Descent:          -200,
 	MissingHorizAdvX: 554,
-	Glyphs: map[string]*fonts.Glyph{
-		"!": {
+	Glyphs: map[rune]*fonts.Glyph{
+		'!': {
 			HorizAdvX: 223,
-			Unicode:   "!",
+			Unicode:   '!',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{67, 688}},
@@ -40,9 +40,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\"": {
+		'"': {
 			HorizAdvX: 401,
-			Unicode:   "\"",
+			Unicode:   '"',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{147, 629}},
@@ -63,9 +63,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"#": {
+		'#': {
 			HorizAdvX: 679,
-			Unicode:   "#",
+			Unicode:   '#',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{525, 208}},
@@ -107,9 +107,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"$": {
+		'$': {
 			HorizAdvX: 511,
-			Unicode:   "$",
+			Unicode:   '$',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{306, 728}},
@@ -137,9 +137,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"%": {
+		'%': {
 			HorizAdvX: 653,
-			Unicode:   "%",
+			Unicode:   '%',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 109}},
@@ -178,9 +178,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"&": {
+		'&': {
 			HorizAdvX: 636,
-			Unicode:   "&",
+			Unicode:   '&',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{190, 425}},
@@ -217,9 +217,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"'": {
+		'\'': {
 			HorizAdvX: 219,
-			Unicode:   "'",
+			Unicode:   '\'',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{158, 629}},
@@ -232,9 +232,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"(": {
+		'(': {
 			HorizAdvX: 332,
-			Unicode:   "(",
+			Unicode:   '(',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{109, 648}},
@@ -251,9 +251,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		")": {
+		')': {
 			HorizAdvX: 332,
-			Unicode:   ")",
+			Unicode:   ')',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{223, 648}},
@@ -270,9 +270,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"*": {
+		'*': {
 			HorizAdvX: 469,
-			Unicode:   "*",
+			Unicode:   '*',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{150, 556}},
@@ -295,9 +295,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"+": {
+		'+': {
 			HorizAdvX: 459,
-			Unicode:   "+",
+			Unicode:   '+',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{383, 304}},
@@ -319,9 +319,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		",": {
+		',': {
 			HorizAdvX: 170,
-			Unicode:   ",",
+			Unicode:   ',',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{62, -41}},
@@ -335,9 +335,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"-": {
+		'-': {
 			HorizAdvX: 480,
-			Unicode:   "-",
+			Unicode:   '-',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{394, 250}},
@@ -351,9 +351,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		".": {
+		'.': {
 			HorizAdvX: 163,
-			Unicode:   ".",
+			Unicode:   '.',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{81, 110}},
@@ -364,9 +364,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"/": {
+		'/': {
 			HorizAdvX: 404,
-			Unicode:   "/",
+			Unicode:   '/',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 61}},
@@ -381,9 +381,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"0": {
+		'0': {
 			HorizAdvX: 607,
-			Unicode:   "0",
+			Unicode:   '0',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 342}},
@@ -400,9 +400,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"1": {
+		'1': {
 			HorizAdvX: 349,
-			Unicode:   "1",
+			Unicode:   '1',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 62}},
@@ -421,9 +421,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"2": {
+		'2': {
 			HorizAdvX: 569,
-			Unicode:   "2",
+			Unicode:   '2',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{268, 604}},
@@ -444,9 +444,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"3": {
+		'3': {
 			HorizAdvX: 584,
-			Unicode:   "3",
+			Unicode:   '3',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{126, 600}},
@@ -469,9 +469,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"4": {
+		'4': {
 			HorizAdvX: 543,
-			Unicode:   "4",
+			Unicode:   '4',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{425, 207}},
@@ -495,9 +495,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"5": {
+		'5': {
 			HorizAdvX: 559,
-			Unicode:   "5",
+			Unicode:   '5',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{304, 700}},
@@ -519,9 +519,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"6": {
+		'6': {
 			HorizAdvX: 550,
-			Unicode:   "6",
+			Unicode:   '6',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 280}},
@@ -542,9 +542,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"7": {
+		'7': {
 			HorizAdvX: 460,
-			Unicode:   "7",
+			Unicode:   '7',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{235, 85}},
@@ -562,9 +562,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"8": {
+		'8': {
 			HorizAdvX: 568,
-			Unicode:   "8",
+			Unicode:   '8',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{284, 712}},
@@ -591,9 +591,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"9": {
+		'9': {
 			HorizAdvX: 550,
-			Unicode:   "9",
+			Unicode:   '9',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{510, 418}},
@@ -614,9 +614,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		":": {
+		':': {
 			HorizAdvX: 163,
-			Unicode:   ":",
+			Unicode:   ':',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{81, 110}},
@@ -633,9 +633,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		";": {
+		';': {
 			HorizAdvX: 170,
-			Unicode:   ";",
+			Unicode:   ';',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{62, -41}},
@@ -655,9 +655,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"<": {
+		'<': {
 			HorizAdvX: 372,
-			Unicode:   "<",
+			Unicode:   '<',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{321, 505}},
@@ -676,9 +676,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"=": {
+		'=': {
 			HorizAdvX: 476,
-			Unicode:   "=",
+			Unicode:   '=',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{390, 389}},
@@ -701,9 +701,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		">": {
+		'>': {
 			HorizAdvX: 391,
-			Unicode:   ">",
+			Unicode:   '>',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{50, 505}},
@@ -722,9 +722,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"?": {
+		'?': {
 			HorizAdvX: 462,
-			Unicode:   "?",
+			Unicode:   '?',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{221, 278}},
@@ -748,9 +748,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"@": {
+		'@': {
 			HorizAdvX: 723,
-			Unicode:   "@",
+			Unicode:   '@',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{508, 221}},
@@ -784,9 +784,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"A": {
+		'A': {
 			HorizAdvX: 597,
-			Unicode:   "A",
+			Unicode:   'A',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{479, 51}},
@@ -815,9 +815,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"B": {
+		'B': {
 			HorizAdvX: 582,
-			Unicode:   "B",
+			Unicode:   'B',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 0}},
@@ -846,9 +846,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"C": {
+		'C': {
 			HorizAdvX: 599,
-			Unicode:   "C",
+			Unicode:   'C',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, 708}},
@@ -865,9 +865,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"D": {
+		'D': {
 			HorizAdvX: 619,
-			Unicode:   "D",
+			Unicode:   'D',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{265, 707}},
@@ -886,9 +886,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"E": {
+		'E': {
 			HorizAdvX: 559,
-			Unicode:   "E",
+			Unicode:   'E',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{66, 152}},
@@ -915,9 +915,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"F": {
+		'F': {
 			HorizAdvX: 540,
-			Unicode:   "F",
+			Unicode:   'F',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{60, 465}},
@@ -939,9 +939,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"G": {
+		'G': {
 			HorizAdvX: 635,
-			Unicode:   "G",
+			Unicode:   'G',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{365, 708}},
@@ -968,9 +968,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"H": {
+		'H': {
 			HorizAdvX: 610,
-			Unicode:   "H",
+			Unicode:   'H',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{455, 62}},
@@ -996,9 +996,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"I": {
+		'I': {
 			HorizAdvX: 244,
-			Unicode:   "I",
+			Unicode:   'I',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{75, 62}},
@@ -1012,9 +1012,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"J": {
+		'J': {
 			HorizAdvX: 426,
-			Unicode:   "J",
+			Unicode:   'J',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{265, 251}},
@@ -1030,9 +1030,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"K": {
+		'K': {
 			HorizAdvX: 570,
-			Unicode:   "K",
+			Unicode:   'K',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{65, 62}},
@@ -1058,9 +1058,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"L": {
+		'L': {
 			HorizAdvX: 454,
-			Unicode:   "L",
+			Unicode:   'L',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 279}},
@@ -1076,9 +1076,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"M": {
+		'M': {
 			HorizAdvX: 737,
-			Unicode:   "M",
+			Unicode:   'M',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{328, 170}},
@@ -1101,9 +1101,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"N": {
+		'N': {
 			HorizAdvX: 631,
-			Unicode:   "N",
+			Unicode:   'N',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 47}},
@@ -1124,9 +1124,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"O": {
+		'O': {
 			HorizAdvX: 687,
-			Unicode:   "O",
+			Unicode:   'O',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{328, -10}},
@@ -1143,9 +1143,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"P": {
+		'P': {
 			HorizAdvX: 568,
-			Unicode:   "P",
+			Unicode:   'P',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 246}},
@@ -1167,9 +1167,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Q": {
+		'Q': {
 			HorizAdvX: 687,
-			Unicode:   "Q",
+			Unicode:   'Q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{328, -10}},
@@ -1192,9 +1192,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"R": {
+		'R': {
 			HorizAdvX: 577,
-			Unicode:   "R",
+			Unicode:   'R',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437, 33}},
@@ -1222,9 +1222,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"S": {
+		'S': {
 			HorizAdvX: 582,
-			Unicode:   "S",
+			Unicode:   'S',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{304, 706}},
@@ -1246,9 +1246,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"T": {
+		'T': {
 			HorizAdvX: 545,
-			Unicode:   "T",
+			Unicode:   'T',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{449, 608}},
@@ -1269,9 +1269,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"U": {
+		'U': {
 			HorizAdvX: 612,
-			Unicode:   "U",
+			Unicode:   'U',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{301, -17}},
@@ -1289,9 +1289,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"V": {
+		'V': {
 			HorizAdvX: 0,
-			Unicode:   "V",
+			Unicode:   'V',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{333, 40}},
@@ -1309,9 +1309,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"W": {
+		'W': {
 			HorizAdvX: 760,
-			Unicode:   "W",
+			Unicode:   'W',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{334, 510}},
@@ -1334,9 +1334,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"X": {
+		'X': {
 			HorizAdvX: 588,
-			Unicode:   "X",
+			Unicode:   'X',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{443, 32}},
@@ -1363,9 +1363,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Y": {
+		'Y': {
 			HorizAdvX: 568,
-			Unicode:   "Y",
+			Unicode:   'Y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 62}},
@@ -1386,9 +1386,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Z": {
+		'Z': {
 			HorizAdvX: 527,
-			Unicode:   "Z",
+			Unicode:   'Z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 2}},
@@ -1410,9 +1410,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"[": {
+		'[': {
 			HorizAdvX: 409,
-			Unicode:   "[",
+			Unicode:   '[',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{145, 771}},
@@ -1432,9 +1432,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\\": {
+		'\\': {
 			HorizAdvX: 441,
-			Unicode:   "\\",
+			Unicode:   '\\',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{372, 61}},
@@ -1449,9 +1449,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"]": {
+		']': {
 			HorizAdvX: 409,
-			Unicode:   "]",
+			Unicode:   ']',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{264, 771}},
@@ -1471,9 +1471,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"^": {
+		'^': {
 			HorizAdvX: 626,
-			Unicode:   "^",
+			Unicode:   '^',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 751}},
@@ -1490,9 +1490,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"_": {
+		'_': {
 			HorizAdvX: 610,
-			Unicode:   "_",
+			Unicode:   '_',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{534, -20}},
@@ -1506,9 +1506,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"`": {
+		'`': {
 			HorizAdvX: 378,
-			Unicode:   "`",
+			Unicode:   '`',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{296, 584}},
@@ -1519,9 +1519,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a": {
+		'a': {
 			HorizAdvX: 573,
-			Unicode:   "a",
+			Unicode:   'a',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, -4}},
@@ -1544,9 +1544,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"b": {
+		'b': {
 			HorizAdvX: 591,
-			Unicode:   "b",
+			Unicode:   'b',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{171, 654}},
@@ -1567,9 +1567,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c": {
+		'c': {
 			HorizAdvX: 497,
-			Unicode:   "c",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{289, 510}},
@@ -1586,9 +1586,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"d": {
+		'd': {
 			HorizAdvX: 0,
-			Unicode:   "d",
+			Unicode:   'd',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{478, 2}},
@@ -1613,9 +1613,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"e": {
+		'e': {
 			HorizAdvX: 535,
-			Unicode:   "e",
+			Unicode:   'e',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 184}},
@@ -1637,9 +1637,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"f": {
+		'f': {
 			HorizAdvX: 295,
-			Unicode:   "f",
+			Unicode:   'f',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 62}},
@@ -1664,9 +1664,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fi": {
+		'\ufb01': {
 			HorizAdvX: 541,
-			Unicode:   "fi",
+			Unicode:   '\ufb01',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 62}},
@@ -1706,9 +1706,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fl": {
+		'\ufb02': {
 			HorizAdvX: 539,
-			Unicode:   "fl",
+			Unicode:   '\ufb02',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 62}},
@@ -1742,9 +1742,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"g": {
+		'g': {
 			HorizAdvX: 558,
-			Unicode:   "g",
+			Unicode:   'g',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{258, -137}},
@@ -1768,9 +1768,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"h": {
+		'h': {
 			HorizAdvX: 555,
-			Unicode:   "h",
+			Unicode:   'h',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 411}},
@@ -1795,9 +1795,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"i": {
+		'i': {
 			HorizAdvX: 226,
-			Unicode:   "i",
+			Unicode:   'i',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{68, 62}},
@@ -1817,9 +1817,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"j": {
+		'j': {
 			HorizAdvX: 225,
-			Unicode:   "j",
+			Unicode:   'j',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{162, 443}},
@@ -1840,9 +1840,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"k": {
+		'k': {
 			HorizAdvX: 528,
-			Unicode:   "k",
+			Unicode:   'k',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{65, 53}},
@@ -1868,9 +1868,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"l": {
+		'l': {
 			HorizAdvX: 224,
-			Unicode:   "l",
+			Unicode:   'l',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{67, 58}},
@@ -1884,9 +1884,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"m": {
+		'm': {
 			HorizAdvX: 883,
-			Unicode:   "m",
+			Unicode:   'm',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{735, 30}},
@@ -1915,9 +1915,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"n": {
+		'n': {
 			HorizAdvX: 557,
-			Unicode:   "n",
+			Unicode:   'n',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{296, 426}},
@@ -1941,9 +1941,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"o": {
+		'o': {
 			HorizAdvX: 0,
-			Unicode:   "o",
+			Unicode:   'o',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 507}},
@@ -1960,9 +1960,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"p": {
+		'p': {
 			HorizAdvX: 589,
-			Unicode:   "p",
+			Unicode:   'p',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{170, -144}},
@@ -1983,9 +1983,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"q": {
+		'q': {
 			HorizAdvX: 588,
-			Unicode:   "q",
+			Unicode:   'q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{417, -149}},
@@ -2006,9 +2006,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"r": {
+		'r': {
 			HorizAdvX: 377,
-			Unicode:   "r",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{66, 61}},
@@ -2028,9 +2028,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"s": {
+		's': {
 			HorizAdvX: 460,
-			Unicode:   "s",
+			Unicode:   's',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{237, 522}},
@@ -2051,9 +2051,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"t": {
+		't': {
 			HorizAdvX: 397,
-			Unicode:   "t",
+			Unicode:   't',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{147, 65}},
@@ -2075,9 +2075,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"u": {
+		'u': {
 			HorizAdvX: 543,
-			Unicode:   "u",
+			Unicode:   'u',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 453}},
@@ -2092,9 +2092,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"v": {
+		'v': {
 			HorizAdvX: 484,
-			Unicode:   "v",
+			Unicode:   'v',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{288, 40}},
@@ -2113,9 +2113,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"w": {
+		'w': {
 			HorizAdvX: 703,
-			Unicode:   "w",
+			Unicode:   'w',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{304, 378}},
@@ -2140,9 +2140,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"x": {
+		'x': {
 			HorizAdvX: 506,
-			Unicode:   "x",
+			Unicode:   'x',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{252, 174}},
@@ -2161,9 +2161,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"y": {
+		'y': {
 			HorizAdvX: 518,
-			Unicode:   "y",
+			Unicode:   'y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{178, -183}},
@@ -2182,9 +2182,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"z": {
+		'z': {
 			HorizAdvX: 464,
-			Unicode:   "z",
+			Unicode:   'z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 1}},
@@ -2206,9 +2206,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"{": {
+		'{': {
 			HorizAdvX: 333,
-			Unicode:   "{",
+			Unicode:   '{',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{249, 458}},
@@ -2239,9 +2239,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"|": {
+		'|': {
 			HorizAdvX: 220,
-			Unicode:   "|",
+			Unicode:   '|',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{65, 3}},
@@ -2255,9 +2255,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"}": {
+		'}': {
 			HorizAdvX: 333,
-			Unicode:   "}",
+			Unicode:   '}',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{84, 458}},
@@ -2288,9 +2288,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"~": {
+		'~': {
 			HorizAdvX: 440,
-			Unicode:   "~",
+			Unicode:   '~',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{158, 223}},
@@ -2305,9 +2305,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a1": {
+		'¡': {
 			HorizAdvX: 223,
-			Unicode:   "\u00a1",
+			Unicode:   '¡',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{67, -184}},
@@ -2327,9 +2327,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a2": {
+		'¢': {
 			HorizAdvX: 497,
-			Unicode:   "\u00a2",
+			Unicode:   '¢',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{322, 688}},
@@ -2352,9 +2352,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a3": {
+		'£': {
 			HorizAdvX: 614,
-			Unicode:   "\u00a3",
+			Unicode:   '£',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{200, 46}},
@@ -2385,9 +2385,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a4": {
+		'¤': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a4",
+			Unicode:   '¤',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 564}},
@@ -2420,9 +2420,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a5": {
+		'¥': {
 			HorizAdvX: 589,
-			Unicode:   "\u00a5",
+			Unicode:   '¥',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{239, 62}},
@@ -2455,9 +2455,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a6": {
+		'¦': {
 			HorizAdvX: 220,
-			Unicode:   "\u00a6",
+			Unicode:   '¦',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{65, 426}},
@@ -2480,9 +2480,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a7": {
+		'§': {
 			HorizAdvX: 460,
-			Unicode:   "\u00a7",
+			Unicode:   '§',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{39, 361}},
@@ -2515,9 +2515,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a8": {
+		'¨': {
 			HorizAdvX: 317,
-			Unicode:   "\u00a8",
+			Unicode:   '¨',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{68, 711}},
@@ -2534,9 +2534,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a9": {
+		'©': {
 			HorizAdvX: 687,
-			Unicode:   "\u00a9",
+			Unicode:   '©',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{328, 37}},
@@ -2565,9 +2565,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00aa": {
+		'ª': {
 			HorizAdvX: 400,
-			Unicode:   "\u00aa",
+			Unicode:   'ª',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{308, 432}},
@@ -2590,9 +2590,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ab": {
+		'«': {
 			HorizAdvX: 650,
-			Unicode:   "\u00ab",
+			Unicode:   '«',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 95}},
@@ -2629,9 +2629,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ac": {
+		'¬': {
 			HorizAdvX: 610,
-			Unicode:   "\u00ac",
+			Unicode:   '¬',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{493, 411}},
@@ -2646,9 +2646,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ad": {
+		'­': {
 			HorizAdvX: 480,
-			Unicode:   "\u00ad",
+			Unicode:   '­',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{394, 250}},
@@ -2662,9 +2662,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ae": {
+		'®': {
 			HorizAdvX: 687,
-			Unicode:   "\u00ae",
+			Unicode:   '®',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{328, 248}},
@@ -2703,9 +2703,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00af": {
+		'¯': {
 			HorizAdvX: 480,
-			Unicode:   "\u00af",
+			Unicode:   '¯',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{344, 655}},
@@ -2717,9 +2717,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b0": {
+		'°': {
 			HorizAdvX: 365,
-			Unicode:   "\u00b0",
+			Unicode:   '°',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{298, 626}},
@@ -2736,9 +2736,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b1": {
+		'±': {
 			HorizAdvX: 459,
-			Unicode:   "\u00b1",
+			Unicode:   '±',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 384}},
@@ -2766,9 +2766,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b2": {
+		'²': {
 			HorizAdvX: 356,
-			Unicode:   "\u00b2",
+			Unicode:   '²',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 710}},
@@ -2788,9 +2788,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b3": {
+		'³': {
 			HorizAdvX: 363,
-			Unicode:   "\u00b3",
+			Unicode:   '³',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{103, 706}},
@@ -2812,9 +2812,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b4": {
+		'´': {
 			HorizAdvX: 324,
-			Unicode:   "\u00b4",
+			Unicode:   '´',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{63, 575}},
@@ -2825,9 +2825,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b5": {
+		'µ': {
 			HorizAdvX: 532,
-			Unicode:   "\u00b5",
+			Unicode:   'µ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{54, 436}},
@@ -2850,9 +2850,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b6": {
+		'¶': {
 			HorizAdvX: 598,
-			Unicode:   "\u00b6",
+			Unicode:   '¶',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{228, -7}},
@@ -2875,9 +2875,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b7": {
+		'·': {
 			HorizAdvX: 163,
-			Unicode:   "\u00b7",
+			Unicode:   '·',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{81, 310}},
@@ -2888,9 +2888,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b8": {
+		'¸': {
 			HorizAdvX: 259,
-			Unicode:   "\u00b8",
+			Unicode:   '¸',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{63, 35}},
@@ -2908,9 +2908,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b9": {
+		'¹': {
 			HorizAdvX: 253,
-			Unicode:   "\u00b9",
+			Unicode:   '¹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{133, 461}},
@@ -2925,9 +2925,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ba": {
+		'º': {
 			HorizAdvX: 398,
-			Unicode:   "\u00ba",
+			Unicode:   'º',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 751}},
@@ -2944,9 +2944,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bb": {
+		'»': {
 			HorizAdvX: 650,
-			Unicode:   "\u00bb",
+			Unicode:   '»',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{350, 95}},
@@ -2983,9 +2983,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bc": {
+		'¼': {
 			HorizAdvX: 876,
-			Unicode:   "\u00bc",
+			Unicode:   '¼',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{248, 61}},
@@ -3028,9 +3028,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bd": {
+		'½': {
 			HorizAdvX: 876,
-			Unicode:   "\u00bd",
+			Unicode:   '½',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{238, 61}},
@@ -3070,9 +3070,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00be": {
+		'¾': {
 			HorizAdvX: 876,
-			Unicode:   "\u00be",
+			Unicode:   '¾',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{301, 61}},
@@ -3122,9 +3122,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bf": {
+		'¿': {
 			HorizAdvX: 462,
-			Unicode:   "\u00bf",
+			Unicode:   '¿',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 224}},
@@ -3148,9 +3148,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c0": {
+		'À': {
 			HorizAdvX: 597,
-			Unicode:   "\u00c0",
+			Unicode:   'À',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{479, 51}},
@@ -3185,9 +3185,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c1": {
+		'Á': {
 			HorizAdvX: 597,
-			Unicode:   "\u00c1",
+			Unicode:   'Á',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{479, 51}},
@@ -3222,9 +3222,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c2": {
+		'Â': {
 			HorizAdvX: 597,
-			Unicode:   "\u00c2",
+			Unicode:   'Â',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{479, 51}},
@@ -3265,9 +3265,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c3": {
+		'Ã': {
 			HorizAdvX: 597,
-			Unicode:   "\u00c3",
+			Unicode:   'Ã',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{479, 51}},
@@ -3306,9 +3306,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c4": {
+		'Ä': {
 			HorizAdvX: 597,
-			Unicode:   "\u00c4",
+			Unicode:   'Ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{479, 51}},
@@ -3349,9 +3349,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c5": {
+		'Å': {
 			HorizAdvX: 597,
-			Unicode:   "\u00c5",
+			Unicode:   'Å',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 807}},
@@ -3390,9 +3390,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c6": {
+		'Æ': {
 			HorizAdvX: 898,
-			Unicode:   "\u00c6",
+			Unicode:   'Æ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 152}},
@@ -3431,9 +3431,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c7": {
+		'Ç': {
 			HorizAdvX: 599,
-			Unicode:   "\u00c7",
+			Unicode:   'Ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, 708}},
@@ -3460,9 +3460,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c8": {
+		'È': {
 			HorizAdvX: 559,
-			Unicode:   "\u00c8",
+			Unicode:   'È',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{66, 152}},
@@ -3495,9 +3495,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c9": {
+		'É': {
 			HorizAdvX: 559,
-			Unicode:   "\u00c9",
+			Unicode:   'É',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{66, 152}},
@@ -3530,9 +3530,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ca": {
+		'Ê': {
 			HorizAdvX: 559,
-			Unicode:   "\u00ca",
+			Unicode:   'Ê',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{66, 152}},
@@ -3571,9 +3571,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cb": {
+		'Ë': {
 			HorizAdvX: 559,
-			Unicode:   "\u00cb",
+			Unicode:   'Ë',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{66, 152}},
@@ -3612,9 +3612,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cc": {
+		'Ì': {
 			HorizAdvX: 244,
-			Unicode:   "\u00cc",
+			Unicode:   'Ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{75, 62}},
@@ -3634,9 +3634,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cd": {
+		'Í': {
 			HorizAdvX: 244,
-			Unicode:   "\u00cd",
+			Unicode:   'Í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{75, 62}},
@@ -3656,9 +3656,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ce": {
+		'Î': {
 			HorizAdvX: 244,
-			Unicode:   "\u00ce",
+			Unicode:   'Î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{75, 62}},
@@ -3684,9 +3684,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cf": {
+		'Ï': {
 			HorizAdvX: 244,
-			Unicode:   "\u00cf",
+			Unicode:   'Ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{75, 62}},
@@ -3712,9 +3712,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d0": {
+		'Ð': {
 			HorizAdvX: 659,
-			Unicode:   "\u00d0",
+			Unicode:   'Ð',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{305, 707}},
@@ -3739,9 +3739,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d1": {
+		'Ñ': {
 			HorizAdvX: 631,
-			Unicode:   "\u00d1",
+			Unicode:   'Ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 47}},
@@ -3772,9 +3772,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d2": {
+		'Ò': {
 			HorizAdvX: 687,
-			Unicode:   "\u00d2",
+			Unicode:   'Ò',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{328, -10}},
@@ -3797,9 +3797,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d3": {
+		'Ó': {
 			HorizAdvX: 687,
-			Unicode:   "\u00d3",
+			Unicode:   'Ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{328, -10}},
@@ -3822,9 +3822,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d4": {
+		'Ô': {
 			HorizAdvX: 687,
-			Unicode:   "\u00d4",
+			Unicode:   'Ô',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{328, -10}},
@@ -3853,9 +3853,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d5": {
+		'Õ': {
 			HorizAdvX: 687,
-			Unicode:   "\u00d5",
+			Unicode:   'Õ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{328, -10}},
@@ -3882,9 +3882,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d6": {
+		'Ö': {
 			HorizAdvX: 687,
-			Unicode:   "\u00d6",
+			Unicode:   'Ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{328, -10}},
@@ -3913,9 +3913,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d7": {
+		'×': {
 			HorizAdvX: 357,
-			Unicode:   "\u00d7",
+			Unicode:   '×',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{319, 426}},
@@ -3936,9 +3936,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d8": {
+		'Ø': {
 			HorizAdvX: 687,
-			Unicode:   "\u00d8",
+			Unicode:   'Ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{328, -10}},
@@ -3973,9 +3973,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d9": {
+		'Ù': {
 			HorizAdvX: 612,
-			Unicode:   "\u00d9",
+			Unicode:   'Ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{301, -17}},
@@ -3999,9 +3999,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00da": {
+		'Ú': {
 			HorizAdvX: 612,
-			Unicode:   "\u00da",
+			Unicode:   'Ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{301, -17}},
@@ -4025,9 +4025,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00db": {
+		'Û': {
 			HorizAdvX: 612,
-			Unicode:   "\u00db",
+			Unicode:   'Û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{301, -17}},
@@ -4057,9 +4057,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dc": {
+		'Ü': {
 			HorizAdvX: 612,
-			Unicode:   "\u00dc",
+			Unicode:   'Ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{301, -17}},
@@ -4089,9 +4089,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dd": {
+		'Ý': {
 			HorizAdvX: 568,
-			Unicode:   "\u00dd",
+			Unicode:   'Ý',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 62}},
@@ -4118,9 +4118,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00de": {
+		'Þ': {
 			HorizAdvX: 538,
-			Unicode:   "\u00de",
+			Unicode:   'Þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{35, 49}},
@@ -4144,9 +4144,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00df": {
+		'ß': {
 			HorizAdvX: 553,
-			Unicode:   "\u00df",
+			Unicode:   'ß',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{269, 332}},
@@ -4172,9 +4172,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e0": {
+		'à': {
 			HorizAdvX: 573,
-			Unicode:   "\u00e0",
+			Unicode:   'à',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, -4}},
@@ -4203,9 +4203,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e1": {
+		'á': {
 			HorizAdvX: 573,
-			Unicode:   "\u00e1",
+			Unicode:   'á',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, -4}},
@@ -4234,9 +4234,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e2": {
+		'â': {
 			HorizAdvX: 573,
-			Unicode:   "\u00e2",
+			Unicode:   'â',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, -4}},
@@ -4271,9 +4271,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e3": {
+		'ã': {
 			HorizAdvX: 573,
-			Unicode:   "\u00e3",
+			Unicode:   'ã',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, -4}},
@@ -4306,9 +4306,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e4": {
+		'ä': {
 			HorizAdvX: 573,
-			Unicode:   "\u00e4",
+			Unicode:   'ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, -4}},
@@ -4343,9 +4343,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e5": {
+		'å': {
 			HorizAdvX: 573,
-			Unicode:   "\u00e5",
+			Unicode:   'å',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, -4}},
@@ -4380,9 +4380,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e6": {
+		'æ': {
 			HorizAdvX: 913,
-			Unicode:   "\u00e6",
+			Unicode:   'æ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, -4}},
@@ -4418,9 +4418,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e7": {
+		'ç': {
 			HorizAdvX: 497,
-			Unicode:   "\u00e7",
+			Unicode:   'ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{289, 510}},
@@ -4447,9 +4447,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e8": {
+		'è': {
 			HorizAdvX: 535,
-			Unicode:   "\u00e8",
+			Unicode:   'è',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 184}},
@@ -4477,9 +4477,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e9": {
+		'é': {
 			HorizAdvX: 535,
-			Unicode:   "\u00e9",
+			Unicode:   'é',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 184}},
@@ -4507,9 +4507,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ea": {
+		'ê': {
 			HorizAdvX: 535,
-			Unicode:   "\u00ea",
+			Unicode:   'ê',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 184}},
@@ -4543,9 +4543,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00eb": {
+		'ë': {
 			HorizAdvX: 535,
-			Unicode:   "\u00eb",
+			Unicode:   'ë',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 184}},
@@ -4579,9 +4579,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ec": {
+		'ì': {
 			HorizAdvX: 226,
-			Unicode:   "\u00ec",
+			Unicode:   'ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{68, 62}},
@@ -4601,9 +4601,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ed": {
+		'í': {
 			HorizAdvX: 226,
-			Unicode:   "\u00ed",
+			Unicode:   'í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{68, 62}},
@@ -4623,9 +4623,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ee": {
+		'î': {
 			HorizAdvX: 226,
-			Unicode:   "\u00ee",
+			Unicode:   'î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 763}},
@@ -4651,9 +4651,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ef": {
+		'ï': {
 			HorizAdvX: 226,
-			Unicode:   "\u00ef",
+			Unicode:   'ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{68, 62}},
@@ -4679,9 +4679,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f0": {
+		'ð': {
 			HorizAdvX: 597,
-			Unicode:   "\u00f0",
+			Unicode:   'ð',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 681}},
@@ -4710,9 +4710,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f1": {
+		'ñ': {
 			HorizAdvX: 557,
-			Unicode:   "\u00f1",
+			Unicode:   'ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{296, 426}},
@@ -4746,9 +4746,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f2": {
+		'ò': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f2",
+			Unicode:   'ò',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 507}},
@@ -4771,9 +4771,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3": {
+		'ó': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f3",
+			Unicode:   'ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 507}},
@@ -4796,9 +4796,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f4": {
+		'ô': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f4",
+			Unicode:   'ô',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 507}},
@@ -4827,9 +4827,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f5": {
+		'õ': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f5",
+			Unicode:   'õ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 507}},
@@ -4856,9 +4856,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f6": {
+		'ö': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f6",
+			Unicode:   'ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 507}},
@@ -4887,9 +4887,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f7": {
+		'÷': {
 			HorizAdvX: 459,
-			Unicode:   "\u00f7",
+			Unicode:   '÷',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{384, 304}},
@@ -4915,9 +4915,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f8": {
+		'ø': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f8",
+			Unicode:   'ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 507}},
@@ -4951,9 +4951,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f9": {
+		'ù': {
 			HorizAdvX: 543,
-			Unicode:   "\u00f9",
+			Unicode:   'ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 453}},
@@ -4974,9 +4974,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fa": {
+		'ú': {
 			HorizAdvX: 543,
-			Unicode:   "\u00fa",
+			Unicode:   'ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 453}},
@@ -4997,9 +4997,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fb": {
+		'û': {
 			HorizAdvX: 543,
-			Unicode:   "\u00fb",
+			Unicode:   'û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 453}},
@@ -5026,9 +5026,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fc": {
+		'ü': {
 			HorizAdvX: 543,
-			Unicode:   "\u00fc",
+			Unicode:   'ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 453}},
@@ -5055,9 +5055,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fd": {
+		'ý': {
 			HorizAdvX: 518,
-			Unicode:   "\u00fd",
+			Unicode:   'ý',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{178, -183}},
@@ -5082,9 +5082,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fe": {
+		'þ': {
 			HorizAdvX: 609,
-			Unicode:   "\u00fe",
+			Unicode:   'þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{175, 671}},
@@ -5109,9 +5109,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ff": {
+		'ÿ': {
 			HorizAdvX: 518,
-			Unicode:   "\u00ff",
+			Unicode:   'ÿ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{178, -183}},
@@ -5142,9 +5142,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0131": {
+		'ı': {
 			HorizAdvX: 226,
-			Unicode:   "\u0131",
+			Unicode:   'ı',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{68, 62}},
@@ -5158,9 +5158,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0141": {
+		'Ł': {
 			HorizAdvX: 519,
-			Unicode:   "\u0141",
+			Unicode:   'Ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{225, 330}},
@@ -5183,9 +5183,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0142": {
+		'ł': {
 			HorizAdvX: 335,
-			Unicode:   "\u0142",
+			Unicode:   'ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{111, 58}},
@@ -5206,9 +5206,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0152": {
+		'Œ': {
 			HorizAdvX: 937,
-			Unicode:   "\u0152",
+			Unicode:   'Œ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, 708}},
@@ -5247,9 +5247,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0153": {
+		'œ': {
 			HorizAdvX: 929,
-			Unicode:   "\u0153",
+			Unicode:   'œ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 507}},
@@ -5281,9 +5281,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0160": {
+		'Š': {
 			HorizAdvX: 582,
-			Unicode:   "\u0160",
+			Unicode:   'Š',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{304, 706}},
@@ -5317,9 +5317,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0161": {
+		'š': {
 			HorizAdvX: 460,
-			Unicode:   "\u0161",
+			Unicode:   'š',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{237, 522}},
@@ -5352,9 +5352,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0178": {
+		'Ÿ': {
 			HorizAdvX: 568,
-			Unicode:   "\u0178",
+			Unicode:   'Ÿ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 62}},
@@ -5387,9 +5387,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017d": {
+		'Ž': {
 			HorizAdvX: 527,
-			Unicode:   "\u017d",
+			Unicode:   'Ž',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 2}},
@@ -5423,9 +5423,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017e": {
+		'ž': {
 			HorizAdvX: 464,
-			Unicode:   "\u017e",
+			Unicode:   'ž',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 1}},
@@ -5459,9 +5459,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0192": {
+		'ƒ': {
 			HorizAdvX: 295,
-			Unicode:   "\u0192",
+			Unicode:   'ƒ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, -137}},
@@ -5486,9 +5486,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0237": {
+		'ȷ': {
 			HorizAdvX: 225,
-			Unicode:   "\u0237",
+			Unicode:   'ȷ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{162, 443}},
@@ -5503,9 +5503,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c6": {
+		'ˆ': {
 			HorizAdvX: 372,
-			Unicode:   "\u02c6",
+			Unicode:   'ˆ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{196, 745}},
@@ -5522,9 +5522,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c7": {
+		'ˇ': {
 			HorizAdvX: 349,
-			Unicode:   "\u02c7",
+			Unicode:   'ˇ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 534}},
@@ -5541,9 +5541,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c9": {
+		'ˉ': {
 			HorizAdvX: 480,
-			Unicode:   "\u02c9",
+			Unicode:   'ˉ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{344, 655}},
@@ -5555,9 +5555,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d8": {
+		'˘': {
 			HorizAdvX: 372,
-			Unicode:   "\u02d8",
+			Unicode:   '˘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{196, 568}},
@@ -5570,9 +5570,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d9": {
+		'˙': {
 			HorizAdvX: 226,
-			Unicode:   "\u02d9",
+			Unicode:   '˙',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{113, 700}},
@@ -5583,9 +5583,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02da": {
+		'˚': {
 			HorizAdvX: 320,
-			Unicode:   "\u02da",
+			Unicode:   '˚',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{286, 631}},
@@ -5602,9 +5602,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02db": {
+		'˛': {
 			HorizAdvX: 316,
-			Unicode:   "\u02db",
+			Unicode:   '˛',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{186, 54}},
@@ -5618,9 +5618,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dc": {
+		'˜': {
 			HorizAdvX: 425,
-			Unicode:   "\u02dc",
+			Unicode:   '˜',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{138, 645}},
@@ -5635,9 +5635,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dd": {
+		'˝': {
 			HorizAdvX: 554,
-			Unicode:   "\u02dd",
+			Unicode:   '˝',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{63, 575}},
@@ -5654,9 +5654,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03bc": {
+		'μ': {
 			HorizAdvX: 532,
-			Unicode:   "\u03bc",
+			Unicode:   'μ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{54, 436}},
@@ -5679,9 +5679,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2013": {
+		'–': {
 			HorizAdvX: 480,
-			Unicode:   "\u2013",
+			Unicode:   '–',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{394, 250}},
@@ -5695,9 +5695,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2014": {
+		'—': {
 			HorizAdvX: 603,
-			Unicode:   "\u2014",
+			Unicode:   '—',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{517, 250}},
@@ -5711,9 +5711,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2018": {
+		'‘': {
 			HorizAdvX: 138,
-			Unicode:   "\u2018",
+			Unicode:   '‘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{95, 652}},
@@ -5727,9 +5727,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2019": {
+		'’': {
 			HorizAdvX: 147,
-			Unicode:   "\u2019",
+			Unicode:   '’',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{49, 572}},
@@ -5743,9 +5743,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201a": {
+		'‚': {
 			HorizAdvX: 138,
-			Unicode:   "\u201a",
+			Unicode:   '‚',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{49, -41}},
@@ -5759,9 +5759,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201c": {
+		'“': {
 			HorizAdvX: 355,
-			Unicode:   "\u201c",
+			Unicode:   '“',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{95, 652}},
@@ -5784,9 +5784,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201d": {
+		'”': {
 			HorizAdvX: 355,
-			Unicode:   "\u201d",
+			Unicode:   '”',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{259, 572}},
@@ -5809,9 +5809,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201e": {
+		'„': {
 			HorizAdvX: 355,
-			Unicode:   "\u201e",
+			Unicode:   '„',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{259, -29}},
@@ -5834,9 +5834,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2020": {
+		'†': {
 			HorizAdvX: 397,
-			Unicode:   "\u2020",
+			Unicode:   '†',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{147, 255}},
@@ -5858,9 +5858,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2021": {
+		'‡': {
 			HorizAdvX: 397,
-			Unicode:   "\u2021",
+			Unicode:   '‡',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 513}},
@@ -5893,9 +5893,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2022": {
+		'•': {
 			HorizAdvX: 259,
-			Unicode:   "\u2022",
+			Unicode:   '•',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{209, 357}},
@@ -5906,9 +5906,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2026": {
+		'…': {
 			HorizAdvX: 489,
-			Unicode:   "\u2026",
+			Unicode:   '…',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{81, 110}},
@@ -5931,9 +5931,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2030": {
+		'‰': {
 			HorizAdvX: 969,
-			Unicode:   "\u2030",
+			Unicode:   '‰',
 			GerberLP:  "ddddccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 109}},
@@ -5984,9 +5984,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2039": {
+		'‹': {
 			HorizAdvX: 349,
-			Unicode:   "\u2039",
+			Unicode:   '‹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 95}},
@@ -6007,9 +6007,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u203a": {
+		'›': {
 			HorizAdvX: 349,
-			Unicode:   "\u203a",
+			Unicode:   '›',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{49, 95}},
@@ -6030,9 +6030,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2044": {
+		'⁄': {
 			HorizAdvX: 342,
-			Unicode:   "\u2044",
+			Unicode:   '⁄',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{19, 61}},
@@ -6047,9 +6047,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2074": {
+		'⁴': {
 			HorizAdvX: 362,
-			Unicode:   "\u2074",
+			Unicode:   '⁴',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{270, 518}},
@@ -6072,9 +6072,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2081": {
+		'₁': {
 			HorizAdvX: 253,
-			Unicode:   "\u2081",
+			Unicode:   '₁',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{133, -39}},
@@ -6089,9 +6089,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2082": {
+		'₂': {
 			HorizAdvX: 356,
-			Unicode:   "\u2082",
+			Unicode:   '₂',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 210}},
@@ -6111,9 +6111,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2083": {
+		'₃': {
 			HorizAdvX: 363,
-			Unicode:   "\u2083",
+			Unicode:   '₃',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{103, 206}},
@@ -6135,9 +6135,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2084": {
+		'₄': {
 			HorizAdvX: 362,
-			Unicode:   "\u2084",
+			Unicode:   '₄',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{270, 18}},
@@ -6160,9 +6160,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20ac": {
+		'€': {
 			HorizAdvX: 682,
-			Unicode:   "\u20ac",
+			Unicode:   '€',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{491, 378}},
@@ -6198,9 +6198,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2122": {
+		'™': {
 			HorizAdvX: 724,
-			Unicode:   "\u2122",
+			Unicode:   '™',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{447, 482}},
@@ -6234,9 +6234,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2212": {
+		'−': {
 			HorizAdvX: 459,
-			Unicode:   "\u2212",
+			Unicode:   '−',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{383, 304}},
@@ -6250,9 +6250,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2215": {
+		'∕': {
 			HorizAdvX: 342,
-			Unicode:   "\u2215",
+			Unicode:   '∕',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{19, 61}},
@@ -6267,9 +6267,9 @@ var sniglet_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2219": {
+		'∙': {
 			HorizAdvX: 163,
-			Unicode:   "\u2219",
+			Unicode:   '∙',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{81, 310}},

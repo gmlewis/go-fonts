@@ -11,16 +11,16 @@ func init() {
 }
 
 var abeezee_italicFont = &fonts.Font{
-	// ID: "abeezee_italic",
+	ID:               "abeezee_italic",
 	HorizAdvX:        600,
 	UnitsPerEm:       1000,
 	Ascent:           800,
 	Descent:          -200,
 	MissingHorizAdvX: 0,
-	Glyphs: map[string]*fonts.Glyph{
-		"!": {
+	Glyphs: map[rune]*fonts.Glyph{
+		'!': {
 			HorizAdvX: 314,
-			Unicode:   "!",
+			Unicode:   '!',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{143, 480}},
@@ -38,9 +38,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\"": {
+		'"': {
 			HorizAdvX: 300,
-			Unicode:   "\"",
+			Unicode:   '"',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{96, 700}},
@@ -55,9 +55,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"#": {
+		'#': {
 			HorizAdvX: 750,
-			Unicode:   "#",
+			Unicode:   '#',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{174, 0}},
@@ -97,9 +97,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"$": {
+		'$': {
 			HorizAdvX: 0,
-			Unicode:   "$",
+			Unicode:   '$',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{447, 795}},
@@ -126,9 +126,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"%": {
+		'%': {
 			HorizAdvX: 900,
-			Unicode:   "%",
+			Unicode:   '%',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{212, -39}},
@@ -162,9 +162,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"&": {
+		'&': {
 			HorizAdvX: 761,
-			Unicode:   "&",
+			Unicode:   '&',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{645, 327}},
@@ -192,9 +192,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"'": {
+		'\'': {
 			HorizAdvX: 150,
-			Unicode:   "'",
+			Unicode:   '\'',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{103, 700}},
@@ -204,9 +204,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"(": {
+		'(': {
 			HorizAdvX: 300,
-			Unicode:   "(",
+			Unicode:   '(',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{330, 729}},
@@ -218,9 +218,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		")": {
+		')': {
 			HorizAdvX: 300,
-			Unicode:   ")",
+			Unicode:   ')',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{41, -123}},
@@ -233,9 +233,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"*": {
+		'*': {
 			HorizAdvX: 450,
-			Unicode:   "*",
+			Unicode:   '*',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{125, 663}},
@@ -256,9 +256,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"+": {
+		'+': {
 			HorizAdvX: 0,
-			Unicode:   "+",
+			Unicode:   '+',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{494, 304}},
@@ -276,9 +276,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		",": {
+		',': {
 			HorizAdvX: 300,
-			Unicode:   ",",
+			Unicode:   ',',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{107, 90}},
@@ -289,9 +289,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"-": {
+		'-': {
 			HorizAdvX: 0,
-			Unicode:   "-",
+			Unicode:   '-',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{467, 302}},
@@ -301,9 +301,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		".": {
+		'.': {
 			HorizAdvX: 300,
-			Unicode:   ".",
+			Unicode:   '.',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119, -12}},
@@ -314,9 +314,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"/": {
+		'/': {
 			HorizAdvX: 450,
-			Unicode:   "/",
+			Unicode:   '/',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{70, -71}},
@@ -326,9 +326,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"0": {
+		'0': {
 			HorizAdvX: 0,
-			Unicode:   "0",
+			Unicode:   '0',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{261, -12}},
@@ -345,9 +345,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"1": {
+		'1': {
 			HorizAdvX: 0,
-			Unicode:   "1",
+			Unicode:   '1',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{111, 80}},
@@ -364,9 +364,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"2": {
+		'2': {
 			HorizAdvX: 0,
-			Unicode:   "2",
+			Unicode:   '2',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{539, 543}},
@@ -384,9 +384,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"3": {
+		'3': {
 			HorizAdvX: 0,
-			Unicode:   "3",
+			Unicode:   '3',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{212, 328}},
@@ -410,9 +410,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"4": {
+		'4': {
 			HorizAdvX: 0,
-			Unicode:   "4",
+			Unicode:   '4',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{519, 151}},
@@ -433,9 +433,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"5": {
+		'5': {
 			HorizAdvX: 0,
-			Unicode:   "5",
+			Unicode:   '5',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{41, 45}},
@@ -456,9 +456,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"6": {
+		'6': {
 			HorizAdvX: 0,
-			Unicode:   "6",
+			Unicode:   '6',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, 620}},
@@ -481,9 +481,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"7": {
+		'7': {
 			HorizAdvX: 0,
-			Unicode:   "7",
+			Unicode:   '7',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{229, 0}},
@@ -497,9 +497,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"8": {
+		'8': {
 			HorizAdvX: 0,
-			Unicode:   "8",
+			Unicode:   '8',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{234, 384}},
@@ -526,9 +526,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"9": {
+		'9': {
 			HorizAdvX: 0,
-			Unicode:   "9",
+			Unicode:   '9',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{246, 70}},
@@ -552,9 +552,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		":": {
+		':': {
 			HorizAdvX: 300,
-			Unicode:   ":",
+			Unicode:   ':',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{112, -12}},
@@ -571,9 +571,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		";": {
+		';': {
 			HorizAdvX: 300,
-			Unicode:   ";",
+			Unicode:   ';',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{82, 90}},
@@ -590,9 +590,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"<": {
+		'<': {
 			HorizAdvX: 0,
-			Unicode:   "<",
+			Unicode:   '<',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{473, 572}},
@@ -605,9 +605,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"=": {
+		'=': {
 			HorizAdvX: 0,
-			Unicode:   "=",
+			Unicode:   '=',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{511, 395}},
@@ -622,9 +622,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		">": {
+		'>': {
 			HorizAdvX: 0,
-			Unicode:   ">",
+			Unicode:   '>',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 114}},
@@ -637,9 +637,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"?": {
+		'?': {
 			HorizAdvX: 498,
-			Unicode:   "?",
+			Unicode:   '?',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{398, 584}},
@@ -662,9 +662,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"@": {
+		'@': {
 			HorizAdvX: 1050,
-			Unicode:   "@",
+			Unicode:   '@',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{724, 52}},
@@ -698,9 +698,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"A": {
+		'A': {
 			HorizAdvX: 663,
-			Unicode:   "A",
+			Unicode:   'A',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{48, -8}},
@@ -718,9 +718,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"B": {
+		'B': {
 			HorizAdvX: 617,
-			Unicode:   "B",
+			Unicode:   'B',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 20}},
@@ -748,9 +748,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"C": {
+		'C': {
 			HorizAdvX: 560,
-			Unicode:   "C",
+			Unicode:   'C',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{406, 629}},
@@ -767,9 +767,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"D": {
+		'D': {
 			HorizAdvX: 663,
-			Unicode:   "D",
+			Unicode:   'D',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 20}},
@@ -788,9 +788,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"E": {
+		'E': {
 			HorizAdvX: 542,
-			Unicode:   "E",
+			Unicode:   'E',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -809,9 +809,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"F": {
+		'F': {
 			HorizAdvX: 507,
-			Unicode:   "F",
+			Unicode:   'F',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -828,9 +828,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"G": {
+		'G': {
 			HorizAdvX: 662,
-			Unicode:   "G",
+			Unicode:   'G',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{410, 629}},
@@ -855,9 +855,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"H": {
+		'H': {
 			HorizAdvX: 701,
-			Unicode:   "H",
+			Unicode:   'H',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, 0}},
@@ -876,9 +876,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"I": {
+		'I': {
 			HorizAdvX: 272,
-			Unicode:   "I",
+			Unicode:   'I',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{137, 0}},
@@ -888,9 +888,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"J": {
+		'J': {
 			HorizAdvX: 411,
-			Unicode:   "J",
+			Unicode:   'J',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{111, -12}},
@@ -905,9 +905,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"K": {
+		'K': {
 			HorizAdvX: 597,
-			Unicode:   "K",
+			Unicode:   'K',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 356}},
@@ -926,9 +926,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"L": {
+		'L': {
 			HorizAdvX: 510,
-			Unicode:   "L",
+			Unicode:   'L',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -941,9 +941,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"M": {
+		'M': {
 			HorizAdvX: 831,
-			Unicode:   "M",
+			Unicode:   'M',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 0}},
@@ -963,9 +963,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"N": {
+		'N': {
 			HorizAdvX: 702,
-			Unicode:   "N",
+			Unicode:   'N',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{443, 0}},
@@ -982,9 +982,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"O": {
+		'O': {
 			HorizAdvX: 738,
-			Unicode:   "O",
+			Unicode:   'O',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{339, -12}},
@@ -1001,9 +1001,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"P": {
+		'P': {
 			HorizAdvX: 560,
-			Unicode:   "P",
+			Unicode:   'P',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -1024,9 +1024,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Q": {
+		'Q': {
 			HorizAdvX: 746,
-			Unicode:   "Q",
+			Unicode:   'Q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{334, -12}},
@@ -1050,9 +1050,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"R": {
+		'R': {
 			HorizAdvX: 621,
-			Unicode:   "R",
+			Unicode:   'R',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -1075,9 +1075,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"S": {
+		'S': {
 			HorizAdvX: 539,
-			Unicode:   "S",
+			Unicode:   'S',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{386, 177}},
@@ -1098,9 +1098,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"T": {
+		'T': {
 			HorizAdvX: 554,
-			Unicode:   "T",
+			Unicode:   'T',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{77, 616}},
@@ -1115,9 +1115,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"U": {
+		'U': {
 			HorizAdvX: 681,
-			Unicode:   "U",
+			Unicode:   'U',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{618, 70}},
@@ -1141,9 +1141,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"V": {
+		'V': {
 			HorizAdvX: 622,
-			Unicode:   "V",
+			Unicode:   'V',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{213, 0}},
@@ -1157,9 +1157,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"W": {
+		'W': {
 			HorizAdvX: 941,
-			Unicode:   "W",
+			Unicode:   'W',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{158, 0}},
@@ -1179,9 +1179,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"X": {
+		'X': {
 			HorizAdvX: 621,
-			Unicode:   "X",
+			Unicode:   'X',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-8, 56}},
@@ -1199,9 +1199,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Y": {
+		'Y': {
 			HorizAdvX: 562,
-			Unicode:   "Y",
+			Unicode:   'Y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{131, 70}},
@@ -1222,9 +1222,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Z": {
+		'Z': {
 			HorizAdvX: 563,
-			Unicode:   "Z",
+			Unicode:   'Z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-8, 0}},
@@ -1241,9 +1241,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"[": {
+		'[': {
 			HorizAdvX: 300,
-			Unicode:   "[",
+			Unicode:   '[',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{208, -100}},
@@ -1257,9 +1257,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\\": {
+		'\\': {
 			HorizAdvX: 450,
-			Unicode:   "\\",
+			Unicode:   '\\',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, -59}},
@@ -1269,9 +1269,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"]": {
+		']': {
 			HorizAdvX: 300,
-			Unicode:   "]",
+			Unicode:   ']',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{265, 740}},
@@ -1286,9 +1286,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"^": {
+		'^': {
 			HorizAdvX: 0,
-			Unicode:   "^",
+			Unicode:   '^',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{536, 568}},
@@ -1301,9 +1301,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"_": {
+		'_': {
 			HorizAdvX: 0,
-			Unicode:   "_",
+			Unicode:   '_',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-60, -115}},
@@ -1314,9 +1314,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"`": {
+		'`': {
 			HorizAdvX: 309,
-			Unicode:   "`",
+			Unicode:   '`',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{269, 630}},
@@ -1326,9 +1326,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a": {
+		'a': {
 			HorizAdvX: 592,
-			Unicode:   "a",
+			Unicode:   'a',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{37, 205}},
@@ -1351,9 +1351,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"b": {
+		'b': {
 			HorizAdvX: 573,
-			Unicode:   "b",
+			Unicode:   'b',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{541, 340}},
@@ -1374,9 +1374,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c": {
+		'c': {
 			HorizAdvX: 460,
-			Unicode:   "c",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{468, 492}},
@@ -1393,9 +1393,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"d": {
+		'd': {
 			HorizAdvX: 607,
-			Unicode:   "d",
+			Unicode:   'd',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{550, 65}},
@@ -1420,9 +1420,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"e": {
+		'e': {
 			HorizAdvX: 518,
-			Unicode:   "e",
+			Unicode:   'e',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{261, -12}},
@@ -1444,9 +1444,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"f": {
+		'f': {
 			HorizAdvX: 372,
-			Unicode:   "f",
+			Unicode:   'f',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{258, 584}},
@@ -1473,9 +1473,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"g": {
+		'g': {
 			HorizAdvX: 577,
-			Unicode:   "g",
+			Unicode:   'g',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{367, 532}},
@@ -1500,9 +1500,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"h": {
+		'h': {
 			HorizAdvX: 589,
-			Unicode:   "h",
+			Unicode:   'h',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{446, 368}},
@@ -1523,9 +1523,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"i": {
+		'i': {
 			HorizAdvX: 255,
-			Unicode:   "i",
+			Unicode:   'i',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{218, 520}},
@@ -1542,9 +1542,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"j": {
+		'j': {
 			HorizAdvX: 264,
-			Unicode:   "j",
+			Unicode:   'j',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{31, -74}},
@@ -1565,9 +1565,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"k": {
+		'k': {
 			HorizAdvX: 543,
-			Unicode:   "k",
+			Unicode:   'k',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{37, 0}},
@@ -1593,9 +1593,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"l": {
+		'l': {
 			HorizAdvX: 328,
-			Unicode:   "l",
+			Unicode:   'l',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{244, 740}},
@@ -1612,9 +1612,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"m": {
+		'm': {
 			HorizAdvX: 913,
-			Unicode:   "m",
+			Unicode:   'm',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{690, 453}},
@@ -1643,9 +1643,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"n": {
+		'n': {
 			HorizAdvX: 589,
-			Unicode:   "n",
+			Unicode:   'n',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{364, 453}},
@@ -1666,9 +1666,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"o": {
+		'o': {
 			HorizAdvX: 601,
-			Unicode:   "o",
+			Unicode:   'o',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{278, -12}},
@@ -1685,9 +1685,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"p": {
+		'p': {
 			HorizAdvX: 602,
-			Unicode:   "p",
+			Unicode:   'p',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{65, 450}},
@@ -1713,9 +1713,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"q": {
+		'q': {
 			HorizAdvX: 577,
-			Unicode:   "q",
+			Unicode:   'q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{227, -12}},
@@ -1736,9 +1736,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"r": {
+		'r': {
 			HorizAdvX: 405,
-			Unicode:   "r",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{52, 0}},
@@ -1758,9 +1758,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"s": {
+		's': {
 			HorizAdvX: 444,
-			Unicode:   "s",
+			Unicode:   's',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437, 483}},
@@ -1781,9 +1781,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"t": {
+		't': {
 			HorizAdvX: 391,
-			Unicode:   "t",
+			Unicode:   't',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 423}},
@@ -1808,9 +1808,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"u": {
+		'u': {
 			HorizAdvX: 579,
-			Unicode:   "u",
+			Unicode:   'u',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, -12}},
@@ -1834,9 +1834,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"v": {
+		'v': {
 			HorizAdvX: 509,
-			Unicode:   "v",
+			Unicode:   'v',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{162, 0}},
@@ -1850,9 +1850,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"w": {
+		'w': {
 			HorizAdvX: 790,
-			Unicode:   "w",
+			Unicode:   'w',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{229, 0}},
@@ -1871,9 +1871,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"x": {
+		'x': {
 			HorizAdvX: 495,
-			Unicode:   "x",
+			Unicode:   'x',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-18, 51}},
@@ -1891,9 +1891,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"y": {
+		'y': {
 			HorizAdvX: 561,
-			Unicode:   "y",
+			Unicode:   'y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{225, 80}},
@@ -1918,9 +1918,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"z": {
+		'z': {
 			HorizAdvX: 476,
-			Unicode:   "z",
+			Unicode:   'z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{75, 442}},
@@ -1937,9 +1937,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"{": {
+		'{': {
 			HorizAdvX: 450,
-			Unicode:   "{",
+			Unicode:   '{',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{164, 320}},
@@ -1959,9 +1959,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"|": {
+		'|': {
 			HorizAdvX: 300,
-			Unicode:   "|",
+			Unicode:   '|',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, -100}},
@@ -1971,9 +1971,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"}": {
+		'}': {
 			HorizAdvX: 450,
-			Unicode:   "}",
+			Unicode:   '}',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{374, 352}},
@@ -1993,9 +1993,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"~": {
+		'~': {
 			HorizAdvX: 0,
-			Unicode:   "~",
+			Unicode:   '~',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{524, 322}},
@@ -2009,9 +2009,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a1": {
+		'¡': {
 			HorizAdvX: 317,
-			Unicode:   "\u00a1",
+			Unicode:   '¡',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{174, 41}},
@@ -2029,9 +2029,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a2": {
+		'¢': {
 			HorizAdvX: 450,
-			Unicode:   "\u00a2",
+			Unicode:   '¢',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{466, 521}},
@@ -2054,9 +2054,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a3": {
+		'£': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a3",
+			Unicode:   '£',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, 83}},
@@ -2082,9 +2082,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a4": {
+		'¤': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a4",
+			Unicode:   '¤',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{326, 532}},
@@ -2117,9 +2117,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a5": {
+		'¥': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a5",
+			Unicode:   '¥',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 266}},
@@ -2149,9 +2149,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a6": {
+		'¦': {
 			HorizAdvX: 300,
-			Unicode:   "\u00a6",
+			Unicode:   '¦',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{45, -100}},
@@ -2168,9 +2168,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a7": {
+		'§': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a7",
+			Unicode:   '§',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{72, -31}},
@@ -2201,9 +2201,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a8": {
+		'¨': {
 			HorizAdvX: 380,
-			Unicode:   "\u00a8",
+			Unicode:   '¨',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{94, 607}},
@@ -2220,9 +2220,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a9": {
+		'©': {
 			HorizAdvX: 750,
-			Unicode:   "\u00a9",
+			Unicode:   '©',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{349, -12}},
@@ -2251,9 +2251,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00aa": {
+		'ª': {
 			HorizAdvX: 0,
-			Unicode:   "\u00aa",
+			Unicode:   'ª',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 472}},
@@ -2281,9 +2281,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ab": {
+		'«': {
 			HorizAdvX: 569,
-			Unicode:   "\u00ab",
+			Unicode:   '«',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{258, 178}},
@@ -2304,9 +2304,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ac": {
+		'¬': {
 			HorizAdvX: 0,
-			Unicode:   "\u00ac",
+			Unicode:   '¬',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{545, 383}},
@@ -2319,9 +2319,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ad": {
+		'­': {
 			HorizAdvX: 0,
-			Unicode:   "\u00ad",
+			Unicode:   '­',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{467, 302}},
@@ -2331,9 +2331,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ae": {
+		'®': {
 			HorizAdvX: 750,
-			Unicode:   "\u00ae",
+			Unicode:   '®',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{349, -12}},
@@ -2368,9 +2368,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00af": {
+		'¯': {
 			HorizAdvX: 403,
-			Unicode:   "\u00af",
+			Unicode:   '¯',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 627}},
@@ -2380,9 +2380,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b0": {
+		'°': {
 			HorizAdvX: 450,
-			Unicode:   "\u00b0",
+			Unicode:   '°',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{208, 458}},
@@ -2399,9 +2399,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b1": {
+		'±': {
 			HorizAdvX: 0,
-			Unicode:   "\u00b1",
+			Unicode:   '±',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, 394}},
@@ -2424,9 +2424,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b2": {
+		'²': {
 			HorizAdvX: 450,
-			Unicode:   "\u00b2",
+			Unicode:   '²',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{426, 597}},
@@ -2444,9 +2444,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b3": {
+		'³': {
 			HorizAdvX: 450,
-			Unicode:   "\u00b3",
+			Unicode:   '³',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{216, 270}},
@@ -2470,9 +2470,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b4": {
+		'´': {
 			HorizAdvX: 309,
-			Unicode:   "\u00b4",
+			Unicode:   '´',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{76, 575}},
@@ -2482,9 +2482,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b5": {
+		'µ': {
 			HorizAdvX: 0,
-			Unicode:   "\u00b5",
+			Unicode:   'µ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{10, -220}},
@@ -2506,9 +2506,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b6": {
+		'¶': {
 			HorizAdvX: 750,
-			Unicode:   "\u00b6",
+			Unicode:   '¶',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 764}},
@@ -2534,9 +2534,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b7": {
+		'·': {
 			HorizAdvX: 300,
-			Unicode:   "\u00b7",
+			Unicode:   '·',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{154, 288}},
@@ -2547,9 +2547,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b8": {
+		'¸': {
 			HorizAdvX: 312,
-			Unicode:   "\u00b8",
+			Unicode:   '¸',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, -140}},
@@ -2566,9 +2566,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b9": {
+		'¹': {
 			HorizAdvX: 450,
-			Unicode:   "\u00b9",
+			Unicode:   '¹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{122, 341}},
@@ -2585,9 +2585,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ba": {
+		'º': {
 			HorizAdvX: 610,
-			Unicode:   "\u00ba",
+			Unicode:   'º',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{356, 707}},
@@ -2609,9 +2609,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bb": {
+		'»': {
 			HorizAdvX: 569,
-			Unicode:   "\u00bb",
+			Unicode:   '»',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{131, 510}},
@@ -2632,9 +2632,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bc": {
+		'¼': {
 			HorizAdvX: 900,
-			Unicode:   "\u00bc",
+			Unicode:   '¼',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{224, -39}},
@@ -2673,9 +2673,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bd": {
+		'½': {
 			HorizAdvX: 900,
-			Unicode:   "\u00bd",
+			Unicode:   '½',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, -39}},
@@ -2710,9 +2710,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00be": {
+		'¾': {
 			HorizAdvX: 900,
-			Unicode:   "\u00be",
+			Unicode:   '¾',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{240, -39}},
@@ -2758,9 +2758,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bf": {
+		'¿': {
 			HorizAdvX: 498,
-			Unicode:   "\u00bf",
+			Unicode:   '¿',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{100, -64}},
@@ -2783,9 +2783,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c0": {
+		'À': {
 			HorizAdvX: 663,
-			Unicode:   "\u00c0",
+			Unicode:   'À',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{48, -8}},
@@ -2808,9 +2808,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c1": {
+		'Á': {
 			HorizAdvX: 663,
-			Unicode:   "\u00c1",
+			Unicode:   'Á',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{48, -8}},
@@ -2833,9 +2833,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c2": {
+		'Â': {
 			HorizAdvX: 663,
-			Unicode:   "\u00c2",
+			Unicode:   'Â',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{48, -8}},
@@ -2861,9 +2861,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c3": {
+		'Ã': {
 			HorizAdvX: 663,
-			Unicode:   "\u00c3",
+			Unicode:   'Ã',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{48, -8}},
@@ -2890,9 +2890,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c4": {
+		'Ä': {
 			HorizAdvX: 663,
-			Unicode:   "\u00c4",
+			Unicode:   'Ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{48, -8}},
@@ -2922,9 +2922,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c5": {
+		'Å': {
 			HorizAdvX: 663,
-			Unicode:   "\u00c5",
+			Unicode:   'Å',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{48, -8}},
@@ -2952,9 +2952,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c6": {
+		'Æ': {
 			HorizAdvX: 872,
-			Unicode:   "\u00c6",
+			Unicode:   'Æ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{34, -9}},
@@ -2980,9 +2980,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c7": {
+		'Ç': {
 			HorizAdvX: 560,
-			Unicode:   "\u00c7",
+			Unicode:   'Ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{399, -140}},
@@ -3008,9 +3008,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c8": {
+		'È': {
 			HorizAdvX: 542,
-			Unicode:   "\u00c8",
+			Unicode:   'È',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -3034,9 +3034,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c9": {
+		'É': {
 			HorizAdvX: 542,
-			Unicode:   "\u00c9",
+			Unicode:   'É',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -3060,9 +3060,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ca": {
+		'Ê': {
 			HorizAdvX: 542,
-			Unicode:   "\u00ca",
+			Unicode:   'Ê',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -3089,9 +3089,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cb": {
+		'Ë': {
 			HorizAdvX: 542,
-			Unicode:   "\u00cb",
+			Unicode:   'Ë',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -3122,9 +3122,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cc": {
+		'Ì': {
 			HorizAdvX: 272,
-			Unicode:   "\u00cc",
+			Unicode:   'Ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{137, 0}},
@@ -3139,9 +3139,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cd": {
+		'Í': {
 			HorizAdvX: 272,
-			Unicode:   "\u00cd",
+			Unicode:   'Í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{137, 0}},
@@ -3156,9 +3156,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ce": {
+		'Î': {
 			HorizAdvX: 272,
-			Unicode:   "\u00ce",
+			Unicode:   'Î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{137, 0}},
@@ -3176,9 +3176,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cf": {
+		'Ï': {
 			HorizAdvX: 272,
-			Unicode:   "\u00cf",
+			Unicode:   'Ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{137, 0}},
@@ -3200,9 +3200,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d0": {
+		'Ð': {
 			HorizAdvX: 683,
-			Unicode:   "\u00d0",
+			Unicode:   'Ð',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{12, 304}},
@@ -3229,9 +3229,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d1": {
+		'Ñ': {
 			HorizAdvX: 702,
-			Unicode:   "\u00d1",
+			Unicode:   'Ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{443, 0}},
@@ -3257,9 +3257,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d2": {
+		'Ò': {
 			HorizAdvX: 738,
-			Unicode:   "\u00d2",
+			Unicode:   'Ò',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{339, -12}},
@@ -3281,9 +3281,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d3": {
+		'Ó': {
 			HorizAdvX: 738,
-			Unicode:   "\u00d3",
+			Unicode:   'Ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{339, -12}},
@@ -3305,9 +3305,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d4": {
+		'Ô': {
 			HorizAdvX: 738,
-			Unicode:   "\u00d4",
+			Unicode:   'Ô',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{339, -12}},
@@ -3332,9 +3332,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d5": {
+		'Õ': {
 			HorizAdvX: 738,
-			Unicode:   "\u00d5",
+			Unicode:   'Õ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{339, -12}},
@@ -3360,9 +3360,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d6": {
+		'Ö': {
 			HorizAdvX: 738,
-			Unicode:   "\u00d6",
+			Unicode:   'Ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{339, -12}},
@@ -3391,9 +3391,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d7": {
+		'×': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d7",
+			Unicode:   '×',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{251, 348}},
@@ -3411,9 +3411,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d8": {
+		'Ø': {
 			HorizAdvX: 738,
-			Unicode:   "\u00d8",
+			Unicode:   'Ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{339, -12}},
@@ -3444,9 +3444,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d9": {
+		'Ù': {
 			HorizAdvX: 681,
-			Unicode:   "\u00d9",
+			Unicode:   'Ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{618, 70}},
@@ -3475,9 +3475,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00da": {
+		'Ú': {
 			HorizAdvX: 681,
-			Unicode:   "\u00da",
+			Unicode:   'Ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{618, 70}},
@@ -3506,9 +3506,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00db": {
+		'Û': {
 			HorizAdvX: 681,
-			Unicode:   "\u00db",
+			Unicode:   'Û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{618, 70}},
@@ -3540,9 +3540,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dc": {
+		'Ü': {
 			HorizAdvX: 681,
-			Unicode:   "\u00dc",
+			Unicode:   'Ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{618, 70}},
@@ -3578,9 +3578,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dd": {
+		'Ý': {
 			HorizAdvX: 562,
-			Unicode:   "\u00dd",
+			Unicode:   'Ý',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{94, 70}},
@@ -3606,9 +3606,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00de": {
+		'Þ': {
 			HorizAdvX: 564,
-			Unicode:   "\u00de",
+			Unicode:   'Þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{321, 585}},
@@ -3631,9 +3631,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00df": {
+		'ß': {
 			HorizAdvX: 619,
-			Unicode:   "\u00df",
+			Unicode:   'ß',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{168, 470}},
@@ -3661,9 +3661,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e0": {
+		'à': {
 			HorizAdvX: 592,
-			Unicode:   "\u00e0",
+			Unicode:   'à',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{37, 205}},
@@ -3691,9 +3691,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e1": {
+		'á': {
 			HorizAdvX: 592,
-			Unicode:   "\u00e1",
+			Unicode:   'á',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{37, 205}},
@@ -3721,9 +3721,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e2": {
+		'â': {
 			HorizAdvX: 592,
-			Unicode:   "\u00e2",
+			Unicode:   'â',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{37, 205}},
@@ -3754,9 +3754,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e3": {
+		'ã': {
 			HorizAdvX: 592,
-			Unicode:   "\u00e3",
+			Unicode:   'ã',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{37, 205}},
@@ -3788,9 +3788,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e4": {
+		'ä': {
 			HorizAdvX: 592,
-			Unicode:   "\u00e4",
+			Unicode:   'ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{37, 205}},
@@ -3825,9 +3825,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e5": {
+		'å': {
 			HorizAdvX: 592,
-			Unicode:   "\u00e5",
+			Unicode:   'å',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{37, 205}},
@@ -3862,9 +3862,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e6": {
+		'æ': {
 			HorizAdvX: 880,
-			Unicode:   "\u00e6",
+			Unicode:   'æ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{276, 532}},
@@ -3902,9 +3902,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e7": {
+		'ç': {
 			HorizAdvX: 460,
-			Unicode:   "\u00e7",
+			Unicode:   'ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{338, -140}},
@@ -3930,9 +3930,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e8": {
+		'è': {
 			HorizAdvX: 518,
-			Unicode:   "\u00e8",
+			Unicode:   'è',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{261, -12}},
@@ -3959,9 +3959,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e9": {
+		'é': {
 			HorizAdvX: 518,
-			Unicode:   "\u00e9",
+			Unicode:   'é',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{261, -12}},
@@ -3988,9 +3988,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ea": {
+		'ê': {
 			HorizAdvX: 518,
-			Unicode:   "\u00ea",
+			Unicode:   'ê',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{261, -12}},
@@ -4020,9 +4020,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00eb": {
+		'ë': {
 			HorizAdvX: 518,
-			Unicode:   "\u00eb",
+			Unicode:   'ë',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{261, -12}},
@@ -4056,9 +4056,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ec": {
+		'ì': {
 			HorizAdvX: 255,
-			Unicode:   "\u00ec",
+			Unicode:   'ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{218, 520}},
@@ -4074,9 +4074,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ed": {
+		'í': {
 			HorizAdvX: 255,
-			Unicode:   "\u00ed",
+			Unicode:   'í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{218, 520}},
@@ -4092,9 +4092,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ee": {
+		'î': {
 			HorizAdvX: 255,
-			Unicode:   "\u00ee",
+			Unicode:   'î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{218, 520}},
@@ -4113,9 +4113,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ef": {
+		'ï': {
 			HorizAdvX: 255,
-			Unicode:   "\u00ef",
+			Unicode:   'ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{218, 520}},
@@ -4138,9 +4138,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f0": {
+		'ð': {
 			HorizAdvX: 540,
-			Unicode:   "\u00f0",
+			Unicode:   'ð',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{284, 498}},
@@ -4170,9 +4170,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f1": {
+		'ñ': {
 			HorizAdvX: 589,
-			Unicode:   "\u00f1",
+			Unicode:   'ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{364, 453}},
@@ -4202,9 +4202,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f2": {
+		'ò': {
 			HorizAdvX: 601,
-			Unicode:   "\u00f2",
+			Unicode:   'ò',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{278, -12}},
@@ -4226,9 +4226,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3": {
+		'ó': {
 			HorizAdvX: 601,
-			Unicode:   "\u00f3",
+			Unicode:   'ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{278, -12}},
@@ -4250,9 +4250,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f4": {
+		'ô': {
 			HorizAdvX: 601,
-			Unicode:   "\u00f4",
+			Unicode:   'ô',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{278, -12}},
@@ -4277,9 +4277,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f5": {
+		'õ': {
 			HorizAdvX: 601,
-			Unicode:   "\u00f5",
+			Unicode:   'õ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{278, -12}},
@@ -4305,9 +4305,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f6": {
+		'ö': {
 			HorizAdvX: 601,
-			Unicode:   "\u00f6",
+			Unicode:   'ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{278, -12}},
@@ -4336,9 +4336,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f7": {
+		'÷': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f7",
+			Unicode:   '÷',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{467, 302}},
@@ -4360,9 +4360,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f8": {
+		'ø': {
 			HorizAdvX: 601,
-			Unicode:   "\u00f8",
+			Unicode:   'ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{278, -12}},
@@ -4393,9 +4393,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f9": {
+		'ù': {
 			HorizAdvX: 579,
-			Unicode:   "\u00f9",
+			Unicode:   'ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, -12}},
@@ -4424,9 +4424,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fa": {
+		'ú': {
 			HorizAdvX: 579,
-			Unicode:   "\u00fa",
+			Unicode:   'ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, -12}},
@@ -4455,9 +4455,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fb": {
+		'û': {
 			HorizAdvX: 579,
-			Unicode:   "\u00fb",
+			Unicode:   'û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, -12}},
@@ -4489,9 +4489,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fc": {
+		'ü': {
 			HorizAdvX: 579,
-			Unicode:   "\u00fc",
+			Unicode:   'ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, -12}},
@@ -4527,9 +4527,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fd": {
+		'ý': {
 			HorizAdvX: 561,
-			Unicode:   "\u00fd",
+			Unicode:   'ý',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{225, 80}},
@@ -4559,9 +4559,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fe": {
+		'þ': {
 			HorizAdvX: 0,
-			Unicode:   "\u00fe",
+			Unicode:   'þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{97, -220}},
@@ -4583,9 +4583,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ff": {
+		'ÿ': {
 			HorizAdvX: 561,
-			Unicode:   "\u00ff",
+			Unicode:   'ÿ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{225, 80}},
@@ -4622,9 +4622,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0127": {
+		'ħ': {
 			HorizAdvX: 599,
-			Unicode:   "\u0127",
+			Unicode:   'ħ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 368}},
@@ -4653,9 +4653,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0128": {
+		'Ĩ': {
 			HorizAdvX: 272,
-			Unicode:   "\u0128",
+			Unicode:   'Ĩ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{137, 0}},
@@ -4674,9 +4674,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0129": {
+		'ĩ': {
 			HorizAdvX: 255,
-			Unicode:   "\u0129",
+			Unicode:   'ĩ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{218, 520}},
@@ -4696,9 +4696,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0131": {
+		'ı': {
 			HorizAdvX: 255,
-			Unicode:   "\u0131",
+			Unicode:   'ı',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{218, 520}},
@@ -4709,9 +4709,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0132": {
+		'Ĳ': {
 			HorizAdvX: 683,
-			Unicode:   "\u0132",
+			Unicode:   'Ĳ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{383, -12}},
@@ -4731,9 +4731,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0133": {
+		'ĳ': {
 			HorizAdvX: 520,
-			Unicode:   "\u0133",
+			Unicode:   'ĳ',
 			GerberLP:  "dddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{287, -74}},
@@ -4766,9 +4766,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0134": {
+		'Ĵ': {
 			HorizAdvX: 411,
-			Unicode:   "\u0134",
+			Unicode:   'Ĵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{111, -12}},
@@ -4791,9 +4791,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0135": {
+		'ĵ': {
 			HorizAdvX: 264,
-			Unicode:   "\u0135",
+			Unicode:   'ĵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{31, -74}},
@@ -4816,9 +4816,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0137": {
+		'ķ': {
 			HorizAdvX: 543,
-			Unicode:   "\u0137",
+			Unicode:   'ķ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{37, 0}},
@@ -4850,9 +4850,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0138": {
+		'ĸ': {
 			HorizAdvX: 491,
-			Unicode:   "\u0138",
+			Unicode:   'ĸ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{37, 0}},
@@ -4872,9 +4872,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013f": {
+		'Ŀ': {
 			HorizAdvX: 510,
-			Unicode:   "\u013f",
+			Unicode:   'Ŀ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -4893,9 +4893,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0140": {
+		'ŀ': {
 			HorizAdvX: 390,
-			Unicode:   "\u0140",
+			Unicode:   'ŀ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{244, 740}},
@@ -4918,9 +4918,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0141": {
+		'Ł': {
 			HorizAdvX: 521,
-			Unicode:   "\u0141",
+			Unicode:   'Ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{53, 0}},
@@ -4941,9 +4941,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0142": {
+		'ł': {
 			HorizAdvX: 353,
-			Unicode:   "\u0142",
+			Unicode:   'ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{262, 740}},
@@ -4968,9 +4968,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0143": {
+		'Ń': {
 			HorizAdvX: 702,
-			Unicode:   "\u0143",
+			Unicode:   'Ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{443, 0}},
@@ -4992,9 +4992,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0144": {
+		'ń': {
 			HorizAdvX: 589,
-			Unicode:   "\u0144",
+			Unicode:   'ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{364, 453}},
@@ -5020,9 +5020,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0152": {
+		'Œ': {
 			HorizAdvX: 892,
-			Unicode:   "\u0152",
+			Unicode:   'Œ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{424, 712}},
@@ -5051,9 +5051,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0153": {
+		'œ': {
 			HorizAdvX: 951,
-			Unicode:   "\u0153",
+			Unicode:   'œ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{276, -12}},
@@ -5086,9 +5086,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0154": {
+		'Ŕ': {
 			HorizAdvX: 621,
-			Unicode:   "\u0154",
+			Unicode:   'Ŕ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -5116,9 +5116,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0156": {
+		'Ŗ': {
 			HorizAdvX: 621,
-			Unicode:   "\u0156",
+			Unicode:   'Ŗ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -5147,9 +5147,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0157": {
+		'ŗ': {
 			HorizAdvX: 405,
-			Unicode:   "\u0157",
+			Unicode:   'ŗ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{52, 0}},
@@ -5175,9 +5175,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0158": {
+		'Ř': {
 			HorizAdvX: 621,
-			Unicode:   "\u0158",
+			Unicode:   'Ř',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 0}},
@@ -5209,9 +5209,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0159": {
+		'ř': {
 			HorizAdvX: 405,
-			Unicode:   "\u0159",
+			Unicode:   'ř',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{52, 0}},
@@ -5240,9 +5240,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0237": {
+		'ȷ': {
 			HorizAdvX: 264,
-			Unicode:   "\u0237",
+			Unicode:   'ȷ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{31, -74}},
@@ -5257,9 +5257,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c6": {
+		'ˆ': {
 			HorizAdvX: 458,
-			Unicode:   "\u02c6",
+			Unicode:   'ˆ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{237, 677}},
@@ -5272,9 +5272,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c7": {
+		'ˇ': {
 			HorizAdvX: 456,
-			Unicode:   "\u02c7",
+			Unicode:   'ˇ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{180, 587}},
@@ -5288,9 +5288,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02da": {
+		'˚': {
 			HorizAdvX: 333,
-			Unicode:   "\u02da",
+			Unicode:   '˚',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{154, 582}},
@@ -5307,9 +5307,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dc": {
+		'˜': {
 			HorizAdvX: 421,
-			Unicode:   "\u02dc",
+			Unicode:   '˜',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{371, 656}},
@@ -5323,9 +5323,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0307": {
+		'̇': {
 			HorizAdvX: 207,
-			Unicode:   "\u0307",
+			Unicode:   '̇',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{97, 609}},
@@ -5336,9 +5336,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2013": {
+		'–': {
 			HorizAdvX: 0,
-			Unicode:   "\u2013",
+			Unicode:   '–',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{532, 302}},
@@ -5348,9 +5348,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2014": {
+		'—': {
 			HorizAdvX: 750,
-			Unicode:   "\u2014",
+			Unicode:   '—',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{677, 302}},
@@ -5360,9 +5360,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2018": {
+		'‘': {
 			HorizAdvX: 228,
-			Unicode:   "\u2018",
+			Unicode:   '‘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{246, 604}},
@@ -5376,9 +5376,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2019": {
+		'’': {
 			HorizAdvX: 228,
-			Unicode:   "\u2019",
+			Unicode:   '’',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{102, 680}},
@@ -5392,9 +5392,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201a": {
+		'‚': {
 			HorizAdvX: 228,
-			Unicode:   "\u201a",
+			Unicode:   '‚',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{7, 50}},
@@ -5408,9 +5408,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201c": {
+		'“': {
 			HorizAdvX: 411,
-			Unicode:   "\u201c",
+			Unicode:   '“',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{246, 604}},
@@ -5433,9 +5433,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201d": {
+		'”': {
 			HorizAdvX: 411,
-			Unicode:   "\u201d",
+			Unicode:   '”',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{102, 680}},
@@ -5458,9 +5458,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201e": {
+		'„': {
 			HorizAdvX: 411,
-			Unicode:   "\u201e",
+			Unicode:   '„',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{7, 50}},
@@ -5483,9 +5483,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2022": {
+		'•': {
 			HorizAdvX: 450,
-			Unicode:   "\u2022",
+			Unicode:   '•',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{228, 218}},
@@ -5496,9 +5496,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2039": {
+		'‹': {
 			HorizAdvX: 369,
-			Unicode:   "\u2039",
+			Unicode:   '‹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{258, 178}},
@@ -5511,9 +5511,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u203a": {
+		'›': {
 			HorizAdvX: 369,
-			Unicode:   "\u203a",
+			Unicode:   '›',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{131, 510}},
@@ -5526,9 +5526,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20ac": {
+		'€': {
 			HorizAdvX: 0,
-			Unicode:   "\u20ac",
+			Unicode:   '€',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{443, 235}},
@@ -5558,9 +5558,9 @@ var abeezee_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6c3": {
+		'': {
 			HorizAdvX: 274,
-			Unicode:   "\uf6c3",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, -30}},

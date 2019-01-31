@@ -11,16 +11,16 @@ func init() {
 }
 
 var overlockregularFont = &fonts.Font{
-	// ID: "overlockregular",
+	ID:               "overlockregular",
 	HorizAdvX:        1095,
 	UnitsPerEm:       2048,
 	Ascent:           1638,
 	Descent:          -410,
 	MissingHorizAdvX: 471,
-	Glyphs: map[string]*fonts.Glyph{
-		"!": {
+	Glyphs: map[rune]*fonts.Glyph{
+		'!': {
 			HorizAdvX: 636,
-			Unicode:   "!",
+			Unicode:   '!',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{207, 1389}},
@@ -48,9 +48,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\"": {
+		'"': {
 			HorizAdvX: 706,
-			Unicode:   "\"",
+			Unicode:   '"',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{102, 1430}},
@@ -81,9 +81,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"#": {
+		'#': {
 			HorizAdvX: 0,
-			Unicode:   "#",
+			Unicode:   '#',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{29, 479}},
@@ -146,9 +146,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"$": {
+		'$': {
 			HorizAdvX: 0,
-			Unicode:   "$",
+			Unicode:   '$',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{125, 168}},
@@ -200,9 +200,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"%": {
+		'%': {
 			HorizAdvX: 1540,
-			Unicode:   "%",
+			Unicode:   '%',
 			GerberLP:  "dcddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{102, 1022}},
@@ -258,9 +258,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"&": {
+		'&': {
 			HorizAdvX: 1261,
-			Unicode:   "&",
+			Unicode:   '&',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{102, 350}},
@@ -310,9 +310,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"'": {
+		'\'': {
 			HorizAdvX: 489,
-			Unicode:   "'",
+			Unicode:   '\'',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 1430}},
@@ -330,9 +330,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"(": {
+		'(': {
 			HorizAdvX: 702,
-			Unicode:   "(",
+			Unicode:   '(',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{184, 545}},
@@ -353,9 +353,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		")": {
+		')': {
 			HorizAdvX: 655,
-			Unicode:   ")",
+			Unicode:   ')',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{41, -369}},
@@ -376,9 +376,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"*": {
+		'*': {
 			HorizAdvX: 831,
-			Unicode:   "*",
+			Unicode:   '*',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{72, 1233}},
@@ -415,9 +415,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"+": {
+		'+': {
 			HorizAdvX: 0,
-			Unicode:   "+",
+			Unicode:   '+',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{100, 504}},
@@ -448,9 +448,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		",": {
+		',': {
 			HorizAdvX: 464,
-			Unicode:   ",",
+			Unicode:   ',',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{55, -231}},
@@ -470,9 +470,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"-": {
+		'-': {
 			HorizAdvX: 471,
-			Unicode:   "-",
+			Unicode:   '-',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{51, 522}},
@@ -491,9 +491,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		".": {
+		'.': {
 			HorizAdvX: 473,
-			Unicode:   ".",
+			Unicode:   '.',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{102, 108.5}},
@@ -508,9 +508,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"/": {
+		'/': {
 			HorizAdvX: 528,
-			Unicode:   "/",
+			Unicode:   '/',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{86, -193}},
@@ -525,9 +525,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"0": {
+		'0': {
 			HorizAdvX: 0,
-			Unicode:   "0",
+			Unicode:   '0',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{61, 678}},
@@ -554,9 +554,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"1": {
+		'1': {
 			HorizAdvX: 0,
-			Unicode:   "1",
+			Unicode:   '1',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{238, 1257}},
@@ -586,9 +586,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"2": {
+		'2': {
 			HorizAdvX: 0,
-			Unicode:   "2",
+			Unicode:   '2',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{84, 96}},
@@ -619,9 +619,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"3": {
+		'3': {
 			HorizAdvX: 0,
-			Unicode:   "3",
+			Unicode:   '3',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{133, 106}},
@@ -658,9 +658,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"4": {
+		'4': {
 			HorizAdvX: 0,
-			Unicode:   "4",
+			Unicode:   '4',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{90, 524}},
@@ -694,9 +694,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"5": {
+		'5': {
 			HorizAdvX: 0,
-			Unicode:   "5",
+			Unicode:   '5',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{125, 106}},
@@ -725,9 +725,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"6": {
+		'6': {
 			HorizAdvX: 0,
-			Unicode:   "6",
+			Unicode:   '6',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{121, 563}},
@@ -763,9 +763,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"7": {
+		'7': {
 			HorizAdvX: 0,
-			Unicode:   "7",
+			Unicode:   '7',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{109, 1303}},
@@ -785,9 +785,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"8": {
+		'8': {
 			HorizAdvX: 0,
-			Unicode:   "8",
+			Unicode:   '8',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{102, 348}},
@@ -829,9 +829,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"9": {
+		'9': {
 			HorizAdvX: 0,
-			Unicode:   "9",
+			Unicode:   '9',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{90, 940}},
@@ -867,9 +867,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		":": {
+		':': {
 			HorizAdvX: 473,
-			Unicode:   ":",
+			Unicode:   ':',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{102, 108.5}},
@@ -894,9 +894,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		";": {
+		';': {
 			HorizAdvX: 503,
-			Unicode:   ";",
+			Unicode:   ';',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{55, -231}},
@@ -926,9 +926,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"<": {
+		'<': {
 			HorizAdvX: 0,
-			Unicode:   "<",
+			Unicode:   '<',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{217, 514}},
@@ -945,9 +945,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"=": {
+		'=': {
 			HorizAdvX: 0,
-			Unicode:   "=",
+			Unicode:   '=',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{141, 709}},
@@ -980,9 +980,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		">": {
+		'>': {
 			HorizAdvX: 0,
-			Unicode:   ">",
+			Unicode:   '>',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{246, 106}},
@@ -1000,9 +1000,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"?": {
+		'?': {
 			HorizAdvX: 782,
-			Unicode:   "?",
+			Unicode:   '?',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{82, 1223}},
@@ -1041,9 +1041,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"@": {
+		'@': {
 			HorizAdvX: 1763,
-			Unicode:   "@",
+			Unicode:   '@',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 369}},
@@ -1094,9 +1094,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"A": {
+		'A': {
 			HorizAdvX: 1128,
-			Unicode:   "A",
+			Unicode:   'A',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{10, 39}},
@@ -1127,9 +1127,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"B": {
+		'B': {
 			HorizAdvX: 1120,
-			Unicode:   "B",
+			Unicode:   'B',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{141, 109}},
@@ -1164,9 +1164,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"C": {
+		'C': {
 			HorizAdvX: 1232,
-			Unicode:   "C",
+			Unicode:   'C',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{100, 680}},
@@ -1191,9 +1191,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"D": {
+		'D': {
 			HorizAdvX: 1300,
-			Unicode:   "D",
+			Unicode:   'D',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 109}},
@@ -1223,9 +1223,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"E": {
+		'E': {
 			HorizAdvX: 995,
-			Unicode:   "E",
+			Unicode:   'E',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 1346}},
@@ -1259,9 +1259,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"F": {
+		'F': {
 			HorizAdvX: 931,
-			Unicode:   "F",
+			Unicode:   'F',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 1346}},
@@ -1291,9 +1291,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"G": {
+		'G': {
 			HorizAdvX: 1259,
-			Unicode:   "G",
+			Unicode:   'G',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{100, 680}},
@@ -1321,9 +1321,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"H": {
+		'H': {
 			HorizAdvX: 1284,
-			Unicode:   "H",
+			Unicode:   'H',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 1358}},
@@ -1363,9 +1363,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"I": {
+		'I': {
 			HorizAdvX: 452,
-			Unicode:   "I",
+			Unicode:   'I',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 1358}},
@@ -1386,9 +1386,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"J": {
+		'J': {
 			HorizAdvX: 454,
-			Unicode:   "J",
+			Unicode:   'J',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-78, -127}},
@@ -1415,9 +1415,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"K": {
+		'K': {
 			HorizAdvX: 1054,
-			Unicode:   "K",
+			Unicode:   'K',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 1358}},
@@ -1457,9 +1457,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"L": {
+		'L': {
 			HorizAdvX: 878,
-			Unicode:   "L",
+			Unicode:   'L',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 1358}},
@@ -1485,9 +1485,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"M": {
+		'M': {
 			HorizAdvX: 1632,
-			Unicode:   "M",
+			Unicode:   'M',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 1350}},
@@ -1526,9 +1526,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"N": {
+		'N': {
 			HorizAdvX: 1288,
-			Unicode:   "N",
+			Unicode:   'N',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 1350}},
@@ -1562,9 +1562,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"O": {
+		'O': {
 			HorizAdvX: 1458,
-			Unicode:   "O",
+			Unicode:   'O',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{100, 678}},
@@ -1593,9 +1593,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"P": {
+		'P': {
 			HorizAdvX: 1032,
-			Unicode:   "P",
+			Unicode:   'P',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 1354}},
@@ -1627,9 +1627,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Q": {
+		'Q': {
 			HorizAdvX: 1458,
-			Unicode:   "Q",
+			Unicode:   'Q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{100, 678}},
@@ -1668,9 +1668,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"R": {
+		'R': {
 			HorizAdvX: 1085,
-			Unicode:   "R",
+			Unicode:   'R',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 1354}},
@@ -1717,9 +1717,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"S": {
+		'S': {
 			HorizAdvX: 1060,
-			Unicode:   "S",
+			Unicode:   'S',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{92, 172}},
@@ -1759,9 +1759,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"T": {
+		'T': {
 			HorizAdvX: 952,
-			Unicode:   "T",
+			Unicode:   'T',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{0, 1280}},
@@ -1789,9 +1789,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"U": {
+		'U': {
 			HorizAdvX: 1318,
-			Unicode:   "U",
+			Unicode:   'U',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{147, 1348}},
@@ -1829,9 +1829,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"V": {
+		'V': {
 			HorizAdvX: 1142,
-			Unicode:   "V",
+			Unicode:   'V',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-41, 1288}},
@@ -1855,9 +1855,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"W": {
+		'W': {
 			HorizAdvX: 1929,
-			Unicode:   "W",
+			Unicode:   'W',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-41, 1288}},
@@ -1895,9 +1895,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"X": {
+		'X': {
 			HorizAdvX: 1179,
-			Unicode:   "X",
+			Unicode:   'X',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{51, 88}},
@@ -1921,9 +1921,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Y": {
+		'Y': {
 			HorizAdvX: 1026,
-			Unicode:   "Y",
+			Unicode:   'Y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-20, 1268}},
@@ -1950,9 +1950,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Z": {
+		'Z': {
 			HorizAdvX: 0,
-			Unicode:   "Z",
+			Unicode:   'Z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{53, 115}},
@@ -1978,9 +1978,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"[": {
+		'[': {
 			HorizAdvX: 778,
-			Unicode:   "[",
+			Unicode:   '[',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{307, -389}},
@@ -1999,9 +1999,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\\": {
+		'\\': {
 			HorizAdvX: 528,
-			Unicode:   "\\",
+			Unicode:   '\\',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{72, 1464}},
@@ -2016,9 +2016,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"]": {
+		']': {
 			HorizAdvX: 716,
-			Unicode:   "]",
+			Unicode:   ']',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{61, -342}},
@@ -2037,9 +2037,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"^": {
+		'^': {
 			HorizAdvX: 962,
-			Unicode:   "^",
+			Unicode:   '^',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{51, 887}},
@@ -2060,9 +2060,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"_": {
+		'_': {
 			HorizAdvX: 0,
-			Unicode:   "_",
+			Unicode:   '_',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{0, -250}},
@@ -2083,9 +2083,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"`": {
+		'`': {
 			HorizAdvX: 411,
-			Unicode:   "`",
+			Unicode:   '`',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-102, 1343}},
@@ -2100,9 +2100,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a": {
+		'a': {
 			HorizAdvX: 950,
-			Unicode:   "a",
+			Unicode:   'a',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{92, 268}},
@@ -2144,9 +2144,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"b": {
+		'b': {
 			HorizAdvX: 1040,
-			Unicode:   "b",
+			Unicode:   'b',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 1516}},
@@ -2178,9 +2178,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c": {
+		'c': {
 			HorizAdvX: 915,
-			Unicode:   "c",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{92, 465}},
@@ -2207,9 +2207,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"d": {
+		'd': {
 			HorizAdvX: 1056,
-			Unicode:   "d",
+			Unicode:   'd',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{92, 475}},
@@ -2241,9 +2241,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"e": {
+		'e': {
 			HorizAdvX: 962,
-			Unicode:   "e",
+			Unicode:   'e',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{92, 471}},
@@ -2278,9 +2278,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"f": {
+		'f': {
 			HorizAdvX: 620,
-			Unicode:   "f",
+			Unicode:   'f',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{10, 883}},
@@ -2315,9 +2315,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"g": {
+		'g': {
 			HorizAdvX: 1060,
-			Unicode:   "g",
+			Unicode:   'g',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{72, -274}},
@@ -2369,9 +2369,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"h": {
+		'h': {
 			HorizAdvX: 1034,
-			Unicode:   "h",
+			Unicode:   'h',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 74}},
@@ -2403,9 +2403,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"i": {
+		'i': {
 			HorizAdvX: 436,
-			Unicode:   "i",
+			Unicode:   'i',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 952}},
@@ -2434,9 +2434,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"j": {
+		'j': {
 			HorizAdvX: 460,
-			Unicode:   "j",
+			Unicode:   'j',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-276, -410}},
@@ -2472,9 +2472,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"k": {
+		'k': {
 			HorizAdvX: 976,
-			Unicode:   "k",
+			Unicode:   'k',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 1516}},
@@ -2521,9 +2521,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"l": {
+		'l': {
 			HorizAdvX: 436,
-			Unicode:   "l",
+			Unicode:   'l',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 1516}},
@@ -2544,9 +2544,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"m": {
+		'm': {
 			HorizAdvX: 1583,
-			Unicode:   "m",
+			Unicode:   'm',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 942}},
@@ -2589,9 +2589,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"n": {
+		'n': {
 			HorizAdvX: 1062,
-			Unicode:   "n",
+			Unicode:   'n',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 942}},
@@ -2622,9 +2622,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"o": {
+		'o': {
 			HorizAdvX: 1075,
-			Unicode:   "o",
+			Unicode:   'o',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{92, 475}},
@@ -2649,9 +2649,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"p": {
+		'p': {
 			HorizAdvX: 1058,
-			Unicode:   "p",
+			Unicode:   'p',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 942}},
@@ -2688,9 +2688,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"q": {
+		'q': {
 			HorizAdvX: 1060,
-			Unicode:   "q",
+			Unicode:   'q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{92, 473}},
@@ -2719,9 +2719,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"r": {
+		'r': {
 			HorizAdvX: 645,
-			Unicode:   "r",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 952}},
@@ -2748,9 +2748,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"s": {
+		's': {
 			HorizAdvX: 837,
-			Unicode:   "s",
+			Unicode:   's',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{82, 143}},
@@ -2785,9 +2785,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"t": {
+		't': {
 			HorizAdvX: 720,
-			Unicode:   "t",
+			Unicode:   't',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{0, 879}},
@@ -2818,9 +2818,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"u": {
+		'u': {
 			HorizAdvX: 1060,
-			Unicode:   "u",
+			Unicode:   'u',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 942}},
@@ -2850,9 +2850,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"v": {
+		'v': {
 			HorizAdvX: 899,
-			Unicode:   "v",
+			Unicode:   'v',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-6, 907}},
@@ -2876,9 +2876,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"w": {
+		'w': {
 			HorizAdvX: 1419,
-			Unicode:   "w",
+			Unicode:   'w',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-6, 907}},
@@ -2917,9 +2917,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"x": {
+		'x': {
 			HorizAdvX: 886,
-			Unicode:   "x",
+			Unicode:   'x',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{51, 57}},
@@ -2947,9 +2947,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"y": {
+		'y': {
 			HorizAdvX: 903,
-			Unicode:   "y",
+			Unicode:   'y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{0, 897}},
@@ -2974,9 +2974,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"z": {
+		'z': {
 			HorizAdvX: 929,
-			Unicode:   "z",
+			Unicode:   'z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{51, 116.5}},
@@ -3003,9 +3003,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"{": {
+		'{': {
 			HorizAdvX: 872,
-			Unicode:   "{",
+			Unicode:   '{',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{143, 535}},
@@ -3043,9 +3043,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"|": {
+		'|': {
 			HorizAdvX: 0,
-			Unicode:   "|",
+			Unicode:   '|',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{469, 1501}},
@@ -3066,9 +3066,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"}": {
+		'}': {
 			HorizAdvX: 827,
-			Unicode:   "}",
+			Unicode:   '}',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{61, -242}},
@@ -3108,9 +3108,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"~": {
+		'~': {
 			HorizAdvX: 1118,
-			Unicode:   "~",
+			Unicode:   '~',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{82, 547}},
@@ -3128,9 +3128,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a2": {
+		'¢': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a2",
+			Unicode:   '¢',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 690}},
@@ -3169,9 +3169,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a3": {
+		'£': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a3",
+			Unicode:   '£',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{143, 102}},
@@ -3214,9 +3214,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a5": {
+		'¥': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a5",
+			Unicode:   '¥',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{14, 1286}},
@@ -3259,9 +3259,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a9": {
+		'©': {
 			HorizAdvX: 1818,
-			Unicode:   "\u00a9",
+			Unicode:   '©',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{266, 655}},
@@ -3308,9 +3308,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ad": {
+		'­': {
 			HorizAdvX: 471,
-			Unicode:   "\u00ad",
+			Unicode:   '­',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{51, 522}},
@@ -3329,9 +3329,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ae": {
+		'®': {
 			HorizAdvX: 1243,
-			Unicode:   "\u00ae",
+			Unicode:   '®',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 901}},
@@ -3385,9 +3385,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b4": {
+		'´': {
 			HorizAdvX: 411,
-			Unicode:   "\u00b4",
+			Unicode:   '´',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 1133}},
@@ -3402,9 +3402,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2010": {
+		'‐': {
 			HorizAdvX: 471,
-			Unicode:   "\u2010",
+			Unicode:   '‐',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{51, 522}},
@@ -3423,9 +3423,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2011": {
+		'‑': {
 			HorizAdvX: 471,
-			Unicode:   "\u2011",
+			Unicode:   '‑',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{51, 522}},
@@ -3444,9 +3444,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2012": {
+		'‒': {
 			HorizAdvX: 471,
-			Unicode:   "\u2012",
+			Unicode:   '‒',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{51, 522}},
@@ -3465,9 +3465,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2013": {
+		'–': {
 			HorizAdvX: 1218,
-			Unicode:   "\u2013",
+			Unicode:   '–',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{61, 522}},
@@ -3488,9 +3488,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2014": {
+		'—': {
 			HorizAdvX: 1546,
-			Unicode:   "\u2014",
+			Unicode:   '—',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{61, 522}},
@@ -3511,9 +3511,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2018": {
+		'‘': {
 			HorizAdvX: 362,
-			Unicode:   "\u2018",
+			Unicode:   '‘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{35, 1169}},
@@ -3533,9 +3533,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2019": {
+		'’': {
 			HorizAdvX: 499,
-			Unicode:   "\u2019",
+			Unicode:   '’',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{86, 1038}},
@@ -3555,9 +3555,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201c": {
+		'“': {
 			HorizAdvX: 837,
-			Unicode:   "\u201c",
+			Unicode:   '“',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{61, 1165}},
@@ -3592,9 +3592,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201d": {
+		'”': {
 			HorizAdvX: 931,
-			Unicode:   "\u201d",
+			Unicode:   '”',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{102, 1038}},
@@ -3629,9 +3629,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2022": {
+		'•': {
 			HorizAdvX: 548,
-			Unicode:   "\u2022",
+			Unicode:   '•',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{51, 549}},
@@ -3646,9 +3646,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2026": {
+		'…': {
 			HorizAdvX: 1566,
-			Unicode:   "\u2026",
+			Unicode:   '…',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{86, 108.5}},
@@ -3683,9 +3683,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20ac": {
+		'€': {
 			HorizAdvX: 0,
-			Unicode:   "\u20ac",
+			Unicode:   '€',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{33, 543}},
@@ -3732,9 +3732,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2122": {
+		'™': {
 			HorizAdvX: 1763,
-			Unicode:   "\u2122",
+			Unicode:   '™',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{846, 1331}},
@@ -3787,9 +3787,9 @@ var overlockregularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue000": {
+		'': {
 			HorizAdvX: 975,
-			Unicode:   "\ue000",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{0, 975}},

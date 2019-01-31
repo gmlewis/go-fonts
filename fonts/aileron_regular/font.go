@@ -11,16 +11,16 @@ func init() {
 }
 
 var aileron_regularFont = &fonts.Font{
-	// ID: "aileron_regular",
+	ID:               "aileron_regular",
 	HorizAdvX:        580,
 	UnitsPerEm:       1000,
 	Ascent:           770,
 	Descent:          -230,
 	MissingHorizAdvX: 500,
-	Glyphs: map[string]*fonts.Glyph{
-		"!": {
+	Glyphs: map[rune]*fonts.Glyph{
+		'!': {
 			HorizAdvX: 242,
-			Unicode:   "!",
+			Unicode:   '!',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 180}},
@@ -36,9 +36,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\"": {
+		'"': {
 			HorizAdvX: 339,
-			Unicode:   "\"",
+			Unicode:   '"',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{166, 485}},
@@ -53,9 +53,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"#": {
+		'#': {
 			HorizAdvX: 0,
-			Unicode:   "#",
+			Unicode:   '#',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{408, 415}},
@@ -95,9 +95,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"$": {
+		'$': {
 			HorizAdvX: 0,
-			Unicode:   "$",
+			Unicode:   '$',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{526, 181}},
@@ -132,9 +132,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"%": {
+		'%': {
 			HorizAdvX: 740,
-			Unicode:   "%",
+			Unicode:   '%',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{190, 0}},
@@ -168,9 +168,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"&": {
+		'&': {
 			HorizAdvX: 654,
-			Unicode:   "&",
+			Unicode:   '&',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{622, 385}},
@@ -204,9 +204,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"'": {
+		'\'': {
 			HorizAdvX: 176,
-			Unicode:   "'",
+			Unicode:   '\'',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 485}},
@@ -216,9 +216,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"(": {
+		'(': {
 			HorizAdvX: 315,
-			Unicode:   "(",
+			Unicode:   '(',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{221, 780}},
@@ -231,9 +231,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		")": {
+		')': {
 			HorizAdvX: 315,
-			Unicode:   ")",
+			Unicode:   ')',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{30, 780}},
@@ -246,9 +246,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"*": {
+		'*': {
 			HorizAdvX: 560,
-			Unicode:   "*",
+			Unicode:   '*',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{301, 296}},
@@ -269,9 +269,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"+": {
+		'+': {
 			HorizAdvX: 0,
-			Unicode:   "+",
+			Unicode:   '+',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{500, 287}},
@@ -290,9 +290,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		",": {
+		',': {
 			HorizAdvX: 220,
-			Unicode:   ",",
+			Unicode:   ',',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 90}},
@@ -304,9 +304,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"-": {
+		'-': {
 			HorizAdvX: 274,
-			Unicode:   "-",
+			Unicode:   '-',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 255}},
@@ -317,9 +317,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		".": {
+		'.': {
 			HorizAdvX: 220,
-			Unicode:   ".",
+			Unicode:   '.',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{101, 114}},
@@ -330,9 +330,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"/": {
+		'/': {
 			HorizAdvX: 303,
-			Unicode:   "/",
+			Unicode:   '/',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{57, -30}},
@@ -342,9 +342,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"0": {
+		'0': {
 			HorizAdvX: 0,
-			Unicode:   "0",
+			Unicode:   '0',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{290, 704}},
@@ -361,9 +361,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"1": {
+		'1': {
 			HorizAdvX: 0,
-			Unicode:   "1",
+			Unicode:   '1',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{406, 690}},
@@ -378,9 +378,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"2": {
+		'2': {
 			HorizAdvX: 0,
-			Unicode:   "2",
+			Unicode:   '2',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{185, 70}},
@@ -401,9 +401,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"3": {
+		'3': {
 			HorizAdvX: 0,
-			Unicode:   "3",
+			Unicode:   '3',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{396, 367}},
@@ -431,9 +431,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"4": {
+		'4': {
 			HorizAdvX: 0,
-			Unicode:   "4",
+			Unicode:   '4',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{548, 174}},
@@ -457,9 +457,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"5": {
+		'5': {
 			HorizAdvX: 0,
-			Unicode:   "5",
+			Unicode:   '5',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{307, 455}},
@@ -484,9 +484,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"6": {
+		'6': {
 			HorizAdvX: 0,
-			Unicode:   "6",
+			Unicode:   '6',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{302, 466}},
@@ -511,9 +511,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"7": {
+		'7': {
 			HorizAdvX: 0,
-			Unicode:   "7",
+			Unicode:   '7',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{538, 690}},
@@ -527,9 +527,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"8": {
+		'8': {
 			HorizAdvX: 0,
-			Unicode:   "8",
+			Unicode:   '8',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{404, 365}},
@@ -556,9 +556,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"9": {
+		'9': {
 			HorizAdvX: 0,
-			Unicode:   "9",
+			Unicode:   '9',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 704}},
@@ -583,9 +583,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		":": {
+		':': {
 			HorizAdvX: 220,
-			Unicode:   ":",
+			Unicode:   ':',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{101, 544}},
@@ -602,9 +602,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		";": {
+		';': {
 			HorizAdvX: 220,
-			Unicode:   ";",
+			Unicode:   ';',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{141, 98}},
@@ -622,9 +622,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"<": {
+		'<': {
 			HorizAdvX: 0,
-			Unicode:   "<",
+			Unicode:   '<',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{504, 432}},
@@ -638,9 +638,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"=": {
+		'=': {
 			HorizAdvX: 0,
-			Unicode:   "=",
+			Unicode:   '=',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{500, 387}},
@@ -657,9 +657,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		">": {
+		'>': {
 			HorizAdvX: 0,
-			Unicode:   ">",
+			Unicode:   '>',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{469, 299}},
@@ -672,9 +672,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"?": {
+		'?': {
 			HorizAdvX: 499,
-			Unicode:   "?",
+			Unicode:   '?',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{260, 704}},
@@ -697,9 +697,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"@": {
+		'@': {
 			HorizAdvX: 852,
-			Unicode:   "@",
+			Unicode:   '@',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{634, 465}},
@@ -736,9 +736,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"A": {
+		'A': {
 			HorizAdvX: 639,
-			Unicode:   "A",
+			Unicode:   'A',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 244}},
@@ -756,9 +756,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"B": {
+		'B': {
 			HorizAdvX: 627,
-			Unicode:   "B",
+			Unicode:   'B',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{446, 367}},
@@ -792,9 +792,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"C": {
+		'C': {
 			HorizAdvX: 699,
-			Unicode:   "C",
+			Unicode:   'C',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 704}},
@@ -815,9 +815,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"D": {
+		'D': {
 			HorizAdvX: 709,
-			Unicode:   "D",
+			Unicode:   'D',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{398, 686}},
@@ -840,9 +840,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"E": {
+		'E': {
 			HorizAdvX: 587,
-			Unicode:   "E",
+			Unicode:   'E',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -861,9 +861,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"F": {
+		'F': {
 			HorizAdvX: 567,
-			Unicode:   "F",
+			Unicode:   'F',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{186, 620}},
@@ -880,9 +880,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"G": {
+		'G': {
 			HorizAdvX: 710,
-			Unicode:   "G",
+			Unicode:   'G',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{399, 333}},
@@ -907,9 +907,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"H": {
+		'H': {
 			HorizAdvX: 730,
-			Unicode:   "H",
+			Unicode:   'H',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{652, 690}},
@@ -928,9 +928,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"I": {
+		'I': {
 			HorizAdvX: 264,
-			Unicode:   "I",
+			Unicode:   'I',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{186, 0}},
@@ -941,9 +941,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"J": {
+		'J': {
 			HorizAdvX: 544,
-			Unicode:   "J",
+			Unicode:   'J',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{488, 690}},
@@ -962,9 +962,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"K": {
+		'K': {
 			HorizAdvX: 609,
-			Unicode:   "K",
+			Unicode:   'K',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 353}},
@@ -982,9 +982,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"L": {
+		'L': {
 			HorizAdvX: 575,
-			Unicode:   "L",
+			Unicode:   'L',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -997,9 +997,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"M": {
+		'M': {
 			HorizAdvX: 866,
-			Unicode:   "M",
+			Unicode:   'M',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{788, 690}},
@@ -1023,9 +1023,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"N": {
+		'N': {
 			HorizAdvX: 718,
-			Unicode:   "N",
+			Unicode:   'N',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 0}},
@@ -1043,9 +1043,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"O": {
+		'O': {
 			HorizAdvX: 737,
-			Unicode:   "O",
+			Unicode:   'O',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 704}},
@@ -1062,9 +1062,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"P": {
+		'P': {
 			HorizAdvX: 598,
-			Unicode:   "P",
+			Unicode:   'P',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{404, 686}},
@@ -1089,9 +1089,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Q": {
+		'Q': {
 			HorizAdvX: 733,
-			Unicode:   "Q",
+			Unicode:   'Q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{573, 72}},
@@ -1113,9 +1113,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"R": {
+		'R': {
 			HorizAdvX: 619,
-			Unicode:   "R",
+			Unicode:   'R',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{554, 181}},
@@ -1145,9 +1145,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"S": {
+		'S': {
 			HorizAdvX: 585,
-			Unicode:   "S",
+			Unicode:   'S',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{314, 704}},
@@ -1168,9 +1168,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"T": {
+		'T': {
 			HorizAdvX: 612,
-			Unicode:   "T",
+			Unicode:   'T',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{612, 620}},
@@ -1185,9 +1185,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"U": {
+		'U': {
 			HorizAdvX: 682,
-			Unicode:   "U",
+			Unicode:   'U',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{612, 690}},
@@ -1208,9 +1208,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"V": {
+		'V': {
 			HorizAdvX: 622,
-			Unicode:   "V",
+			Unicode:   'V',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{386, 0}},
@@ -1223,9 +1223,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"W": {
+		'W': {
 			HorizAdvX: 952,
-			Unicode:   "W",
+			Unicode:   'W',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{945, 690}},
@@ -1245,9 +1245,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"X": {
+		'X': {
 			HorizAdvX: 625,
-			Unicode:   "X",
+			Unicode:   'X',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{522, 0}},
@@ -1266,9 +1266,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Y": {
+		'Y': {
 			HorizAdvX: 581,
-			Unicode:   "Y",
+			Unicode:   'Y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{349, 272}},
@@ -1283,9 +1283,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Z": {
+		'Z': {
 			HorizAdvX: 591,
-			Unicode:   "Z",
+			Unicode:   'Z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{569, 70}},
@@ -1302,9 +1302,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"[": {
+		'[': {
 			HorizAdvX: 307,
-			Unicode:   "[",
+			Unicode:   '[',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{261, 780}},
@@ -1319,9 +1319,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\\": {
+		'\\': {
 			HorizAdvX: 303,
-			Unicode:   "\\",
+			Unicode:   '\\',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{308, -30}},
@@ -1331,9 +1331,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"]": {
+		']': {
 			HorizAdvX: 295,
-			Unicode:   "]",
+			Unicode:   ']',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{197, -80}},
@@ -1348,9 +1348,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"^": {
+		'^': {
 			HorizAdvX: 0,
-			Unicode:   "^",
+			Unicode:   '^',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{432, 215}},
@@ -1364,9 +1364,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"_": {
+		'_': {
 			HorizAdvX: 500,
-			Unicode:   "_",
+			Unicode:   '_',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{450, -86}},
@@ -1377,9 +1377,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"`": {
+		'`': {
 			HorizAdvX: 300,
-			Unicode:   "`",
+			Unicode:   '`',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 580}},
@@ -1389,9 +1389,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a": {
+		'a': {
 			HorizAdvX: 531,
-			Unicode:   "a",
+			Unicode:   'a',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{378, 0}},
@@ -1421,9 +1421,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"b": {
+		'b': {
 			HorizAdvX: 611,
-			Unicode:   "b",
+			Unicode:   'b',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 544}},
@@ -1448,9 +1448,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c": {
+		'c': {
 			HorizAdvX: 529,
-			Unicode:   "c",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{279, 544}},
@@ -1467,9 +1467,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"d": {
+		'd': {
 			HorizAdvX: 615,
-			Unicode:   "d",
+			Unicode:   'd',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{537, 735}},
@@ -1494,9 +1494,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"e": {
+		'e': {
 			HorizAdvX: 549,
-			Unicode:   "e",
+			Unicode:   'e',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{509, 280}},
@@ -1517,9 +1517,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"f": {
+		'f': {
 			HorizAdvX: 290,
-			Unicode:   "f",
+			Unicode:   'f',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{167, 632}},
@@ -1543,9 +1543,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fi": {
+		'\ufb01': {
 			HorizAdvX: 522,
-			Unicode:   "fi",
+			Unicode:   '\ufb01',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{444, 526}},
@@ -1571,9 +1571,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fl": {
+		'\ufb02': {
 			HorizAdvX: 509,
-			Unicode:   "fl",
+			Unicode:   '\ufb02',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{419, 102}},
@@ -1605,9 +1605,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"g": {
+		'g': {
 			HorizAdvX: 615,
-			Unicode:   "g",
+			Unicode:   'g',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{537, 530}},
@@ -1640,9 +1640,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"h": {
+		'h': {
 			HorizAdvX: 593,
-			Unicode:   "h",
+			Unicode:   'h',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 389}},
@@ -1664,9 +1664,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"i": {
+		'i': {
 			HorizAdvX: 238,
-			Unicode:   "i",
+			Unicode:   'i',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 0}},
@@ -1683,9 +1683,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"j": {
+		'j': {
 			HorizAdvX: 233,
-			Unicode:   "j",
+			Unicode:   'j',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{155, 530}},
@@ -1707,9 +1707,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"k": {
+		'k': {
 			HorizAdvX: 522,
-			Unicode:   "k",
+			Unicode:   'k',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{403, 0}},
@@ -1728,9 +1728,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"l": {
+		'l': {
 			HorizAdvX: 247,
-			Unicode:   "l",
+			Unicode:   'l',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{156, 735}},
@@ -1746,9 +1746,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"m": {
+		'm': {
 			HorizAdvX: 855,
-			Unicode:   "m",
+			Unicode:   'm',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{779, 415}},
@@ -1779,9 +1779,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"n": {
+		'n': {
 			HorizAdvX: 593,
-			Unicode:   "n",
+			Unicode:   'n',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 389}},
@@ -1803,9 +1803,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"o": {
+		'o': {
 			HorizAdvX: 586,
-			Unicode:   "o",
+			Unicode:   'o',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 544}},
@@ -1822,9 +1822,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"p": {
+		'p': {
 			HorizAdvX: 611,
-			Unicode:   "p",
+			Unicode:   'p',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 544}},
@@ -1849,9 +1849,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"q": {
+		'q': {
 			HorizAdvX: 615,
-			Unicode:   "q",
+			Unicode:   'q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{537, 530}},
@@ -1876,9 +1876,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"r": {
+		'r': {
 			HorizAdvX: 330,
-			Unicode:   "r",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 542}},
@@ -1895,9 +1895,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"s": {
+		's': {
 			HorizAdvX: 459,
-			Unicode:   "s",
+			Unicode:   's',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{228, 544}},
@@ -1918,9 +1918,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"t": {
+		't': {
 			HorizAdvX: 313,
-			Unicode:   "t",
+			Unicode:   't',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{177, 460}},
@@ -1944,9 +1944,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"u": {
+		'u': {
 			HorizAdvX: 592,
-			Unicode:   "u",
+			Unicode:   'u',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{514, 530}},
@@ -1968,9 +1968,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"v": {
+		'v': {
 			HorizAdvX: 514,
-			Unicode:   "v",
+			Unicode:   'v',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{508, 530}},
@@ -1984,9 +1984,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"w": {
+		'w': {
 			HorizAdvX: 785,
-			Unicode:   "w",
+			Unicode:   'w',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{779, 530}},
@@ -2006,9 +2006,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"x": {
+		'x': {
 			HorizAdvX: 482,
-			Unicode:   "x",
+			Unicode:   'x',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 270}},
@@ -2026,9 +2026,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"y": {
+		'y': {
 			HorizAdvX: 513,
-			Unicode:   "y",
+			Unicode:   'y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{507, 530}},
@@ -2047,9 +2047,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"z": {
+		'z': {
 			HorizAdvX: 462,
-			Unicode:   "z",
+			Unicode:   'z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{433, 68}},
@@ -2066,9 +2066,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"{": {
+		'{': {
 			HorizAdvX: 303,
-			Unicode:   "{",
+			Unicode:   '{',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{270, 724}},
@@ -2098,9 +2098,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"|": {
+		'|': {
 			HorizAdvX: 250,
-			Unicode:   "|",
+			Unicode:   '|',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{154, -200}},
@@ -2111,9 +2111,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"}": {
+		'}': {
 			HorizAdvX: 303,
-			Unicode:   "}",
+			Unicode:   '}',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{239, 378}},
@@ -2143,9 +2143,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"~": {
+		'~': {
 			HorizAdvX: 0,
-			Unicode:   "~",
+			Unicode:   '~',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{446, 356}},
@@ -2162,9 +2162,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a1": {
+		'¡': {
 			HorizAdvX: 242,
-			Unicode:   "\u00a1",
+			Unicode:   '¡',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{82, 350}},
@@ -2180,9 +2180,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a2": {
+		'¢': {
 			HorizAdvX: 560,
-			Unicode:   "\u00a2",
+			Unicode:   '¢',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{319, 476}},
@@ -2209,9 +2209,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a3": {
+		'£': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a3",
+			Unicode:   '£',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{518, 70}},
@@ -2239,9 +2239,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a4": {
+		'¤': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a4",
+			Unicode:   '¤',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 301}},
@@ -2274,9 +2274,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a5": {
+		'¥': {
 			HorizAdvX: 0,
-			Unicode:   "\u00a5",
+			Unicode:   '¥',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 357}},
@@ -2307,9 +2307,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a6": {
+		'¦': {
 			HorizAdvX: 250,
-			Unicode:   "\u00a6",
+			Unicode:   '¦',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{154, 350}},
@@ -2326,9 +2326,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a7": {
+		'§': {
 			HorizAdvX: 560,
-			Unicode:   "\u00a7",
+			Unicode:   '§',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{531, 246}},
@@ -2361,9 +2361,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a8": {
+		'¨': {
 			HorizAdvX: 300,
-			Unicode:   "\u00a8",
+			Unicode:   '¨',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{77, 675}},
@@ -2380,9 +2380,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a9": {
+		'©': {
 			HorizAdvX: 838,
-			Unicode:   "\u00a9",
+			Unicode:   '©',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{419, 744}},
@@ -2411,9 +2411,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ab": {
+		'«': {
 			HorizAdvX: 557,
-			Unicode:   "\u00ab",
+			Unicode:   '«',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{330, 414}},
@@ -2434,9 +2434,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ac": {
+		'¬': {
 			HorizAdvX: 0,
-			Unicode:   "\u00ac",
+			Unicode:   '¬',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{469, 210}},
@@ -2449,9 +2449,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ae": {
+		'®': {
 			HorizAdvX: 508,
-			Unicode:   "\u00ae",
+			Unicode:   '®',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{254, 764}},
@@ -2492,9 +2492,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00af": {
+		'¯': {
 			HorizAdvX: 300,
-			Unicode:   "\u00af",
+			Unicode:   '¯',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{270, 604}},
@@ -2505,9 +2505,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b0": {
+		'°': {
 			HorizAdvX: 298,
-			Unicode:   "\u00b0",
+			Unicode:   '°',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 704}},
@@ -2524,9 +2524,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b1": {
+		'±': {
 			HorizAdvX: 0,
-			Unicode:   "\u00b1",
+			Unicode:   '±',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{319, 347}},
@@ -2551,9 +2551,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b4": {
+		'´': {
 			HorizAdvX: 300,
-			Unicode:   "\u00b4",
+			Unicode:   '´',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 580}},
@@ -2563,9 +2563,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b6": {
+		'¶': {
 			HorizAdvX: 566,
-			Unicode:   "\u00b6",
+			Unicode:   '¶',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{488, 690}},
@@ -2585,9 +2585,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b7": {
+		'·': {
 			HorizAdvX: 202,
-			Unicode:   "\u00b7",
+			Unicode:   '·',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{101, 374}},
@@ -2598,9 +2598,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b8": {
+		'¸': {
 			HorizAdvX: 300,
-			Unicode:   "\u00b8",
+			Unicode:   '¸',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{185, 9}},
@@ -2617,9 +2617,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bb": {
+		'»': {
 			HorizAdvX: 557,
-			Unicode:   "\u00bb",
+			Unicode:   '»',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{267, 248}},
@@ -2638,9 +2638,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bf": {
+		'¿': {
 			HorizAdvX: 491,
-			Unicode:   "\u00bf",
+			Unicode:   '¿',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, -174}},
@@ -2663,9 +2663,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c0": {
+		'À': {
 			HorizAdvX: 639,
-			Unicode:   "\u00c0",
+			Unicode:   'À',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 244}},
@@ -2689,9 +2689,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c1": {
+		'Á': {
 			HorizAdvX: 639,
-			Unicode:   "\u00c1",
+			Unicode:   'Á',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 244}},
@@ -2714,9 +2714,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c2": {
+		'Â': {
 			HorizAdvX: 639,
-			Unicode:   "\u00c2",
+			Unicode:   'Â',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 244}},
@@ -2742,9 +2742,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c3": {
+		'Ã': {
 			HorizAdvX: 639,
-			Unicode:   "\u00c3",
+			Unicode:   'Ã',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 244}},
@@ -2774,9 +2774,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c4": {
+		'Ä': {
 			HorizAdvX: 639,
-			Unicode:   "\u00c4",
+			Unicode:   'Ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 244}},
@@ -2806,9 +2806,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c5": {
+		'Å': {
 			HorizAdvX: 639,
-			Unicode:   "\u00c5",
+			Unicode:   'Å',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 244}},
@@ -2838,9 +2838,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c6": {
+		'Æ': {
 			HorizAdvX: 908,
-			Unicode:   "\u00c6",
+			Unicode:   'Æ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{880, 70}},
@@ -2868,9 +2868,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c7": {
+		'Ç': {
 			HorizAdvX: 699,
-			Unicode:   "\u00c7",
+			Unicode:   'Ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{563, 230}},
@@ -2899,9 +2899,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c8": {
+		'È': {
 			HorizAdvX: 587,
-			Unicode:   "\u00c8",
+			Unicode:   'È',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -2926,9 +2926,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c9": {
+		'É': {
 			HorizAdvX: 587,
-			Unicode:   "\u00c9",
+			Unicode:   'É',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -2952,9 +2952,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ca": {
+		'Ê': {
 			HorizAdvX: 587,
-			Unicode:   "\u00ca",
+			Unicode:   'Ê',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -2981,9 +2981,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cb": {
+		'Ë': {
 			HorizAdvX: 587,
-			Unicode:   "\u00cb",
+			Unicode:   'Ë',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -3014,9 +3014,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cc": {
+		'Ì': {
 			HorizAdvX: 264,
-			Unicode:   "\u00cc",
+			Unicode:   'Ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{186, 0}},
@@ -3032,9 +3032,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cd": {
+		'Í': {
 			HorizAdvX: 264,
-			Unicode:   "\u00cd",
+			Unicode:   'Í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{186, 0}},
@@ -3050,9 +3050,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ce": {
+		'Î': {
 			HorizAdvX: 264,
-			Unicode:   "\u00ce",
+			Unicode:   'Î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{100, 690}},
@@ -3071,9 +3071,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cf": {
+		'Ï': {
 			HorizAdvX: 264,
-			Unicode:   "\u00cf",
+			Unicode:   'Ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{186, 0}},
@@ -3096,9 +3096,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d0": {
+		'Ð': {
 			HorizAdvX: 701,
-			Unicode:   "\u00d0",
+			Unicode:   'Ð',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{390, 686}},
@@ -3129,9 +3129,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d1": {
+		'Ñ': {
 			HorizAdvX: 718,
-			Unicode:   "\u00d1",
+			Unicode:   'Ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 0}},
@@ -3161,9 +3161,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d2": {
+		'Ò': {
 			HorizAdvX: 737,
-			Unicode:   "\u00d2",
+			Unicode:   'Ò',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 704}},
@@ -3186,9 +3186,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d3": {
+		'Ó': {
 			HorizAdvX: 737,
-			Unicode:   "\u00d3",
+			Unicode:   'Ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 704}},
@@ -3210,9 +3210,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d4": {
+		'Ô': {
 			HorizAdvX: 737,
-			Unicode:   "\u00d4",
+			Unicode:   'Ô',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 704}},
@@ -3237,9 +3237,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d5": {
+		'Õ': {
 			HorizAdvX: 737,
-			Unicode:   "\u00d5",
+			Unicode:   'Õ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 704}},
@@ -3268,9 +3268,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d6": {
+		'Ö': {
 			HorizAdvX: 737,
-			Unicode:   "\u00d6",
+			Unicode:   'Ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 704}},
@@ -3299,9 +3299,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d7": {
+		'×': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d7",
+			Unicode:   '×',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{331, 314}},
@@ -3319,9 +3319,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d8": {
+		'Ø': {
 			HorizAdvX: 745,
-			Unicode:   "\u00d8",
+			Unicode:   'Ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{711, 638}},
@@ -3351,9 +3351,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d9": {
+		'Ù': {
 			HorizAdvX: 682,
-			Unicode:   "\u00d9",
+			Unicode:   'Ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{612, 690}},
@@ -3379,9 +3379,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00da": {
+		'Ú': {
 			HorizAdvX: 682,
-			Unicode:   "\u00da",
+			Unicode:   'Ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{612, 690}},
@@ -3407,9 +3407,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00db": {
+		'Û': {
 			HorizAdvX: 682,
-			Unicode:   "\u00db",
+			Unicode:   'Û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{612, 690}},
@@ -3438,9 +3438,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dc": {
+		'Ü': {
 			HorizAdvX: 682,
-			Unicode:   "\u00dc",
+			Unicode:   'Ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{612, 690}},
@@ -3473,9 +3473,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dd": {
+		'Ý': {
 			HorizAdvX: 581,
-			Unicode:   "\u00dd",
+			Unicode:   'Ý',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{349, 272}},
@@ -3495,9 +3495,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00de": {
+		'Þ': {
 			HorizAdvX: 630,
-			Unicode:   "\u00de",
+			Unicode:   'Þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{409, 598}},
@@ -3524,9 +3524,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00df": {
+		'ß': {
 			HorizAdvX: 608,
-			Unicode:   "\u00df",
+			Unicode:   'ß',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{306, 754}},
@@ -3555,9 +3555,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e0": {
+		'à': {
 			HorizAdvX: 531,
-			Unicode:   "\u00e0",
+			Unicode:   'à',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{378, 0}},
@@ -3593,9 +3593,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e1": {
+		'á': {
 			HorizAdvX: 531,
-			Unicode:   "\u00e1",
+			Unicode:   'á',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{378, 0}},
@@ -3630,9 +3630,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e2": {
+		'â': {
 			HorizAdvX: 531,
-			Unicode:   "\u00e2",
+			Unicode:   'â',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{378, 0}},
@@ -3670,9 +3670,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e3": {
+		'ã': {
 			HorizAdvX: 531,
-			Unicode:   "\u00e3",
+			Unicode:   'ã',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{378, 0}},
@@ -3714,9 +3714,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e4": {
+		'ä': {
 			HorizAdvX: 531,
-			Unicode:   "\u00e4",
+			Unicode:   'ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{378, 0}},
@@ -3758,9 +3758,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e5": {
+		'å': {
 			HorizAdvX: 531,
-			Unicode:   "\u00e5",
+			Unicode:   'å',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{378, 0}},
@@ -3802,9 +3802,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e6": {
+		'æ': {
 			HorizAdvX: 888,
-			Unicode:   "\u00e6",
+			Unicode:   'æ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{848, 280}},
@@ -3842,9 +3842,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e7": {
+		'ç': {
 			HorizAdvX: 529,
-			Unicode:   "\u00e7",
+			Unicode:   'ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{271, 52}},
@@ -3870,9 +3870,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e8": {
+		'è': {
 			HorizAdvX: 549,
-			Unicode:   "\u00e8",
+			Unicode:   'è',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{509, 280}},
@@ -3899,9 +3899,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e9": {
+		'é': {
 			HorizAdvX: 549,
-			Unicode:   "\u00e9",
+			Unicode:   'é',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{509, 280}},
@@ -3927,9 +3927,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ea": {
+		'ê': {
 			HorizAdvX: 549,
-			Unicode:   "\u00ea",
+			Unicode:   'ê',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{509, 280}},
@@ -3958,9 +3958,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00eb": {
+		'ë': {
 			HorizAdvX: 549,
-			Unicode:   "\u00eb",
+			Unicode:   'ë',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{509, 280}},
@@ -3993,9 +3993,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ec": {
+		'ì': {
 			HorizAdvX: 238,
-			Unicode:   "\u00ec",
+			Unicode:   'ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 0}},
@@ -4011,9 +4011,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ed": {
+		'í': {
 			HorizAdvX: 238,
-			Unicode:   "\u00ed",
+			Unicode:   'í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 0}},
@@ -4029,9 +4029,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ee": {
+		'î': {
 			HorizAdvX: 238,
-			Unicode:   "\u00ee",
+			Unicode:   'î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{74, 530}},
@@ -4050,9 +4050,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ef": {
+		'ï': {
 			HorizAdvX: 238,
-			Unicode:   "\u00ef",
+			Unicode:   'ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 0}},
@@ -4075,9 +4075,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f0": {
+		'ð': {
 			HorizAdvX: 585,
-			Unicode:   "\u00f0",
+			Unicode:   'ð',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{483, 662}},
@@ -4106,9 +4106,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f1": {
+		'ñ': {
 			HorizAdvX: 593,
-			Unicode:   "\u00f1",
+			Unicode:   'ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 389}},
@@ -4142,9 +4142,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f2": {
+		'ò': {
 			HorizAdvX: 586,
-			Unicode:   "\u00f2",
+			Unicode:   'ò',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 544}},
@@ -4167,9 +4167,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3": {
+		'ó': {
 			HorizAdvX: 586,
-			Unicode:   "\u00f3",
+			Unicode:   'ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 544}},
@@ -4191,9 +4191,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f4": {
+		'ô': {
 			HorizAdvX: 586,
-			Unicode:   "\u00f4",
+			Unicode:   'ô',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 544}},
@@ -4218,9 +4218,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f5": {
+		'õ': {
 			HorizAdvX: 586,
-			Unicode:   "\u00f5",
+			Unicode:   'õ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 544}},
@@ -4249,9 +4249,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f6": {
+		'ö': {
 			HorizAdvX: 586,
-			Unicode:   "\u00f6",
+			Unicode:   'ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 544}},
@@ -4280,9 +4280,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f7": {
+		'÷': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f7",
+			Unicode:   '÷',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{500, 291}},
@@ -4305,9 +4305,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f8": {
+		'ø': {
 			HorizAdvX: 620,
-			Unicode:   "\u00f8",
+			Unicode:   'ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{594, 508}},
@@ -4337,9 +4337,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f9": {
+		'ù': {
 			HorizAdvX: 592,
-			Unicode:   "\u00f9",
+			Unicode:   'ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{514, 530}},
@@ -4367,9 +4367,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fa": {
+		'ú': {
 			HorizAdvX: 592,
-			Unicode:   "\u00fa",
+			Unicode:   'ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{514, 530}},
@@ -4396,9 +4396,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fb": {
+		'û': {
 			HorizAdvX: 592,
-			Unicode:   "\u00fb",
+			Unicode:   'û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{514, 530}},
@@ -4428,9 +4428,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fc": {
+		'ü': {
 			HorizAdvX: 592,
-			Unicode:   "\u00fc",
+			Unicode:   'ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{514, 530}},
@@ -4464,9 +4464,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fd": {
+		'ý': {
 			HorizAdvX: 513,
-			Unicode:   "\u00fd",
+			Unicode:   'ý',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{507, 530}},
@@ -4490,9 +4490,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fe": {
+		'þ': {
 			HorizAdvX: 611,
-			Unicode:   "\u00fe",
+			Unicode:   'þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 544}},
@@ -4517,9 +4517,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ff": {
+		'ÿ': {
 			HorizAdvX: 513,
-			Unicode:   "\u00ff",
+			Unicode:   'ÿ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{507, 530}},
@@ -4550,9 +4550,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0100": {
+		'Ā': {
 			HorizAdvX: 639,
-			Unicode:   "\u0100",
+			Unicode:   'Ā',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 244}},
@@ -4576,9 +4576,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0101": {
+		'ā': {
 			HorizAdvX: 531,
-			Unicode:   "\u0101",
+			Unicode:   'ā',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{378, 0}},
@@ -4614,9 +4614,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0102": {
+		'Ă': {
 			HorizAdvX: 639,
-			Unicode:   "\u0102",
+			Unicode:   'Ă',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 244}},
@@ -4642,9 +4642,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0103": {
+		'ă': {
 			HorizAdvX: 531,
-			Unicode:   "\u0103",
+			Unicode:   'ă',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{378, 0}},
@@ -4682,9 +4682,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0104": {
+		'Ą': {
 			HorizAdvX: 639,
-			Unicode:   "\u0104",
+			Unicode:   'Ą',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{504, -119}},
@@ -4710,9 +4710,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0105": {
+		'ą': {
 			HorizAdvX: 531,
-			Unicode:   "\u0105",
+			Unicode:   'ą',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{347, -119}},
@@ -4749,9 +4749,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0106": {
+		'Ć': {
 			HorizAdvX: 699,
-			Unicode:   "\u0106",
+			Unicode:   'Ć',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 704}},
@@ -4777,9 +4777,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0107": {
+		'ć': {
 			HorizAdvX: 529,
-			Unicode:   "\u0107",
+			Unicode:   'ć',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{279, 544}},
@@ -4801,9 +4801,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010a": {
+		'Ċ': {
 			HorizAdvX: 699,
-			Unicode:   "\u010a",
+			Unicode:   'Ċ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 704}},
@@ -4830,9 +4830,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010b": {
+		'ċ': {
 			HorizAdvX: 529,
-			Unicode:   "\u010b",
+			Unicode:   'ċ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{279, 544}},
@@ -4855,9 +4855,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010c": {
+		'Č': {
 			HorizAdvX: 699,
-			Unicode:   "\u010c",
+			Unicode:   'Č',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{563, 230}},
@@ -4886,9 +4886,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010d": {
+		'č': {
 			HorizAdvX: 529,
-			Unicode:   "\u010d",
+			Unicode:   'č',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{271, 52}},
@@ -4914,9 +4914,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010e": {
+		'Ď': {
 			HorizAdvX: 709,
-			Unicode:   "\u010e",
+			Unicode:   'Ď',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{398, 686}},
@@ -4948,9 +4948,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010f": {
+		'ď': {
 			HorizAdvX: 615,
-			Unicode:   "\u010f",
+			Unicode:   'ď',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{451, 735}},
@@ -4982,9 +4982,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0110": {
+		'Đ': {
 			HorizAdvX: 701,
-			Unicode:   "\u0110",
+			Unicode:   'Đ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{390, 686}},
@@ -5015,9 +5015,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0111": {
+		'đ': {
 			HorizAdvX: 619,
-			Unicode:   "\u0111",
+			Unicode:   'đ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{581, 595}},
@@ -5050,9 +5050,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0112": {
+		'Ē': {
 			HorizAdvX: 587,
-			Unicode:   "\u0112",
+			Unicode:   'Ē',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -5077,9 +5077,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0113": {
+		'ē': {
 			HorizAdvX: 549,
-			Unicode:   "\u0113",
+			Unicode:   'ē',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{509, 280}},
@@ -5106,9 +5106,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0116": {
+		'Ė': {
 			HorizAdvX: 587,
-			Unicode:   "\u0116",
+			Unicode:   'Ė',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -5133,9 +5133,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0117": {
+		'ė': {
 			HorizAdvX: 549,
-			Unicode:   "\u0117",
+			Unicode:   'ė',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{509, 280}},
@@ -5162,9 +5162,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0118": {
+		'Ę': {
 			HorizAdvX: 587,
-			Unicode:   "\u0118",
+			Unicode:   'Ę',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{510, -169}},
@@ -5191,9 +5191,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0119": {
+		'ę': {
 			HorizAdvX: 549,
-			Unicode:   "\u0119",
+			Unicode:   'ę',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{509, 280}},
@@ -5222,9 +5222,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011a": {
+		'Ě': {
 			HorizAdvX: 587,
-			Unicode:   "\u011a",
+			Unicode:   'Ě',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -5252,9 +5252,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011b": {
+		'ě': {
 			HorizAdvX: 549,
-			Unicode:   "\u011b",
+			Unicode:   'ě',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{509, 280}},
@@ -5284,9 +5284,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011e": {
+		'Ğ': {
 			HorizAdvX: 710,
-			Unicode:   "\u011e",
+			Unicode:   'Ğ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{399, 333}},
@@ -5319,9 +5319,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011f": {
+		'ğ': {
 			HorizAdvX: 615,
-			Unicode:   "\u011f",
+			Unicode:   'ğ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{537, 530}},
@@ -5362,9 +5362,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0120": {
+		'Ġ': {
 			HorizAdvX: 710,
-			Unicode:   "\u0120",
+			Unicode:   'Ġ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{399, 333}},
@@ -5395,9 +5395,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0121": {
+		'ġ': {
 			HorizAdvX: 615,
-			Unicode:   "\u0121",
+			Unicode:   'ġ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{537, 530}},
@@ -5436,9 +5436,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0122": {
+		'Ģ': {
 			HorizAdvX: 710,
-			Unicode:   "\u0122",
+			Unicode:   'Ģ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{399, 333}},
@@ -5469,9 +5469,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0123": {
+		'ģ': {
 			HorizAdvX: 615,
-			Unicode:   "\u0123",
+			Unicode:   'ģ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{537, 530}},
@@ -5510,9 +5510,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0126": {
+		'Ħ': {
 			HorizAdvX: 730,
-			Unicode:   "\u0126",
+			Unicode:   'Ħ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{692, 502}},
@@ -5545,9 +5545,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0127": {
+		'ħ': {
 			HorizAdvX: 609,
-			Unicode:   "\u0127",
+			Unicode:   'ħ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{536, 389}},
@@ -5577,9 +5577,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012a": {
+		'Ī': {
 			HorizAdvX: 264,
-			Unicode:   "\u012a",
+			Unicode:   'Ī',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{186, 0}},
@@ -5596,9 +5596,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012b": {
+		'ī': {
 			HorizAdvX: 238,
-			Unicode:   "\u012b",
+			Unicode:   'ī',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 0}},
@@ -5615,9 +5615,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012e": {
+		'Į': {
 			HorizAdvX: 264,
-			Unicode:   "\u012e",
+			Unicode:   'Į',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{186, 0}},
@@ -5636,9 +5636,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012f": {
+		'į': {
 			HorizAdvX: 238,
-			Unicode:   "\u012f",
+			Unicode:   'į',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{74, 530}},
@@ -5662,9 +5662,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0130": {
+		'İ': {
 			HorizAdvX: 264,
-			Unicode:   "\u0130",
+			Unicode:   'İ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{186, 0}},
@@ -5681,9 +5681,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0131": {
+		'ı': {
 			HorizAdvX: 238,
-			Unicode:   "\u0131",
+			Unicode:   'ı',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 0}},
@@ -5694,9 +5694,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0132": {
+		'Ĳ': {
 			HorizAdvX: 808,
-			Unicode:   "\u0132",
+			Unicode:   'Ĳ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{752, 690}},
@@ -5721,9 +5721,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0133": {
+		'ĳ': {
 			HorizAdvX: 471,
-			Unicode:   "\u0133",
+			Unicode:   'ĳ',
 			GerberLP:  "dddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{393, 530}},
@@ -5757,9 +5757,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0136": {
+		'Ķ': {
 			HorizAdvX: 609,
-			Unicode:   "\u0136",
+			Unicode:   'Ķ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 353}},
@@ -5783,9 +5783,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0137": {
+		'ķ': {
 			HorizAdvX: 522,
-			Unicode:   "\u0137",
+			Unicode:   'ķ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 0}},
@@ -5809,9 +5809,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0139": {
+		'Ĺ': {
 			HorizAdvX: 575,
-			Unicode:   "\u0139",
+			Unicode:   'Ĺ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -5829,9 +5829,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013a": {
+		'ĺ': {
 			HorizAdvX: 247,
-			Unicode:   "\u013a",
+			Unicode:   'ĺ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{156, 735}},
@@ -5852,9 +5852,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013b": {
+		'Ļ': {
 			HorizAdvX: 575,
-			Unicode:   "\u013b",
+			Unicode:   'Ļ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -5873,9 +5873,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013c": {
+		'ļ': {
 			HorizAdvX: 247,
-			Unicode:   "\u013c",
+			Unicode:   'ļ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{156, 735}},
@@ -5898,9 +5898,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013d": {
+		'Ľ': {
 			HorizAdvX: 575,
-			Unicode:   "\u013d",
+			Unicode:   'Ľ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -5913,9 +5913,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013e": {
+		'ľ': {
 			HorizAdvX: 247,
-			Unicode:   "\u013e",
+			Unicode:   'ľ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{156, 735}},
@@ -5931,9 +5931,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013f": {
+		'Ŀ': {
 			HorizAdvX: 575,
-			Unicode:   "\u013f",
+			Unicode:   'Ŀ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{559, 70}},
@@ -5952,9 +5952,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0140": {
+		'ŀ': {
 			HorizAdvX: 350,
-			Unicode:   "\u0140",
+			Unicode:   'ŀ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{156, 735}},
@@ -5976,9 +5976,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0141": {
+		'Ł': {
 			HorizAdvX: 597,
-			Unicode:   "\u0141",
+			Unicode:   'Ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{581, 70}},
@@ -5999,9 +5999,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0142": {
+		'ł': {
 			HorizAdvX: 284,
-			Unicode:   "\u0142",
+			Unicode:   'ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{184, 102}},
@@ -6025,9 +6025,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0143": {
+		'Ń': {
 			HorizAdvX: 718,
-			Unicode:   "\u0143",
+			Unicode:   'Ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 0}},
@@ -6050,9 +6050,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0144": {
+		'ń': {
 			HorizAdvX: 593,
-			Unicode:   "\u0144",
+			Unicode:   'ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 389}},
@@ -6080,9 +6080,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0145": {
+		'Ņ': {
 			HorizAdvX: 718,
-			Unicode:   "\u0145",
+			Unicode:   'Ņ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 0}},
@@ -6107,9 +6107,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0146": {
+		'ņ': {
 			HorizAdvX: 593,
-			Unicode:   "\u0146",
+			Unicode:   'ņ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 389}},
@@ -6138,9 +6138,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0147": {
+		'Ň': {
 			HorizAdvX: 718,
-			Unicode:   "\u0147",
+			Unicode:   'Ň',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{508, 0}},
@@ -6168,9 +6168,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0148": {
+		'ň': {
 			HorizAdvX: 593,
-			Unicode:   "\u0148",
+			Unicode:   'ň',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 389}},
@@ -6200,9 +6200,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014a": {
+		'Ŋ': {
 			HorizAdvX: 718,
-			Unicode:   "\u014a",
+			Unicode:   'Ŋ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 690}},
@@ -6225,9 +6225,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014b": {
+		'ŋ': {
 			HorizAdvX: 593,
-			Unicode:   "\u014b",
+			Unicode:   'ŋ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 389}},
@@ -6253,9 +6253,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014c": {
+		'Ō': {
 			HorizAdvX: 737,
-			Unicode:   "\u014c",
+			Unicode:   'Ō',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 704}},
@@ -6278,9 +6278,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014d": {
+		'ō': {
 			HorizAdvX: 586,
-			Unicode:   "\u014d",
+			Unicode:   'ō',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 544}},
@@ -6303,9 +6303,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0150": {
+		'Ő': {
 			HorizAdvX: 737,
-			Unicode:   "\u0150",
+			Unicode:   'Ő',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 704}},
@@ -6333,9 +6333,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0151": {
+		'ő': {
 			HorizAdvX: 586,
-			Unicode:   "\u0151",
+			Unicode:   'ő',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 544}},
@@ -6363,9 +6363,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0152": {
+		'Œ': {
 			HorizAdvX: 1090,
-			Unicode:   "\u0152",
+			Unicode:   'Œ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1062, 70}},
@@ -6397,9 +6397,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0153": {
+		'œ': {
 			HorizAdvX: 981,
-			Unicode:   "\u0153",
+			Unicode:   'œ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{941, 280}},
@@ -6430,9 +6430,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0154": {
+		'Ŕ': {
 			HorizAdvX: 619,
-			Unicode:   "\u0154",
+			Unicode:   'Ŕ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{554, 181}},
@@ -6467,9 +6467,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0155": {
+		'ŕ': {
 			HorizAdvX: 330,
-			Unicode:   "\u0155",
+			Unicode:   'ŕ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 542}},
@@ -6491,9 +6491,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0156": {
+		'Ŗ': {
 			HorizAdvX: 619,
-			Unicode:   "\u0156",
+			Unicode:   'Ŗ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{554, 181}},
@@ -6529,9 +6529,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0157": {
+		'ŗ': {
 			HorizAdvX: 330,
-			Unicode:   "\u0157",
+			Unicode:   'ŗ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 542}},
@@ -6554,9 +6554,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0158": {
+		'Ř': {
 			HorizAdvX: 619,
-			Unicode:   "\u0158",
+			Unicode:   'Ř',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{554, 181}},
@@ -6595,9 +6595,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0159": {
+		'ř': {
 			HorizAdvX: 330,
-			Unicode:   "\u0159",
+			Unicode:   'ř',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 542}},
@@ -6623,9 +6623,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015a": {
+		'Ś': {
 			HorizAdvX: 585,
-			Unicode:   "\u015a",
+			Unicode:   'Ś',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{314, 704}},
@@ -6651,9 +6651,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015b": {
+		'ś': {
 			HorizAdvX: 459,
-			Unicode:   "\u015b",
+			Unicode:   'ś',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{228, 544}},
@@ -6680,9 +6680,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015e": {
+		'Ş': {
 			HorizAdvX: 585,
-			Unicode:   "\u015e",
+			Unicode:   'Ş',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{552, 185}},
@@ -6712,9 +6712,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015f": {
+		'ş': {
 			HorizAdvX: 459,
-			Unicode:   "\u015f",
+			Unicode:   'ş',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{429, 136}},
@@ -6744,9 +6744,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0160": {
+		'Š': {
 			HorizAdvX: 585,
-			Unicode:   "\u0160",
+			Unicode:   'Š',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{324, 399}},
@@ -6776,9 +6776,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0161": {
+		'š': {
 			HorizAdvX: 459,
-			Unicode:   "\u0161",
+			Unicode:   'š',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{249, 306}},
@@ -6807,9 +6807,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0162": {
+		'Ţ': {
 			HorizAdvX: 612,
-			Unicode:   "\u0162",
+			Unicode:   'Ţ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{353, 0}},
@@ -6834,9 +6834,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0163": {
+		'ţ': {
 			HorizAdvX: 313,
-			Unicode:   "\u0163",
+			Unicode:   'ţ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{177, 460}},
@@ -6869,9 +6869,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0164": {
+		'Ť': {
 			HorizAdvX: 612,
-			Unicode:   "\u0164",
+			Unicode:   'Ť',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{612, 620}},
@@ -6895,9 +6895,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0165": {
+		'ť': {
 			HorizAdvX: 303,
-			Unicode:   "\u0165",
+			Unicode:   'ť',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{177, 526}},
@@ -6928,9 +6928,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0166": {
+		'Ŧ': {
 			HorizAdvX: 612,
-			Unicode:   "\u0166",
+			Unicode:   'Ŧ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{366, 620}},
@@ -6953,9 +6953,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0167": {
+		'ŧ': {
 			HorizAdvX: 313,
-			Unicode:   "\u0167",
+			Unicode:   'ŧ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{177, 460}},
@@ -6987,9 +6987,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016a": {
+		'Ū': {
 			HorizAdvX: 682,
-			Unicode:   "\u016a",
+			Unicode:   'Ū',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{612, 690}},
@@ -7016,9 +7016,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016b": {
+		'ū': {
 			HorizAdvX: 592,
-			Unicode:   "\u016b",
+			Unicode:   'ū',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{514, 530}},
@@ -7046,9 +7046,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016e": {
+		'Ů': {
 			HorizAdvX: 682,
-			Unicode:   "\u016e",
+			Unicode:   'Ů',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{612, 690}},
@@ -7081,9 +7081,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016f": {
+		'ů': {
 			HorizAdvX: 592,
-			Unicode:   "\u016f",
+			Unicode:   'ů',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{514, 530}},
@@ -7117,9 +7117,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0170": {
+		'Ű': {
 			HorizAdvX: 682,
-			Unicode:   "\u0170",
+			Unicode:   'Ű',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{612, 690}},
@@ -7150,9 +7150,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0171": {
+		'ű': {
 			HorizAdvX: 592,
-			Unicode:   "\u0171",
+			Unicode:   'ű',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{514, 530}},
@@ -7185,9 +7185,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0172": {
+		'Ų': {
 			HorizAdvX: 682,
-			Unicode:   "\u0172",
+			Unicode:   'Ų',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{612, 690}},
@@ -7215,9 +7215,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0173": {
+		'ų': {
 			HorizAdvX: 592,
-			Unicode:   "\u0173",
+			Unicode:   'ų',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{514, 0}},
@@ -7246,9 +7246,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0174": {
+		'Ŵ': {
 			HorizAdvX: 952,
-			Unicode:   "\u0174",
+			Unicode:   'Ŵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{945, 690}},
@@ -7276,9 +7276,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0175": {
+		'ŵ': {
 			HorizAdvX: 785,
-			Unicode:   "\u0175",
+			Unicode:   'ŵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{779, 530}},
@@ -7306,9 +7306,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0176": {
+		'Ŷ': {
 			HorizAdvX: 581,
-			Unicode:   "\u0176",
+			Unicode:   'Ŷ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{349, 272}},
@@ -7331,9 +7331,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0177": {
+		'ŷ': {
 			HorizAdvX: 513,
-			Unicode:   "\u0177",
+			Unicode:   'ŷ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{507, 530}},
@@ -7360,9 +7360,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0178": {
+		'Ÿ': {
 			HorizAdvX: 581,
-			Unicode:   "\u0178",
+			Unicode:   'Ÿ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{349, 272}},
@@ -7389,9 +7389,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0179": {
+		'Ź': {
 			HorizAdvX: 591,
-			Unicode:   "\u0179",
+			Unicode:   'Ź',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{569, 70}},
@@ -7413,9 +7413,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017a": {
+		'ź': {
 			HorizAdvX: 462,
-			Unicode:   "\u017a",
+			Unicode:   'ź',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{433, 68}},
@@ -7437,9 +7437,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017b": {
+		'Ż': {
 			HorizAdvX: 591,
-			Unicode:   "\u017b",
+			Unicode:   'Ż',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{569, 70}},
@@ -7462,9 +7462,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017c": {
+		'ż': {
 			HorizAdvX: 462,
-			Unicode:   "\u017c",
+			Unicode:   'ż',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{433, 68}},
@@ -7487,9 +7487,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017d": {
+		'Ž': {
 			HorizAdvX: 591,
-			Unicode:   "\u017d",
+			Unicode:   'Ž',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{569, 70}},
@@ -7515,9 +7515,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017e": {
+		'ž': {
 			HorizAdvX: 462,
-			Unicode:   "\u017e",
+			Unicode:   'ž',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{433, 68}},
@@ -7543,9 +7543,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0218": {
+		'Ș': {
 			HorizAdvX: 585,
-			Unicode:   "\u0218",
+			Unicode:   'Ș',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{314, 704}},
@@ -7573,9 +7573,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0219": {
+		'ș': {
 			HorizAdvX: 459,
-			Unicode:   "\u0219",
+			Unicode:   'ș',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{228, 544}},
@@ -7603,9 +7603,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021a": {
+		'Ț': {
 			HorizAdvX: 612,
-			Unicode:   "\u021a",
+			Unicode:   'Ț',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{612, 690}},
@@ -7626,9 +7626,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021b": {
+		'ț': {
 			HorizAdvX: 313,
-			Unicode:   "\u021b",
+			Unicode:   'ț',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{177, 460}},
@@ -7658,9 +7658,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c6": {
+		'ˆ': {
 			HorizAdvX: 300,
-			Unicode:   "\u02c6",
+			Unicode:   'ˆ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{183, 580}},
@@ -7674,9 +7674,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c7": {
+		'ˇ': {
 			HorizAdvX: 300,
-			Unicode:   "\u02c7",
+			Unicode:   'ˇ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{247, 690}},
@@ -7690,9 +7690,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d8": {
+		'˘': {
 			HorizAdvX: 300,
-			Unicode:   "\u02d8",
+			Unicode:   '˘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 690}},
@@ -7705,9 +7705,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d9": {
+		'˙': {
 			HorizAdvX: 300,
-			Unicode:   "\u02d9",
+			Unicode:   '˙',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{150, 704}},
@@ -7718,9 +7718,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02da": {
+		'˚': {
 			HorizAdvX: 300,
-			Unicode:   "\u02da",
+			Unicode:   '˚',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{150, 733}},
@@ -7737,9 +7737,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02db": {
+		'˛': {
 			HorizAdvX: 300,
-			Unicode:   "\u02db",
+			Unicode:   '˛',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{150, 11}},
@@ -7754,9 +7754,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dc": {
+		'˜': {
 			HorizAdvX: 300,
-			Unicode:   "\u02dc",
+			Unicode:   '˜',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{96, 671}},
@@ -7773,9 +7773,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dd": {
+		'˝': {
 			HorizAdvX: 300,
-			Unicode:   "\u02dd",
+			Unicode:   '˝',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 580}},
@@ -7790,9 +7790,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0326": {
+		'̦': {
 			HorizAdvX: 0,
-			Unicode:   "\u0326",
+			Unicode:   '̦',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, -63}},
@@ -7804,9 +7804,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e80": {
+		'Ẁ': {
 			HorizAdvX: 952,
-			Unicode:   "\u1e80",
+			Unicode:   'Ẁ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{945, 690}},
@@ -7832,9 +7832,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e81": {
+		'ẁ': {
 			HorizAdvX: 785,
-			Unicode:   "\u1e81",
+			Unicode:   'ẁ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{779, 530}},
@@ -7860,9 +7860,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e82": {
+		'Ẃ': {
 			HorizAdvX: 952,
-			Unicode:   "\u1e82",
+			Unicode:   'Ẃ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{945, 690}},
@@ -7887,9 +7887,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e83": {
+		'ẃ': {
 			HorizAdvX: 785,
-			Unicode:   "\u1e83",
+			Unicode:   'ẃ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{779, 530}},
@@ -7914,9 +7914,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e84": {
+		'Ẅ': {
 			HorizAdvX: 952,
-			Unicode:   "\u1e84",
+			Unicode:   'Ẅ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{945, 690}},
@@ -7948,9 +7948,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e85": {
+		'ẅ': {
 			HorizAdvX: 785,
-			Unicode:   "\u1e85",
+			Unicode:   'ẅ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{779, 530}},
@@ -7982,9 +7982,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef2": {
+		'Ỳ': {
 			HorizAdvX: 581,
-			Unicode:   "\u1ef2",
+			Unicode:   'Ỳ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{349, 272}},
@@ -8005,9 +8005,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef3": {
+		'ỳ': {
 			HorizAdvX: 513,
-			Unicode:   "\u1ef3",
+			Unicode:   'ỳ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{507, 530}},
@@ -8032,9 +8032,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2013": {
+		'–': {
 			HorizAdvX: 500,
-			Unicode:   "\u2013",
+			Unicode:   '–',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{430, 264}},
@@ -8045,9 +8045,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2014": {
+		'—': {
 			HorizAdvX: 1000,
-			Unicode:   "\u2014",
+			Unicode:   '—',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{930, 264}},
@@ -8058,9 +8058,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2018": {
+		'‘': {
 			HorizAdvX: 247,
-			Unicode:   "\u2018",
+			Unicode:   '‘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{54, 495}},
@@ -8072,9 +8072,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2019": {
+		'’': {
 			HorizAdvX: 247,
-			Unicode:   "\u2019",
+			Unicode:   '’',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{193, 725}},
@@ -8086,9 +8086,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201a": {
+		'‚': {
 			HorizAdvX: 220,
-			Unicode:   "\u201a",
+			Unicode:   '‚',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 90}},
@@ -8100,9 +8100,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201c": {
+		'“': {
 			HorizAdvX: 417,
-			Unicode:   "\u201c",
+			Unicode:   '“',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{54, 495}},
@@ -8121,9 +8121,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201d": {
+		'”': {
 			HorizAdvX: 417,
-			Unicode:   "\u201d",
+			Unicode:   '”',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{193, 725}},
@@ -8142,9 +8142,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201e": {
+		'„': {
 			HorizAdvX: 390,
-			Unicode:   "\u201e",
+			Unicode:   '„',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 90}},
@@ -8163,9 +8163,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2020": {
+		'†': {
 			HorizAdvX: 550,
-			Unicode:   "\u2020",
+			Unicode:   '†',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{494, 374}},
@@ -8184,9 +8184,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2021": {
+		'‡': {
 			HorizAdvX: 550,
-			Unicode:   "\u2021",
+			Unicode:   '‡',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{314, 382}},
@@ -8212,9 +8212,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2022": {
+		'•': {
 			HorizAdvX: 364,
-			Unicode:   "\u2022",
+			Unicode:   '•',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 409}},
@@ -8225,9 +8225,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2026": {
+		'…': {
 			HorizAdvX: 620,
-			Unicode:   "\u2026",
+			Unicode:   '…',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{101, 114}},
@@ -8250,9 +8250,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2030": {
+		'‰': {
 			HorizAdvX: 1077,
-			Unicode:   "\u2030",
+			Unicode:   '‰',
 			GerberLP:  "ddddccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{638, 690}},
@@ -8299,9 +8299,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2039": {
+		'‹': {
 			HorizAdvX: 387,
-			Unicode:   "\u2039",
+			Unicode:   '‹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{330, 414}},
@@ -8314,9 +8314,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u203a": {
+		'›': {
 			HorizAdvX: 387,
-			Unicode:   "\u203a",
+			Unicode:   '›',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{267, 248}},
@@ -8328,9 +8328,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2044": {
+		'⁄': {
 			HorizAdvX: 235,
-			Unicode:   "\u2044",
+			Unicode:   '⁄',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-63, 0}},
@@ -8340,9 +8340,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20ac": {
+		'€': {
 			HorizAdvX: 0,
-			Unicode:   "\u20ac",
+			Unicode:   '€',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 260}},
@@ -8374,9 +8374,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2122": {
+		'™': {
 			HorizAdvX: 539,
-			Unicode:   "\u2122",
+			Unicode:   '™',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{476, 659}},
@@ -8406,9 +8406,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2202": {
+		'∂': {
 			HorizAdvX: 0,
-			Unicode:   "\u2202",
+			Unicode:   '∂',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{261, 758}},
@@ -8430,9 +8430,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2205": {
+		'∅': {
 			HorizAdvX: 838,
-			Unicode:   "\u2205",
+			Unicode:   '∅',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{793, 688}},
@@ -8462,9 +8462,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u220f": {
+		'∏': {
 			HorizAdvX: 0,
-			Unicode:   "\u220f",
+			Unicode:   '∏',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{549, 620}},
@@ -8483,9 +8483,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2211": {
+		'∑': {
 			HorizAdvX: 0,
-			Unicode:   "\u2211",
+			Unicode:   '∑',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{536, -40}},
@@ -8504,9 +8504,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2212": {
+		'−': {
 			HorizAdvX: 0,
-			Unicode:   "\u2212",
+			Unicode:   '−',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{500, 291}},
@@ -8517,9 +8517,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u221a": {
+		'√': {
 			HorizAdvX: 0,
-			Unicode:   "\u221a",
+			Unicode:   '√',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{549, 780}},
@@ -8535,9 +8535,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u221e": {
+		'∞': {
 			HorizAdvX: 986,
-			Unicode:   "\u221e",
+			Unicode:   '∞',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{713, 544}},
@@ -8564,9 +8564,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u222b": {
+		'∫': {
 			HorizAdvX: 0,
-			Unicode:   "\u222b",
+			Unicode:   '∫',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{339, 754}},
@@ -8587,9 +8587,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2248": {
+		'≈': {
 			HorizAdvX: 0,
-			Unicode:   "\u2248",
+			Unicode:   '≈',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{186, 438}},
@@ -8618,9 +8618,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2260": {
+		'≠': {
 			HorizAdvX: 0,
-			Unicode:   "\u2260",
+			Unicode:   '≠',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{366, 387}},
@@ -8647,9 +8647,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2264": {
+		'≤': {
 			HorizAdvX: 0,
-			Unicode:   "\u2264",
+			Unicode:   '≤',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{510, 445}},
@@ -8669,9 +8669,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2265": {
+		'≥': {
 			HorizAdvX: 0,
-			Unicode:   "\u2265",
+			Unicode:   '≥',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{490, 342}},
@@ -8690,9 +8690,9 @@ var aileron_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u25ca": {
+		'◊': {
 			HorizAdvX: 512,
-			Unicode:   "\u25ca",
+			Unicode:   '◊',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 345}},

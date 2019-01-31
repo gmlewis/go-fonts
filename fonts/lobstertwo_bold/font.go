@@ -11,16 +11,16 @@ func init() {
 }
 
 var lobstertwo_boldFont = &fonts.Font{
-	// ID: "lobstertwo_bold",
+	ID:               "lobstertwo_bold",
 	HorizAdvX:        505,
 	UnitsPerEm:       1000,
 	Ascent:           800,
 	Descent:          -200,
 	MissingHorizAdvX: 385,
-	Glyphs: map[string]*fonts.Glyph{
-		"!": {
+	Glyphs: map[rune]*fonts.Glyph{
+		'!': {
 			HorizAdvX: 266,
-			Unicode:   "!",
+			Unicode:   '!',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{176, 231}},
@@ -36,9 +36,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\"": {
+		'"': {
 			HorizAdvX: 349,
-			Unicode:   "\"",
+			Unicode:   '"',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{41, 561}},
@@ -55,9 +55,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"#": {
+		'#': {
 			HorizAdvX: 557,
-			Unicode:   "#",
+			Unicode:   '#',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{336, -27}},
@@ -98,9 +98,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"$": {
+		'$': {
 			HorizAdvX: 385,
-			Unicode:   "$",
+			Unicode:   '$',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{335, 506}},
@@ -139,9 +139,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"%": {
+		'%': {
 			HorizAdvX: 636,
-			Unicode:   "%",
+			Unicode:   '%',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{518, 750}},
@@ -176,9 +176,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"&": {
+		'&': {
 			HorizAdvX: 670,
-			Unicode:   "&",
+			Unicode:   '&',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{656, 413}},
@@ -209,9 +209,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"'": {
+		'\'': {
 			HorizAdvX: 192,
-			Unicode:   "'",
+			Unicode:   '\'',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{41, 561}},
@@ -222,9 +222,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"(": {
+		'(': {
 			HorizAdvX: 279,
-			Unicode:   "(",
+			Unicode:   '(',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{245, 750}},
@@ -237,9 +237,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		")": {
+		')': {
 			HorizAdvX: 280,
-			Unicode:   ")",
+			Unicode:   ')',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{34, -250}},
@@ -252,9 +252,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"*": {
+		'*': {
 			HorizAdvX: 400,
-			Unicode:   "*",
+			Unicode:   '*',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{166, 752}},
@@ -279,9 +279,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"+": {
+		'+': {
 			HorizAdvX: 443,
-			Unicode:   "+",
+			Unicode:   '+',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{278, 439}},
@@ -300,9 +300,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		",": {
+		',': {
 			HorizAdvX: 234,
-			Unicode:   ",",
+			Unicode:   ',',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{39, 89}},
@@ -315,9 +315,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"-": {
+		'-': {
 			HorizAdvX: 319,
-			Unicode:   "-",
+			Unicode:   '-',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{260, 301}},
@@ -328,9 +328,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		".": {
+		'.': {
 			HorizAdvX: 237,
-			Unicode:   ".",
+			Unicode:   '.',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{39, 79}},
@@ -341,9 +341,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"/": {
+		'/': {
 			HorizAdvX: 526,
-			Unicode:   "/",
+			Unicode:   '/',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{512, 750}},
@@ -354,9 +354,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"0": {
+		'0': {
 			HorizAdvX: 597,
-			Unicode:   "0",
+			Unicode:   '0',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{309, 750}},
@@ -373,9 +373,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"1": {
+		'1': {
 			HorizAdvX: 333,
-			Unicode:   "1",
+			Unicode:   '1',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{256, 748}},
@@ -388,9 +388,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"2": {
+		'2': {
 			HorizAdvX: 510,
-			Unicode:   "2",
+			Unicode:   '2',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{147, 122}},
@@ -414,9 +414,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"3": {
+		'3': {
 			HorizAdvX: 535,
-			Unicode:   "3",
+			Unicode:   '3',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{218, 257}},
@@ -441,9 +441,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"4": {
+		'4': {
 			HorizAdvX: 513,
-			Unicode:   "4",
+			Unicode:   '4',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{269, 270}},
@@ -465,9 +465,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"5": {
+		'5': {
 			HorizAdvX: 518,
-			Unicode:   "5",
+			Unicode:   '5',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{425, 749}},
@@ -492,9 +492,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"6": {
+		'6': {
 			HorizAdvX: 552,
-			Unicode:   "6",
+			Unicode:   '6',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{231, 329}},
@@ -517,9 +517,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"7": {
+		'7': {
 			HorizAdvX: 473,
-			Unicode:   "7",
+			Unicode:   '7',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{472, 733}},
@@ -537,9 +537,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"8": {
+		'8': {
 			HorizAdvX: 551,
-			Unicode:   "8",
+			Unicode:   '8',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{281, -6}},
@@ -566,9 +566,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"9": {
+		'9': {
 			HorizAdvX: 551,
-			Unicode:   "9",
+			Unicode:   '9',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{320, 445}},
@@ -591,9 +591,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		":": {
+		':': {
 			HorizAdvX: 271,
-			Unicode:   ":",
+			Unicode:   ':',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{56, 135}},
@@ -610,9 +610,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		";": {
+		';': {
 			HorizAdvX: 272,
-			Unicode:   ";",
+			Unicode:   ';',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{62, 89}},
@@ -631,9 +631,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"<": {
+		'<': {
 			HorizAdvX: 358,
-			Unicode:   "<",
+			Unicode:   '<',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{300, 429}},
@@ -646,9 +646,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"=": {
+		'=': {
 			HorizAdvX: 493,
-			Unicode:   "=",
+			Unicode:   '=',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{430, 428}},
@@ -665,9 +665,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		">": {
+		'>': {
 			HorizAdvX: 362,
-			Unicode:   ">",
+			Unicode:   '>',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{59, 374}},
@@ -680,9 +680,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"?": {
+		'?': {
 			HorizAdvX: 420,
-			Unicode:   "?",
+			Unicode:   '?',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{395, 548}},
@@ -706,9 +706,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"@": {
+		'@': {
 			HorizAdvX: 564,
-			Unicode:   "@",
+			Unicode:   '@',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{238, -38}},
@@ -744,9 +744,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"A": {
+		'A': {
 			HorizAdvX: 603,
-			Unicode:   "A",
+			Unicode:   'A',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 0}},
@@ -774,9 +774,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"B": {
+		'B': {
 			HorizAdvX: 679,
-			Unicode:   "B",
+			Unicode:   'B',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{213, 636}},
@@ -805,9 +805,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"C": {
+		'C': {
 			HorizAdvX: 0,
-			Unicode:   "C",
+			Unicode:   'C',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 180}},
@@ -826,9 +826,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"D": {
+		'D': {
 			HorizAdvX: 707,
-			Unicode:   "D",
+			Unicode:   'D',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{213, 636}},
@@ -850,9 +850,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"E": {
+		'E': {
 			HorizAdvX: 447,
-			Unicode:   "E",
+			Unicode:   'E',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{496, 180}},
@@ -875,9 +875,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Ex": {
+		'E': {
 			HorizAdvX: 787,
-			Unicode:   "Ex",
+			Unicode:   'E',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 462}},
@@ -914,9 +914,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"F": {
+		'F': {
 			HorizAdvX: 558,
-			Unicode:   "F",
+			Unicode:   'F',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{356, 450}},
@@ -938,9 +938,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Fi": {
+		'F': {
 			HorizAdvX: 823,
-			Unicode:   "Fi",
+			Unicode:   'F',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{436, 450}},
@@ -973,9 +973,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"G": {
+		'G': {
 			HorizAdvX: 593,
-			Unicode:   "G",
+			Unicode:   'G',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{439, 419}},
@@ -1004,9 +1004,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"H": {
+		'H': {
 			HorizAdvX: 694,
-			Unicode:   "H",
+			Unicode:   'H',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{357, 748}},
@@ -1029,9 +1029,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"I": {
+		'I': {
 			HorizAdvX: 403,
-			Unicode:   "I",
+			Unicode:   'I',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{357, 748}},
@@ -1046,9 +1046,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"IJ": {
+		'I': {
 			HorizAdvX: 680,
-			Unicode:   "IJ",
+			Unicode:   'I',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{357, 748}},
@@ -1075,9 +1075,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"J": {
+		'J': {
 			HorizAdvX: 434,
-			Unicode:   "J",
+			Unicode:   'J',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{348, 750}},
@@ -1099,9 +1099,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"K": {
+		'K': {
 			HorizAdvX: 649,
-			Unicode:   "K",
+			Unicode:   'K',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{357, 748}},
@@ -1129,9 +1129,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"L": {
+		'L': {
 			HorizAdvX: 453,
-			Unicode:   "L",
+			Unicode:   'L',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{356, 738}},
@@ -1151,9 +1151,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"M": {
+		'M': {
 			HorizAdvX: 788,
-			Unicode:   "M",
+			Unicode:   'M',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -1176,9 +1176,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"N": {
+		'N': {
 			HorizAdvX: 718,
-			Unicode:   "N",
+			Unicode:   'N',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{581, 748}},
@@ -1199,9 +1199,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"O": {
+		'O': {
 			HorizAdvX: 697,
-			Unicode:   "O",
+			Unicode:   'O',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{391, 656}},
@@ -1221,9 +1221,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"P": {
+		'P': {
 			HorizAdvX: 602,
-			Unicode:   "P",
+			Unicode:   'P',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{213, 636}},
@@ -1244,9 +1244,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Q": {
+		'Q': {
 			HorizAdvX: 697,
-			Unicode:   "Q",
+			Unicode:   'Q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{391, 656}},
@@ -1279,9 +1279,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"R": {
+		'R': {
 			HorizAdvX: 654,
-			Unicode:   "R",
+			Unicode:   'R',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{213, 636}},
@@ -1310,9 +1310,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"S": {
+		'S': {
 			HorizAdvX: 529,
-			Unicode:   "S",
+			Unicode:   'S',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 624}},
@@ -1335,9 +1335,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"T": {
+		'T': {
 			HorizAdvX: 672,
-			Unicode:   "T",
+			Unicode:   'T',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{582, 620}},
@@ -1357,9 +1357,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Th": {
+		'T': {
 			HorizAdvX: 1009,
-			Unicode:   "Th",
+			Unicode:   'T',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{117, 514}},
@@ -1392,9 +1392,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Ti": {
+		'T': {
 			HorizAdvX: 783,
-			Unicode:   "Ti",
+			Unicode:   'T',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{281, 0}},
@@ -1424,9 +1424,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"U": {
+		'U': {
 			HorizAdvX: 771,
-			Unicode:   "U",
+			Unicode:   'U',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{584, 748}},
@@ -1447,9 +1447,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"V": {
+		'V': {
 			HorizAdvX: 713,
-			Unicode:   "V",
+			Unicode:   'V',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{356, 748}},
@@ -1467,9 +1467,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"W": {
+		'W': {
 			HorizAdvX: 1009,
-			Unicode:   "W",
+			Unicode:   'W',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{356, 748}},
@@ -1493,9 +1493,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"X": {
+		'X': {
 			HorizAdvX: 649,
-			Unicode:   "X",
+			Unicode:   'X',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{651, 0}},
@@ -1517,9 +1517,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Y": {
+		'Y': {
 			HorizAdvX: 649,
-			Unicode:   "Y",
+			Unicode:   'Y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{532, 0}},
@@ -1539,9 +1539,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Z": {
+		'Z': {
 			HorizAdvX: 556,
-			Unicode:   "Z",
+			Unicode:   'Z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 85}},
@@ -1564,9 +1564,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"[": {
+		'[': {
 			HorizAdvX: 296,
-			Unicode:   "[",
+			Unicode:   '[',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{275, -188}},
@@ -1581,9 +1581,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\\": {
+		'\\': {
 			HorizAdvX: 526,
-			Unicode:   "\\",
+			Unicode:   '\\',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{439, -250}},
@@ -1594,9 +1594,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"]": {
+		']': {
 			HorizAdvX: 296,
-			Unicode:   "]",
+			Unicode:   ']',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{21, 688}},
@@ -1611,9 +1611,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"^": {
+		'^': {
 			HorizAdvX: 421,
-			Unicode:   "^",
+			Unicode:   '^',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{224, 561}},
@@ -1626,9 +1626,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"_": {
+		'_': {
 			HorizAdvX: 441,
-			Unicode:   "_",
+			Unicode:   '_',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{396, 79}},
@@ -1639,9 +1639,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"`": {
+		'`': {
 			HorizAdvX: 201,
-			Unicode:   "`",
+			Unicode:   '`',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-36, 561}},
@@ -1652,9 +1652,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a": {
+		'a': {
 			HorizAdvX: 526,
-			Unicode:   "a",
+			Unicode:   'a',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 500}},
@@ -1680,9 +1680,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ax": {
+		'a': {
 			HorizAdvX: 899,
-			Unicode:   "ax",
+			Unicode:   'a',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 500}},
@@ -1723,9 +1723,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"az": {
+		'a': {
 			HorizAdvX: 906,
-			Unicode:   "az",
+			Unicode:   'a',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 500}},
@@ -1768,9 +1768,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"b": {
+		'b': {
 			HorizAdvX: 444,
-			Unicode:   "b",
+			Unicode:   'b',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{46, 149}},
@@ -1791,9 +1791,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"bs": {
+		'b': {
 			HorizAdvX: 786,
-			Unicode:   "bs",
+			Unicode:   'b',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{846, 179}},
@@ -1834,9 +1834,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"bsx": {
+		'b': {
 			HorizAdvX: 1165,
-			Unicode:   "bsx",
+			Unicode:   'b',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{774, 500}},
@@ -1892,9 +1892,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"bsz": {
+		'b': {
 			HorizAdvX: 1158,
-			Unicode:   "bsz",
+			Unicode:   'b',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{46, 149}},
@@ -1950,9 +1950,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c": {
+		'c': {
 			HorizAdvX: 384,
-			Unicode:   "c",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{288, 345}},
@@ -1971,9 +1971,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"cx": {
+		'c': {
 			HorizAdvX: 779,
-			Unicode:   "cx",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{289, 356}},
@@ -2007,9 +2007,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"cz": {
+		'c': {
 			HorizAdvX: 781,
-			Unicode:   "cz",
+			Unicode:   'c',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{720, 91}},
@@ -2045,9 +2045,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"d": {
+		'd': {
 			HorizAdvX: 526,
-			Unicode:   "d",
+			Unicode:   'd',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 680}},
@@ -2073,9 +2073,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"e": {
+		'e': {
 			HorizAdvX: 384,
-			Unicode:   "e",
+			Unicode:   'e',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{275, 78}},
@@ -2095,9 +2095,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ex": {
+		'e': {
 			HorizAdvX: 765,
-			Unicode:   "ex",
+			Unicode:   'e',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{394, 500}},
@@ -2131,9 +2131,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ez": {
+		'e': {
 			HorizAdvX: 796,
-			Unicode:   "ez",
+			Unicode:   'e',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 91}},
@@ -2170,9 +2170,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"f": {
+		'f': {
 			HorizAdvX: 267,
-			Unicode:   "f",
+			Unicode:   'f',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 600}},
@@ -2199,9 +2199,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ff": {
+		'\ufb00': {
 			HorizAdvX: 511,
-			Unicode:   "ff",
+			Unicode:   '\ufb00',
 			GerberLP:  "dccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 749}},
@@ -2251,9 +2251,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ffi": {
+		'\ufb03': {
 			HorizAdvX: 764,
-			Unicode:   "ffi",
+			Unicode:   '\ufb03',
 			GerberLP:  "dcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{422, 500}},
@@ -2315,9 +2315,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ffl": {
+		'\ufb04': {
 			HorizAdvX: 779,
-			Unicode:   "ffl",
+			Unicode:   '\ufb04',
 			GerberLP:  "dcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, -250}},
@@ -2376,9 +2376,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fft": {
+		'f': {
 			HorizAdvX: 783,
-			Unicode:   "fft",
+			Unicode:   'f',
 			GerberLP:  "dccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{54, -250}},
@@ -2443,9 +2443,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fi": {
+		'\ufb01': {
 			HorizAdvX: 532,
-			Unicode:   "fi",
+			Unicode:   '\ufb01',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{303, 618}},
@@ -2484,9 +2484,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fix": {
+		'f': {
 			HorizAdvX: 914,
-			Unicode:   "fix",
+			Unicode:   'f',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{303, 618}},
@@ -2540,9 +2540,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fiz": {
+		'f': {
 			HorizAdvX: 902,
-			Unicode:   "fiz",
+			Unicode:   'f',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{303, 618}},
@@ -2599,9 +2599,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fl": {
+		'\ufb02': {
 			HorizAdvX: 546,
-			Unicode:   "fl",
+			Unicode:   '\ufb02',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 680}},
@@ -2634,9 +2634,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"flx": {
+		'f': {
 			HorizAdvX: 928,
-			Unicode:   "flx",
+			Unicode:   'f',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{539, 500}},
@@ -2683,9 +2683,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"flz": {
+		'f': {
 			HorizAdvX: 937,
-			Unicode:   "flz",
+			Unicode:   'f',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 680}},
@@ -2736,9 +2736,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ft": {
+		'\ufb05': {
 			HorizAdvX: 547,
-			Unicode:   "ft",
+			Unicode:   '\ufb05',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, 460}},
@@ -2777,9 +2777,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fu": {
+		'f': {
 			HorizAdvX: 772,
-			Unicode:   "fu",
+			Unicode:   'f',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{191, 500}},
@@ -2819,9 +2819,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fx": {
+		'f': {
 			HorizAdvX: 676,
-			Unicode:   "fx",
+			Unicode:   'f',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{191, 500}},
@@ -2870,9 +2870,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"g": {
+		'g': {
 			HorizAdvX: 507,
-			Unicode:   "g",
+			Unicode:   'g',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{314, 500}},
@@ -2907,9 +2907,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"gp": {
+		'g': {
 			HorizAdvX: 974,
-			Unicode:   "gp",
+			Unicode:   'g',
 			GerberLP:  "dccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{554, 537}},
@@ -2960,9 +2960,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"gx": {
+		'g': {
 			HorizAdvX: 913,
-			Unicode:   "gx",
+			Unicode:   'g',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{314, 500}},
@@ -3012,9 +3012,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"gz": {
+		'g': {
 			HorizAdvX: 907,
-			Unicode:   "gz",
+			Unicode:   'g',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{314, 500}},
@@ -3063,9 +3063,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"h": {
+		'h': {
 			HorizAdvX: 0,
-			Unicode:   "h",
+			Unicode:   'h',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{301, 303}},
@@ -3088,9 +3088,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"i": {
+		'i': {
 			HorizAdvX: 267,
-			Unicode:   "i",
+			Unicode:   'i',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -3111,9 +3111,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ij": {
+		'i': {
 			HorizAdvX: 507,
-			Unicode:   "ij",
+			Unicode:   'i',
 			GerberLP:  "ddddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{314, 500}},
@@ -3158,9 +3158,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ix": {
+		'i': {
 			HorizAdvX: 635,
-			Unicode:   "ix",
+			Unicode:   'i',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -3196,9 +3196,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"iz": {
+		'i': {
 			HorizAdvX: 637,
-			Unicode:   "iz",
+			Unicode:   'i',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{574, 91}},
@@ -3237,9 +3237,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"j": {
+		'j': {
 			HorizAdvX: 240,
-			Unicode:   "j",
+			Unicode:   'j',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -3268,9 +3268,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"jx": {
+		'j': {
 			HorizAdvX: 627,
-			Unicode:   "jx",
+			Unicode:   'j',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -3314,9 +3314,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"jz": {
+		'j': {
 			HorizAdvX: 615,
-			Unicode:   "jz",
+			Unicode:   'j',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -3359,9 +3359,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"k": {
+		'k': {
 			HorizAdvX: 518,
-			Unicode:   "k",
+			Unicode:   'k',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{352, 500}},
@@ -3386,9 +3386,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"l": {
+		'l': {
 			HorizAdvX: 267,
-			Unicode:   "l",
+			Unicode:   'l',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 680}},
@@ -3403,9 +3403,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"lx": {
+		'l': {
 			HorizAdvX: 649,
-			Unicode:   "lx",
+			Unicode:   'l',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{48, 179}},
@@ -3435,9 +3435,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"lz": {
+		'l': {
 			HorizAdvX: 635,
-			Unicode:   "lz",
+			Unicode:   'l',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{572, 91}},
@@ -3470,9 +3470,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"m": {
+		'm': {
 			HorizAdvX: 752,
-			Unicode:   "m",
+			Unicode:   'm',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{549, 302}},
@@ -3502,9 +3502,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"mx": {
+		'm': {
 			HorizAdvX: 1144,
-			Unicode:   "mx",
+			Unicode:   'm',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{754, 500}},
@@ -3548,9 +3548,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"mz": {
+		'm': {
 			HorizAdvX: 1125,
-			Unicode:   "mz",
+			Unicode:   'm',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{549, 302}},
@@ -3597,9 +3597,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"n": {
+		'n': {
 			HorizAdvX: 0,
-			Unicode:   "n",
+			Unicode:   'n',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{302, 302}},
@@ -3622,9 +3622,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"nz": {
+		'n': {
 			HorizAdvX: 882,
-			Unicode:   "nz",
+			Unicode:   'n',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{302, 304}},
@@ -3664,9 +3664,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"o": {
+		'o': {
 			HorizAdvX: 439,
-			Unicode:   "o",
+			Unicode:   'o',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{244, 505}},
@@ -3691,9 +3691,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"os": {
+		'o': {
 			HorizAdvX: 774,
-			Unicode:   "os",
+			Unicode:   'o',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{524, 511}},
@@ -3730,9 +3730,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"osx": {
+		'o': {
 			HorizAdvX: 1146,
-			Unicode:   "osx",
+			Unicode:   'o',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{244, 505}},
@@ -3785,9 +3785,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"osz": {
+		'o': {
 			HorizAdvX: 1139,
-			Unicode:   "osz",
+			Unicode:   'o',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{524, 511}},
@@ -3839,9 +3839,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ox": {
+		'o': {
 			HorizAdvX: 858,
-			Unicode:   "ox",
+			Unicode:   'o',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{237, 505}},
@@ -3889,9 +3889,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"o\u00e6": {
+		'o': {
 			HorizAdvX: 1088,
-			Unicode:   "o\u00e6",
+			Unicode:   'o',
 			GerberLP:  "dccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{244, 505}},
@@ -3940,9 +3940,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"p": {
+		'p': {
 			HorizAdvX: 468,
-			Unicode:   "p",
+			Unicode:   'p',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 537}},
@@ -3965,9 +3965,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"q": {
+		'q': {
 			HorizAdvX: 486,
-			Unicode:   "q",
+			Unicode:   'q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{314, 500}},
@@ -3990,9 +3990,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"r": {
+		'r': {
 			HorizAdvX: 376,
-			Unicode:   "r",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -4009,9 +4009,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"rx": {
+		'r': {
 			HorizAdvX: 789,
-			Unicode:   "rx",
+			Unicode:   'r',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{401, 500}},
@@ -4053,9 +4053,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"rz": {
+		'r': {
 			HorizAdvX: 659,
-			Unicode:   "rz",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{255, 418}},
@@ -4083,9 +4083,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"s": {
+		's': {
 			HorizAdvX: 382,
-			Unicode:   "s",
+			Unicode:   's',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{429, 179}},
@@ -4111,9 +4111,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"sx": {
+		's': {
 			HorizAdvX: 741,
-			Unicode:   "sx",
+			Unicode:   's',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{137, 511}},
@@ -4154,9 +4154,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"sz": {
+		's': {
 			HorizAdvX: 744,
-			Unicode:   "sz",
+			Unicode:   's',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{681, 91}},
@@ -4196,9 +4196,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"t": {
+		't': {
 			HorizAdvX: 267,
-			Unicode:   "t",
+			Unicode:   't',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 638}},
@@ -4221,9 +4221,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"tx": {
+		't': {
 			HorizAdvX: 634,
-			Unicode:   "tx",
+			Unicode:   't',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 179}},
@@ -4261,9 +4261,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"tz": {
+		't': {
 			HorizAdvX: 700,
-			Unicode:   "tz",
+			Unicode:   't',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{637, 91}},
@@ -4304,9 +4304,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"u": {
+		'u': {
 			HorizAdvX: 0,
-			Unicode:   "u",
+			Unicode:   'u',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 500}},
@@ -4328,9 +4328,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"uv": {
+		'u': {
 			HorizAdvX: 916,
-			Unicode:   "uv",
+			Unicode:   'u',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{813, 520}},
@@ -4366,9 +4366,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ux": {
+		'u': {
 			HorizAdvX: 898,
-			Unicode:   "ux",
+			Unicode:   'u',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -4405,9 +4405,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"v": {
+		'v': {
 			HorizAdvX: 414,
-			Unicode:   "v",
+			Unicode:   'v',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{309, 520}},
@@ -4426,9 +4426,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"w": {
+		'w': {
 			HorizAdvX: 661,
-			Unicode:   "w",
+			Unicode:   'w',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{556, 520}},
@@ -4454,9 +4454,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"x": {
+		'x': {
 			HorizAdvX: 522,
-			Unicode:   "x",
+			Unicode:   'x',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{394, 243}},
@@ -4486,9 +4486,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"y": {
+		'y': {
 			HorizAdvX: 486,
-			Unicode:   "y",
+			Unicode:   'y',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{294, 500}},
@@ -4519,9 +4519,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"yp": {
+		'y': {
 			HorizAdvX: 953,
-			Unicode:   "yp",
+			Unicode:   'y',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{533, 537}},
@@ -4568,9 +4568,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"yx": {
+		'y': {
 			HorizAdvX: 872,
-			Unicode:   "yx",
+			Unicode:   'y',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{294, 500}},
@@ -4616,9 +4616,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"yz": {
+		'y': {
 			HorizAdvX: 888,
-			Unicode:   "yz",
+			Unicode:   'y',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{294, 500}},
@@ -4663,9 +4663,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"z": {
+		'z': {
 			HorizAdvX: 428,
-			Unicode:   "z",
+			Unicode:   'z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{365, 91}},
@@ -4688,9 +4688,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"{": {
+		'{': {
 			HorizAdvX: 285,
-			Unicode:   "{",
+			Unicode:   '{',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{261, -181}},
@@ -4718,9 +4718,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"|": {
+		'|': {
 			HorizAdvX: 235,
-			Unicode:   "|",
+			Unicode:   '|',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{164, 751}},
@@ -4731,9 +4731,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"}": {
+		'}': {
 			HorizAdvX: 285,
-			Unicode:   "}",
+			Unicode:   '}',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{24, -235}},
@@ -4761,9 +4761,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"~": {
+		'~': {
 			HorizAdvX: 438,
-			Unicode:   "~",
+			Unicode:   '~',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 670}},
@@ -4778,9 +4778,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a1": {
+		'¡': {
 			HorizAdvX: 255,
-			Unicode:   "\u00a1",
+			Unicode:   '¡',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 221}},
@@ -4796,9 +4796,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a2": {
+		'¢': {
 			HorizAdvX: 392,
-			Unicode:   "\u00a2",
+			Unicode:   '¢',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{210, -27}},
@@ -4825,9 +4825,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a3": {
+		'£': {
 			HorizAdvX: 488,
-			Unicode:   "\u00a3",
+			Unicode:   '£',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{400, 423}},
@@ -4852,9 +4852,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a4": {
+		'¤': {
 			HorizAdvX: 458,
-			Unicode:   "\u00a4",
+			Unicode:   '¤',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{45, 492}},
@@ -4886,9 +4886,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a5": {
+		'¥': {
 			HorizAdvX: 711,
-			Unicode:   "\u00a5",
+			Unicode:   '¥',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{537, 192}},
@@ -4922,9 +4922,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a6": {
+		'¦': {
 			HorizAdvX: 235,
-			Unicode:   "\u00a6",
+			Unicode:   '¦',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 222}},
@@ -4941,9 +4941,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a7": {
+		'§': {
 			HorizAdvX: 520,
-			Unicode:   "\u00a7",
+			Unicode:   '§',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437, 639}},
@@ -4976,9 +4976,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a8": {
+		'¨': {
 			HorizAdvX: 392,
-			Unicode:   "\u00a8",
+			Unicode:   '¨',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{56, 634}},
@@ -4995,9 +4995,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a9": {
+		'©': {
 			HorizAdvX: 554,
-			Unicode:   "\u00a9",
+			Unicode:   '©',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{277, 76}},
@@ -5026,9 +5026,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00aa": {
+		'ª': {
 			HorizAdvX: 355,
-			Unicode:   "\u00aa",
+			Unicode:   'ª',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 740}},
@@ -5053,9 +5053,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ab": {
+		'«': {
 			HorizAdvX: 514,
-			Unicode:   "\u00ab",
+			Unicode:   '«',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{196, 449}},
@@ -5074,9 +5074,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ac": {
+		'¬': {
 			HorizAdvX: 466,
-			Unicode:   "\u00ac",
+			Unicode:   '¬',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{404, 301}},
@@ -5089,9 +5089,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ad": {
+		'­': {
 			HorizAdvX: 319,
-			Unicode:   "\u00ad",
+			Unicode:   '­',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{260, 301}},
@@ -5102,9 +5102,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ae": {
+		'®': {
 			HorizAdvX: 554,
-			Unicode:   "\u00ae",
+			Unicode:   '®',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{277, 79}},
@@ -5140,9 +5140,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b0": {
+		'°': {
 			HorizAdvX: 319,
-			Unicode:   "\u00b0",
+			Unicode:   '°',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{166, 702}},
@@ -5159,9 +5159,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b1": {
+		'±': {
 			HorizAdvX: 478,
-			Unicode:   "\u00b1",
+			Unicode:   '±',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{297, 543}},
@@ -5186,9 +5186,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b2": {
+		'²': {
 			HorizAdvX: 344,
-			Unicode:   "\u00b2",
+			Unicode:   '²',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{106, 416}},
@@ -5211,9 +5211,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b3": {
+		'³': {
 			HorizAdvX: 347,
-			Unicode:   "\u00b3",
+			Unicode:   '³',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{147, 480}},
@@ -5238,9 +5238,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b4": {
+		'´': {
 			HorizAdvX: 316,
-			Unicode:   "\u00b4",
+			Unicode:   '´',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1, 561}},
@@ -5251,9 +5251,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b5": {
+		'µ': {
 			HorizAdvX: 0,
-			Unicode:   "\u00b5",
+			Unicode:   'µ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 500}},
@@ -5276,9 +5276,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b6": {
+		'¶': {
 			HorizAdvX: 518,
-			Unicode:   "\u00b6",
+			Unicode:   '¶',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{317, 288}},
@@ -5301,9 +5301,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b7": {
+		'·': {
 			HorizAdvX: 277,
-			Unicode:   "\u00b7",
+			Unicode:   '·',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 267}},
@@ -5314,9 +5314,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b8": {
+		'¸': {
 			HorizAdvX: 227,
-			Unicode:   "\u00b8",
+			Unicode:   '¸',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{252, -128}},
@@ -5335,9 +5335,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b9": {
+		'¹': {
 			HorizAdvX: 227,
-			Unicode:   "\u00b9",
+			Unicode:   '¹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{165, 749}},
@@ -5350,9 +5350,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ba": {
+		'º': {
 			HorizAdvX: 307,
-			Unicode:   "\u00ba",
+			Unicode:   'º',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 671}},
@@ -5376,9 +5376,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bb": {
+		'»': {
 			HorizAdvX: 517,
-			Unicode:   "\u00bb",
+			Unicode:   '»',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{319, 69}},
@@ -5397,9 +5397,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bc": {
+		'¼': {
 			HorizAdvX: 679,
-			Unicode:   "\u00bc",
+			Unicode:   '¼',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{453, 750}},
@@ -5435,9 +5435,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bd": {
+		'½': {
 			HorizAdvX: 688,
-			Unicode:   "\u00bd",
+			Unicode:   '½',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{472, 750}},
@@ -5474,9 +5474,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00be": {
+		'¾': {
 			HorizAdvX: 780,
-			Unicode:   "\u00be",
+			Unicode:   '¾',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{548, 750}},
@@ -5524,9 +5524,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bf": {
+		'¿': {
 			HorizAdvX: 416,
-			Unicode:   "\u00bf",
+			Unicode:   '¿',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{23, -95}},
@@ -5550,9 +5550,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c0": {
+		'À': {
 			HorizAdvX: 603,
-			Unicode:   "\u00c0",
+			Unicode:   'À',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 0}},
@@ -5586,9 +5586,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c1": {
+		'Á': {
 			HorizAdvX: 603,
-			Unicode:   "\u00c1",
+			Unicode:   'Á',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 0}},
@@ -5622,9 +5622,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c2": {
+		'Â': {
 			HorizAdvX: 603,
-			Unicode:   "\u00c2",
+			Unicode:   'Â',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 0}},
@@ -5660,9 +5660,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c3": {
+		'Ã': {
 			HorizAdvX: 603,
-			Unicode:   "\u00c3",
+			Unicode:   'Ã',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 0}},
@@ -5700,9 +5700,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c4": {
+		'Ä': {
 			HorizAdvX: 603,
-			Unicode:   "\u00c4",
+			Unicode:   'Ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 0}},
@@ -5742,9 +5742,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c5": {
+		'Å': {
 			HorizAdvX: 603,
-			Unicode:   "\u00c5",
+			Unicode:   'Å',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 0}},
@@ -5784,9 +5784,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c6": {
+		'Æ': {
 			HorizAdvX: 841,
-			Unicode:   "\u00c6",
+			Unicode:   'Æ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{833, 0}},
@@ -5823,9 +5823,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c7": {
+		'Ç': {
 			HorizAdvX: 507,
-			Unicode:   "\u00c7",
+			Unicode:   'Ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{477, -128}},
@@ -5855,9 +5855,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c8": {
+		'È': {
 			HorizAdvX: 447,
-			Unicode:   "\u00c8",
+			Unicode:   'È',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{496, 180}},
@@ -5886,9 +5886,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c9": {
+		'É': {
 			HorizAdvX: 447,
-			Unicode:   "\u00c9",
+			Unicode:   'É',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{496, 180}},
@@ -5917,9 +5917,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ca": {
+		'Ê': {
 			HorizAdvX: 447,
-			Unicode:   "\u00ca",
+			Unicode:   'Ê',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{496, 180}},
@@ -5950,9 +5950,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cb": {
+		'Ë': {
 			HorizAdvX: 447,
-			Unicode:   "\u00cb",
+			Unicode:   'Ë',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{496, 180}},
@@ -5987,9 +5987,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cc": {
+		'Ì': {
 			HorizAdvX: 403,
-			Unicode:   "\u00cc",
+			Unicode:   'Ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{357, 748}},
@@ -6010,9 +6010,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cd": {
+		'Í': {
 			HorizAdvX: 403,
-			Unicode:   "\u00cd",
+			Unicode:   'Í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{357, 748}},
@@ -6033,9 +6033,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ce": {
+		'Î': {
 			HorizAdvX: 403,
-			Unicode:   "\u00ce",
+			Unicode:   'Î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{357, 748}},
@@ -6058,9 +6058,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cf": {
+		'Ï': {
 			HorizAdvX: 403,
-			Unicode:   "\u00cf",
+			Unicode:   'Ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{357, 748}},
@@ -6087,9 +6087,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d0": {
+		'Ð': {
 			HorizAdvX: 707,
-			Unicode:   "\u00d0",
+			Unicode:   'Ð',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{114, 503}},
@@ -6119,9 +6119,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d1": {
+		'Ñ': {
 			HorizAdvX: 718,
-			Unicode:   "\u00d1",
+			Unicode:   'Ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{581, 748}},
@@ -6152,9 +6152,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d2": {
+		'Ò': {
 			HorizAdvX: 697,
-			Unicode:   "\u00d2",
+			Unicode:   'Ò',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{391, 656}},
@@ -6180,9 +6180,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d3": {
+		'Ó': {
 			HorizAdvX: 697,
-			Unicode:   "\u00d3",
+			Unicode:   'Ó',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{391, 656}},
@@ -6208,9 +6208,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d4": {
+		'Ô': {
 			HorizAdvX: 697,
-			Unicode:   "\u00d4",
+			Unicode:   'Ô',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{391, 656}},
@@ -6238,9 +6238,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d5": {
+		'Õ': {
 			HorizAdvX: 697,
-			Unicode:   "\u00d5",
+			Unicode:   'Õ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{391, 656}},
@@ -6270,9 +6270,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d6": {
+		'Ö': {
 			HorizAdvX: 697,
-			Unicode:   "\u00d6",
+			Unicode:   'Ö',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{391, 656}},
@@ -6304,9 +6304,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d7": {
+		'×': {
 			HorizAdvX: 445,
-			Unicode:   "\u00d7",
+			Unicode:   '×',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{43, 355}},
@@ -6324,9 +6324,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d8": {
+		'Ø': {
 			HorizAdvX: 660,
-			Unicode:   "\u00d8",
+			Unicode:   'Ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, -71}},
@@ -6361,9 +6361,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d9": {
+		'Ù': {
 			HorizAdvX: 771,
-			Unicode:   "\u00d9",
+			Unicode:   'Ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{584, 748}},
@@ -6390,9 +6390,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00da": {
+		'Ú': {
 			HorizAdvX: 771,
-			Unicode:   "\u00da",
+			Unicode:   'Ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{584, 748}},
@@ -6419,9 +6419,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00db": {
+		'Û': {
 			HorizAdvX: 771,
-			Unicode:   "\u00db",
+			Unicode:   'Û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{584, 748}},
@@ -6450,9 +6450,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dc": {
+		'Ü': {
 			HorizAdvX: 771,
-			Unicode:   "\u00dc",
+			Unicode:   'Ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{584, 748}},
@@ -6485,9 +6485,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dd": {
+		'Ý': {
 			HorizAdvX: 649,
-			Unicode:   "\u00dd",
+			Unicode:   'Ý',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{532, 0}},
@@ -6513,9 +6513,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00de": {
+		'Þ': {
 			HorizAdvX: 604,
-			Unicode:   "\u00de",
+			Unicode:   'Þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{191, 730}},
@@ -6541,9 +6541,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00df": {
+		'ß': {
 			HorizAdvX: 450,
-			Unicode:   "\u00df",
+			Unicode:   'ß',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{197, 530}},
@@ -6566,9 +6566,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e0": {
+		'à': {
 			HorizAdvX: 526,
-			Unicode:   "\u00e0",
+			Unicode:   'à',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 500}},
@@ -6600,9 +6600,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e1": {
+		'á': {
 			HorizAdvX: 526,
-			Unicode:   "\u00e1",
+			Unicode:   'á',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 500}},
@@ -6634,9 +6634,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e2": {
+		'â': {
 			HorizAdvX: 526,
-			Unicode:   "\u00e2",
+			Unicode:   'â',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 500}},
@@ -6670,9 +6670,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e3": {
+		'ã': {
 			HorizAdvX: 526,
-			Unicode:   "\u00e3",
+			Unicode:   'ã',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 500}},
@@ -6708,9 +6708,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e4": {
+		'ä': {
 			HorizAdvX: 526,
-			Unicode:   "\u00e4",
+			Unicode:   'ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 500}},
@@ -6748,9 +6748,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e5": {
+		'å': {
 			HorizAdvX: 526,
-			Unicode:   "\u00e5",
+			Unicode:   'å',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 500}},
@@ -6788,9 +6788,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e6": {
+		'æ': {
 			HorizAdvX: 646,
-			Unicode:   "\u00e6",
+			Unicode:   'æ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, -6}},
@@ -6827,9 +6827,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e7": {
+		'ç': {
 			HorizAdvX: 384,
-			Unicode:   "\u00e7",
+			Unicode:   'ç',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{288, 345}},
@@ -6866,9 +6866,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e8": {
+		'è': {
 			HorizAdvX: 384,
-			Unicode:   "\u00e8",
+			Unicode:   'è',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{275, 78}},
@@ -6894,9 +6894,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e9": {
+		'é': {
 			HorizAdvX: 384,
-			Unicode:   "\u00e9",
+			Unicode:   'é',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{275, 78}},
@@ -6922,9 +6922,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e9x": {
+		'é': {
 			HorizAdvX: 798,
-			Unicode:   "\u00e9x",
+			Unicode:   'é',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{394, 500}},
@@ -6964,9 +6964,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ea": {
+		'ê': {
 			HorizAdvX: 384,
-			Unicode:   "\u00ea",
+			Unicode:   'ê',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{275, 78}},
@@ -6994,9 +6994,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00eb": {
+		'ë': {
 			HorizAdvX: 384,
-			Unicode:   "\u00eb",
+			Unicode:   'ë',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{275, 78}},
@@ -7028,9 +7028,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ec": {
+		'ì': {
 			HorizAdvX: 267,
-			Unicode:   "\u00ec",
+			Unicode:   'ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -7051,9 +7051,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ed": {
+		'í': {
 			HorizAdvX: 267,
-			Unicode:   "\u00ed",
+			Unicode:   'í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -7074,9 +7074,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00edx": {
+		'í': {
 			HorizAdvX: 635,
-			Unicode:   "\u00edx",
+			Unicode:   'í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -7112,9 +7112,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00edz": {
+		'í': {
 			HorizAdvX: 637,
-			Unicode:   "\u00edz",
+			Unicode:   'í',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{574, 91}},
@@ -7153,9 +7153,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ee": {
+		'î': {
 			HorizAdvX: 267,
-			Unicode:   "\u00ee",
+			Unicode:   'î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -7178,9 +7178,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ef": {
+		'ï': {
 			HorizAdvX: 267,
-			Unicode:   "\u00ef",
+			Unicode:   'ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -7207,9 +7207,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f0": {
+		'ð': {
 			HorizAdvX: 538,
-			Unicode:   "\u00f0",
+			Unicode:   'ð',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, 415}},
@@ -7245,9 +7245,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f1": {
+		'ñ': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f1",
+			Unicode:   'ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{302, 302}},
@@ -7280,9 +7280,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f2": {
+		'ò': {
 			HorizAdvX: 439,
-			Unicode:   "\u00f2",
+			Unicode:   'ò',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{244, 505}},
@@ -7313,9 +7313,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3": {
+		'ó': {
 			HorizAdvX: 439,
-			Unicode:   "\u00f3",
+			Unicode:   'ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{244, 505}},
@@ -7346,9 +7346,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3s": {
+		'ó': {
 			HorizAdvX: 774,
-			Unicode:   "\u00f3s",
+			Unicode:   'ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{524, 511}},
@@ -7391,9 +7391,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3sx": {
+		'ó': {
 			HorizAdvX: 1146,
-			Unicode:   "\u00f3sx",
+			Unicode:   'ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{524, 511}},
@@ -7452,9 +7452,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3sz": {
+		'ó': {
 			HorizAdvX: 1140,
-			Unicode:   "\u00f3sz",
+			Unicode:   'ó',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{237, 505}},
@@ -7512,9 +7512,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3x": {
+		'ó': {
 			HorizAdvX: 858,
-			Unicode:   "\u00f3x",
+			Unicode:   'ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{237, 505}},
@@ -7568,9 +7568,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f4": {
+		'ô': {
 			HorizAdvX: 439,
-			Unicode:   "\u00f4",
+			Unicode:   'ô',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{244, 505}},
@@ -7603,9 +7603,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f5": {
+		'õ': {
 			HorizAdvX: 439,
-			Unicode:   "\u00f5",
+			Unicode:   'õ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{244, 505}},
@@ -7640,9 +7640,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f6": {
+		'ö': {
 			HorizAdvX: 439,
-			Unicode:   "\u00f6",
+			Unicode:   'ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{244, 505}},
@@ -7679,9 +7679,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f7": {
+		'÷': {
 			HorizAdvX: 414,
-			Unicode:   "\u00f7",
+			Unicode:   '÷',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{380, 285}},
@@ -7704,9 +7704,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f8": {
+		'ø': {
 			HorizAdvX: 439,
-			Unicode:   "\u00f8",
+			Unicode:   'ø',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{277, -103}},
@@ -7736,9 +7736,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f9": {
+		'ù': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f9",
+			Unicode:   'ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 500}},
@@ -7766,9 +7766,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fa": {
+		'ú': {
 			HorizAdvX: 0,
-			Unicode:   "\u00fa",
+			Unicode:   'ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 500}},
@@ -7796,9 +7796,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fb": {
+		'û': {
 			HorizAdvX: 0,
-			Unicode:   "\u00fb",
+			Unicode:   'û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 500}},
@@ -7828,9 +7828,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fc": {
+		'ü': {
 			HorizAdvX: 0,
-			Unicode:   "\u00fc",
+			Unicode:   'ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 500}},
@@ -7864,9 +7864,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fd": {
+		'ý': {
 			HorizAdvX: 486,
-			Unicode:   "\u00fd",
+			Unicode:   'ý',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{294, 500}},
@@ -7903,9 +7903,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fe": {
+		'þ': {
 			HorizAdvX: 473,
-			Unicode:   "\u00fe",
+			Unicode:   'þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{46, -250}},
@@ -7928,9 +7928,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ff": {
+		'ÿ': {
 			HorizAdvX: 486,
-			Unicode:   "\u00ff",
+			Unicode:   'ÿ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{294, 500}},
@@ -7973,9 +7973,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0104": {
+		'Ą': {
 			HorizAdvX: 603,
-			Unicode:   "\u0104",
+			Unicode:   'Ą',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{528, 5}},
@@ -8016,9 +8016,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0105": {
+		'ą': {
 			HorizAdvX: 526,
-			Unicode:   "\u0105",
+			Unicode:   'ą',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 500}},
@@ -8051,9 +8051,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0106": {
+		'Ć': {
 			HorizAdvX: 0,
-			Unicode:   "\u0106",
+			Unicode:   'Ć',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 180}},
@@ -8078,9 +8078,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0107": {
+		'ć': {
 			HorizAdvX: 384,
-			Unicode:   "\u0107",
+			Unicode:   'ć',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{288, 345}},
@@ -8105,9 +8105,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0108": {
+		'Ĉ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0108",
+			Unicode:   'Ĉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 180}},
@@ -8134,9 +8134,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0109": {
+		'ĉ': {
 			HorizAdvX: 384,
-			Unicode:   "\u0109",
+			Unicode:   'ĉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{288, 345}},
@@ -8163,9 +8163,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010c": {
+		'Č': {
 			HorizAdvX: 0,
-			Unicode:   "\u010c",
+			Unicode:   'Č',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 180}},
@@ -8192,9 +8192,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010d": {
+		'č': {
 			HorizAdvX: 384,
-			Unicode:   "\u010d",
+			Unicode:   'č',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{288, 345}},
@@ -8221,9 +8221,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0111": {
+		'đ': {
 			HorizAdvX: 526,
-			Unicode:   "\u0111",
+			Unicode:   'đ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{315, 680}},
@@ -8257,9 +8257,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0118": {
+		'Ę': {
 			HorizAdvX: 449,
-			Unicode:   "\u0118",
+			Unicode:   'Ę',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{497, 180}},
@@ -8290,9 +8290,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0119": {
+		'ę': {
 			HorizAdvX: 383,
-			Unicode:   "\u0119",
+			Unicode:   'ę',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{303, -61}},
@@ -8319,9 +8319,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011e": {
+		'Ğ': {
 			HorizAdvX: 593,
-			Unicode:   "\u011e",
+			Unicode:   'Ğ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{439, 419}},
@@ -8358,9 +8358,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011f": {
+		'ğ': {
 			HorizAdvX: 507,
-			Unicode:   "\u011f",
+			Unicode:   'ğ',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{314, 500}},
@@ -8403,9 +8403,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0131": {
+		'ı': {
 			HorizAdvX: 267,
-			Unicode:   "\u0131",
+			Unicode:   'ı',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 500}},
@@ -8420,9 +8420,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0141": {
+		'Ł': {
 			HorizAdvX: 494,
-			Unicode:   "\u0141",
+			Unicode:   'Ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{357, 738}},
@@ -8450,9 +8450,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0142": {
+		'ł': {
 			HorizAdvX: 267,
-			Unicode:   "\u0142",
+			Unicode:   'ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{47, 680}},
@@ -8475,9 +8475,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0143": {
+		'Ń': {
 			HorizAdvX: 718,
-			Unicode:   "\u0143",
+			Unicode:   'Ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{581, 748}},
@@ -8504,9 +8504,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0144": {
+		'ń': {
 			HorizAdvX: 0,
-			Unicode:   "\u0144",
+			Unicode:   'ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{302, 302}},
@@ -8535,9 +8535,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0150": {
+		'Ő': {
 			HorizAdvX: 697,
-			Unicode:   "\u0150",
+			Unicode:   'Ő',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{391, 656}},
@@ -8569,9 +8569,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0151": {
+		'ő': {
 			HorizAdvX: 439,
-			Unicode:   "\u0151",
+			Unicode:   'ő',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{244, 505}},
@@ -8608,9 +8608,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0152": {
+		'Œ': {
 			HorizAdvX: 870,
-			Unicode:   "\u0152",
+			Unicode:   'Œ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{669, 419}},
@@ -8643,9 +8643,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0153": {
+		'œ': {
 			HorizAdvX: 668,
-			Unicode:   "\u0153",
+			Unicode:   'œ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{234, 510}},
@@ -8678,9 +8678,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015a": {
+		'Ś': {
 			HorizAdvX: 529,
-			Unicode:   "\u015a",
+			Unicode:   'Ś',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 624}},
@@ -8709,9 +8709,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015b": {
+		'ś': {
 			HorizAdvX: 382,
-			Unicode:   "\u015b",
+			Unicode:   'ś',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{429, 179}},
@@ -8743,9 +8743,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0160": {
+		'Š': {
 			HorizAdvX: 529,
-			Unicode:   "\u0160",
+			Unicode:   'Š',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{456, 624}},
@@ -8776,9 +8776,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0161": {
+		'š': {
 			HorizAdvX: 382,
-			Unicode:   "\u0161",
+			Unicode:   'š',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{429, 179}},
@@ -8812,9 +8812,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0170": {
+		'Ű': {
 			HorizAdvX: 771,
-			Unicode:   "\u0170",
+			Unicode:   'Ű',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{584, 748}},
@@ -8847,9 +8847,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0171": {
+		'ű': {
 			HorizAdvX: 0,
-			Unicode:   "\u0171",
+			Unicode:   'ű',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 500}},
@@ -8883,9 +8883,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0178": {
+		'Ÿ': {
 			HorizAdvX: 649,
-			Unicode:   "\u0178",
+			Unicode:   'Ÿ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{532, 0}},
@@ -8917,9 +8917,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0179": {
+		'Ź': {
 			HorizAdvX: 556,
-			Unicode:   "\u0179",
+			Unicode:   'Ź',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 85}},
@@ -8948,9 +8948,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017a": {
+		'ź': {
 			HorizAdvX: 428,
-			Unicode:   "\u017a",
+			Unicode:   'ź',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{365, 91}},
@@ -8979,9 +8979,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017b": {
+		'Ż': {
 			HorizAdvX: 556,
-			Unicode:   "\u017b",
+			Unicode:   'Ż',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 85}},
@@ -9010,9 +9010,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017c": {
+		'ż': {
 			HorizAdvX: 428,
-			Unicode:   "\u017c",
+			Unicode:   'ż',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{365, 91}},
@@ -9041,9 +9041,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017d": {
+		'Ž': {
 			HorizAdvX: 556,
-			Unicode:   "\u017d",
+			Unicode:   'Ž',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 85}},
@@ -9074,9 +9074,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017e": {
+		'ž': {
 			HorizAdvX: 428,
-			Unicode:   "\u017e",
+			Unicode:   'ž',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{365, 91}},
@@ -9107,9 +9107,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0192": {
+		'ƒ': {
 			HorizAdvX: 303,
-			Unicode:   "\u0192",
+			Unicode:   'ƒ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{229, 460}},
@@ -9140,9 +9140,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c6": {
+		'ˆ': {
 			HorizAdvX: 293,
-			Unicode:   "\u02c6",
+			Unicode:   'ˆ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{174, 561}},
@@ -9155,9 +9155,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c7": {
+		'ˇ': {
 			HorizAdvX: 294,
-			Unicode:   "\u02c7",
+			Unicode:   'ˇ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-59, 750}},
@@ -9170,9 +9170,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d8": {
+		'˘': {
 			HorizAdvX: 431,
-			Unicode:   "\u02d8",
+			Unicode:   '˘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{206, 703}},
@@ -9185,9 +9185,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02da": {
+		'˚': {
 			HorizAdvX: 156,
-			Unicode:   "\u02da",
+			Unicode:   '˚',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-51, 713}},
@@ -9204,9 +9204,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02db": {
+		'˛': {
 			HorizAdvX: 291,
-			Unicode:   "\u02db",
+			Unicode:   '˛',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{121, 5}},
@@ -9221,9 +9221,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dc": {
+		'˜': {
 			HorizAdvX: 403,
-			Unicode:   "\u02dc",
+			Unicode:   '˜',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{290, 670}},
@@ -9238,9 +9238,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dd": {
+		'˝': {
 			HorizAdvX: 436,
-			Unicode:   "\u02dd",
+			Unicode:   '˝',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1, 561}},
@@ -9257,9 +9257,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2013": {
+		'–': {
 			HorizAdvX: 379,
-			Unicode:   "\u2013",
+			Unicode:   '–',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{319, 301}},
@@ -9270,9 +9270,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2014": {
+		'—': {
 			HorizAdvX: 469,
-			Unicode:   "\u2014",
+			Unicode:   '—',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{409, 301}},
@@ -9283,9 +9283,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2018": {
+		'‘': {
 			HorizAdvX: 209,
-			Unicode:   "\u2018",
+			Unicode:   '‘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{171, 584}},
@@ -9299,9 +9299,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2019": {
+		'’': {
 			HorizAdvX: 208,
-			Unicode:   "\u2019",
+			Unicode:   '’',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 678}},
@@ -9315,9 +9315,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201a": {
+		'‚': {
 			HorizAdvX: 216,
-			Unicode:   "\u201a",
+			Unicode:   '‚',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{38, 76}},
@@ -9331,9 +9331,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201c": {
+		'“': {
 			HorizAdvX: 429,
-			Unicode:   "\u201c",
+			Unicode:   '“',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{391, 584}},
@@ -9356,9 +9356,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201d": {
+		'”': {
 			HorizAdvX: 428,
-			Unicode:   "\u201d",
+			Unicode:   '”',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 678}},
@@ -9381,9 +9381,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201e": {
+		'„': {
 			HorizAdvX: 436,
-			Unicode:   "\u201e",
+			Unicode:   '„',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{38, 76}},
@@ -9406,9 +9406,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2020": {
+		'†': {
 			HorizAdvX: 411,
-			Unicode:   "\u2020",
+			Unicode:   '†',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{239, 750}},
@@ -9427,9 +9427,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2021": {
+		'‡': {
 			HorizAdvX: 429,
-			Unicode:   "\u2021",
+			Unicode:   '‡',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{248, 750}},
@@ -9456,9 +9456,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2022": {
+		'•': {
 			HorizAdvX: 277,
-			Unicode:   "\u2022",
+			Unicode:   '•',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{42, 267}},
@@ -9469,9 +9469,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2026": {
+		'…': {
 			HorizAdvX: 717,
-			Unicode:   "\u2026",
+			Unicode:   '…',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{39, 75}},
@@ -9494,9 +9494,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2030": {
+		'‰': {
 			HorizAdvX: 935,
-			Unicode:   "\u2030",
+			Unicode:   '‰',
 			GerberLP:  "ddddccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{519, 750}},
@@ -9543,9 +9543,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2039": {
+		'‹': {
 			HorizAdvX: 306,
-			Unicode:   "\u2039",
+			Unicode:   '‹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{196, 449}},
@@ -9557,9 +9557,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u203a": {
+		'›': {
 			HorizAdvX: 309,
-			Unicode:   "\u203a",
+			Unicode:   '›',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{111, 69}},
@@ -9571,9 +9571,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20ac": {
+		'€': {
 			HorizAdvX: 618,
-			Unicode:   "\u20ac",
+			Unicode:   '€',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{255, 334}},
@@ -9608,9 +9608,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2122": {
+		'™': {
 			HorizAdvX: 495,
-			Unicode:   "\u2122",
+			Unicode:   '™',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 628}},
@@ -9642,9 +9642,9 @@ var lobstertwo_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2212": {
+		'−': {
 			HorizAdvX: 468,
-			Unicode:   "\u2212",
+			Unicode:   '−',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{409, 301}},

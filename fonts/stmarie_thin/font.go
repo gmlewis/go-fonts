@@ -11,16 +11,16 @@ func init() {
 }
 
 var stmarie_thinFont = &fonts.Font{
-	// ID: "stmarie_thin",
+	ID:               "stmarie_thin",
 	HorizAdvX:        540,
 	UnitsPerEm:       1000,
 	Ascent:           750,
 	Descent:          -250,
 	MissingHorizAdvX: 209,
-	Glyphs: map[string]*fonts.Glyph{
-		"!": {
+	Glyphs: map[rune]*fonts.Glyph{
+		'!': {
 			HorizAdvX: 242,
-			Unicode:   "!",
+			Unicode:   '!',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{112, 700}},
@@ -38,9 +38,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\"": {
+		'"': {
 			HorizAdvX: 210,
-			Unicode:   "\"",
+			Unicode:   '"',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{44, 480}},
@@ -57,9 +57,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"#": {
+		'#': {
 			HorizAdvX: 734,
-			Unicode:   "#",
+			Unicode:   '#',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{435, -70}},
@@ -100,9 +100,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"$": {
+		'$': {
 			HorizAdvX: 594,
-			Unicode:   "$",
+			Unicode:   '$',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{290, -94}},
@@ -146,9 +146,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"%": {
+		'%': {
 			HorizAdvX: 1069,
-			Unicode:   "%",
+			Unicode:   '%',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{358, -15}},
@@ -186,9 +186,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"&": {
+		'&': {
 			HorizAdvX: 833,
-			Unicode:   "&",
+			Unicode:   '&',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{479, 370}},
@@ -225,9 +225,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"'": {
+		'\'': {
 			HorizAdvX: 105,
-			Unicode:   "'",
+			Unicode:   '\'',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{44, 480}},
@@ -238,9 +238,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"(": {
+		'(': {
 			HorizAdvX: 367,
-			Unicode:   "(",
+			Unicode:   '(',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{262, 760}},
@@ -253,9 +253,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		")": {
+		')': {
 			HorizAdvX: 367,
-			Unicode:   ")",
+			Unicode:   ')',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{100, -125}},
@@ -268,9 +268,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"*": {
+		'*': {
 			HorizAdvX: 328,
-			Unicode:   "*",
+			Unicode:   '*',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{164, 697}},
@@ -302,9 +302,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"+": {
+		'+': {
 			HorizAdvX: 465,
-			Unicode:   "+",
+			Unicode:   '+',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{60, 248}},
@@ -323,9 +323,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		",": {
+		',': {
 			HorizAdvX: 242,
-			Unicode:   ",",
+			Unicode:   ',',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 24}},
@@ -338,9 +338,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"-": {
+		'-': {
 			HorizAdvX: 445,
-			Unicode:   "-",
+			Unicode:   '-',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{70, 254}},
@@ -351,9 +351,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		".": {
+		'.': {
 			HorizAdvX: 242,
-			Unicode:   ".",
+			Unicode:   '.',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 28}},
@@ -364,9 +364,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"/": {
+		'/': {
 			HorizAdvX: 269,
-			Unicode:   "/",
+			Unicode:   '/',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{35, -70}},
@@ -377,9 +377,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"0": {
+		'0': {
 			HorizAdvX: 676,
-			Unicode:   "0",
+			Unicode:   '0',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{332, 568}},
@@ -398,9 +398,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"1": {
+		'1': {
 			HorizAdvX: 395,
-			Unicode:   "1",
+			Unicode:   '1',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{324, 0}},
@@ -418,9 +418,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"2": {
+		'2': {
 			HorizAdvX: 516,
-			Unicode:   "2",
+			Unicode:   '2',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 568}},
@@ -442,9 +442,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"3": {
+		'3': {
 			HorizAdvX: 566,
-			Unicode:   "3",
+			Unicode:   '3',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{440, 397}},
@@ -472,9 +472,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"4": {
+		'4': {
 			HorizAdvX: 571,
-			Unicode:   "4",
+			Unicode:   '4',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{545, 0}},
@@ -498,9 +498,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"5": {
+		'5': {
 			HorizAdvX: 570,
-			Unicode:   "5",
+			Unicode:   '5',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, 235}},
@@ -523,9 +523,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"6": {
+		'6': {
 			HorizAdvX: 563,
-			Unicode:   "6",
+			Unicode:   '6',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{319, 672}},
@@ -548,9 +548,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"7": {
+		'7': {
 			HorizAdvX: 0,
-			Unicode:   "7",
+			Unicode:   '7',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{43, 560}},
@@ -566,9 +566,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"8": {
+		'8': {
 			HorizAdvX: 559,
-			Unicode:   "8",
+			Unicode:   '8',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 520}},
@@ -599,9 +599,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"9": {
+		'9': {
 			HorizAdvX: 565,
-			Unicode:   "9",
+			Unicode:   '9',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{256, -112}},
@@ -624,9 +624,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		":": {
+		':': {
 			HorizAdvX: 242,
-			Unicode:   ":",
+			Unicode:   ':',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 28}},
@@ -643,9 +643,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		";": {
+		';': {
 			HorizAdvX: 242,
-			Unicode:   ";",
+			Unicode:   ';',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 24}},
@@ -664,9 +664,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"<": {
+		'<': {
 			HorizAdvX: 438,
-			Unicode:   "<",
+			Unicode:   '<',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{359, 18}},
@@ -679,9 +679,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"=": {
+		'=': {
 			HorizAdvX: 465,
-			Unicode:   "=",
+			Unicode:   '=',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{60, 185}},
@@ -698,9 +698,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		">": {
+		'>': {
 			HorizAdvX: 438,
-			Unicode:   ">",
+			Unicode:   '>',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{79, 462}},
@@ -713,9 +713,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"?": {
+		'?': {
 			HorizAdvX: 409,
-			Unicode:   "?",
+			Unicode:   '?',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{137, 700}},
@@ -743,9 +743,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"@": {
+		'@': {
 			HorizAdvX: 857,
-			Unicode:   "@",
+			Unicode:   '@',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{580, 456}},
@@ -782,9 +782,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"A": {
+		'A': {
 			HorizAdvX: 728,
-			Unicode:   "A",
+			Unicode:   'A',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 15}},
@@ -812,9 +812,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"B": {
+		'B': {
 			HorizAdvX: 615,
-			Unicode:   "B",
+			Unicode:   'B',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{329, 0}},
@@ -848,9 +848,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"C": {
+		'C': {
 			HorizAdvX: 687,
-			Unicode:   "C",
+			Unicode:   'C',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{620, 68}},
@@ -871,9 +871,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"D": {
+		'D': {
 			HorizAdvX: 743,
-			Unicode:   "D",
+			Unicode:   'D',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{50, 0}},
@@ -897,9 +897,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"E": {
+		'E': {
 			HorizAdvX: 587,
-			Unicode:   "E",
+			Unicode:   'E',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 0}},
@@ -930,9 +930,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"F": {
+		'F': {
 			HorizAdvX: 563,
-			Unicode:   "F",
+			Unicode:   'F',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{312, 0}},
@@ -960,9 +960,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"G": {
+		'G': {
 			HorizAdvX: 747,
-			Unicode:   "G",
+			Unicode:   'G',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{602, 0}},
@@ -991,9 +991,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"H": {
+		'H': {
 			HorizAdvX: 753,
-			Unicode:   "H",
+			Unicode:   'H',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{702, 0}},
@@ -1027,9 +1027,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"I": {
+		'I': {
 			HorizAdvX: 376,
-			Unicode:   "I",
+			Unicode:   'I',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 0}},
@@ -1047,9 +1047,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"J": {
+		'J': {
 			HorizAdvX: 376,
-			Unicode:   "J",
+			Unicode:   'J',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{176, 74}},
@@ -1066,9 +1066,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"K": {
+		'K': {
 			HorizAdvX: 666,
-			Unicode:   "K",
+			Unicode:   'K',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{283, 0}},
@@ -1102,9 +1102,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"L": {
+		'L': {
 			HorizAdvX: 536,
-			Unicode:   "L",
+			Unicode:   'L',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{511, 0}},
@@ -1124,9 +1124,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"M": {
+		'M': {
 			HorizAdvX: 998,
-			Unicode:   "M",
+			Unicode:   'M',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{833, 15}},
@@ -1162,9 +1162,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"N": {
+		'N': {
 			HorizAdvX: 865,
-			Unicode:   "N",
+			Unicode:   'N',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 700}},
@@ -1190,9 +1190,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"O": {
+		'O': {
 			HorizAdvX: 794,
-			Unicode:   "O",
+			Unicode:   'O',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 708}},
@@ -1211,9 +1211,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"P": {
+		'P': {
 			HorizAdvX: 602,
-			Unicode:   "P",
+			Unicode:   'P',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 0}},
@@ -1240,9 +1240,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Q": {
+		'Q': {
 			HorizAdvX: 794,
-			Unicode:   "Q",
+			Unicode:   'Q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 708}},
@@ -1267,9 +1267,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"R": {
+		'R': {
 			HorizAdvX: 682,
-			Unicode:   "R",
+			Unicode:   'R',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 0}},
@@ -1302,9 +1302,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"S": {
+		'S': {
 			HorizAdvX: 608,
-			Unicode:   "S",
+			Unicode:   'S',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{325, 708}},
@@ -1333,9 +1333,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"T": {
+		'T': {
 			HorizAdvX: 612,
-			Unicode:   "T",
+			Unicode:   'T',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{30, 700}},
@@ -1357,9 +1357,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"U": {
+		'U': {
 			HorizAdvX: 771,
-			Unicode:   "U",
+			Unicode:   'U',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{629, 685}},
@@ -1384,9 +1384,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"V": {
+		'V': {
 			HorizAdvX: 759,
-			Unicode:   "V",
+			Unicode:   'V',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{663, 685}},
@@ -1408,9 +1408,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"W": {
+		'W': {
 			HorizAdvX: 1092,
-			Unicode:   "W",
+			Unicode:   'W',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{993, 685}},
@@ -1444,9 +1444,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"X": {
+		'X': {
 			HorizAdvX: 713,
-			Unicode:   "X",
+			Unicode:   'X',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 15}},
@@ -1480,9 +1480,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Y": {
+		'Y': {
 			HorizAdvX: 675,
-			Unicode:   "Y",
+			Unicode:   'Y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437, 0}},
@@ -1510,9 +1510,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Z": {
+		'Z': {
 			HorizAdvX: 722,
-			Unicode:   "Z",
+			Unicode:   'Z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{624, 0}},
@@ -1532,9 +1532,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"[": {
+		'[': {
 			HorizAdvX: 328,
-			Unicode:   "[",
+			Unicode:   '[',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{125, 724}},
@@ -1549,9 +1549,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\\": {
+		'\\': {
 			HorizAdvX: 269,
-			Unicode:   "\\",
+			Unicode:   '\\',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{55, 750}},
@@ -1562,9 +1562,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"]": {
+		']': {
 			HorizAdvX: 328,
-			Unicode:   "]",
+			Unicode:   ']',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, -86}},
@@ -1579,9 +1579,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"^": {
+		'^': {
 			HorizAdvX: 483,
-			Unicode:   "^",
+			Unicode:   '^',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 699}},
@@ -1594,9 +1594,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"_": {
+		'_': {
 			HorizAdvX: 545,
-			Unicode:   "_",
+			Unicode:   '_',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{20, -121}},
@@ -1607,9 +1607,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"`": {
+		'`': {
 			HorizAdvX: 550,
-			Unicode:   "`",
+			Unicode:   '`',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{321, 564}},
@@ -1619,9 +1619,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a": {
+		'a': {
 			HorizAdvX: 553,
-			Unicode:   "a",
+			Unicode:   'a',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 453}},
@@ -1653,9 +1653,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"b": {
+		'b': {
 			HorizAdvX: 557,
-			Unicode:   "b",
+			Unicode:   'b',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{117, 26}},
@@ -1682,9 +1682,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c": {
+		'c': {
 			HorizAdvX: 500,
-			Unicode:   "c",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{434, 437}},
@@ -1704,9 +1704,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"d": {
+		'd': {
 			HorizAdvX: 563,
-			Unicode:   "d",
+			Unicode:   'd',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{532, 0}},
@@ -1736,9 +1736,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"e": {
+		'e': {
 			HorizAdvX: 514,
-			Unicode:   "e",
+			Unicode:   'e',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{453, 237}},
@@ -1759,9 +1759,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"f": {
+		'f': {
 			HorizAdvX: 380,
-			Unicode:   "f",
+			Unicode:   'f',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{142, 15}},
@@ -1791,9 +1791,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fb": {
+		'\ufb1c': {
 			HorizAdvX: 902,
-			Unicode:   "fb",
+			Unicode:   '\ufb1c',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{462, 26}},
@@ -1838,9 +1838,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ff": {
+		'\ufb00': {
 			HorizAdvX: 760,
-			Unicode:   "ff",
+			Unicode:   '\ufb00',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{484, 15}},
@@ -1890,9 +1890,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ffi": {
+		'\ufb03': {
 			HorizAdvX: 1062,
-			Unicode:   "ffi",
+			Unicode:   '\ufb03',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{839, 672}},
@@ -1949,9 +1949,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ffj": {
+		'\ufb09': {
 			HorizAdvX: 981,
-			Unicode:   "ffj",
+			Unicode:   '\ufb09',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{760, -149}},
@@ -2006,9 +2006,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ffl": {
+		'\ufb04': {
 			HorizAdvX: 996,
-			Unicode:   "ffl",
+			Unicode:   '\ufb04',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{945, 0}},
@@ -2064,9 +2064,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fh": {
+		'\ufb0b': {
 			HorizAdvX: 949,
-			Unicode:   "fh",
+			Unicode:   '\ufb0b',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{575, 0}},
@@ -2113,9 +2113,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fi": {
+		'\ufb01': {
 			HorizAdvX: 652,
-			Unicode:   "fi",
+			Unicode:   '\ufb01',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{142, 15}},
@@ -2163,9 +2163,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fj": {
+		'\ufb0c': {
 			HorizAdvX: 639,
-			Unicode:   "fj",
+			Unicode:   '\ufb0c',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{497, 672}},
@@ -2206,9 +2206,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fk": {
+		'\ufb0d': {
 			HorizAdvX: 861,
-			Unicode:   "fk",
+			Unicode:   '\ufb0d',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{577, 0}},
@@ -2260,9 +2260,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fl": {
+		'\ufb02': {
 			HorizAdvX: 654,
-			Unicode:   "fl",
+			Unicode:   '\ufb02',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{142, 15}},
@@ -2299,9 +2299,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"f\u00ed": {
+		'f': {
 			HorizAdvX: 682,
-			Unicode:   "f\u00ed",
+			Unicode:   'f',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{142, 15}},
@@ -2348,9 +2348,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"g": {
+		'g': {
 			HorizAdvX: 536,
-			Unicode:   "g",
+			Unicode:   'g',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 488}},
@@ -2393,9 +2393,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"h": {
+		'h': {
 			HorizAdvX: 617,
-			Unicode:   "h",
+			Unicode:   'h',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 0}},
@@ -2424,9 +2424,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"i": {
+		'i': {
 			HorizAdvX: 292,
-			Unicode:   "i",
+			Unicode:   'i',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 0}},
@@ -2449,9 +2449,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"j": {
+		'j': {
 			HorizAdvX: 281,
-			Unicode:   "j",
+			Unicode:   'j',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{58, -149}},
@@ -2473,9 +2473,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"k": {
+		'k': {
 			HorizAdvX: 527,
-			Unicode:   "k",
+			Unicode:   'k',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 0}},
@@ -2509,9 +2509,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"l": {
+		'l': {
 			HorizAdvX: 304,
-			Unicode:   "l",
+			Unicode:   'l',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{253, 0}},
@@ -2529,9 +2529,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"m": {
+		'm': {
 			HorizAdvX: 940,
-			Unicode:   "m",
+			Unicode:   'm',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{226, 0}},
@@ -2571,9 +2571,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"n": {
+		'n': {
 			HorizAdvX: 607,
-			Unicode:   "n",
+			Unicode:   'n',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{226, 0}},
@@ -2602,9 +2602,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"o": {
+		'o': {
 			HorizAdvX: 549,
-			Unicode:   "o",
+			Unicode:   'o',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 488}},
@@ -2623,9 +2623,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"p": {
+		'p': {
 			HorizAdvX: 578,
-			Unicode:   "p",
+			Unicode:   'p',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{226, -230}},
@@ -2656,9 +2656,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"q": {
+		'q': {
 			HorizAdvX: 564,
-			Unicode:   "q",
+			Unicode:   'q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{523, -230}},
@@ -2686,9 +2686,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"r": {
+		'r': {
 			HorizAdvX: 403,
-			Unicode:   "r",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{226, 0}},
@@ -2712,9 +2712,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"s": {
+		's': {
 			HorizAdvX: 447,
-			Unicode:   "s",
+			Unicode:   's',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{236, 488}},
@@ -2743,9 +2743,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"t": {
+		't': {
 			HorizAdvX: 348,
-			Unicode:   "t",
+			Unicode:   't',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{317, 16}},
@@ -2768,9 +2768,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"u": {
+		'u': {
 			HorizAdvX: 627,
-			Unicode:   "u",
+			Unicode:   'u',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{586, 0}},
@@ -2799,9 +2799,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"v": {
+		'v': {
 			HorizAdvX: 566,
-			Unicode:   "v",
+			Unicode:   'v',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{493, 465}},
@@ -2823,9 +2823,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"w": {
+		'w': {
 			HorizAdvX: 784,
-			Unicode:   "w",
+			Unicode:   'w',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{708, 465}},
@@ -2859,9 +2859,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"x": {
+		'x': {
 			HorizAdvX: 533,
-			Unicode:   "x",
+			Unicode:   'x',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 15}},
@@ -2895,9 +2895,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"y": {
+		'y': {
 			HorizAdvX: 578,
-			Unicode:   "y",
+			Unicode:   'y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, 465}},
@@ -2928,9 +2928,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"z": {
+		'z': {
 			HorizAdvX: 521,
-			Unicode:   "z",
+			Unicode:   'z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{95, 320}},
@@ -2952,9 +2952,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"{": {
+		'{': {
 			HorizAdvX: 329,
-			Unicode:   "{",
+			Unicode:   '{',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{200, 724}},
@@ -2981,9 +2981,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"|": {
+		'|': {
 			HorizAdvX: 210,
-			Unicode:   "|",
+			Unicode:   '|',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{95, -70}},
@@ -2994,9 +2994,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"}": {
+		'}': {
 			HorizAdvX: 329,
-			Unicode:   "}",
+			Unicode:   '}',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{129, -86}},
@@ -3023,9 +3023,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"~": {
+		'~': {
 			HorizAdvX: 582,
-			Unicode:   "~",
+			Unicode:   '~',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119, 606}},
@@ -3039,9 +3039,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a1": {
+		'¡': {
 			HorizAdvX: 242,
-			Unicode:   "\u00a1",
+			Unicode:   '¡',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{136, -199}},
@@ -3059,9 +3059,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a2": {
+		'¢': {
 			HorizAdvX: 484,
-			Unicode:   "\u00a2",
+			Unicode:   '¢',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{444, 437}},
@@ -3091,9 +3091,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a3": {
+		'£': {
 			HorizAdvX: 594,
-			Unicode:   "\u00a3",
+			Unicode:   '£',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 0}},
@@ -3124,9 +3124,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a4": {
+		'¤': {
 			HorizAdvX: 588,
-			Unicode:   "\u00a4",
+			Unicode:   '¤',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{61, 0}},
@@ -3160,9 +3160,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a5": {
+		'¥': {
 			HorizAdvX: 675,
-			Unicode:   "\u00a5",
+			Unicode:   '¥',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437, 0}},
@@ -3206,9 +3206,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a6": {
+		'¦': {
 			HorizAdvX: 210,
-			Unicode:   "\u00a6",
+			Unicode:   '¦',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{95, -70}},
@@ -3225,9 +3225,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a7": {
+		'§': {
 			HorizAdvX: 640,
-			Unicode:   "\u00a7",
+			Unicode:   '§',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{338, 708}},
@@ -3273,9 +3273,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a8": {
+		'¨': {
 			HorizAdvX: 407,
-			Unicode:   "\u00a8",
+			Unicode:   '¨',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 641}},
@@ -3292,9 +3292,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a9": {
+		'©': {
 			HorizAdvX: 813,
-			Unicode:   "\u00a9",
+			Unicode:   '©',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{91, 349}},
@@ -3327,9 +3327,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00aa": {
+		'ª': {
 			HorizAdvX: 449,
-			Unicode:   "\u00aa",
+			Unicode:   'ª',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{110, 654}},
@@ -3366,9 +3366,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ab": {
+		'«': {
 			HorizAdvX: 553,
-			Unicode:   "\u00ab",
+			Unicode:   '«',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{266, 12}},
@@ -3393,9 +3393,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ac": {
+		'¬': {
 			HorizAdvX: 585,
-			Unicode:   "\u00ac",
+			Unicode:   '¬',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{70, 329}},
@@ -3408,9 +3408,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ad": {
+		'­': {
 			HorizAdvX: 445,
-			Unicode:   "\u00ad",
+			Unicode:   '­',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{70, 254}},
@@ -3421,9 +3421,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ae": {
+		'®': {
 			HorizAdvX: 813,
-			Unicode:   "\u00ae",
+			Unicode:   '®',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{91, 349}},
@@ -3466,9 +3466,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00af": {
+		'¯': {
 			HorizAdvX: 503,
-			Unicode:   "\u00af",
+			Unicode:   '¯',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{84, 619}},
@@ -3479,9 +3479,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b0": {
+		'°': {
 			HorizAdvX: 395,
-			Unicode:   "\u00b0",
+			Unicode:   '°',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{55, 546}},
@@ -3500,9 +3500,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b1": {
+		'±': {
 			HorizAdvX: 465,
-			Unicode:   "\u00b1",
+			Unicode:   '±',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{60, 299}},
@@ -3527,9 +3527,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b2": {
+		'²': {
 			HorizAdvX: 378,
-			Unicode:   "\u00b2",
+			Unicode:   '²',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{323, 300}},
@@ -3552,9 +3552,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b3": {
+		'³': {
 			HorizAdvX: 368,
-			Unicode:   "\u00b3",
+			Unicode:   '³',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{269, 598}},
@@ -3582,9 +3582,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b4": {
+		'´': {
 			HorizAdvX: 550,
-			Unicode:   "\u00b4",
+			Unicode:   '´',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{207, 559}},
@@ -3594,9 +3594,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b5": {
+		'µ': {
 			HorizAdvX: 627,
-			Unicode:   "\u00b5",
+			Unicode:   'µ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{237, -230}},
@@ -3631,9 +3631,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b6": {
+		'¶': {
 			HorizAdvX: 498,
-			Unicode:   "\u00b6",
+			Unicode:   '¶',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{60, 533}},
@@ -3657,9 +3657,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b7": {
+		'·': {
 			HorizAdvX: 242,
-			Unicode:   "\u00b7",
+			Unicode:   '·',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 216}},
@@ -3670,9 +3670,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b8": {
+		'¸': {
 			HorizAdvX: 326,
-			Unicode:   "\u00b8",
+			Unicode:   '¸',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{167, 3}},
@@ -3687,9 +3687,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b9": {
+		'¹': {
 			HorizAdvX: 264,
-			Unicode:   "\u00b9",
+			Unicode:   '¹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{209, 300}},
@@ -3706,9 +3706,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ba": {
+		'º': {
 			HorizAdvX: 448,
-			Unicode:   "\u00ba",
+			Unicode:   'º',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{230, 682}},
@@ -3733,9 +3733,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bb": {
+		'»': {
 			HorizAdvX: 553,
-			Unicode:   "\u00bb",
+			Unicode:   '»',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{72, 468}},
@@ -3760,9 +3760,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bc": {
+		'¼': {
 			HorizAdvX: 746,
-			Unicode:   "\u00bc",
+			Unicode:   '¼',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{153, -15}},
@@ -3806,9 +3806,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bd": {
+		'½': {
 			HorizAdvX: 783,
-			Unicode:   "\u00bd",
+			Unicode:   '½',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{153, -15}},
@@ -3848,9 +3848,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00be": {
+		'¾': {
 			HorizAdvX: 796,
-			Unicode:   "\u00be",
+			Unicode:   '¾',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{235, -15}},
@@ -3905,9 +3905,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bf": {
+		'¿': {
 			HorizAdvX: 409,
-			Unicode:   "\u00bf",
+			Unicode:   '¿',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{272, -199}},
@@ -3935,9 +3935,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c0": {
+		'À': {
 			HorizAdvX: 728,
-			Unicode:   "\u00c0",
+			Unicode:   'À',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 15}},
@@ -3970,9 +3970,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c1": {
+		'Á': {
 			HorizAdvX: 728,
-			Unicode:   "\u00c1",
+			Unicode:   'Á',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 15}},
@@ -4005,9 +4005,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c2": {
+		'Â': {
 			HorizAdvX: 728,
-			Unicode:   "\u00c2",
+			Unicode:   'Â',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 15}},
@@ -4043,9 +4043,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c3": {
+		'Ã': {
 			HorizAdvX: 728,
-			Unicode:   "\u00c3",
+			Unicode:   'Ã',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 15}},
@@ -4082,9 +4082,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c4": {
+		'Ä': {
 			HorizAdvX: 728,
-			Unicode:   "\u00c4",
+			Unicode:   'Ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 15}},
@@ -4124,9 +4124,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c5": {
+		'Å': {
 			HorizAdvX: 728,
-			Unicode:   "\u00c5",
+			Unicode:   'Å',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 15}},
@@ -4166,9 +4166,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c6": {
+		'Æ': {
 			HorizAdvX: 913,
-			Unicode:   "\u00c6",
+			Unicode:   'Æ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{858, 0}},
@@ -4210,9 +4210,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c7": {
+		'Ç': {
 			HorizAdvX: 687,
-			Unicode:   "\u00c7",
+			Unicode:   'Ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{620, 68}},
@@ -4241,9 +4241,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c8": {
+		'È': {
 			HorizAdvX: 587,
-			Unicode:   "\u00c8",
+			Unicode:   'È',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 0}},
@@ -4279,9 +4279,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c9": {
+		'É': {
 			HorizAdvX: 587,
-			Unicode:   "\u00c9",
+			Unicode:   'É',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 0}},
@@ -4317,9 +4317,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ca": {
+		'Ê': {
 			HorizAdvX: 587,
-			Unicode:   "\u00ca",
+			Unicode:   'Ê',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 0}},
@@ -4358,9 +4358,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cb": {
+		'Ë': {
 			HorizAdvX: 587,
-			Unicode:   "\u00cb",
+			Unicode:   'Ë',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 0}},
@@ -4403,9 +4403,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cc": {
+		'Ì': {
 			HorizAdvX: 376,
-			Unicode:   "\u00cc",
+			Unicode:   'Ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 0}},
@@ -4428,9 +4428,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cd": {
+		'Í': {
 			HorizAdvX: 376,
-			Unicode:   "\u00cd",
+			Unicode:   'Í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 0}},
@@ -4453,9 +4453,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ce": {
+		'Î': {
 			HorizAdvX: 376,
-			Unicode:   "\u00ce",
+			Unicode:   'Î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 0}},
@@ -4481,9 +4481,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cf": {
+		'Ï': {
 			HorizAdvX: 376,
-			Unicode:   "\u00cf",
+			Unicode:   'Ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 0}},
@@ -4513,9 +4513,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d0": {
+		'Ð': {
 			HorizAdvX: 743,
-			Unicode:   "\u00d0",
+			Unicode:   'Ð',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{52, 345}},
@@ -4547,9 +4547,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d1": {
+		'Ñ': {
 			HorizAdvX: 865,
-			Unicode:   "\u00d1",
+			Unicode:   'Ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 700}},
@@ -4584,9 +4584,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d2": {
+		'Ò': {
 			HorizAdvX: 794,
-			Unicode:   "\u00d2",
+			Unicode:   'Ò',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 708}},
@@ -4610,9 +4610,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d3": {
+		'Ó': {
 			HorizAdvX: 794,
-			Unicode:   "\u00d3",
+			Unicode:   'Ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 708}},
@@ -4636,9 +4636,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d4": {
+		'Ô': {
 			HorizAdvX: 794,
-			Unicode:   "\u00d4",
+			Unicode:   'Ô',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 708}},
@@ -4665,9 +4665,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d5": {
+		'Õ': {
 			HorizAdvX: 794,
-			Unicode:   "\u00d5",
+			Unicode:   'Õ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 708}},
@@ -4695,9 +4695,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d6": {
+		'Ö': {
 			HorizAdvX: 794,
-			Unicode:   "\u00d6",
+			Unicode:   'Ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 708}},
@@ -4728,9 +4728,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d7": {
+		'×': {
 			HorizAdvX: 465,
-			Unicode:   "\u00d7",
+			Unicode:   '×',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{117, 129}},
@@ -4748,9 +4748,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d8": {
+		'Ø': {
 			HorizAdvX: 794,
-			Unicode:   "\u00d8",
+			Unicode:   'Ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 708}},
@@ -4783,9 +4783,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d9": {
+		'Ù': {
 			HorizAdvX: 771,
-			Unicode:   "\u00d9",
+			Unicode:   'Ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{629, 685}},
@@ -4815,9 +4815,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00da": {
+		'Ú': {
 			HorizAdvX: 771,
-			Unicode:   "\u00da",
+			Unicode:   'Ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{629, 685}},
@@ -4847,9 +4847,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00db": {
+		'Û': {
 			HorizAdvX: 771,
-			Unicode:   "\u00db",
+			Unicode:   'Û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{629, 685}},
@@ -4882,9 +4882,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dc": {
+		'Ü': {
 			HorizAdvX: 771,
-			Unicode:   "\u00dc",
+			Unicode:   'Ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{629, 685}},
@@ -4921,9 +4921,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dd": {
+		'Ý': {
 			HorizAdvX: 675,
-			Unicode:   "\u00dd",
+			Unicode:   'Ý',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437, 0}},
@@ -4956,9 +4956,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00de": {
+		'Þ': {
 			HorizAdvX: 605,
-			Unicode:   "\u00de",
+			Unicode:   'Þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -4989,9 +4989,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00df": {
+		'ß': {
 			HorizAdvX: 664,
-			Unicode:   "\u00df",
+			Unicode:   'ß',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{534, 515}},
@@ -5029,9 +5029,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e0": {
+		'à': {
 			HorizAdvX: 553,
-			Unicode:   "\u00e0",
+			Unicode:   'à',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 453}},
@@ -5068,9 +5068,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e1": {
+		'á': {
 			HorizAdvX: 553,
-			Unicode:   "\u00e1",
+			Unicode:   'á',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 453}},
@@ -5107,9 +5107,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e2": {
+		'â': {
 			HorizAdvX: 553,
-			Unicode:   "\u00e2",
+			Unicode:   'â',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 453}},
@@ -5149,9 +5149,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e3": {
+		'ã': {
 			HorizAdvX: 553,
-			Unicode:   "\u00e3",
+			Unicode:   'ã',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 453}},
@@ -5192,9 +5192,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e4": {
+		'ä': {
 			HorizAdvX: 553,
-			Unicode:   "\u00e4",
+			Unicode:   'ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 453}},
@@ -5238,9 +5238,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e5": {
+		'å': {
 			HorizAdvX: 553,
-			Unicode:   "\u00e5",
+			Unicode:   'å',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 453}},
@@ -5284,9 +5284,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e6": {
+		'æ': {
 			HorizAdvX: 848,
-			Unicode:   "\u00e6",
+			Unicode:   'æ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{787, 237}},
@@ -5329,9 +5329,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e7": {
+		'ç': {
 			HorizAdvX: 500,
-			Unicode:   "\u00e7",
+			Unicode:   'ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{434, 437}},
@@ -5359,9 +5359,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e8": {
+		'è': {
 			HorizAdvX: 514,
-			Unicode:   "\u00e8",
+			Unicode:   'è',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{453, 237}},
@@ -5387,9 +5387,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e9": {
+		'é': {
 			HorizAdvX: 514,
-			Unicode:   "\u00e9",
+			Unicode:   'é',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{453, 237}},
@@ -5415,9 +5415,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ea": {
+		'ê': {
 			HorizAdvX: 514,
-			Unicode:   "\u00ea",
+			Unicode:   'ê',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{453, 237}},
@@ -5446,9 +5446,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00eb": {
+		'ë': {
 			HorizAdvX: 514,
-			Unicode:   "\u00eb",
+			Unicode:   'ë',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{453, 237}},
@@ -5481,9 +5481,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ec": {
+		'ì': {
 			HorizAdvX: 292,
-			Unicode:   "\u00ec",
+			Unicode:   'ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 0}},
@@ -5505,9 +5505,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ed": {
+		'í': {
 			HorizAdvX: 292,
-			Unicode:   "\u00ed",
+			Unicode:   'í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 0}},
@@ -5529,9 +5529,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ee": {
+		'î': {
 			HorizAdvX: 292,
-			Unicode:   "\u00ee",
+			Unicode:   'î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 0}},
@@ -5556,9 +5556,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ef": {
+		'ï': {
 			HorizAdvX: 292,
-			Unicode:   "\u00ef",
+			Unicode:   'ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 0}},
@@ -5587,9 +5587,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f0": {
+		'ð': {
 			HorizAdvX: 551,
-			Unicode:   "\u00f0",
+			Unicode:   'ð',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{213, 575}},
@@ -5619,9 +5619,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f1": {
+		'ñ': {
 			HorizAdvX: 607,
-			Unicode:   "\u00f1",
+			Unicode:   'ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{226, 0}},
@@ -5659,9 +5659,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f2": {
+		'ò': {
 			HorizAdvX: 549,
-			Unicode:   "\u00f2",
+			Unicode:   'ò',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 488}},
@@ -5685,9 +5685,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3": {
+		'ó': {
 			HorizAdvX: 549,
-			Unicode:   "\u00f3",
+			Unicode:   'ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 488}},
@@ -5711,9 +5711,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f4": {
+		'ô': {
 			HorizAdvX: 549,
-			Unicode:   "\u00f4",
+			Unicode:   'ô',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 488}},
@@ -5740,9 +5740,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f5": {
+		'õ': {
 			HorizAdvX: 549,
-			Unicode:   "\u00f5",
+			Unicode:   'õ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 488}},
@@ -5770,9 +5770,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f6": {
+		'ö': {
 			HorizAdvX: 549,
-			Unicode:   "\u00f6",
+			Unicode:   'ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 488}},
@@ -5803,9 +5803,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f7": {
+		'÷': {
 			HorizAdvX: 465,
-			Unicode:   "\u00f7",
+			Unicode:   '÷',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{60, 245}},
@@ -5828,9 +5828,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f8": {
+		'ø': {
 			HorizAdvX: 549,
-			Unicode:   "\u00f8",
+			Unicode:   'ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 488}},
@@ -5863,9 +5863,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f9": {
+		'ù': {
 			HorizAdvX: 627,
-			Unicode:   "\u00f9",
+			Unicode:   'ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{586, 0}},
@@ -5899,9 +5899,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fa": {
+		'ú': {
 			HorizAdvX: 627,
-			Unicode:   "\u00fa",
+			Unicode:   'ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{586, 0}},
@@ -5935,9 +5935,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fb": {
+		'û': {
 			HorizAdvX: 627,
-			Unicode:   "\u00fb",
+			Unicode:   'û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{586, 0}},
@@ -5974,9 +5974,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fc": {
+		'ü': {
 			HorizAdvX: 627,
-			Unicode:   "\u00fc",
+			Unicode:   'ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{586, 0}},
@@ -6017,9 +6017,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fd": {
+		'ý': {
 			HorizAdvX: 578,
-			Unicode:   "\u00fd",
+			Unicode:   'ý',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, 465}},
@@ -6055,9 +6055,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fe": {
+		'þ': {
 			HorizAdvX: 578,
-			Unicode:   "\u00fe",
+			Unicode:   'þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{226, -230}},
@@ -6089,9 +6089,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ff": {
+		'ÿ': {
 			HorizAdvX: 578,
-			Unicode:   "\u00ff",
+			Unicode:   'ÿ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, 465}},
@@ -6134,9 +6134,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0100": {
+		'Ā': {
 			HorizAdvX: 728,
-			Unicode:   "\u0100",
+			Unicode:   'Ā',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 15}},
@@ -6170,9 +6170,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0101": {
+		'ā': {
 			HorizAdvX: 553,
-			Unicode:   "\u0101",
+			Unicode:   'ā',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 453}},
@@ -6210,9 +6210,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0102": {
+		'Ă': {
 			HorizAdvX: 728,
-			Unicode:   "\u0102",
+			Unicode:   'Ă',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 15}},
@@ -6249,9 +6249,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0103": {
+		'ă': {
 			HorizAdvX: 553,
-			Unicode:   "\u0103",
+			Unicode:   'ă',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 453}},
@@ -6292,9 +6292,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0104": {
+		'Ą': {
 			HorizAdvX: 728,
-			Unicode:   "\u0104",
+			Unicode:   'Ą',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 15}},
@@ -6328,9 +6328,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0105": {
+		'ą': {
 			HorizAdvX: 553,
-			Unicode:   "\u0105",
+			Unicode:   'ą',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{503, 10}},
@@ -6366,9 +6366,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0106": {
+		'Ć': {
 			HorizAdvX: 687,
-			Unicode:   "\u0106",
+			Unicode:   'Ć',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{620, 68}},
@@ -6394,9 +6394,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0107": {
+		'ć': {
 			HorizAdvX: 500,
-			Unicode:   "\u0107",
+			Unicode:   'ć',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{434, 437}},
@@ -6421,9 +6421,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0108": {
+		'Ĉ': {
 			HorizAdvX: 687,
-			Unicode:   "\u0108",
+			Unicode:   'Ĉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{620, 68}},
@@ -6452,9 +6452,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0109": {
+		'ĉ': {
 			HorizAdvX: 500,
-			Unicode:   "\u0109",
+			Unicode:   'ĉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{434, 437}},
@@ -6482,9 +6482,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010a": {
+		'Ċ': {
 			HorizAdvX: 687,
-			Unicode:   "\u010a",
+			Unicode:   'Ċ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{620, 68}},
@@ -6511,9 +6511,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010b": {
+		'ċ': {
 			HorizAdvX: 500,
-			Unicode:   "\u010b",
+			Unicode:   'ċ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{434, 437}},
@@ -6539,9 +6539,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010c": {
+		'Č': {
 			HorizAdvX: 687,
-			Unicode:   "\u010c",
+			Unicode:   'Č',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{620, 68}},
@@ -6570,9 +6570,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010d": {
+		'č': {
 			HorizAdvX: 500,
-			Unicode:   "\u010d",
+			Unicode:   'č',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{434, 437}},
@@ -6600,9 +6600,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010e": {
+		'Ď': {
 			HorizAdvX: 743,
-			Unicode:   "\u010e",
+			Unicode:   'Ď',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{50, 0}},
@@ -6634,9 +6634,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010f": {
+		'ď': {
 			HorizAdvX: 563,
-			Unicode:   "\u010f",
+			Unicode:   'ď',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{532, 0}},
@@ -6674,9 +6674,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0110": {
+		'Đ': {
 			HorizAdvX: 743,
-			Unicode:   "\u0110",
+			Unicode:   'Đ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{52, 345}},
@@ -6708,9 +6708,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0111": {
+		'đ': {
 			HorizAdvX: 563,
-			Unicode:   "\u0111",
+			Unicode:   'đ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{238, 600}},
@@ -6749,9 +6749,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0112": {
+		'Ē': {
 			HorizAdvX: 587,
-			Unicode:   "\u0112",
+			Unicode:   'Ē',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 0}},
@@ -6788,9 +6788,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0113": {
+		'ē': {
 			HorizAdvX: 514,
-			Unicode:   "\u0113",
+			Unicode:   'ē',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{453, 237}},
@@ -6817,9 +6817,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0114": {
+		'Ĕ': {
 			HorizAdvX: 587,
-			Unicode:   "\u0114",
+			Unicode:   'Ĕ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 0}},
@@ -6859,9 +6859,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0115": {
+		'ĕ': {
 			HorizAdvX: 514,
-			Unicode:   "\u0115",
+			Unicode:   'ĕ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{453, 237}},
@@ -6891,9 +6891,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0116": {
+		'Ė': {
 			HorizAdvX: 587,
-			Unicode:   "\u0116",
+			Unicode:   'Ė',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 0}},
@@ -6930,9 +6930,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0117": {
+		'ė': {
 			HorizAdvX: 514,
-			Unicode:   "\u0117",
+			Unicode:   'ė',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{453, 237}},
@@ -6959,9 +6959,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0118": {
+		'Ę': {
 			HorizAdvX: 587,
-			Unicode:   "\u0118",
+			Unicode:   'Ę',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 0}},
@@ -6997,9 +6997,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0119": {
+		'ę': {
 			HorizAdvX: 514,
-			Unicode:   "\u0119",
+			Unicode:   'ę',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{453, 237}},
@@ -7025,9 +7025,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011a": {
+		'Ě': {
 			HorizAdvX: 587,
-			Unicode:   "\u011a",
+			Unicode:   'Ě',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 0}},
@@ -7066,9 +7066,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011b": {
+		'ě': {
 			HorizAdvX: 514,
-			Unicode:   "\u011b",
+			Unicode:   'ě',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{453, 237}},
@@ -7097,9 +7097,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011c": {
+		'Ĝ': {
 			HorizAdvX: 747,
-			Unicode:   "\u011c",
+			Unicode:   'Ĝ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{602, 0}},
@@ -7136,9 +7136,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011d": {
+		'ĝ': {
 			HorizAdvX: 536,
-			Unicode:   "\u011d",
+			Unicode:   'ĝ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 488}},
@@ -7189,9 +7189,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011e": {
+		'Ğ': {
 			HorizAdvX: 747,
-			Unicode:   "\u011e",
+			Unicode:   'Ğ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{602, 0}},
@@ -7229,9 +7229,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011f": {
+		'ğ': {
 			HorizAdvX: 536,
-			Unicode:   "\u011f",
+			Unicode:   'ğ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 488}},
@@ -7283,9 +7283,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0120": {
+		'Ġ': {
 			HorizAdvX: 747,
-			Unicode:   "\u0120",
+			Unicode:   'Ġ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{602, 0}},
@@ -7320,9 +7320,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0121": {
+		'ġ': {
 			HorizAdvX: 536,
-			Unicode:   "\u0121",
+			Unicode:   'ġ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 488}},
@@ -7371,9 +7371,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0122": {
+		'Ģ': {
 			HorizAdvX: 747,
-			Unicode:   "\u0122",
+			Unicode:   'Ģ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{602, 0}},
@@ -7410,9 +7410,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0123": {
+		'ģ': {
 			HorizAdvX: 536,
-			Unicode:   "\u0123",
+			Unicode:   'ģ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 488}},
@@ -7463,9 +7463,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0124": {
+		'Ĥ': {
 			HorizAdvX: 753,
-			Unicode:   "\u0124",
+			Unicode:   'Ĥ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{702, 0}},
@@ -7507,9 +7507,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0125": {
+		'ĥ': {
 			HorizAdvX: 617,
-			Unicode:   "\u0125",
+			Unicode:   'ĥ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 0}},
@@ -7546,9 +7546,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0126": {
+		'Ħ': {
 			HorizAdvX: 753,
-			Unicode:   "\u0126",
+			Unicode:   'Ħ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{60, 518}},
@@ -7597,9 +7597,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0127": {
+		'ħ': {
 			HorizAdvX: 617,
-			Unicode:   "\u0127",
+			Unicode:   'ħ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{51, 600}},
@@ -7637,9 +7637,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0128": {
+		'Ĩ': {
 			HorizAdvX: 376,
-			Unicode:   "\u0128",
+			Unicode:   'Ĩ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 0}},
@@ -7666,9 +7666,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0129": {
+		'ĩ': {
 			HorizAdvX: 292,
-			Unicode:   "\u0129",
+			Unicode:   'ĩ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 0}},
@@ -7694,9 +7694,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012a": {
+		'Ī': {
 			HorizAdvX: 376,
-			Unicode:   "\u012a",
+			Unicode:   'Ī',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 0}},
@@ -7720,9 +7720,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012b": {
+		'ī': {
 			HorizAdvX: 292,
-			Unicode:   "\u012b",
+			Unicode:   'ī',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 0}},
@@ -7745,9 +7745,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012c": {
+		'Ĭ': {
 			HorizAdvX: 376,
-			Unicode:   "\u012c",
+			Unicode:   'Ĭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 0}},
@@ -7774,9 +7774,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012d": {
+		'ĭ': {
 			HorizAdvX: 292,
-			Unicode:   "\u012d",
+			Unicode:   'ĭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 0}},
@@ -7802,9 +7802,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012e": {
+		'Į': {
 			HorizAdvX: 376,
-			Unicode:   "\u012e",
+			Unicode:   'Į',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 0}},
@@ -7828,9 +7828,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012f": {
+		'į': {
 			HorizAdvX: 292,
-			Unicode:   "\u012f",
+			Unicode:   'į',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 0}},
@@ -7859,9 +7859,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0130": {
+		'İ': {
 			HorizAdvX: 376,
-			Unicode:   "\u0130",
+			Unicode:   'İ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{295, 0}},
@@ -7885,9 +7885,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0131": {
+		'ı': {
 			HorizAdvX: 292,
-			Unicode:   "\u0131",
+			Unicode:   'ı',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 0}},
@@ -7904,9 +7904,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0132": {
+		'Ĳ': {
 			HorizAdvX: 722,
-			Unicode:   "\u0132",
+			Unicode:   'Ĳ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{522, 74}},
@@ -7936,9 +7936,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0133": {
+		'ĳ': {
 			HorizAdvX: 568,
-			Unicode:   "\u0133",
+			Unicode:   'ĳ',
 			GerberLP:  "dddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 0}},
@@ -7978,9 +7978,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0134": {
+		'Ĵ': {
 			HorizAdvX: 376,
-			Unicode:   "\u0134",
+			Unicode:   'Ĵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{176, 74}},
@@ -8005,9 +8005,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0135": {
+		'ĵ': {
 			HorizAdvX: 281,
-			Unicode:   "\u0135",
+			Unicode:   'ĵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{55, -149}},
@@ -8031,9 +8031,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0136": {
+		'Ķ': {
 			HorizAdvX: 666,
-			Unicode:   "\u0136",
+			Unicode:   'Ķ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{283, 0}},
@@ -8075,9 +8075,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0137": {
+		'ķ': {
 			HorizAdvX: 527,
-			Unicode:   "\u0137",
+			Unicode:   'ķ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 0}},
@@ -8119,9 +8119,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0138": {
+		'ĸ': {
 			HorizAdvX: 527,
-			Unicode:   "\u0138",
+			Unicode:   'ĸ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 0}},
@@ -8155,9 +8155,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0139": {
+		'Ĺ': {
 			HorizAdvX: 536,
-			Unicode:   "\u0139",
+			Unicode:   'Ĺ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{511, 0}},
@@ -8182,9 +8182,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013a": {
+		'ĺ': {
 			HorizAdvX: 304,
-			Unicode:   "\u013a",
+			Unicode:   'ĺ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{253, 0}},
@@ -8207,9 +8207,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013b": {
+		'Ļ': {
 			HorizAdvX: 536,
-			Unicode:   "\u013b",
+			Unicode:   'Ļ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{511, 0}},
@@ -8237,9 +8237,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013c": {
+		'ļ': {
 			HorizAdvX: 304,
-			Unicode:   "\u013c",
+			Unicode:   'ļ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{253, 0}},
@@ -8265,9 +8265,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013d": {
+		'Ľ': {
 			HorizAdvX: 536,
-			Unicode:   "\u013d",
+			Unicode:   'Ľ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{511, 0}},
@@ -8295,9 +8295,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013e": {
+		'ľ': {
 			HorizAdvX: 304,
-			Unicode:   "\u013e",
+			Unicode:   'ľ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{253, 0}},
@@ -8323,9 +8323,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013f": {
+		'Ŀ': {
 			HorizAdvX: 536,
-			Unicode:   "\u013f",
+			Unicode:   'Ŀ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{511, 0}},
@@ -8351,9 +8351,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0140": {
+		'ŀ': {
 			HorizAdvX: 304,
-			Unicode:   "\u0140",
+			Unicode:   'ŀ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{253, 0}},
@@ -8377,9 +8377,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0141": {
+		'Ł': {
 			HorizAdvX: 536,
-			Unicode:   "\u0141",
+			Unicode:   'Ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{70, 0}},
@@ -8408,9 +8408,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0142": {
+		'ł': {
 			HorizAdvX: 304,
-			Unicode:   "\u0142",
+			Unicode:   'ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{253, 0}},
@@ -8436,9 +8436,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0143": {
+		'Ń': {
 			HorizAdvX: 865,
-			Unicode:   "\u0143",
+			Unicode:   'Ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 700}},
@@ -8469,9 +8469,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0144": {
+		'ń': {
 			HorizAdvX: 607,
-			Unicode:   "\u0144",
+			Unicode:   'ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{226, 0}},
@@ -8505,9 +8505,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0145": {
+		'Ņ': {
 			HorizAdvX: 865,
-			Unicode:   "\u0145",
+			Unicode:   'Ņ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 700}},
@@ -8541,9 +8541,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0146": {
+		'ņ': {
 			HorizAdvX: 607,
-			Unicode:   "\u0146",
+			Unicode:   'ņ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{226, 0}},
@@ -8580,9 +8580,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0147": {
+		'Ň': {
 			HorizAdvX: 865,
-			Unicode:   "\u0147",
+			Unicode:   'Ň',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 700}},
@@ -8616,9 +8616,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0148": {
+		'ň': {
 			HorizAdvX: 607,
-			Unicode:   "\u0148",
+			Unicode:   'ň',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{226, 0}},
@@ -8655,9 +8655,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0149": {
+		'ŉ': {
 			HorizAdvX: 673,
-			Unicode:   "\u0149",
+			Unicode:   'ŉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 0}},
@@ -8694,9 +8694,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014a": {
+		'Ŋ': {
 			HorizAdvX: 865,
-			Unicode:   "\u014a",
+			Unicode:   'Ŋ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{694, 1}},
@@ -8725,9 +8725,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014b": {
+		'ŋ': {
 			HorizAdvX: 607,
-			Unicode:   "\u014b",
+			Unicode:   'ŋ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{147, 358}},
@@ -8757,9 +8757,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014c": {
+		'Ō': {
 			HorizAdvX: 794,
-			Unicode:   "\u014c",
+			Unicode:   'Ō',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 708}},
@@ -8784,9 +8784,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014d": {
+		'ō': {
 			HorizAdvX: 549,
-			Unicode:   "\u014d",
+			Unicode:   'ō',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 488}},
@@ -8811,9 +8811,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014e": {
+		'Ŏ': {
 			HorizAdvX: 794,
-			Unicode:   "\u014e",
+			Unicode:   'Ŏ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 708}},
@@ -8841,9 +8841,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014f": {
+		'ŏ': {
 			HorizAdvX: 549,
-			Unicode:   "\u014f",
+			Unicode:   'ŏ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 488}},
@@ -8871,9 +8871,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0150": {
+		'Ő': {
 			HorizAdvX: 794,
-			Unicode:   "\u0150",
+			Unicode:   'Ő',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 708}},
@@ -8902,9 +8902,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0151": {
+		'ő': {
 			HorizAdvX: 549,
-			Unicode:   "\u0151",
+			Unicode:   'ő',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 488}},
@@ -8933,9 +8933,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0152": {
+		'Œ': {
 			HorizAdvX: 946,
-			Unicode:   "\u0152",
+			Unicode:   'Œ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{891, 0}},
@@ -8972,9 +8972,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0153": {
+		'œ': {
 			HorizAdvX: 922,
-			Unicode:   "\u0153",
+			Unicode:   'œ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{861, 237}},
@@ -9007,9 +9007,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0154": {
+		'Ŕ': {
 			HorizAdvX: 682,
-			Unicode:   "\u0154",
+			Unicode:   'Ŕ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 0}},
@@ -9047,9 +9047,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0155": {
+		'ŕ': {
 			HorizAdvX: 403,
-			Unicode:   "\u0155",
+			Unicode:   'ŕ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{226, 0}},
@@ -9078,9 +9078,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0156": {
+		'Ŗ': {
 			HorizAdvX: 682,
-			Unicode:   "\u0156",
+			Unicode:   'Ŗ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 0}},
@@ -9121,9 +9121,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0157": {
+		'ŗ': {
 			HorizAdvX: 403,
-			Unicode:   "\u0157",
+			Unicode:   'ŗ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{226, 0}},
@@ -9155,9 +9155,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0158": {
+		'Ř': {
 			HorizAdvX: 682,
-			Unicode:   "\u0158",
+			Unicode:   'Ř',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 0}},
@@ -9198,9 +9198,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0159": {
+		'ř': {
 			HorizAdvX: 403,
-			Unicode:   "\u0159",
+			Unicode:   'ř',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{226, 0}},
@@ -9232,9 +9232,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015a": {
+		'Ś': {
 			HorizAdvX: 608,
-			Unicode:   "\u015a",
+			Unicode:   'Ś',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{325, 708}},
@@ -9268,9 +9268,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015b": {
+		'ś': {
 			HorizAdvX: 447,
-			Unicode:   "\u015b",
+			Unicode:   'ś',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{236, 488}},
@@ -9304,9 +9304,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015c": {
+		'Ŝ': {
 			HorizAdvX: 608,
-			Unicode:   "\u015c",
+			Unicode:   'Ŝ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{325, 708}},
@@ -9343,9 +9343,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015d": {
+		'ŝ': {
 			HorizAdvX: 447,
-			Unicode:   "\u015d",
+			Unicode:   'ŝ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{236, 488}},
@@ -9382,9 +9382,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015e": {
+		'Ş': {
 			HorizAdvX: 608,
-			Unicode:   "\u015e",
+			Unicode:   'Ş',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{325, 708}},
@@ -9421,9 +9421,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015f": {
+		'ş': {
 			HorizAdvX: 447,
-			Unicode:   "\u015f",
+			Unicode:   'ş',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{240, -8}},
@@ -9460,9 +9460,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0160": {
+		'Š': {
 			HorizAdvX: 608,
-			Unicode:   "\u0160",
+			Unicode:   'Š',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{325, 708}},
@@ -9499,9 +9499,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0161": {
+		'š': {
 			HorizAdvX: 447,
-			Unicode:   "\u0161",
+			Unicode:   'š',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{236, 488}},
@@ -9538,9 +9538,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0162": {
+		'Ţ': {
 			HorizAdvX: 612,
-			Unicode:   "\u0162",
+			Unicode:   'Ţ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{30, 700}},
@@ -9570,9 +9570,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0163": {
+		'ţ': {
 			HorizAdvX: 348,
-			Unicode:   "\u0163",
+			Unicode:   'ţ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{317, 16}},
@@ -9603,9 +9603,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0164": {
+		'Ť': {
 			HorizAdvX: 612,
-			Unicode:   "\u0164",
+			Unicode:   'Ť',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{30, 700}},
@@ -9635,9 +9635,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0165": {
+		'ť': {
 			HorizAdvX: 365,
-			Unicode:   "\u0165",
+			Unicode:   'ť',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{327, 16}},
@@ -9668,9 +9668,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0166": {
+		'Ŧ': {
 			HorizAdvX: 612,
-			Unicode:   "\u0166",
+			Unicode:   'Ŧ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{30, 700}},
@@ -9700,9 +9700,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0167": {
+		'ŧ': {
 			HorizAdvX: 348,
-			Unicode:   "\u0167",
+			Unicode:   'ŧ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{49, 254}},
@@ -9733,9 +9733,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0168": {
+		'Ũ': {
 			HorizAdvX: 771,
-			Unicode:   "\u0168",
+			Unicode:   'Ũ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{629, 685}},
@@ -9769,9 +9769,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0169": {
+		'ũ': {
 			HorizAdvX: 627,
-			Unicode:   "\u0169",
+			Unicode:   'ũ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{586, 0}},
@@ -9809,9 +9809,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016a": {
+		'Ū': {
 			HorizAdvX: 771,
-			Unicode:   "\u016a",
+			Unicode:   'Ū',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{629, 685}},
@@ -9842,9 +9842,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016b": {
+		'ū': {
 			HorizAdvX: 627,
-			Unicode:   "\u016b",
+			Unicode:   'ū',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{586, 0}},
@@ -9879,9 +9879,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016c": {
+		'Ŭ': {
 			HorizAdvX: 771,
-			Unicode:   "\u016c",
+			Unicode:   'Ŭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{629, 685}},
@@ -9915,9 +9915,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016d": {
+		'ŭ': {
 			HorizAdvX: 627,
-			Unicode:   "\u016d",
+			Unicode:   'ŭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{586, 0}},
@@ -9955,9 +9955,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016e": {
+		'Ů': {
 			HorizAdvX: 771,
-			Unicode:   "\u016e",
+			Unicode:   'Ů',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{629, 685}},
@@ -9994,9 +9994,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016f": {
+		'ů': {
 			HorizAdvX: 627,
-			Unicode:   "\u016f",
+			Unicode:   'ů',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{586, 0}},
@@ -10037,9 +10037,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0170": {
+		'Ű': {
 			HorizAdvX: 771,
-			Unicode:   "\u0170",
+			Unicode:   'Ű',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{629, 685}},
@@ -10074,9 +10074,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0171": {
+		'ű': {
 			HorizAdvX: 627,
-			Unicode:   "\u0171",
+			Unicode:   'ű',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{586, 0}},
@@ -10115,9 +10115,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0172": {
+		'Ų': {
 			HorizAdvX: 771,
-			Unicode:   "\u0172",
+			Unicode:   'Ų',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{629, 685}},
@@ -10148,9 +10148,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0173": {
+		'ų': {
 			HorizAdvX: 627,
-			Unicode:   "\u0173",
+			Unicode:   'ų',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{586, 0}},
@@ -10184,9 +10184,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0174": {
+		'Ŵ': {
 			HorizAdvX: 1092,
-			Unicode:   "\u0174",
+			Unicode:   'Ŵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{993, 685}},
@@ -10228,9 +10228,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0175": {
+		'ŵ': {
 			HorizAdvX: 784,
-			Unicode:   "\u0175",
+			Unicode:   'ŵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{708, 465}},
@@ -10272,9 +10272,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0176": {
+		'Ŷ': {
 			HorizAdvX: 675,
-			Unicode:   "\u0176",
+			Unicode:   'Ŷ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437, 0}},
@@ -10310,9 +10310,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0177": {
+		'ŷ': {
 			HorizAdvX: 578,
-			Unicode:   "\u0177",
+			Unicode:   'ŷ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, 465}},
@@ -10351,9 +10351,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0178": {
+		'Ÿ': {
 			HorizAdvX: 675,
-			Unicode:   "\u0178",
+			Unicode:   'Ÿ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437, 0}},
@@ -10393,9 +10393,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0179": {
+		'Ź': {
 			HorizAdvX: 722,
-			Unicode:   "\u0179",
+			Unicode:   'Ź',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{624, 0}},
@@ -10420,9 +10420,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017a": {
+		'ź': {
 			HorizAdvX: 521,
-			Unicode:   "\u017a",
+			Unicode:   'ź',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{95, 320}},
@@ -10449,9 +10449,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017b": {
+		'Ż': {
 			HorizAdvX: 722,
-			Unicode:   "\u017b",
+			Unicode:   'Ż',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{624, 0}},
@@ -10477,9 +10477,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017c": {
+		'ż': {
 			HorizAdvX: 521,
-			Unicode:   "\u017c",
+			Unicode:   'ż',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{95, 320}},
@@ -10507,9 +10507,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017d": {
+		'Ž': {
 			HorizAdvX: 722,
-			Unicode:   "\u017d",
+			Unicode:   'Ž',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{624, 0}},
@@ -10537,9 +10537,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017e": {
+		'ž': {
 			HorizAdvX: 521,
-			Unicode:   "\u017e",
+			Unicode:   'ž',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{95, 320}},
@@ -10569,9 +10569,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0192": {
+		'ƒ': {
 			HorizAdvX: 374,
-			Unicode:   "\u0192",
+			Unicode:   'ƒ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{181, 539}},
@@ -10596,9 +10596,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fc": {
+		'Ǽ': {
 			HorizAdvX: 913,
-			Unicode:   "\u01fc",
+			Unicode:   'Ǽ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{858, 0}},
@@ -10645,9 +10645,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fd": {
+		'ǽ': {
 			HorizAdvX: 848,
-			Unicode:   "\u01fd",
+			Unicode:   'ǽ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{787, 237}},
@@ -10695,9 +10695,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fe": {
+		'Ǿ': {
 			HorizAdvX: 794,
-			Unicode:   "\u01fe",
+			Unicode:   'Ǿ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 708}},
@@ -10735,9 +10735,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ff": {
+		'ǿ': {
 			HorizAdvX: 549,
-			Unicode:   "\u01ff",
+			Unicode:   'ǿ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 488}},
@@ -10775,9 +10775,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0218": {
+		'Ș': {
 			HorizAdvX: 608,
-			Unicode:   "\u0218",
+			Unicode:   'Ș',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{325, 708}},
@@ -10814,9 +10814,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0219": {
+		'ș': {
 			HorizAdvX: 447,
-			Unicode:   "\u0219",
+			Unicode:   'ș',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{236, 488}},
@@ -10853,9 +10853,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021a": {
+		'Ț': {
 			HorizAdvX: 612,
-			Unicode:   "\u021a",
+			Unicode:   'Ț',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{30, 700}},
@@ -10885,9 +10885,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021b": {
+		'ț': {
 			HorizAdvX: 348,
-			Unicode:   "\u021b",
+			Unicode:   'ț',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{317, 16}},
@@ -10918,9 +10918,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0237": {
+		'ȷ': {
 			HorizAdvX: 281,
-			Unicode:   "\u0237",
+			Unicode:   'ȷ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{58, -149}},
@@ -10936,9 +10936,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c6": {
+		'ˆ': {
 			HorizAdvX: 483,
-			Unicode:   "\u02c6",
+			Unicode:   'ˆ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 699}},
@@ -10951,9 +10951,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c7": {
+		'ˇ': {
 			HorizAdvX: 483,
-			Unicode:   "\u02c7",
+			Unicode:   'ˇ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 592}},
@@ -10966,9 +10966,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d8": {
+		'˘': {
 			HorizAdvX: 464,
-			Unicode:   "\u02d8",
+			Unicode:   '˘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{117, 694}},
@@ -10982,9 +10982,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d9": {
+		'˙': {
 			HorizAdvX: 270,
-			Unicode:   "\u02d9",
+			Unicode:   '˙',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 640}},
@@ -10995,9 +10995,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02da": {
+		'˚': {
 			HorizAdvX: 406,
-			Unicode:   "\u02da",
+			Unicode:   '˚',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{121, 648}},
@@ -11014,9 +11014,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02db": {
+		'˛': {
 			HorizAdvX: 548,
-			Unicode:   "\u02db",
+			Unicode:   '˛',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{487, 9}},
@@ -11029,9 +11029,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dc": {
+		'˜': {
 			HorizAdvX: 582,
-			Unicode:   "\u02dc",
+			Unicode:   '˜',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119, 606}},
@@ -11045,9 +11045,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dd": {
+		'˝': {
 			HorizAdvX: 538,
-			Unicode:   "\u02dd",
+			Unicode:   '˝',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{288, 560}},
@@ -11062,9 +11062,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0394": {
+		'Δ': {
 			HorizAdvX: 705,
-			Unicode:   "\u0394",
+			Unicode:   'Δ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 15}},
@@ -11084,9 +11084,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03a9": {
+		'Ω': {
 			HorizAdvX: 814,
-			Unicode:   "\u03a9",
+			Unicode:   'Ω',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 0}},
@@ -11115,9 +11115,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03bc": {
+		'μ': {
 			HorizAdvX: 627,
-			Unicode:   "\u03bc",
+			Unicode:   'μ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{237, -230}},
@@ -11152,9 +11152,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c0": {
+		'π': {
 			HorizAdvX: 636,
-			Unicode:   "\u03c0",
+			Unicode:   'π',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{574, 0}},
@@ -11180,9 +11180,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e80": {
+		'Ẁ': {
 			HorizAdvX: 1092,
-			Unicode:   "\u1e80",
+			Unicode:   'Ẁ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{993, 685}},
@@ -11221,9 +11221,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e81": {
+		'ẁ': {
 			HorizAdvX: 784,
-			Unicode:   "\u1e81",
+			Unicode:   'ẁ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{708, 465}},
@@ -11262,9 +11262,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e82": {
+		'Ẃ': {
 			HorizAdvX: 1092,
-			Unicode:   "\u1e82",
+			Unicode:   'Ẃ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{993, 685}},
@@ -11303,9 +11303,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e83": {
+		'ẃ': {
 			HorizAdvX: 784,
-			Unicode:   "\u1e83",
+			Unicode:   'ẃ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{708, 465}},
@@ -11344,9 +11344,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e84": {
+		'Ẅ': {
 			HorizAdvX: 1092,
-			Unicode:   "\u1e84",
+			Unicode:   'Ẅ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{993, 685}},
@@ -11392,9 +11392,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e85": {
+		'ẅ': {
 			HorizAdvX: 784,
-			Unicode:   "\u1e85",
+			Unicode:   'ẅ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{708, 465}},
@@ -11440,9 +11440,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8a": {
+		'Ẋ': {
 			HorizAdvX: 713,
-			Unicode:   "\u1e8a",
+			Unicode:   'Ẋ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 15}},
@@ -11482,9 +11482,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8b": {
+		'ẋ': {
 			HorizAdvX: 533,
-			Unicode:   "\u1e8b",
+			Unicode:   'ẋ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 15}},
@@ -11524,9 +11524,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef2": {
+		'Ỳ': {
 			HorizAdvX: 675,
-			Unicode:   "\u1ef2",
+			Unicode:   'Ỳ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437, 0}},
@@ -11559,9 +11559,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef3": {
+		'ỳ': {
 			HorizAdvX: 578,
-			Unicode:   "\u1ef3",
+			Unicode:   'ỳ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, 465}},
@@ -11597,9 +11597,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2013": {
+		'–': {
 			HorizAdvX: 565,
-			Unicode:   "\u2013",
+			Unicode:   '–',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{70, 254}},
@@ -11610,9 +11610,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2014": {
+		'—': {
 			HorizAdvX: 705,
-			Unicode:   "\u2014",
+			Unicode:   '—',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{70, 254}},
@@ -11623,9 +11623,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2018": {
+		'‘': {
 			HorizAdvX: 242,
-			Unicode:   "\u2018",
+			Unicode:   '‘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{99, 672}},
@@ -11638,9 +11638,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2019": {
+		'’': {
 			HorizAdvX: 242,
-			Unicode:   "\u2019",
+			Unicode:   '’',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 668}},
@@ -11653,9 +11653,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201a": {
+		'‚': {
 			HorizAdvX: 242,
-			Unicode:   "\u201a",
+			Unicode:   '‚',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 24}},
@@ -11668,9 +11668,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201c": {
+		'“': {
 			HorizAdvX: 339,
-			Unicode:   "\u201c",
+			Unicode:   '“',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{87, 674}},
@@ -11691,9 +11691,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201d": {
+		'”': {
 			HorizAdvX: 339,
-			Unicode:   "\u201d",
+			Unicode:   '”',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 667}},
@@ -11714,9 +11714,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201e": {
+		'„': {
 			HorizAdvX: 339,
-			Unicode:   "\u201e",
+			Unicode:   '„',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 24}},
@@ -11737,9 +11737,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2020": {
+		'†': {
 			HorizAdvX: 405,
-			Unicode:   "\u2020",
+			Unicode:   '†',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{50, 536}},
@@ -11758,9 +11758,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2021": {
+		'‡': {
 			HorizAdvX: 405,
-			Unicode:   "\u2021",
+			Unicode:   '‡',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{50, 536}},
@@ -11787,9 +11787,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2022": {
+		'•': {
 			HorizAdvX: 298,
-			Unicode:   "\u2022",
+			Unicode:   '•',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 224}},
@@ -11800,9 +11800,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2026": {
+		'…': {
 			HorizAdvX: 481,
-			Unicode:   "\u2026",
+			Unicode:   '…',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{269, 28}},
@@ -11825,9 +11825,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2030": {
+		'‰': {
 			HorizAdvX: 1522,
-			Unicode:   "\u2030",
+			Unicode:   '‰',
 			GerberLP:  "ddddccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{358, -15}},
@@ -11879,9 +11879,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2039": {
+		'‹': {
 			HorizAdvX: 338,
-			Unicode:   "\u2039",
+			Unicode:   '‹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{266, 12}},
@@ -11896,9 +11896,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u203a": {
+		'›': {
 			HorizAdvX: 338,
-			Unicode:   "\u203a",
+			Unicode:   '›',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{72, 468}},
@@ -11913,9 +11913,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2044": {
+		'⁄': {
 			HorizAdvX: 104,
-			Unicode:   "\u2044",
+			Unicode:   '⁄',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-119, -15}},
@@ -11925,9 +11925,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2070": {
+		'⁰': {
 			HorizAdvX: 421,
-			Unicode:   "\u2070",
+			Unicode:   '⁰',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{216, 700}},
@@ -11946,9 +11946,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2074": {
+		'⁴': {
 			HorizAdvX: 365,
-			Unicode:   "\u2074",
+			Unicode:   '⁴',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{310, 300}},
@@ -11975,9 +11975,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2075": {
+		'⁵': {
 			HorizAdvX: 377,
-			Unicode:   "\u2075",
+			Unicode:   '⁵',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{73, 509}},
@@ -12000,9 +12000,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2076": {
+		'⁶': {
 			HorizAdvX: 377,
-			Unicode:   "\u2076",
+			Unicode:   '⁶',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{210, 685}},
@@ -12025,9 +12025,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2077": {
+		'⁷': {
 			HorizAdvX: 352,
-			Unicode:   "\u2077",
+			Unicode:   '⁷',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 700}},
@@ -12043,9 +12043,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2078": {
+		'⁸': {
 			HorizAdvX: 372,
-			Unicode:   "\u2078",
+			Unicode:   '⁸',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{304, 601}},
@@ -12076,9 +12076,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2079": {
+		'⁹': {
 			HorizAdvX: 374,
-			Unicode:   "\u2079",
+			Unicode:   '⁹',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 310}},
@@ -12101,9 +12101,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u207a": {
+		'⁺': {
 			HorizAdvX: 307,
-			Unicode:   "\u207a",
+			Unicode:   '⁺',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{49, 441}},
@@ -12122,9 +12122,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u207b": {
+		'⁻': {
 			HorizAdvX: 294,
-			Unicode:   "\u207b",
+			Unicode:   '⁻',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{55, 444}},
@@ -12135,9 +12135,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u207c": {
+		'⁼': {
 			HorizAdvX: 307,
-			Unicode:   "\u207c",
+			Unicode:   '⁼',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{49, 404}},
@@ -12154,9 +12154,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u207d": {
+		'⁽': {
 			HorizAdvX: 249,
-			Unicode:   "\u207d",
+			Unicode:   '⁽',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{171, 742}},
@@ -12169,9 +12169,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u207e": {
+		'⁾': {
 			HorizAdvX: 250,
-			Unicode:   "\u207e",
+			Unicode:   '⁾',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{76, 226}},
@@ -12184,9 +12184,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2080": {
+		'₀': {
 			HorizAdvX: 421,
-			Unicode:   "\u2080",
+			Unicode:   '₀',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{216, 270}},
@@ -12205,9 +12205,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2081": {
+		'₁': {
 			HorizAdvX: 264,
-			Unicode:   "\u2081",
+			Unicode:   '₁',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{209, -130}},
@@ -12224,9 +12224,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2082": {
+		'₂': {
 			HorizAdvX: 378,
-			Unicode:   "\u2082",
+			Unicode:   '₂',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{323, -130}},
@@ -12249,9 +12249,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2083": {
+		'₃': {
 			HorizAdvX: 368,
-			Unicode:   "\u2083",
+			Unicode:   '₃',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{269, 168}},
@@ -12279,9 +12279,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2084": {
+		'₄': {
 			HorizAdvX: 365,
-			Unicode:   "\u2084",
+			Unicode:   '₄',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{310, -130}},
@@ -12308,9 +12308,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2085": {
+		'₅': {
 			HorizAdvX: 377,
-			Unicode:   "\u2085",
+			Unicode:   '₅',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{73, 79}},
@@ -12333,9 +12333,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2086": {
+		'₆': {
 			HorizAdvX: 377,
-			Unicode:   "\u2086",
+			Unicode:   '₆',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{210, 255}},
@@ -12358,9 +12358,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2087": {
+		'₇': {
 			HorizAdvX: 352,
-			Unicode:   "\u2087",
+			Unicode:   '₇',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 270}},
@@ -12376,9 +12376,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2088": {
+		'₈': {
 			HorizAdvX: 372,
-			Unicode:   "\u2088",
+			Unicode:   '₈',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{304, 171}},
@@ -12409,9 +12409,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2089": {
+		'₉': {
 			HorizAdvX: 374,
-			Unicode:   "\u2089",
+			Unicode:   '₉',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, -120}},
@@ -12434,9 +12434,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u208a": {
+		'₊': {
 			HorizAdvX: 307,
-			Unicode:   "\u208a",
+			Unicode:   '₊',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{49, 11}},
@@ -12455,9 +12455,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u208b": {
+		'₋': {
 			HorizAdvX: 307,
-			Unicode:   "\u208b",
+			Unicode:   '₋',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{55, 14}},
@@ -12468,9 +12468,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u208c": {
+		'₌': {
 			HorizAdvX: 307,
-			Unicode:   "\u208c",
+			Unicode:   '₌',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{49, -26}},
@@ -12487,9 +12487,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u208d": {
+		'₍': {
 			HorizAdvX: 252,
-			Unicode:   "\u208d",
+			Unicode:   '₍',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{171, 312}},
@@ -12502,9 +12502,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u208e": {
+		'₎': {
 			HorizAdvX: 252,
-			Unicode:   "\u208e",
+			Unicode:   '₎',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{76, -204}},
@@ -12517,9 +12517,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20ac": {
+		'€': {
 			HorizAdvX: 736,
-			Unicode:   "\u20ac",
+			Unicode:   '€',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{15, 388}},
@@ -12556,9 +12556,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2122": {
+		'™': {
 			HorizAdvX: 923,
-			Unicode:   "\u2122",
+			Unicode:   '™',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{812, 343}},
@@ -12612,9 +12612,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2126": {
+		'Ω': {
 			HorizAdvX: 814,
-			Unicode:   "\u2126",
+			Unicode:   'Ω',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 0}},
@@ -12643,9 +12643,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2153": {
+		'⅓': {
 			HorizAdvX: 766,
-			Unicode:   "\u2153",
+			Unicode:   '⅓',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{153, -15}},
@@ -12690,9 +12690,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2154": {
+		'⅔': {
 			HorizAdvX: 845,
-			Unicode:   "\u2154",
+			Unicode:   '⅔',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{259, -15}},
@@ -12743,9 +12743,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u215b": {
+		'⅛': {
 			HorizAdvX: 755,
-			Unicode:   "\u215b",
+			Unicode:   '⅛',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{153, -15}},
@@ -12793,9 +12793,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u215c": {
+		'⅜': {
 			HorizAdvX: 822,
-			Unicode:   "\u215c",
+			Unicode:   '⅜',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{235, -15}},
@@ -12854,9 +12854,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u215d": {
+		'⅝': {
 			HorizAdvX: 807,
-			Unicode:   "\u215d",
+			Unicode:   '⅝',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{230, -15}},
@@ -12910,9 +12910,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u215e": {
+		'⅞': {
 			HorizAdvX: 768,
-			Unicode:   "\u215e",
+			Unicode:   '⅞',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{171, -15}},
@@ -12959,9 +12959,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2206": {
+		'∆': {
 			HorizAdvX: 728,
-			Unicode:   "\u2206",
+			Unicode:   '∆',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 15}},
@@ -12981,9 +12981,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u220f": {
+		'∏': {
 			HorizAdvX: 785,
-			Unicode:   "\u220f",
+			Unicode:   '∏',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{81, 690}},
@@ -13009,9 +13009,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2211": {
+		'∑': {
 			HorizAdvX: 642,
-			Unicode:   "\u2211",
+			Unicode:   '∑',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{582, -130}},
@@ -13034,9 +13034,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2212": {
+		'−': {
 			HorizAdvX: 465,
-			Unicode:   "\u2212",
+			Unicode:   '−',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{60, 256}},
@@ -13047,9 +13047,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u221a": {
+		'√': {
 			HorizAdvX: 451,
-			Unicode:   "\u221a",
+			Unicode:   '√',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{20, 300}},
@@ -13065,9 +13065,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u221e": {
+		'∞': {
 			HorizAdvX: 811,
-			Unicode:   "\u221e",
+			Unicode:   '∞',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{397, 305}},
@@ -13094,9 +13094,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u222b": {
+		'∫': {
 			HorizAdvX: 345,
-			Unicode:   "\u222b",
+			Unicode:   '∫',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{117, 616}},
@@ -13117,9 +13117,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2248": {
+		'≈': {
 			HorizAdvX: 513,
-			Unicode:   "\u2248",
+			Unicode:   '≈',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{90, 144}},
@@ -13142,9 +13142,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2260": {
+		'≠': {
 			HorizAdvX: 465,
-			Unicode:   "\u2260",
+			Unicode:   '≠',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{60, 315}},
@@ -13171,9 +13171,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2264": {
+		'≤': {
 			HorizAdvX: 438,
-			Unicode:   "\u2264",
+			Unicode:   '≤',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{361, 481}},
@@ -13192,9 +13192,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2265": {
+		'≥': {
 			HorizAdvX: 438,
-			Unicode:   "\u2265",
+			Unicode:   '≥',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{79, 468}},
@@ -13213,9 +13213,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u25ca": {
+		'◊': {
 			HorizAdvX: 440,
-			Unicode:   "\u25ca",
+			Unicode:   '◊',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{40, 360}},
@@ -13237,9 +13237,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6e1": {
+		'': {
 			HorizAdvX: 154,
-			Unicode:   "\uf6e1",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, -97}},
@@ -13252,9 +13252,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf724": {
+		'': {
 			HorizAdvX: 594,
-			Unicode:   "\uf724",
+			Unicode:   '',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{290, -94}},
@@ -13298,9 +13298,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf778": {
+		'': {
 			HorizAdvX: 605,
-			Unicode:   "\uf778",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{502, 14}},
@@ -13334,9 +13334,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7a2": {
+		'': {
 			HorizAdvX: 484,
-			Unicode:   "\uf7a2",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{444, 437}},
@@ -13366,9 +13366,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ufb00": {
+		'ﬀ': {
 			HorizAdvX: 722,
-			Unicode:   "\ufb00",
+			Unicode:   'ﬀ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{484, 15}},
@@ -13418,9 +13418,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ufb01": {
+		'ﬁ': {
 			HorizAdvX: 652,
-			Unicode:   "\ufb01",
+			Unicode:   'ﬁ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{142, 15}},
@@ -13466,9 +13466,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ufb02": {
+		'ﬂ': {
 			HorizAdvX: 654,
-			Unicode:   "\ufb02",
+			Unicode:   'ﬂ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{142, 15}},
@@ -13505,9 +13505,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ufb03": {
+		'ﬃ': {
 			HorizAdvX: 1062,
-			Unicode:   "\ufb03",
+			Unicode:   'ﬃ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{839, 672}},
@@ -13564,9 +13564,9 @@ var stmarie_thinFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ufb04": {
+		'ﬄ': {
 			HorizAdvX: 996,
-			Unicode:   "\ufb04",
+			Unicode:   'ﬄ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{945, 0}},

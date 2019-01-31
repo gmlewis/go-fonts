@@ -11,16 +11,16 @@ func init() {
 }
 
 var texgyreadventor_boldFont = &fonts.Font{
-	// ID: "texgyreadventor_bold",
+	ID:               "texgyreadventor_bold",
 	HorizAdvX:        640,
 	UnitsPerEm:       1000,
 	Ascent:           815,
 	Descent:          -185,
 	MissingHorizAdvX: 280,
-	Glyphs: map[string]*fonts.Glyph{
-		"!": {
+	Glyphs: map[rune]*fonts.Glyph{
+		'!': {
 			HorizAdvX: 280,
-			Unicode:   "!",
+			Unicode:   '!',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 188}},
@@ -37,9 +37,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\"": {
+		'"': {
 			HorizAdvX: 360,
-			Unicode:   "\"",
+			Unicode:   '"',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{283, 513}},
@@ -56,9 +56,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"#": {
+		'#': {
 			HorizAdvX: 560,
-			Unicode:   "#",
+			Unicode:   '#',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{526, 422}},
@@ -98,9 +98,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"$": {
+		'$': {
 			HorizAdvX: 560,
-			Unicode:   "$",
+			Unicode:   '$',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{494, 251}},
@@ -129,9 +129,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"%": {
+		'%': {
 			HorizAdvX: 860,
-			Unicode:   "%",
+			Unicode:   '%',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{631, 739}},
@@ -166,9 +166,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"&": {
+		'&': {
 			HorizAdvX: 680,
-			Unicode:   "&",
+			Unicode:   '&',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{664, 73}},
@@ -200,9 +200,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"'": {
+		'\'': {
 			HorizAdvX: 220,
-			Unicode:   "'",
+			Unicode:   '\'',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{150, 513}},
@@ -213,9 +213,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"(": {
+		'(': {
 			HorizAdvX: 380,
-			Unicode:   "(",
+			Unicode:   '(',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{349, -137}},
@@ -228,9 +228,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		")": {
+		')': {
 			HorizAdvX: 380,
-			Unicode:   ")",
+			Unicode:   ')',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{312, 302}},
@@ -243,9 +243,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"*": {
+		'*': {
 			HorizAdvX: 440,
-			Unicode:   "*",
+			Unicode:   '*',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{371, 554}},
@@ -270,9 +270,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"+": {
+		'+': {
 			HorizAdvX: 600,
-			Unicode:   "+",
+			Unicode:   '+',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 181}},
@@ -291,9 +291,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		",": {
+		',': {
 			HorizAdvX: 280,
-			Unicode:   ",",
+			Unicode:   ',',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, -7}},
@@ -308,9 +308,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"-": {
+		'-': {
 			HorizAdvX: 420,
-			Unicode:   "-",
+			Unicode:   '-',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, 229}},
@@ -321,9 +321,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		".": {
+		'.': {
 			HorizAdvX: 280,
-			Unicode:   ".",
+			Unicode:   '.',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -334,9 +334,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"/": {
+		'/': {
 			HorizAdvX: 460,
-			Unicode:   "/",
+			Unicode:   '/',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{443, 739}},
@@ -347,9 +347,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"0": {
+		'0': {
 			HorizAdvX: 560,
-			Unicode:   "0",
+			Unicode:   '0',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{525, 247}},
@@ -370,9 +370,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"1": {
+		'1': {
 			HorizAdvX: 560,
-			Unicode:   "1",
+			Unicode:   '1',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{379, 0}},
@@ -385,9 +385,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"2": {
+		'2': {
 			HorizAdvX: 560,
-			Unicode:   "2",
+			Unicode:   '2',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 512}},
@@ -407,9 +407,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"3": {
+		'3': {
 			HorizAdvX: 560,
-			Unicode:   "3",
+			Unicode:   '3',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{518, 235}},
@@ -432,9 +432,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"4": {
+		'4': {
 			HorizAdvX: 560,
-			Unicode:   "4",
+			Unicode:   '4',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{530, 111}},
@@ -457,9 +457,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"5": {
+		'5': {
 			HorizAdvX: 560,
-			Unicode:   "5",
+			Unicode:   '5',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 247}},
@@ -481,9 +481,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"6": {
+		'6': {
 			HorizAdvX: 560,
-			Unicode:   "6",
+			Unicode:   '6',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{533, 252}},
@@ -504,9 +504,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"7": {
+		'7': {
 			HorizAdvX: 560,
-			Unicode:   "7",
+			Unicode:   '7',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{500, 614}},
@@ -520,9 +520,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"8": {
+		'8': {
 			HorizAdvX: 560,
-			Unicode:   "8",
+			Unicode:   '8',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{523, 232}},
@@ -549,9 +549,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"9": {
+		'9': {
 			HorizAdvX: 560,
-			Unicode:   "9",
+			Unicode:   '9',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{532, 496}},
@@ -572,9 +572,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		":": {
+		':': {
 			HorizAdvX: 280,
-			Unicode:   ":",
+			Unicode:   ':',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 369}},
@@ -591,9 +591,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		";": {
+		';': {
 			HorizAdvX: 280,
-			Unicode:   ";",
+			Unicode:   ';',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, -7}},
@@ -614,9 +614,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"<": {
+		'<': {
 			HorizAdvX: 600,
-			Unicode:   "<",
+			Unicode:   '<',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, -142}},
@@ -630,9 +630,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"=": {
+		'=': {
 			HorizAdvX: 600,
-			Unicode:   "=",
+			Unicode:   '=',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 273}},
@@ -649,9 +649,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		">": {
+		'>': {
 			HorizAdvX: 600,
-			Unicode:   ">",
+			Unicode:   '>',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, 196}},
@@ -665,9 +665,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"?": {
+		'?': {
 			HorizAdvX: 560,
-			Unicode:   "?",
+			Unicode:   '?',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 523}},
@@ -690,9 +690,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"@": {
+		'@': {
 			HorizAdvX: 740,
-			Unicode:   "@",
+			Unicode:   '@',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{745, 397}},
@@ -726,9 +726,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"A": {
+		'A': {
 			HorizAdvX: 740,
-			Unicode:   "A",
+			Unicode:   'A',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -747,9 +747,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"B": {
+		'B': {
 			HorizAdvX: 580,
-			Unicode:   "B",
+			Unicode:   'B',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{548, 220}},
@@ -778,9 +778,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"C": {
+		'C': {
 			HorizAdvX: 780,
-			Unicode:   "C",
+			Unicode:   'C',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{760, 206}},
@@ -797,9 +797,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"D": {
+		'D': {
 			HorizAdvX: 700,
-			Unicode:   "D",
+			Unicode:   'D',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{660, 368}},
@@ -822,9 +822,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"E": {
+		'E': {
 			HorizAdvX: 520,
-			Unicode:   "E",
+			Unicode:   'E',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -843,9 +843,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"F": {
+		'F': {
 			HorizAdvX: 480,
-			Unicode:   "F",
+			Unicode:   'F',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{444, 608}},
@@ -862,9 +862,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"G": {
+		'G': {
 			HorizAdvX: 840,
-			Unicode:   "G",
+			Unicode:   'G',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{818, 359}},
@@ -884,9 +884,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"H": {
+		'H': {
 			HorizAdvX: 680,
-			Unicode:   "H",
+			Unicode:   'H',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -905,9 +905,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"I": {
+		'I': {
 			HorizAdvX: 280,
-			Unicode:   "I",
+			Unicode:   'I',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -918,9 +918,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"IJ": {
+		'I': {
 			HorizAdvX: 713,
-			Unicode:   "IJ",
+			Unicode:   'I',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{659, 212}},
@@ -941,9 +941,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"J": {
+		'J': {
 			HorizAdvX: 480,
-			Unicode:   "J",
+			Unicode:   'J',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{414, 212}},
@@ -958,9 +958,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"K": {
+		'K': {
 			HorizAdvX: 620,
-			Unicode:   "K",
+			Unicode:   'K',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{599, 0}},
@@ -977,9 +977,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"L": {
+		'L': {
 			HorizAdvX: 440,
-			Unicode:   "L",
+			Unicode:   'L',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 0}},
@@ -992,9 +992,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"M": {
+		'M': {
 			HorizAdvX: 900,
-			Unicode:   "M",
+			Unicode:   'M',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{840, 0}},
@@ -1014,9 +1014,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"N": {
+		'N': {
 			HorizAdvX: 740,
-			Unicode:   "N",
+			Unicode:   'N',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -1033,9 +1033,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"O": {
+		'O': {
 			HorizAdvX: 840,
-			Unicode:   "O",
+			Unicode:   'O',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -1052,9 +1052,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"P": {
+		'P': {
 			HorizAdvX: 560,
-			Unicode:   "P",
+			Unicode:   'P',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{540, 511}},
@@ -1077,9 +1077,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Q": {
+		'Q': {
 			HorizAdvX: 840,
-			Unicode:   "Q",
+			Unicode:   'Q',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{828, -14}},
@@ -1110,9 +1110,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"R": {
+		'R': {
 			HorizAdvX: 580,
-			Unicode:   "R",
+			Unicode:   'R',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 0}},
@@ -1135,9 +1135,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"S": {
+		'S': {
 			HorizAdvX: 520,
-			Unicode:   "S",
+			Unicode:   'S',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{493, 224}},
@@ -1160,9 +1160,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"T": {
+		'T': {
 			HorizAdvX: 420,
-			Unicode:   "T",
+			Unicode:   'T',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 608}},
@@ -1177,9 +1177,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"U": {
+		'U': {
 			HorizAdvX: 0,
-			Unicode:   "U",
+			Unicode:   'U',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -1196,9 +1196,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"V": {
+		'V': {
 			HorizAdvX: 700,
-			Unicode:   "V",
+			Unicode:   'V',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{694, 739}},
@@ -1212,9 +1212,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"W": {
+		'W': {
 			HorizAdvX: 900,
-			Unicode:   "W",
+			Unicode:   'W',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{898, 739}},
@@ -1234,9 +1234,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"X": {
+		'X': {
 			HorizAdvX: 680,
-			Unicode:   "X",
+			Unicode:   'X',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{676, 0}},
@@ -1254,9 +1254,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Y": {
+		'Y': {
 			HorizAdvX: 620,
-			Unicode:   "Y",
+			Unicode:   'Y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{626, 739}},
@@ -1272,9 +1272,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Z": {
+		'Z': {
 			HorizAdvX: 500,
-			Unicode:   "Z",
+			Unicode:   'Z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{480, 0}},
@@ -1291,9 +1291,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"[": {
+		'[': {
 			HorizAdvX: 320,
-			Unicode:   "[",
+			Unicode:   '[',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, -137}},
@@ -1308,9 +1308,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\\": {
+		'\\': {
 			HorizAdvX: 0,
-			Unicode:   "\\",
+			Unicode:   '\\',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{503, 0}},
@@ -1320,9 +1320,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"]": {
+		']': {
 			HorizAdvX: 320,
-			Unicode:   "]",
+			Unicode:   ']',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{255, 156}},
@@ -1337,9 +1337,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"^": {
+		'^': {
 			HorizAdvX: 600,
-			Unicode:   "^",
+			Unicode:   '^',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{543, 363}},
@@ -1352,9 +1352,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"_": {
+		'_': {
 			HorizAdvX: 500,
-			Unicode:   "_",
+			Unicode:   '_',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{500, -138}},
@@ -1365,9 +1365,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"`": {
+		'`': {
 			HorizAdvX: 420,
-			Unicode:   "`",
+			Unicode:   '`',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{303, 682}},
@@ -1377,9 +1377,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a": {
+		'a': {
 			HorizAdvX: 660,
-			Unicode:   "a",
+			Unicode:   'a',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -1401,9 +1401,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"b": {
+		'b': {
 			HorizAdvX: 660,
-			Unicode:   "b",
+			Unicode:   'b',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{638, 281}},
@@ -1425,9 +1425,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c": {
+		'c': {
 			HorizAdvX: 0,
-			Unicode:   "c",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -1444,9 +1444,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"d": {
+		'd': {
 			HorizAdvX: 660,
-			Unicode:   "d",
+			Unicode:   'd',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{613, 0}},
@@ -1468,9 +1468,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"e": {
+		'e': {
 			HorizAdvX: 0,
-			Unicode:   "e",
+			Unicode:   'e',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -1491,9 +1491,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"f": {
+		'f': {
 			HorizAdvX: 280,
-			Unicode:   "f",
+			Unicode:   'f',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 611}},
@@ -1514,9 +1514,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ff": {
+		'\ufb00': {
 			HorizAdvX: 560,
-			Unicode:   "ff",
+			Unicode:   '\ufb00',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{550, 611}},
@@ -1547,9 +1547,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ffi": {
+		'\ufb03': {
 			HorizAdvX: 796,
-			Unicode:   "ffi",
+			Unicode:   '\ufb03',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{550, 611}},
@@ -1592,9 +1592,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ffl": {
+		'\ufb04': {
 			HorizAdvX: 796,
-			Unicode:   "ffl",
+			Unicode:   '\ufb04',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{550, 611}},
@@ -1631,9 +1631,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fi": {
+		'\ufb01': {
 			HorizAdvX: 520,
-			Unicode:   "fi",
+			Unicode:   '\ufb01',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 611}},
@@ -1666,9 +1666,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fk": {
+		'\ufb0d': {
 			HorizAdvX: 860,
-			Unicode:   "fk",
+			Unicode:   '\ufb0d',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{835, 0}},
@@ -1701,9 +1701,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fl": {
+		'\ufb02': {
 			HorizAdvX: 520,
-			Unicode:   "fl",
+			Unicode:   '\ufb02',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 611}},
@@ -1730,9 +1730,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"g": {
+		'g': {
 			HorizAdvX: 660,
-			Unicode:   "g",
+			Unicode:   'g',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{611, 105}},
@@ -1757,9 +1757,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"h": {
+		'h': {
 			HorizAdvX: 600,
-			Unicode:   "h",
+			Unicode:   'h',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{545, 0}},
@@ -1778,9 +1778,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"i": {
+		'i': {
 			HorizAdvX: 240,
-			Unicode:   "i",
+			Unicode:   'i',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -1797,9 +1797,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ij": {
+		'i': {
 			HorizAdvX: 499,
-			Unicode:   "ij",
+			Unicode:   'i',
 			GerberLP:  "dddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{445, 37}},
@@ -1830,9 +1830,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"j": {
+		'j': {
 			HorizAdvX: 260,
-			Unicode:   "j",
+			Unicode:   'j',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 37}},
@@ -1851,9 +1851,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"k": {
+		'k': {
 			HorizAdvX: 580,
-			Unicode:   "k",
+			Unicode:   'k',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 0}},
@@ -1870,9 +1870,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"l": {
+		'l': {
 			HorizAdvX: 240,
-			Unicode:   "l",
+			Unicode:   'l',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -1883,9 +1883,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"m": {
+		'm': {
 			HorizAdvX: 940,
-			Unicode:   "m",
+			Unicode:   'm',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{885, 0}},
@@ -1911,9 +1911,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"n": {
+		'n': {
 			HorizAdvX: 600,
-			Unicode:   "n",
+			Unicode:   'n',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 0}},
@@ -1934,9 +1934,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"o": {
+		'o': {
 			HorizAdvX: 0,
-			Unicode:   "o",
+			Unicode:   'o',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -1953,9 +1953,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"p": {
+		'p': {
 			HorizAdvX: 660,
-			Unicode:   "p",
+			Unicode:   'p',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{634, 279}},
@@ -1977,9 +1977,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"q": {
+		'q': {
 			HorizAdvX: 660,
-			Unicode:   "q",
+			Unicode:   'q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{611, -185}},
@@ -2001,9 +2001,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"r": {
+		'r': {
 			HorizAdvX: 320,
-			Unicode:   "r",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{306, 439}},
@@ -2019,9 +2019,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"s": {
+		's': {
 			HorizAdvX: 440,
-			Unicode:   "s",
+			Unicode:   's',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{420, 176}},
@@ -2042,9 +2042,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"t": {
+		't': {
 			HorizAdvX: 300,
-			Unicode:   "t",
+			Unicode:   't',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{287, 433}},
@@ -2063,9 +2063,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"u": {
+		'u': {
 			HorizAdvX: 600,
-			Unicode:   "u",
+			Unicode:   'u',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -2085,9 +2085,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"v": {
+		'v': {
 			HorizAdvX: 560,
-			Unicode:   "v",
+			Unicode:   'v',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{553, 554}},
@@ -2101,9 +2101,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"w": {
+		'w': {
 			HorizAdvX: 800,
-			Unicode:   "w",
+			Unicode:   'w',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{785, 554}},
@@ -2123,9 +2123,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"x": {
+		'x': {
 			HorizAdvX: 560,
-			Unicode:   "x",
+			Unicode:   'x',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{553, 0}},
@@ -2143,9 +2143,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"y": {
+		'y': {
 			HorizAdvX: 580,
-			Unicode:   "y",
+			Unicode:   'y',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 554}},
@@ -2160,9 +2160,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"z": {
+		'z': {
 			HorizAdvX: 460,
-			Unicode:   "z",
+			Unicode:   'z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{442, 0}},
@@ -2179,9 +2179,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"{": {
+		'{': {
 			HorizAdvX: 340,
-			Unicode:   "{",
+			Unicode:   '{',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{302, -128}},
@@ -2205,9 +2205,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"|": {
+		'|': {
 			HorizAdvX: 600,
-			Unicode:   "|",
+			Unicode:   '|',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{369, -137}},
@@ -2218,9 +2218,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"}": {
+		'}': {
 			HorizAdvX: 340,
-			Unicode:   "}",
+			Unicode:   '}',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{303, 265}},
@@ -2244,9 +2244,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"~": {
+		'~': {
 			HorizAdvX: 600,
-			Unicode:   "~",
+			Unicode:   '~',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 347}},
@@ -2265,9 +2265,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a1": {
+		'¡': {
 			HorizAdvX: 280,
-			Unicode:   "\u00a1",
+			Unicode:   '¡',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{208, -185}},
@@ -2284,9 +2284,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a2": {
+		'¢': {
 			HorizAdvX: 560,
-			Unicode:   "\u00a2",
+			Unicode:   '¢',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{511, 310}},
@@ -2309,9 +2309,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a3": {
+		'£': {
 			HorizAdvX: 560,
-			Unicode:   "\u00a3",
+			Unicode:   '£',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{563, 222}},
@@ -2344,9 +2344,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a4": {
+		'¤': {
 			HorizAdvX: 560,
-			Unicode:   "\u00a4",
+			Unicode:   '¤',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{534, 572}},
@@ -2378,9 +2378,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a5": {
+		'¥': {
 			HorizAdvX: 560,
-			Unicode:   "\u00a5",
+			Unicode:   '¥',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{589, 739}},
@@ -2410,9 +2410,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a6": {
+		'¦': {
 			HorizAdvX: 600,
-			Unicode:   "\u00a6",
+			Unicode:   '¦',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{369, 389}},
@@ -2429,9 +2429,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a7": {
+		'§': {
 			HorizAdvX: 560,
-			Unicode:   "\u00a7",
+			Unicode:   '§',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{529, 292}},
@@ -2466,9 +2466,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a8": {
+		'¨': {
 			HorizAdvX: 500,
-			Unicode:   "\u00a8",
+			Unicode:   '¨',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{207, 634}},
@@ -2485,9 +2485,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a9": {
+		'©': {
 			HorizAdvX: 740,
-			Unicode:   "\u00a9",
+			Unicode:   '©',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{720, 337}},
@@ -2516,9 +2516,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00aa": {
+		'ª': {
 			HorizAdvX: 360,
-			Unicode:   "\u00aa",
+			Unicode:   'ª',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{338, 441}},
@@ -2546,9 +2546,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ab": {
+		'«': {
 			HorizAdvX: 460,
-			Unicode:   "\u00ab",
+			Unicode:   '«',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{388, 108}},
@@ -2571,9 +2571,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ac": {
+		'¬': {
 			HorizAdvX: 600,
-			Unicode:   "\u00ac",
+			Unicode:   '¬',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 158}},
@@ -2586,9 +2586,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ad": {
+		'­': {
 			HorizAdvX: 420,
-			Unicode:   "\u00ad",
+			Unicode:   '­',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, 229}},
@@ -2599,9 +2599,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ae": {
+		'®': {
 			HorizAdvX: 740,
-			Unicode:   "\u00ae",
+			Unicode:   '®',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{720, 337}},
@@ -2636,9 +2636,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00af": {
+		'¯': {
 			HorizAdvX: 420,
-			Unicode:   "\u00af",
+			Unicode:   '¯',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, 650}},
@@ -2649,9 +2649,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b0": {
+		'°': {
 			HorizAdvX: 400,
-			Unicode:   "\u00b0",
+			Unicode:   '°',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{350, 533}},
@@ -2668,9 +2668,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b1": {
+		'±': {
 			HorizAdvX: 600,
-			Unicode:   "\u00b1",
+			Unicode:   '±',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 319}},
@@ -2695,9 +2695,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b2": {
+		'²': {
 			HorizAdvX: 336,
-			Unicode:   "\u00b2",
+			Unicode:   '²',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{326, 601}},
@@ -2717,9 +2717,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b3": {
+		'³': {
 			HorizAdvX: 336,
-			Unicode:   "\u00b3",
+			Unicode:   '³',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{331, 439}},
@@ -2742,9 +2742,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b4": {
+		'´': {
 			HorizAdvX: 420,
-			Unicode:   "\u00b4",
+			Unicode:   '´',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{395, 724}},
@@ -2754,9 +2754,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b5": {
+		'µ': {
 			HorizAdvX: 576,
-			Unicode:   "\u00b5",
+			Unicode:   'µ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{523, 0}},
@@ -2777,9 +2777,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b6": {
+		'¶': {
 			HorizAdvX: 600,
-			Unicode:   "\u00b6",
+			Unicode:   '¶',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{527, -128}},
@@ -2796,9 +2796,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b7": {
+		'·': {
 			HorizAdvX: 280,
-			Unicode:   "\u00b7",
+			Unicode:   '·',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{204, 250}},
@@ -2809,9 +2809,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b8": {
+		'¸': {
 			HorizAdvX: 340,
-			Unicode:   "\u00b8",
+			Unicode:   '¸',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{270, -152}},
@@ -2831,9 +2831,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b9": {
+		'¹': {
 			HorizAdvX: 336,
-			Unicode:   "\u00b9",
+			Unicode:   '¹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 296}},
@@ -2846,9 +2846,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ba": {
+		'º': {
 			HorizAdvX: 360,
-			Unicode:   "\u00ba",
+			Unicode:   'º',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{338, 596}},
@@ -2871,9 +2871,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bb": {
+		'»': {
 			HorizAdvX: 460,
-			Unicode:   "\u00bb",
+			Unicode:   '»',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{212, 239}},
@@ -2896,9 +2896,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bc": {
+		'¼': {
 			HorizAdvX: 840,
-			Unicode:   "\u00bc",
+			Unicode:   '¼',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{621, 739}},
@@ -2935,9 +2935,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bd": {
+		'½': {
 			HorizAdvX: 840,
-			Unicode:   "\u00bd",
+			Unicode:   '½',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 739}},
@@ -2971,9 +2971,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00be": {
+		'¾': {
 			HorizAdvX: 840,
-			Unicode:   "\u00be",
+			Unicode:   '¾',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{651, 739}},
@@ -3020,9 +3020,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bf": {
+		'¿': {
 			HorizAdvX: 560,
-			Unicode:   "\u00bf",
+			Unicode:   '¿',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{528, 34}},
@@ -3045,9 +3045,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c0": {
+		'À': {
 			HorizAdvX: 740,
-			Unicode:   "\u00c0",
+			Unicode:   'À',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -3071,9 +3071,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c1": {
+		'Á': {
 			HorizAdvX: 740,
-			Unicode:   "\u00c1",
+			Unicode:   'Á',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -3097,9 +3097,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c2": {
+		'Â': {
 			HorizAdvX: 740,
-			Unicode:   "\u00c2",
+			Unicode:   'Â',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -3126,9 +3126,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c3": {
+		'Ã': {
 			HorizAdvX: 740,
-			Unicode:   "\u00c3",
+			Unicode:   'Ã',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -3156,9 +3156,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c4": {
+		'Ä': {
 			HorizAdvX: 740,
-			Unicode:   "\u00c4",
+			Unicode:   'Ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -3189,9 +3189,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c5": {
+		'Å': {
 			HorizAdvX: 740,
-			Unicode:   "\u00c5",
+			Unicode:   'Å',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -3222,9 +3222,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c6": {
+		'Æ': {
 			HorizAdvX: 900,
-			Unicode:   "\u00c6",
+			Unicode:   'Æ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{843, 0}},
@@ -3252,9 +3252,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c7": {
+		'Ç': {
 			HorizAdvX: 780,
-			Unicode:   "\u00c7",
+			Unicode:   'Ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{760, 206}},
@@ -3283,9 +3283,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c8": {
+		'È': {
 			HorizAdvX: 520,
-			Unicode:   "\u00c8",
+			Unicode:   'È',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -3309,9 +3309,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c9": {
+		'É': {
 			HorizAdvX: 520,
-			Unicode:   "\u00c9",
+			Unicode:   'É',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -3335,9 +3335,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ca": {
+		'Ê': {
 			HorizAdvX: 520,
-			Unicode:   "\u00ca",
+			Unicode:   'Ê',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -3364,9 +3364,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cb": {
+		'Ë': {
 			HorizAdvX: 520,
-			Unicode:   "\u00cb",
+			Unicode:   'Ë',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -3397,9 +3397,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cc": {
+		'Ì': {
 			HorizAdvX: 280,
-			Unicode:   "\u00cc",
+			Unicode:   'Ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -3415,9 +3415,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cd": {
+		'Í': {
 			HorizAdvX: 280,
-			Unicode:   "\u00cd",
+			Unicode:   'Í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -3433,9 +3433,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ce": {
+		'Î': {
 			HorizAdvX: 280,
-			Unicode:   "\u00ce",
+			Unicode:   'Î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -3454,9 +3454,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cf": {
+		'Ï': {
 			HorizAdvX: 280,
-			Unicode:   "\u00cf",
+			Unicode:   'Ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -3479,9 +3479,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d0": {
+		'Ð': {
 			HorizAdvX: 742,
-			Unicode:   "\u00d0",
+			Unicode:   'Ð',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{702, 367}},
@@ -3512,9 +3512,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d1": {
+		'Ñ': {
 			HorizAdvX: 740,
-			Unicode:   "\u00d1",
+			Unicode:   'Ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -3540,9 +3540,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d2": {
+		'Ò': {
 			HorizAdvX: 840,
-			Unicode:   "\u00d2",
+			Unicode:   'Ò',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -3564,9 +3564,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d3": {
+		'Ó': {
 			HorizAdvX: 840,
-			Unicode:   "\u00d3",
+			Unicode:   'Ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -3588,9 +3588,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d4": {
+		'Ô': {
 			HorizAdvX: 840,
-			Unicode:   "\u00d4",
+			Unicode:   'Ô',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -3615,9 +3615,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d5": {
+		'Õ': {
 			HorizAdvX: 840,
-			Unicode:   "\u00d5",
+			Unicode:   'Õ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -3643,9 +3643,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d6": {
+		'Ö': {
 			HorizAdvX: 840,
-			Unicode:   "\u00d6",
+			Unicode:   'Ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -3674,9 +3674,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d7": {
+		'×': {
 			HorizAdvX: 600,
-			Unicode:   "\u00d7",
+			Unicode:   '×',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{523, 125}},
@@ -3694,9 +3694,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d8": {
+		'Ø': {
 			HorizAdvX: 840,
-			Unicode:   "\u00d8",
+			Unicode:   'Ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{803, 370}},
@@ -3726,9 +3726,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d9": {
+		'Ù': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d9",
+			Unicode:   'Ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -3750,9 +3750,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00da": {
+		'Ú': {
 			HorizAdvX: 0,
-			Unicode:   "\u00da",
+			Unicode:   'Ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -3774,9 +3774,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00db": {
+		'Û': {
 			HorizAdvX: 0,
-			Unicode:   "\u00db",
+			Unicode:   'Û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -3801,9 +3801,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dc": {
+		'Ü': {
 			HorizAdvX: 0,
-			Unicode:   "\u00dc",
+			Unicode:   'Ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -3832,9 +3832,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dd": {
+		'Ý': {
 			HorizAdvX: 620,
-			Unicode:   "\u00dd",
+			Unicode:   'Ý',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{626, 739}},
@@ -3855,9 +3855,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00de": {
+		'Þ': {
 			HorizAdvX: 560,
-			Unicode:   "\u00de",
+			Unicode:   'Þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{540, 380}},
@@ -3882,9 +3882,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00df": {
+		'ß': {
 			HorizAdvX: 600,
-			Unicode:   "\u00df",
+			Unicode:   'ß',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{584, 216}},
@@ -3913,9 +3913,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e0": {
+		'à': {
 			HorizAdvX: 660,
-			Unicode:   "\u00e0",
+			Unicode:   'à',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -3942,9 +3942,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e1": {
+		'á': {
 			HorizAdvX: 660,
-			Unicode:   "\u00e1",
+			Unicode:   'á',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -3971,9 +3971,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e2": {
+		'â': {
 			HorizAdvX: 660,
-			Unicode:   "\u00e2",
+			Unicode:   'â',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -4003,9 +4003,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e3": {
+		'ã': {
 			HorizAdvX: 660,
-			Unicode:   "\u00e3",
+			Unicode:   'ã',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -4036,9 +4036,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e4": {
+		'ä': {
 			HorizAdvX: 660,
-			Unicode:   "\u00e4",
+			Unicode:   'ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -4072,9 +4072,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e5": {
+		'å': {
 			HorizAdvX: 660,
-			Unicode:   "\u00e5",
+			Unicode:   'å',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -4108,9 +4108,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e6": {
+		'æ': {
 			HorizAdvX: 1080,
-			Unicode:   "\u00e6",
+			Unicode:   'æ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1051, 288}},
@@ -4147,9 +4147,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e7": {
+		'ç': {
 			HorizAdvX: 0,
-			Unicode:   "\u00e7",
+			Unicode:   'ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -4178,9 +4178,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e8": {
+		'è': {
 			HorizAdvX: 0,
-			Unicode:   "\u00e8",
+			Unicode:   'è',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -4206,9 +4206,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e9": {
+		'é': {
 			HorizAdvX: 0,
-			Unicode:   "\u00e9",
+			Unicode:   'é',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -4234,9 +4234,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ea": {
+		'ê': {
 			HorizAdvX: 0,
-			Unicode:   "\u00ea",
+			Unicode:   'ê',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -4265,9 +4265,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00eb": {
+		'ë': {
 			HorizAdvX: 0,
-			Unicode:   "\u00eb",
+			Unicode:   'ë',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -4300,9 +4300,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ec": {
+		'ì': {
 			HorizAdvX: 240,
-			Unicode:   "\u00ec",
+			Unicode:   'ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -4318,9 +4318,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ed": {
+		'í': {
 			HorizAdvX: 240,
-			Unicode:   "\u00ed",
+			Unicode:   'í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -4336,9 +4336,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ee": {
+		'î': {
 			HorizAdvX: 240,
-			Unicode:   "\u00ee",
+			Unicode:   'î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -4357,9 +4357,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ef": {
+		'ï': {
 			HorizAdvX: 240,
-			Unicode:   "\u00ef",
+			Unicode:   'ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -4382,9 +4382,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f0": {
+		'ð': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f0",
+			Unicode:   'ð',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 284}},
@@ -4415,9 +4415,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f1": {
+		'ñ': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f1",
+			Unicode:   'ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 0}},
@@ -4447,9 +4447,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f2": {
+		'ò': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f2",
+			Unicode:   'ò',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -4471,9 +4471,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3": {
+		'ó': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f3",
+			Unicode:   'ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -4495,9 +4495,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f4": {
+		'ô': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f4",
+			Unicode:   'ô',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -4522,9 +4522,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f5": {
+		'õ': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f5",
+			Unicode:   'õ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -4550,9 +4550,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f6": {
+		'ö': {
 			HorizAdvX: 0,
-			Unicode:   "\u00f6",
+			Unicode:   'ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -4581,9 +4581,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f7": {
+		'÷': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f7",
+			Unicode:   '÷',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 181}},
@@ -4606,9 +4606,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f8": {
+		'ø': {
 			HorizAdvX: 660,
-			Unicode:   "\u00f8",
+			Unicode:   'ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{620, 277}},
@@ -4638,9 +4638,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f9": {
+		'ù': {
 			HorizAdvX: 600,
-			Unicode:   "\u00f9",
+			Unicode:   'ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -4665,9 +4665,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fa": {
+		'ú': {
 			HorizAdvX: 600,
-			Unicode:   "\u00fa",
+			Unicode:   'ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -4692,9 +4692,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fb": {
+		'û': {
 			HorizAdvX: 600,
-			Unicode:   "\u00fb",
+			Unicode:   'û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -4722,9 +4722,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fc": {
+		'ü': {
 			HorizAdvX: 600,
-			Unicode:   "\u00fc",
+			Unicode:   'ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -4756,9 +4756,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fd": {
+		'ý': {
 			HorizAdvX: 580,
-			Unicode:   "\u00fd",
+			Unicode:   'ý',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 554}},
@@ -4778,9 +4778,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fe": {
+		'þ': {
 			HorizAdvX: 660,
-			Unicode:   "\u00fe",
+			Unicode:   'þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{634, 277}},
@@ -4802,9 +4802,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ff": {
+		'ÿ': {
 			HorizAdvX: 580,
-			Unicode:   "\u00ff",
+			Unicode:   'ÿ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 554}},
@@ -4831,9 +4831,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0100": {
+		'Ā': {
 			HorizAdvX: 740,
-			Unicode:   "\u0100",
+			Unicode:   'Ā',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -4858,9 +4858,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0101": {
+		'ā': {
 			HorizAdvX: 660,
-			Unicode:   "\u0101",
+			Unicode:   'ā',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -4888,9 +4888,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0102": {
+		'Ă': {
 			HorizAdvX: 740,
-			Unicode:   "\u0102",
+			Unicode:   'Ă',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -4917,9 +4917,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0103": {
+		'ă': {
 			HorizAdvX: 660,
-			Unicode:   "\u0103",
+			Unicode:   'ă',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -4949,9 +4949,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0104": {
+		'Ą': {
 			HorizAdvX: 740,
-			Unicode:   "\u0104",
+			Unicode:   'Ą',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, -231}},
@@ -4978,9 +4978,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0105": {
+		'ą': {
 			HorizAdvX: 660,
-			Unicode:   "\u0105",
+			Unicode:   'ą',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, -231}},
@@ -5008,9 +5008,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0106": {
+		'Ć': {
 			HorizAdvX: 780,
-			Unicode:   "\u0106",
+			Unicode:   'Ć',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{760, 206}},
@@ -5032,9 +5032,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0107": {
+		'ć': {
 			HorizAdvX: 0,
-			Unicode:   "\u0107",
+			Unicode:   'ć',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -5056,9 +5056,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0108": {
+		'Ĉ': {
 			HorizAdvX: 780,
-			Unicode:   "\u0108",
+			Unicode:   'Ĉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{760, 206}},
@@ -5083,9 +5083,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0109": {
+		'ĉ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0109",
+			Unicode:   'ĉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -5110,9 +5110,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010a": {
+		'Ċ': {
 			HorizAdvX: 780,
-			Unicode:   "\u010a",
+			Unicode:   'Ċ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{760, 206}},
@@ -5135,9 +5135,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010b": {
+		'ċ': {
 			HorizAdvX: 0,
-			Unicode:   "\u010b",
+			Unicode:   'ċ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -5160,9 +5160,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010c": {
+		'Č': {
 			HorizAdvX: 780,
-			Unicode:   "\u010c",
+			Unicode:   'Č',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{760, 206}},
@@ -5188,9 +5188,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010d": {
+		'č': {
 			HorizAdvX: 0,
-			Unicode:   "\u010d",
+			Unicode:   'č',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -5216,9 +5216,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010e": {
+		'Ď': {
 			HorizAdvX: 700,
-			Unicode:   "\u010e",
+			Unicode:   'Ď',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{660, 368}},
@@ -5250,9 +5250,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010f": {
+		'ď': {
 			HorizAdvX: 660,
-			Unicode:   "\u010f",
+			Unicode:   'ď',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{613, 0}},
@@ -5280,9 +5280,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0110": {
+		'Đ': {
 			HorizAdvX: 742,
-			Unicode:   "\u0110",
+			Unicode:   'Đ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{702, 367}},
@@ -5313,9 +5313,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0111": {
+		'đ': {
 			HorizAdvX: 660,
-			Unicode:   "\u0111",
+			Unicode:   'đ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{660, 602}},
@@ -5345,9 +5345,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0112": {
+		'Ē': {
 			HorizAdvX: 520,
-			Unicode:   "\u0112",
+			Unicode:   'Ē',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -5372,9 +5372,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0113": {
+		'ē': {
 			HorizAdvX: 0,
-			Unicode:   "\u0113",
+			Unicode:   'ē',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -5401,9 +5401,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0114": {
+		'Ĕ': {
 			HorizAdvX: 520,
-			Unicode:   "\u0114",
+			Unicode:   'Ĕ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -5430,9 +5430,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0115": {
+		'ĕ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0115",
+			Unicode:   'ĕ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -5461,9 +5461,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0116": {
+		'Ė': {
 			HorizAdvX: 520,
-			Unicode:   "\u0116",
+			Unicode:   'Ė',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -5488,9 +5488,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0117": {
+		'ė': {
 			HorizAdvX: 0,
-			Unicode:   "\u0117",
+			Unicode:   'ė',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -5517,9 +5517,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0118": {
+		'Ę': {
 			HorizAdvX: 520,
-			Unicode:   "\u0118",
+			Unicode:   'Ę',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, -231}},
@@ -5545,9 +5545,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0119": {
+		'ę': {
 			HorizAdvX: 0,
-			Unicode:   "\u0119",
+			Unicode:   'ę',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -5576,9 +5576,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011a": {
+		'Ě': {
 			HorizAdvX: 520,
-			Unicode:   "\u011a",
+			Unicode:   'Ě',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -5606,9 +5606,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011b": {
+		'ě': {
 			HorizAdvX: 0,
-			Unicode:   "\u011b",
+			Unicode:   'ě',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -5638,9 +5638,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011c": {
+		'Ĝ': {
 			HorizAdvX: 840,
-			Unicode:   "\u011c",
+			Unicode:   'Ĝ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{818, 359}},
@@ -5668,9 +5668,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011d": {
+		'ĝ': {
 			HorizAdvX: 660,
-			Unicode:   "\u011d",
+			Unicode:   'ĝ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{611, 105}},
@@ -5703,9 +5703,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011e": {
+		'Ğ': {
 			HorizAdvX: 840,
-			Unicode:   "\u011e",
+			Unicode:   'Ğ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{818, 359}},
@@ -5733,9 +5733,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011f": {
+		'ğ': {
 			HorizAdvX: 660,
-			Unicode:   "\u011f",
+			Unicode:   'ğ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{611, 105}},
@@ -5768,9 +5768,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0120": {
+		'Ġ': {
 			HorizAdvX: 840,
-			Unicode:   "\u0120",
+			Unicode:   'Ġ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{818, 359}},
@@ -5796,9 +5796,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0121": {
+		'ġ': {
 			HorizAdvX: 660,
-			Unicode:   "\u0121",
+			Unicode:   'ġ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{611, 105}},
@@ -5829,9 +5829,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0122": {
+		'Ģ': {
 			HorizAdvX: 840,
-			Unicode:   "\u0122",
+			Unicode:   'Ģ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{818, 359}},
@@ -5857,9 +5857,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0123": {
+		'ģ': {
 			HorizAdvX: 660,
-			Unicode:   "\u0123",
+			Unicode:   'ģ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{611, 105}},
@@ -5890,9 +5890,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0124": {
+		'Ĥ': {
 			HorizAdvX: 680,
-			Unicode:   "\u0124",
+			Unicode:   'Ĥ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -5919,9 +5919,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0125": {
+		'ĥ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0125",
+			Unicode:   'ĥ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{545, 0}},
@@ -5948,9 +5948,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0126": {
+		'Ħ': {
 			HorizAdvX: 680,
-			Unicode:   "\u0126",
+			Unicode:   'Ħ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{672, 549}},
@@ -5983,9 +5983,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0127": {
+		'ħ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0127",
+			Unicode:   'ħ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{544, 0}},
@@ -6014,9 +6014,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0128": {
+		'Ĩ': {
 			HorizAdvX: 280,
-			Unicode:   "\u0128",
+			Unicode:   'Ĩ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -6036,9 +6036,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0129": {
+		'ĩ': {
 			HorizAdvX: 240,
-			Unicode:   "\u0129",
+			Unicode:   'ĩ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -6058,9 +6058,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012a": {
+		'Ī': {
 			HorizAdvX: 280,
-			Unicode:   "\u012a",
+			Unicode:   'Ī',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -6077,9 +6077,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012b": {
+		'ī': {
 			HorizAdvX: 240,
-			Unicode:   "\u012b",
+			Unicode:   'ī',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -6096,9 +6096,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012c": {
+		'Ĭ': {
 			HorizAdvX: 280,
-			Unicode:   "\u012c",
+			Unicode:   'Ĭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -6117,9 +6117,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012d": {
+		'ĭ': {
 			HorizAdvX: 240,
-			Unicode:   "\u012d",
+			Unicode:   'ĭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -6138,9 +6138,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012e": {
+		'Į': {
 			HorizAdvX: 280,
-			Unicode:   "\u012e",
+			Unicode:   'Į',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, -231}},
@@ -6158,9 +6158,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012f": {
+		'į': {
 			HorizAdvX: 240,
-			Unicode:   "\u012f",
+			Unicode:   'į',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, -231}},
@@ -6184,9 +6184,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0130": {
+		'İ': {
 			HorizAdvX: 280,
-			Unicode:   "\u0130",
+			Unicode:   'İ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -6203,9 +6203,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0131": {
+		'ı': {
 			HorizAdvX: 240,
-			Unicode:   "\u0131",
+			Unicode:   'ı',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -6216,9 +6216,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0134": {
+		'Ĵ': {
 			HorizAdvX: 480,
-			Unicode:   "\u0134",
+			Unicode:   'Ĵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{414, 212}},
@@ -6241,9 +6241,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0135": {
+		'ĵ': {
 			HorizAdvX: 260,
-			Unicode:   "\u0135",
+			Unicode:   'ĵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 37}},
@@ -6264,9 +6264,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0136": {
+		'Ķ': {
 			HorizAdvX: 620,
-			Unicode:   "\u0136",
+			Unicode:   'Ķ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{599, 0}},
@@ -6289,9 +6289,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0137": {
+		'ķ': {
 			HorizAdvX: 580,
-			Unicode:   "\u0137",
+			Unicode:   'ķ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 0}},
@@ -6314,9 +6314,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0139": {
+		'Ĺ': {
 			HorizAdvX: 440,
-			Unicode:   "\u0139",
+			Unicode:   'Ĺ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 0}},
@@ -6334,9 +6334,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013a": {
+		'ĺ': {
 			HorizAdvX: 240,
-			Unicode:   "\u013a",
+			Unicode:   'ĺ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -6352,9 +6352,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013b": {
+		'Ļ': {
 			HorizAdvX: 440,
-			Unicode:   "\u013b",
+			Unicode:   'Ļ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 0}},
@@ -6373,9 +6373,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013c": {
+		'ļ': {
 			HorizAdvX: 240,
-			Unicode:   "\u013c",
+			Unicode:   'ļ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -6392,9 +6392,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013d": {
+		'Ľ': {
 			HorizAdvX: 440,
-			Unicode:   "\u013d",
+			Unicode:   'Ľ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 0}},
@@ -6413,9 +6413,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013e": {
+		'ľ': {
 			HorizAdvX: 240,
-			Unicode:   "\u013e",
+			Unicode:   'ľ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -6432,9 +6432,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013f": {
+		'Ŀ': {
 			HorizAdvX: 440,
-			Unicode:   "\u013f",
+			Unicode:   'Ŀ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 0}},
@@ -6453,9 +6453,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0140": {
+		'ŀ': {
 			HorizAdvX: 373,
-			Unicode:   "\u0140",
+			Unicode:   'ŀ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -6472,9 +6472,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0141": {
+		'Ł': {
 			HorizAdvX: 480,
-			Unicode:   "\u0141",
+			Unicode:   'Ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{473, 0}},
@@ -6495,9 +6495,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0142": {
+		'ł': {
 			HorizAdvX: 320,
-			Unicode:   "\u0142",
+			Unicode:   'ł',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{312, 446}},
@@ -6516,9 +6516,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0143": {
+		'Ń': {
 			HorizAdvX: 740,
-			Unicode:   "\u0143",
+			Unicode:   'Ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -6540,9 +6540,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0144": {
+		'ń': {
 			HorizAdvX: 600,
-			Unicode:   "\u0144",
+			Unicode:   'ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 0}},
@@ -6568,9 +6568,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0145": {
+		'Ņ': {
 			HorizAdvX: 740,
-			Unicode:   "\u0145",
+			Unicode:   'Ņ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -6593,9 +6593,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0146": {
+		'ņ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0146",
+			Unicode:   'ņ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 0}},
@@ -6622,9 +6622,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0147": {
+		'Ň': {
 			HorizAdvX: 740,
-			Unicode:   "\u0147",
+			Unicode:   'Ň',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -6650,9 +6650,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0148": {
+		'ň': {
 			HorizAdvX: 600,
-			Unicode:   "\u0148",
+			Unicode:   'ň',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 0}},
@@ -6682,9 +6682,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014a": {
+		'Ŋ': {
 			HorizAdvX: 740,
-			Unicode:   "\u014a",
+			Unicode:   'Ŋ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, -25}},
@@ -6706,9 +6706,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014b": {
+		'ŋ': {
 			HorizAdvX: 600,
-			Unicode:   "\u014b",
+			Unicode:   'ŋ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 37}},
@@ -6731,9 +6731,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014c": {
+		'Ō': {
 			HorizAdvX: 840,
-			Unicode:   "\u014c",
+			Unicode:   'Ō',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -6756,9 +6756,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014d": {
+		'ō': {
 			HorizAdvX: 0,
-			Unicode:   "\u014d",
+			Unicode:   'ō',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -6781,9 +6781,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014e": {
+		'Ŏ': {
 			HorizAdvX: 840,
-			Unicode:   "\u014e",
+			Unicode:   'Ŏ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -6808,9 +6808,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014f": {
+		'ŏ': {
 			HorizAdvX: 0,
-			Unicode:   "\u014f",
+			Unicode:   'ŏ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -6835,9 +6835,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0150": {
+		'Ő': {
 			HorizAdvX: 840,
-			Unicode:   "\u0150",
+			Unicode:   'Ő',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -6864,9 +6864,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0151": {
+		'ő': {
 			HorizAdvX: 0,
-			Unicode:   "\u0151",
+			Unicode:   'ő',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -6893,9 +6893,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0152": {
+		'Œ': {
 			HorizAdvX: 1060,
-			Unicode:   "\u0152",
+			Unicode:   'Œ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1004, 0}},
@@ -6925,9 +6925,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0153": {
+		'œ': {
 			HorizAdvX: 1080,
-			Unicode:   "\u0153",
+			Unicode:   'œ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1048, 284}},
@@ -6958,9 +6958,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0154": {
+		'Ŕ': {
 			HorizAdvX: 580,
-			Unicode:   "\u0154",
+			Unicode:   'Ŕ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 0}},
@@ -6988,9 +6988,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0155": {
+		'ŕ': {
 			HorizAdvX: 320,
-			Unicode:   "\u0155",
+			Unicode:   'ŕ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{306, 439}},
@@ -7011,9 +7011,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0156": {
+		'Ŗ': {
 			HorizAdvX: 580,
-			Unicode:   "\u0156",
+			Unicode:   'Ŗ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 0}},
@@ -7042,9 +7042,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0157": {
+		'ŗ': {
 			HorizAdvX: 320,
-			Unicode:   "\u0157",
+			Unicode:   'ŗ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{306, 439}},
@@ -7066,9 +7066,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0158": {
+		'Ř': {
 			HorizAdvX: 580,
-			Unicode:   "\u0158",
+			Unicode:   'Ř',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 0}},
@@ -7100,9 +7100,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0159": {
+		'ř': {
 			HorizAdvX: 320,
-			Unicode:   "\u0159",
+			Unicode:   'ř',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{306, 439}},
@@ -7127,9 +7127,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015a": {
+		'Ś': {
 			HorizAdvX: 520,
-			Unicode:   "\u015a",
+			Unicode:   'Ś',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{493, 224}},
@@ -7157,9 +7157,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015b": {
+		'ś': {
 			HorizAdvX: 440,
-			Unicode:   "\u015b",
+			Unicode:   'ś',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{420, 176}},
@@ -7185,9 +7185,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015c": {
+		'Ŝ': {
 			HorizAdvX: 520,
-			Unicode:   "\u015c",
+			Unicode:   'Ŝ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{493, 224}},
@@ -7218,9 +7218,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015d": {
+		'ŝ': {
 			HorizAdvX: 440,
-			Unicode:   "\u015d",
+			Unicode:   'ŝ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{420, 176}},
@@ -7249,9 +7249,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015e": {
+		'Ş': {
 			HorizAdvX: 520,
-			Unicode:   "\u015e",
+			Unicode:   'Ş',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{493, 224}},
@@ -7286,9 +7286,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015f": {
+		'ş': {
 			HorizAdvX: 440,
-			Unicode:   "\u015f",
+			Unicode:   'ş',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{420, 176}},
@@ -7322,9 +7322,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0160": {
+		'Š': {
 			HorizAdvX: 520,
-			Unicode:   "\u0160",
+			Unicode:   'Š',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{493, 224}},
@@ -7356,9 +7356,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0161": {
+		'š': {
 			HorizAdvX: 440,
-			Unicode:   "\u0161",
+			Unicode:   'š',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{420, 176}},
@@ -7388,9 +7388,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0162": {
+		'Ţ': {
 			HorizAdvX: 420,
-			Unicode:   "\u0162",
+			Unicode:   'Ţ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 608}},
@@ -7418,9 +7418,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0163": {
+		'ţ': {
 			HorizAdvX: 300,
-			Unicode:   "\u0163",
+			Unicode:   'ţ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{287, 433}},
@@ -7452,9 +7452,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0164": {
+		'Ť': {
 			HorizAdvX: 420,
-			Unicode:   "\u0164",
+			Unicode:   'Ť',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 608}},
@@ -7478,9 +7478,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0165": {
+		'ť': {
 			HorizAdvX: 300,
-			Unicode:   "\u0165",
+			Unicode:   'ť',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{287, 433}},
@@ -7505,9 +7505,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0168": {
+		'Ũ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0168",
+			Unicode:   'Ũ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -7533,9 +7533,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0169": {
+		'ũ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0169",
+			Unicode:   'ũ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -7564,9 +7564,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016a": {
+		'Ū': {
 			HorizAdvX: 0,
-			Unicode:   "\u016a",
+			Unicode:   'Ū',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -7589,9 +7589,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016b": {
+		'ū': {
 			HorizAdvX: 600,
-			Unicode:   "\u016b",
+			Unicode:   'ū',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -7617,9 +7617,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016c": {
+		'Ŭ': {
 			HorizAdvX: 0,
-			Unicode:   "\u016c",
+			Unicode:   'Ŭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -7644,9 +7644,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016d": {
+		'ŭ': {
 			HorizAdvX: 600,
-			Unicode:   "\u016d",
+			Unicode:   'ŭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -7674,9 +7674,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016e": {
+		'Ů': {
 			HorizAdvX: 0,
-			Unicode:   "\u016e",
+			Unicode:   'Ů',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -7705,9 +7705,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016f": {
+		'ů': {
 			HorizAdvX: 600,
-			Unicode:   "\u016f",
+			Unicode:   'ů',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -7739,9 +7739,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0170": {
+		'Ű': {
 			HorizAdvX: 0,
-			Unicode:   "\u0170",
+			Unicode:   'Ű',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -7768,9 +7768,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0171": {
+		'ű': {
 			HorizAdvX: 600,
-			Unicode:   "\u0171",
+			Unicode:   'ű',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -7800,9 +7800,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0172": {
+		'Ų': {
 			HorizAdvX: 0,
-			Unicode:   "\u0172",
+			Unicode:   'Ų',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -7827,9 +7827,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0173": {
+		'ų': {
 			HorizAdvX: 600,
-			Unicode:   "\u0173",
+			Unicode:   'ų',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, -231}},
@@ -7855,9 +7855,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0174": {
+		'Ŵ': {
 			HorizAdvX: 900,
-			Unicode:   "\u0174",
+			Unicode:   'Ŵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{898, 739}},
@@ -7885,9 +7885,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0175": {
+		'ŵ': {
 			HorizAdvX: 800,
-			Unicode:   "\u0175",
+			Unicode:   'ŵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{785, 554}},
@@ -7915,9 +7915,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0176": {
+		'Ŷ': {
 			HorizAdvX: 620,
-			Unicode:   "\u0176",
+			Unicode:   'Ŷ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{626, 739}},
@@ -7941,9 +7941,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0177": {
+		'ŷ': {
 			HorizAdvX: 580,
-			Unicode:   "\u0177",
+			Unicode:   'ŷ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 554}},
@@ -7966,9 +7966,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0178": {
+		'Ÿ': {
 			HorizAdvX: 620,
-			Unicode:   "\u0178",
+			Unicode:   'Ÿ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{626, 739}},
@@ -7996,9 +7996,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0179": {
+		'Ź': {
 			HorizAdvX: 500,
-			Unicode:   "\u0179",
+			Unicode:   'Ź',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{480, 0}},
@@ -8020,9 +8020,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017a": {
+		'ź': {
 			HorizAdvX: 460,
-			Unicode:   "\u017a",
+			Unicode:   'ź',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{442, 0}},
@@ -8044,9 +8044,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017b": {
+		'Ż': {
 			HorizAdvX: 500,
-			Unicode:   "\u017b",
+			Unicode:   'Ż',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{480, 0}},
@@ -8069,9 +8069,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017c": {
+		'ż': {
 			HorizAdvX: 460,
-			Unicode:   "\u017c",
+			Unicode:   'ż',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{442, 0}},
@@ -8094,9 +8094,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017d": {
+		'Ž': {
 			HorizAdvX: 500,
-			Unicode:   "\u017d",
+			Unicode:   'Ž',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{480, 0}},
@@ -8122,9 +8122,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017e": {
+		'ž': {
 			HorizAdvX: 460,
-			Unicode:   "\u017e",
+			Unicode:   'ž',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{442, 0}},
@@ -8150,9 +8150,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017f": {
+		'ſ': {
 			HorizAdvX: 280,
-			Unicode:   "\u017f",
+			Unicode:   'ſ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 611}},
@@ -8171,9 +8171,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u018e": {
+		'Ǝ': {
 			HorizAdvX: 520,
-			Unicode:   "\u018e",
+			Unicode:   'Ǝ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -8192,9 +8192,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0192": {
+		'ƒ': {
 			HorizAdvX: 560,
-			Unicode:   "\u0192",
+			Unicode:   'ƒ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{494, 820}},
@@ -8222,9 +8222,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01a0": {
+		'Ơ': {
 			HorizAdvX: 859,
-			Unicode:   "\u01a0",
+			Unicode:   'Ơ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{827, 739}},
@@ -8245,9 +8245,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01a1": {
+		'ơ': {
 			HorizAdvX: 722,
-			Unicode:   "\u01a1",
+			Unicode:   'ơ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{693, 554}},
@@ -8268,9 +8268,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01af": {
+		'Ư': {
 			HorizAdvX: 748,
-			Unicode:   "\u01af",
+			Unicode:   'Ư',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{724, 739}},
@@ -8295,9 +8295,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01b0": {
+		'ư': {
 			HorizAdvX: 729,
-			Unicode:   "\u01b0",
+			Unicode:   'ư',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{703, 554}},
@@ -8323,9 +8323,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01dd": {
+		'ǝ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01dd",
+			Unicode:   'ǝ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 279}},
@@ -8346,9 +8346,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e6": {
+		'Ǧ': {
 			HorizAdvX: 840,
-			Unicode:   "\u01e6",
+			Unicode:   'Ǧ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{818, 359}},
@@ -8377,9 +8377,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e7": {
+		'ǧ': {
 			HorizAdvX: 660,
-			Unicode:   "\u01e7",
+			Unicode:   'ǧ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{611, 105}},
@@ -8413,9 +8413,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ea": {
+		'Ǫ': {
 			HorizAdvX: 840,
-			Unicode:   "\u01ea",
+			Unicode:   'Ǫ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -8440,9 +8440,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01eb": {
+		'ǫ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01eb",
+			Unicode:   'ǫ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -8467,9 +8467,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01f4": {
+		'Ǵ': {
 			HorizAdvX: 840,
-			Unicode:   "\u01f4",
+			Unicode:   'Ǵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{818, 359}},
@@ -8494,9 +8494,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01f5": {
+		'ǵ': {
 			HorizAdvX: 660,
-			Unicode:   "\u01f5",
+			Unicode:   'ǵ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{611, 105}},
@@ -8526,9 +8526,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fa": {
+		'Ǻ': {
 			HorizAdvX: 740,
-			Unicode:   "\u01fa",
+			Unicode:   'Ǻ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -8564,9 +8564,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fb": {
+		'ǻ': {
 			HorizAdvX: 660,
-			Unicode:   "\u01fb",
+			Unicode:   'ǻ',
 			GerberLP:  "dcddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -8605,9 +8605,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fc": {
+		'Ǽ': {
 			HorizAdvX: 900,
-			Unicode:   "\u01fc",
+			Unicode:   'Ǽ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{843, 0}},
@@ -8640,9 +8640,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fd": {
+		'ǽ': {
 			HorizAdvX: 1080,
-			Unicode:   "\u01fd",
+			Unicode:   'ǽ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1051, 288}},
@@ -8684,9 +8684,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fe": {
+		'Ǿ': {
 			HorizAdvX: 840,
-			Unicode:   "\u01fe",
+			Unicode:   'Ǿ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{803, 370}},
@@ -8721,9 +8721,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ff": {
+		'ǿ': {
 			HorizAdvX: 660,
-			Unicode:   "\u01ff",
+			Unicode:   'ǿ',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{620, 277}},
@@ -8758,9 +8758,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0200": {
+		'Ȁ': {
 			HorizAdvX: 740,
-			Unicode:   "\u0200",
+			Unicode:   'Ȁ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -8789,9 +8789,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0201": {
+		'ȁ': {
 			HorizAdvX: 660,
-			Unicode:   "\u0201",
+			Unicode:   'ȁ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -8823,9 +8823,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0204": {
+		'Ȅ': {
 			HorizAdvX: 520,
-			Unicode:   "\u0204",
+			Unicode:   'Ȅ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -8854,9 +8854,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0205": {
+		'ȅ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0205",
+			Unicode:   'ȅ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -8887,9 +8887,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0208": {
+		'Ȉ': {
 			HorizAdvX: 280,
-			Unicode:   "\u0208",
+			Unicode:   'Ȉ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -8910,9 +8910,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0209": {
+		'ȉ': {
 			HorizAdvX: 240,
-			Unicode:   "\u0209",
+			Unicode:   'ȉ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -8933,9 +8933,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020c": {
+		'Ȍ': {
 			HorizAdvX: 840,
-			Unicode:   "\u020c",
+			Unicode:   'Ȍ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -8962,9 +8962,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020d": {
+		'ȍ': {
 			HorizAdvX: 0,
-			Unicode:   "\u020d",
+			Unicode:   'ȍ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -8991,9 +8991,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0210": {
+		'Ȑ': {
 			HorizAdvX: 580,
-			Unicode:   "\u0210",
+			Unicode:   'Ȑ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 0}},
@@ -9026,9 +9026,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0211": {
+		'ȑ': {
 			HorizAdvX: 320,
-			Unicode:   "\u0211",
+			Unicode:   'ȑ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{306, 439}},
@@ -9054,9 +9054,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0214": {
+		'Ȕ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0214",
+			Unicode:   'Ȕ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -9083,9 +9083,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0215": {
+		'ȕ': {
 			HorizAdvX: 600,
-			Unicode:   "\u0215",
+			Unicode:   'ȕ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -9115,9 +9115,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0218": {
+		'Ș': {
 			HorizAdvX: 520,
-			Unicode:   "\u0218",
+			Unicode:   'Ș',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{493, 224}},
@@ -9146,9 +9146,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0219": {
+		'ș': {
 			HorizAdvX: 440,
-			Unicode:   "\u0219",
+			Unicode:   'ș',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{420, 176}},
@@ -9175,9 +9175,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021a": {
+		'Ț': {
 			HorizAdvX: 420,
-			Unicode:   "\u021a",
+			Unicode:   'Ț',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 608}},
@@ -9198,9 +9198,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021b": {
+		'ț': {
 			HorizAdvX: 300,
-			Unicode:   "\u021b",
+			Unicode:   'ț',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{287, 433}},
@@ -9225,9 +9225,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0258": {
+		'ɘ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0258",
+			Unicode:   'ɘ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 275}},
@@ -9248,9 +9248,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0259": {
+		'ə': {
 			HorizAdvX: 0,
-			Unicode:   "\u0259",
+			Unicode:   'ə',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 279}},
@@ -9271,9 +9271,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02be": {
+		'ʾ': {
 			HorizAdvX: 505,
-			Unicode:   "\u02be",
+			Unicode:   'ʾ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{451, 518}},
@@ -9294,9 +9294,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02bf": {
+		'ʿ': {
 			HorizAdvX: 505,
-			Unicode:   "\u02bf",
+			Unicode:   'ʿ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{450, 453}},
@@ -9317,9 +9317,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c6": {
+		'ˆ': {
 			HorizAdvX: 540,
-			Unicode:   "\u02c6",
+			Unicode:   'ˆ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 631}},
@@ -9332,9 +9332,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c7": {
+		'ˇ': {
 			HorizAdvX: 540,
-			Unicode:   "\u02c7",
+			Unicode:   'ˇ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 769}},
@@ -9348,9 +9348,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d8": {
+		'˘': {
 			HorizAdvX: 480,
-			Unicode:   "\u02d8",
+			Unicode:   '˘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{404, 770}},
@@ -9363,9 +9363,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d9": {
+		'˙': {
 			HorizAdvX: 280,
-			Unicode:   "\u02d9",
+			Unicode:   '˙',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{207, 634}},
@@ -9376,9 +9376,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02da": {
+		'˚': {
 			HorizAdvX: 360,
-			Unicode:   "\u02da",
+			Unicode:   '˚',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 710}},
@@ -9395,9 +9395,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02db": {
+		'˛': {
 			HorizAdvX: 340,
-			Unicode:   "\u02db",
+			Unicode:   '˛',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{276, -231}},
@@ -9412,9 +9412,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dc": {
+		'˜': {
 			HorizAdvX: 480,
-			Unicode:   "\u02dc",
+			Unicode:   '˜',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 687}},
@@ -9428,9 +9428,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dd": {
+		'˝': {
 			HorizAdvX: 700,
-			Unicode:   "\u02dd",
+			Unicode:   '˝',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{436, 726}},
@@ -9445,9 +9445,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0300": {
+		'̀': {
 			HorizAdvX: 0,
-			Unicode:   "\u0300",
+			Unicode:   '̀',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-237, 682}},
@@ -9457,9 +9457,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0301": {
+		'́': {
 			HorizAdvX: 0,
-			Unicode:   "\u0301",
+			Unicode:   '́',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-145, 724}},
@@ -9469,9 +9469,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0302": {
+		'̂': {
 			HorizAdvX: 0,
-			Unicode:   "\u0302",
+			Unicode:   '̂',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-130, 631}},
@@ -9484,9 +9484,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0303": {
+		'̃': {
 			HorizAdvX: 0,
-			Unicode:   "\u0303",
+			Unicode:   '̃',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-165, 687}},
@@ -9500,9 +9500,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0304": {
+		'̄': {
 			HorizAdvX: 0,
-			Unicode:   "\u0304",
+			Unicode:   '̄',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-189, 650}},
@@ -9513,9 +9513,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0306": {
+		'̆': {
 			HorizAdvX: 0,
-			Unicode:   "\u0306",
+			Unicode:   '̆',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-166, 770}},
@@ -9528,9 +9528,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0307": {
+		'̇': {
 			HorizAdvX: 0,
-			Unicode:   "\u0307",
+			Unicode:   '̇',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-263, 634}},
@@ -9541,9 +9541,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0308": {
+		'̈': {
 			HorizAdvX: 0,
-			Unicode:   "\u0308",
+			Unicode:   '̈',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-373, 634}},
@@ -9560,9 +9560,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0309": {
+		'̉': {
 			HorizAdvX: 0,
-			Unicode:   "\u0309",
+			Unicode:   '̉',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-201, 764}},
@@ -9580,9 +9580,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u030a": {
+		'̊': {
 			HorizAdvX: 0,
-			Unicode:   "\u030a",
+			Unicode:   '̊',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-217, 710}},
@@ -9599,9 +9599,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u030b": {
+		'̋': {
 			HorizAdvX: 0,
-			Unicode:   "\u030b",
+			Unicode:   '̋',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-244, 726}},
@@ -9616,9 +9616,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u030c": {
+		'̌': {
 			HorizAdvX: 0,
-			Unicode:   "\u030c",
+			Unicode:   '̌',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-130, 769}},
@@ -9632,9 +9632,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u030f": {
+		'̏': {
 			HorizAdvX: 0,
-			Unicode:   "\u030f",
+			Unicode:   '̏',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-144, 663}},
@@ -9649,9 +9649,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0311": {
+		'̑': {
 			HorizAdvX: 0,
-			Unicode:   "\u0311",
+			Unicode:   '̑',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-166, 631}},
@@ -9664,9 +9664,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0323": {
+		'̣': {
 			HorizAdvX: 0,
-			Unicode:   "\u0323",
+			Unicode:   '̣',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-263, -212}},
@@ -9677,9 +9677,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0326": {
+		'̦': {
 			HorizAdvX: 0,
-			Unicode:   "\u0326",
+			Unicode:   '̦',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-272, -53}},
@@ -9690,9 +9690,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u032e": {
+		'̮': {
 			HorizAdvX: 0,
-			Unicode:   "\u032e",
+			Unicode:   '̮',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-165, -76}},
@@ -9705,9 +9705,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u032f": {
+		'̯': {
 			HorizAdvX: 0,
-			Unicode:   "\u032f",
+			Unicode:   '̯',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-165, -215}},
@@ -9720,9 +9720,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0330": {
+		'̰': {
 			HorizAdvX: 0,
-			Unicode:   "\u0330",
+			Unicode:   '̰',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-165, -159}},
@@ -9736,9 +9736,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0331": {
+		'̱': {
 			HorizAdvX: 0,
-			Unicode:   "\u0331",
+			Unicode:   '̱',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-189, -196}},
@@ -9749,9 +9749,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0332": {
+		'̲': {
 			HorizAdvX: 0,
-			Unicode:   "\u0332",
+			Unicode:   '̲',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-189, -196}},
@@ -9762,9 +9762,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0391": {
+		'Α': {
 			HorizAdvX: 740,
-			Unicode:   "\u0391",
+			Unicode:   'Α',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -9783,9 +9783,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0392": {
+		'Β': {
 			HorizAdvX: 580,
-			Unicode:   "\u0392",
+			Unicode:   'Β',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{548, 220}},
@@ -9814,9 +9814,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0393": {
+		'Γ': {
 			HorizAdvX: 480,
-			Unicode:   "\u0393",
+			Unicode:   'Γ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{444, 608}},
@@ -9829,9 +9829,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0394": {
+		'Δ': {
 			HorizAdvX: 647,
-			Unicode:   "\u0394",
+			Unicode:   'Δ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{652, -1}},
@@ -9846,9 +9846,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0395": {
+		'Ε': {
 			HorizAdvX: 520,
-			Unicode:   "\u0395",
+			Unicode:   'Ε',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -9867,9 +9867,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0396": {
+		'Ζ': {
 			HorizAdvX: 500,
-			Unicode:   "\u0396",
+			Unicode:   'Ζ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{480, 0}},
@@ -9886,9 +9886,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0397": {
+		'Η': {
 			HorizAdvX: 680,
-			Unicode:   "\u0397",
+			Unicode:   'Η',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -9907,9 +9907,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0398": {
+		'Θ': {
 			HorizAdvX: 840,
-			Unicode:   "\u0398",
+			Unicode:   'Θ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -9932,9 +9932,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0399": {
+		'Ι': {
 			HorizAdvX: 280,
-			Unicode:   "\u0399",
+			Unicode:   'Ι',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -9945,9 +9945,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u039a": {
+		'Κ': {
 			HorizAdvX: 620,
-			Unicode:   "\u039a",
+			Unicode:   'Κ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{599, 0}},
@@ -9964,9 +9964,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u039b": {
+		'Λ': {
 			HorizAdvX: 740,
-			Unicode:   "\u039b",
+			Unicode:   'Λ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -9979,9 +9979,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u039c": {
+		'Μ': {
 			HorizAdvX: 900,
-			Unicode:   "\u039c",
+			Unicode:   'Μ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{840, 0}},
@@ -10001,9 +10001,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u039d": {
+		'Ν': {
 			HorizAdvX: 740,
-			Unicode:   "\u039d",
+			Unicode:   'Ν',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -10020,9 +10020,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u039e": {
+		'Ξ': {
 			HorizAdvX: 680,
-			Unicode:   "\u039e",
+			Unicode:   'Ξ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{611, 601}},
@@ -10045,9 +10045,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u039f": {
+		'Ο': {
 			HorizAdvX: 840,
-			Unicode:   "\u039f",
+			Unicode:   'Ο',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -10064,9 +10064,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03a0": {
+		'Π': {
 			HorizAdvX: 629,
-			Unicode:   "\u03a0",
+			Unicode:   'Π',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 0}},
@@ -10081,9 +10081,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03a1": {
+		'Ρ': {
 			HorizAdvX: 560,
-			Unicode:   "\u03a1",
+			Unicode:   'Ρ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{540, 511}},
@@ -10106,9 +10106,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03a3": {
+		'Σ': {
 			HorizAdvX: 462,
-			Unicode:   "\u03a3",
+			Unicode:   'Σ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{451, 0}},
@@ -10127,9 +10127,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03a4": {
+		'Τ': {
 			HorizAdvX: 420,
-			Unicode:   "\u03a4",
+			Unicode:   'Τ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 608}},
@@ -10144,9 +10144,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03a5": {
+		'Υ': {
 			HorizAdvX: 620,
-			Unicode:   "\u03a5",
+			Unicode:   'Υ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{626, 739}},
@@ -10162,9 +10162,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03a6": {
+		'Φ': {
 			HorizAdvX: 698,
-			Unicode:   "\u03a6",
+			Unicode:   'Φ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{644, 370}},
@@ -10191,9 +10191,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03a7": {
+		'Χ': {
 			HorizAdvX: 680,
-			Unicode:   "\u03a7",
+			Unicode:   'Χ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{676, 0}},
@@ -10211,9 +10211,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03a8": {
+		'Ψ': {
 			HorizAdvX: 852,
-			Unicode:   "\u03a8",
+			Unicode:   'Ψ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{798, 554}},
@@ -10236,9 +10236,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03a9": {
+		'Ω': {
 			HorizAdvX: 771,
-			Unicode:   "\u03a9",
+			Unicode:   'Ω',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{748, 339}},
@@ -10265,9 +10265,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03b1": {
+		'α': {
 			HorizAdvX: 738,
-			Unicode:   "\u03b1",
+			Unicode:   'α',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{684, 554}},
@@ -10290,9 +10290,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03b2": {
+		'β': {
 			HorizAdvX: 540,
-			Unicode:   "\u03b2",
+			Unicode:   'β',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{486, 214}},
@@ -10319,9 +10319,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03b3": {
+		'γ': {
 			HorizAdvX: 531,
-			Unicode:   "\u03b3",
+			Unicode:   'γ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{585, 554}},
@@ -10337,9 +10337,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03b4": {
+		'δ': {
 			HorizAdvX: 697,
-			Unicode:   "\u03b4",
+			Unicode:   'δ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{643, 273}},
@@ -10362,9 +10362,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03b5": {
+		'ε': {
 			HorizAdvX: 571,
-			Unicode:   "\u03b5",
+			Unicode:   'ε',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{521, -6}},
@@ -10385,9 +10385,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03b6": {
+		'ζ': {
 			HorizAdvX: 469,
-			Unicode:   "\u03b6",
+			Unicode:   'ζ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{415, 615}},
@@ -10410,9 +10410,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03b7": {
+		'η': {
 			HorizAdvX: 550,
-			Unicode:   "\u03b7",
+			Unicode:   'η',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{496, -174}},
@@ -10431,9 +10431,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03b8": {
+		'θ': {
 			HorizAdvX: 554,
-			Unicode:   "\u03b8",
+			Unicode:   'θ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{500, 342}},
@@ -10454,9 +10454,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03b9": {
+		'ι': {
 			HorizAdvX: 415,
-			Unicode:   "\u03b9",
+			Unicode:   'ι',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{361, -20}},
@@ -10469,9 +10469,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03ba": {
+		'κ': {
 			HorizAdvX: 580,
-			Unicode:   "\u03ba",
+			Unicode:   'κ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 0}},
@@ -10488,9 +10488,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03bb": {
+		'λ': {
 			HorizAdvX: 650,
-			Unicode:   "\u03bb",
+			Unicode:   'λ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{596, 0}},
@@ -10506,9 +10506,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03bc": {
+		'μ': {
 			HorizAdvX: 576,
-			Unicode:   "\u03bc",
+			Unicode:   'μ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{522, 0}},
@@ -10529,9 +10529,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03bd": {
+		'ν': {
 			HorizAdvX: 512,
-			Unicode:   "\u03bd",
+			Unicode:   'ν',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{458, 369}},
@@ -10547,9 +10547,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03be": {
+		'ξ': {
 			HorizAdvX: 470,
-			Unicode:   "\u03be",
+			Unicode:   'ξ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{416, 615}},
@@ -10577,9 +10577,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03bf": {
+		'ο': {
 			HorizAdvX: 0,
-			Unicode:   "\u03bf",
+			Unicode:   'ο',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -10596,9 +10596,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c0": {
+		'π': {
 			HorizAdvX: 708,
-			Unicode:   "\u03c0",
+			Unicode:   'π',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 416}},
@@ -10619,9 +10619,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c1": {
+		'ρ': {
 			HorizAdvX: 604,
-			Unicode:   "\u03c1",
+			Unicode:   'ρ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{550, 277}},
@@ -10642,9 +10642,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c2": {
+		'ς': {
 			HorizAdvX: 541,
-			Unicode:   "\u03c2",
+			Unicode:   'ς',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{480, -174}},
@@ -10665,9 +10665,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c3": {
+		'σ': {
 			HorizAdvX: 732,
-			Unicode:   "\u03c3",
+			Unicode:   'σ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{705, 504}},
@@ -10687,9 +10687,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c4": {
+		'τ': {
 			HorizAdvX: 390,
-			Unicode:   "\u03c4",
+			Unicode:   'τ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{336, -14}},
@@ -10706,9 +10706,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c5": {
+		'υ': {
 			HorizAdvX: 550,
-			Unicode:   "\u03c5",
+			Unicode:   'υ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{496, 250}},
@@ -10725,9 +10725,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c6": {
+		'φ': {
 			HorizAdvX: 797,
-			Unicode:   "\u03c6",
+			Unicode:   'φ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{743, 277}},
@@ -10752,9 +10752,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c7": {
+		'χ': {
 			HorizAdvX: 637,
-			Unicode:   "\u03c7",
+			Unicode:   'χ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{584, -174}},
@@ -10772,9 +10772,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c8": {
+		'ψ': {
 			HorizAdvX: 797,
-			Unicode:   "\u03c8",
+			Unicode:   'ψ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{743, 185}},
@@ -10797,9 +10797,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c9": {
+		'ω': {
 			HorizAdvX: 771,
-			Unicode:   "\u03c9",
+			Unicode:   'ω',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{717, 305}},
@@ -10822,9 +10822,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03d1": {
+		'ϑ': {
 			HorizAdvX: 619,
-			Unicode:   "\u03d1",
+			Unicode:   'ϑ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{565, 381}},
@@ -10853,9 +10853,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03d5": {
+		'ϕ': {
 			HorizAdvX: 0,
-			Unicode:   "\u03d5",
+			Unicode:   'ϕ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -10882,9 +10882,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03d6": {
+		'ϖ': {
 			HorizAdvX: 771,
-			Unicode:   "\u03d6",
+			Unicode:   'ϖ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{717, 305}},
@@ -10909,9 +10909,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03f5": {
+		'ϵ': {
 			HorizAdvX: 0,
-			Unicode:   "\u03f5",
+			Unicode:   'ϵ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{582, 139}},
@@ -10930,9 +10930,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0400": {
+		'Ѐ': {
 			HorizAdvX: 519,
-			Unicode:   "\u0400",
+			Unicode:   'Ѐ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{535, 0}},
@@ -10956,9 +10956,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0401": {
+		'Ё': {
 			HorizAdvX: 519,
-			Unicode:   "\u0401",
+			Unicode:   'Ё',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{535, 0}},
@@ -10989,9 +10989,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0402": {
+		'Ђ': {
 			HorizAdvX: 420,
-			Unicode:   "\u0402",
+			Unicode:   'Ђ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{682, 5}},
@@ -11018,9 +11018,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0403": {
+		'Ѓ': {
 			HorizAdvX: 467,
-			Unicode:   "\u0403",
+			Unicode:   'Ѓ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{515, 608}},
@@ -11038,9 +11038,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0404": {
+		'Є': {
 			HorizAdvX: 782,
-			Unicode:   "\u0404",
+			Unicode:   'Є',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{760, 206}},
@@ -11061,9 +11061,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0405": {
+		'Ѕ': {
 			HorizAdvX: 520,
-			Unicode:   "\u0405",
+			Unicode:   'Ѕ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{493, 224}},
@@ -11089,9 +11089,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0406": {
+		'І': {
 			HorizAdvX: 280,
-			Unicode:   "\u0406",
+			Unicode:   'І',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -11102,9 +11102,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0407": {
+		'Ї': {
 			HorizAdvX: 280,
-			Unicode:   "\u0407",
+			Unicode:   'Ї',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -11127,9 +11127,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0408": {
+		'Ј': {
 			HorizAdvX: 480,
-			Unicode:   "\u0408",
+			Unicode:   'Ј',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{414, 212}},
@@ -11145,9 +11145,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0409": {
+		'Љ': {
 			HorizAdvX: 1023,
-			Unicode:   "\u0409",
+			Unicode:   'Љ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{991, 228}},
@@ -11175,9 +11175,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u040a": {
+		'Њ': {
 			HorizAdvX: 973,
-			Unicode:   "\u040a",
+			Unicode:   'Њ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{941, 228}},
@@ -11210,9 +11210,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u040b": {
+		'Ћ': {
 			HorizAdvX: 420,
-			Unicode:   "\u040b",
+			Unicode:   'Ћ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{682, 0}},
@@ -11235,9 +11235,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u040c": {
+		'Ќ': {
 			HorizAdvX: 606,
-			Unicode:   "\u040c",
+			Unicode:   'Ќ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{591, 0}},
@@ -11259,9 +11259,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u040d": {
+		'Ѝ': {
 			HorizAdvX: 735,
-			Unicode:   "\u040d",
+			Unicode:   'Ѝ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -11283,9 +11283,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u040e": {
+		'Ў': {
 			HorizAdvX: 637,
-			Unicode:   "\u040e",
+			Unicode:   'Ў',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{630, 739}},
@@ -11308,9 +11308,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u040f": {
+		'Џ': {
 			HorizAdvX: 674,
-			Unicode:   "\u040f",
+			Unicode:   'Џ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -11329,9 +11329,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0410": {
+		'А': {
 			HorizAdvX: 740,
-			Unicode:   "\u0410",
+			Unicode:   'А',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -11350,9 +11350,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0411": {
+		'Б': {
 			HorizAdvX: 572,
-			Unicode:   "\u0411",
+			Unicode:   'Б',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 262}},
@@ -11375,9 +11375,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0412": {
+		'В': {
 			HorizAdvX: 580,
-			Unicode:   "\u0412",
+			Unicode:   'В',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{577, 220}},
@@ -11405,9 +11405,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0413": {
+		'Г': {
 			HorizAdvX: 467,
-			Unicode:   "\u0413",
+			Unicode:   'Г',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{515, 608}},
@@ -11420,9 +11420,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0414": {
+		'Д': {
 			HorizAdvX: 823,
-			Unicode:   "\u0414",
+			Unicode:   'Д',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{786, -130}},
@@ -11446,9 +11446,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0415": {
+		'Е': {
 			HorizAdvX: 519,
-			Unicode:   "\u0415",
+			Unicode:   'Е',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{535, 0}},
@@ -11467,9 +11467,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0416": {
+		'Ж': {
 			HorizAdvX: 939,
-			Unicode:   "\u0416",
+			Unicode:   'Ж',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{924, 0}},
@@ -11493,9 +11493,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0417": {
+		'З': {
 			HorizAdvX: 680,
-			Unicode:   "\u0417",
+			Unicode:   'З',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{678, 215}},
@@ -11519,9 +11519,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0418": {
+		'И': {
 			HorizAdvX: 735,
-			Unicode:   "\u0418",
+			Unicode:   'И',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -11538,9 +11538,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0419": {
+		'Й': {
 			HorizAdvX: 735,
-			Unicode:   "\u0419",
+			Unicode:   'Й',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -11565,9 +11565,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u041a": {
+		'К': {
 			HorizAdvX: 606,
-			Unicode:   "\u041a",
+			Unicode:   'К',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{591, 0}},
@@ -11584,9 +11584,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u041b": {
+		'Л': {
 			HorizAdvX: 700,
-			Unicode:   "\u041b",
+			Unicode:   'Л',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{693, 0}},
@@ -11599,9 +11599,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u041c": {
+		'М': {
 			HorizAdvX: 908,
-			Unicode:   "\u041c",
+			Unicode:   'М',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{840, 0}},
@@ -11621,9 +11621,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u041d": {
+		'Н': {
 			HorizAdvX: 684,
-			Unicode:   "\u041d",
+			Unicode:   'Н',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -11642,9 +11642,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u041e": {
+		'О': {
 			HorizAdvX: 850,
-			Unicode:   "\u041e",
+			Unicode:   'О',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{810, 370}},
@@ -11661,9 +11661,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u041f": {
+		'П': {
 			HorizAdvX: 674,
-			Unicode:   "\u041f",
+			Unicode:   'П',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -11678,9 +11678,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0420": {
+		'Р': {
 			HorizAdvX: 572,
-			Unicode:   "\u0420",
+			Unicode:   'Р',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{540, 511}},
@@ -11705,9 +11705,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0421": {
+		'С': {
 			HorizAdvX: 800,
-			Unicode:   "\u0421",
+			Unicode:   'С',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{770, 206}},
@@ -11726,9 +11726,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0422": {
+		'Т': {
 			HorizAdvX: 420,
-			Unicode:   "\u0422",
+			Unicode:   'Т',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{518, 608}},
@@ -11743,9 +11743,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0423": {
+		'У': {
 			HorizAdvX: 637,
-			Unicode:   "\u0423",
+			Unicode:   'У',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{630, 739}},
@@ -11760,9 +11760,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0424": {
+		'Ф': {
 			HorizAdvX: 945,
-			Unicode:   "\u0424",
+			Unicode:   'Ф',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{945, 384}},
@@ -11789,9 +11789,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0425": {
+		'Х': {
 			HorizAdvX: 685,
-			Unicode:   "\u0425",
+			Unicode:   'Х',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{678, 0}},
@@ -11809,9 +11809,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0426": {
+		'Ц': {
 			HorizAdvX: 726,
-			Unicode:   "\u0426",
+			Unicode:   'Ц',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{748, -140}},
@@ -11830,9 +11830,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0427": {
+		'Ч': {
 			HorizAdvX: 654,
-			Unicode:   "\u0427",
+			Unicode:   'Ч',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{588, 0}},
@@ -11851,9 +11851,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0428": {
+		'Ш': {
 			HorizAdvX: 913,
-			Unicode:   "\u0428",
+			Unicode:   'Ш',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{845, 0}},
@@ -11872,9 +11872,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0429": {
+		'Щ': {
 			HorizAdvX: 965,
-			Unicode:   "\u0429",
+			Unicode:   'Щ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{987, -140}},
@@ -11897,9 +11897,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u042a": {
+		'Ъ': {
 			HorizAdvX: 703,
-			Unicode:   "\u042a",
+			Unicode:   'Ъ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{750, 272}},
@@ -11922,9 +11922,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u042b": {
+		'Ы': {
 			HorizAdvX: 802,
-			Unicode:   "\u042b",
+			Unicode:   'Ы',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 272}},
@@ -11951,9 +11951,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u042c": {
+		'Ь': {
 			HorizAdvX: 572,
-			Unicode:   "\u042c",
+			Unicode:   'Ь',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 272}},
@@ -11974,9 +11974,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u042d": {
+		'Э': {
 			HorizAdvX: 780,
-			Unicode:   "\u042d",
+			Unicode:   'Э',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{750, 372}},
@@ -11997,9 +11997,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u042e": {
+		'Ю': {
 			HorizAdvX: 1093,
-			Unicode:   "\u042e",
+			Unicode:   'Ю',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1032, 370}},
@@ -12023,9 +12023,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u042f": {
+		'Я': {
 			HorizAdvX: 598,
-			Unicode:   "\u042f",
+			Unicode:   'Я',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{610, 0}},
@@ -12049,9 +12049,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0430": {
+		'а': {
 			HorizAdvX: 669,
-			Unicode:   "\u0430",
+			Unicode:   'а',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -12074,9 +12074,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0431": {
+		'б': {
 			HorizAdvX: 626,
-			Unicode:   "\u0431",
+			Unicode:   'б',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{603, 272}},
@@ -12098,9 +12098,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0432": {
+		'в': {
 			HorizAdvX: 481,
-			Unicode:   "\u0432",
+			Unicode:   'в',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{518, 168}},
@@ -12128,9 +12128,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0433": {
+		'г': {
 			HorizAdvX: 416,
-			Unicode:   "\u0433",
+			Unicode:   'г',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{414, 433}},
@@ -12143,9 +12143,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0434": {
+		'д': {
 			HorizAdvX: 610,
-			Unicode:   "\u0434",
+			Unicode:   'д',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{604, -120}},
@@ -12169,9 +12169,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0435": {
+		'е': {
 			HorizAdvX: 632,
-			Unicode:   "\u0435",
+			Unicode:   'е',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -12193,9 +12193,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0436": {
+		'ж': {
 			HorizAdvX: 874,
-			Unicode:   "\u0436",
+			Unicode:   'ж',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{872, 0}},
@@ -12219,9 +12219,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0437": {
+		'з': {
 			HorizAdvX: 470,
-			Unicode:   "\u0437",
+			Unicode:   'з',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{494, 151}},
@@ -12245,9 +12245,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0438": {
+		'и': {
 			HorizAdvX: 601,
-			Unicode:   "\u0438",
+			Unicode:   'и',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -12264,9 +12264,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0439": {
+		'й': {
 			HorizAdvX: 601,
-			Unicode:   "\u0439",
+			Unicode:   'й',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -12291,9 +12291,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u043a": {
+		'к': {
 			HorizAdvX: 557,
-			Unicode:   "\u043a",
+			Unicode:   'к',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{541, 0}},
@@ -12310,9 +12310,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u043b": {
+		'л': {
 			HorizAdvX: 557,
-			Unicode:   "\u043b",
+			Unicode:   'л',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 0}},
@@ -12325,9 +12325,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u043c": {
+		'м': {
 			HorizAdvX: 775,
-			Unicode:   "\u043c",
+			Unicode:   'м',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{721, 0}},
@@ -12347,9 +12347,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u043d": {
+		'н': {
 			HorizAdvX: 601,
-			Unicode:   "\u043d",
+			Unicode:   'н',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -12368,9 +12368,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u043e": {
+		'о': {
 			HorizAdvX: 643,
-			Unicode:   "\u043e",
+			Unicode:   'о',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -12387,9 +12387,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u043f": {
+		'п': {
 			HorizAdvX: 601,
-			Unicode:   "\u043f",
+			Unicode:   'п',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -12404,9 +12404,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0440": {
+		'р': {
 			HorizAdvX: 658,
-			Unicode:   "\u0440",
+			Unicode:   'р',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{634, 279}},
@@ -12428,9 +12428,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0441": {
+		'с': {
 			HorizAdvX: 623,
-			Unicode:   "\u0441",
+			Unicode:   'с',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -12448,9 +12448,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0442": {
+		'т': {
 			HorizAdvX: 369,
-			Unicode:   "\u0442",
+			Unicode:   'т',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{466, 433}},
@@ -12465,9 +12465,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0443": {
+		'у': {
 			HorizAdvX: 566,
-			Unicode:   "\u0443",
+			Unicode:   'у',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{564, 554}},
@@ -12482,9 +12482,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0444": {
+		'ф': {
 			HorizAdvX: 772,
-			Unicode:   "\u0444",
+			Unicode:   'ф',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{748, 289}},
@@ -12511,9 +12511,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0445": {
+		'х': {
 			HorizAdvX: 556,
-			Unicode:   "\u0445",
+			Unicode:   'х',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{527, 0}},
@@ -12531,9 +12531,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0446": {
+		'ц': {
 			HorizAdvX: 676,
-			Unicode:   "\u0446",
+			Unicode:   'ц',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{668, -129}},
@@ -12552,9 +12552,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0447": {
+		'ч': {
 			HorizAdvX: 572,
-			Unicode:   "\u0447",
+			Unicode:   'ч',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{498, 0}},
@@ -12574,9 +12574,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0448": {
+		'ш': {
 			HorizAdvX: 747,
-			Unicode:   "\u0448",
+			Unicode:   'ш',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{693, 0}},
@@ -12595,9 +12595,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0449": {
+		'щ': {
 			HorizAdvX: 832,
-			Unicode:   "\u0449",
+			Unicode:   'щ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{811, -129}},
@@ -12620,9 +12620,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u044a": {
+		'ъ': {
 			HorizAdvX: 604,
-			Unicode:   "\u044a",
+			Unicode:   'ъ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{634, 187}},
@@ -12645,9 +12645,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u044b": {
+		'ы': {
 			HorizAdvX: 679,
-			Unicode:   "\u044b",
+			Unicode:   'ы',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{494, 187}},
@@ -12674,9 +12674,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u044c": {
+		'ь': {
 			HorizAdvX: 456,
-			Unicode:   "\u044c",
+			Unicode:   'ь',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{494, 187}},
@@ -12697,9 +12697,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u044d": {
+		'э': {
 			HorizAdvX: 617,
-			Unicode:   "\u044d",
+			Unicode:   'э',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{593, 277}},
@@ -12720,9 +12720,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u044e": {
+		'ю': {
 			HorizAdvX: 868,
-			Unicode:   "\u044e",
+			Unicode:   'ю',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{829, 273}},
@@ -12746,9 +12746,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u044f": {
+		'я': {
 			HorizAdvX: 461,
-			Unicode:   "\u044f",
+			Unicode:   'я',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{494, 0}},
@@ -12772,9 +12772,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0450": {
+		'ѐ': {
 			HorizAdvX: 632,
-			Unicode:   "\u0450",
+			Unicode:   'ѐ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -12801,9 +12801,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0451": {
+		'ё': {
 			HorizAdvX: 632,
-			Unicode:   "\u0451",
+			Unicode:   'ё',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -12837,9 +12837,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0452": {
+		'ђ': {
 			HorizAdvX: 369,
-			Unicode:   "\u0452",
+			Unicode:   'ђ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 87}},
@@ -12871,9 +12871,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0453": {
+		'ѓ': {
 			HorizAdvX: 416,
-			Unicode:   "\u0453",
+			Unicode:   'ѓ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{414, 433}},
@@ -12891,9 +12891,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0454": {
+		'є': {
 			HorizAdvX: 615,
-			Unicode:   "\u0454",
+			Unicode:   'є',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -12914,9 +12914,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0455": {
+		'ѕ': {
 			HorizAdvX: 440,
-			Unicode:   "\u0455",
+			Unicode:   'ѕ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{420, 176}},
@@ -12942,9 +12942,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0456": {
+		'і': {
 			HorizAdvX: 240,
-			Unicode:   "\u0456",
+			Unicode:   'і',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -12961,9 +12961,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0457": {
+		'ї': {
 			HorizAdvX: 240,
-			Unicode:   "\u0457",
+			Unicode:   'ї',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -12986,9 +12986,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0458": {
+		'ј': {
 			HorizAdvX: 260,
-			Unicode:   "\u0458",
+			Unicode:   'ј',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 37}},
@@ -13008,9 +13008,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0459": {
+		'љ': {
 			HorizAdvX: 777,
-			Unicode:   "\u0459",
+			Unicode:   'љ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{755, 165}},
@@ -13034,9 +13034,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u045a": {
+		'њ': {
 			HorizAdvX: 816,
-			Unicode:   "\u045a",
+			Unicode:   'њ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{794, 165}},
@@ -13065,9 +13065,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u045b": {
+		'ћ': {
 			HorizAdvX: 369,
-			Unicode:   "\u045b",
+			Unicode:   'ћ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, -3}},
@@ -13095,9 +13095,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u045c": {
+		'ќ': {
 			HorizAdvX: 557,
-			Unicode:   "\u045c",
+			Unicode:   'ќ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{541, 0}},
@@ -13119,9 +13119,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u045d": {
+		'ѝ': {
 			HorizAdvX: 601,
-			Unicode:   "\u045d",
+			Unicode:   'ѝ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -13143,9 +13143,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u045e": {
+		'ў': {
 			HorizAdvX: 566,
-			Unicode:   "\u045e",
+			Unicode:   'ў',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{564, 554}},
@@ -13168,9 +13168,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u045f": {
+		'џ': {
 			HorizAdvX: 601,
-			Unicode:   "\u045f",
+			Unicode:   'џ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -13189,9 +13189,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u048c": {
+		'Ҍ': {
 			HorizAdvX: 572,
-			Unicode:   "\u048c",
+			Unicode:   'Ҍ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{540, 228}},
@@ -13224,9 +13224,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u048d": {
+		'ҍ': {
 			HorizAdvX: 468,
-			Unicode:   "\u048d",
+			Unicode:   'ҍ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{447, 165}},
@@ -13255,9 +13255,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u048e": {
+		'Ҏ': {
 			HorizAdvX: 572,
-			Unicode:   "\u048e",
+			Unicode:   'Ҏ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{540, 511}},
@@ -13288,9 +13288,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u048f": {
+		'ҏ': {
 			HorizAdvX: 658,
-			Unicode:   "\u048f",
+			Unicode:   'ҏ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{634, 47}},
@@ -13319,9 +13319,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0490": {
+		'Ґ': {
 			HorizAdvX: 467,
-			Unicode:   "\u0490",
+			Unicode:   'Ґ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 608}},
@@ -13336,9 +13336,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0491": {
+		'ґ': {
 			HorizAdvX: 416,
-			Unicode:   "\u0491",
+			Unicode:   'ґ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{414, 433}},
@@ -13353,9 +13353,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0492": {
+		'Ғ': {
 			HorizAdvX: 467,
-			Unicode:   "\u0492",
+			Unicode:   'Ғ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 608}},
@@ -13376,9 +13376,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0493": {
+		'ғ': {
 			HorizAdvX: 416,
-			Unicode:   "\u0493",
+			Unicode:   'ғ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{414, 433}},
@@ -13399,9 +13399,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0494": {
+		'Ҕ': {
 			HorizAdvX: 467,
-			Unicode:   "\u0494",
+			Unicode:   'Ҕ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 608}},
@@ -13414,9 +13414,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0495": {
+		'ҕ': {
 			HorizAdvX: 416,
-			Unicode:   "\u0495",
+			Unicode:   'ҕ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{414, 433}},
@@ -13429,9 +13429,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0496": {
+		'Җ': {
 			HorizAdvX: 939,
-			Unicode:   "\u0496",
+			Unicode:   'Җ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{932, 0}},
@@ -13455,9 +13455,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0497": {
+		'җ': {
 			HorizAdvX: 874,
-			Unicode:   "\u0497",
+			Unicode:   'җ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{872, 0}},
@@ -13481,9 +13481,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0498": {
+		'Ҙ': {
 			HorizAdvX: 568,
-			Unicode:   "\u0498",
+			Unicode:   'Ҙ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{678, 215}},
@@ -13514,9 +13514,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0499": {
+		'ҙ': {
 			HorizAdvX: 430,
-			Unicode:   "\u0499",
+			Unicode:   'ҙ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{494, 151}},
@@ -13547,9 +13547,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u049a": {
+		'Қ': {
 			HorizAdvX: 606,
-			Unicode:   "\u049a",
+			Unicode:   'Қ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{599, 0}},
@@ -13566,9 +13566,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u049b": {
+		'қ': {
 			HorizAdvX: 557,
-			Unicode:   "\u049b",
+			Unicode:   'қ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 0}},
@@ -13585,9 +13585,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u049c": {
+		'Ҝ': {
 			HorizAdvX: 606,
-			Unicode:   "\u049c",
+			Unicode:   'Ҝ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{599, 0}},
@@ -13604,9 +13604,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u049d": {
+		'ҝ': {
 			HorizAdvX: 557,
-			Unicode:   "\u049d",
+			Unicode:   'ҝ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 0}},
@@ -13623,9 +13623,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u049e": {
+		'Ҟ': {
 			HorizAdvX: 606,
-			Unicode:   "\u049e",
+			Unicode:   'Ҟ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{599, 0}},
@@ -13650,9 +13650,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u049f": {
+		'ҟ': {
 			HorizAdvX: 557,
-			Unicode:   "\u049f",
+			Unicode:   'ҟ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 0}},
@@ -13677,9 +13677,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04a0": {
+		'Ҡ': {
 			HorizAdvX: 606,
-			Unicode:   "\u04a0",
+			Unicode:   'Ҡ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{599, 0}},
@@ -13696,9 +13696,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04a1": {
+		'ҡ': {
 			HorizAdvX: 557,
-			Unicode:   "\u04a1",
+			Unicode:   'ҡ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 0}},
@@ -13715,9 +13715,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04a2": {
+		'Ң': {
 			HorizAdvX: 674,
-			Unicode:   "\u04a2",
+			Unicode:   'Ң',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -13736,9 +13736,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04a3": {
+		'ң': {
 			HorizAdvX: 601,
-			Unicode:   "\u04a3",
+			Unicode:   'ң',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -13757,9 +13757,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04a4": {
+		'Ҥ': {
 			HorizAdvX: 674,
-			Unicode:   "\u04a4",
+			Unicode:   'Ҥ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -13778,9 +13778,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04a5": {
+		'ҥ': {
 			HorizAdvX: 601,
-			Unicode:   "\u04a5",
+			Unicode:   'ҥ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -13799,9 +13799,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04a6": {
+		'Ҧ': {
 			HorizAdvX: 674,
-			Unicode:   "\u04a6",
+			Unicode:   'Ҧ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -13816,9 +13816,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04a7": {
+		'ҧ': {
 			HorizAdvX: 601,
-			Unicode:   "\u04a7",
+			Unicode:   'ҧ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -13833,9 +13833,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04a8": {
+		'Ҩ': {
 			HorizAdvX: 800,
-			Unicode:   "\u04a8",
+			Unicode:   'Ҩ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{770, 206}},
@@ -13854,9 +13854,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04a9": {
+		'ҩ': {
 			HorizAdvX: 623,
-			Unicode:   "\u04a9",
+			Unicode:   'ҩ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -13874,9 +13874,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04aa": {
+		'Ҫ': {
 			HorizAdvX: 800,
-			Unicode:   "\u04aa",
+			Unicode:   'Ҫ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{770, 206}},
@@ -13902,9 +13902,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04ab": {
+		'ҫ': {
 			HorizAdvX: 623,
-			Unicode:   "\u04ab",
+			Unicode:   'ҫ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -13929,9 +13929,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04ac": {
+		'Ҭ': {
 			HorizAdvX: 420,
-			Unicode:   "\u04ac",
+			Unicode:   'Ҭ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 608}},
@@ -13946,9 +13946,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04ad": {
+		'ҭ': {
 			HorizAdvX: 369,
-			Unicode:   "\u04ad",
+			Unicode:   'ҭ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{367, 554}},
@@ -13963,9 +13963,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04ae": {
+		'Ү': {
 			HorizAdvX: 620,
-			Unicode:   "\u04ae",
+			Unicode:   'Ү',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{626, 739}},
@@ -13981,9 +13981,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04af": {
+		'ү': {
 			HorizAdvX: 560,
-			Unicode:   "\u04af",
+			Unicode:   'ү',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{553, 554}},
@@ -13997,9 +13997,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04b0": {
+		'Ұ': {
 			HorizAdvX: 620,
-			Unicode:   "\u04b0",
+			Unicode:   'Ұ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{626, 739}},
@@ -14021,9 +14021,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04b1": {
+		'ұ': {
 			HorizAdvX: 560,
-			Unicode:   "\u04b1",
+			Unicode:   'ұ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{553, 554}},
@@ -14037,9 +14037,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04b2": {
+		'Ҳ': {
 			HorizAdvX: 685,
-			Unicode:   "\u04b2",
+			Unicode:   'Ҳ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{678, 0}},
@@ -14057,9 +14057,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04b3": {
+		'ҳ': {
 			HorizAdvX: 556,
-			Unicode:   "\u04b3",
+			Unicode:   'ҳ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{554, 0}},
@@ -14077,9 +14077,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04b4": {
+		'Ҵ': {
 			HorizAdvX: 756,
-			Unicode:   "\u04b4",
+			Unicode:   'Ҵ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{748, -140}},
@@ -14098,9 +14098,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04b5": {
+		'ҵ': {
 			HorizAdvX: 676,
-			Unicode:   "\u04b5",
+			Unicode:   'ҵ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{668, -129}},
@@ -14119,9 +14119,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04b6": {
+		'Ҷ': {
 			HorizAdvX: 654,
-			Unicode:   "\u04b6",
+			Unicode:   'Ҷ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{588, 0}},
@@ -14140,9 +14140,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04b7": {
+		'ҷ': {
 			HorizAdvX: 572,
-			Unicode:   "\u04b7",
+			Unicode:   'ҷ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{518, 0}},
@@ -14162,9 +14162,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04b8": {
+		'Ҹ': {
 			HorizAdvX: 654,
-			Unicode:   "\u04b8",
+			Unicode:   'Ҹ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{588, 0}},
@@ -14183,9 +14183,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04b9": {
+		'ҹ': {
 			HorizAdvX: 572,
-			Unicode:   "\u04b9",
+			Unicode:   'ҹ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{518, 0}},
@@ -14205,9 +14205,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04ba": {
+		'Һ': {
 			HorizAdvX: 654,
-			Unicode:   "\u04ba",
+			Unicode:   'Һ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{588, 0}},
@@ -14226,9 +14226,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04bb": {
+		'һ': {
 			HorizAdvX: 572,
-			Unicode:   "\u04bb",
+			Unicode:   'һ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{518, 0}},
@@ -14248,9 +14248,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04bc": {
+		'Ҽ': {
 			HorizAdvX: 800,
-			Unicode:   "\u04bc",
+			Unicode:   'Ҽ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{770, 206}},
@@ -14269,9 +14269,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04bd": {
+		'ҽ': {
 			HorizAdvX: 623,
-			Unicode:   "\u04bd",
+			Unicode:   'ҽ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -14289,9 +14289,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04be": {
+		'Ҿ': {
 			HorizAdvX: 800,
-			Unicode:   "\u04be",
+			Unicode:   'Ҿ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{770, 206}},
@@ -14310,9 +14310,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04bf": {
+		'ҿ': {
 			HorizAdvX: 623,
-			Unicode:   "\u04bf",
+			Unicode:   'ҿ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -14330,9 +14330,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04c0": {
+		'Ӏ': {
 			HorizAdvX: 280,
-			Unicode:   "\u04c0",
+			Unicode:   'Ӏ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -14343,9 +14343,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04c1": {
+		'Ӂ': {
 			HorizAdvX: 939,
-			Unicode:   "\u04c1",
+			Unicode:   'Ӂ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{924, 0}},
@@ -14377,9 +14377,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04c2": {
+		'ӂ': {
 			HorizAdvX: 874,
-			Unicode:   "\u04c2",
+			Unicode:   'ӂ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{872, 0}},
@@ -14411,9 +14411,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04c3": {
+		'Ӄ': {
 			HorizAdvX: 606,
-			Unicode:   "\u04c3",
+			Unicode:   'Ӄ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{599, 0}},
@@ -14430,9 +14430,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04c4": {
+		'ӄ': {
 			HorizAdvX: 557,
-			Unicode:   "\u04c4",
+			Unicode:   'ӄ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 0}},
@@ -14449,9 +14449,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04c7": {
+		'Ӈ': {
 			HorizAdvX: 674,
-			Unicode:   "\u04c7",
+			Unicode:   'Ӈ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -14470,9 +14470,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04c8": {
+		'ӈ': {
 			HorizAdvX: 601,
-			Unicode:   "\u04c8",
+			Unicode:   'ӈ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -14491,9 +14491,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04cb": {
+		'Ӌ': {
 			HorizAdvX: 654,
-			Unicode:   "\u04cb",
+			Unicode:   'Ӌ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{588, 0}},
@@ -14512,9 +14512,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04cc": {
+		'ӌ': {
 			HorizAdvX: 572,
-			Unicode:   "\u04cc",
+			Unicode:   'ӌ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{518, 0}},
@@ -14534,9 +14534,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04d0": {
+		'Ӑ': {
 			HorizAdvX: 740,
-			Unicode:   "\u04d0",
+			Unicode:   'Ӑ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -14563,9 +14563,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04d1": {
+		'ӑ': {
 			HorizAdvX: 669,
-			Unicode:   "\u04d1",
+			Unicode:   'ӑ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -14596,9 +14596,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04d2": {
+		'Ӓ': {
 			HorizAdvX: 740,
-			Unicode:   "\u04d2",
+			Unicode:   'Ӓ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -14629,9 +14629,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04d3": {
+		'ӓ': {
 			HorizAdvX: 669,
-			Unicode:   "\u04d3",
+			Unicode:   'ӓ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -14666,9 +14666,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04d4": {
+		'Ӕ': {
 			HorizAdvX: 900,
-			Unicode:   "\u04d4",
+			Unicode:   'Ӕ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{843, 0}},
@@ -14696,9 +14696,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04d5": {
+		'ӕ': {
 			HorizAdvX: 1080,
-			Unicode:   "\u04d5",
+			Unicode:   'ӕ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1051, 288}},
@@ -14735,9 +14735,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04d6": {
+		'Ӗ': {
 			HorizAdvX: 519,
-			Unicode:   "\u04d6",
+			Unicode:   'Ӗ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{535, 0}},
@@ -14764,9 +14764,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04d7": {
+		'ӗ': {
 			HorizAdvX: 632,
-			Unicode:   "\u04d7",
+			Unicode:   'ӗ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -14796,9 +14796,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04d8": {
+		'Ә': {
 			HorizAdvX: 840,
-			Unicode:   "\u04d8",
+			Unicode:   'Ә',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 372}},
@@ -14819,9 +14819,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04d9": {
+		'ә': {
 			HorizAdvX: 617,
-			Unicode:   "\u04d9",
+			Unicode:   'ә',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 279}},
@@ -14843,9 +14843,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04da": {
+		'Ӛ': {
 			HorizAdvX: 840,
-			Unicode:   "\u04da",
+			Unicode:   'Ӛ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 372}},
@@ -14878,9 +14878,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04db": {
+		'ӛ': {
 			HorizAdvX: 617,
-			Unicode:   "\u04db",
+			Unicode:   'ӛ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 279}},
@@ -14914,9 +14914,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04dc": {
+		'Ӝ': {
 			HorizAdvX: 939,
-			Unicode:   "\u04dc",
+			Unicode:   'Ӝ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{924, 0}},
@@ -14952,9 +14952,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04dd": {
+		'ӝ': {
 			HorizAdvX: 874,
-			Unicode:   "\u04dd",
+			Unicode:   'ӝ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{872, 0}},
@@ -14990,9 +14990,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04de": {
+		'Ӟ': {
 			HorizAdvX: 680,
-			Unicode:   "\u04de",
+			Unicode:   'Ӟ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{678, 215}},
@@ -15028,9 +15028,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04df": {
+		'ӟ': {
 			HorizAdvX: 470,
-			Unicode:   "\u04df",
+			Unicode:   'ӟ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{494, 151}},
@@ -15066,9 +15066,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04e0": {
+		'Ӡ': {
 			HorizAdvX: 568,
-			Unicode:   "\u04e0",
+			Unicode:   'Ӡ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{538, 215}},
@@ -15092,9 +15092,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04e1": {
+		'ӡ': {
 			HorizAdvX: 430,
-			Unicode:   "\u04e1",
+			Unicode:   'ӡ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{403, 157}},
@@ -15120,9 +15120,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04e2": {
+		'Ӣ': {
 			HorizAdvX: 735,
-			Unicode:   "\u04e2",
+			Unicode:   'Ӣ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -15145,9 +15145,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04e3": {
+		'ӣ': {
 			HorizAdvX: 601,
-			Unicode:   "\u04e3",
+			Unicode:   'ӣ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -15170,9 +15170,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04e4": {
+		'Ӥ': {
 			HorizAdvX: 735,
-			Unicode:   "\u04e4",
+			Unicode:   'Ӥ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -15201,9 +15201,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04e5": {
+		'ӥ': {
 			HorizAdvX: 601,
-			Unicode:   "\u04e5",
+			Unicode:   'ӥ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -15232,9 +15232,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04e6": {
+		'Ӧ': {
 			HorizAdvX: 850,
-			Unicode:   "\u04e6",
+			Unicode:   'Ӧ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{810, 370}},
@@ -15263,9 +15263,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04e7": {
+		'ӧ': {
 			HorizAdvX: 643,
-			Unicode:   "\u04e7",
+			Unicode:   'ӧ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -15294,9 +15294,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04e8": {
+		'Ө': {
 			HorizAdvX: 850,
-			Unicode:   "\u04e8",
+			Unicode:   'Ө',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{810, 370}},
@@ -15317,9 +15317,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04e9": {
+		'ө': {
 			HorizAdvX: 643,
-			Unicode:   "\u04e9",
+			Unicode:   'ө',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -15340,9 +15340,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04ea": {
+		'Ӫ': {
 			HorizAdvX: 850,
-			Unicode:   "\u04ea",
+			Unicode:   'Ӫ',
 			GerberLP:  "dccdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{810, 370}},
@@ -15375,9 +15375,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04eb": {
+		'ӫ': {
 			HorizAdvX: 643,
-			Unicode:   "\u04eb",
+			Unicode:   'ӫ',
 			GerberLP:  "dccdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -15410,9 +15410,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04ec": {
+		'Ӭ': {
 			HorizAdvX: 780,
-			Unicode:   "\u04ec",
+			Unicode:   'Ӭ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{750, 372}},
@@ -15445,9 +15445,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04ed": {
+		'ӭ': {
 			HorizAdvX: 617,
-			Unicode:   "\u04ed",
+			Unicode:   'ӭ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{593, 277}},
@@ -15480,9 +15480,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04ee": {
+		'Ӯ': {
 			HorizAdvX: 637,
-			Unicode:   "\u04ee",
+			Unicode:   'Ӯ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{630, 739}},
@@ -15503,9 +15503,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04ef": {
+		'ӯ': {
 			HorizAdvX: 566,
-			Unicode:   "\u04ef",
+			Unicode:   'ӯ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{564, 554}},
@@ -15526,9 +15526,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04f0": {
+		'Ӱ': {
 			HorizAdvX: 637,
-			Unicode:   "\u04f0",
+			Unicode:   'Ӱ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{630, 739}},
@@ -15555,9 +15555,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04f1": {
+		'ӱ': {
 			HorizAdvX: 566,
-			Unicode:   "\u04f1",
+			Unicode:   'ӱ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{564, 554}},
@@ -15584,9 +15584,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04f2": {
+		'Ӳ': {
 			HorizAdvX: 637,
-			Unicode:   "\u04f2",
+			Unicode:   'Ӳ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{630, 739}},
@@ -15611,9 +15611,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04f3": {
+		'ӳ': {
 			HorizAdvX: 566,
-			Unicode:   "\u04f3",
+			Unicode:   'ӳ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{564, 554}},
@@ -15638,9 +15638,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04f4": {
+		'Ӵ': {
 			HorizAdvX: 654,
-			Unicode:   "\u04f4",
+			Unicode:   'Ӵ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{588, 0}},
@@ -15671,9 +15671,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04f5": {
+		'ӵ': {
 			HorizAdvX: 572,
-			Unicode:   "\u04f5",
+			Unicode:   'ӵ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{498, 0}},
@@ -15705,9 +15705,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04f8": {
+		'Ӹ': {
 			HorizAdvX: 802,
-			Unicode:   "\u04f8",
+			Unicode:   'Ӹ',
 			GerberLP:  "ddcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{640, 272}},
@@ -15746,9 +15746,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u04f9": {
+		'ӹ': {
 			HorizAdvX: 679,
-			Unicode:   "\u04f9",
+			Unicode:   'ӹ',
 			GerberLP:  "ddcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{494, 187}},
@@ -15787,9 +15787,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0e3f": {
+		'฿': {
 			HorizAdvX: 580,
-			Unicode:   "\u0e3f",
+			Unicode:   '฿',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{548, 220}},
@@ -15825,9 +15825,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0c": {
+		'Ḍ': {
 			HorizAdvX: 700,
-			Unicode:   "\u1e0c",
+			Unicode:   'Ḍ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{660, 368}},
@@ -15856,9 +15856,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0d": {
+		'ḍ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1e0d",
+			Unicode:   'ḍ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{613, 0}},
@@ -15886,9 +15886,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0e": {
+		'Ḏ': {
 			HorizAdvX: 700,
-			Unicode:   "\u1e0e",
+			Unicode:   'Ḏ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{660, 368}},
@@ -15917,9 +15917,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0f": {
+		'ḏ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1e0f",
+			Unicode:   'ḏ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{613, 0}},
@@ -15947,9 +15947,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e24": {
+		'Ḥ': {
 			HorizAdvX: 680,
-			Unicode:   "\u1e24",
+			Unicode:   'Ḥ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -15974,9 +15974,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e25": {
+		'ḥ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e25",
+			Unicode:   'ḥ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{545, 0}},
@@ -16001,9 +16001,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e26": {
+		'Ḧ': {
 			HorizAdvX: 680,
-			Unicode:   "\u1e26",
+			Unicode:   'Ḧ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -16034,9 +16034,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e27": {
+		'ḧ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e27",
+			Unicode:   'ḧ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{545, 0}},
@@ -16067,9 +16067,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2a": {
+		'Ḫ': {
 			HorizAdvX: 680,
-			Unicode:   "\u1e2a",
+			Unicode:   'Ḫ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -16096,9 +16096,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2b": {
+		'ḫ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e2b",
+			Unicode:   'ḫ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{545, 0}},
@@ -16125,9 +16125,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e36": {
+		'Ḷ': {
 			HorizAdvX: 440,
-			Unicode:   "\u1e36",
+			Unicode:   'Ḷ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 0}},
@@ -16146,9 +16146,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e37": {
+		'ḷ': {
 			HorizAdvX: 240,
-			Unicode:   "\u1e37",
+			Unicode:   'ḷ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -16165,9 +16165,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e38": {
+		'Ḹ': {
 			HorizAdvX: 440,
-			Unicode:   "\u1e38",
+			Unicode:   'Ḹ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 0}},
@@ -16192,9 +16192,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e39": {
+		'ḹ': {
 			HorizAdvX: 240,
-			Unicode:   "\u1e39",
+			Unicode:   'ḹ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -16217,9 +16217,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e42": {
+		'Ṃ': {
 			HorizAdvX: 900,
-			Unicode:   "\u1e42",
+			Unicode:   'Ṃ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{840, 0}},
@@ -16245,9 +16245,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e43": {
+		'ṃ': {
 			HorizAdvX: 940,
-			Unicode:   "\u1e43",
+			Unicode:   'ṃ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{885, 0}},
@@ -16279,9 +16279,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e44": {
+		'Ṅ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1e44",
+			Unicode:   'Ṅ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -16304,9 +16304,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e45": {
+		'ṅ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e45",
+			Unicode:   'ṅ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 0}},
@@ -16333,9 +16333,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e46": {
+		'Ṇ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1e46",
+			Unicode:   'Ṇ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 0}},
@@ -16358,9 +16358,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e47": {
+		'ṇ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1e47",
+			Unicode:   'ṇ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 0}},
@@ -16387,9 +16387,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e58": {
+		'Ṙ': {
 			HorizAdvX: 580,
-			Unicode:   "\u1e58",
+			Unicode:   'Ṙ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 0}},
@@ -16418,9 +16418,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e59": {
+		'ṙ': {
 			HorizAdvX: 320,
-			Unicode:   "\u1e59",
+			Unicode:   'ṙ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{306, 439}},
@@ -16442,9 +16442,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5a": {
+		'Ṛ': {
 			HorizAdvX: 580,
-			Unicode:   "\u1e5a",
+			Unicode:   'Ṛ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 0}},
@@ -16473,9 +16473,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5b": {
+		'ṛ': {
 			HorizAdvX: 320,
-			Unicode:   "\u1e5b",
+			Unicode:   'ṛ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{306, 439}},
@@ -16497,9 +16497,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5c": {
+		'Ṝ': {
 			HorizAdvX: 580,
-			Unicode:   "\u1e5c",
+			Unicode:   'Ṝ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 0}},
@@ -16534,9 +16534,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5d": {
+		'ṝ': {
 			HorizAdvX: 320,
-			Unicode:   "\u1e5d",
+			Unicode:   'ṝ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{306, 439}},
@@ -16564,9 +16564,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e62": {
+		'Ṣ': {
 			HorizAdvX: 520,
-			Unicode:   "\u1e62",
+			Unicode:   'Ṣ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{493, 224}},
@@ -16595,9 +16595,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e63": {
+		'ṣ': {
 			HorizAdvX: 440,
-			Unicode:   "\u1e63",
+			Unicode:   'ṣ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{420, 176}},
@@ -16624,9 +16624,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6c": {
+		'Ṭ': {
 			HorizAdvX: 420,
-			Unicode:   "\u1e6c",
+			Unicode:   'Ṭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 608}},
@@ -16647,9 +16647,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6d": {
+		'ṭ': {
 			HorizAdvX: 300,
-			Unicode:   "\u1e6d",
+			Unicode:   'ṭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{287, 433}},
@@ -16674,9 +16674,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6e": {
+		'Ṯ': {
 			HorizAdvX: 420,
-			Unicode:   "\u1e6e",
+			Unicode:   'Ṯ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 608}},
@@ -16697,9 +16697,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6f": {
+		'ṯ': {
 			HorizAdvX: 300,
-			Unicode:   "\u1e6f",
+			Unicode:   'ṯ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{287, 433}},
@@ -16724,9 +16724,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e80": {
+		'Ẁ': {
 			HorizAdvX: 900,
-			Unicode:   "\u1e80",
+			Unicode:   'Ẁ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{898, 739}},
@@ -16751,9 +16751,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e81": {
+		'ẁ': {
 			HorizAdvX: 800,
-			Unicode:   "\u1e81",
+			Unicode:   'ẁ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{785, 554}},
@@ -16778,9 +16778,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e82": {
+		'Ẃ': {
 			HorizAdvX: 900,
-			Unicode:   "\u1e82",
+			Unicode:   'Ẃ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{898, 739}},
@@ -16805,9 +16805,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e83": {
+		'ẃ': {
 			HorizAdvX: 800,
-			Unicode:   "\u1e83",
+			Unicode:   'ẃ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{785, 554}},
@@ -16832,9 +16832,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e84": {
+		'Ẅ': {
 			HorizAdvX: 900,
-			Unicode:   "\u1e84",
+			Unicode:   'Ẅ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{898, 739}},
@@ -16866,9 +16866,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e85": {
+		'ẅ': {
 			HorizAdvX: 800,
-			Unicode:   "\u1e85",
+			Unicode:   'ẅ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{785, 554}},
@@ -16900,9 +16900,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e92": {
+		'Ẓ': {
 			HorizAdvX: 500,
-			Unicode:   "\u1e92",
+			Unicode:   'Ẓ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{480, 0}},
@@ -16925,9 +16925,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e93": {
+		'ẓ': {
 			HorizAdvX: 460,
-			Unicode:   "\u1e93",
+			Unicode:   'ẓ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{442, 0}},
@@ -16950,9 +16950,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e97": {
+		'ẗ': {
 			HorizAdvX: 300,
-			Unicode:   "\u1e97",
+			Unicode:   'ẗ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{287, 433}},
@@ -16983,9 +16983,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea0": {
+		'Ạ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1ea0",
+			Unicode:   'Ạ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -17010,9 +17010,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea1": {
+		'ạ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1ea1",
+			Unicode:   'ạ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -17040,9 +17040,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea2": {
+		'Ả': {
 			HorizAdvX: 740,
-			Unicode:   "\u1ea2",
+			Unicode:   'Ả',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -17074,9 +17074,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea3": {
+		'ả': {
 			HorizAdvX: 660,
-			Unicode:   "\u1ea3",
+			Unicode:   'ả',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -17111,9 +17111,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea4": {
+		'Ấ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1ea4",
+			Unicode:   'Ấ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -17145,9 +17145,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea5": {
+		'ấ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1ea5",
+			Unicode:   'ấ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -17182,9 +17182,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea6": {
+		'Ầ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1ea6",
+			Unicode:   'Ầ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -17216,9 +17216,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea7": {
+		'ầ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1ea7",
+			Unicode:   'ầ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -17253,9 +17253,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea8": {
+		'Ẩ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1ea8",
+			Unicode:   'Ẩ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -17295,9 +17295,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea9": {
+		'ẩ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1ea9",
+			Unicode:   'ẩ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -17340,9 +17340,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eaa": {
+		'Ẫ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1eaa",
+			Unicode:   'Ẫ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -17378,9 +17378,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eab": {
+		'ẫ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1eab",
+			Unicode:   'ẫ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -17419,9 +17419,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eac": {
+		'Ậ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1eac",
+			Unicode:   'Ậ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -17454,9 +17454,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ead": {
+		'ậ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1ead",
+			Unicode:   'ậ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -17492,9 +17492,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eae": {
+		'Ắ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1eae",
+			Unicode:   'Ắ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -17526,9 +17526,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eaf": {
+		'ắ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1eaf",
+			Unicode:   'ắ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -17563,9 +17563,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb0": {
+		'Ằ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1eb0",
+			Unicode:   'Ằ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -17597,9 +17597,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb1": {
+		'ằ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1eb1",
+			Unicode:   'ằ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -17634,9 +17634,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb2": {
+		'Ẳ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1eb2",
+			Unicode:   'Ẳ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -17676,9 +17676,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb3": {
+		'ẳ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1eb3",
+			Unicode:   'ẳ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -17721,9 +17721,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb4": {
+		'Ẵ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1eb4",
+			Unicode:   'Ẵ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -17759,9 +17759,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb5": {
+		'ẵ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1eb5",
+			Unicode:   'ẵ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -17800,9 +17800,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb6": {
+		'Ặ': {
 			HorizAdvX: 740,
-			Unicode:   "\u1eb6",
+			Unicode:   'Ặ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, 0}},
@@ -17835,9 +17835,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb7": {
+		'ặ': {
 			HorizAdvX: 660,
-			Unicode:   "\u1eb7",
+			Unicode:   'ặ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, 0}},
@@ -17873,9 +17873,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb8": {
+		'Ẹ': {
 			HorizAdvX: 520,
-			Unicode:   "\u1eb8",
+			Unicode:   'Ẹ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -17900,9 +17900,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb9": {
+		'ẹ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eb9",
+			Unicode:   'ẹ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -17929,9 +17929,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eba": {
+		'Ẻ': {
 			HorizAdvX: 520,
-			Unicode:   "\u1eba",
+			Unicode:   'Ẻ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -17963,9 +17963,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebb": {
+		'ẻ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ebb",
+			Unicode:   'ẻ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -17999,9 +17999,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebc": {
+		'Ẽ': {
 			HorizAdvX: 520,
-			Unicode:   "\u1ebc",
+			Unicode:   'Ẽ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -18029,9 +18029,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebd": {
+		'ẽ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ebd",
+			Unicode:   'ẽ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -18061,9 +18061,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebe": {
+		'Ế': {
 			HorizAdvX: 520,
-			Unicode:   "\u1ebe",
+			Unicode:   'Ế',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -18095,9 +18095,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebf": {
+		'ế': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ebf",
+			Unicode:   'ế',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -18131,9 +18131,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec0": {
+		'Ề': {
 			HorizAdvX: 520,
-			Unicode:   "\u1ec0",
+			Unicode:   'Ề',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -18165,9 +18165,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec1": {
+		'ề': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ec1",
+			Unicode:   'ề',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -18201,9 +18201,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec2": {
+		'Ể': {
 			HorizAdvX: 520,
-			Unicode:   "\u1ec2",
+			Unicode:   'Ể',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -18243,9 +18243,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec3": {
+		'ể': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ec3",
+			Unicode:   'ể',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -18287,9 +18287,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec4": {
+		'Ễ': {
 			HorizAdvX: 520,
-			Unicode:   "\u1ec4",
+			Unicode:   'Ễ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -18325,9 +18325,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec5": {
+		'ễ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ec5",
+			Unicode:   'ễ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -18365,9 +18365,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec6": {
+		'Ệ': {
 			HorizAdvX: 520,
-			Unicode:   "\u1ec6",
+			Unicode:   'Ệ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, 0}},
@@ -18400,9 +18400,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec7": {
+		'ệ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ec7",
+			Unicode:   'ệ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -18437,9 +18437,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec8": {
+		'Ỉ': {
 			HorizAdvX: 280,
-			Unicode:   "\u1ec8",
+			Unicode:   'Ỉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -18463,9 +18463,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec9": {
+		'ỉ': {
 			HorizAdvX: 240,
-			Unicode:   "\u1ec9",
+			Unicode:   'ỉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -18489,9 +18489,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eca": {
+		'Ị': {
 			HorizAdvX: 280,
-			Unicode:   "\u1eca",
+			Unicode:   'Ị',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -18508,9 +18508,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ecb": {
+		'ị': {
 			HorizAdvX: 240,
-			Unicode:   "\u1ecb",
+			Unicode:   'ị',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -18533,9 +18533,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ecc": {
+		'Ọ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1ecc",
+			Unicode:   'Ọ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -18558,9 +18558,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ecd": {
+		'ọ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ecd",
+			Unicode:   'ọ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -18583,9 +18583,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ece": {
+		'Ỏ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1ece",
+			Unicode:   'Ỏ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -18615,9 +18615,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ecf": {
+		'ỏ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ecf",
+			Unicode:   'ỏ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -18647,9 +18647,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed0": {
+		'Ố': {
 			HorizAdvX: 840,
-			Unicode:   "\u1ed0",
+			Unicode:   'Ố',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -18679,9 +18679,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed1": {
+		'ố': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ed1",
+			Unicode:   'ố',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -18711,9 +18711,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed2": {
+		'Ồ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1ed2",
+			Unicode:   'Ồ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -18743,9 +18743,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed3": {
+		'ồ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ed3",
+			Unicode:   'ồ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -18775,9 +18775,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed4": {
+		'Ổ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1ed4",
+			Unicode:   'Ổ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -18815,9 +18815,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed5": {
+		'ổ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ed5",
+			Unicode:   'ổ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -18855,9 +18855,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed6": {
+		'Ỗ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1ed6",
+			Unicode:   'Ỗ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -18891,9 +18891,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed7": {
+		'ỗ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ed7",
+			Unicode:   'ỗ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -18927,9 +18927,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed8": {
+		'Ộ': {
 			HorizAdvX: 840,
-			Unicode:   "\u1ed8",
+			Unicode:   'Ộ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -18960,9 +18960,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed9": {
+		'ộ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ed9",
+			Unicode:   'ộ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -18993,9 +18993,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eda": {
+		'Ớ': {
 			HorizAdvX: 859,
-			Unicode:   "\u1eda",
+			Unicode:   'Ớ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{827, 739}},
@@ -19021,9 +19021,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1edb": {
+		'ớ': {
 			HorizAdvX: 722,
-			Unicode:   "\u1edb",
+			Unicode:   'ớ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{693, 554}},
@@ -19049,9 +19049,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1edc": {
+		'Ờ': {
 			HorizAdvX: 859,
-			Unicode:   "\u1edc",
+			Unicode:   'Ờ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{827, 739}},
@@ -19077,9 +19077,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1edd": {
+		'ờ': {
 			HorizAdvX: 722,
-			Unicode:   "\u1edd",
+			Unicode:   'ờ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{693, 554}},
@@ -19105,9 +19105,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ede": {
+		'Ở': {
 			HorizAdvX: 859,
-			Unicode:   "\u1ede",
+			Unicode:   'Ở',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{827, 739}},
@@ -19141,9 +19141,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1edf": {
+		'ở': {
 			HorizAdvX: 722,
-			Unicode:   "\u1edf",
+			Unicode:   'ở',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{693, 554}},
@@ -19177,9 +19177,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee0": {
+		'Ỡ': {
 			HorizAdvX: 859,
-			Unicode:   "\u1ee0",
+			Unicode:   'Ỡ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{827, 739}},
@@ -19209,9 +19209,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee1": {
+		'ỡ': {
 			HorizAdvX: 722,
-			Unicode:   "\u1ee1",
+			Unicode:   'ỡ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{693, 554}},
@@ -19241,9 +19241,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee2": {
+		'Ợ': {
 			HorizAdvX: 859,
-			Unicode:   "\u1ee2",
+			Unicode:   'Ợ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{827, 739}},
@@ -19270,9 +19270,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee3": {
+		'ợ': {
 			HorizAdvX: 722,
-			Unicode:   "\u1ee3",
+			Unicode:   'ợ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{693, 554}},
@@ -19299,9 +19299,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee4": {
+		'Ụ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ee4",
+			Unicode:   'Ụ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -19324,9 +19324,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee5": {
+		'ụ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ee5",
+			Unicode:   'ụ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -19352,9 +19352,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee6": {
+		'Ủ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ee6",
+			Unicode:   'Ủ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -19384,9 +19384,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee7": {
+		'ủ': {
 			HorizAdvX: 600,
-			Unicode:   "\u1ee7",
+			Unicode:   'ủ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -19419,9 +19419,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee8": {
+		'Ứ': {
 			HorizAdvX: 748,
-			Unicode:   "\u1ee8",
+			Unicode:   'Ứ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{724, 739}},
@@ -19451,9 +19451,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee9": {
+		'ứ': {
 			HorizAdvX: 729,
-			Unicode:   "\u1ee9",
+			Unicode:   'ứ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{703, 554}},
@@ -19484,9 +19484,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eea": {
+		'Ừ': {
 			HorizAdvX: 748,
-			Unicode:   "\u1eea",
+			Unicode:   'Ừ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{724, 739}},
@@ -19516,9 +19516,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eeb": {
+		'ừ': {
 			HorizAdvX: 729,
-			Unicode:   "\u1eeb",
+			Unicode:   'ừ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{703, 554}},
@@ -19549,9 +19549,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eec": {
+		'Ử': {
 			HorizAdvX: 748,
-			Unicode:   "\u1eec",
+			Unicode:   'Ử',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{724, 739}},
@@ -19589,9 +19589,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eed": {
+		'ử': {
 			HorizAdvX: 729,
-			Unicode:   "\u1eed",
+			Unicode:   'ử',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{703, 554}},
@@ -19630,9 +19630,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eee": {
+		'Ữ': {
 			HorizAdvX: 748,
-			Unicode:   "\u1eee",
+			Unicode:   'Ữ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{724, 739}},
@@ -19666,9 +19666,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eef": {
+		'ữ': {
 			HorizAdvX: 729,
-			Unicode:   "\u1eef",
+			Unicode:   'ữ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{703, 554}},
@@ -19703,9 +19703,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef0": {
+		'Ự': {
 			HorizAdvX: 748,
-			Unicode:   "\u1ef0",
+			Unicode:   'Ự',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{724, 739}},
@@ -19736,9 +19736,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef1": {
+		'ự': {
 			HorizAdvX: 729,
-			Unicode:   "\u1ef1",
+			Unicode:   'ự',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{703, 554}},
@@ -19770,9 +19770,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef2": {
+		'Ỳ': {
 			HorizAdvX: 620,
-			Unicode:   "\u1ef2",
+			Unicode:   'Ỳ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{626, 739}},
@@ -19793,9 +19793,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef3": {
+		'ỳ': {
 			HorizAdvX: 580,
-			Unicode:   "\u1ef3",
+			Unicode:   'ỳ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 554}},
@@ -19815,9 +19815,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef4": {
+		'Ỵ': {
 			HorizAdvX: 620,
-			Unicode:   "\u1ef4",
+			Unicode:   'Ỵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{626, 739}},
@@ -19839,9 +19839,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef5": {
+		'ỵ': {
 			HorizAdvX: 580,
-			Unicode:   "\u1ef5",
+			Unicode:   'ỵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 554}},
@@ -19862,9 +19862,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef6": {
+		'Ỷ': {
 			HorizAdvX: 620,
-			Unicode:   "\u1ef6",
+			Unicode:   'Ỷ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{626, 739}},
@@ -19893,9 +19893,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef7": {
+		'ỷ': {
 			HorizAdvX: 580,
-			Unicode:   "\u1ef7",
+			Unicode:   'ỷ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 554}},
@@ -19923,9 +19923,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef8": {
+		'Ỹ': {
 			HorizAdvX: 620,
-			Unicode:   "\u1ef8",
+			Unicode:   'Ỹ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{626, 739}},
@@ -19950,9 +19950,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef9": {
+		'ỹ': {
 			HorizAdvX: 580,
-			Unicode:   "\u1ef9",
+			Unicode:   'ỹ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 554}},
@@ -19976,9 +19976,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2013": {
+		'–': {
 			HorizAdvX: 500,
-			Unicode:   "\u2013",
+			Unicode:   '–',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{500, 229}},
@@ -19989,9 +19989,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2014": {
+		'—': {
 			HorizAdvX: 1000,
-			Unicode:   "\u2014",
+			Unicode:   '—',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1000, 229}},
@@ -20002,9 +20002,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2016": {
+		'‖': {
 			HorizAdvX: 600,
-			Unicode:   "\u2016",
+			Unicode:   '‖',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{231, -137}},
@@ -20021,9 +20021,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2018": {
+		'‘': {
 			HorizAdvX: 280,
-			Unicode:   "\u2018",
+			Unicode:   '‘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 466}},
@@ -20038,9 +20038,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2019": {
+		'’': {
 			HorizAdvX: 280,
-			Unicode:   "\u2019",
+			Unicode:   '’',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 599}},
@@ -20055,9 +20055,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201a": {
+		'‚': {
 			HorizAdvX: 280,
-			Unicode:   "\u201a",
+			Unicode:   '‚',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, -7}},
@@ -20072,9 +20072,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201c": {
+		'“': {
 			HorizAdvX: 480,
-			Unicode:   "\u201c",
+			Unicode:   '“',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 466}},
@@ -20099,9 +20099,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201d": {
+		'”': {
 			HorizAdvX: 480,
-			Unicode:   "\u201d",
+			Unicode:   '”',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 599}},
@@ -20126,9 +20126,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201e": {
+		'„': {
 			HorizAdvX: 480,
-			Unicode:   "\u201e",
+			Unicode:   '„',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, -7}},
@@ -20153,9 +20153,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2020": {
+		'†': {
 			HorizAdvX: 560,
-			Unicode:   "\u2020",
+			Unicode:   '†',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{505, 436}},
@@ -20174,9 +20174,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2021": {
+		'‡': {
 			HorizAdvX: 560,
-			Unicode:   "\u2021",
+			Unicode:   '‡',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{505, 260}},
@@ -20203,9 +20203,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2022": {
+		'•': {
 			HorizAdvX: 600,
-			Unicode:   "\u2022",
+			Unicode:   '•',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, 316}},
@@ -20216,9 +20216,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2026": {
+		'…': {
 			HorizAdvX: 1000,
-			Unicode:   "\u2026",
+			Unicode:   '…',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{899, 0}},
@@ -20241,9 +20241,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2030": {
+		'‰': {
 			HorizAdvX: 1280,
-			Unicode:   "\u2030",
+			Unicode:   '‰',
 			GerberLP:  "ddddccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{631, 739}},
@@ -20290,9 +20290,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2031": {
+		'‱': {
 			HorizAdvX: 1693,
-			Unicode:   "\u2031",
+			Unicode:   '‱',
 			GerberLP:  "dddddcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{631, 739}},
@@ -20351,9 +20351,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2039": {
+		'‹': {
 			HorizAdvX: 240,
-			Unicode:   "\u2039",
+			Unicode:   '‹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{175, 108}},
@@ -20367,9 +20367,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u203a": {
+		'›': {
 			HorizAdvX: 240,
-			Unicode:   "\u203a",
+			Unicode:   '›',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{212, 239}},
@@ -20383,9 +20383,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u203b": {
+		'※': {
 			HorizAdvX: 600,
-			Unicode:   "\u203b",
+			Unicode:   '※',
 			GerberLP:  "ddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{523, 125}},
@@ -20427,9 +20427,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u203d": {
+		'‽': {
 			HorizAdvX: 560,
-			Unicode:   "\u203d",
+			Unicode:   '‽',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 523}},
@@ -20459,9 +20459,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2044": {
+		'⁄': {
 			HorizAdvX: 160,
-			Unicode:   "\u2044",
+			Unicode:   '⁄',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 739}},
@@ -20472,9 +20472,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2045": {
+		'⁅': {
 			HorizAdvX: 373,
-			Unicode:   "\u2045",
+			Unicode:   '⁅',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{319, -125}},
@@ -20496,9 +20496,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2046": {
+		'⁆': {
 			HorizAdvX: 373,
-			Unicode:   "\u2046",
+			Unicode:   '⁆',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{319, 59}},
@@ -20520,9 +20520,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2052": {
+		'⁒': {
 			HorizAdvX: 560,
-			Unicode:   "\u2052",
+			Unicode:   '⁒',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{487, 739}},
@@ -20545,9 +20545,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20a1": {
+		'₡': {
 			HorizAdvX: 780,
-			Unicode:   "\u20a1",
+			Unicode:   '₡',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{760, 206}},
@@ -20574,9 +20574,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20a4": {
+		'₤': {
 			HorizAdvX: 560,
-			Unicode:   "\u20a4",
+			Unicode:   '₤',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{563, 222}},
@@ -20615,9 +20615,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20a6": {
+		'₦': {
 			HorizAdvX: 740,
-			Unicode:   "\u20a6",
+			Unicode:   '₦',
 			GerberLP:  "dccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{736, 253}},
@@ -20669,9 +20669,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20a9": {
+		'₩': {
 			HorizAdvX: 900,
-			Unicode:   "\u20a9",
+			Unicode:   '₩',
 			GerberLP:  "dccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{898, 253}},
@@ -20734,9 +20734,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20ab": {
+		'₫': {
 			HorizAdvX: 644,
-			Unicode:   "\u20ab",
+			Unicode:   '₫',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{589, 623}},
@@ -20772,9 +20772,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20ac": {
+		'€': {
 			HorizAdvX: 560,
-			Unicode:   "\u20ac",
+			Unicode:   '€',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{595, 684}},
@@ -20807,9 +20807,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20b1": {
+		'₱': {
 			HorizAdvX: 560,
-			Unicode:   "\u20b1",
+			Unicode:   '₱',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{540, 511}},
@@ -20840,9 +20840,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2103": {
+		'℃': {
 			HorizAdvX: 1242,
-			Unicode:   "\u2103",
+			Unicode:   '℃',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1134, 206}},
@@ -20871,9 +20871,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2113": {
+		'ℓ': {
 			HorizAdvX: 563,
-			Unicode:   "\u2113",
+			Unicode:   'ℓ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{509, 185}},
@@ -20897,9 +20897,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2116": {
+		'№': {
 			HorizAdvX: 1092,
-			Unicode:   "\u2116",
+			Unicode:   '№',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{889, 603}},
@@ -20938,9 +20938,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2117": {
+		'℗': {
 			HorizAdvX: 740,
-			Unicode:   "\u2117",
+			Unicode:   '℗',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{720, 337}},
@@ -20975,9 +20975,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2118": {
+		'℘': {
 			HorizAdvX: 708,
-			Unicode:   "\u2118",
+			Unicode:   '℘',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 284}},
@@ -21008,9 +21008,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u211e": {
+		'℞': {
 			HorizAdvX: 580,
-			Unicode:   "\u211e",
+			Unicode:   '℞',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{594, 181}},
@@ -21041,9 +21041,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2120": {
+		'℠': {
 			HorizAdvX: 1065,
-			Unicode:   "\u2120",
+			Unicode:   '℠',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1011, 739}},
@@ -21081,9 +21081,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2122": {
+		'™': {
 			HorizAdvX: 1000,
-			Unicode:   "\u2122",
+			Unicode:   '™',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{946, 739}},
@@ -21113,9 +21113,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2126": {
+		'Ω': {
 			HorizAdvX: 771,
-			Unicode:   "\u2126",
+			Unicode:   'Ω',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{748, 339}},
@@ -21142,9 +21142,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2127": {
+		'℧': {
 			HorizAdvX: 771,
-			Unicode:   "\u2127",
+			Unicode:   '℧',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{752, 402}},
@@ -21171,9 +21171,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u212e": {
+		'℮': {
 			HorizAdvX: 847,
-			Unicode:   "\u212e",
+			Unicode:   '℮',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{793, 333}},
@@ -21203,9 +21203,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2190": {
+		'←': {
 			HorizAdvX: 1000,
-			Unicode:   "\u2190",
+			Unicode:   '←',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{892, 181}},
@@ -21221,9 +21221,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2191": {
+		'↑': {
 			HorizAdvX: 726,
-			Unicode:   "\u2191",
+			Unicode:   '↑',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{618, 512}},
@@ -21238,9 +21238,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2192": {
+		'→': {
 			HorizAdvX: 1000,
-			Unicode:   "\u2192",
+			Unicode:   '→',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{885, 250}},
@@ -21255,9 +21255,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2193": {
+		'↓': {
 			HorizAdvX: 726,
-			Unicode:   "\u2193",
+			Unicode:   '↓',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{618, -12}},
@@ -21272,9 +21272,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2202": {
+		'∂': {
 			HorizAdvX: 494,
-			Unicode:   "\u2202",
+			Unicode:   '∂',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, 370}},
@@ -21296,9 +21296,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2211": {
+		'∑': {
 			HorizAdvX: 713,
-			Unicode:   "\u2211",
+			Unicode:   '∑',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{632, -123}},
@@ -21317,9 +21317,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2212": {
+		'−': {
 			HorizAdvX: 600,
-			Unicode:   "\u2212",
+			Unicode:   '−',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 181}},
@@ -21330,9 +21330,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2213": {
+		'∓': {
 			HorizAdvX: 600,
-			Unicode:   "\u2213",
+			Unicode:   '∓',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 43}},
@@ -21357,9 +21357,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2215": {
+		'∕': {
 			HorizAdvX: 0,
-			Unicode:   "\u2215",
+			Unicode:   '∕',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{201, 739}},
@@ -21370,9 +21370,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2217": {
+		'∗': {
 			HorizAdvX: 469,
-			Unicode:   "\u2217",
+			Unicode:   '∗',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{415, 207}},
@@ -21397,9 +21397,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u221a": {
+		'√': {
 			HorizAdvX: 549,
-			Unicode:   "\u221a",
+			Unicode:   '√',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 904}},
@@ -21414,9 +21414,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u221e": {
+		'∞': {
 			HorizAdvX: 746,
-			Unicode:   "\u221e",
+			Unicode:   '∞',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{714, 310}},
@@ -21443,9 +21443,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2222": {
+		'∢': {
 			HorizAdvX: 600,
-			Unicode:   "\u2222",
+			Unicode:   '∢',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{516, 107}},
@@ -21474,9 +21474,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2248": {
+		'≈': {
 			HorizAdvX: 600,
-			Unicode:   "\u2248",
+			Unicode:   '≈',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 176}},
@@ -21509,9 +21509,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2260": {
+		'≠': {
 			HorizAdvX: 600,
-			Unicode:   "\u2260",
+			Unicode:   '≠',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 89}},
@@ -21538,9 +21538,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2264": {
+		'≤': {
 			HorizAdvX: 600,
-			Unicode:   "\u2264",
+			Unicode:   '≤',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, 99}},
@@ -21560,9 +21560,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2265": {
+		'≥': {
 			HorizAdvX: 600,
-			Unicode:   "\u2265",
+			Unicode:   '≥',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{535, 437}},
@@ -21582,9 +21582,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u22c6": {
+		'⋆': {
 			HorizAdvX: 560,
-			Unicode:   "\u22c6",
+			Unicode:   '⋆',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{548, 302}},
@@ -21605,9 +21605,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2300": {
+		'⌀': {
 			HorizAdvX: 600,
-			Unicode:   "\u2300",
+			Unicode:   '⌀',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 430}},
@@ -21636,9 +21636,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2329": {
+		'〈': {
 			HorizAdvX: 295,
-			Unicode:   "\u2329",
+			Unicode:   '〈',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{240, -137}},
@@ -21650,9 +21650,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u232a": {
+		'〉': {
 			HorizAdvX: 295,
-			Unicode:   "\u232a",
+			Unicode:   '〉',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{240, 301}},
@@ -21664,9 +21664,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2422": {
+		'␢': {
 			HorizAdvX: 660,
-			Unicode:   "\u2422",
+			Unicode:   '␢',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{638, 281}},
@@ -21696,9 +21696,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2423": {
+		'␣': {
 			HorizAdvX: 500,
-			Unicode:   "\u2423",
+			Unicode:   '␣',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{446, -92}},
@@ -21713,9 +21713,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u25ca": {
+		'◊': {
 			HorizAdvX: 494,
-			Unicode:   "\u25ca",
+			Unicode:   '◊',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{466, 374}},
@@ -21732,9 +21732,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u25e6": {
+		'◦': {
 			HorizAdvX: 600,
-			Unicode:   "\u25e6",
+			Unicode:   '◦',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, 316}},
@@ -21751,9 +21751,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u266a": {
+		'♪': {
 			HorizAdvX: 672,
-			Unicode:   "\u266a",
+			Unicode:   '♪',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{668, 250}},
@@ -21771,9 +21771,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u26ad": {
+		'⚭': {
 			HorizAdvX: 560,
-			Unicode:   "\u26ad",
+			Unicode:   '⚭',
 			GerberLP:  "dccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{662, 250}},
@@ -21806,9 +21806,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u26ae": {
+		'⚮': {
 			HorizAdvX: 560,
-			Unicode:   "\u26ae",
+			Unicode:   '⚮',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 250}},
@@ -21843,9 +21843,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u27e6": {
+		'⟦': {
 			HorizAdvX: 660,
-			Unicode:   "\u27e6",
+			Unicode:   '⟦',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, -137}},
@@ -21866,9 +21866,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u27e7": {
+		'⟧': {
 			HorizAdvX: 660,
-			Unicode:   "\u27e7",
+			Unicode:   '⟧',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, -137}},
@@ -21889,9 +21889,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2a7d": {
+		'⩽': {
 			HorizAdvX: 600,
-			Unicode:   "\u2a7d",
+			Unicode:   '⩽',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, 99}},
@@ -21911,9 +21911,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2a7e": {
+		'⩾': {
 			HorizAdvX: 600,
-			Unicode:   "\u2a7e",
+			Unicode:   '⩾',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{492, 437}},
@@ -21933,9 +21933,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue000": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue000",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -21967,9 +21967,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue001": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue001",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22002,9 +22002,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue002": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue002",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22036,9 +22036,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue003": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue003",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22078,9 +22078,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue004": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue004",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22116,9 +22116,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue005": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue005",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22150,9 +22150,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue006": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue006",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22185,9 +22185,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue007": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue007",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22219,9 +22219,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue008": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue008",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22261,9 +22261,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue009": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue009",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22299,9 +22299,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue00a": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue00a",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22330,9 +22330,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue00b": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue00b",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22357,9 +22357,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue00c": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue00c",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22391,9 +22391,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue00e": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue00e",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, -231}},
@@ -22425,9 +22425,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue00f": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\ue00f",
+			Unicode:   '',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -22463,9 +22463,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue010": {
+		'': {
 			HorizAdvX: 626,
-			Unicode:   "\ue010",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{590, 275}},
@@ -22496,9 +22496,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue011": {
+		'': {
 			HorizAdvX: 593,
-			Unicode:   "\ue011",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 276}},
@@ -22527,9 +22527,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue012": {
+		'': {
 			HorizAdvX: 593,
-			Unicode:   "\ue012",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 276}},
@@ -22558,9 +22558,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue013": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\ue013",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -22571,9 +22571,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue014": {
+		'': {
 			HorizAdvX: 434,
-			Unicode:   "\ue014",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{366, 165}},
@@ -22588,9 +22588,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue015": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\ue015",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 0}},
@@ -22609,9 +22609,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue016": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\ue016",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -22630,9 +22630,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue017": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\ue017",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -22664,9 +22664,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue018": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\ue018",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -22699,9 +22699,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue019": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\ue019",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -22733,9 +22733,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue01a": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\ue01a",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -22775,9 +22775,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue01b": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\ue01b",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -22813,9 +22813,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue01c": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\ue01c",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -22844,9 +22844,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue01d": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\ue01d",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -22871,9 +22871,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue01e": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\ue01e",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -22905,9 +22905,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue01f": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\ue01f",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, -231}},
@@ -22938,9 +22938,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue020": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\ue020",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -22968,9 +22968,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue021": {
+		'': {
 			HorizAdvX: 688,
-			Unicode:   "\ue021",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{668, 269}},
@@ -22996,9 +22996,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue022": {
+		'': {
 			HorizAdvX: 688,
-			Unicode:   "\ue022",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{668, 269}},
@@ -23028,9 +23028,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue023": {
+		'': {
 			HorizAdvX: 959,
-			Unicode:   "\ue023",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{454, 174}},
@@ -23071,9 +23071,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue024": {
+		'': {
 			HorizAdvX: 590,
-			Unicode:   "\ue024",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{515, 0}},
@@ -23100,9 +23100,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue025": {
+		'': {
 			HorizAdvX: 590,
-			Unicode:   "\ue025",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{515, 0}},
@@ -23133,9 +23133,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue026": {
+		'': {
 			HorizAdvX: 590,
-			Unicode:   "\ue026",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{515, 0}},
@@ -23163,9 +23163,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue027": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\ue027",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -23186,9 +23186,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue028": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\ue028",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -23205,9 +23205,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue029": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\ue029",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -23231,9 +23231,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue02a": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\ue02a",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, -231}},
@@ -23256,9 +23256,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue02b": {
+		'': {
 			HorizAdvX: 434,
-			Unicode:   "\ue02b",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{366, 165}},
@@ -23278,9 +23278,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue02c": {
+		'': {
 			HorizAdvX: 419,
-			Unicode:   "\ue02c",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{412, 121}},
@@ -23301,9 +23301,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue02d": {
+		'': {
 			HorizAdvX: 388,
-			Unicode:   "\ue02d",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{379, 123}},
@@ -23325,9 +23325,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue02e": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\ue02e",
+			Unicode:   '',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -23357,9 +23357,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue02f": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\ue02f",
+			Unicode:   '',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -23390,9 +23390,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue030": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\ue030",
+			Unicode:   '',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -23422,9 +23422,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue031": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\ue031",
+			Unicode:   '',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -23462,9 +23462,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue032": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\ue032",
+			Unicode:   '',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -23498,9 +23498,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue033": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\ue033",
+			Unicode:   '',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -23527,9 +23527,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue034": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\ue034",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -23552,9 +23552,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue035": {
+		'': {
 			HorizAdvX: 859,
-			Unicode:   "\ue035",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{813, 123}},
@@ -23584,9 +23584,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue036": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\ue036",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -23616,9 +23616,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue037": {
+		'': {
 			HorizAdvX: 740,
-			Unicode:   "\ue037",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{711, 554}},
@@ -23639,9 +23639,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue038": {
+		'': {
 			HorizAdvX: 740,
-			Unicode:   "\ue038",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{711, 554}},
@@ -23667,9 +23667,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue039": {
+		'': {
 			HorizAdvX: 740,
-			Unicode:   "\ue039",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{711, 554}},
@@ -23696,9 +23696,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue03a": {
+		'': {
 			HorizAdvX: 740,
-			Unicode:   "\ue03a",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{711, 554}},
@@ -23724,9 +23724,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue03b": {
+		'': {
 			HorizAdvX: 740,
-			Unicode:   "\ue03b",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{711, 554}},
@@ -23760,9 +23760,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue03c": {
+		'': {
 			HorizAdvX: 740,
-			Unicode:   "\ue03c",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{711, 554}},
@@ -23792,9 +23792,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue03d": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\ue03d",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -23818,9 +23818,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue03e": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\ue03e",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -23849,9 +23849,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue03f": {
+		'': {
 			HorizAdvX: 512,
-			Unicode:   "\ue03f",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{502, 0}},
@@ -23884,9 +23884,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue040": {
+		'': {
 			HorizAdvX: 512,
-			Unicode:   "\ue040",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{502, 0}},
@@ -23915,9 +23915,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue041": {
+		'': {
 			HorizAdvX: 441,
-			Unicode:   "\ue041",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{415, 174}},
@@ -23949,9 +23949,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue042": {
+		'': {
 			HorizAdvX: 441,
-			Unicode:   "\ue042",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{415, 174}},
@@ -23980,9 +23980,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue043": {
+		'': {
 			HorizAdvX: 357,
-			Unicode:   "\ue043",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{354, 431}},
@@ -24010,9 +24010,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue044": {
+		'': {
 			HorizAdvX: 357,
-			Unicode:   "\ue044",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{354, 431}},
@@ -24039,9 +24039,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue045": {
+		'': {
 			HorizAdvX: 357,
-			Unicode:   "\ue045",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{354, 431}},
@@ -24062,9 +24062,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue046": {
+		'': {
 			HorizAdvX: 357,
-			Unicode:   "\ue046",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{354, 431}},
@@ -24085,9 +24085,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue047": {
+		'': {
 			HorizAdvX: 357,
-			Unicode:   "\ue047",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{354, 431}},
@@ -24111,9 +24111,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue049": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\ue049",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -24138,9 +24138,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue04a": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\ue04a",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -24167,9 +24167,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue04b": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\ue04b",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -24192,9 +24192,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue04c": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\ue04c",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -24224,9 +24224,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue04d": {
+		'': {
 			HorizAdvX: 687,
-			Unicode:   "\ue04d",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{671, 554}},
@@ -24247,9 +24247,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue04e": {
+		'': {
 			HorizAdvX: 687,
-			Unicode:   "\ue04e",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{671, 554}},
@@ -24275,9 +24275,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue04f": {
+		'': {
 			HorizAdvX: 687,
-			Unicode:   "\ue04f",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{671, 554}},
@@ -24304,9 +24304,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue050": {
+		'': {
 			HorizAdvX: 687,
-			Unicode:   "\ue050",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{671, 554}},
@@ -24332,9 +24332,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue051": {
+		'': {
 			HorizAdvX: 687,
-			Unicode:   "\ue051",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{671, 554}},
@@ -24368,9 +24368,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue052": {
+		'': {
 			HorizAdvX: 687,
-			Unicode:   "\ue052",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{671, 554}},
@@ -24400,9 +24400,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue053": {
+		'': {
 			HorizAdvX: 543,
-			Unicode:   "\ue053",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 554}},
@@ -24424,9 +24424,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue054": {
+		'': {
 			HorizAdvX: 543,
-			Unicode:   "\ue054",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 554}},
@@ -24455,9 +24455,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue055": {
+		'': {
 			HorizAdvX: 543,
-			Unicode:   "\ue055",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 554}},
@@ -24482,9 +24482,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue056": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\ue056",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{402, 123}},
@@ -24510,9 +24510,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue057": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\ue057",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{402, 123}},
@@ -24535,9 +24535,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ue058": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\ue058",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -24554,9 +24554,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea00": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uea00",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{395, 714}},
@@ -24566,9 +24566,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea01": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea01",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-145, 899}},
@@ -24578,9 +24578,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea02": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea02",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 760}},
@@ -24593,9 +24593,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea03": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea03",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{445, 907}},
@@ -24613,9 +24613,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea04": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea04",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{445, 907}},
@@ -24633,9 +24633,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea05": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea05",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, -76}},
@@ -24648,9 +24648,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea06": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea06",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, -215}},
@@ -24663,9 +24663,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea07": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea07",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-165, 945}},
@@ -24678,9 +24678,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea08": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea08",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{313, 865}},
@@ -24698,9 +24698,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea09": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea09",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{313, 865}},
@@ -24718,9 +24718,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea0a": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea0a",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{369, 929}},
@@ -24746,9 +24746,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea0b": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea0b",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{369, 929}},
@@ -24774,9 +24774,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea0c": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea0c",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 621}},
@@ -24789,9 +24789,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea0d": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea0d",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{404, 631}},
@@ -24804,9 +24804,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea0e": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea0e",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-165, 806}},
@@ -24819,9 +24819,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea0f": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea0f",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 760}},
@@ -24843,9 +24843,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea10": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea10",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 760}},
@@ -24867,9 +24867,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea11": {
+		'': {
 			HorizAdvX: 540,
-			Unicode:   "\uea11",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 759}},
@@ -24883,9 +24883,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea14": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea14",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-130, 944}},
@@ -24899,9 +24899,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea15": {
+		'': {
 			HorizAdvX: 540,
-			Unicode:   "\uea15",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 621}},
@@ -24914,9 +24914,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea16": {
+		'': {
 			HorizAdvX: 540,
-			Unicode:   "\uea16",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{455, 899}},
@@ -24934,9 +24934,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea17": {
+		'': {
 			HorizAdvX: 540,
-			Unicode:   "\uea17",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{455, 899}},
@@ -24954,9 +24954,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea18": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea18",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-130, 806}},
@@ -24969,9 +24969,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea19": {
+		'': {
 			HorizAdvX: 540,
-			Unicode:   "\uea19",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{363, 857}},
@@ -24989,9 +24989,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea1a": {
+		'': {
 			HorizAdvX: 540,
-			Unicode:   "\uea1a",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{363, 857}},
@@ -25009,9 +25009,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea1b": {
+		'': {
 			HorizAdvX: 540,
-			Unicode:   "\uea1b",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 942}},
@@ -25037,9 +25037,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea1c": {
+		'': {
 			HorizAdvX: 540,
-			Unicode:   "\uea1c",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 942}},
@@ -25065,9 +25065,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea1d": {
+		'': {
 			HorizAdvX: 540,
-			Unicode:   "\uea1d",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 621}},
@@ -25089,9 +25089,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea1e": {
+		'': {
 			HorizAdvX: 540,
-			Unicode:   "\uea1e",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 621}},
@@ -25113,9 +25113,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea1f": {
+		'': {
 			HorizAdvX: 351,
-			Unicode:   "\uea1f",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{233, -53}},
@@ -25126,9 +25126,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea21": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea21",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 760}},
@@ -25141,9 +25141,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea22": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea22",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{404, 770}},
@@ -25156,9 +25156,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea23": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea23",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 621}},
@@ -25171,9 +25171,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea24": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea24",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{404, 631}},
@@ -25186,9 +25186,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea25": {
+		'': {
 			HorizAdvX: 700,
-			Unicode:   "\uea25",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{536, 663}},
@@ -25203,9 +25203,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea26": {
+		'': {
 			HorizAdvX: 700,
-			Unicode:   "\uea26",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{536, 663}},
@@ -25220,9 +25220,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea27": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea27",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-144, 848}},
@@ -25237,9 +25237,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea28": {
+		'': {
 			HorizAdvX: 500,
-			Unicode:   "\uea28",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{207, 624}},
@@ -25256,9 +25256,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea2b": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea2b",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-373, 809}},
@@ -25275,9 +25275,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea2e": {
+		'': {
 			HorizAdvX: 280,
-			Unicode:   "\uea2e",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{207, 624}},
@@ -25288,9 +25288,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea2f": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea2f",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-263, 809}},
@@ -25301,9 +25301,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea30": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uea30",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{303, 672}},
@@ -25313,9 +25313,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea31": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea31",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-237, 857}},
@@ -25325,9 +25325,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea32": {
+		'': {
 			HorizAdvX: 257,
-			Unicode:   "\uea32",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{257, 764}},
@@ -25345,9 +25345,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea33": {
+		'': {
 			HorizAdvX: 257,
-			Unicode:   "\uea33",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{257, 764}},
@@ -25365,9 +25365,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea34": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea34",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-201, 949}},
@@ -25385,9 +25385,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea35": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uea35",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{420, 554}},
@@ -25399,9 +25399,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea36": {
+		'': {
 			HorizAdvX: 700,
-			Unicode:   "\uea36",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{436, 726}},
@@ -25416,9 +25416,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea37": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea37",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-244, 911}},
@@ -25433,9 +25433,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea38": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uea38",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, -196}},
@@ -25446,9 +25446,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea39": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uea39",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, 640}},
@@ -25459,9 +25459,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea3a": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uea3a",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{281, 640}},
@@ -25472,9 +25472,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea3b": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uea3b",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{281, 650}},
@@ -25485,9 +25485,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea3c": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uea3c",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, -196}},
@@ -25498,9 +25498,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea3d": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea3d",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-189, 825}},
@@ -25511,9 +25511,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea3e": {
+		'': {
 			HorizAdvX: 360,
-			Unicode:   "\uea3e",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 703}},
@@ -25530,9 +25530,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea3f": {
+		'': {
 			HorizAdvX: 360,
-			Unicode:   "\uea3f",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{365, 956}},
@@ -25554,9 +25554,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea40": {
+		'': {
 			HorizAdvX: 360,
-			Unicode:   "\uea40",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{365, 956}},
@@ -25578,9 +25578,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea41": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea41",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-217, 888}},
@@ -25597,9 +25597,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea42": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea42",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 677}},
@@ -25613,9 +25613,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea43": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\uea43",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, -159}},
@@ -25629,9 +25629,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uea44": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uea44",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-165, 862}},
@@ -25645,9 +25645,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb02": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\ueb02",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{395, 724}},
@@ -25657,9 +25657,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb03": {
+		'': {
 			HorizAdvX: 740,
-			Unicode:   "\ueb03",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{733, -231}},
@@ -25691,9 +25691,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb04": {
+		'': {
 			HorizAdvX: 660,
-			Unicode:   "\ueb04",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{615, -231}},
@@ -25726,9 +25726,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb05": {
+		'': {
 			HorizAdvX: 740,
-			Unicode:   "\ueb05",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{745, 243}},
@@ -25762,9 +25762,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb08": {
+		'': {
 			HorizAdvX: 740,
-			Unicode:   "\ueb08",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{720, 337}},
@@ -25781,9 +25781,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb09": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\ueb09",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{548, 302}},
@@ -25804,9 +25804,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb0a": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\ueb0a",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{404, 770}},
@@ -25819,9 +25819,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb0d": {
+		'': {
 			HorizAdvX: 540,
-			Unicode:   "\ueb0d",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 769}},
@@ -25835,9 +25835,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb0f": {
+		'': {
 			HorizAdvX: 740,
-			Unicode:   "\ueb0f",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{720, 337}},
@@ -25866,9 +25866,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb15": {
+		'': {
 			HorizAdvX: 700,
-			Unicode:   "\ueb15",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{536, 663}},
@@ -25883,9 +25883,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb16": {
+		'': {
 			HorizAdvX: 608,
-			Unicode:   "\ueb16",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{554, 485}},
@@ -25904,9 +25904,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb17": {
+		'': {
 			HorizAdvX: 500,
-			Unicode:   "\ueb17",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{207, 634}},
@@ -25923,9 +25923,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb19": {
+		'': {
 			HorizAdvX: 280,
-			Unicode:   "\ueb19",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{207, -212}},
@@ -25936,9 +25936,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb1e": {
+		'': {
 			HorizAdvX: 520,
-			Unicode:   "\ueb1e",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{465, -231}},
@@ -25969,9 +25969,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb1f": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\ueb1f",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{608, 269}},
@@ -26005,9 +26005,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb28": {
+		'': {
 			HorizAdvX: 1134,
-			Unicode:   "\ueb28",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{533, 224}},
@@ -26048,9 +26048,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb29": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\ueb29",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{528, 89}},
@@ -26080,9 +26080,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb2a": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\ueb2a",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{303, 682}},
@@ -26092,9 +26092,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb2b": {
+		'': {
 			HorizAdvX: 840,
-			Unicode:   "\ueb2b",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{818, 359}},
@@ -26120,9 +26120,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb2e": {
+		'': {
 			HorizAdvX: 700,
-			Unicode:   "\ueb2e",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{436, 726}},
@@ -26137,9 +26137,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb2f": {
+		'': {
 			HorizAdvX: 210,
-			Unicode:   "\ueb2f",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, 229}},
@@ -26150,9 +26150,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb30": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\ueb30",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, 368}},
@@ -26163,9 +26163,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb31": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\ueb31",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, 436}},
@@ -26182,9 +26182,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb32": {
+		'': {
 			HorizAdvX: 210,
-			Unicode:   "\ueb32",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, 436}},
@@ -26201,9 +26201,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb35": {
+		'': {
 			HorizAdvX: 280,
-			Unicode:   "\ueb35",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, -231}},
@@ -26226,9 +26226,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb36": {
+		'': {
 			HorizAdvX: 240,
-			Unicode:   "\ueb36",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, -231}},
@@ -26251,9 +26251,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb3a": {
+		'': {
 			HorizAdvX: 480,
-			Unicode:   "\ueb3a",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{414, 212}},
@@ -26273,9 +26273,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb3b": {
+		'': {
 			HorizAdvX: 260,
-			Unicode:   "\ueb3b",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 37}},
@@ -26293,9 +26293,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb40": {
+		'': {
 			HorizAdvX: 1000,
-			Unicode:   "\ueb40",
+			Unicode:   '',
 			GerberLP:  "dcccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{944, 775}},
@@ -26337,9 +26337,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb43": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\ueb43",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{351, 650}},
@@ -26350,9 +26350,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb48": {
+		'': {
 			HorizAdvX: 840,
-			Unicode:   "\ueb48",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{800, 370}},
@@ -26382,9 +26382,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb49": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\ueb49",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{619, 273}},
@@ -26414,9 +26414,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb4c": {
+		'': {
 			HorizAdvX: 426,
-			Unicode:   "\ueb4c",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{342, -128}},
@@ -26429,9 +26429,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb4d": {
+		'': {
 			HorizAdvX: 493,
-			Unicode:   "\ueb4d",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{468, 168}},
@@ -26448,9 +26448,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb52": {
+		'': {
 			HorizAdvX: 360,
-			Unicode:   "\ueb52",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{283, -98}},
@@ -26467,9 +26467,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb56": {
+		'': {
 			HorizAdvX: 220,
-			Unicode:   "\ueb56",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{150, -98}},
@@ -26480,9 +26480,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb57": {
+		'': {
 			HorizAdvX: 220,
-			Unicode:   "\ueb57",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{150, 513}},
@@ -26493,9 +26493,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb5b": {
+		'': {
 			HorizAdvX: 697,
-			Unicode:   "\ueb5b",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{643, 273}},
@@ -26519,9 +26519,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb61": {
+		'': {
 			HorizAdvX: 240,
-			Unicode:   "\ueb61",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{272, 446}},
@@ -26532,9 +26532,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb63": {
+		'': {
 			HorizAdvX: 333,
-			Unicode:   "\ueb63",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{688, 594}},
@@ -26547,9 +26547,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb64": {
+		'': {
 			HorizAdvX: 500,
-			Unicode:   "\ueb64",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{541, 594}},
@@ -26562,9 +26562,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb65": {
+		'': {
 			HorizAdvX: 277,
-			Unicode:   "\ueb65",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{552, 614}},
@@ -26577,9 +26577,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb66": {
+		'': {
 			HorizAdvX: 500,
-			Unicode:   "\ueb66",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{487, 614}},
@@ -26592,9 +26592,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb67": {
+		'': {
 			HorizAdvX: 600,
-			Unicode:   "\ueb67",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 30}},
@@ -26613,9 +26613,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb6b": {
+		'': {
 			HorizAdvX: 667,
-			Unicode:   "\ueb6b",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{667, 229}},
@@ -26626,9 +26626,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb6e": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\ueb6e",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{567, 271}},
@@ -26653,9 +26653,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ueb6f": {
+		'': {
 			HorizAdvX: 600,
-			Unicode:   "\ueb6f",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{547, 0}},
@@ -26683,9 +26683,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uec00": {
+		'': {
 			HorizAdvX: 472,
-			Unicode:   "\uec00",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 636}},
@@ -26714,9 +26714,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uec02": {
+		'': {
 			HorizAdvX: 472,
-			Unicode:   "\uec02",
+			Unicode:   '',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 640}},
@@ -26751,9 +26751,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uec06": {
+		'': {
 			HorizAdvX: 240,
-			Unicode:   "\uec06",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -26770,9 +26770,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uec07": {
+		'': {
 			HorizAdvX: 280,
-			Unicode:   "\uec07",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 0}},
@@ -26789,9 +26789,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uec08": {
+		'': {
 			HorizAdvX: 680,
-			Unicode:   "\uec08",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{606, 0}},
@@ -26819,9 +26819,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uec09": {
+		'': {
 			HorizAdvX: 600,
-			Unicode:   "\uec09",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{545, 0}},
@@ -26849,9 +26849,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uec0a": {
+		'': {
 			HorizAdvX: 440,
-			Unicode:   "\uec0a",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{431, 0}},
@@ -26873,9 +26873,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uec0b": {
+		'': {
 			HorizAdvX: 240,
-			Unicode:   "\uec0b",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 0}},
@@ -26895,9 +26895,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uec0c": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uec0c",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 608}},
@@ -26921,9 +26921,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uec0d": {
+		'': {
 			HorizAdvX: 300,
-			Unicode:   "\uec0d",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{287, 433}},
@@ -26951,9 +26951,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uec0e": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uec0e",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{418, 608}},
@@ -26980,9 +26980,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf638": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\uf638",
+			Unicode:   '',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{535, -13}},
@@ -27013,9 +27013,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf639": {
+		'': {
 			HorizAdvX: 603,
-			Unicode:   "\uf639",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{549, 247}},
@@ -27036,9 +27036,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf63a": {
+		'': {
 			HorizAdvX: 594,
-			Unicode:   "\uf63a",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{540, 512}},
@@ -27058,9 +27058,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf63b": {
+		'': {
 			HorizAdvX: 611,
-			Unicode:   "\uf63b",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 235}},
@@ -27083,9 +27083,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf63c": {
+		'': {
 			HorizAdvX: 638,
-			Unicode:   "\uf63c",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{584, 111}},
@@ -27108,9 +27108,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf63d": {
+		'': {
 			HorizAdvX: 616,
-			Unicode:   "\uf63d",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{562, 247}},
@@ -27132,9 +27132,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf63e": {
+		'': {
 			HorizAdvX: 620,
-			Unicode:   "\uf63e",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{566, 252}},
@@ -27155,9 +27155,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf63f": {
+		'': {
 			HorizAdvX: 543,
-			Unicode:   "\uf63f",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{489, 614}},
@@ -27171,9 +27171,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf640": {
+		'': {
 			HorizAdvX: 600,
-			Unicode:   "\uf640",
+			Unicode:   '',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 232}},
@@ -27200,9 +27200,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf641": {
+		'': {
 			HorizAdvX: 618,
-			Unicode:   "\uf641",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{564, 496}},
@@ -27223,9 +27223,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf643": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\uf643",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{525, 217}},
@@ -27246,9 +27246,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf644": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\uf644",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{379, 0}},
@@ -27261,9 +27261,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf645": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\uf645",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 388}},
@@ -27283,9 +27283,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf646": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\uf646",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{518, 54}},
@@ -27308,9 +27308,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf647": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\uf647",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{530, 0}},
@@ -27333,9 +27333,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf648": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\uf648",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{520, 62}},
@@ -27357,9 +27357,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf649": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\uf649",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{533, 252}},
@@ -27380,9 +27380,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf64a": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\uf64a",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{500, 429}},
@@ -27396,9 +27396,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf64b": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\uf64b",
+			Unicode:   '',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{523, 232}},
@@ -27425,9 +27425,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf64c": {
+		'': {
 			HorizAdvX: 560,
-			Unicode:   "\uf64c",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{532, 315}},
@@ -27448,9 +27448,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf66d": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf66d",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -27477,9 +27477,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf66e": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf66e",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -27504,9 +27504,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf66f": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf66f",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, -231}},
@@ -27533,9 +27533,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf670": {
+		'': {
 			HorizAdvX: 746,
-			Unicode:   "\uf670",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{700, 123}},
@@ -27568,9 +27568,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf671": {
+		'': {
 			HorizAdvX: 641,
-			Unicode:   "\uf671",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{632, 373}},
@@ -27592,9 +27592,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf672": {
+		'': {
 			HorizAdvX: 641,
-			Unicode:   "\uf672",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{632, 373}},
@@ -27620,9 +27620,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf673": {
+		'': {
 			HorizAdvX: 641,
-			Unicode:   "\uf673",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{632, 373}},
@@ -27647,9 +27647,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf674": {
+		'': {
 			HorizAdvX: 641,
-			Unicode:   "\uf674",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{632, 373}},
@@ -27672,9 +27672,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf675": {
+		'': {
 			HorizAdvX: 593,
-			Unicode:   "\uf675",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 276}},
@@ -27706,9 +27706,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf677": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\uf677",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -27735,9 +27735,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf678": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\uf678",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -27765,9 +27765,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf679": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\uf679",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -27792,9 +27792,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf67a": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\uf67a",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -27819,9 +27819,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf67b": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf67b",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{563, -72}},
@@ -27843,9 +27843,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf67c": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\uf67c",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, -231}},
@@ -27871,9 +27871,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf67d": {
+		'': {
 			HorizAdvX: 688,
-			Unicode:   "\uf67d",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{668, 269}},
@@ -27902,9 +27902,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf67e": {
+		'': {
 			HorizAdvX: 688,
-			Unicode:   "\uf67e",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{668, 269}},
@@ -27933,9 +27933,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf67f": {
+		'': {
 			HorizAdvX: 688,
-			Unicode:   "\uf67f",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{668, 269}},
@@ -27962,9 +27962,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf680": {
+		'': {
 			HorizAdvX: 688,
-			Unicode:   "\uf680",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{668, 269}},
@@ -27991,9 +27991,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf681": {
+		'': {
 			HorizAdvX: 590,
-			Unicode:   "\uf681",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{587, 394}},
@@ -28026,9 +28026,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf682": {
+		'': {
 			HorizAdvX: 590,
-			Unicode:   "\uf682",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{515, 0}},
@@ -28055,9 +28055,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf683": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\uf683",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -28076,9 +28076,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf684": {
+		'': {
 			HorizAdvX: 630,
-			Unicode:   "\uf684",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{576, 165}},
@@ -28099,9 +28099,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf685": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\uf685",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -28118,9 +28118,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf686": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\uf686",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, -231}},
@@ -28138,9 +28138,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf687": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\uf687",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -28160,9 +28160,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf688": {
+		'': {
 			HorizAdvX: 434,
-			Unicode:   "\uf688",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{366, 165}},
@@ -28185,9 +28185,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf689": {
+		'': {
 			HorizAdvX: 543,
-			Unicode:   "\uf689",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{528, 554}},
@@ -28211,9 +28211,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf68a": {
+		'': {
 			HorizAdvX: 388,
-			Unicode:   "\uf68a",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{379, 123}},
@@ -28231,9 +28231,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf68b": {
+		'': {
 			HorizAdvX: 388,
-			Unicode:   "\uf68b",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{349, 123}},
@@ -28252,9 +28252,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf68c": {
+		'': {
 			HorizAdvX: 388,
-			Unicode:   "\uf68c",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{379, 123}},
@@ -28273,9 +28273,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf68d": {
+		'': {
 			HorizAdvX: 388,
-			Unicode:   "\uf68d",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{349, 123}},
@@ -28294,9 +28294,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf68e": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf68e",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{563, 0}},
@@ -28318,9 +28318,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf68f": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf68f",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{563, 0}},
@@ -28346,9 +28346,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf690": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf690",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{563, 0}},
@@ -28371,9 +28371,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf691": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\uf691",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -28398,9 +28398,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf692": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\uf692",
+			Unicode:   '',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -28427,9 +28427,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf693": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\uf693",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -28452,9 +28452,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf694": {
+		'': {
 			HorizAdvX: 703,
-			Unicode:   "\uf694",
+			Unicode:   '',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{669, 277}},
@@ -28489,9 +28489,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf695": {
+		'': {
 			HorizAdvX: 512,
-			Unicode:   "\uf695",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{502, 0}},
@@ -28519,9 +28519,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf696": {
+		'': {
 			HorizAdvX: 512,
-			Unicode:   "\uf696",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{502, 0}},
@@ -28553,9 +28553,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf697": {
+		'': {
 			HorizAdvX: 512,
-			Unicode:   "\uf697",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{502, 0}},
@@ -28584,9 +28584,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf698": {
+		'': {
 			HorizAdvX: 441,
-			Unicode:   "\uf698",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{415, 174}},
@@ -28614,9 +28614,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf699": {
+		'': {
 			HorizAdvX: 441,
-			Unicode:   "\uf699",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{415, 174}},
@@ -28651,9 +28651,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf69a": {
+		'': {
 			HorizAdvX: 441,
-			Unicode:   "\uf69a",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{415, 174}},
@@ -28684,9 +28684,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf69b": {
+		'': {
 			HorizAdvX: 441,
-			Unicode:   "\uf69b",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{415, 174}},
@@ -28715,9 +28715,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf69d": {
+		'': {
 			HorizAdvX: 357,
-			Unicode:   "\uf69d",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{354, 431}},
@@ -28741,9 +28741,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf69e": {
+		'': {
 			HorizAdvX: 357,
-			Unicode:   "\uf69e",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{354, 431}},
@@ -28764,9 +28764,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf69f": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\uf69f",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -28791,9 +28791,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6a0": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\uf6a0",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -28820,9 +28820,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6a1": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\uf6a1",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -28845,9 +28845,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6a2": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\uf6a2",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -28872,9 +28872,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6a3": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\uf6a3",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -28903,9 +28903,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6a4": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\uf6a4",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -28931,9 +28931,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6a5": {
+		'': {
 			HorizAdvX: 761,
-			Unicode:   "\uf6a5",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{748, 554}},
@@ -28958,9 +28958,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6a6": {
+		'': {
 			HorizAdvX: 761,
-			Unicode:   "\uf6a6",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{748, 554}},
@@ -28988,9 +28988,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6a7": {
+		'': {
 			HorizAdvX: 761,
-			Unicode:   "\uf6a7",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{748, 554}},
@@ -29022,9 +29022,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6a8": {
+		'': {
 			HorizAdvX: 761,
-			Unicode:   "\uf6a8",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{748, 554}},
@@ -29049,9 +29049,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6a9": {
+		'': {
 			HorizAdvX: 543,
-			Unicode:   "\uf6a9",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 554}},
@@ -29075,9 +29075,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6aa": {
+		'': {
 			HorizAdvX: 543,
-			Unicode:   "\uf6aa",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 554}},
@@ -29098,9 +29098,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6ab": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uf6ab",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{402, 123}},
@@ -29122,9 +29122,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6ac": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uf6ac",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{402, 123}},
@@ -29147,9 +29147,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6ad": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\uf6ad",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -29166,9 +29166,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6be": {
+		'': {
 			HorizAdvX: 260,
-			Unicode:   "\uf6be",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, 37}},
@@ -29181,9 +29181,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6dc": {
+		'': {
 			HorizAdvX: 334,
-			Unicode:   "\uf6dc",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 0}},
@@ -29196,9 +29196,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf6de": {
+		'': {
 			HorizAdvX: 750,
-			Unicode:   "\uf6de",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{750, 229}},
@@ -29209,9 +29209,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf724": {
+		'': {
 			HorizAdvX: 520,
-			Unicode:   "\uf724",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{493, 224}},
@@ -29250,9 +29250,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf730": {
+		'': {
 			HorizAdvX: 603,
-			Unicode:   "\uf730",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{549, 217}},
@@ -29273,9 +29273,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf731": {
+		'': {
 			HorizAdvX: 334,
-			Unicode:   "\uf731",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 0}},
@@ -29288,9 +29288,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf732": {
+		'': {
 			HorizAdvX: 594,
-			Unicode:   "\uf732",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{540, 388}},
@@ -29310,9 +29310,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf733": {
+		'': {
 			HorizAdvX: 611,
-			Unicode:   "\uf733",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 54}},
@@ -29335,9 +29335,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf734": {
+		'': {
 			HorizAdvX: 638,
-			Unicode:   "\uf734",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{584, 0}},
@@ -29360,9 +29360,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf735": {
+		'': {
 			HorizAdvX: 616,
-			Unicode:   "\uf735",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{562, 62}},
@@ -29384,9 +29384,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf736": {
+		'': {
 			HorizAdvX: 620,
-			Unicode:   "\uf736",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{566, 252}},
@@ -29407,9 +29407,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf737": {
+		'': {
 			HorizAdvX: 543,
-			Unicode:   "\uf737",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{489, 429}},
@@ -29423,9 +29423,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf738": {
+		'': {
 			HorizAdvX: 600,
-			Unicode:   "\uf738",
+			Unicode:   '',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{546, 232}},
@@ -29452,9 +29452,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf739": {
+		'': {
 			HorizAdvX: 618,
-			Unicode:   "\uf739",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{564, 315}},
@@ -29475,9 +29475,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf761": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf761",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -29496,9 +29496,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf762": {
+		'': {
 			HorizAdvX: 512,
-			Unicode:   "\uf762",
+			Unicode:   '',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 171}},
@@ -29527,9 +29527,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf763": {
+		'': {
 			HorizAdvX: 641,
-			Unicode:   "\uf763",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{632, 373}},
@@ -29546,9 +29546,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf764": {
+		'': {
 			HorizAdvX: 593,
-			Unicode:   "\uf764",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{557, 276}},
@@ -29571,9 +29571,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf765": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\uf765",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -29592,9 +29592,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf766": {
+		'': {
 			HorizAdvX: 419,
-			Unicode:   "\uf766",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{389, 554}},
@@ -29611,9 +29611,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf767": {
+		'': {
 			HorizAdvX: 688,
-			Unicode:   "\uf767",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{668, 269}},
@@ -29634,9 +29634,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf768": {
+		'': {
 			HorizAdvX: 590,
-			Unicode:   "\uf768",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{515, 0}},
@@ -29655,9 +29655,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf769": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\uf769",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -29668,9 +29668,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf76a": {
+		'': {
 			HorizAdvX: 434,
-			Unicode:   "\uf76a",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{366, 165}},
@@ -29685,9 +29685,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf76b": {
+		'': {
 			HorizAdvX: 543,
-			Unicode:   "\uf76b",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{528, 554}},
@@ -29705,9 +29705,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf76c": {
+		'': {
 			HorizAdvX: 388,
-			Unicode:   "\uf76c",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{379, 123}},
@@ -29720,9 +29720,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf76d": {
+		'': {
 			HorizAdvX: 761,
-			Unicode:   "\uf76d",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{698, 554}},
@@ -29742,9 +29742,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf76e": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf76e",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{563, 0}},
@@ -29761,9 +29761,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf76f": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\uf76f",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -29780,9 +29780,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf770": {
+		'': {
 			HorizAdvX: 484,
-			Unicode:   "\uf770",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{464, 377}},
@@ -29805,9 +29805,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf771": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\uf771",
+			Unicode:   '',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{676, 5}},
@@ -29839,9 +29839,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf772": {
+		'': {
 			HorizAdvX: 512,
-			Unicode:   "\uf772",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{502, 0}},
@@ -29864,9 +29864,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf773": {
+		'': {
 			HorizAdvX: 441,
-			Unicode:   "\uf773",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{415, 174}},
@@ -29889,9 +29889,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf774": {
+		'': {
 			HorizAdvX: 357,
-			Unicode:   "\uf774",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{354, 431}},
@@ -29906,9 +29906,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf775": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\uf775",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -29925,9 +29925,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf776": {
+		'': {
 			HorizAdvX: 605,
-			Unicode:   "\uf776",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{592, 554}},
@@ -29941,9 +29941,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf777": {
+		'': {
 			HorizAdvX: 761,
-			Unicode:   "\uf777",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{748, 554}},
@@ -29963,9 +29963,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf778": {
+		'': {
 			HorizAdvX: 590,
-			Unicode:   "\uf778",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{586, 0}},
@@ -29983,9 +29983,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf779": {
+		'': {
 			HorizAdvX: 543,
-			Unicode:   "\uf779",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 554}},
@@ -30001,9 +30001,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf77a": {
+		'': {
 			HorizAdvX: 420,
-			Unicode:   "\uf77a",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{402, 123}},
@@ -30020,9 +30020,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7a2": {
+		'': {
 			HorizAdvX: 0,
-			Unicode:   "\uf7a2",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{601, 182}},
@@ -30045,9 +30045,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7e0": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf7e0",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -30071,9 +30071,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7e1": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf7e1",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -30097,9 +30097,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7e2": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf7e2",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -30126,9 +30126,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7e3": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf7e3",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -30156,9 +30156,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7e4": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf7e4",
+			Unicode:   '',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -30189,9 +30189,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7e5": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf7e5",
+			Unicode:   '',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{623, 0}},
@@ -30222,9 +30222,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7e6": {
+		'': {
 			HorizAdvX: 746,
-			Unicode:   "\uf7e6",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{700, 123}},
@@ -30252,9 +30252,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7e7": {
+		'': {
 			HorizAdvX: 641,
-			Unicode:   "\uf7e7",
+			Unicode:   '',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{632, 373}},
@@ -30283,9 +30283,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7e8": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\uf7e8",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -30309,9 +30309,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7e9": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\uf7e9",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -30335,9 +30335,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7ea": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\uf7ea",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -30364,9 +30364,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7eb": {
+		'': {
 			HorizAdvX: 450,
-			Unicode:   "\uf7eb",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 554}},
@@ -30397,9 +30397,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7ec": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\uf7ec",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -30415,9 +30415,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7ed": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\uf7ed",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -30433,9 +30433,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7ee": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\uf7ee",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -30454,9 +30454,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7ef": {
+		'': {
 			HorizAdvX: 278,
-			Unicode:   "\uf7ef",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 0}},
@@ -30479,9 +30479,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7f0": {
+		'': {
 			HorizAdvX: 626,
-			Unicode:   "\uf7f0",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{590, 275}},
@@ -30512,9 +30512,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7f1": {
+		'': {
 			HorizAdvX: 637,
-			Unicode:   "\uf7f1",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{563, 0}},
@@ -30540,9 +30540,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7f2": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\uf7f2",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -30564,9 +30564,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7f3": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\uf7f3",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -30588,9 +30588,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7f4": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\uf7f4",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -30615,9 +30615,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7f5": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\uf7f5",
+			Unicode:   '',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -30643,9 +30643,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7f6": {
+		'': {
 			HorizAdvX: 691,
-			Unicode:   "\uf7f6",
+			Unicode:   '',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{654, 277}},
@@ -30674,9 +30674,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7f8": {
+		'': {
 			HorizAdvX: 703,
-			Unicode:   "\uf7f8",
+			Unicode:   '',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{669, 277}},
@@ -30706,9 +30706,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7f9": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\uf7f9",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -30730,9 +30730,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7fa": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\uf7fa",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -30754,9 +30754,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7fb": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\uf7fb",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -30781,9 +30781,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7fc": {
+		'': {
 			HorizAdvX: 559,
-			Unicode:   "\uf7fc",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 207}},
@@ -30812,9 +30812,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7fd": {
+		'': {
 			HorizAdvX: 543,
-			Unicode:   "\uf7fd",
+			Unicode:   '',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 554}},
@@ -30835,9 +30835,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7fe": {
+		'': {
 			HorizAdvX: 484,
-			Unicode:   "\uf7fe",
+			Unicode:   '',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{464, 284}},
@@ -30862,9 +30862,9 @@ var texgyreadventor_boldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf7ff": {
+		'': {
 			HorizAdvX: 543,
-			Unicode:   "\uf7ff",
+			Unicode:   '',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 554}},

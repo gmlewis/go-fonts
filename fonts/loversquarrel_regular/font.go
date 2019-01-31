@@ -11,16 +11,16 @@ func init() {
 }
 
 var loversquarrel_regularFont = &fonts.Font{
-	// ID: "loversquarrel_regular",
+	ID:               "loversquarrel_regular",
 	HorizAdvX:        333,
 	UnitsPerEm:       1000,
 	Ascent:           800,
 	Descent:          -200,
 	MissingHorizAdvX: 323,
-	Glyphs: map[string]*fonts.Glyph{
-		"!": {
+	Glyphs: map[rune]*fonts.Glyph{
+		'!': {
 			HorizAdvX: 277,
-			Unicode:   "!",
+			Unicode:   '!',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{389, 513}},
@@ -47,9 +47,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\"": {
+		'"': {
 			HorizAdvX: 212,
-			Unicode:   "\"",
+			Unicode:   '"',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{201, 447}},
@@ -72,9 +72,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"#": {
+		'#': {
 			HorizAdvX: 497,
-			Unicode:   "#",
+			Unicode:   '#',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{479, 310}},
@@ -114,9 +114,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"$": {
+		'$': {
 			HorizAdvX: 299,
-			Unicode:   "$",
+			Unicode:   '$',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{317, 325}},
@@ -162,9 +162,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"%": {
+		'%': {
 			HorizAdvX: 414,
-			Unicode:   "%",
+			Unicode:   '%',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{413, 441}},
@@ -224,9 +224,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"&": {
+		'&': {
 			HorizAdvX: 476,
-			Unicode:   "&",
+			Unicode:   '&',
 			GerberLP:  "dcccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, -178}},
@@ -323,9 +323,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"'": {
+		'\'': {
 			HorizAdvX: 145,
-			Unicode:   "'",
+			Unicode:   '\'',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{184, 349}},
@@ -342,9 +342,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"(": {
+		'(': {
 			HorizAdvX: 353,
-			Unicode:   "(",
+			Unicode:   '(',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{407, 565}},
@@ -363,9 +363,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		")": {
+		')': {
 			HorizAdvX: 411,
-			Unicode:   ")",
+			Unicode:   ')',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{373, 397}},
@@ -384,9 +384,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"*": {
+		'*': {
 			HorizAdvX: 287,
-			Unicode:   "*",
+			Unicode:   '*',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{261, 259}},
@@ -423,9 +423,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"+": {
+		'+': {
 			HorizAdvX: 305,
-			Unicode:   "+",
+			Unicode:   '+',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{307, 159}},
@@ -450,9 +450,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		",": {
+		',': {
 			HorizAdvX: 155,
-			Unicode:   ",",
+			Unicode:   ',',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{128, 24}},
@@ -469,9 +469,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"-": {
+		'-': {
 			HorizAdvX: 253,
-			Unicode:   "-",
+			Unicode:   '-',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{213, 125}},
@@ -487,9 +487,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		".": {
+		'.': {
 			HorizAdvX: 160,
-			Unicode:   ".",
+			Unicode:   '.',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{125, 9}},
@@ -504,9 +504,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"/": {
+		'/': {
 			HorizAdvX: 365,
-			Unicode:   "/",
+			Unicode:   '/',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{563, 517}},
@@ -528,9 +528,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"0": {
+		'0': {
 			HorizAdvX: 547,
-			Unicode:   "0",
+			Unicode:   '0',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{460, 100}},
@@ -568,9 +568,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"1": {
+		'1': {
 			HorizAdvX: 244,
-			Unicode:   "1",
+			Unicode:   '1',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{271, 388}},
@@ -594,9 +594,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"2": {
+		'2': {
 			HorizAdvX: 377,
-			Unicode:   "2",
+			Unicode:   '2',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, -33}},
@@ -631,9 +631,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"3": {
+		'3': {
 			HorizAdvX: 377,
-			Unicode:   "3",
+			Unicode:   '3',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{72, 292}},
@@ -659,9 +659,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"4": {
+		'4': {
 			HorizAdvX: 368,
-			Unicode:   "4",
+			Unicode:   '4',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{371, 376}},
@@ -705,9 +705,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"5": {
+		'5': {
 			HorizAdvX: 367,
-			Unicode:   "5",
+			Unicode:   '5',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{401, 361}},
@@ -756,9 +756,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"6": {
+		'6': {
 			HorizAdvX: 328,
-			Unicode:   "6",
+			Unicode:   '6',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{305, 429}},
@@ -791,9 +791,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"7": {
+		'7': {
 			HorizAdvX: 331,
-			Unicode:   "7",
+			Unicode:   '7',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{332, 369}},
@@ -813,9 +813,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"8": {
+		'8': {
 			HorizAdvX: 344,
-			Unicode:   "8",
+			Unicode:   '8',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{439, 397}},
@@ -854,9 +854,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"9": {
+		'9': {
 			HorizAdvX: 340,
-			Unicode:   "9",
+			Unicode:   '9',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{319, 320}},
@@ -894,9 +894,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		":": {
+		':': {
 			HorizAdvX: 160,
-			Unicode:   ":",
+			Unicode:   ':',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{192, 148}},
@@ -921,9 +921,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		";": {
+		';': {
 			HorizAdvX: 155,
-			Unicode:   ";",
+			Unicode:   ';',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{128, 24}},
@@ -950,9 +950,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"<": {
+		'<': {
 			HorizAdvX: 219,
-			Unicode:   "<",
+			Unicode:   '<',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{222, 198}},
@@ -969,9 +969,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"=": {
+		'=': {
 			HorizAdvX: 305,
-			Unicode:   "=",
+			Unicode:   '=',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{273, 215}},
@@ -994,9 +994,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		">": {
+		'>': {
 			HorizAdvX: 219,
-			Unicode:   ">",
+			Unicode:   '>',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{165, 100}},
@@ -1014,9 +1014,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"?": {
+		'?': {
 			HorizAdvX: 400,
-			Unicode:   "?",
+			Unicode:   '?',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{405, 473}},
@@ -1057,9 +1057,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"@": {
+		'@': {
 			HorizAdvX: 650,
-			Unicode:   "@",
+			Unicode:   '@',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{578, 257}},
@@ -1108,9 +1108,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"A": {
+		'A': {
 			HorizAdvX: 769,
-			Unicode:   "A",
+			Unicode:   'A',
 			GerberLP:  "dccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 145}},
@@ -1180,9 +1180,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"B": {
+		'B': {
 			HorizAdvX: 592,
-			Unicode:   "B",
+			Unicode:   'B',
 			GerberLP:  "dcccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{336, 585}},
@@ -1260,9 +1260,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"C": {
+		'C': {
 			HorizAdvX: 553,
-			Unicode:   "C",
+			Unicode:   'C',
 			GerberLP:  "dccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{488, 414}},
@@ -1313,9 +1313,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"D": {
+		'D': {
 			HorizAdvX: 724,
-			Unicode:   "D",
+			Unicode:   'D',
 			GerberLP:  "dccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{458, -28}},
@@ -1398,9 +1398,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"E": {
+		'E': {
 			HorizAdvX: 522,
-			Unicode:   "E",
+			Unicode:   'E',
 			GerberLP:  "dcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{423, -6}},
@@ -1471,9 +1471,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"F": {
+		'F': {
 			HorizAdvX: 534,
-			Unicode:   "F",
+			Unicode:   'F',
 			GerberLP:  "dccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{554, 218}},
@@ -1527,9 +1527,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"G": {
+		'G': {
 			HorizAdvX: 572,
-			Unicode:   "G",
+			Unicode:   'G',
 			GerberLP:  "dcccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{590, 304}},
@@ -1608,9 +1608,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"H": {
+		'H': {
 			HorizAdvX: 833,
-			Unicode:   "H",
+			Unicode:   'H',
 			GerberLP:  "dcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{627, 387}},
@@ -1679,9 +1679,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"I": {
+		'I': {
 			HorizAdvX: 441,
-			Unicode:   "I",
+			Unicode:   'I',
 			GerberLP:  "dcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{409, 27}},
@@ -1752,9 +1752,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"J": {
+		'J': {
 			HorizAdvX: 421,
-			Unicode:   "J",
+			Unicode:   'J',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{281, 152}},
@@ -1803,9 +1803,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"K": {
+		'K': {
 			HorizAdvX: 655,
-			Unicode:   "K",
+			Unicode:   'K',
 			GerberLP:  "dccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{376, 506}},
@@ -1886,9 +1886,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"L": {
+		'L': {
 			HorizAdvX: 433,
-			Unicode:   "L",
+			Unicode:   'L',
 			GerberLP:  "dcccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, 315}},
@@ -1955,9 +1955,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"M": {
+		'M': {
 			HorizAdvX: 833,
-			Unicode:   "M",
+			Unicode:   'M',
 			GerberLP:  "ddccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{554, 498}},
@@ -2063,9 +2063,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"N": {
+		'N': {
 			HorizAdvX: 686,
-			Unicode:   "N",
+			Unicode:   'N',
 			GerberLP:  "dcccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{320, 379}},
@@ -2157,9 +2157,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"O": {
+		'O': {
 			HorizAdvX: 534,
-			Unicode:   "O",
+			Unicode:   'O',
 			GerberLP:  "dcccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{125, 420}},
@@ -2225,9 +2225,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"P": {
+		'P': {
 			HorizAdvX: 606,
-			Unicode:   "P",
+			Unicode:   'P',
 			GerberLP:  "dcccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{32, 110}},
@@ -2314,9 +2314,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Q": {
+		'Q': {
 			HorizAdvX: 535,
-			Unicode:   "Q",
+			Unicode:   'Q',
 			GerberLP:  "dcdcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 113}},
@@ -2389,9 +2389,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"R": {
+		'R': {
 			HorizAdvX: 688,
-			Unicode:   "R",
+			Unicode:   'R',
 			GerberLP:  "dcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{84, -19}},
@@ -2464,9 +2464,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"S": {
+		'S': {
 			HorizAdvX: 520,
-			Unicode:   "S",
+			Unicode:   'S',
 			GerberLP:  "dccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{366, -84}},
@@ -2551,9 +2551,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"T": {
+		'T': {
 			HorizAdvX: 464,
-			Unicode:   "T",
+			Unicode:   'T',
 			GerberLP:  "dccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{324, 538}},
@@ -2610,9 +2610,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"U": {
+		'U': {
 			HorizAdvX: 707,
-			Unicode:   "U",
+			Unicode:   'U',
 			GerberLP:  "dcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 559}},
@@ -2682,9 +2682,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"V": {
+		'V': {
 			HorizAdvX: 543,
-			Unicode:   "V",
+			Unicode:   'V',
 			GerberLP:  "dccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{536, 518}},
@@ -2739,9 +2739,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"W": {
+		'W': {
 			HorizAdvX: 816,
-			Unicode:   "W",
+			Unicode:   'W',
 			GerberLP:  "dcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{150, 470}},
@@ -2819,9 +2819,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"X": {
+		'X': {
 			HorizAdvX: 577,
-			Unicode:   "X",
+			Unicode:   'X',
 			GerberLP:  "dcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{440, 494}},
@@ -2897,9 +2897,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Y": {
+		'Y': {
 			HorizAdvX: 707,
-			Unicode:   "Y",
+			Unicode:   'Y',
 			GerberLP:  "dcccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{564, 246}},
@@ -2996,9 +2996,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Z": {
+		'Z': {
 			HorizAdvX: 546,
-			Unicode:   "Z",
+			Unicode:   'Z',
 			GerberLP:  "dccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{454, 433}},
@@ -3083,9 +3083,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"[": {
+		'[': {
 			HorizAdvX: 585,
-			Unicode:   "[",
+			Unicode:   '[',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{573, 697}},
@@ -3106,9 +3106,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\\": {
+		'\\': {
 			HorizAdvX: 551,
-			Unicode:   "\\",
+			Unicode:   '\\',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{523, -84}},
@@ -3122,9 +3122,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"]": {
+		']': {
 			HorizAdvX: 556,
-			Unicode:   "]",
+			Unicode:   ']',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{538, 679}},
@@ -3142,9 +3142,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"^": {
+		'^': {
 			HorizAdvX: 323,
-			Unicode:   "^",
+			Unicode:   '^',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{267, 249}},
@@ -3161,9 +3161,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"_": {
+		'_': {
 			HorizAdvX: 760,
-			Unicode:   "_",
+			Unicode:   '_',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{714, -48}},
@@ -3179,9 +3179,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"`": {
+		'`': {
 			HorizAdvX: 245,
-			Unicode:   "`",
+			Unicode:   '`',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{79, 415}},
@@ -3196,9 +3196,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a": {
+		'a': {
 			HorizAdvX: 269,
-			Unicode:   "a",
+			Unicode:   'a',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{325, 67}},
@@ -3220,9 +3220,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"b": {
+		'b': {
 			HorizAdvX: 259,
-			Unicode:   "b",
+			Unicode:   'b',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{334, 486}},
@@ -3246,9 +3246,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c": {
+		'c': {
 			HorizAdvX: 199,
-			Unicode:   "c",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{202, 66}},
@@ -3266,9 +3266,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"d": {
+		'd': {
 			HorizAdvX: 306,
-			Unicode:   "d",
+			Unicode:   'd',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{350, 77}},
@@ -3291,9 +3291,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"e": {
+		'e': {
 			HorizAdvX: 225,
-			Unicode:   "e",
+			Unicode:   'e',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 70}},
@@ -3321,9 +3321,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"f": {
+		'f': {
 			HorizAdvX: 151,
-			Unicode:   "f",
+			Unicode:   'f',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{318, 452}},
@@ -3344,9 +3344,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"g": {
+		'g': {
 			HorizAdvX: 258,
-			Unicode:   "g",
+			Unicode:   'g',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{260, 84}},
@@ -3379,9 +3379,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"h": {
+		'h': {
 			HorizAdvX: 242,
-			Unicode:   "h",
+			Unicode:   'h',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{477, 512}},
@@ -3414,9 +3414,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"i": {
+		'i': {
 			HorizAdvX: 142,
-			Unicode:   "i",
+			Unicode:   'i',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{177, 86}},
@@ -3437,9 +3437,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"j": {
+		'j': {
 			HorizAdvX: 138,
-			Unicode:   "j",
+			Unicode:   'j',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 220}},
@@ -3460,9 +3460,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"k": {
+		'k': {
 			HorizAdvX: 207,
-			Unicode:   "k",
+			Unicode:   'k',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 486}},
@@ -3491,9 +3491,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"l": {
+		'l': {
 			HorizAdvX: 166,
-			Unicode:   "l",
+			Unicode:   'l',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 485}},
@@ -3514,9 +3514,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"m": {
+		'm': {
 			HorizAdvX: 402,
-			Unicode:   "m",
+			Unicode:   'm',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{478, 103}},
@@ -3542,9 +3542,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"n": {
+		'n': {
 			HorizAdvX: 253,
-			Unicode:   "n",
+			Unicode:   'n',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{268, 24}},
@@ -3564,9 +3564,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"o": {
+		'o': {
 			HorizAdvX: 235,
-			Unicode:   "o",
+			Unicode:   'o',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 185}},
@@ -3586,9 +3586,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"p": {
+		'p': {
 			HorizAdvX: 226,
-			Unicode:   "p",
+			Unicode:   'p',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{239, 149}},
@@ -3620,9 +3620,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"q": {
+		'q': {
 			HorizAdvX: 232,
-			Unicode:   "q",
+			Unicode:   'q',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{227, 245}},
@@ -3645,9 +3645,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"r": {
+		'r': {
 			HorizAdvX: 177,
-			Unicode:   "r",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{207, 192}},
@@ -3662,9 +3662,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"s": {
+		's': {
 			HorizAdvX: 198,
-			Unicode:   "s",
+			Unicode:   's',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{212, 70}},
@@ -3683,9 +3683,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"t": {
+		't': {
 			HorizAdvX: 167,
-			Unicode:   "t",
+			Unicode:   't',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{218, 233}},
@@ -3706,9 +3706,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"u": {
+		'u': {
 			HorizAdvX: 281,
-			Unicode:   "u",
+			Unicode:   'u',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 67}},
@@ -3727,9 +3727,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"v": {
+		'v': {
 			HorizAdvX: 237,
-			Unicode:   "v",
+			Unicode:   'v',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 197}},
@@ -3750,9 +3750,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"w": {
+		'w': {
 			HorizAdvX: 407,
-			Unicode:   "w",
+			Unicode:   'w',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{459, 192}},
@@ -3777,9 +3777,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"x": {
+		'x': {
 			HorizAdvX: 212,
-			Unicode:   "x",
+			Unicode:   'x',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 56}},
@@ -3804,9 +3804,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"y": {
+		'y': {
 			HorizAdvX: 242,
-			Unicode:   "y",
+			Unicode:   'y',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{225, 208}},
@@ -3837,9 +3837,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"z": {
+		'z': {
 			HorizAdvX: 216,
-			Unicode:   "z",
+			Unicode:   'z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{255, 227}},
@@ -3864,9 +3864,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"{": {
+		'{': {
 			HorizAdvX: 369,
-			Unicode:   "{",
+			Unicode:   '{',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{423, 724}},
@@ -3888,9 +3888,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"|": {
+		'|': {
 			HorizAdvX: 250,
-			Unicode:   "|",
+			Unicode:   '|',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{59, -117}},
@@ -3908,9 +3908,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"}": {
+		'}': {
 			HorizAdvX: 485,
-			Unicode:   "}",
+			Unicode:   '}',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{471, 296}},
@@ -3931,9 +3931,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"~": {
+		'~': {
 			HorizAdvX: 220,
-			Unicode:   "~",
+			Unicode:   '~',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{233, 21}},
@@ -3965,9 +3965,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a1": {
+		'¡': {
 			HorizAdvX: 277,
-			Unicode:   "\u00a1",
+			Unicode:   '¡',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{168, 60}},
@@ -3995,9 +3995,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a2": {
+		'¢': {
 			HorizAdvX: 211,
-			Unicode:   "\u00a2",
+			Unicode:   '¢',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{223, 550}},
@@ -4041,9 +4041,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a3": {
+		'£': {
 			HorizAdvX: 382,
-			Unicode:   "\u00a3",
+			Unicode:   '£',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{470, 486}},
@@ -4109,9 +4109,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a4": {
+		'¤': {
 			HorizAdvX: 585,
-			Unicode:   "\u00a4",
+			Unicode:   '¤',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{400, 347}},
@@ -4139,9 +4139,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a5": {
+		'¥': {
 			HorizAdvX: 481,
-			Unicode:   "\u00a5",
+			Unicode:   '¥',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 365}},
@@ -4204,9 +4204,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a6": {
+		'¦': {
 			HorizAdvX: 323,
-			Unicode:   "\u00a6",
+			Unicode:   '¦',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{207, 144}},
@@ -4222,9 +4222,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a7": {
+		'§': {
 			HorizAdvX: 440,
-			Unicode:   "\u00a7",
+			Unicode:   '§',
 			GerberLP:  "dccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{437, 176}},
@@ -4332,9 +4332,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a8": {
+		'¨': {
 			HorizAdvX: 185,
-			Unicode:   "\u00a8",
+			Unicode:   '¨',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{155, 309}},
@@ -4351,9 +4351,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a9": {
+		'©': {
 			HorizAdvX: 369,
-			Unicode:   "\u00a9",
+			Unicode:   '©',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{375, 203}},
@@ -4419,9 +4419,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00aa": {
+		'ª': {
 			HorizAdvX: 249,
-			Unicode:   "\u00aa",
+			Unicode:   'ª',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{176, 320}},
@@ -4452,9 +4452,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ab": {
+		'«': {
 			HorizAdvX: 301,
-			Unicode:   "\u00ab",
+			Unicode:   '«',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{318, 198}},
@@ -4483,9 +4483,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ac": {
+		'¬': {
 			HorizAdvX: 539,
-			Unicode:   "\u00ac",
+			Unicode:   '¬',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{446, 185}},
@@ -4502,9 +4502,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ae": {
+		'®': {
 			HorizAdvX: 369,
-			Unicode:   "\u00ae",
+			Unicode:   '®',
 			GerberLP:  "dcdcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{375, 203}},
@@ -4606,9 +4606,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00af": {
+		'¯': {
 			HorizAdvX: 323,
-			Unicode:   "\u00af",
+			Unicode:   '¯',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{288, 301}},
@@ -4619,9 +4619,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b1": {
+		'±': {
 			HorizAdvX: 305,
-			Unicode:   "\u00b1",
+			Unicode:   '±',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, 191}},
@@ -4656,9 +4656,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b2": {
+		'²': {
 			HorizAdvX: 238,
-			Unicode:   "\u00b2",
+			Unicode:   '²',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{158, 189}},
@@ -4693,9 +4693,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b3": {
+		'³': {
 			HorizAdvX: 238,
-			Unicode:   "\u00b3",
+			Unicode:   '³',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{61, 364}},
@@ -4735,9 +4735,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b4": {
+		'´': {
 			HorizAdvX: 178,
-			Unicode:   "\u00b4",
+			Unicode:   '´',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{165, 335}},
@@ -4751,9 +4751,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b5": {
+		'µ': {
 			HorizAdvX: 216,
-			Unicode:   "\u00b5",
+			Unicode:   'µ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{275, 107}},
@@ -4792,9 +4792,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b6": {
+		'¶': {
 			HorizAdvX: 269,
-			Unicode:   "\u00b6",
+			Unicode:   '¶',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{403, 436}},
@@ -4815,9 +4815,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b8": {
+		'¸': {
 			HorizAdvX: 253,
-			Unicode:   "\u00b8",
+			Unicode:   '¸',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{217, -77}},
@@ -4846,9 +4846,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b9": {
+		'¹': {
 			HorizAdvX: 244,
-			Unicode:   "\u00b9",
+			Unicode:   '¹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{190, 445}},
@@ -4869,9 +4869,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ba": {
+		'º': {
 			HorizAdvX: 182,
-			Unicode:   "\u00ba",
+			Unicode:   'º',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{87, 387}},
@@ -4907,9 +4907,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bb": {
+		'»': {
 			HorizAdvX: 301,
-			Unicode:   "\u00bb",
+			Unicode:   '»',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{165, 100}},
@@ -4941,9 +4941,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bc": {
+		'¼': {
 			HorizAdvX: 415,
-			Unicode:   "\u00bc",
+			Unicode:   '¼',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{415, 444}},
@@ -5006,9 +5006,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bd": {
+		'½': {
 			HorizAdvX: 415,
-			Unicode:   "\u00bd",
+			Unicode:   '½',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{415, 444}},
@@ -5065,9 +5065,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00be": {
+		'¾': {
 			HorizAdvX: 415,
-			Unicode:   "\u00be",
+			Unicode:   '¾',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{415, 444}},
@@ -5149,9 +5149,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bf": {
+		'¿': {
 			HorizAdvX: 400,
-			Unicode:   "\u00bf",
+			Unicode:   '¿',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{332, -216}},
@@ -5192,9 +5192,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c0": {
+		'À': {
 			HorizAdvX: 769,
-			Unicode:   "\u00c0",
+			Unicode:   'À',
 			GerberLP:  "dcccccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 145}},
@@ -5274,9 +5274,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c1": {
+		'Á': {
 			HorizAdvX: 769,
-			Unicode:   "\u00c1",
+			Unicode:   'Á',
 			GerberLP:  "dcccccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 145}},
@@ -5355,9 +5355,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c2": {
+		'Â': {
 			HorizAdvX: 769,
-			Unicode:   "\u00c2",
+			Unicode:   'Â',
 			GerberLP:  "dcccdcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 145}},
@@ -5439,9 +5439,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c3": {
+		'Ã': {
 			HorizAdvX: 769,
-			Unicode:   "\u00c3",
+			Unicode:   'Ã',
 			GerberLP:  "dcccccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 145}},
@@ -5525,9 +5525,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c4": {
+		'Ä': {
 			HorizAdvX: 769,
-			Unicode:   "\u00c4",
+			Unicode:   'Ä',
 			GerberLP:  "dcccccdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 145}},
@@ -5609,9 +5609,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c5": {
+		'Å': {
 			HorizAdvX: 769,
-			Unicode:   "\u00c5",
+			Unicode:   'Å',
 			GerberLP:  "dcccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{723, 601}},
@@ -5700,9 +5700,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c6": {
+		'Æ': {
 			HorizAdvX: 969,
-			Unicode:   "\u00c6",
+			Unicode:   'Æ',
 			GerberLP:  "dccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{491, 186}},
@@ -5836,9 +5836,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c7": {
+		'Ç': {
 			HorizAdvX: 586,
-			Unicode:   "\u00c7",
+			Unicode:   'Ç',
 			GerberLP:  "dcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, -143}},
@@ -5917,9 +5917,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c8": {
+		'È': {
 			HorizAdvX: 568,
-			Unicode:   "\u00c8",
+			Unicode:   'È',
 			GerberLP:  "dcccdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{423, -6}},
@@ -6000,9 +6000,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c9": {
+		'É': {
 			HorizAdvX: 568,
-			Unicode:   "\u00c9",
+			Unicode:   'É',
 			GerberLP:  "dcccdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{423, -6}},
@@ -6082,9 +6082,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ca": {
+		'Ê': {
 			HorizAdvX: 568,
-			Unicode:   "\u00ca",
+			Unicode:   'Ê',
 			GerberLP:  "dcccdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{423, -6}},
@@ -6167,9 +6167,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cb": {
+		'Ë': {
 			HorizAdvX: 568,
-			Unicode:   "\u00cb",
+			Unicode:   'Ë',
 			GerberLP:  "dccccdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{423, -6}},
@@ -6252,9 +6252,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cc": {
+		'Ì': {
 			HorizAdvX: 504,
-			Unicode:   "\u00cc",
+			Unicode:   'Ì',
 			GerberLP:  "dcccdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{409, 27}},
@@ -6335,9 +6335,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cd": {
+		'Í': {
 			HorizAdvX: 504,
-			Unicode:   "\u00cd",
+			Unicode:   'Í',
 			GerberLP:  "dccdcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{409, 27}},
@@ -6417,9 +6417,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ce": {
+		'Î': {
 			HorizAdvX: 504,
-			Unicode:   "\u00ce",
+			Unicode:   'Î',
 			GerberLP:  "dccdcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{409, 27}},
@@ -6502,9 +6502,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cf": {
+		'Ï': {
 			HorizAdvX: 504,
-			Unicode:   "\u00cf",
+			Unicode:   'Ï',
 			GerberLP:  "dccccdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{409, 27}},
@@ -6587,9 +6587,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d0": {
+		'Ð': {
 			HorizAdvX: 724,
-			Unicode:   "\u00d0",
+			Unicode:   'Ð',
 			GerberLP:  "dccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{458, -28}},
@@ -6681,9 +6681,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d1": {
+		'Ñ': {
 			HorizAdvX: 686,
-			Unicode:   "\u00d1",
+			Unicode:   'Ñ',
 			GerberLP:  "dccccdcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{320, 379}},
@@ -6789,9 +6789,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d2": {
+		'Ò': {
 			HorizAdvX: 577,
-			Unicode:   "\u00d2",
+			Unicode:   'Ò',
 			GerberLP:  "dccccccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{125, 420}},
@@ -6867,9 +6867,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d3": {
+		'Ó': {
 			HorizAdvX: 577,
-			Unicode:   "\u00d3",
+			Unicode:   'Ó',
 			GerberLP:  "dcccccdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{125, 420}},
@@ -6944,9 +6944,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d4": {
+		'Ô': {
 			HorizAdvX: 577,
-			Unicode:   "\u00d4",
+			Unicode:   'Ô',
 			GerberLP:  "dcccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{459, 535}},
@@ -7026,9 +7026,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d5": {
+		'Õ': {
 			HorizAdvX: 577,
-			Unicode:   "\u00d5",
+			Unicode:   'Õ',
 			GerberLP:  "dccccccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{125, 420}},
@@ -7108,9 +7108,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d6": {
+		'Ö': {
 			HorizAdvX: 577,
-			Unicode:   "\u00d6",
+			Unicode:   'Ö',
 			GerberLP:  "dccccccdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{125, 420}},
@@ -7188,9 +7188,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d7": {
+		'×': {
 			HorizAdvX: 159,
-			Unicode:   "\u00d7",
+			Unicode:   '×',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{143, 131}},
@@ -7213,9 +7213,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d8": {
+		'Ø': {
 			HorizAdvX: 813,
-			Unicode:   "\u00d8",
+			Unicode:   'Ø',
 			GerberLP:  "dccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{770, 557}},
@@ -7321,9 +7321,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d9": {
+		'Ù': {
 			HorizAdvX: 707,
-			Unicode:   "\u00d9",
+			Unicode:   'Ù',
 			GerberLP:  "dccccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 559}},
@@ -7403,9 +7403,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00da": {
+		'Ú': {
 			HorizAdvX: 707,
-			Unicode:   "\u00da",
+			Unicode:   'Ú',
 			GerberLP:  "dccccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 559}},
@@ -7484,9 +7484,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00db": {
+		'Û': {
 			HorizAdvX: 707,
-			Unicode:   "\u00db",
+			Unicode:   'Û',
 			GerberLP:  "dccccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 559}},
@@ -7568,9 +7568,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dc": {
+		'Ü': {
 			HorizAdvX: 707,
-			Unicode:   "\u00dc",
+			Unicode:   'Ü',
 			GerberLP:  "dccccdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 559}},
@@ -7652,9 +7652,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dd": {
+		'Ý': {
 			HorizAdvX: 707,
-			Unicode:   "\u00dd",
+			Unicode:   'Ý',
 			GerberLP:  "dcccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{564, 246}},
@@ -7754,9 +7754,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00de": {
+		'Þ': {
 			HorizAdvX: 358,
-			Unicode:   "\u00de",
+			Unicode:   'Þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{394, 644}},
@@ -7789,9 +7789,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00df": {
+		'ß': {
 			HorizAdvX: 508,
-			Unicode:   "\u00df",
+			Unicode:   'ß',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{510, 377}},
@@ -7837,9 +7837,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e0": {
+		'à': {
 			HorizAdvX: 269,
-			Unicode:   "\u00e0",
+			Unicode:   'à',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{324, 67}},
@@ -7871,9 +7871,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e1": {
+		'á': {
 			HorizAdvX: 269,
-			Unicode:   "\u00e1",
+			Unicode:   'á',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{324, 67}},
@@ -7904,9 +7904,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e2": {
+		'â': {
 			HorizAdvX: 269,
-			Unicode:   "\u00e2",
+			Unicode:   'â',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{324, 67}},
@@ -7940,9 +7940,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e3": {
+		'ã': {
 			HorizAdvX: 269,
-			Unicode:   "\u00e3",
+			Unicode:   'ã',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{324, 67}},
@@ -7978,9 +7978,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e4": {
+		'ä': {
 			HorizAdvX: 269,
-			Unicode:   "\u00e4",
+			Unicode:   'ä',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{324, 67}},
@@ -8014,9 +8014,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e5": {
+		'å': {
 			HorizAdvX: 269,
-			Unicode:   "\u00e5",
+			Unicode:   'å',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{324, 67}},
@@ -8058,9 +8058,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e6": {
+		'æ': {
 			HorizAdvX: 327,
-			Unicode:   "\u00e6",
+			Unicode:   'æ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{344, 77}},
@@ -8103,9 +8103,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e7": {
+		'ç': {
 			HorizAdvX: 199,
-			Unicode:   "\u00e7",
+			Unicode:   'ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{142, -80}},
@@ -8145,9 +8145,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e8": {
+		'è': {
 			HorizAdvX: 225,
-			Unicode:   "\u00e8",
+			Unicode:   'è',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 70}},
@@ -8185,9 +8185,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e9": {
+		'é': {
 			HorizAdvX: 225,
-			Unicode:   "\u00e9",
+			Unicode:   'é',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 70}},
@@ -8224,9 +8224,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ea": {
+		'ê': {
 			HorizAdvX: 225,
-			Unicode:   "\u00ea",
+			Unicode:   'ê',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 70}},
@@ -8266,9 +8266,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00eb": {
+		'ë': {
 			HorizAdvX: 225,
-			Unicode:   "\u00eb",
+			Unicode:   'ë',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{243, 70}},
@@ -8308,9 +8308,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ec": {
+		'ì': {
 			HorizAdvX: 136,
-			Unicode:   "\u00ec",
+			Unicode:   'ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{180, 86}},
@@ -8336,9 +8336,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ed": {
+		'í': {
 			HorizAdvX: 136,
-			Unicode:   "\u00ed",
+			Unicode:   'í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{180, 86}},
@@ -8363,9 +8363,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ee": {
+		'î': {
 			HorizAdvX: 136,
-			Unicode:   "\u00ee",
+			Unicode:   'î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{180, 86}},
@@ -8393,9 +8393,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ef": {
+		'ï': {
 			HorizAdvX: 136,
-			Unicode:   "\u00ef",
+			Unicode:   'ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{180, 86}},
@@ -8423,9 +8423,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f0": {
+		'ð': {
 			HorizAdvX: 340,
-			Unicode:   "\u00f0",
+			Unicode:   'ð',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{319, 320}},
@@ -8463,9 +8463,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f1": {
+		'ñ': {
 			HorizAdvX: 253,
-			Unicode:   "\u00f1",
+			Unicode:   'ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{268, 24}},
@@ -8499,9 +8499,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f2": {
+		'ò': {
 			HorizAdvX: 235,
-			Unicode:   "\u00f2",
+			Unicode:   'ò',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 185}},
@@ -8531,9 +8531,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3": {
+		'ó': {
 			HorizAdvX: 235,
-			Unicode:   "\u00f3",
+			Unicode:   'ó',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 185}},
@@ -8562,9 +8562,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f4": {
+		'ô': {
 			HorizAdvX: 235,
-			Unicode:   "\u00f4",
+			Unicode:   'ô',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 185}},
@@ -8596,9 +8596,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f5": {
+		'õ': {
 			HorizAdvX: 235,
-			Unicode:   "\u00f5",
+			Unicode:   'õ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 185}},
@@ -8632,9 +8632,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f6": {
+		'ö': {
 			HorizAdvX: 235,
-			Unicode:   "\u00f6",
+			Unicode:   'ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{293, 185}},
@@ -8666,9 +8666,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f7": {
+		'÷': {
 			HorizAdvX: 160,
-			Unicode:   "\u00f7",
+			Unicode:   '÷',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 242}},
@@ -8699,9 +8699,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f9": {
+		'ù': {
 			HorizAdvX: 281,
-			Unicode:   "\u00f9",
+			Unicode:   'ù',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 67}},
@@ -8730,9 +8730,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fa": {
+		'ú': {
 			HorizAdvX: 281,
-			Unicode:   "\u00fa",
+			Unicode:   'ú',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 67}},
@@ -8760,9 +8760,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fb": {
+		'û': {
 			HorizAdvX: 281,
-			Unicode:   "\u00fb",
+			Unicode:   'û',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 67}},
@@ -8793,9 +8793,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fc": {
+		'ü': {
 			HorizAdvX: 281,
-			Unicode:   "\u00fc",
+			Unicode:   'ü',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{340, 67}},
@@ -8826,9 +8826,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fd": {
+		'ý': {
 			HorizAdvX: 242,
-			Unicode:   "\u00fd",
+			Unicode:   'ý',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{225, 208}},
@@ -8868,9 +8868,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fe": {
+		'þ': {
 			HorizAdvX: 250,
-			Unicode:   "\u00fe",
+			Unicode:   'þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{239, 149}},
@@ -8902,9 +8902,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ff": {
+		'ÿ': {
 			HorizAdvX: 242,
-			Unicode:   "\u00ff",
+			Unicode:   'ÿ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{225, 208}},
@@ -8947,9 +8947,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0127": {
+		'ħ': {
 			HorizAdvX: 242,
-			Unicode:   "\u0127",
+			Unicode:   'ħ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{477, 512}},
@@ -8990,9 +8990,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0128": {
+		'Ĩ': {
 			HorizAdvX: 441,
-			Unicode:   "\u0128",
+			Unicode:   'Ĩ',
 			GerberLP:  "dcccdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{409, 27}},
@@ -9077,9 +9077,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0129": {
+		'ĩ': {
 			HorizAdvX: 136,
-			Unicode:   "\u0129",
+			Unicode:   'ĩ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{180, 86}},
@@ -9109,9 +9109,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0131": {
+		'ı': {
 			HorizAdvX: 136,
-			Unicode:   "\u0131",
+			Unicode:   'ı',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{180, 86}},
@@ -9127,9 +9127,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0132": {
+		'Ĳ': {
 			HorizAdvX: 862,
-			Unicode:   "\u0132",
+			Unicode:   'Ĳ',
 			GerberLP:  "dcccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{722, 152}},
@@ -9248,9 +9248,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0133": {
+		'ĳ': {
 			HorizAdvX: 272,
-			Unicode:   "\u0133",
+			Unicode:   'ĳ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{234, 220}},
@@ -9285,9 +9285,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0134": {
+		'Ĵ': {
 			HorizAdvX: 421,
-			Unicode:   "\u0134",
+			Unicode:   'Ĵ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{281, 152}},
@@ -9348,9 +9348,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0135": {
+		'ĵ': {
 			HorizAdvX: 138,
-			Unicode:   "\u0135",
+			Unicode:   'ĵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{120, 220}},
@@ -9378,9 +9378,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0137": {
+		'ķ': {
 			HorizAdvX: 207,
-			Unicode:   "\u0137",
+			Unicode:   'ķ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 486}},
@@ -9419,9 +9419,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0138": {
+		'ĸ': {
 			HorizAdvX: 207,
-			Unicode:   "\u0138",
+			Unicode:   'ĸ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{250, 377}},
@@ -9450,9 +9450,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013f": {
+		'Ŀ': {
 			HorizAdvX: 433,
-			Unicode:   "\u013f",
+			Unicode:   'Ŀ',
 			GerberLP:  "dcccccdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, 315}},
@@ -9529,9 +9529,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0140": {
+		'ŀ': {
 			HorizAdvX: 300,
-			Unicode:   "\u0140",
+			Unicode:   'ŀ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{282, 485}},
@@ -9562,9 +9562,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0141": {
+		'Ł': {
 			HorizAdvX: 433,
-			Unicode:   "\u0141",
+			Unicode:   'Ł',
 			GerberLP:  "dcccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{331, 125}},
@@ -9650,9 +9650,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0142": {
+		'ł': {
 			HorizAdvX: 166,
-			Unicode:   "\u0142",
+			Unicode:   'ł',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{198, 125}},
@@ -9684,9 +9684,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0143": {
+		'Ń': {
 			HorizAdvX: 686,
-			Unicode:   "\u0143",
+			Unicode:   'Ń',
 			GerberLP:  "dccccdcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{320, 379}},
@@ -9787,9 +9787,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0144": {
+		'ń': {
 			HorizAdvX: 253,
-			Unicode:   "\u0144",
+			Unicode:   'ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{268, 24}},
@@ -9818,9 +9818,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0152": {
+		'Œ': {
 			HorizAdvX: 1131,
-			Unicode:   "\u0152",
+			Unicode:   'Œ',
 			GerberLP:  "dcccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1111, 135}},
@@ -9945,9 +9945,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0153": {
+		'œ': {
 			HorizAdvX: 348,
-			Unicode:   "\u0153",
+			Unicode:   'œ',
 			GerberLP:  "dccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 205}},
@@ -10002,9 +10002,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0154": {
+		'Ŕ': {
 			HorizAdvX: 688,
-			Unicode:   "\u0154",
+			Unicode:   'Ŕ',
 			GerberLP:  "dccccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{84, -19}},
@@ -10086,9 +10086,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0156": {
+		'Ŗ': {
 			HorizAdvX: 688,
-			Unicode:   "\u0156",
+			Unicode:   'Ŗ',
 			GerberLP:  "dccccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{84, -19}},
@@ -10171,9 +10171,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0157": {
+		'ŗ': {
 			HorizAdvX: 177,
-			Unicode:   "\u0157",
+			Unicode:   'ŗ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{207, 192}},
@@ -10198,9 +10198,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0158": {
+		'Ř': {
 			HorizAdvX: 688,
-			Unicode:   "\u0158",
+			Unicode:   'Ř',
 			GerberLP:  "dccccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{84, -19}},
@@ -10285,9 +10285,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0159": {
+		'ř': {
 			HorizAdvX: 177,
-			Unicode:   "\u0159",
+			Unicode:   'ř',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{207, 192}},
@@ -10314,9 +10314,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0178": {
+		'Ÿ': {
 			HorizAdvX: 707,
-			Unicode:   "\u0178",
+			Unicode:   'Ÿ',
 			GerberLP:  "dccccccdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{564, 246}},
@@ -10425,9 +10425,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c6": {
+		'ˆ': {
 			HorizAdvX: 323,
-			Unicode:   "\u02c6",
+			Unicode:   'ˆ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{267, 249}},
@@ -10444,9 +10444,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c7": {
+		'ˇ': {
 			HorizAdvX: 323,
-			Unicode:   "\u02c7",
+			Unicode:   'ˇ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{267, 249}},
@@ -10463,9 +10463,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d8": {
+		'˘': {
 			HorizAdvX: 222,
-			Unicode:   "\u02d8",
+			Unicode:   '˘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{219, 343}},
@@ -10482,9 +10482,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d9": {
+		'˙': {
 			HorizAdvX: 181,
-			Unicode:   "\u02d9",
+			Unicode:   '˙',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{141, 371}},
@@ -10498,9 +10498,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02da": {
+		'˚': {
 			HorizAdvX: 208,
-			Unicode:   "\u02da",
+			Unicode:   '˚',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{155, 288}},
@@ -10525,9 +10525,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02db": {
+		'˛': {
 			HorizAdvX: 222,
-			Unicode:   "\u02db",
+			Unicode:   '˛',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{206, -73}},
@@ -10545,9 +10545,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dc": {
+		'˜': {
 			HorizAdvX: 323,
-			Unicode:   "\u02dc",
+			Unicode:   '˜',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{259, 306}},
@@ -10566,9 +10566,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c0": {
+		'π': {
 			HorizAdvX: 281,
-			Unicode:   "\u03c0",
+			Unicode:   'π',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{271, 240}},
@@ -10600,9 +10600,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2013": {
+		'–': {
 			HorizAdvX: 400,
-			Unicode:   "\u2013",
+			Unicode:   '–',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 125}},
@@ -10618,9 +10618,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2014": {
+		'—': {
 			HorizAdvX: 492,
-			Unicode:   "\u2014",
+			Unicode:   '—',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{444, 125}},
@@ -10635,9 +10635,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2018": {
+		'‘': {
 			HorizAdvX: 187,
-			Unicode:   "\u2018",
+			Unicode:   '‘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{29, 273}},
@@ -10650,9 +10650,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2019": {
+		'’': {
 			HorizAdvX: 173,
-			Unicode:   "\u2019",
+			Unicode:   '’',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 351}},
@@ -10665,9 +10665,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201a": {
+		'‚': {
 			HorizAdvX: 103,
-			Unicode:   "\u201a",
+			Unicode:   '‚',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{184, 91}},
@@ -10684,9 +10684,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201c": {
+		'“': {
 			HorizAdvX: 288,
-			Unicode:   "\u201c",
+			Unicode:   '“',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 462}},
@@ -10707,9 +10707,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201d": {
+		'”': {
 			HorizAdvX: 288,
-			Unicode:   "\u201d",
+			Unicode:   '”',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{259, 553}},
@@ -10730,9 +10730,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201e": {
+		'„': {
 			HorizAdvX: 163,
-			Unicode:   "\u201e",
+			Unicode:   '„',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{201, 189}},
@@ -10755,9 +10755,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2020": {
+		'†': {
 			HorizAdvX: 331,
-			Unicode:   "\u2020",
+			Unicode:   '†',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{320, 293}},
@@ -10776,9 +10776,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2021": {
+		'‡': {
 			HorizAdvX: 331,
-			Unicode:   "\u2021",
+			Unicode:   '‡',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{320, 293}},
@@ -10805,9 +10805,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2022": {
+		'•': {
 			HorizAdvX: 451,
-			Unicode:   "\u2022",
+			Unicode:   '•',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{225, 117}},
@@ -10822,9 +10822,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2026": {
+		'…': {
 			HorizAdvX: 358,
-			Unicode:   "\u2026",
+			Unicode:   '…',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 18}},
@@ -10859,9 +10859,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2030": {
+		'‰': {
 			HorizAdvX: 459,
-			Unicode:   "\u2030",
+			Unicode:   '‰',
 			GerberLP:  "dddccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{325, 434}},
@@ -10938,9 +10938,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2039": {
+		'‹': {
 			HorizAdvX: 295,
-			Unicode:   "\u2039",
+			Unicode:   '‹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{100, 217}},
@@ -10954,9 +10954,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u203a": {
+		'›': {
 			HorizAdvX: 285,
-			Unicode:   "\u203a",
+			Unicode:   '›',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{234, 210}},
@@ -10970,9 +10970,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2044": {
+		'⁄': {
 			HorizAdvX: 365,
-			Unicode:   "\u2044",
+			Unicode:   '⁄',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{563, 517}},
@@ -10994,9 +10994,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20ac": {
+		'€': {
 			HorizAdvX: 907,
-			Unicode:   "\u20ac",
+			Unicode:   '€',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{427, 248}},
@@ -11030,9 +11030,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2122": {
+		'™': {
 			HorizAdvX: 636,
-			Unicode:   "\u2122",
+			Unicode:   '™',
 			GerberLP:  "ddcdccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{633, 390}},
@@ -11164,9 +11164,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2202": {
+		'∂': {
 			HorizAdvX: 245,
-			Unicode:   "\u2202",
+			Unicode:   '∂',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 251}},
@@ -11201,9 +11201,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2212": {
+		'−': {
 			HorizAdvX: 249,
-			Unicode:   "\u2212",
+			Unicode:   '−',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{241, 138}},
@@ -11214,9 +11214,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u221e": {
+		'∞': {
 			HorizAdvX: 337,
-			Unicode:   "\u221e",
+			Unicode:   '∞',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{317, 253}},
@@ -11257,9 +11257,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2248": {
+		'≈': {
 			HorizAdvX: 249,
-			Unicode:   "\u2248",
+			Unicode:   '≈',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{211, 201}},
@@ -11298,9 +11298,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2260": {
+		'≠': {
 			HorizAdvX: 305,
-			Unicode:   "\u2260",
+			Unicode:   '≠',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{261, 141}},
@@ -11337,9 +11337,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2264": {
+		'≤': {
 			HorizAdvX: 167,
-			Unicode:   "\u2264",
+			Unicode:   '≤',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{141, 61}},
@@ -11368,9 +11368,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2265": {
+		'≥': {
 			HorizAdvX: 167,
-			Unicode:   "\u2265",
+			Unicode:   '≥',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{146, 133}},
@@ -11400,9 +11400,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u25ca": {
+		'◊': {
 			HorizAdvX: 586,
-			Unicode:   "\u25ca",
+			Unicode:   '◊',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{275, -14}},
@@ -11426,9 +11426,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\uf8ff": {
+		'': {
 			HorizAdvX: 581,
-			Unicode:   "\uf8ff",
+			Unicode:   '',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{350, -20}},
@@ -11465,9 +11465,9 @@ var loversquarrel_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ufb01": {
+		'ﬁ': {
 			HorizAdvX: 293,
-			Unicode:   "\ufb01",
+			Unicode:   'ﬁ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{318, 452}},

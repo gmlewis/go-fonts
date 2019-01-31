@@ -11,16 +11,16 @@ func init() {
 }
 
 var im_fell_flowers_1Font = &fonts.Font{
-	// ID: "im_fell_flowers_1",
+	ID:               "im_fell_flowers_1",
 	HorizAdvX:        498,
 	UnitsPerEm:       1000,
 	Ascent:           800,
 	Descent:          -200,
 	MissingHorizAdvX: 778,
-	Glyphs: map[string]*fonts.Glyph{
-		"A": {
+	Glyphs: map[rune]*fonts.Glyph{
+		'A': {
 			HorizAdvX: 852,
-			Unicode:   "A",
+			Unicode:   'A',
 			GerberLP:  "ddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{205, -245}},
@@ -727,9 +727,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"B": {
+		'B': {
 			HorizAdvX: 1513,
-			Unicode:   "B",
+			Unicode:   'B',
 			GerberLP:  "ddddddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{96, 38}},
@@ -2304,9 +2304,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"C": {
+		'C': {
 			HorizAdvX: 1502,
-			Unicode:   "C",
+			Unicode:   'C',
 			GerberLP:  "dddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{90, -742}},
@@ -3801,9 +3801,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"D": {
+		'D': {
 			HorizAdvX: 850,
-			Unicode:   "D",
+			Unicode:   'D',
 			GerberLP:  "ddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{649, 251}},
@@ -4510,9 +4510,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"E": {
+		'E': {
 			HorizAdvX: 1211,
-			Unicode:   "E",
+			Unicode:   'E',
 			GerberLP:  "ddccccccccccccccccccccccccddcdddcccccddcddcdddccccccccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{734, -604}},
@@ -6436,9 +6436,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"F": {
+		'F': {
 			HorizAdvX: 0,
-			Unicode:   "F",
+			Unicode:   'F',
 			GerberLP:  "ddddddccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{467, -19}},
@@ -6761,9 +6761,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"G": {
+		'G': {
 			HorizAdvX: 1281,
-			Unicode:   "G",
+			Unicode:   'G',
 			GerberLP:  "ddccccccccccccccccccccccccddcdddcccccdddcdcdddccccccccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1244, 128}},
@@ -8687,9 +8687,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"H": {
+		'H': {
 			HorizAdvX: 0,
-			Unicode:   "H",
+			Unicode:   'H',
 			GerberLP:  "ddddddccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{33, 33}},
@@ -9012,9 +9012,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"I": {
+		'I': {
 			HorizAdvX: 1619,
-			Unicode:   "I",
+			Unicode:   'I',
 			GerberLP:  "dccccccccccccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1189, -662}},
@@ -11213,9 +11213,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"J": {
+		'J': {
 			HorizAdvX: 1660,
-			Unicode:   "J",
+			Unicode:   'J',
 			GerberLP:  "dccccccccccccccdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{910, -593}},
@@ -13260,9 +13260,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"K": {
+		'K': {
 			HorizAdvX: 1040,
-			Unicode:   "K",
+			Unicode:   'K',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{216, -41}},
@@ -13962,9 +13962,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"L": {
+		'L': {
 			HorizAdvX: 1981,
-			Unicode:   "L",
+			Unicode:   'L',
 			GerberLP:  "ddccccccccccccccccccccccccccccccccccdccccdccccccccccccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{777, 6}},
@@ -16346,9 +16346,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"M": {
+		'M': {
 			HorizAdvX: 1040,
-			Unicode:   "M",
+			Unicode:   'M',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{823, 22}},
@@ -17048,9 +17048,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"N": {
+		'N': {
 			HorizAdvX: 1457,
-			Unicode:   "N",
+			Unicode:   'N',
 			GerberLP:  "ddcccccccccccccccccccccccccccccccccccdccdcccccccccccccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{728, -213}},
@@ -19433,9 +19433,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"O": {
+		'O': {
 			HorizAdvX: 624,
-			Unicode:   "O",
+			Unicode:   'O',
 			GerberLP:  "ddccccccccccccccccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, -532}},
@@ -20052,9 +20052,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"P": {
+		'P': {
 			HorizAdvX: 1193,
-			Unicode:   "P",
+			Unicode:   'P',
 			GerberLP:  "ddddddcccccccccccccccccccccccccccccccccccccccccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{931, 624}},
@@ -21591,9 +21591,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Q": {
+		'Q': {
 			HorizAdvX: 619,
-			Unicode:   "Q",
+			Unicode:   'Q',
 			GerberLP:  "dddcccccccccccccccccccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{225, 13}},
@@ -22307,9 +22307,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"R": {
+		'R': {
 			HorizAdvX: 630,
-			Unicode:   "R",
+			Unicode:   'R',
 			GerberLP:  "ddccccccccccccccccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{0, 20}},
@@ -22787,9 +22787,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"S": {
+		'S': {
 			HorizAdvX: 628,
-			Unicode:   "S",
+			Unicode:   'S',
 			GerberLP:  "dcccccccccccccccccccccccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{6, -307}},
@@ -23286,9 +23286,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"T": {
+		'T': {
 			HorizAdvX: 752,
-			Unicode:   "T",
+			Unicode:   'T',
 			GerberLP:  "ddddcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{588, 13}},
@@ -23946,9 +23946,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"U": {
+		'U': {
 			HorizAdvX: 1311,
-			Unicode:   "U",
+			Unicode:   'U',
 			GerberLP:  "dddcccccccccccccccccccccccccccccccccccccccdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{779, -502}},
@@ -25550,9 +25550,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"V": {
+		'V': {
 			HorizAdvX: 1356,
-			Unicode:   "V",
+			Unicode:   'V',
 			GerberLP:  "dddcccccccccccccccccccccccccccccccccccccdccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1181, 125}},
@@ -27154,9 +27154,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"W": {
+		'W': {
 			HorizAdvX: 909,
-			Unicode:   "W",
+			Unicode:   'W',
 			GerberLP:  "ddcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{450, -341}},
@@ -28069,9 +28069,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"X": {
+		'X': {
 			HorizAdvX: 455,
-			Unicode:   "X",
+			Unicode:   'X',
 			GerberLP:  "dddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{386, 152}},
@@ -28509,9 +28509,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Y": {
+		'Y': {
 			HorizAdvX: 913,
-			Unicode:   "Y",
+			Unicode:   'Y',
 			GerberLP:  "ddddddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{461, -386}},
@@ -29461,9 +29461,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Z": {
+		'Z': {
 			HorizAdvX: 453,
-			Unicode:   "Z",
+			Unicode:   'Z',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{267, 0}},
@@ -29911,9 +29911,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a": {
+		'a': {
 			HorizAdvX: 474,
-			Unicode:   "a",
+			Unicode:   'a',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{458, -269}},
@@ -30110,9 +30110,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"b": {
+		'b': {
 			HorizAdvX: 901,
-			Unicode:   "b",
+			Unicode:   'b',
 			GerberLP:  "ddddcccccccccccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{523, 2}},
@@ -30987,9 +30987,9 @@ var im_fell_flowers_1Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c": {
+		'c': {
 			HorizAdvX: 474,
-			Unicode:   "c",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{16, 271}},

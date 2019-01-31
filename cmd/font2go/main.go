@@ -83,7 +83,7 @@ func main() {
 		fmtBuf, err := format.Source(buf.Bytes())
 		if err != nil {
 			ioutil.WriteFile(filename, buf.Bytes(), 0644) // Dump the unformatted output.
-			log.Fatal(err)
+			log.Fatalf("error formating generated Go code: %v", err)
 		}
 
 		if err := ioutil.WriteFile(filename, fmtBuf, 0644); err != nil {
@@ -96,9 +96,95 @@ func main() {
 
 func utf8Escape(s *string) string {
 	if s == nil || *s == "" {
-		return `""`
+		return `''`
 	}
-	return fmt.Sprintf("%+q", *s)
+	switch *s {
+	case `\`:
+		return `'\\'`
+	case `'`:
+		return `'\''`
+	case "fb":
+		return `'\ufb1c'` // can't find mapping - made this up.
+	case "ff":
+		return `'\ufb00'`
+	case "ffb":
+		return `'\ufb07'` // can't find mapping - made this up.
+	case "ffh":
+		return `'\ufb08'` // can't find mapping - made this up.
+	case "ffi":
+		return `'\ufb03'`
+	case "ffj":
+		return `'\ufb09'` // can't find mapping - made this up.
+	case "ffk":
+		return `'\ufb0a'` // can't find mapping - made this up.
+	case "ffl":
+		return `'\ufb04'`
+	case "fh":
+		return `'\ufb0b'` // can't find mapping - made this up.
+	case "fi":
+		return `'\ufb01'`
+	case "fj":
+		return `'\ufb0c'` // can't find mapping - made this up.
+	case "fk":
+		return `'\ufb0d'` // can't find mapping - made this up.
+	case "fl":
+		return `'\ufb02'`
+	case "ft":
+		return `'\ufb05'`
+	case "tt":
+		return `'\ufb0f'` // can't find mapping - made this up.
+	case "1!":
+		return `'\ufb10'` // can't find mapping - made this up.
+	case "1#":
+		return `'\ufb11'` // can't find mapping - made this up.
+	case "1$":
+		return `'\ufb12'` // can't find mapping - made this up.
+	case "1%":
+		return `'\ufb13'` // can't find mapping - made this up.
+	case "1&":
+		return `'\ufb14'` // can't find mapping - made this up.
+	case "1(":
+		return `'\ufb15'` // can't find mapping - made this up.
+	case "1)":
+		return `'\ufb16'` // can't find mapping - made this up.
+	case "1*":
+		return `'\ufb17'` // can't find mapping - made this up.
+	case "1@":
+		return `'\ufb18'` // can't find mapping - made this up.
+	case "1^":
+		return `'\ufb19'` // can't find mapping - made this up.
+	case "qf":
+		return `'\ufb1a'` // can't find mapping - made this up.
+	case "qj":
+		return `'\ufb1b'` // can't find mapping - made this up.
+	case "\ue001\ue014":
+		return `'\u2469'`
+	case "\ue001\ue015":
+		return `'\u246a'`
+	case "\ue001\ue016":
+		return `'\u246b'`
+	case "\ue001\ue017":
+		return `'\u246c'`
+	case "\ue001\ue018":
+		return `'\u246d'`
+	case "\ue001\ue019":
+		return `'\u246e'`
+	case "\ue001\ue01a":
+		return `'\u246f'`
+	case "\ue001\ue01b":
+		return `'\u2470'`
+	case "\ue001\ue01c":
+		return `'\u2471'`
+	case "\ue001\ue01d":
+		return `'\u2472'`
+	case "\ue002\ue014":
+		return `'\u2473'`
+	default:
+		for _, r := range *s { // Return the first rune
+			return fmt.Sprintf("'%c'", r)
+		}
+	}
+	return ""
 }
 
 func orEmpty(s *string) string {
@@ -125,13 +211,13 @@ func init() {
 }
 
 var {{ .ID }}Font = &fonts.Font{
-	// ID: "{{ .ID }}",
+	ID: "{{ .ID }}",
 	HorizAdvX:  {{ .HorizAdvX }},
 	UnitsPerEm: {{ .FontFace.UnitsPerEm }},
 	Ascent:     {{ .FontFace.Ascent }},
 	Descent:    {{ .FontFace.Descent }},
 	MissingHorizAdvX: {{ .MissingGlyph.HorizAdvX }},
-	Glyphs: map[string]*fonts.Glyph{ {{ range .Glyphs }}{{ if .Unicode }}{{ if .PathSteps }}
+	Glyphs: map[rune]*fonts.Glyph{ {{ range .Glyphs }}{{ if .Unicode }}{{ if .PathSteps }}
 		{{ .Unicode | utf8 }}: {
 			HorizAdvX: {{ .HorizAdvX }},
 			Unicode: {{ .Unicode | utf8 }},

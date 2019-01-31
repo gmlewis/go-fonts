@@ -96,7 +96,7 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 			x += 2.0 * xScale * font.HorizAdvX
 			continue
 		}
-		g, ok := font.Glyphs[string(c)]
+		g, ok := font.Glyphs[c]
 		if !ok {
 			log.Printf("Warning: missing glyph %+q: skipping", c)
 			x += xScale * font.HorizAdvX

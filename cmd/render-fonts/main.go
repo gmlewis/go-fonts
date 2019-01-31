@@ -40,21 +40,20 @@ func main() {
 	for name, font := range Fonts {
 		message := *msg
 		if *all {
-			var glyphs []string
+			var glyphs []rune
 			for g := range font.Glyphs {
 				glyphs = append(glyphs, g)
 			}
-			sort.Strings(glyphs)
+			sort.Slice(glyphs, func(a, b int) bool { return glyphs[a] < glyphs[b] })
 
 			lineLength := int(0.5 + math.Sqrt(float64(len(glyphs))))
-			// lineLength := 80
 			var lines []string
 			for len(glyphs) > 0 {
 				end := lineLength
 				if end > len(glyphs) {
 					end = len(glyphs)
 				}
-				lines = append(lines, fmt.Sprintf("%v", strings.Join(glyphs[0:end], "")))
+				lines = append(lines, string(glyphs[0:end]))
 				glyphs = glyphs[end:]
 			}
 			message = strings.Join(lines, "\n")

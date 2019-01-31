@@ -25,29 +25,54 @@
 package fonts
 
 // Font represents a webfont.
+//
+// Each font uses its own units (typically not "ems") that are later
+// scaled to "ems" when rendered.
 type Font struct {
-	ID               string
-	HorizAdvX        float64
-	UnitsPerEm       float64
-	Ascent           float64
-	Descent          float64
+	// ID is the name used to identify the font.
+	ID string
+	// HorizAdvX is the default font units to advance per glyph.
+	HorizAdvX float64
+	// UnitsPerEm is the number of font units per "em".
+	UnitsPerEm float64
+	// Ascent is the height of the font above the baseline.
+	Ascent float64
+	// Descent is the negative vertical distance below the baseline
+	// of the font.
+	Descent float64
+	// MissingHorizAdvX is the amount of font units to advance
+	// in the case of missing glyphs.
 	MissingHorizAdvX float64
-	Glyphs           map[string]*Glyph
+	// Glyphs is a map of the available glyphs, mapped by rune.
+	Glyphs map[rune]*Glyph
 }
 
 // Glyph represents an individual character of the webfont data.
 type Glyph struct {
+	// HorizAdvX is the number of font units to advance for this glyph.
 	HorizAdvX float64
-	Unicode   string
+	// Unicode is the rune representing this glyph.
+	Unicode rune
+	// GerberLP is a string of "d" (for "dark") and "c" (for "clear")
+	// representing the nature of each subsequent font curve subpath
+	// contained within PathSteps. Its length matches the number of
+	// subpaths in PathSteps (Starting from 'M' or 'm' path commands.)
 	GerberLP  string
 	PathSteps []*PathStep
 }
 
-// PathStep represents a single path step.
+// PathStep represents a single subpath command.
 //
 // There are 20 possible commands, broken up into 6 types,
 // with each command having an "absolute" (upper case) and
 // a "relative" (lower case) version.
+//
+// Note that not all subpath types are currently supported.
+// Only the ones needed for the provided fonts have been
+// implemented.
+//
+// See https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d
+// for more details.
 //
 // MoveTo: M, m
 // LineTo: L, l, H, h, V, v

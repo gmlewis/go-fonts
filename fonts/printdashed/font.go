@@ -11,16 +11,16 @@ func init() {
 }
 
 var printdashedFont = &fonts.Font{
-	// ID: "printdashed",
+	ID:               "printdashed",
 	HorizAdvX:        394,
 	UnitsPerEm:       1000,
 	Ascent:           755,
 	Descent:          -245,
 	MissingHorizAdvX: 367,
-	Glyphs: map[string]*fonts.Glyph{
-		"!": {
+	Glyphs: map[rune]*fonts.Glyph{
+		'!': {
 			HorizAdvX: 194,
-			Unicode:   "!",
+			Unicode:   '!',
 			GerberLP:  "ddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{90, 132}},
@@ -94,9 +94,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\"": {
+		'"': {
 			HorizAdvX: 236,
-			Unicode:   "\"",
+			Unicode:   '"',
 			GerberLP:  "dddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{151, 434}},
@@ -137,9 +137,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"#": {
+		'#': {
 			HorizAdvX: 432,
-			Unicode:   "#",
+			Unicode:   '#',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 402}},
@@ -225,9 +225,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"$": {
+		'$': {
 			HorizAdvX: 475,
-			Unicode:   "$",
+			Unicode:   '$',
 			GerberLP:  "dddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{225, 280}},
@@ -399,9 +399,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"%": {
+		'%': {
 			HorizAdvX: 721,
-			Unicode:   "%",
+			Unicode:   '%',
 			GerberLP:  "dddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{578, 12}},
@@ -579,9 +579,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"&": {
+		'&': {
 			HorizAdvX: 763,
-			Unicode:   "&",
+			Unicode:   '&',
 			GerberLP:  "ddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{581, 71}},
@@ -751,9 +751,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"'": {
+		'\'': {
 			HorizAdvX: 156,
-			Unicode:   "'",
+			Unicode:   '\'',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 434}},
@@ -776,9 +776,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"(": {
+		'(': {
 			HorizAdvX: 287,
-			Unicode:   "(",
+			Unicode:   '(',
 			GerberLP:  "ddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{122, -109}},
@@ -841,9 +841,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		")": {
+		')': {
 			HorizAdvX: 287,
-			Unicode:   ")",
+			Unicode:   ')',
 			GerberLP:  "ddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{153, -103}},
@@ -913,9 +913,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"*": {
+		'*': {
 			HorizAdvX: 0,
-			Unicode:   "*",
+			Unicode:   '*',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -984,9 +984,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"+": {
+		'+': {
 			HorizAdvX: 418,
-			Unicode:   "+",
+			Unicode:   '+',
 			GerberLP:  "dddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{202, 419}},
@@ -1039,9 +1039,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		",": {
+		',': {
 			HorizAdvX: 194,
-			Unicode:   ",",
+			Unicode:   ',',
 			GerberLP:  "ddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, -5}},
@@ -1090,9 +1090,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"-": {
+		'-': {
 			HorizAdvX: 337,
-			Unicode:   "-",
+			Unicode:   '-',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 321}},
@@ -1115,9 +1115,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		".": {
+		'.': {
 			HorizAdvX: 194,
-			Unicode:   ".",
+			Unicode:   '.',
 			GerberLP:  "ddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119, 31}},
@@ -1155,9 +1155,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"/": {
+		'/': {
 			HorizAdvX: 329,
-			Unicode:   "/",
+			Unicode:   '/',
 			GerberLP:  "dddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{92, 83}},
@@ -1202,9 +1202,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"0": {
+		'0': {
 			HorizAdvX: 531,
-			Unicode:   "0",
+			Unicode:   '0',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{381, 534}},
@@ -1312,9 +1312,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"1": {
+		'1': {
 			HorizAdvX: 427,
-			Unicode:   "1",
+			Unicode:   '1',
 			GerberLP:  "ddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{220, 539}},
@@ -1389,9 +1389,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"2": {
+		'2': {
 			HorizAdvX: 459,
-			Unicode:   "2",
+			Unicode:   '2',
 			GerberLP:  "dddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{88, 61}},
@@ -1485,9 +1485,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"3": {
+		'3': {
 			HorizAdvX: 483,
-			Unicode:   "3",
+			Unicode:   '3',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{88, 81}},
@@ -1598,9 +1598,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"4": {
+		'4': {
 			HorizAdvX: 464,
-			Unicode:   "4",
+			Unicode:   '4',
 			GerberLP:  "ddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 362}},
@@ -1693,9 +1693,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"5": {
+		'5': {
 			HorizAdvX: 464,
-			Unicode:   "5",
+			Unicode:   '5',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 367}},
@@ -1809,9 +1809,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"6": {
+		'6': {
 			HorizAdvX: 485,
-			Unicode:   "6",
+			Unicode:   '6',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{141, 337}},
@@ -1919,9 +1919,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"7": {
+		'7': {
 			HorizAdvX: 456,
-			Unicode:   "7",
+			Unicode:   '7',
 			GerberLP:  "ddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{328, 592}},
@@ -1987,9 +1987,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"8": {
+		'8': {
 			HorizAdvX: 482,
-			Unicode:   "8",
+			Unicode:   '8',
 			GerberLP:  "ddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{374, 550}},
@@ -2127,9 +2127,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"9": {
+		'9': {
 			HorizAdvX: 483,
-			Unicode:   "9",
+			Unicode:   '9',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{401, 408}},
@@ -2243,9 +2243,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		":": {
+		':': {
 			HorizAdvX: 194,
-			Unicode:   ":",
+			Unicode:   ':',
 			GerberLP:  "dddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119, 31}},
@@ -2316,9 +2316,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		";": {
+		';': {
 			HorizAdvX: 194,
-			Unicode:   ";",
+			Unicode:   ';',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, -5}},
@@ -2400,9 +2400,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"<": {
+		'<': {
 			HorizAdvX: 367,
-			Unicode:   "<",
+			Unicode:   '<',
 			GerberLP:  "ddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, 360}},
@@ -2446,9 +2446,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"=": {
+		'=': {
 			HorizAdvX: 418,
-			Unicode:   "=",
+			Unicode:   '=',
 			GerberLP:  "dddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 377}},
@@ -2501,9 +2501,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		">": {
+		'>': {
 			HorizAdvX: 367,
-			Unicode:   ">",
+			Unicode:   '>',
 			GerberLP:  "ddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{254, 348}},
@@ -2547,9 +2547,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"?": {
+		'?': {
 			HorizAdvX: 471,
-			Unicode:   "?",
+			Unicode:   '?',
 			GerberLP:  "dddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{323, 339}},
@@ -2648,9 +2648,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"@": {
+		'@': {
 			HorizAdvX: 850,
-			Unicode:   "@",
+			Unicode:   '@',
 			GerberLP:  "dddddddddddddddddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{296, 256}},
@@ -2892,9 +2892,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"A": {
+		'A': {
 			HorizAdvX: 539,
-			Unicode:   "A",
+			Unicode:   'A',
 			GerberLP:  "dddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 248}},
@@ -2995,9 +2995,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"B": {
+		'B': {
 			HorizAdvX: 452,
-			Unicode:   "B",
+			Unicode:   'B',
 			GerberLP:  "ddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{258, 326}},
@@ -3137,9 +3137,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"C": {
+		'C': {
 			HorizAdvX: 498,
-			Unicode:   "C",
+			Unicode:   'C',
 			GerberLP:  "ddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{387, 60}},
@@ -3228,9 +3228,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"D": {
+		'D': {
 			HorizAdvX: 476,
-			Unicode:   "D",
+			Unicode:   'D',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{131, 17}},
@@ -3348,9 +3348,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"E": {
+		'E': {
 			HorizAdvX: 414,
-			Unicode:   "E",
+			Unicode:   'E',
 			GerberLP:  "ddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 590}},
@@ -3461,9 +3461,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"F": {
+		'F': {
 			HorizAdvX: 414,
-			Unicode:   "F",
+			Unicode:   'F',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 589}},
@@ -3554,9 +3554,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"G": {
+		'G': {
 			HorizAdvX: 531,
-			Unicode:   "G",
+			Unicode:   'G',
 			GerberLP:  "dddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{425, 300}},
@@ -3673,9 +3673,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"H": {
+		'H': {
 			HorizAdvX: 447,
-			Unicode:   "H",
+			Unicode:   'H',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{367, 320}},
@@ -3798,9 +3798,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"I": {
+		'I': {
 			HorizAdvX: 242,
-			Unicode:   "I",
+			Unicode:   'I',
 			GerberLP:  "ddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{114, 541}},
@@ -3879,9 +3879,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"J": {
+		'J': {
 			HorizAdvX: 526,
-			Unicode:   "J",
+			Unicode:   'J',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{129, 30}},
@@ -3965,9 +3965,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"K": {
+		'K': {
 			HorizAdvX: 479,
-			Unicode:   "K",
+			Unicode:   'K',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 275}},
@@ -4077,9 +4077,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"L": {
+		'L': {
 			HorizAdvX: 414,
-			Unicode:   "L",
+			Unicode:   'L',
 			GerberLP:  "ddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{122, 21}},
@@ -4152,9 +4152,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"M": {
+		'M': {
 			HorizAdvX: 584,
-			Unicode:   "M",
+			Unicode:   'M',
 			GerberLP:  "ddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{286, 11}},
@@ -4329,9 +4329,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"N": {
+		'N': {
 			HorizAdvX: 448,
-			Unicode:   "N",
+			Unicode:   'N',
 			GerberLP:  "dddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{363, 8}},
@@ -4470,9 +4470,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"O": {
+		'O': {
 			HorizAdvX: 531,
-			Unicode:   "O",
+			Unicode:   'O',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{381, 534}},
@@ -4580,9 +4580,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"P": {
+		'P': {
 			HorizAdvX: 438,
-			Unicode:   "P",
+			Unicode:   'P',
 			GerberLP:  "dddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 590}},
@@ -4686,9 +4686,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Q": {
+		'Q': {
 			HorizAdvX: 531,
-			Unicode:   "Q",
+			Unicode:   'Q',
 			GerberLP:  "ddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{407, 114}},
@@ -4814,9 +4814,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"R": {
+		'R': {
 			HorizAdvX: 447,
-			Unicode:   "R",
+			Unicode:   'R',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{237, 289}},
@@ -4931,9 +4931,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"S": {
+		'S': {
 			HorizAdvX: 469,
-			Unicode:   "S",
+			Unicode:   'S',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{136, 572}},
@@ -5042,9 +5042,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"T": {
+		'T': {
 			HorizAdvX: 440,
-			Unicode:   "T",
+			Unicode:   'T',
 			GerberLP:  "ddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{227, 239}},
@@ -5115,9 +5115,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"U": {
+		'U': {
 			HorizAdvX: 495,
-			Unicode:   "U",
+			Unicode:   'U',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{113, 47}},
@@ -5229,9 +5229,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"V": {
+		'V': {
 			HorizAdvX: 539,
-			Unicode:   "V",
+			Unicode:   'V',
 			GerberLP:  "ddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{270, 14}},
@@ -5315,9 +5315,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"W": {
+		'W': {
 			HorizAdvX: 830,
-			Unicode:   "W",
+			Unicode:   'W',
 			GerberLP:  "ddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{408, 598}},
@@ -5476,9 +5476,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"X": {
+		'X': {
 			HorizAdvX: 472,
-			Unicode:   "X",
+			Unicode:   'X',
 			GerberLP:  "ddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{66, 592}},
@@ -5576,9 +5576,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Y": {
+		'Y': {
 			HorizAdvX: 466,
-			Unicode:   "Y",
+			Unicode:   'Y',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{260, 329}},
@@ -5651,9 +5651,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Z": {
+		'Z': {
 			HorizAdvX: 486,
-			Unicode:   "Z",
+			Unicode:   'Z',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{132, 26}},
@@ -5739,9 +5739,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"[": {
+		'[': {
 			HorizAdvX: 285,
-			Unicode:   "[",
+			Unicode:   '[',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{108, -179}},
@@ -5838,9 +5838,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\\": {
+		'\\': {
 			HorizAdvX: 329,
-			Unicode:   "\\",
+			Unicode:   '\\',
 			GerberLP:  "dddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{92, 83}},
@@ -5885,9 +5885,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"]": {
+		']': {
 			HorizAdvX: 285,
-			Unicode:   "]",
+			Unicode:   ']',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{177, -193}},
@@ -5984,9 +5984,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"^": {
+		'^': {
 			HorizAdvX: 364,
-			Unicode:   "^",
+			Unicode:   '^',
 			GerberLP:  "ddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{214, 534}},
@@ -6020,9 +6020,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"_": {
+		'_': {
 			HorizAdvX: 519,
-			Unicode:   "_",
+			Unicode:   '_',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, -40}},
@@ -6033,9 +6033,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"`": {
+		'`': {
 			HorizAdvX: 241,
-			Unicode:   "`",
+			Unicode:   '`',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{151, 515}},
@@ -6055,9 +6055,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a": {
+		'a': {
 			HorizAdvX: 446,
-			Unicode:   "a",
+			Unicode:   'a',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{375, 145}},
@@ -6147,9 +6147,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"b": {
+		'b': {
 			HorizAdvX: 444,
-			Unicode:   "b",
+			Unicode:   'b',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{118, 58}},
@@ -6262,9 +6262,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c": {
+		'c': {
 			HorizAdvX: 413,
-			Unicode:   "c",
+			Unicode:   'c',
 			GerberLP:  "dddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{126, 294}},
@@ -6323,9 +6323,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"d": {
+		'd': {
 			HorizAdvX: 444,
-			Unicode:   "d",
+			Unicode:   'd',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{148, 290}},
@@ -6441,9 +6441,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"e": {
+		'e': {
 			HorizAdvX: 439,
-			Unicode:   "e",
+			Unicode:   'e',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{366, 211}},
@@ -6529,9 +6529,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"f": {
+		'f': {
 			HorizAdvX: 413,
-			Unicode:   "f",
+			Unicode:   'f',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{335, 541}},
@@ -6608,9 +6608,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fl": {
+		'\ufb02': {
 			HorizAdvX: 569,
-			Unicode:   "fl",
+			Unicode:   '\ufb02',
 			GerberLP:  "dddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{335, 541}},
@@ -6735,9 +6735,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"g": {
+		'g': {
 			HorizAdvX: 444,
-			Unicode:   "g",
+			Unicode:   'g',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{359, 130}},
@@ -6856,9 +6856,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"h": {
+		'h': {
 			HorizAdvX: 397,
-			Unicode:   "h",
+			Unicode:   'h',
 			GerberLP:  "ddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{280, 284}},
@@ -6951,9 +6951,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"i": {
+		'i': {
 			HorizAdvX: 194,
-			Unicode:   "i",
+			Unicode:   'i',
 			GerberLP:  "ddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{104, 312}},
@@ -7013,9 +7013,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"j": {
+		'j': {
 			HorizAdvX: 199,
-			Unicode:   "j",
+			Unicode:   'j',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{91, -100}},
@@ -7093,9 +7093,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"k": {
+		'k': {
 			HorizAdvX: 366,
-			Unicode:   "k",
+			Unicode:   'k',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{152, 196}},
@@ -7182,9 +7182,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"l": {
+		'l': {
 			HorizAdvX: 156,
-			Unicode:   "l",
+			Unicode:   'l',
 			GerberLP:  "dddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 593}},
@@ -7237,9 +7237,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"m": {
+		'm': {
 			HorizAdvX: 642,
-			Unicode:   "m",
+			Unicode:   'm',
 			GerberLP:  "ddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 228}},
@@ -7351,9 +7351,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"n": {
+		'n': {
 			HorizAdvX: 396,
-			Unicode:   "n",
+			Unicode:   'n',
 			GerberLP:  "ddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{96, 256}},
@@ -7426,9 +7426,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"o": {
+		'o': {
 			HorizAdvX: 440,
-			Unicode:   "o",
+			Unicode:   'o',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 31}},
@@ -7499,9 +7499,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"p": {
+		'p': {
 			HorizAdvX: 446,
-			Unicode:   "p",
+			Unicode:   'p',
 			GerberLP:  "dddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{92, 80}},
@@ -7602,9 +7602,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"q": {
+		'q': {
 			HorizAdvX: 446,
-			Unicode:   "q",
+			Unicode:   'q',
 			GerberLP:  "dddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{361, 129}},
@@ -7708,9 +7708,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"r": {
+		'r': {
 			HorizAdvX: 273,
-			Unicode:   "r",
+			Unicode:   'r',
 			GerberLP:  "dddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{101, 257}},
@@ -7754,9 +7754,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"s": {
+		's': {
 			HorizAdvX: 391,
-			Unicode:   "s",
+			Unicode:   's',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{269, 9}},
@@ -7833,9 +7833,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"t": {
+		't': {
 			HorizAdvX: 279,
-			Unicode:   "t",
+			Unicode:   't',
 			GerberLP:  "dddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{160, 321}},
@@ -7892,9 +7892,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"u": {
+		'u': {
 			HorizAdvX: 396,
-			Unicode:   "u",
+			Unicode:   'u',
 			GerberLP:  "ddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{284, 72}},
@@ -7969,9 +7969,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"v": {
+		'v': {
 			HorizAdvX: 391,
-			Unicode:   "v",
+			Unicode:   'v',
 			GerberLP:  "ddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{196, 12}},
@@ -8024,9 +8024,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"w": {
+		'w': {
 			HorizAdvX: 603,
-			Unicode:   "w",
+			Unicode:   'w',
 			GerberLP:  "ddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{200, 56}},
@@ -8106,9 +8106,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"x": {
+		'x': {
 			HorizAdvX: 354,
-			Unicode:   "x",
+			Unicode:   'x',
 			GerberLP:  "ddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{66, 311}},
@@ -8166,9 +8166,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"y": {
+		'y': {
 			HorizAdvX: 397,
-			Unicode:   "y",
+			Unicode:   'y',
 			GerberLP:  "dddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{204, 14}},
@@ -8228,9 +8228,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"z": {
+		'z': {
 			HorizAdvX: 403,
-			Unicode:   "z",
+			Unicode:   'z',
 			GerberLP:  "ddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{270, 297}},
@@ -8290,9 +8290,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"{": {
+		'{': {
 			HorizAdvX: 343,
-			Unicode:   "{",
+			Unicode:   '{',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{122, 205}},
@@ -8386,9 +8386,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"|": {
+		'|': {
 			HorizAdvX: 152,
-			Unicode:   "|",
+			Unicode:   '|',
 			GerberLP:  "dddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 222}},
@@ -8453,9 +8453,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"}": {
+		'}': {
 			HorizAdvX: 343,
-			Unicode:   "}",
+			Unicode:   '}',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{221, 205}},
@@ -8549,9 +8549,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"~": {
+		'~': {
 			HorizAdvX: 466,
-			Unicode:   "~",
+			Unicode:   '~',
 			GerberLP:  "dddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 335}},
@@ -8593,9 +8593,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a1": {
+		'¡': {
 			HorizAdvX: 194,
-			Unicode:   "\u00a1",
+			Unicode:   '¡',
 			GerberLP:  "ddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{104, 309}},
@@ -8669,9 +8669,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a2": {
+		'¢': {
 			HorizAdvX: 419,
-			Unicode:   "\u00a2",
+			Unicode:   '¢',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{317, 177}},
@@ -8776,9 +8776,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a3": {
+		'£': {
 			HorizAdvX: 527,
-			Unicode:   "\u00a3",
+			Unicode:   '£',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{113, 318}},
@@ -8897,9 +8897,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a5": {
+		'¥': {
 			HorizAdvX: 472,
-			Unicode:   "\u00a5",
+			Unicode:   '¥',
 			GerberLP:  "dddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{251, 335}},
@@ -9020,9 +9020,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a6": {
+		'¦': {
 			HorizAdvX: 152,
-			Unicode:   "\u00a6",
+			Unicode:   '¦',
 			GerberLP:  "dddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 385}},
@@ -9075,9 +9075,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a7": {
+		'§': {
 			HorizAdvX: 475,
-			Unicode:   "\u00a7",
+			Unicode:   '§',
 			GerberLP:  "dddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{393, 26}},
@@ -9254,9 +9254,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a8": {
+		'¨': {
 			HorizAdvX: 284,
-			Unicode:   "\u00a8",
+			Unicode:   '¨',
 			GerberLP:  "dddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{183, 554}},
@@ -9327,9 +9327,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a9": {
+		'©': {
 			HorizAdvX: 764,
-			Unicode:   "\u00a9",
+			Unicode:   '©',
 			GerberLP:  "ddddddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{139, 103}},
@@ -9535,9 +9535,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00aa": {
+		'ª': {
 			HorizAdvX: 360,
-			Unicode:   "\u00aa",
+			Unicode:   'ª',
 			GerberLP:  "dddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{99, 547}},
@@ -9608,9 +9608,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ab": {
+		'«': {
 			HorizAdvX: 310,
-			Unicode:   "\u00ab",
+			Unicode:   '«',
 			GerberLP:  "dddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{186, 195}},
@@ -9673,9 +9673,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ac": {
+		'¬': {
 			HorizAdvX: 0,
-			Unicode:   "\u00ac",
+			Unicode:   '¬',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -9744,9 +9744,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ae": {
+		'®': {
 			HorizAdvX: 764,
-			Unicode:   "\u00ae",
+			Unicode:   '®',
 			GerberLP:  "ddddddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{288, 283}},
@@ -9961,9 +9961,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00af": {
+		'¯': {
 			HorizAdvX: 0,
-			Unicode:   "\u00af",
+			Unicode:   '¯',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -10032,9 +10032,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b0": {
+		'°': {
 			HorizAdvX: 316,
-			Unicode:   "\u00b0",
+			Unicode:   '°',
 			GerberLP:  "dddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{113, 543}},
@@ -10076,9 +10076,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b1": {
+		'±': {
 			HorizAdvX: 0,
-			Unicode:   "\u00b1",
+			Unicode:   '±',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -10147,9 +10147,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b2": {
+		'²': {
 			HorizAdvX: 300,
-			Unicode:   "\u00b2",
+			Unicode:   '²',
 			GerberLP:  "dddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{193, 440}},
@@ -10274,9 +10274,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b3": {
+		'³': {
 			HorizAdvX: 312,
-			Unicode:   "\u00b3",
+			Unicode:   '³',
 			GerberLP:  "ddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{183, 445}},
@@ -10414,9 +10414,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b4": {
+		'´': {
 			HorizAdvX: 245,
-			Unicode:   "\u00b4",
+			Unicode:   '´',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{71, 656}},
@@ -10436,9 +10436,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b5": {
+		'µ': {
 			HorizAdvX: 0,
-			Unicode:   "\u00b5",
+			Unicode:   'µ',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -10507,9 +10507,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b6": {
+		'¶': {
 			HorizAdvX: 577,
-			Unicode:   "\u00b6",
+			Unicode:   '¶',
 			GerberLP:  "ddddddddddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{96, 400}},
@@ -10741,9 +10741,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b7": {
+		'·': {
 			HorizAdvX: 194,
-			Unicode:   "\u00b7",
+			Unicode:   '·',
 			GerberLP:  "ddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119, 278}},
@@ -10781,9 +10781,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b8": {
+		'¸': {
 			HorizAdvX: 231,
-			Unicode:   "\u00b8",
+			Unicode:   '¸',
 			GerberLP:  "ddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{121, -60}},
@@ -10820,9 +10820,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b9": {
+		'¹': {
 			HorizAdvX: 179,
-			Unicode:   "\u00b9",
+			Unicode:   '¹',
 			GerberLP:  "ddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 581}},
@@ -10892,9 +10892,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ba": {
+		'º': {
 			HorizAdvX: 358,
-			Unicode:   "\u00ba",
+			Unicode:   'º',
 			GerberLP:  "dddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{259, 570}},
@@ -10947,9 +10947,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bb": {
+		'»': {
 			HorizAdvX: 310,
-			Unicode:   "\u00bb",
+			Unicode:   '»',
 			GerberLP:  "dddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 161}},
@@ -11012,9 +11012,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bc": {
+		'¼': {
 			HorizAdvX: 569,
-			Unicode:   "\u00bc",
+			Unicode:   '¼',
 			GerberLP:  "ddddddddddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{387, 590}},
@@ -11228,9 +11228,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bd": {
+		'½': {
 			HorizAdvX: 554,
-			Unicode:   "\u00bd",
+			Unicode:   '½',
 			GerberLP:  "ddddddddddddddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{350, 512}},
@@ -11461,9 +11461,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00be": {
+		'¾': {
 			HorizAdvX: 660,
-			Unicode:   "\u00be",
+			Unicode:   '¾',
 			GerberLP:  "ddddddddddddddddddddddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{332, 317}},
@@ -11745,9 +11745,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bf": {
+		'¿': {
 			HorizAdvX: 471,
-			Unicode:   "\u00bf",
+			Unicode:   '¿',
 			GerberLP:  "dddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{148, 93}},
@@ -11846,9 +11846,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c0": {
+		'À': {
 			HorizAdvX: 550,
-			Unicode:   "\u00c0",
+			Unicode:   'À',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 248}},
@@ -11964,9 +11964,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c1": {
+		'Á': {
 			HorizAdvX: 539,
-			Unicode:   "\u00c1",
+			Unicode:   'Á',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 248}},
@@ -12082,9 +12082,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c2": {
+		'Â': {
 			HorizAdvX: 550,
-			Unicode:   "\u00c2",
+			Unicode:   'Â',
 			GerberLP:  "ddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 248}},
@@ -12214,9 +12214,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c3": {
+		'Ã': {
 			HorizAdvX: 550,
-			Unicode:   "\u00c3",
+			Unicode:   'Ã',
 			GerberLP:  "dddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 248}},
@@ -12342,9 +12342,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c4": {
+		'Ä': {
 			HorizAdvX: 550,
-			Unicode:   "\u00c4",
+			Unicode:   'Ä',
 			GerberLP:  "dddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 248}},
@@ -12511,9 +12511,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c5": {
+		'Å': {
 			HorizAdvX: 550,
-			Unicode:   "\u00c5",
+			Unicode:   'Å',
 			GerberLP:  "ddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{230, 621}},
@@ -12649,9 +12649,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c6": {
+		'Æ': {
 			HorizAdvX: 815,
-			Unicode:   "\u00c6",
+			Unicode:   'Æ',
 			GerberLP:  "ddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{232, 258}},
@@ -12826,9 +12826,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c7": {
+		'Ç': {
 			HorizAdvX: 509,
-			Unicode:   "\u00c7",
+			Unicode:   'Ç',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{275, -5}},
@@ -12949,9 +12949,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c8": {
+		'È': {
 			HorizAdvX: 431,
-			Unicode:   "\u00c8",
+			Unicode:   'È',
 			GerberLP:  "dddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 590}},
@@ -13077,9 +13077,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c9": {
+		'É': {
 			HorizAdvX: 414,
-			Unicode:   "\u00c9",
+			Unicode:   'É',
 			GerberLP:  "dddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 590}},
@@ -13205,9 +13205,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ca": {
+		'Ê': {
 			HorizAdvX: 431,
-			Unicode:   "\u00ca",
+			Unicode:   'Ê',
 			GerberLP:  "dddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{122, 18}},
@@ -13347,9 +13347,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cb": {
+		'Ë': {
 			HorizAdvX: 431,
-			Unicode:   "\u00cb",
+			Unicode:   'Ë',
 			GerberLP:  "ddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 590}},
@@ -13526,9 +13526,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cc": {
+		'Ì': {
 			HorizAdvX: 266,
-			Unicode:   "\u00cc",
+			Unicode:   'Ì',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{114, 541}},
@@ -13622,9 +13622,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cd": {
+		'Í': {
 			HorizAdvX: 266,
-			Unicode:   "\u00cd",
+			Unicode:   'Í',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{114, 541}},
@@ -13718,9 +13718,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ce": {
+		'Î': {
 			HorizAdvX: 266,
-			Unicode:   "\u00ce",
+			Unicode:   'Î',
 			GerberLP:  "dddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{114, 541}},
@@ -13828,9 +13828,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cf": {
+		'Ï': {
 			HorizAdvX: 266,
-			Unicode:   "\u00cf",
+			Unicode:   'Ï',
 			GerberLP:  "ddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{114, 541}},
@@ -13975,9 +13975,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d0": {
+		'Ð': {
 			HorizAdvX: 517,
-			Unicode:   "\u00d0",
+			Unicode:   'Ð',
 			GerberLP:  "dddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{123, 589}},
@@ -14118,9 +14118,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d1": {
+		'Ñ': {
 			HorizAdvX: 458,
-			Unicode:   "\u00d1",
+			Unicode:   'Ñ',
 			GerberLP:  "dddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 600}},
@@ -14284,9 +14284,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d2": {
+		'Ò': {
 			HorizAdvX: 542,
-			Unicode:   "\u00d2",
+			Unicode:   'Ò',
 			GerberLP:  "dddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{381, 534}},
@@ -14409,9 +14409,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d3": {
+		'Ó': {
 			HorizAdvX: 531,
-			Unicode:   "\u00d3",
+			Unicode:   'Ó',
 			GerberLP:  "dddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{381, 534}},
@@ -14534,9 +14534,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d4": {
+		'Ô': {
 			HorizAdvX: 542,
-			Unicode:   "\u00d4",
+			Unicode:   'Ô',
 			GerberLP:  "dddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{381, 534}},
@@ -14673,9 +14673,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d5": {
+		'Õ': {
 			HorizAdvX: 542,
-			Unicode:   "\u00d5",
+			Unicode:   'Õ',
 			GerberLP:  "ddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{381, 534}},
@@ -14808,9 +14808,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d6": {
+		'Ö': {
 			HorizAdvX: 542,
-			Unicode:   "\u00d6",
+			Unicode:   'Ö',
 			GerberLP:  "ddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{381, 534}},
@@ -14984,9 +14984,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d7": {
+		'×': {
 			HorizAdvX: 418,
-			Unicode:   "\u00d7",
+			Unicode:   '×',
 			GerberLP:  "dddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{193, 331}},
@@ -15031,9 +15031,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d8": {
+		'Ø': {
 			HorizAdvX: 537,
-			Unicode:   "\u00d8",
+			Unicode:   'Ø',
 			GerberLP:  "ddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{180, 563}},
@@ -15181,9 +15181,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d9": {
+		'Ù': {
 			HorizAdvX: 505,
-			Unicode:   "\u00d9",
+			Unicode:   'Ù',
 			GerberLP:  "ddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{113, 47}},
@@ -15310,9 +15310,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00da": {
+		'Ú': {
 			HorizAdvX: 495,
-			Unicode:   "\u00da",
+			Unicode:   'Ú',
 			GerberLP:  "ddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{113, 47}},
@@ -15439,9 +15439,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00db": {
+		'Û': {
 			HorizAdvX: 505,
-			Unicode:   "\u00db",
+			Unicode:   'Û',
 			GerberLP:  "ddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{113, 47}},
@@ -15582,9 +15582,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dc": {
+		'Ü': {
 			HorizAdvX: 505,
-			Unicode:   "\u00dc",
+			Unicode:   'Ü',
 			GerberLP:  "dddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{113, 47}},
@@ -15762,9 +15762,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dd": {
+		'Ý': {
 			HorizAdvX: 478,
-			Unicode:   "\u00dd",
+			Unicode:   'Ý',
 			GerberLP:  "ddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{260, 329}},
@@ -15852,9 +15852,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00de": {
+		'Þ': {
 			HorizAdvX: 443,
-			Unicode:   "\u00de",
+			Unicode:   'Þ',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{334, 389}},
@@ -15963,9 +15963,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00df": {
+		'ß': {
 			HorizAdvX: 451,
-			Unicode:   "\u00df",
+			Unicode:   'ß',
 			GerberLP:  "dddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{211, 355}},
@@ -16085,9 +16085,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e0": {
+		'à': {
 			HorizAdvX: 462,
-			Unicode:   "\u00e0",
+			Unicode:   'à',
 			GerberLP:  "ddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{375, 145}},
@@ -16192,9 +16192,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e1": {
+		'á': {
 			HorizAdvX: 446,
-			Unicode:   "\u00e1",
+			Unicode:   'á',
 			GerberLP:  "ddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{375, 145}},
@@ -16299,9 +16299,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e2": {
+		'â': {
 			HorizAdvX: 462,
-			Unicode:   "\u00e2",
+			Unicode:   'â',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{375, 145}},
@@ -16420,9 +16420,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e3": {
+		'ã': {
 			HorizAdvX: 462,
-			Unicode:   "\u00e3",
+			Unicode:   'ã',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{375, 145}},
@@ -16537,9 +16537,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e4": {
+		'ä': {
 			HorizAdvX: 462,
-			Unicode:   "\u00e4",
+			Unicode:   'ä',
 			GerberLP:  "dddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{375, 145}},
@@ -16695,9 +16695,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e5": {
+		'å': {
 			HorizAdvX: 462,
-			Unicode:   "\u00e5",
+			Unicode:   'å',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{375, 145}},
@@ -16822,9 +16822,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e6": {
+		'æ': {
 			HorizAdvX: 744,
-			Unicode:   "\u00e6",
+			Unicode:   'æ',
 			GerberLP:  "ddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{674, 168}},
@@ -16986,9 +16986,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e7": {
+		'ç': {
 			HorizAdvX: 426,
-			Unicode:   "\u00e7",
+			Unicode:   'ç',
 			GerberLP:  "ddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{126, 294}},
@@ -17078,9 +17078,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e8": {
+		'è': {
 			HorizAdvX: 451,
-			Unicode:   "\u00e8",
+			Unicode:   'è',
 			GerberLP:  "ddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{366, 211}},
@@ -17181,9 +17181,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e9": {
+		'é': {
 			HorizAdvX: 439,
-			Unicode:   "\u00e9",
+			Unicode:   'é',
 			GerberLP:  "ddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{366, 211}},
@@ -17284,9 +17284,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ea": {
+		'ê': {
 			HorizAdvX: 451,
-			Unicode:   "\u00ea",
+			Unicode:   'ê',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{366, 211}},
@@ -17401,9 +17401,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00eb": {
+		'ë': {
 			HorizAdvX: 451,
-			Unicode:   "\u00eb",
+			Unicode:   'ë',
 			GerberLP:  "dddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{366, 211}},
@@ -17555,9 +17555,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ec": {
+		'ì': {
 			HorizAdvX: 184,
-			Unicode:   "\u00ec",
+			Unicode:   'ì',
 			GerberLP:  "ddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-11, 467}},
@@ -17601,9 +17601,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ed": {
+		'í': {
 			HorizAdvX: 184,
-			Unicode:   "\u00ed",
+			Unicode:   'í',
 			GerberLP:  "ddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{153, 448}},
@@ -17647,9 +17647,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ee": {
+		'î': {
 			HorizAdvX: 184,
-			Unicode:   "\u00ee",
+			Unicode:   'î',
 			GerberLP:  "ddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{84, 393}},
@@ -17707,9 +17707,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ef": {
+		'ï': {
 			HorizAdvX: 184,
-			Unicode:   "\u00ef",
+			Unicode:   'ï',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{104, 227}},
@@ -17804,9 +17804,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f0": {
+		'ð': {
 			HorizAdvX: 447,
-			Unicode:   "\u00f0",
+			Unicode:   'ð',
 			GerberLP:  "ddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{281, 532}},
@@ -17925,9 +17925,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f1": {
+		'ñ': {
 			HorizAdvX: 406,
-			Unicode:   "\u00f1",
+			Unicode:   'ñ',
 			GerberLP:  "ddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{96, 256}},
@@ -18025,9 +18025,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f2": {
+		'ò': {
 			HorizAdvX: 451,
-			Unicode:   "\u00f2",
+			Unicode:   'ò',
 			GerberLP:  "ddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{141, 304}},
@@ -18113,9 +18113,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3": {
+		'ó': {
 			HorizAdvX: 451,
-			Unicode:   "\u00f3",
+			Unicode:   'ó',
 			GerberLP:  "ddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{141, 304}},
@@ -18201,9 +18201,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f4": {
+		'ô': {
 			HorizAdvX: 451,
-			Unicode:   "\u00f4",
+			Unicode:   'ô',
 			GerberLP:  "ddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 31}},
@@ -18303,9 +18303,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f5": {
+		'õ': {
 			HorizAdvX: 451,
-			Unicode:   "\u00f5",
+			Unicode:   'õ',
 			GerberLP:  "dddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 31}},
@@ -18401,9 +18401,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f6": {
+		'ö': {
 			HorizAdvX: 451,
-			Unicode:   "\u00f6",
+			Unicode:   'ö',
 			GerberLP:  "dddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{292, 31}},
@@ -18540,9 +18540,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f7": {
+		'÷': {
 			HorizAdvX: 337,
-			Unicode:   "\u00f7",
+			Unicode:   '÷',
 			GerberLP:  "ddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 321}},
@@ -18631,9 +18631,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f8": {
+		'ø': {
 			HorizAdvX: 446,
-			Unicode:   "\u00f8",
+			Unicode:   'ø',
 			GerberLP:  "ddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 51}},
@@ -18729,9 +18729,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f9": {
+		'ù': {
 			HorizAdvX: 406,
-			Unicode:   "\u00f9",
+			Unicode:   'ù',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{284, 72}},
@@ -18821,9 +18821,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fa": {
+		'ú': {
 			HorizAdvX: 406,
-			Unicode:   "\u00fa",
+			Unicode:   'ú',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{284, 72}},
@@ -18913,9 +18913,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fb": {
+		'û': {
 			HorizAdvX: 406,
-			Unicode:   "\u00fb",
+			Unicode:   'û',
 			GerberLP:  "dddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{284, 72}},
@@ -19019,9 +19019,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fc": {
+		'ü': {
 			HorizAdvX: 406,
-			Unicode:   "\u00fc",
+			Unicode:   'ü',
 			GerberLP:  "ddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{284, 72}},
@@ -19162,9 +19162,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fd": {
+		'ý': {
 			HorizAdvX: 408,
-			Unicode:   "\u00fd",
+			Unicode:   'ý',
 			GerberLP:  "ddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{204, 14}},
@@ -19239,9 +19239,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fe": {
+		'þ': {
 			HorizAdvX: 439,
-			Unicode:   "\u00fe",
+			Unicode:   'þ',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 244}},
@@ -19360,9 +19360,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ff": {
+		'ÿ': {
 			HorizAdvX: 408,
-			Unicode:   "\u00ff",
+			Unicode:   'ÿ',
 			GerberLP:  "dddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{204, 14}},
@@ -19488,9 +19488,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0131": {
+		'ı': {
 			HorizAdvX: 194,
-			Unicode:   "\u0131",
+			Unicode:   'ı',
 			GerberLP:  "dddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{104, 312}},
@@ -19519,9 +19519,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0141": {
+		'Ł': {
 			HorizAdvX: 0,
-			Unicode:   "\u0141",
+			Unicode:   'Ł',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -19590,9 +19590,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0142": {
+		'ł': {
 			HorizAdvX: 0,
-			Unicode:   "\u0142",
+			Unicode:   'ł',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -19661,9 +19661,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0152": {
+		'Œ': {
 			HorizAdvX: 797,
-			Unicode:   "\u0152",
+			Unicode:   'Œ',
 			GerberLP:  "ddddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{451, 398}},
@@ -19873,9 +19873,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0153": {
+		'œ': {
 			HorizAdvX: 739,
-			Unicode:   "\u0153",
+			Unicode:   'œ',
 			GerberLP:  "dddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{363, 149}},
@@ -20035,9 +20035,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0160": {
+		'Š': {
 			HorizAdvX: 469,
-			Unicode:   "\u0160",
+			Unicode:   'Š',
 			GerberLP:  "ddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{136, 572}},
@@ -20174,9 +20174,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0161": {
+		'š': {
 			HorizAdvX: 391,
-			Unicode:   "\u0161",
+			Unicode:   'š',
 			GerberLP:  "ddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{269, 9}},
@@ -20281,9 +20281,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0178": {
+		'Ÿ': {
 			HorizAdvX: 478,
-			Unicode:   "\u0178",
+			Unicode:   'Ÿ',
 			GerberLP:  "dddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{260, 329}},
@@ -20422,9 +20422,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017d": {
+		'Ž': {
 			HorizAdvX: 486,
-			Unicode:   "\u017d",
+			Unicode:   'Ž',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{132, 26}},
@@ -20538,9 +20538,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017e": {
+		'ž': {
 			HorizAdvX: 403,
-			Unicode:   "\u017e",
+			Unicode:   'ž',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{270, 297}},
@@ -20628,9 +20628,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0192": {
+		'ƒ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0192",
+			Unicode:   'ƒ',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -20699,9 +20699,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c6": {
+		'ˆ': {
 			HorizAdvX: 269,
-			Unicode:   "\u02c6",
+			Unicode:   'ˆ',
 			GerberLP:  "ddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{134, 493}},
@@ -20735,9 +20735,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c7": {
+		'ˇ': {
 			HorizAdvX: 285,
-			Unicode:   "\u02c7",
+			Unicode:   'ˇ',
 			GerberLP:  "ddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{144, 678}},
@@ -20770,9 +20770,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d8": {
+		'˘': {
 			HorizAdvX: 0,
-			Unicode:   "\u02d8",
+			Unicode:   '˘',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -20841,9 +20841,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d9": {
+		'˙': {
 			HorizAdvX: 0,
-			Unicode:   "\u02d9",
+			Unicode:   '˙',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -20912,9 +20912,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02da": {
+		'˚': {
 			HorizAdvX: 316,
-			Unicode:   "\u02da",
+			Unicode:   '˚',
 			GerberLP:  "dddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{113, 543}},
@@ -20956,9 +20956,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02db": {
+		'˛': {
 			HorizAdvX: 0,
-			Unicode:   "\u02db",
+			Unicode:   '˛',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -21027,9 +21027,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dc": {
+		'˜': {
 			HorizAdvX: 314,
-			Unicode:   "\u02dc",
+			Unicode:   '˜',
 			GerberLP:  "dddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{108, 562}},
@@ -21059,9 +21059,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dd": {
+		'˝': {
 			HorizAdvX: 0,
-			Unicode:   "\u02dd",
+			Unicode:   '˝',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -21130,9 +21130,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0394": {
+		'Δ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0394",
+			Unicode:   'Δ',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -21201,9 +21201,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03a9": {
+		'Ω': {
 			HorizAdvX: 0,
-			Unicode:   "\u03a9",
+			Unicode:   'Ω',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -21272,9 +21272,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03bc": {
+		'μ': {
 			HorizAdvX: 0,
-			Unicode:   "\u03bc",
+			Unicode:   'μ',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -21343,9 +21343,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u03c0": {
+		'π': {
 			HorizAdvX: 0,
-			Unicode:   "\u03c0",
+			Unicode:   'π',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -21414,9 +21414,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2013": {
+		'–': {
 			HorizAdvX: 454,
-			Unicode:   "\u2013",
+			Unicode:   '–',
 			GerberLP:  "dddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{121, 319}},
@@ -21445,9 +21445,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2014": {
+		'—': {
 			HorizAdvX: 570,
-			Unicode:   "\u2014",
+			Unicode:   '—',
 			GerberLP:  "dddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{192, 319}},
@@ -21488,9 +21488,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2018": {
+		'‘': {
 			HorizAdvX: 197,
-			Unicode:   "\u2018",
+			Unicode:   '‘',
 			GerberLP:  "ddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 568}},
@@ -21539,9 +21539,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2019": {
+		'’': {
 			HorizAdvX: 177,
-			Unicode:   "\u2019",
+			Unicode:   '’',
 			GerberLP:  "ddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, 585}},
@@ -21590,9 +21590,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201a": {
+		'‚': {
 			HorizAdvX: 194,
-			Unicode:   "\u201a",
+			Unicode:   '‚',
 			GerberLP:  "ddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, -5}},
@@ -21641,9 +21641,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201c": {
+		'“': {
 			HorizAdvX: 261,
-			Unicode:   "\u201c",
+			Unicode:   '“',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 568}},
@@ -21736,9 +21736,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201d": {
+		'”': {
 			HorizAdvX: 261,
-			Unicode:   "\u201d",
+			Unicode:   '”',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{185, 585}},
@@ -21831,9 +21831,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u201e": {
+		'„': {
 			HorizAdvX: 261,
-			Unicode:   "\u201e",
+			Unicode:   '„',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{185, -5}},
@@ -21926,9 +21926,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2020": {
+		'†': {
 			HorizAdvX: 398,
-			Unicode:   "\u2020",
+			Unicode:   '†',
 			GerberLP:  "dddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{192, 140}},
@@ -22017,9 +22017,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2021": {
+		'‡': {
 			HorizAdvX: 360,
-			Unicode:   "\u2021",
+			Unicode:   '‡',
 			GerberLP:  "dddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{173, 140}},
@@ -22132,9 +22132,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2022": {
+		'•': {
 			HorizAdvX: 371,
-			Unicode:   "\u2022",
+			Unicode:   '•',
 			GerberLP:  "dddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{261, 397}},
@@ -22235,9 +22235,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2026": {
+		'…': {
 			HorizAdvX: 526,
-			Unicode:   "\u2026",
+			Unicode:   '…',
 			GerberLP:  "ddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119, 31}},
@@ -22342,9 +22342,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2030": {
+		'‰': {
 			HorizAdvX: 1031,
-			Unicode:   "\u2030",
+			Unicode:   '‰',
 			GerberLP:  "ddddddddddddddddddddddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{578, 12}},
@@ -22589,9 +22589,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2039": {
+		'‹': {
 			HorizAdvX: 222,
-			Unicode:   "\u2039",
+			Unicode:   '‹',
 			GerberLP:  "ddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{98, 194}},
@@ -22625,9 +22625,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u203a": {
+		'›': {
 			HorizAdvX: 222,
-			Unicode:   "\u203a",
+			Unicode:   '›',
 			GerberLP:  "ddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 160}},
@@ -22661,9 +22661,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2044": {
+		'⁄': {
 			HorizAdvX: 531,
-			Unicode:   "\u2044",
+			Unicode:   '⁄',
 			GerberLP:  "dddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{154, 84}},
@@ -22708,9 +22708,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20ac": {
+		'€': {
 			HorizAdvX: 484,
-			Unicode:   "\u20ac",
+			Unicode:   '€',
 			GerberLP:  "ddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{124, 367}},
@@ -22824,9 +22824,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2122": {
+		'™': {
 			HorizAdvX: 557,
-			Unicode:   "\u2122",
+			Unicode:   '™',
 			GerberLP:  "ddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{363, 351}},
@@ -22952,9 +22952,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2126": {
+		'Ω': {
 			HorizAdvX: 0,
-			Unicode:   "\u2126",
+			Unicode:   'Ω',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23023,9 +23023,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2202": {
+		'∂': {
 			HorizAdvX: 0,
-			Unicode:   "\u2202",
+			Unicode:   '∂',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23094,9 +23094,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2206": {
+		'∆': {
 			HorizAdvX: 0,
-			Unicode:   "\u2206",
+			Unicode:   '∆',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23165,9 +23165,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u220f": {
+		'∏': {
 			HorizAdvX: 0,
-			Unicode:   "\u220f",
+			Unicode:   '∏',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23236,9 +23236,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2211": {
+		'∑': {
 			HorizAdvX: 0,
-			Unicode:   "\u2211",
+			Unicode:   '∑',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23307,9 +23307,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2212": {
+		'−': {
 			HorizAdvX: 337,
-			Unicode:   "\u2212",
+			Unicode:   '−',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 321}},
@@ -23332,9 +23332,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u221a": {
+		'√': {
 			HorizAdvX: 0,
-			Unicode:   "\u221a",
+			Unicode:   '√',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23403,9 +23403,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u221e": {
+		'∞': {
 			HorizAdvX: 0,
-			Unicode:   "\u221e",
+			Unicode:   '∞',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23474,9 +23474,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u222b": {
+		'∫': {
 			HorizAdvX: 0,
-			Unicode:   "\u222b",
+			Unicode:   '∫',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23545,9 +23545,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2248": {
+		'≈': {
 			HorizAdvX: 0,
-			Unicode:   "\u2248",
+			Unicode:   '≈',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23616,9 +23616,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2260": {
+		'≠': {
 			HorizAdvX: 0,
-			Unicode:   "\u2260",
+			Unicode:   '≠',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23687,9 +23687,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2264": {
+		'≤': {
 			HorizAdvX: 0,
-			Unicode:   "\u2264",
+			Unicode:   '≤',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23758,9 +23758,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u2265": {
+		'≥': {
 			HorizAdvX: 0,
-			Unicode:   "\u2265",
+			Unicode:   '≥',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23829,9 +23829,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u25ca": {
+		'◊': {
 			HorizAdvX: 0,
-			Unicode:   "\u25ca",
+			Unicode:   '◊',
 			GerberLP:  "dddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{69, 364}},
@@ -23900,9 +23900,9 @@ var printdashedFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\ufb01": {
+		'ﬁ': {
 			HorizAdvX: 543,
-			Unicode:   "\ufb01",
+			Unicode:   'ﬁ',
 			GerberLP:  "ddddddddddddddddddddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{335, 541}},

@@ -11,16 +11,16 @@ func init() {
 }
 
 var konstytucyjaFont = &fonts.Font{
-	// ID: "konstytucyja",
+	ID:               "konstytucyja",
 	HorizAdvX:        333,
 	UnitsPerEm:       1000,
 	Ascent:           581,
 	Descent:          -419,
 	MissingHorizAdvX: 324,
-	Glyphs: map[string]*fonts.Glyph{
-		"!": {
+	Glyphs: map[rune]*fonts.Glyph{
+		'!': {
 			HorizAdvX: 189,
-			Unicode:   "!",
+			Unicode:   '!',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 581}},
@@ -40,9 +40,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\"": {
+		'"': {
 			HorizAdvX: 267,
-			Unicode:   "\"",
+			Unicode:   '"',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{222, 571}},
@@ -67,9 +67,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"#": {
+		'#': {
 			HorizAdvX: 514,
-			Unicode:   "#",
+			Unicode:   '#',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{175, 106}},
@@ -123,9 +123,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"$": {
+		'$': {
 			HorizAdvX: 338,
-			Unicode:   "$",
+			Unicode:   '$',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{240, 466}},
@@ -166,9 +166,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"%": {
+		'%': {
 			HorizAdvX: 449,
-			Unicode:   "%",
+			Unicode:   '%',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{375, 454}},
@@ -203,9 +203,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"&": {
+		'&': {
 			HorizAdvX: 437,
-			Unicode:   "&",
+			Unicode:   '&',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{344, 133}},
@@ -238,9 +238,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"'": {
+		'\'': {
 			HorizAdvX: 181,
-			Unicode:   "'",
+			Unicode:   '\'',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{136, 571}},
@@ -255,9 +255,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"(": {
+		'(': {
 			HorizAdvX: 227,
-			Unicode:   "(",
+			Unicode:   '(',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{225, -95}},
@@ -274,9 +274,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		")": {
+		')': {
 			HorizAdvX: 381,
-			Unicode:   ")",
+			Unicode:   ')',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{8, -95}},
@@ -292,9 +292,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"*": {
+		'*': {
 			HorizAdvX: 346,
-			Unicode:   "*",
+			Unicode:   '*',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{165, 136}},
@@ -320,9 +320,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"+": {
+		'+': {
 			HorizAdvX: 353,
-			Unicode:   "+",
+			Unicode:   '+',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{166, 213}},
@@ -345,9 +345,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		",": {
+		',': {
 			HorizAdvX: 168,
-			Unicode:   ",",
+			Unicode:   ',',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{76, 50}},
@@ -361,9 +361,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"-": {
+		'-': {
 			HorizAdvX: 375,
-			Unicode:   "-",
+			Unicode:   '-',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{77, 241}},
@@ -376,9 +376,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		".": {
+		'.': {
 			HorizAdvX: 168,
-			Unicode:   ".",
+			Unicode:   '.',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{77, 41}},
@@ -389,9 +389,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"/": {
+		'/': {
 			HorizAdvX: 421,
-			Unicode:   "/",
+			Unicode:   '/',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{472, 538}},
@@ -402,9 +402,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"0": {
+		'0': {
 			HorizAdvX: 433,
-			Unicode:   "0",
+			Unicode:   '0',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{225, 0}},
@@ -427,9 +427,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"1": {
+		'1': {
 			HorizAdvX: 218,
-			Unicode:   "1",
+			Unicode:   '1',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{133, 243}},
@@ -448,9 +448,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"2": {
+		'2': {
 			HorizAdvX: 501,
-			Unicode:   "2",
+			Unicode:   '2',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{222, 405}},
@@ -484,9 +484,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"3": {
+		'3': {
 			HorizAdvX: 453,
-			Unicode:   "3",
+			Unicode:   '3',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{336, 263}},
@@ -514,9 +514,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"4": {
+		'4': {
 			HorizAdvX: 450,
-			Unicode:   "4",
+			Unicode:   '4',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{313, 140}},
@@ -549,9 +549,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"5": {
+		'5': {
 			HorizAdvX: 489,
-			Unicode:   "5",
+			Unicode:   '5',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{279, 383}},
@@ -582,9 +582,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"6": {
+		'6': {
 			HorizAdvX: 495,
-			Unicode:   "6",
+			Unicode:   '6',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{115, 228}},
@@ -610,9 +610,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"7": {
+		'7': {
 			HorizAdvX: 347,
-			Unicode:   "7",
+			Unicode:   '7',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{347, 390}},
@@ -642,9 +642,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"8": {
+		'8': {
 			HorizAdvX: 447,
-			Unicode:   "8",
+			Unicode:   '8',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{430, 160}},
@@ -671,9 +671,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"9": {
+		'9': {
 			HorizAdvX: 464,
-			Unicode:   "9",
+			Unicode:   '9',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{397, 248}},
@@ -697,9 +697,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		":": {
+		':': {
 			HorizAdvX: 168,
-			Unicode:   ":",
+			Unicode:   ':',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{78, 224}},
@@ -716,9 +716,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		";": {
+		';': {
 			HorizAdvX: 168,
-			Unicode:   ";",
+			Unicode:   ';',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{76, 50}},
@@ -738,9 +738,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"<": {
+		'<': {
 			HorizAdvX: 258,
-			Unicode:   "<",
+			Unicode:   '<',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{21, 285}},
@@ -753,9 +753,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"=": {
+		'=': {
 			HorizAdvX: 365,
-			Unicode:   "=",
+			Unicode:   '=',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{35, 283}},
@@ -776,9 +776,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		">": {
+		'>': {
 			HorizAdvX: 281,
-			Unicode:   ">",
+			Unicode:   '>',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{268, 246}},
@@ -790,9 +790,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"?": {
+		'?': {
 			HorizAdvX: 360,
-			Unicode:   "?",
+			Unicode:   '?',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{134, 171}},
@@ -821,9 +821,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"@": {
+		'@': {
 			HorizAdvX: 465,
-			Unicode:   "@",
+			Unicode:   '@',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{230, 369}},
@@ -863,9 +863,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"A": {
+		'A': {
 			HorizAdvX: 816,
-			Unicode:   "A",
+			Unicode:   'A',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -932,9 +932,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"B": {
+		'B': {
 			HorizAdvX: 966,
-			Unicode:   "B",
+			Unicode:   'B',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 608}},
@@ -996,9 +996,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"C": {
+		'C': {
 			HorizAdvX: 524,
-			Unicode:   "C",
+			Unicode:   'C',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 164}},
@@ -1031,9 +1031,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"D": {
+		'D': {
 			HorizAdvX: 843,
-			Unicode:   "D",
+			Unicode:   'D',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{646, 524}},
@@ -1075,9 +1075,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"E": {
+		'E': {
 			HorizAdvX: 492,
-			Unicode:   "E",
+			Unicode:   'E',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -1123,9 +1123,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"F": {
+		'F': {
 			HorizAdvX: 794,
-			Unicode:   "F",
+			Unicode:   'F',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{486, 442}},
@@ -1174,9 +1174,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"G": {
+		'G': {
 			HorizAdvX: 585,
-			Unicode:   "G",
+			Unicode:   'G',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{424, 581}},
@@ -1224,9 +1224,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Gj": {
+		'G': {
 			HorizAdvX: 797,
-			Unicode:   "Gj",
+			Unicode:   'G',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{531, 47}},
@@ -1300,9 +1300,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"H": {
+		'H': {
 			HorizAdvX: 843,
-			Unicode:   "H",
+			Unicode:   'H',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{747, 14}},
@@ -1381,9 +1381,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"I": {
+		'I': {
 			HorizAdvX: 500,
-			Unicode:   "I",
+			Unicode:   'I',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -1420,9 +1420,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"IJ": {
+		'I': {
 			HorizAdvX: 761,
-			Unicode:   "IJ",
+			Unicode:   'I',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{177, 453}},
@@ -1484,9 +1484,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"J": {
+		'J': {
 			HorizAdvX: 562,
-			Unicode:   "J",
+			Unicode:   'J',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{146, 453}},
@@ -1522,9 +1522,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"K": {
+		'K': {
 			HorizAdvX: 810,
-			Unicode:   "K",
+			Unicode:   'K',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{569, 286}},
@@ -1584,9 +1584,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"L": {
+		'L': {
 			HorizAdvX: 664,
-			Unicode:   "L",
+			Unicode:   'L',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{551, 0}},
@@ -1626,9 +1626,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"M": {
+		'M': {
 			HorizAdvX: 1241,
-			Unicode:   "M",
+			Unicode:   'M',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1126, 0}},
@@ -1694,9 +1694,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"N": {
+		'N': {
 			HorizAdvX: 867,
-			Unicode:   "N",
+			Unicode:   'N',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 455}},
@@ -1742,9 +1742,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"O": {
+		'O': {
 			HorizAdvX: 521,
-			Unicode:   "O",
+			Unicode:   'O',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -1772,9 +1772,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"P": {
+		'P': {
 			HorizAdvX: 848,
-			Unicode:   "P",
+			Unicode:   'P',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{175, 688}},
@@ -1825,9 +1825,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Q": {
+		'Q': {
 			HorizAdvX: 515,
-			Unicode:   "Q",
+			Unicode:   'Q',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{231, 6}},
@@ -1867,9 +1867,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"R": {
+		'R': {
 			HorizAdvX: 978,
-			Unicode:   "R",
+			Unicode:   'R',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{864, 0}},
@@ -1930,9 +1930,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"S": {
+		'S': {
 			HorizAdvX: 412,
-			Unicode:   "S",
+			Unicode:   'S',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, 582}},
@@ -1970,9 +1970,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"T": {
+		'T': {
 			HorizAdvX: 656,
-			Unicode:   "T",
+			Unicode:   'T',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 687}},
@@ -2019,9 +2019,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"U": {
+		'U': {
 			HorizAdvX: 898,
-			Unicode:   "U",
+			Unicode:   'U',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -2071,9 +2071,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"V": {
+		'V': {
 			HorizAdvX: 370,
-			Unicode:   "V",
+			Unicode:   'V',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{146, 582}},
@@ -2114,9 +2114,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"W": {
+		'W': {
 			HorizAdvX: 997,
-			Unicode:   "W",
+			Unicode:   'W',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{995, 581}},
@@ -2175,9 +2175,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"X": {
+		'X': {
 			HorizAdvX: 489,
-			Unicode:   "X",
+			Unicode:   'X',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{387, 21}},
@@ -2221,9 +2221,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Y": {
+		'Y': {
 			HorizAdvX: 819,
-			Unicode:   "Y",
+			Unicode:   'Y',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{860, 581}},
@@ -2284,9 +2284,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Yj": {
+		'Y': {
 			HorizAdvX: 1029,
-			Unicode:   "Yj",
+			Unicode:   'Y',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{690, -295}},
@@ -2366,9 +2366,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"Z": {
+		'Z': {
 			HorizAdvX: 678,
-			Unicode:   "Z",
+			Unicode:   'Z',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 5}},
@@ -2412,9 +2412,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"[": {
+		'[': {
 			HorizAdvX: 240,
-			Unicode:   "[",
+			Unicode:   '[',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, -98}},
@@ -2438,9 +2438,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\\": {
+		'\\': {
 			HorizAdvX: 449,
-			Unicode:   "\\",
+			Unicode:   '\\',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{101, 547}},
@@ -2451,9 +2451,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"]": {
+		']': {
 			HorizAdvX: 219,
-			Unicode:   "]",
+			Unicode:   ']',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-55, -98}},
@@ -2477,9 +2477,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"^": {
+		'^': {
 			HorizAdvX: 220,
-			Unicode:   "^",
+			Unicode:   '^',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{170, 496}},
@@ -2491,9 +2491,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"_": {
+		'_': {
 			HorizAdvX: 493,
-			Unicode:   "_",
+			Unicode:   '_',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{423, -105}},
@@ -2507,9 +2507,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"`": {
+		'`': {
 			HorizAdvX: 252,
-			Unicode:   "`",
+			Unicode:   '`',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, 571}},
@@ -2524,9 +2524,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a": {
+		'a': {
 			HorizAdvX: 0,
-			Unicode:   "a",
+			Unicode:   'a',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -2554,9 +2554,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"a,,": {
+		'a': {
 			HorizAdvX: 491,
-			Unicode:   "a,,",
+			Unicode:   'a',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{272, 0}},
@@ -2586,9 +2586,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"b": {
+		'b': {
 			HorizAdvX: 267,
-			Unicode:   "b",
+			Unicode:   'b',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{166, 466}},
@@ -2618,9 +2618,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c": {
+		'c': {
 			HorizAdvX: 257,
-			Unicode:   "c",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -2641,9 +2641,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"c,,": {
+		'c': {
 			HorizAdvX: 390,
-			Unicode:   "c,,",
+			Unicode:   'c',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{147, 0}},
@@ -2664,9 +2664,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"d": {
+		'd': {
 			HorizAdvX: 329,
-			Unicode:   "d",
+			Unicode:   'd',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 286}},
@@ -2701,9 +2701,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"d,,": {
+		'd': {
 			HorizAdvX: 485,
-			Unicode:   "d,,",
+			Unicode:   'd',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{233, 58}},
@@ -2741,9 +2741,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"e": {
+		'e': {
 			HorizAdvX: 251,
-			Unicode:   "e",
+			Unicode:   'e',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -2775,9 +2775,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"e,,": {
+		'e': {
 			HorizAdvX: 387,
-			Unicode:   "e,,",
+			Unicode:   'e',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{156, 14}},
@@ -2808,9 +2808,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"f": {
+		'f': {
 			HorizAdvX: 149,
-			Unicode:   "f",
+			Unicode:   'f',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{44, 128}},
@@ -2836,9 +2836,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"fj": {
+		'\ufb0c': {
 			HorizAdvX: 281,
-			Unicode:   "fj",
+			Unicode:   '\ufb0c',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 262}},
@@ -2881,9 +2881,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"g": {
+		'g': {
 			HorizAdvX: 293,
-			Unicode:   "g",
+			Unicode:   'g',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 286}},
@@ -2922,9 +2922,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"g,,": {
+		'g': {
 			HorizAdvX: 293,
-			Unicode:   "g,,",
+			Unicode:   'g',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{198, 27}},
@@ -2971,9 +2971,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"gj": {
+		'g': {
 			HorizAdvX: 428,
-			Unicode:   "gj",
+			Unicode:   'g',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{187, 26}},
@@ -3031,9 +3031,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"h": {
+		'h': {
 			HorizAdvX: 310,
-			Unicode:   "h",
+			Unicode:   'h',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 461}},
@@ -3069,9 +3069,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"h,,": {
+		'h': {
 			HorizAdvX: 454,
-			Unicode:   "h,,",
+			Unicode:   'h',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 14}},
@@ -3109,9 +3109,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"i": {
+		'i': {
 			HorizAdvX: 181,
-			Unicode:   "i",
+			Unicode:   'i',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -3148,9 +3148,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"i,,": {
+		'i': {
 			HorizAdvX: 364,
-			Unicode:   "i,,",
+			Unicode:   'i',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -3185,9 +3185,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"j": {
+		'j': {
 			HorizAdvX: 148,
-			Unicode:   "j",
+			Unicode:   'j',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{-23, -308}},
@@ -3221,9 +3221,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"j,,": {
+		'j': {
 			HorizAdvX: 148,
-			Unicode:   "j,,",
+			Unicode:   'j',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{73, 133}},
@@ -3264,9 +3264,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"jj": {
+		'j': {
 			HorizAdvX: 283,
-			Unicode:   "jj",
+			Unicode:   'j',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{217, 158}},
@@ -3319,9 +3319,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"k": {
+		'k': {
 			HorizAdvX: 290,
-			Unicode:   "k",
+			Unicode:   'k',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 260}},
@@ -3363,9 +3363,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"k,,": {
+		'k': {
 			HorizAdvX: 434,
-			Unicode:   "k,,",
+			Unicode:   'k',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{214, 0}},
@@ -3409,9 +3409,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"l": {
+		'l': {
 			HorizAdvX: 242,
-			Unicode:   "l",
+			Unicode:   'l',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 458}},
@@ -3442,9 +3442,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"l,,": {
+		'l': {
 			HorizAdvX: 342,
-			Unicode:   "l,,",
+			Unicode:   'l',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{144, 14}},
@@ -3474,9 +3474,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"m": {
+		'm': {
 			HorizAdvX: 472,
-			Unicode:   "m",
+			Unicode:   'm',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, 286}},
@@ -3520,9 +3520,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"m,,": {
+		'm': {
 			HorizAdvX: 607,
-			Unicode:   "m,,",
+			Unicode:   'm',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{395, 0}},
@@ -3566,9 +3566,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"n": {
+		'n': {
 			HorizAdvX: 335,
-			Unicode:   "n",
+			Unicode:   'n',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 286}},
@@ -3602,9 +3602,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"n,,": {
+		'n': {
 			HorizAdvX: 485,
-			Unicode:   "n,,",
+			Unicode:   'n',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{266, 0}},
@@ -3638,9 +3638,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"o": {
+		'o': {
 			HorizAdvX: 288,
-			Unicode:   "o",
+			Unicode:   'o',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -3676,9 +3676,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"p": {
+		'p': {
 			HorizAdvX: 309,
-			Unicode:   "p",
+			Unicode:   'p',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{309, 219}},
@@ -3723,9 +3723,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"q": {
+		'q': {
 			HorizAdvX: 290,
-			Unicode:   "q",
+			Unicode:   'q',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{184, 286}},
@@ -3758,9 +3758,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"qj": {
+		'\ufb1b': {
 			HorizAdvX: 429,
-			Unicode:   "qj",
+			Unicode:   '\ufb1b',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{361, 158}},
@@ -3809,9 +3809,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"r": {
+		'r': {
 			HorizAdvX: 283,
-			Unicode:   "r",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 286}},
@@ -3843,9 +3843,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ru": {
+		'r': {
 			HorizAdvX: 578,
-			Unicode:   "ru",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 286}},
@@ -3897,9 +3897,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ru,,": {
+		'r': {
 			HorizAdvX: 744,
-			Unicode:   "ru,,",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{464, 65}},
@@ -3953,9 +3953,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"rw": {
+		'r': {
 			HorizAdvX: 606,
-			Unicode:   "rw",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{62, 226}},
@@ -4023,9 +4023,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ry": {
+		'r': {
 			HorizAdvX: 549,
-			Unicode:   "ry",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 286}},
@@ -4081,9 +4081,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"ry,,": {
+		'r': {
 			HorizAdvX: 549,
-			Unicode:   "ry,,",
+			Unicode:   'r',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{440, 19}},
@@ -4148,9 +4148,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"rz": {
+		'r': {
 			HorizAdvX: 498,
-			Unicode:   "rz",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{313, 257}},
@@ -4201,9 +4201,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"rz,,": {
+		'r': {
 			HorizAdvX: 646,
-			Unicode:   "rz,,",
+			Unicode:   'r',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{298, 74}},
@@ -4253,9 +4253,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"r\u017c": {
+		'r': {
 			HorizAdvX: 498,
-			Unicode:   "r\u017c",
+			Unicode:   'r',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{313, 257}},
@@ -4314,9 +4314,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"s": {
+		's': {
 			HorizAdvX: 244,
-			Unicode:   "s",
+			Unicode:   's',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 286}},
@@ -4344,9 +4344,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"t": {
+		't': {
 			HorizAdvX: 262,
-			Unicode:   "t",
+			Unicode:   't',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{202, 458}},
@@ -4395,9 +4395,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"t,,": {
+		't': {
 			HorizAdvX: 345,
-			Unicode:   "t,,",
+			Unicode:   't',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{149, 14}},
@@ -4443,9 +4443,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"u": {
+		'u': {
 			HorizAdvX: 347,
-			Unicode:   "u",
+			Unicode:   'u',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -4482,9 +4482,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"u,,": {
+		'u': {
 			HorizAdvX: 514,
-			Unicode:   "u,,",
+			Unicode:   'u',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{45, 115}},
@@ -4524,9 +4524,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"v": {
+		'v': {
 			HorizAdvX: 294,
-			Unicode:   "v",
+			Unicode:   'v',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{258, 286}},
@@ -4556,9 +4556,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"w": {
+		'w': {
 			HorizAdvX: 383,
-			Unicode:   "w",
+			Unicode:   'w',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{86, 286}},
@@ -4598,9 +4598,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"x": {
+		'x': {
 			HorizAdvX: 286,
-			Unicode:   "x",
+			Unicode:   'x',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{43, 44}},
@@ -4635,9 +4635,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"x,,": {
+		'x': {
 			HorizAdvX: 416,
-			Unicode:   "x,,",
+			Unicode:   'x',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{209, 14}},
@@ -4675,9 +4675,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"y": {
+		'y': {
 			HorizAdvX: 309,
-			Unicode:   "y",
+			Unicode:   'y',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{310, 265}},
@@ -4718,9 +4718,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"y,,": {
+		'y': {
 			HorizAdvX: 309,
-			Unicode:   "y,,",
+			Unicode:   'y',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{45, 137}},
@@ -4772,9 +4772,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"yf": {
+		'y': {
 			HorizAdvX: 493,
-			Unicode:   "yf",
+			Unicode:   'y',
 			GerberLP:  "dcccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{392, 137}},
@@ -4850,9 +4850,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"yj": {
+		'y': {
 			HorizAdvX: 443,
-			Unicode:   "yj",
+			Unicode:   'y',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{270, 144}},
@@ -4915,9 +4915,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"z": {
+		'z': {
 			HorizAdvX: 267,
-			Unicode:   "z",
+			Unicode:   'z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{263, 285}},
@@ -4945,9 +4945,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"z,,": {
+		'z': {
 			HorizAdvX: 417,
-			Unicode:   "z,,",
+			Unicode:   'z',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{197, 14}},
@@ -4975,9 +4975,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"{": {
+		'{': {
 			HorizAdvX: 315,
-			Unicode:   "{",
+			Unicode:   '{',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{217, -139}},
@@ -5008,9 +5008,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"|": {
+		'|': {
 			HorizAdvX: 99,
-			Unicode:   "|",
+			Unicode:   '|',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{62, 580}},
@@ -5023,9 +5023,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"}": {
+		'}': {
 			HorizAdvX: 365,
-			Unicode:   "}",
+			Unicode:   '}',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{219, 498}},
@@ -5056,9 +5056,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"~": {
+		'~': {
 			HorizAdvX: 269,
-			Unicode:   "~",
+			Unicode:   '~',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{19, 184}},
@@ -5073,9 +5073,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a1": {
+		'¡': {
 			HorizAdvX: 189,
-			Unicode:   "\u00a1",
+			Unicode:   '¡',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{20, -1}},
@@ -5095,9 +5095,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a2": {
+		'¢': {
 			HorizAdvX: 252,
-			Unicode:   "\u00a2",
+			Unicode:   '¢',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 284}},
@@ -5127,9 +5127,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a3": {
+		'£': {
 			HorizAdvX: 568,
-			Unicode:   "\u00a3",
+			Unicode:   '£',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{227, 263}},
@@ -5171,9 +5171,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a4": {
+		'¤': {
 			HorizAdvX: 353,
-			Unicode:   "\u00a4",
+			Unicode:   '¤',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 192}},
@@ -5209,9 +5209,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a6": {
+		'¦': {
 			HorizAdvX: 99,
-			Unicode:   "\u00a6",
+			Unicode:   '¦',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{32, 105}},
@@ -5228,9 +5228,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a7": {
+		'§': {
 			HorizAdvX: 474,
-			Unicode:   "\u00a7",
+			Unicode:   '§',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{346, 107}},
@@ -5267,9 +5267,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a8": {
+		'¨': {
 			HorizAdvX: 244,
-			Unicode:   "\u00a8",
+			Unicode:   '¨',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{287, 450}},
@@ -5290,9 +5290,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00a9": {
+		'©': {
 			HorizAdvX: 465,
-			Unicode:   "\u00a9",
+			Unicode:   '©',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{229, 380}},
@@ -5324,9 +5324,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ab": {
+		'«': {
 			HorizAdvX: 407,
-			Unicode:   "\u00ab",
+			Unicode:   '«',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 285}},
@@ -5347,9 +5347,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ae": {
+		'®': {
 			HorizAdvX: 465,
-			Unicode:   "\u00ae",
+			Unicode:   '®',
 			GerberLP:  "dcdcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{229, 380}},
@@ -5396,9 +5396,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00af": {
+		'¯': {
 			HorizAdvX: 291,
-			Unicode:   "\u00af",
+			Unicode:   '¯',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{91, 481}},
@@ -5413,9 +5413,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b0": {
+		'°': {
 			HorizAdvX: 208,
-			Unicode:   "\u00b0",
+			Unicode:   '°',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{57, 436}},
@@ -5432,9 +5432,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b1": {
+		'±': {
 			HorizAdvX: 353,
-			Unicode:   "\u00b1",
+			Unicode:   '±',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{146, 241}},
@@ -5465,9 +5465,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b2": {
+		'²': {
 			HorizAdvX: 370,
-			Unicode:   "\u00b2",
+			Unicode:   '²',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{158, 555}},
@@ -5501,9 +5501,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b3": {
+		'³': {
 			HorizAdvX: 370,
-			Unicode:   "\u00b3",
+			Unicode:   '³',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{239, 474}},
@@ -5531,9 +5531,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b4": {
+		'´': {
 			HorizAdvX: 289,
-			Unicode:   "\u00b4",
+			Unicode:   '´',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 484}},
@@ -5547,9 +5547,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b5": {
+		'µ': {
 			HorizAdvX: 331,
-			Unicode:   "\u00b5",
+			Unicode:   'µ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{28, 112}},
@@ -5591,9 +5591,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b7": {
+		'·': {
 			HorizAdvX: 147,
-			Unicode:   "\u00b7",
+			Unicode:   '·',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{77, 231}},
@@ -5604,9 +5604,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b8": {
+		'¸': {
 			HorizAdvX: 287,
-			Unicode:   "\u00b8",
+			Unicode:   '¸',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{147, 6}},
@@ -5622,9 +5622,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00b9": {
+		'¹': {
 			HorizAdvX: 222,
-			Unicode:   "\u00b9",
+			Unicode:   '¹',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{124, 461}},
@@ -5643,9 +5643,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bb": {
+		'»': {
 			HorizAdvX: 422,
-			Unicode:   "\u00bb",
+			Unicode:   '»',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{268, 246}},
@@ -5664,9 +5664,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bc": {
+		'¼': {
 			HorizAdvX: 533,
-			Unicode:   "\u00bc",
+			Unicode:   '¼',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{472, 510}},
@@ -5714,9 +5714,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bd": {
+		'½': {
 			HorizAdvX: 569,
-			Unicode:   "\u00bd",
+			Unicode:   '½',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{472, 510}},
@@ -5770,9 +5770,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00be": {
+		'¾': {
 			HorizAdvX: 533,
-			Unicode:   "\u00be",
+			Unicode:   '¾',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{472, 510}},
@@ -5829,9 +5829,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00bf": {
+		'¿': {
 			HorizAdvX: 354,
-			Unicode:   "\u00bf",
+			Unicode:   '¿',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{215, 411}},
@@ -5868,9 +5868,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c0": {
+		'À': {
 			HorizAdvX: 816,
-			Unicode:   "\u00c0",
+			Unicode:   'À',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -5947,9 +5947,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c1": {
+		'Á': {
 			HorizAdvX: 816,
-			Unicode:   "\u00c1",
+			Unicode:   'Á',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -6025,9 +6025,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c2": {
+		'Â': {
 			HorizAdvX: 816,
-			Unicode:   "\u00c2",
+			Unicode:   'Â',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -6101,9 +6101,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c3": {
+		'Ã': {
 			HorizAdvX: 816,
-			Unicode:   "\u00c3",
+			Unicode:   'Ã',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -6180,9 +6180,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c4": {
+		'Ä': {
 			HorizAdvX: 816,
-			Unicode:   "\u00c4",
+			Unicode:   'Ä',
 			GerberLP:  "dccdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -6265,9 +6265,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c5": {
+		'Å': {
 			HorizAdvX: 816,
-			Unicode:   "\u00c5",
+			Unicode:   'Å',
 			GerberLP:  "ddccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -6346,9 +6346,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c7": {
+		'Ç': {
 			HorizAdvX: 524,
-			Unicode:   "\u00c7",
+			Unicode:   'Ç',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 164}},
@@ -6390,9 +6390,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c8": {
+		'È': {
 			HorizAdvX: 492,
-			Unicode:   "\u00c8",
+			Unicode:   'È',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -6448,9 +6448,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00c9": {
+		'É': {
 			HorizAdvX: 492,
-			Unicode:   "\u00c9",
+			Unicode:   'É',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -6505,9 +6505,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ca": {
+		'Ê': {
 			HorizAdvX: 492,
-			Unicode:   "\u00ca",
+			Unicode:   'Ê',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -6560,9 +6560,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cb": {
+		'Ë': {
 			HorizAdvX: 492,
-			Unicode:   "\u00cb",
+			Unicode:   'Ë',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -6624,9 +6624,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cc": {
+		'Ì': {
 			HorizAdvX: 500,
-			Unicode:   "\u00cc",
+			Unicode:   'Ì',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -6673,9 +6673,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cd": {
+		'Í': {
 			HorizAdvX: 500,
-			Unicode:   "\u00cd",
+			Unicode:   'Í',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -6721,9 +6721,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ce": {
+		'Î': {
 			HorizAdvX: 500,
-			Unicode:   "\u00ce",
+			Unicode:   'Î',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -6767,9 +6767,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00cf": {
+		'Ï': {
 			HorizAdvX: 500,
-			Unicode:   "\u00cf",
+			Unicode:   'Ï',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -6822,9 +6822,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d0": {
+		'Ð': {
 			HorizAdvX: 843,
-			Unicode:   "\u00d0",
+			Unicode:   'Ð',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{525, 262}},
@@ -6879,9 +6879,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d1": {
+		'Ñ': {
 			HorizAdvX: 867,
-			Unicode:   "\u00d1",
+			Unicode:   'Ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 455}},
@@ -6937,9 +6937,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d2": {
+		'Ò': {
 			HorizAdvX: 521,
-			Unicode:   "\u00d2",
+			Unicode:   'Ò',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -6977,9 +6977,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d3": {
+		'Ó': {
 			HorizAdvX: 521,
-			Unicode:   "\u00d3",
+			Unicode:   'Ó',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -7016,9 +7016,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d4": {
+		'Ô': {
 			HorizAdvX: 521,
-			Unicode:   "\u00d4",
+			Unicode:   'Ô',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -7053,9 +7053,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d5": {
+		'Õ': {
 			HorizAdvX: 521,
-			Unicode:   "\u00d5",
+			Unicode:   'Õ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -7093,9 +7093,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d6": {
+		'Ö': {
 			HorizAdvX: 521,
-			Unicode:   "\u00d6",
+			Unicode:   'Ö',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -7139,9 +7139,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d7": {
+		'×': {
 			HorizAdvX: 0,
-			Unicode:   "\u00d7",
+			Unicode:   '×',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{144, 229}},
@@ -7160,9 +7160,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d8": {
+		'Ø': {
 			HorizAdvX: 506,
-			Unicode:   "\u00d8",
+			Unicode:   'Ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{525, 578}},
@@ -7195,9 +7195,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00d9": {
+		'Ù': {
 			HorizAdvX: 898,
-			Unicode:   "\u00d9",
+			Unicode:   'Ù',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -7257,9 +7257,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00da": {
+		'Ú': {
 			HorizAdvX: 898,
-			Unicode:   "\u00da",
+			Unicode:   'Ú',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -7318,9 +7318,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00db": {
+		'Û': {
 			HorizAdvX: 898,
-			Unicode:   "\u00db",
+			Unicode:   'Û',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -7377,9 +7377,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dc": {
+		'Ü': {
 			HorizAdvX: 898,
-			Unicode:   "\u00dc",
+			Unicode:   'Ü',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -7445,9 +7445,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00dd": {
+		'Ý': {
 			HorizAdvX: 819,
-			Unicode:   "\u00dd",
+			Unicode:   'Ý',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{860, 581}},
@@ -7517,9 +7517,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00de": {
+		'Þ': {
 			HorizAdvX: 461,
-			Unicode:   "\u00de",
+			Unicode:   'Þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{245, 576}},
@@ -7540,9 +7540,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00df": {
+		'ß': {
 			HorizAdvX: 290,
-			Unicode:   "\u00df",
+			Unicode:   'ß',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{141, 436}},
@@ -7575,9 +7575,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e0": {
+		'à': {
 			HorizAdvX: 0,
-			Unicode:   "\u00e0",
+			Unicode:   'à',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -7615,9 +7615,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e1": {
+		'á': {
 			HorizAdvX: 0,
-			Unicode:   "\u00e1",
+			Unicode:   'á',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -7654,9 +7654,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e2": {
+		'â': {
 			HorizAdvX: 0,
-			Unicode:   "\u00e2",
+			Unicode:   'â',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -7691,9 +7691,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e3": {
+		'ã': {
 			HorizAdvX: 0,
-			Unicode:   "\u00e3",
+			Unicode:   'ã',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -7731,9 +7731,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e4": {
+		'ä': {
 			HorizAdvX: 0,
-			Unicode:   "\u00e4",
+			Unicode:   'ä',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -7777,9 +7777,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e5": {
+		'å': {
 			HorizAdvX: 0,
-			Unicode:   "\u00e5",
+			Unicode:   'å',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -7819,9 +7819,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e6": {
+		'æ': {
 			HorizAdvX: 442,
-			Unicode:   "\u00e6",
+			Unicode:   'æ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{378, 286}},
@@ -7863,9 +7863,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e7": {
+		'ç': {
 			HorizAdvX: 257,
-			Unicode:   "\u00e7",
+			Unicode:   'ç',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -7895,9 +7895,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e8": {
+		'è': {
 			HorizAdvX: 251,
-			Unicode:   "\u00e8",
+			Unicode:   'è',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -7939,9 +7939,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00e9": {
+		'é': {
 			HorizAdvX: 251,
-			Unicode:   "\u00e9",
+			Unicode:   'é',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -7982,9 +7982,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ea": {
+		'ê': {
 			HorizAdvX: 251,
-			Unicode:   "\u00ea",
+			Unicode:   'ê',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -8023,9 +8023,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00eb": {
+		'ë': {
 			HorizAdvX: 251,
-			Unicode:   "\u00eb",
+			Unicode:   'ë',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -8073,9 +8073,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ec": {
+		'ì': {
 			HorizAdvX: 180,
-			Unicode:   "\u00ec",
+			Unicode:   'ì',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -8112,9 +8112,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ed": {
+		'í': {
 			HorizAdvX: 180,
-			Unicode:   "\u00ed",
+			Unicode:   'í',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -8150,9 +8150,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ee": {
+		'î': {
 			HorizAdvX: 180,
-			Unicode:   "\u00ee",
+			Unicode:   'î',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -8186,9 +8186,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ef": {
+		'ï': {
 			HorizAdvX: 180,
-			Unicode:   "\u00ef",
+			Unicode:   'ï',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -8231,9 +8231,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f0": {
+		'ð': {
 			HorizAdvX: 280,
-			Unicode:   "\u00f0",
+			Unicode:   'ð',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{220, 184}},
@@ -8270,9 +8270,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f1": {
+		'ñ': {
 			HorizAdvX: 335,
-			Unicode:   "\u00f1",
+			Unicode:   'ñ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 286}},
@@ -8316,9 +8316,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f2": {
+		'ò': {
 			HorizAdvX: 288,
-			Unicode:   "\u00f2",
+			Unicode:   'ò',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -8364,9 +8364,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f3": {
+		'ó': {
 			HorizAdvX: 288,
-			Unicode:   "\u00f3",
+			Unicode:   'ó',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -8411,9 +8411,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f4": {
+		'ô': {
 			HorizAdvX: 288,
-			Unicode:   "\u00f4",
+			Unicode:   'ô',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -8456,9 +8456,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f5": {
+		'õ': {
 			HorizAdvX: 288,
-			Unicode:   "\u00f5",
+			Unicode:   'õ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -8504,9 +8504,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f6": {
+		'ö': {
 			HorizAdvX: 288,
-			Unicode:   "\u00f6",
+			Unicode:   'ö',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -8558,9 +8558,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f7": {
+		'÷': {
 			HorizAdvX: 360,
-			Unicode:   "\u00f7",
+			Unicode:   '÷',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{50, 241}},
@@ -8585,9 +8585,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f8": {
+		'ø': {
 			HorizAdvX: 291,
-			Unicode:   "\u00f8",
+			Unicode:   'ø',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{240, 325}},
@@ -8618,9 +8618,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00f9": {
+		'ù': {
 			HorizAdvX: 347,
-			Unicode:   "\u00f9",
+			Unicode:   'ù',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -8667,9 +8667,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fa": {
+		'ú': {
 			HorizAdvX: 371,
-			Unicode:   "\u00fa",
+			Unicode:   'ú',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -8715,9 +8715,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fb": {
+		'û': {
 			HorizAdvX: 347,
-			Unicode:   "\u00fb",
+			Unicode:   'û',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -8761,9 +8761,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fc": {
+		'ü': {
 			HorizAdvX: 347,
-			Unicode:   "\u00fc",
+			Unicode:   'ü',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -8816,9 +8816,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fd": {
+		'ý': {
 			HorizAdvX: 309,
-			Unicode:   "\u00fd",
+			Unicode:   'ý',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{310, 265}},
@@ -8868,9 +8868,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00fe": {
+		'þ': {
 			HorizAdvX: 309,
-			Unicode:   "\u00fe",
+			Unicode:   'þ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{73, 35}},
@@ -8897,9 +8897,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u00ff": {
+		'ÿ': {
 			HorizAdvX: 309,
-			Unicode:   "\u00ff",
+			Unicode:   'ÿ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{310, 265}},
@@ -8956,9 +8956,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0100": {
+		'Ā': {
 			HorizAdvX: 816,
-			Unicode:   "\u0100",
+			Unicode:   'Ā',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -9035,9 +9035,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0101": {
+		'ā': {
 			HorizAdvX: 0,
-			Unicode:   "\u0101",
+			Unicode:   'ā',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -9075,9 +9075,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0102": {
+		'Ă': {
 			HorizAdvX: 816,
-			Unicode:   "\u0102",
+			Unicode:   'Ă',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -9150,9 +9150,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0103": {
+		'ă': {
 			HorizAdvX: 0,
-			Unicode:   "\u0103",
+			Unicode:   'ă',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -9186,9 +9186,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0104": {
+		'Ą': {
 			HorizAdvX: 816,
-			Unicode:   "\u0104",
+			Unicode:   'Ą',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -9264,9 +9264,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0105": {
+		'ą': {
 			HorizAdvX: 0,
-			Unicode:   "\u0105",
+			Unicode:   'ą',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -9301,9 +9301,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0105,,": {
+		'ą': {
 			HorizAdvX: 485,
-			Unicode:   "\u0105,,",
+			Unicode:   'ą',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{272, 0}},
@@ -9343,9 +9343,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0106": {
+		'Ć': {
 			HorizAdvX: 524,
-			Unicode:   "\u0106",
+			Unicode:   'Ć',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 164}},
@@ -9387,9 +9387,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0107": {
+		'ć': {
 			HorizAdvX: 257,
-			Unicode:   "\u0107",
+			Unicode:   'ć',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -9419,9 +9419,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0107,,": {
+		'ć': {
 			HorizAdvX: 381,
-			Unicode:   "\u0107,,",
+			Unicode:   'ć',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{147, 0}},
@@ -9451,9 +9451,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0108": {
+		'Ĉ': {
 			HorizAdvX: 524,
-			Unicode:   "\u0108",
+			Unicode:   'Ĉ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 164}},
@@ -9493,9 +9493,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0109": {
+		'ĉ': {
 			HorizAdvX: 257,
-			Unicode:   "\u0109",
+			Unicode:   'ĉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -9523,9 +9523,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010a": {
+		'Ċ': {
 			HorizAdvX: 524,
-			Unicode:   "\u010a",
+			Unicode:   'Ċ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 164}},
@@ -9566,9 +9566,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010b": {
+		'ċ': {
 			HorizAdvX: 257,
-			Unicode:   "\u010b",
+			Unicode:   'ċ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -9597,9 +9597,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010c": {
+		'Č': {
 			HorizAdvX: 524,
-			Unicode:   "\u010c",
+			Unicode:   'Č',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 164}},
@@ -9639,9 +9639,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010d": {
+		'č': {
 			HorizAdvX: 257,
-			Unicode:   "\u010d",
+			Unicode:   'č',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -9669,9 +9669,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010e": {
+		'Ď': {
 			HorizAdvX: 843,
-			Unicode:   "\u010e",
+			Unicode:   'Ď',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{646, 524}},
@@ -9720,9 +9720,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u010f": {
+		'ď': {
 			HorizAdvX: 329,
-			Unicode:   "\u010f",
+			Unicode:   'ď',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 286}},
@@ -9764,9 +9764,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0110": {
+		'Đ': {
 			HorizAdvX: 843,
-			Unicode:   "\u0110",
+			Unicode:   'Đ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{476, 396}},
@@ -9820,9 +9820,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0111": {
+		'đ': {
 			HorizAdvX: 326,
-			Unicode:   "\u0111",
+			Unicode:   'đ',
 			GerberLP:  "dccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{148, 349}},
@@ -9874,9 +9874,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0112": {
+		'Ē': {
 			HorizAdvX: 492,
-			Unicode:   "\u0112",
+			Unicode:   'Ē',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -9932,9 +9932,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0113": {
+		'ē': {
 			HorizAdvX: 251,
-			Unicode:   "\u0113",
+			Unicode:   'ē',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -9976,9 +9976,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0114": {
+		'Ĕ': {
 			HorizAdvX: 492,
-			Unicode:   "\u0114",
+			Unicode:   'Ĕ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -10031,9 +10031,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0115": {
+		'ĕ': {
 			HorizAdvX: 251,
-			Unicode:   "\u0115",
+			Unicode:   'ĕ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{189, 286}},
@@ -10071,9 +10071,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0116": {
+		'Ė': {
 			HorizAdvX: 492,
-			Unicode:   "\u0116",
+			Unicode:   'Ė',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -10127,9 +10127,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0117": {
+		'ė': {
 			HorizAdvX: 251,
-			Unicode:   "\u0117",
+			Unicode:   'ė',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -10169,9 +10169,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0118": {
+		'Ę': {
 			HorizAdvX: 492,
-			Unicode:   "\u0118",
+			Unicode:   'Ę',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -10225,9 +10225,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0119": {
+		'ę': {
 			HorizAdvX: 251,
-			Unicode:   "\u0119",
+			Unicode:   'ę',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -10267,9 +10267,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0119,,": {
+		'ę': {
 			HorizAdvX: 383,
-			Unicode:   "\u0119,,",
+			Unicode:   'ę',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{156, 14}},
@@ -10310,9 +10310,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011a": {
+		'Ě': {
 			HorizAdvX: 492,
-			Unicode:   "\u011a",
+			Unicode:   'Ě',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -10365,9 +10365,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011b": {
+		'ě': {
 			HorizAdvX: 251,
-			Unicode:   "\u011b",
+			Unicode:   'ě',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -10406,9 +10406,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011c": {
+		'Ĝ': {
 			HorizAdvX: 585,
-			Unicode:   "\u011c",
+			Unicode:   'Ĝ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{424, 581}},
@@ -10463,9 +10463,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011d": {
+		'ĝ': {
 			HorizAdvX: 293,
-			Unicode:   "\u011d",
+			Unicode:   'ĝ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 286}},
@@ -10511,9 +10511,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011e": {
+		'Ğ': {
 			HorizAdvX: 585,
-			Unicode:   "\u011e",
+			Unicode:   'Ğ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{424, 581}},
@@ -10567,9 +10567,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u011f": {
+		'ğ': {
 			HorizAdvX: 293,
-			Unicode:   "\u011f",
+			Unicode:   'ğ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 286}},
@@ -10614,9 +10614,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0120": {
+		'Ġ': {
 			HorizAdvX: 585,
-			Unicode:   "\u0120",
+			Unicode:   'Ġ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{424, 581}},
@@ -10672,9 +10672,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0121": {
+		'ġ': {
 			HorizAdvX: 293,
-			Unicode:   "\u0121",
+			Unicode:   'ġ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 286}},
@@ -10721,9 +10721,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0122": {
+		'Ģ': {
 			HorizAdvX: 585,
-			Unicode:   "\u0122",
+			Unicode:   'Ģ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{424, 581}},
@@ -10782,9 +10782,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0123": {
+		'ģ': {
 			HorizAdvX: 293,
-			Unicode:   "\u0123",
+			Unicode:   'ģ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 286}},
@@ -10834,9 +10834,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0124": {
+		'Ĥ': {
 			HorizAdvX: 843,
-			Unicode:   "\u0124",
+			Unicode:   'Ĥ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{747, 14}},
@@ -10922,9 +10922,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0125": {
+		'ĥ': {
 			HorizAdvX: 310,
-			Unicode:   "\u0125",
+			Unicode:   'ĥ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 461}},
@@ -10967,9 +10967,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0126": {
+		'Ħ': {
 			HorizAdvX: 843,
-			Unicode:   "\u0126",
+			Unicode:   'Ħ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{596, 581}},
@@ -11064,9 +11064,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0127": {
+		'ħ': {
 			HorizAdvX: 305,
-			Unicode:   "\u0127",
+			Unicode:   'ħ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{174, 461}},
@@ -11112,9 +11112,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0128": {
+		'Ĩ': {
 			HorizAdvX: 500,
-			Unicode:   "\u0128",
+			Unicode:   'Ĩ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -11161,9 +11161,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0129": {
+		'ĩ': {
 			HorizAdvX: 180,
-			Unicode:   "\u0129",
+			Unicode:   'ĩ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -11200,9 +11200,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012a": {
+		'Ī': {
 			HorizAdvX: 500,
-			Unicode:   "\u012a",
+			Unicode:   'Ī',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -11249,9 +11249,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012b": {
+		'ī': {
 			HorizAdvX: 181,
-			Unicode:   "\u012b",
+			Unicode:   'ī',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{138, 260}},
@@ -11291,9 +11291,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012c": {
+		'Ĭ': {
 			HorizAdvX: 500,
-			Unicode:   "\u012c",
+			Unicode:   'Ĭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -11336,9 +11336,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012d": {
+		'ĭ': {
 			HorizAdvX: 180,
-			Unicode:   "\u012d",
+			Unicode:   'ĭ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -11371,9 +11371,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012e": {
+		'Į': {
 			HorizAdvX: 500,
-			Unicode:   "\u012e",
+			Unicode:   'Į',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -11420,9 +11420,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u012f": {
+		'į': {
 			HorizAdvX: 181,
-			Unicode:   "\u012f",
+			Unicode:   'į',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -11467,9 +11467,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0130": {
+		'İ': {
 			HorizAdvX: 500,
-			Unicode:   "\u0130",
+			Unicode:   'İ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -11514,9 +11514,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0131": {
+		'ı': {
 			HorizAdvX: 180,
-			Unicode:   "\u0131",
+			Unicode:   'ı',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -11543,9 +11543,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0133": {
+		'ĳ': {
 			HorizAdvX: 401,
-			Unicode:   "\u0133",
+			Unicode:   'ĳ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{222, -308}},
@@ -11607,9 +11607,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0134": {
+		'Ĵ': {
 			HorizAdvX: 562,
-			Unicode:   "\u0134",
+			Unicode:   'Ĵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{146, 453}},
@@ -11652,9 +11652,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0135": {
+		'ĵ': {
 			HorizAdvX: 137,
-			Unicode:   "\u0135",
+			Unicode:   'ĵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{139, 288}},
@@ -11682,9 +11682,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0136": {
+		'Ķ': {
 			HorizAdvX: 810,
-			Unicode:   "\u0136",
+			Unicode:   'Ķ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{569, 286}},
@@ -11755,9 +11755,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0137": {
+		'ķ': {
 			HorizAdvX: 290,
-			Unicode:   "\u0137",
+			Unicode:   'ķ',
 			GerberLP:  "dccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 260}},
@@ -11810,9 +11810,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0138": {
+		'ĸ': {
 			HorizAdvX: 290,
-			Unicode:   "\u0138",
+			Unicode:   'ĸ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{114, 289}},
@@ -11846,9 +11846,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0139": {
+		'Ĺ': {
 			HorizAdvX: 664,
-			Unicode:   "\u0139",
+			Unicode:   'Ĺ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{551, 0}},
@@ -11897,9 +11897,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013a": {
+		'ĺ': {
 			HorizAdvX: 242,
-			Unicode:   "\u013a",
+			Unicode:   'ĺ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 458}},
@@ -11939,9 +11939,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013b": {
+		'Ļ': {
 			HorizAdvX: 664,
-			Unicode:   "\u013b",
+			Unicode:   'Ļ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{551, 0}},
@@ -11992,9 +11992,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013c": {
+		'ļ': {
 			HorizAdvX: 242,
-			Unicode:   "\u013c",
+			Unicode:   'ļ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 458}},
@@ -12034,9 +12034,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013d": {
+		'Ľ': {
 			HorizAdvX: 664,
-			Unicode:   "\u013d",
+			Unicode:   'Ľ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{551, 0}},
@@ -12083,9 +12083,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013e": {
+		'ľ': {
 			HorizAdvX: 242,
-			Unicode:   "\u013e",
+			Unicode:   'ľ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 458}},
@@ -12123,9 +12123,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u013f": {
+		'Ŀ': {
 			HorizAdvX: 664,
-			Unicode:   "\u013f",
+			Unicode:   'Ŀ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{551, 0}},
@@ -12173,9 +12173,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0140": {
+		'ŀ': {
 			HorizAdvX: 242,
-			Unicode:   "\u0140",
+			Unicode:   'ŀ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 458}},
@@ -12214,9 +12214,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0141": {
+		'Ł': {
 			HorizAdvX: 664,
-			Unicode:   "\u0141",
+			Unicode:   'Ł',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{320, 336}},
@@ -12268,9 +12268,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0142": {
+		'ł': {
 			HorizAdvX: 242,
-			Unicode:   "\u0142",
+			Unicode:   'ł',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{72, 476}},
@@ -12313,9 +12313,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0142,,": {
+		'ł': {
 			HorizAdvX: 349,
-			Unicode:   "\u0142,,",
+			Unicode:   'ł',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{72, 476}},
@@ -12356,9 +12356,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0143": {
+		'Ń': {
 			HorizAdvX: 867,
-			Unicode:   "\u0143",
+			Unicode:   'Ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 455}},
@@ -12413,9 +12413,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0144": {
+		'ń': {
 			HorizAdvX: 335,
-			Unicode:   "\u0144",
+			Unicode:   'ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 286}},
@@ -12458,9 +12458,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0144,,": {
+		'ń': {
 			HorizAdvX: 485,
-			Unicode:   "\u0144,,",
+			Unicode:   'ń',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{266, 0}},
@@ -12503,9 +12503,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0145": {
+		'Ņ': {
 			HorizAdvX: 867,
-			Unicode:   "\u0145",
+			Unicode:   'Ņ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 455}},
@@ -12562,9 +12562,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0146": {
+		'ņ': {
 			HorizAdvX: 335,
-			Unicode:   "\u0146",
+			Unicode:   'ņ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 286}},
@@ -12607,9 +12607,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0147": {
+		'Ň': {
 			HorizAdvX: 867,
-			Unicode:   "\u0147",
+			Unicode:   'Ň',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 455}},
@@ -12662,9 +12662,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0148": {
+		'ň': {
 			HorizAdvX: 335,
-			Unicode:   "\u0148",
+			Unicode:   'ň',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 286}},
@@ -12705,9 +12705,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0149": {
+		'ŉ': {
 			HorizAdvX: 394,
-			Unicode:   "\u0149",
+			Unicode:   'ŉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{301, 286}},
@@ -12751,9 +12751,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014a": {
+		'Ŋ': {
 			HorizAdvX: 867,
-			Unicode:   "\u014a",
+			Unicode:   'Ŋ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{724, -79}},
@@ -12802,9 +12802,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014b": {
+		'ŋ': {
 			HorizAdvX: 335,
-			Unicode:   "\u014b",
+			Unicode:   'ŋ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{239, -82}},
@@ -12835,9 +12835,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014c": {
+		'Ō': {
 			HorizAdvX: 521,
-			Unicode:   "\u014c",
+			Unicode:   'Ō',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -12875,9 +12875,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014d": {
+		'ō': {
 			HorizAdvX: 288,
-			Unicode:   "\u014d",
+			Unicode:   'ō',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -12923,9 +12923,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014e": {
+		'Ŏ': {
 			HorizAdvX: 521,
-			Unicode:   "\u014e",
+			Unicode:   'Ŏ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -12959,9 +12959,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u014f": {
+		'ŏ': {
 			HorizAdvX: 288,
-			Unicode:   "\u014f",
+			Unicode:   'ŏ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -13003,9 +13003,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0150": {
+		'Ő': {
 			HorizAdvX: 521,
-			Unicode:   "\u0150",
+			Unicode:   'Ő',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -13049,9 +13049,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0151": {
+		'ő': {
 			HorizAdvX: 288,
-			Unicode:   "\u0151",
+			Unicode:   'ő',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -13103,9 +13103,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0153": {
+		'œ': {
 			HorizAdvX: 442,
-			Unicode:   "\u0153",
+			Unicode:   'œ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{380, 286}},
@@ -13148,9 +13148,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0154": {
+		'Ŕ': {
 			HorizAdvX: 978,
-			Unicode:   "\u0154",
+			Unicode:   'Ŕ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{864, 0}},
@@ -13220,9 +13220,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0155": {
+		'ŕ': {
 			HorizAdvX: 283,
-			Unicode:   "\u0155",
+			Unicode:   'ŕ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 286}},
@@ -13263,9 +13263,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0156": {
+		'Ŗ': {
 			HorizAdvX: 978,
-			Unicode:   "\u0156",
+			Unicode:   'Ŗ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{864, 0}},
@@ -13337,9 +13337,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0157": {
+		'ŗ': {
 			HorizAdvX: 283,
-			Unicode:   "\u0157",
+			Unicode:   'ŗ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 286}},
@@ -13382,9 +13382,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0158": {
+		'Ř': {
 			HorizAdvX: 978,
-			Unicode:   "\u0158",
+			Unicode:   'Ř',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{864, 0}},
@@ -13452,9 +13452,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0159": {
+		'ř': {
 			HorizAdvX: 283,
-			Unicode:   "\u0159",
+			Unicode:   'ř',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 286}},
@@ -13493,9 +13493,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015a": {
+		'Ś': {
 			HorizAdvX: 412,
-			Unicode:   "\u015a",
+			Unicode:   'Ś',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, 582}},
@@ -13542,9 +13542,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015b": {
+		'ś': {
 			HorizAdvX: 244,
-			Unicode:   "\u015b",
+			Unicode:   'ś',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 286}},
@@ -13581,9 +13581,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015c": {
+		'Ŝ': {
 			HorizAdvX: 412,
-			Unicode:   "\u015c",
+			Unicode:   'Ŝ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, 582}},
@@ -13628,9 +13628,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015d": {
+		'ŝ': {
 			HorizAdvX: 244,
-			Unicode:   "\u015d",
+			Unicode:   'ŝ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 286}},
@@ -13665,9 +13665,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015e": {
+		'Ş': {
 			HorizAdvX: 412,
-			Unicode:   "\u015e",
+			Unicode:   'Ş',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, 582}},
@@ -13716,9 +13716,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u015f": {
+		'ş': {
 			HorizAdvX: 238,
-			Unicode:   "\u015f",
+			Unicode:   'ş',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{135, 286}},
@@ -13756,9 +13756,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0160": {
+		'Š': {
 			HorizAdvX: 412,
-			Unicode:   "\u0160",
+			Unicode:   'Š',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, 582}},
@@ -13803,9 +13803,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0161": {
+		'š': {
 			HorizAdvX: 244,
-			Unicode:   "\u0161",
+			Unicode:   'š',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 286}},
@@ -13840,9 +13840,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0162": {
+		'Ţ': {
 			HorizAdvX: 656,
-			Unicode:   "\u0162",
+			Unicode:   'Ţ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 687}},
@@ -13900,9 +13900,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0163": {
+		'ţ': {
 			HorizAdvX: 248,
-			Unicode:   "\u0163",
+			Unicode:   'ţ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 458}},
@@ -13960,9 +13960,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0164": {
+		'Ť': {
 			HorizAdvX: 656,
-			Unicode:   "\u0164",
+			Unicode:   'Ť',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 687}},
@@ -14016,9 +14016,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0165": {
+		'ť': {
 			HorizAdvX: 262,
-			Unicode:   "\u0165",
+			Unicode:   'ť',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{202, 458}},
@@ -14074,9 +14074,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0166": {
+		'Ŧ': {
 			HorizAdvX: 656,
-			Unicode:   "\u0166",
+			Unicode:   'Ŧ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 687}},
@@ -14133,9 +14133,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0167": {
+		'ŧ': {
 			HorizAdvX: 248,
-			Unicode:   "\u0167",
+			Unicode:   'ŧ',
 			GerberLP:  "dcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 458}},
@@ -14194,9 +14194,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0168": {
+		'Ũ': {
 			HorizAdvX: 898,
-			Unicode:   "\u0168",
+			Unicode:   'Ũ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -14256,9 +14256,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0169": {
+		'ũ': {
 			HorizAdvX: 347,
-			Unicode:   "\u0169",
+			Unicode:   'ũ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -14305,9 +14305,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016a": {
+		'Ū': {
 			HorizAdvX: 898,
-			Unicode:   "\u016a",
+			Unicode:   'Ū',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -14367,9 +14367,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016b": {
+		'ū': {
 			HorizAdvX: 347,
-			Unicode:   "\u016b",
+			Unicode:   'ū',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -14416,9 +14416,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016c": {
+		'Ŭ': {
 			HorizAdvX: 898,
-			Unicode:   "\u016c",
+			Unicode:   'Ŭ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -14474,9 +14474,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016d": {
+		'ŭ': {
 			HorizAdvX: 347,
-			Unicode:   "\u016d",
+			Unicode:   'ŭ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -14519,9 +14519,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016e": {
+		'Ů': {
 			HorizAdvX: 898,
-			Unicode:   "\u016e",
+			Unicode:   'Ů',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -14583,9 +14583,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u016f": {
+		'ů': {
 			HorizAdvX: 347,
-			Unicode:   "\u016f",
+			Unicode:   'ů',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -14634,9 +14634,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0170": {
+		'Ű': {
 			HorizAdvX: 898,
-			Unicode:   "\u0170",
+			Unicode:   'Ű',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -14702,9 +14702,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0171": {
+		'ű': {
 			HorizAdvX: 347,
-			Unicode:   "\u0171",
+			Unicode:   'ű',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -14757,9 +14757,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0172": {
+		'Ų': {
 			HorizAdvX: 898,
-			Unicode:   "\u0172",
+			Unicode:   'Ų',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -14819,9 +14819,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0173": {
+		'ų': {
 			HorizAdvX: 331,
-			Unicode:   "\u0173",
+			Unicode:   'ų',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{66, 151}},
@@ -14866,9 +14866,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0174": {
+		'Ŵ': {
 			HorizAdvX: 997,
-			Unicode:   "\u0174",
+			Unicode:   'Ŵ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{995, 581}},
@@ -14934,9 +14934,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0175": {
+		'ŵ': {
 			HorizAdvX: 383,
-			Unicode:   "\u0175",
+			Unicode:   'ŵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{86, 286}},
@@ -14983,9 +14983,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0176": {
+		'Ŷ': {
 			HorizAdvX: 819,
-			Unicode:   "\u0176",
+			Unicode:   'Ŷ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{860, 581}},
@@ -15053,9 +15053,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0177": {
+		'ŷ': {
 			HorizAdvX: 309,
-			Unicode:   "\u0177",
+			Unicode:   'ŷ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{310, 265}},
@@ -15103,9 +15103,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0178": {
+		'Ÿ': {
 			HorizAdvX: 819,
-			Unicode:   "\u0178",
+			Unicode:   'Ÿ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{860, 581}},
@@ -15182,9 +15182,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0179": {
+		'Ź': {
 			HorizAdvX: 678,
-			Unicode:   "\u0179",
+			Unicode:   'Ź',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 5}},
@@ -15237,9 +15237,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017a": {
+		'ź': {
 			HorizAdvX: 267,
-			Unicode:   "\u017a",
+			Unicode:   'ź',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{263, 285}},
@@ -15276,9 +15276,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017a,,": {
+		'ź': {
 			HorizAdvX: 417,
-			Unicode:   "\u017a,,",
+			Unicode:   'ź',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{197, 14}},
@@ -15314,9 +15314,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017b": {
+		'Ż': {
 			HorizAdvX: 678,
-			Unicode:   "\u017b",
+			Unicode:   'Ż',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 5}},
@@ -15368,9 +15368,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017c": {
+		'ż': {
 			HorizAdvX: 267,
-			Unicode:   "\u017c",
+			Unicode:   'ż',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{263, 285}},
@@ -15406,9 +15406,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017c,,": {
+		'ż': {
 			HorizAdvX: 417,
-			Unicode:   "\u017c,,",
+			Unicode:   'ż',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{197, 14}},
@@ -15443,9 +15443,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017d": {
+		'Ž': {
 			HorizAdvX: 678,
-			Unicode:   "\u017d",
+			Unicode:   'Ž',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 5}},
@@ -15496,9 +15496,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u017e": {
+		'ž': {
 			HorizAdvX: 267,
-			Unicode:   "\u017e",
+			Unicode:   'ž',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{263, 285}},
@@ -15533,9 +15533,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01cd": {
+		'Ǎ': {
 			HorizAdvX: 816,
-			Unicode:   "\u01cd",
+			Unicode:   'Ǎ',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -15609,9 +15609,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ce": {
+		'ǎ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01ce",
+			Unicode:   'ǎ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -15646,9 +15646,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01cf": {
+		'Ǐ': {
 			HorizAdvX: 500,
-			Unicode:   "\u01cf",
+			Unicode:   'Ǐ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -15692,9 +15692,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d0": {
+		'ǐ': {
 			HorizAdvX: 180,
-			Unicode:   "\u01d0",
+			Unicode:   'ǐ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -15728,9 +15728,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d1": {
+		'Ǒ': {
 			HorizAdvX: 521,
-			Unicode:   "\u01d1",
+			Unicode:   'Ǒ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -15765,9 +15765,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d2": {
+		'ǒ': {
 			HorizAdvX: 288,
-			Unicode:   "\u01d2",
+			Unicode:   'ǒ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -15810,9 +15810,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d3": {
+		'Ǔ': {
 			HorizAdvX: 898,
-			Unicode:   "\u01d3",
+			Unicode:   'Ǔ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -15869,9 +15869,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d4": {
+		'ǔ': {
 			HorizAdvX: 347,
-			Unicode:   "\u01d4",
+			Unicode:   'ǔ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -15915,9 +15915,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d5": {
+		'Ǖ': {
 			HorizAdvX: 898,
-			Unicode:   "\u01d5",
+			Unicode:   'Ǖ',
 			GerberLP:  "dcddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -15993,9 +15993,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d6": {
+		'ǖ': {
 			HorizAdvX: 347,
-			Unicode:   "\u01d6",
+			Unicode:   'ǖ',
 			GerberLP:  "ddcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -16058,9 +16058,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d7": {
+		'Ǘ': {
 			HorizAdvX: 898,
-			Unicode:   "\u01d7",
+			Unicode:   'Ǘ',
 			GerberLP:  "dcddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -16135,9 +16135,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d8": {
+		'ǘ': {
 			HorizAdvX: 347,
-			Unicode:   "\u01d8",
+			Unicode:   'ǘ',
 			GerberLP:  "ddcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -16199,9 +16199,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01d9": {
+		'Ǚ': {
 			HorizAdvX: 898,
-			Unicode:   "\u01d9",
+			Unicode:   'Ǚ',
 			GerberLP:  "dcddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -16274,9 +16274,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01da": {
+		'ǚ': {
 			HorizAdvX: 347,
-			Unicode:   "\u01da",
+			Unicode:   'ǚ',
 			GerberLP:  "ddcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -16336,9 +16336,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01db": {
+		'Ǜ': {
 			HorizAdvX: 898,
-			Unicode:   "\u01db",
+			Unicode:   'Ǜ',
 			GerberLP:  "dcddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -16414,9 +16414,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01dc": {
+		'ǜ': {
 			HorizAdvX: 347,
-			Unicode:   "\u01dc",
+			Unicode:   'ǜ',
 			GerberLP:  "ddcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -16479,9 +16479,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01de": {
+		'Ǟ': {
 			HorizAdvX: 816,
-			Unicode:   "\u01de",
+			Unicode:   'Ǟ',
 			GerberLP:  "dcdcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -16574,9 +16574,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01df": {
+		'ǟ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01df",
+			Unicode:   'ǟ',
 			GerberLP:  "dcddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -16630,9 +16630,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e0": {
+		'Ǡ': {
 			HorizAdvX: 836,
-			Unicode:   "\u01e0",
+			Unicode:   'Ǡ',
 			GerberLP:  "dcdcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -16717,9 +16717,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e1": {
+		'ǡ': {
 			HorizAdvX: 341,
-			Unicode:   "\u01e1",
+			Unicode:   'ǡ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -16765,9 +16765,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e3": {
+		'ǣ': {
 			HorizAdvX: 442,
-			Unicode:   "\u01e3",
+			Unicode:   'ǣ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{378, 286}},
@@ -16819,9 +16819,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e4": {
+		'Ǥ': {
 			HorizAdvX: 585,
-			Unicode:   "\u01e4",
+			Unicode:   'Ǥ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{424, 581}},
@@ -16879,9 +16879,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e5": {
+		'ǥ': {
 			HorizAdvX: 279,
-			Unicode:   "\u01e5",
+			Unicode:   'ǥ',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{173, 286}},
@@ -16929,9 +16929,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e6": {
+		'Ǧ': {
 			HorizAdvX: 585,
-			Unicode:   "\u01e6",
+			Unicode:   'Ǧ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{424, 581}},
@@ -16986,9 +16986,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e7": {
+		'ǧ': {
 			HorizAdvX: 293,
-			Unicode:   "\u01e7",
+			Unicode:   'ǧ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 286}},
@@ -17034,9 +17034,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e8": {
+		'Ǩ': {
 			HorizAdvX: 810,
-			Unicode:   "\u01e8",
+			Unicode:   'Ǩ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{569, 286}},
@@ -17103,9 +17103,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01e9": {
+		'ǩ': {
 			HorizAdvX: 290,
-			Unicode:   "\u01e9",
+			Unicode:   'ǩ',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 260}},
@@ -17154,9 +17154,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ea": {
+		'Ǫ': {
 			HorizAdvX: 521,
-			Unicode:   "\u01ea",
+			Unicode:   'Ǫ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -17194,9 +17194,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01eb": {
+		'ǫ': {
 			HorizAdvX: 288,
-			Unicode:   "\u01eb",
+			Unicode:   'ǫ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -17242,9 +17242,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ec": {
+		'Ǭ': {
 			HorizAdvX: 521,
-			Unicode:   "\u01ec",
+			Unicode:   'Ǭ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{284, 0}},
@@ -17292,9 +17292,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ed": {
+		'ǭ': {
 			HorizAdvX: 288,
-			Unicode:   "\u01ed",
+			Unicode:   'ǭ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -17350,9 +17350,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01f4": {
+		'Ǵ': {
 			HorizAdvX: 585,
-			Unicode:   "\u01f4",
+			Unicode:   'Ǵ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{424, 581}},
@@ -17409,9 +17409,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01f5": {
+		'ǵ': {
 			HorizAdvX: 293,
-			Unicode:   "\u01f5",
+			Unicode:   'ǵ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 286}},
@@ -17459,9 +17459,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01f8": {
+		'Ǹ': {
 			HorizAdvX: 867,
-			Unicode:   "\u01f8",
+			Unicode:   'Ǹ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 455}},
@@ -17517,9 +17517,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01f9": {
+		'ǹ': {
 			HorizAdvX: 335,
-			Unicode:   "\u01f9",
+			Unicode:   'ǹ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 286}},
@@ -17563,9 +17563,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fa": {
+		'Ǻ': {
 			HorizAdvX: 816,
-			Unicode:   "\u01fa",
+			Unicode:   'Ǻ',
 			GerberLP:  "dddccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -17653,9 +17653,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fb": {
+		'ǻ': {
 			HorizAdvX: 0,
-			Unicode:   "\u01fb",
+			Unicode:   'ǻ',
 			GerberLP:  "dcddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -17704,9 +17704,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fd": {
+		'ǽ': {
 			HorizAdvX: 442,
-			Unicode:   "\u01fd",
+			Unicode:   'ǽ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{378, 286}},
@@ -17757,9 +17757,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01fe": {
+		'Ǿ': {
 			HorizAdvX: 506,
-			Unicode:   "\u01fe",
+			Unicode:   'Ǿ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{474, 578}},
@@ -17801,9 +17801,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u01ff": {
+		'ǿ': {
 			HorizAdvX: 291,
-			Unicode:   "\u01ff",
+			Unicode:   'ǿ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{240, 325}},
@@ -17843,9 +17843,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0200": {
+		'Ȁ': {
 			HorizAdvX: 816,
-			Unicode:   "\u0200",
+			Unicode:   'Ȁ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -17932,9 +17932,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0201": {
+		'ȁ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0201",
+			Unicode:   'ȁ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -17982,9 +17982,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0202": {
+		'Ȃ': {
 			HorizAdvX: 816,
-			Unicode:   "\u0202",
+			Unicode:   'Ȃ',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -18057,9 +18057,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0203": {
+		'ȃ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0203",
+			Unicode:   'ȃ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -18093,9 +18093,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0204": {
+		'Ȅ': {
 			HorizAdvX: 492,
-			Unicode:   "\u0204",
+			Unicode:   'Ȅ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -18161,9 +18161,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0205": {
+		'ȅ': {
 			HorizAdvX: 251,
-			Unicode:   "\u0205",
+			Unicode:   'ȅ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -18215,9 +18215,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0206": {
+		'Ȇ': {
 			HorizAdvX: 492,
-			Unicode:   "\u0206",
+			Unicode:   'Ȇ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -18269,9 +18269,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0207": {
+		'ȇ': {
 			HorizAdvX: 251,
-			Unicode:   "\u0207",
+			Unicode:   'ȇ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -18309,9 +18309,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0208": {
+		'Ȉ': {
 			HorizAdvX: 500,
-			Unicode:   "\u0208",
+			Unicode:   'Ȉ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -18368,9 +18368,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0209": {
+		'ȉ': {
 			HorizAdvX: 180,
-			Unicode:   "\u0209",
+			Unicode:   'ȉ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -18417,9 +18417,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020a": {
+		'Ȋ': {
 			HorizAdvX: 500,
-			Unicode:   "\u020a",
+			Unicode:   'Ȋ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -18462,9 +18462,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020b": {
+		'ȋ': {
 			HorizAdvX: 180,
-			Unicode:   "\u020b",
+			Unicode:   'ȋ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -18497,9 +18497,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020c": {
+		'Ȍ': {
 			HorizAdvX: 521,
-			Unicode:   "\u020c",
+			Unicode:   'Ȍ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -18547,9 +18547,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020d": {
+		'ȍ': {
 			HorizAdvX: 288,
-			Unicode:   "\u020d",
+			Unicode:   'ȍ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -18605,9 +18605,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020e": {
+		'Ȏ': {
 			HorizAdvX: 521,
-			Unicode:   "\u020e",
+			Unicode:   'Ȏ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -18641,9 +18641,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u020f": {
+		'ȏ': {
 			HorizAdvX: 288,
-			Unicode:   "\u020f",
+			Unicode:   'ȏ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -18685,9 +18685,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0210": {
+		'Ȑ': {
 			HorizAdvX: 978,
-			Unicode:   "\u0210",
+			Unicode:   'Ȑ',
 			GerberLP:  "dcddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{864, 0}},
@@ -18768,9 +18768,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0211": {
+		'ȑ': {
 			HorizAdvX: 283,
-			Unicode:   "\u0211",
+			Unicode:   'ȑ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 286}},
@@ -18822,9 +18822,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0212": {
+		'Ȓ': {
 			HorizAdvX: 978,
-			Unicode:   "\u0212",
+			Unicode:   'Ȓ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{864, 0}},
@@ -18891,9 +18891,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0213": {
+		'ȓ': {
 			HorizAdvX: 283,
-			Unicode:   "\u0213",
+			Unicode:   'ȓ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 286}},
@@ -18931,9 +18931,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0214": {
+		'Ȕ': {
 			HorizAdvX: 898,
-			Unicode:   "\u0214",
+			Unicode:   'Ȕ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -19003,9 +19003,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0215": {
+		'ȕ': {
 			HorizAdvX: 347,
-			Unicode:   "\u0215",
+			Unicode:   'ȕ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -19062,9 +19062,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0216": {
+		'Ȗ': {
 			HorizAdvX: 898,
-			Unicode:   "\u0216",
+			Unicode:   'Ȗ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -19120,9 +19120,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0217": {
+		'ȗ': {
 			HorizAdvX: 347,
-			Unicode:   "\u0217",
+			Unicode:   'ȗ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -19165,9 +19165,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0218": {
+		'Ș': {
 			HorizAdvX: 412,
-			Unicode:   "\u0218",
+			Unicode:   'Ș',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, 582}},
@@ -19214,9 +19214,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0219": {
+		'ș': {
 			HorizAdvX: 244,
-			Unicode:   "\u0219",
+			Unicode:   'ș',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 286}},
@@ -19253,9 +19253,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021a": {
+		'Ț': {
 			HorizAdvX: 656,
-			Unicode:   "\u021a",
+			Unicode:   'Ț',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 687}},
@@ -19311,9 +19311,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021b": {
+		'ț': {
 			HorizAdvX: 262,
-			Unicode:   "\u021b",
+			Unicode:   'ț',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{202, 458}},
@@ -19371,9 +19371,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021e": {
+		'Ȟ': {
 			HorizAdvX: 843,
-			Unicode:   "\u021e",
+			Unicode:   'Ȟ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{747, 14}},
@@ -19459,9 +19459,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u021f": {
+		'ȟ': {
 			HorizAdvX: 310,
-			Unicode:   "\u021f",
+			Unicode:   'ȟ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 461}},
@@ -19504,9 +19504,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0226": {
+		'Ȧ': {
 			HorizAdvX: 816,
-			Unicode:   "\u0226",
+			Unicode:   'Ȧ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -19581,9 +19581,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0227": {
+		'ȧ': {
 			HorizAdvX: 0,
-			Unicode:   "\u0227",
+			Unicode:   'ȧ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -19619,9 +19619,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0228": {
+		'Ȩ': {
 			HorizAdvX: 492,
-			Unicode:   "\u0228",
+			Unicode:   'Ȩ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -19678,9 +19678,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0229": {
+		'ȩ': {
 			HorizAdvX: 251,
-			Unicode:   "\u0229",
+			Unicode:   'ȩ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -19723,9 +19723,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u022a": {
+		'Ȫ': {
 			HorizAdvX: 521,
-			Unicode:   "\u022a",
+			Unicode:   'Ȫ',
 			GerberLP:  "dddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -19779,9 +19779,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u022b": {
+		'ȫ': {
 			HorizAdvX: 288,
-			Unicode:   "\u022b",
+			Unicode:   'ȫ',
 			GerberLP:  "ddcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -19843,9 +19843,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u022c": {
+		'Ȭ': {
 			HorizAdvX: 521,
-			Unicode:   "\u022c",
+			Unicode:   'Ȭ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -19893,9 +19893,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u022d": {
+		'ȭ': {
 			HorizAdvX: 288,
-			Unicode:   "\u022d",
+			Unicode:   'ȭ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -19951,9 +19951,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u022e": {
+		'Ȯ': {
 			HorizAdvX: 521,
-			Unicode:   "\u022e",
+			Unicode:   'Ȯ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -19989,9 +19989,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u022f": {
+		'ȯ': {
 			HorizAdvX: 288,
-			Unicode:   "\u022f",
+			Unicode:   'ȯ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -20035,9 +20035,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0230": {
+		'Ȱ': {
 			HorizAdvX: 521,
-			Unicode:   "\u0230",
+			Unicode:   'Ȱ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -20083,9 +20083,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0231": {
+		'ȱ': {
 			HorizAdvX: 288,
-			Unicode:   "\u0231",
+			Unicode:   'ȱ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -20139,9 +20139,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0232": {
+		'Ȳ': {
 			HorizAdvX: 819,
-			Unicode:   "\u0232",
+			Unicode:   'Ȳ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{860, 581}},
@@ -20212,9 +20212,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0233": {
+		'ȳ': {
 			HorizAdvX: 309,
-			Unicode:   "\u0233",
+			Unicode:   'ȳ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{310, 265}},
@@ -20265,9 +20265,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c6": {
+		'ˆ': {
 			HorizAdvX: 220,
-			Unicode:   "\u02c6",
+			Unicode:   'ˆ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{142, 496}},
@@ -20279,9 +20279,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02c7": {
+		'ˇ': {
 			HorizAdvX: 220,
-			Unicode:   "\u02c7",
+			Unicode:   'ˇ',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 365}},
@@ -20293,9 +20293,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d8": {
+		'˘': {
 			HorizAdvX: 220,
-			Unicode:   "\u02d8",
+			Unicode:   '˘',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{4, 485}},
@@ -20306,9 +20306,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02d9": {
+		'˙': {
 			HorizAdvX: 289,
-			Unicode:   "\u02d9",
+			Unicode:   '˙',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{164, 450}},
@@ -20321,9 +20321,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02da": {
+		'˚': {
 			HorizAdvX: 220,
-			Unicode:   "\u02da",
+			Unicode:   '˚',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{58, 437}},
@@ -20340,9 +20340,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02db": {
+		'˛': {
 			HorizAdvX: 287,
-			Unicode:   "\u02db",
+			Unicode:   '˛',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{222, 6}},
@@ -20357,9 +20357,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dc": {
+		'˜': {
 			HorizAdvX: 269,
-			Unicode:   "\u02dc",
+			Unicode:   '˜',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{19, 438}},
@@ -20374,9 +20374,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u02dd": {
+		'˝': {
 			HorizAdvX: 269,
-			Unicode:   "\u02dd",
+			Unicode:   '˝',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{231, 529}},
@@ -20397,9 +20397,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u030f": {
+		'̏': {
 			HorizAdvX: 252,
-			Unicode:   "\u030f",
+			Unicode:   '̏',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{254, 571}},
@@ -20424,9 +20424,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u0311": {
+		'̑': {
 			HorizAdvX: 220,
-			Unicode:   "\u0311",
+			Unicode:   '̑',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{221, 364}},
@@ -20437,9 +20437,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e00": {
+		'Ḁ': {
 			HorizAdvX: 816,
-			Unicode:   "\u1e00",
+			Unicode:   'Ḁ',
 			GerberLP:  "ddccc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -20518,9 +20518,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e01": {
+		'ḁ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1e01",
+			Unicode:   'ḁ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -20560,9 +20560,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e02": {
+		'Ḃ': {
 			HorizAdvX: 966,
-			Unicode:   "\u1e02",
+			Unicode:   'Ḃ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 608}},
@@ -20632,9 +20632,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e03": {
+		'ḃ': {
 			HorizAdvX: 267,
-			Unicode:   "\u1e03",
+			Unicode:   'ḃ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{166, 466}},
@@ -20672,9 +20672,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e04": {
+		'Ḅ': {
 			HorizAdvX: 966,
-			Unicode:   "\u1e04",
+			Unicode:   'Ḅ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 608}},
@@ -20744,9 +20744,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e05": {
+		'ḅ': {
 			HorizAdvX: 267,
-			Unicode:   "\u1e05",
+			Unicode:   'ḅ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{166, 466}},
@@ -20784,9 +20784,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e06": {
+		'Ḇ': {
 			HorizAdvX: 966,
-			Unicode:   "\u1e06",
+			Unicode:   'Ḇ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 608}},
@@ -20858,9 +20858,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e07": {
+		'ḇ': {
 			HorizAdvX: 267,
-			Unicode:   "\u1e07",
+			Unicode:   'ḇ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{166, 466}},
@@ -20900,9 +20900,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e08": {
+		'Ḉ': {
 			HorizAdvX: 524,
-			Unicode:   "\u1e08",
+			Unicode:   'Ḉ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 164}},
@@ -20953,9 +20953,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e09": {
+		'ḉ': {
 			HorizAdvX: 257,
-			Unicode:   "\u1e09",
+			Unicode:   'ḉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -20994,9 +20994,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0a": {
+		'Ḋ': {
 			HorizAdvX: 843,
-			Unicode:   "\u1e0a",
+			Unicode:   'Ḋ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{646, 524}},
@@ -21046,9 +21046,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0b": {
+		'ḋ': {
 			HorizAdvX: 329,
-			Unicode:   "\u1e0b",
+			Unicode:   'ḋ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{174, 286}},
@@ -21091,9 +21091,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0c": {
+		'Ḍ': {
 			HorizAdvX: 843,
-			Unicode:   "\u1e0c",
+			Unicode:   'Ḍ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{646, 524}},
@@ -21143,9 +21143,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0d": {
+		'ḍ': {
 			HorizAdvX: 329,
-			Unicode:   "\u1e0d",
+			Unicode:   'ḍ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 286}},
@@ -21188,9 +21188,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0e": {
+		'Ḏ': {
 			HorizAdvX: 843,
-			Unicode:   "\u1e0e",
+			Unicode:   'Ḏ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{646, 524}},
@@ -21242,9 +21242,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e0f": {
+		'ḏ': {
 			HorizAdvX: 329,
-			Unicode:   "\u1e0f",
+			Unicode:   'ḏ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 286}},
@@ -21289,9 +21289,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e10": {
+		'Ḑ': {
 			HorizAdvX: 843,
-			Unicode:   "\u1e10",
+			Unicode:   'Ḑ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{646, 524}},
@@ -21344,9 +21344,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e11": {
+		'ḑ': {
 			HorizAdvX: 329,
-			Unicode:   "\u1e11",
+			Unicode:   'ḑ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 286}},
@@ -21392,9 +21392,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e12": {
+		'Ḓ': {
 			HorizAdvX: 843,
-			Unicode:   "\u1e12",
+			Unicode:   'Ḓ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{646, 524}},
@@ -21443,9 +21443,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e13": {
+		'ḓ': {
 			HorizAdvX: 329,
-			Unicode:   "\u1e13",
+			Unicode:   'ḓ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 286}},
@@ -21487,9 +21487,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e14": {
+		'Ḕ': {
 			HorizAdvX: 492,
-			Unicode:   "\u1e14",
+			Unicode:   'Ḕ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -21555,9 +21555,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e15": {
+		'ḕ': {
 			HorizAdvX: 251,
-			Unicode:   "\u1e15",
+			Unicode:   'ḕ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -21609,9 +21609,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e16": {
+		'Ḗ': {
 			HorizAdvX: 492,
-			Unicode:   "\u1e16",
+			Unicode:   'Ḗ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -21676,9 +21676,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e17": {
+		'ḗ': {
 			HorizAdvX: 251,
-			Unicode:   "\u1e17",
+			Unicode:   'ḗ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -21729,9 +21729,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e18": {
+		'Ḙ': {
 			HorizAdvX: 492,
-			Unicode:   "\u1e18",
+			Unicode:   'Ḙ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -21784,9 +21784,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e19": {
+		'ḙ': {
 			HorizAdvX: 251,
-			Unicode:   "\u1e19",
+			Unicode:   'ḙ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -21825,9 +21825,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e1a": {
+		'Ḛ': {
 			HorizAdvX: 492,
-			Unicode:   "\u1e1a",
+			Unicode:   'Ḛ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -21883,9 +21883,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e1b": {
+		'ḛ': {
 			HorizAdvX: 251,
-			Unicode:   "\u1e1b",
+			Unicode:   'ḛ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -21927,9 +21927,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e1c": {
+		'Ḝ': {
 			HorizAdvX: 492,
-			Unicode:   "\u1e1c",
+			Unicode:   'Ḝ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -21992,9 +21992,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e1d": {
+		'ḝ': {
 			HorizAdvX: 251,
-			Unicode:   "\u1e1d",
+			Unicode:   'ḝ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -22043,9 +22043,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e1e": {
+		'Ḟ': {
 			HorizAdvX: 794,
-			Unicode:   "\u1e1e",
+			Unicode:   'Ḟ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{486, 442}},
@@ -22102,9 +22102,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e1f": {
+		'ḟ': {
 			HorizAdvX: 149,
-			Unicode:   "\u1e1f",
+			Unicode:   'ḟ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{44, 128}},
@@ -22138,9 +22138,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e20": {
+		'Ḡ': {
 			HorizAdvX: 585,
-			Unicode:   "\u1e20",
+			Unicode:   'Ḡ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{424, 581}},
@@ -22198,9 +22198,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e21": {
+		'ḡ': {
 			HorizAdvX: 293,
-			Unicode:   "\u1e21",
+			Unicode:   'ḡ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{182, 286}},
@@ -22249,9 +22249,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e22": {
+		'Ḣ': {
 			HorizAdvX: 843,
-			Unicode:   "\u1e22",
+			Unicode:   'Ḣ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{747, 14}},
@@ -22338,9 +22338,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e23": {
+		'ḣ': {
 			HorizAdvX: 310,
-			Unicode:   "\u1e23",
+			Unicode:   'ḣ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 461}},
@@ -22384,9 +22384,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e24": {
+		'Ḥ': {
 			HorizAdvX: 843,
-			Unicode:   "\u1e24",
+			Unicode:   'Ḥ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{747, 14}},
@@ -22473,9 +22473,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e25": {
+		'ḥ': {
 			HorizAdvX: 310,
-			Unicode:   "\u1e25",
+			Unicode:   'ḥ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 461}},
@@ -22519,9 +22519,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e26": {
+		'Ḧ': {
 			HorizAdvX: 843,
-			Unicode:   "\u1e26",
+			Unicode:   'Ḧ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{747, 14}},
@@ -22616,9 +22616,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e27": {
+		'ḧ': {
 			HorizAdvX: 310,
-			Unicode:   "\u1e27",
+			Unicode:   'ḧ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 461}},
@@ -22670,9 +22670,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e28": {
+		'Ḩ': {
 			HorizAdvX: 843,
-			Unicode:   "\u1e28",
+			Unicode:   'Ḩ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{747, 14}},
@@ -22762,9 +22762,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e29": {
+		'ḩ': {
 			HorizAdvX: 310,
-			Unicode:   "\u1e29",
+			Unicode:   'ḩ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 461}},
@@ -22811,9 +22811,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2a": {
+		'Ḫ': {
 			HorizAdvX: 843,
-			Unicode:   "\u1e2a",
+			Unicode:   'Ḫ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{747, 14}},
@@ -22898,9 +22898,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2b": {
+		'ḫ': {
 			HorizAdvX: 310,
-			Unicode:   "\u1e2b",
+			Unicode:   'ḫ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 461}},
@@ -22942,9 +22942,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2c": {
+		'Ḭ': {
 			HorizAdvX: 500,
-			Unicode:   "\u1e2c",
+			Unicode:   'Ḭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -22991,9 +22991,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2d": {
+		'ḭ': {
 			HorizAdvX: 181,
-			Unicode:   "\u1e2d",
+			Unicode:   'ḭ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -23040,9 +23040,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2e": {
+		'Ḯ': {
 			HorizAdvX: 500,
-			Unicode:   "\u1e2e",
+			Unicode:   'Ḯ',
 			GerberLP:  "dddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -23104,9 +23104,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e2f": {
+		'ḯ': {
 			HorizAdvX: 180,
-			Unicode:   "\u1e2f",
+			Unicode:   'ḯ',
 			GerberLP:  "ddcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -23158,9 +23158,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e30": {
+		'Ḱ': {
 			HorizAdvX: 810,
-			Unicode:   "\u1e30",
+			Unicode:   'Ḱ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{569, 286}},
@@ -23229,9 +23229,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e31": {
+		'ḱ': {
 			HorizAdvX: 290,
-			Unicode:   "\u1e31",
+			Unicode:   'ḱ',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{153, 260}},
@@ -23282,9 +23282,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e32": {
+		'Ḳ': {
 			HorizAdvX: 810,
-			Unicode:   "\u1e32",
+			Unicode:   'Ḳ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{569, 286}},
@@ -23352,9 +23352,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e33": {
+		'ḳ': {
 			HorizAdvX: 290,
-			Unicode:   "\u1e33",
+			Unicode:   'ḳ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 260}},
@@ -23404,9 +23404,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e34": {
+		'Ḵ': {
 			HorizAdvX: 810,
-			Unicode:   "\u1e34",
+			Unicode:   'Ḵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{569, 286}},
@@ -23476,9 +23476,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e35": {
+		'ḵ': {
 			HorizAdvX: 290,
-			Unicode:   "\u1e35",
+			Unicode:   'ḵ',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, 260}},
@@ -23530,9 +23530,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e36": {
+		'Ḷ': {
 			HorizAdvX: 664,
-			Unicode:   "\u1e36",
+			Unicode:   'Ḷ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{551, 0}},
@@ -23580,9 +23580,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e37": {
+		'ḷ': {
 			HorizAdvX: 242,
-			Unicode:   "\u1e37",
+			Unicode:   'ḷ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 458}},
@@ -23621,9 +23621,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e38": {
+		'Ḹ': {
 			HorizAdvX: 664,
-			Unicode:   "\u1e38",
+			Unicode:   'Ḹ',
 			GerberLP:  "dccdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{548, 0}},
@@ -23681,9 +23681,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e39": {
+		'ḹ': {
 			HorizAdvX: 242,
-			Unicode:   "\u1e39",
+			Unicode:   'ḹ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{193, 458}},
@@ -23732,9 +23732,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e3a": {
+		'Ḻ': {
 			HorizAdvX: 664,
-			Unicode:   "\u1e3a",
+			Unicode:   'Ḻ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{551, 0}},
@@ -23784,9 +23784,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e3b": {
+		'ḻ': {
 			HorizAdvX: 242,
-			Unicode:   "\u1e3b",
+			Unicode:   'ḻ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 458}},
@@ -23827,9 +23827,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e3c": {
+		'Ḽ': {
 			HorizAdvX: 664,
-			Unicode:   "\u1e3c",
+			Unicode:   'Ḽ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{551, 0}},
@@ -23876,9 +23876,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e3d": {
+		'ḽ': {
 			HorizAdvX: 242,
-			Unicode:   "\u1e3d",
+			Unicode:   'ḽ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{194, 458}},
@@ -23916,9 +23916,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e3e": {
+		'Ḿ': {
 			HorizAdvX: 1241,
-			Unicode:   "\u1e3e",
+			Unicode:   'Ḿ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1126, 0}},
@@ -23993,9 +23993,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e3f": {
+		'ḿ': {
 			HorizAdvX: 472,
-			Unicode:   "\u1e3f",
+			Unicode:   'ḿ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, 286}},
@@ -24048,9 +24048,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e40": {
+		'Ṁ': {
 			HorizAdvX: 1241,
-			Unicode:   "\u1e40",
+			Unicode:   'Ṁ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1126, 0}},
@@ -24124,9 +24124,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e41": {
+		'ṁ': {
 			HorizAdvX: 472,
-			Unicode:   "\u1e41",
+			Unicode:   'ṁ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, 286}},
@@ -24178,9 +24178,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e42": {
+		'Ṃ': {
 			HorizAdvX: 1241,
-			Unicode:   "\u1e42",
+			Unicode:   'Ṃ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{1126, 0}},
@@ -24254,9 +24254,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e43": {
+		'ṃ': {
 			HorizAdvX: 472,
-			Unicode:   "\u1e43",
+			Unicode:   'ṃ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{105, 286}},
@@ -24308,9 +24308,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e44": {
+		'Ṅ': {
 			HorizAdvX: 867,
-			Unicode:   "\u1e44",
+			Unicode:   'Ṅ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 455}},
@@ -24364,9 +24364,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e45": {
+		'ṅ': {
 			HorizAdvX: 335,
-			Unicode:   "\u1e45",
+			Unicode:   'ṅ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 286}},
@@ -24408,9 +24408,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e46": {
+		'Ṇ': {
 			HorizAdvX: 867,
-			Unicode:   "\u1e46",
+			Unicode:   'Ṇ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 455}},
@@ -24464,9 +24464,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e47": {
+		'ṇ': {
 			HorizAdvX: 335,
-			Unicode:   "\u1e47",
+			Unicode:   'ṇ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 286}},
@@ -24508,9 +24508,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e48": {
+		'Ṉ': {
 			HorizAdvX: 867,
-			Unicode:   "\u1e48",
+			Unicode:   'Ṉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 455}},
@@ -24566,9 +24566,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e49": {
+		'ṉ': {
 			HorizAdvX: 335,
-			Unicode:   "\u1e49",
+			Unicode:   'ṉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 286}},
@@ -24612,9 +24612,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e4a": {
+		'Ṋ': {
 			HorizAdvX: 867,
-			Unicode:   "\u1e4a",
+			Unicode:   'Ṋ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{127, 455}},
@@ -24667,9 +24667,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e4b": {
+		'ṋ': {
 			HorizAdvX: 335,
-			Unicode:   "\u1e4b",
+			Unicode:   'ṋ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{242, 286}},
@@ -24710,9 +24710,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e4c": {
+		'Ṍ': {
 			HorizAdvX: 521,
-			Unicode:   "\u1e4c",
+			Unicode:   'Ṍ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -24759,9 +24759,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e4d": {
+		'ṍ': {
 			HorizAdvX: 288,
-			Unicode:   "\u1e4d",
+			Unicode:   'ṍ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -24816,9 +24816,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e4e": {
+		'Ṏ': {
 			HorizAdvX: 521,
-			Unicode:   "\u1e4e",
+			Unicode:   'Ṏ',
 			GerberLP:  "dddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -24872,9 +24872,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e4f": {
+		'ṏ': {
 			HorizAdvX: 288,
-			Unicode:   "\u1e4f",
+			Unicode:   'ṏ',
 			GerberLP:  "ddcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -24936,9 +24936,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e50": {
+		'Ṑ': {
 			HorizAdvX: 521,
-			Unicode:   "\u1e50",
+			Unicode:   'Ṑ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -24986,9 +24986,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e51": {
+		'ṑ': {
 			HorizAdvX: 288,
-			Unicode:   "\u1e51",
+			Unicode:   'ṑ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -25044,9 +25044,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e52": {
+		'Ṓ': {
 			HorizAdvX: 521,
-			Unicode:   "\u1e52",
+			Unicode:   'Ṓ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -25093,9 +25093,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e53": {
+		'ṓ': {
 			HorizAdvX: 288,
-			Unicode:   "\u1e53",
+			Unicode:   'ṓ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -25150,9 +25150,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e54": {
+		'Ṕ': {
 			HorizAdvX: 848,
-			Unicode:   "\u1e54",
+			Unicode:   'Ṕ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{175, 688}},
@@ -25212,9 +25212,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e55": {
+		'ṕ': {
 			HorizAdvX: 309,
-			Unicode:   "\u1e55",
+			Unicode:   'ṕ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{309, 219}},
@@ -25268,9 +25268,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e56": {
+		'Ṗ': {
 			HorizAdvX: 848,
-			Unicode:   "\u1e56",
+			Unicode:   'Ṗ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{175, 688}},
@@ -25329,9 +25329,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e57": {
+		'ṗ': {
 			HorizAdvX: 309,
-			Unicode:   "\u1e57",
+			Unicode:   'ṗ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{309, 219}},
@@ -25384,9 +25384,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e58": {
+		'Ṙ': {
 			HorizAdvX: 978,
-			Unicode:   "\u1e58",
+			Unicode:   'Ṙ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{864, 0}},
@@ -25455,9 +25455,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e59": {
+		'ṙ': {
 			HorizAdvX: 283,
-			Unicode:   "\u1e59",
+			Unicode:   'ṙ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 286}},
@@ -25497,9 +25497,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5a": {
+		'Ṛ': {
 			HorizAdvX: 978,
-			Unicode:   "\u1e5a",
+			Unicode:   'Ṛ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{864, 0}},
@@ -25568,9 +25568,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5b": {
+		'ṛ': {
 			HorizAdvX: 283,
-			Unicode:   "\u1e5b",
+			Unicode:   'ṛ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 286}},
@@ -25610,9 +25610,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5c": {
+		'Ṝ': {
 			HorizAdvX: 978,
-			Unicode:   "\u1e5c",
+			Unicode:   'Ṝ',
 			GerberLP:  "dcddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{864, 0}},
@@ -25691,9 +25691,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5d": {
+		'ṝ': {
 			HorizAdvX: 283,
-			Unicode:   "\u1e5d",
+			Unicode:   'ṝ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{200, 286}},
@@ -25743,9 +25743,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5e": {
+		'Ṟ': {
 			HorizAdvX: 978,
-			Unicode:   "\u1e5e",
+			Unicode:   'Ṟ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{864, 0}},
@@ -25816,9 +25816,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e5f": {
+		'ṟ': {
 			HorizAdvX: 283,
-			Unicode:   "\u1e5f",
+			Unicode:   'ṟ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{199, 286}},
@@ -25860,9 +25860,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e60": {
+		'Ṡ': {
 			HorizAdvX: 412,
-			Unicode:   "\u1e60",
+			Unicode:   'Ṡ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, 582}},
@@ -25908,9 +25908,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e61": {
+		'ṡ': {
 			HorizAdvX: 244,
-			Unicode:   "\u1e61",
+			Unicode:   'ṡ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 286}},
@@ -25946,9 +25946,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e62": {
+		'Ṣ': {
 			HorizAdvX: 412,
-			Unicode:   "\u1e62",
+			Unicode:   'Ṣ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, 582}},
@@ -25994,9 +25994,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e63": {
+		'ṣ': {
 			HorizAdvX: 244,
-			Unicode:   "\u1e63",
+			Unicode:   'ṣ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 286}},
@@ -26032,9 +26032,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e64": {
+		'Ṥ': {
 			HorizAdvX: 412,
-			Unicode:   "\u1e64",
+			Unicode:   'Ṥ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, 582}},
@@ -26089,9 +26089,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e65": {
+		'ṥ': {
 			HorizAdvX: 244,
-			Unicode:   "\u1e65",
+			Unicode:   'ṥ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 286}},
@@ -26136,9 +26136,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e66": {
+		'Ṧ': {
 			HorizAdvX: 412,
-			Unicode:   "\u1e66",
+			Unicode:   'Ṧ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, 582}},
@@ -26191,9 +26191,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e67": {
+		'ṧ': {
 			HorizAdvX: 244,
-			Unicode:   "\u1e67",
+			Unicode:   'ṧ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 286}},
@@ -26236,9 +26236,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e68": {
+		'Ṩ': {
 			HorizAdvX: 412,
-			Unicode:   "\u1e68",
+			Unicode:   'Ṩ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{311, 582}},
@@ -26292,9 +26292,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e69": {
+		'ṩ': {
 			HorizAdvX: 244,
-			Unicode:   "\u1e69",
+			Unicode:   'ṩ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{140, 286}},
@@ -26338,9 +26338,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6a": {
+		'Ṫ': {
 			HorizAdvX: 656,
-			Unicode:   "\u1e6a",
+			Unicode:   'Ṫ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 687}},
@@ -26395,9 +26395,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6b": {
+		'ṫ': {
 			HorizAdvX: 262,
-			Unicode:   "\u1e6b",
+			Unicode:   'ṫ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{203, 458}},
@@ -26454,9 +26454,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6c": {
+		'Ṭ': {
 			HorizAdvX: 656,
-			Unicode:   "\u1e6c",
+			Unicode:   'Ṭ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 687}},
@@ -26511,9 +26511,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6d": {
+		'ṭ': {
 			HorizAdvX: 262,
-			Unicode:   "\u1e6d",
+			Unicode:   'ṭ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{202, 458}},
@@ -26570,9 +26570,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6e": {
+		'Ṯ': {
 			HorizAdvX: 656,
-			Unicode:   "\u1e6e",
+			Unicode:   'Ṯ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 687}},
@@ -26629,9 +26629,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e6f": {
+		'ṯ': {
 			HorizAdvX: 262,
-			Unicode:   "\u1e6f",
+			Unicode:   'ṯ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{202, 458}},
@@ -26690,9 +26690,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e70": {
+		'Ṱ': {
 			HorizAdvX: 656,
-			Unicode:   "\u1e70",
+			Unicode:   'Ṱ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{169, 687}},
@@ -26746,9 +26746,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e71": {
+		'ṱ': {
 			HorizAdvX: 262,
-			Unicode:   "\u1e71",
+			Unicode:   'ṱ',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{202, 458}},
@@ -26804,9 +26804,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e72": {
+		'Ṳ': {
 			HorizAdvX: 898,
-			Unicode:   "\u1e72",
+			Unicode:   'Ṳ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -26872,9 +26872,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e73": {
+		'ṳ': {
 			HorizAdvX: 347,
-			Unicode:   "\u1e73",
+			Unicode:   'ṳ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -26927,9 +26927,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e74": {
+		'Ṵ': {
 			HorizAdvX: 898,
-			Unicode:   "\u1e74",
+			Unicode:   'Ṵ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -26989,9 +26989,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e75": {
+		'ṵ': {
 			HorizAdvX: 347,
-			Unicode:   "\u1e75",
+			Unicode:   'ṵ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -27038,9 +27038,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e76": {
+		'Ṷ': {
 			HorizAdvX: 898,
-			Unicode:   "\u1e76",
+			Unicode:   'Ṷ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -27097,9 +27097,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e77": {
+		'ṷ': {
 			HorizAdvX: 347,
-			Unicode:   "\u1e77",
+			Unicode:   'ṷ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -27143,9 +27143,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e78": {
+		'Ṹ': {
 			HorizAdvX: 898,
-			Unicode:   "\u1e78",
+			Unicode:   'Ṹ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -27214,9 +27214,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e79": {
+		'ṹ': {
 			HorizAdvX: 347,
-			Unicode:   "\u1e79",
+			Unicode:   'ṹ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -27272,9 +27272,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e7a": {
+		'Ṻ': {
 			HorizAdvX: 898,
-			Unicode:   "\u1e7a",
+			Unicode:   'Ṻ',
 			GerberLP:  "dcddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -27350,9 +27350,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e7b": {
+		'ṻ': {
 			HorizAdvX: 347,
-			Unicode:   "\u1e7b",
+			Unicode:   'ṻ',
 			GerberLP:  "ddcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -27415,9 +27415,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e7c": {
+		'Ṽ': {
 			HorizAdvX: 370,
-			Unicode:   "\u1e7c",
+			Unicode:   'Ṽ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{104, 582}},
@@ -27468,9 +27468,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e7d": {
+		'ṽ': {
 			HorizAdvX: 294,
-			Unicode:   "\u1e7d",
+			Unicode:   'ṽ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{258, 287}},
@@ -27510,9 +27510,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e7e": {
+		'Ṿ': {
 			HorizAdvX: 370,
-			Unicode:   "\u1e7e",
+			Unicode:   'Ṿ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{146, 582}},
@@ -27561,9 +27561,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e7f": {
+		'ṿ': {
 			HorizAdvX: 294,
-			Unicode:   "\u1e7f",
+			Unicode:   'ṿ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{258, 286}},
@@ -27601,9 +27601,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e80": {
+		'Ẁ': {
 			HorizAdvX: 997,
-			Unicode:   "\u1e80",
+			Unicode:   'Ẁ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{995, 581}},
@@ -27672,9 +27672,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e81": {
+		'ẁ': {
 			HorizAdvX: 383,
-			Unicode:   "\u1e81",
+			Unicode:   'ẁ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{86, 286}},
@@ -27724,9 +27724,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e82": {
+		'Ẃ': {
 			HorizAdvX: 997,
-			Unicode:   "\u1e82",
+			Unicode:   'Ẃ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{995, 581}},
@@ -27794,9 +27794,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e83": {
+		'ẃ': {
 			HorizAdvX: 383,
-			Unicode:   "\u1e83",
+			Unicode:   'ẃ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{86, 286}},
@@ -27845,9 +27845,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e84": {
+		'Ẅ': {
 			HorizAdvX: 997,
-			Unicode:   "\u1e84",
+			Unicode:   'Ẅ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{995, 581}},
@@ -27922,9 +27922,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e85": {
+		'ẅ': {
 			HorizAdvX: 383,
-			Unicode:   "\u1e85",
+			Unicode:   'ẅ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{86, 286}},
@@ -27980,9 +27980,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e86": {
+		'Ẇ': {
 			HorizAdvX: 997,
-			Unicode:   "\u1e86",
+			Unicode:   'Ẇ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{995, 581}},
@@ -28049,9 +28049,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e87": {
+		'ẇ': {
 			HorizAdvX: 383,
-			Unicode:   "\u1e87",
+			Unicode:   'ẇ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{86, 286}},
@@ -28099,9 +28099,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e88": {
+		'Ẉ': {
 			HorizAdvX: 997,
-			Unicode:   "\u1e88",
+			Unicode:   'Ẉ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{995, 581}},
@@ -28168,9 +28168,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e89": {
+		'ẉ': {
 			HorizAdvX: 383,
-			Unicode:   "\u1e89",
+			Unicode:   'ẉ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{86, 286}},
@@ -28218,9 +28218,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8a": {
+		'Ẋ': {
 			HorizAdvX: 489,
-			Unicode:   "\u1e8a",
+			Unicode:   'Ẋ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{387, 21}},
@@ -28272,9 +28272,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8b": {
+		'ẋ': {
 			HorizAdvX: 286,
-			Unicode:   "\u1e8b",
+			Unicode:   'ẋ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{43, 44}},
@@ -28317,9 +28317,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8c": {
+		'Ẍ': {
 			HorizAdvX: 489,
-			Unicode:   "\u1e8c",
+			Unicode:   'Ẍ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{387, 21}},
@@ -28379,9 +28379,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8d": {
+		'ẍ': {
 			HorizAdvX: 286,
-			Unicode:   "\u1e8d",
+			Unicode:   'ẍ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{41, 44}},
@@ -28432,9 +28432,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8e": {
+		'Ẏ': {
 			HorizAdvX: 819,
-			Unicode:   "\u1e8e",
+			Unicode:   'Ẏ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{860, 581}},
@@ -28503,9 +28503,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e8f": {
+		'ẏ': {
 			HorizAdvX: 309,
-			Unicode:   "\u1e8f",
+			Unicode:   'ẏ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{310, 265}},
@@ -28554,9 +28554,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e90": {
+		'Ẑ': {
 			HorizAdvX: 678,
-			Unicode:   "\u1e90",
+			Unicode:   'Ẑ',
 			GerberLP:  "dcdc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 5}},
@@ -28607,9 +28607,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e91": {
+		'ẑ': {
 			HorizAdvX: 267,
-			Unicode:   "\u1e91",
+			Unicode:   'ẑ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{264, 285}},
@@ -28644,9 +28644,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e92": {
+		'Ẓ': {
 			HorizAdvX: 678,
-			Unicode:   "\u1e92",
+			Unicode:   'Ẓ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 5}},
@@ -28698,9 +28698,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e93": {
+		'ẓ': {
 			HorizAdvX: 267,
-			Unicode:   "\u1e93",
+			Unicode:   'ẓ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{263, 285}},
@@ -28736,9 +28736,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e94": {
+		'Ẕ': {
 			HorizAdvX: 678,
-			Unicode:   "\u1e94",
+			Unicode:   'Ẕ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{600, 5}},
@@ -28792,9 +28792,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e95": {
+		'ẕ': {
 			HorizAdvX: 267,
-			Unicode:   "\u1e95",
+			Unicode:   'ẕ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{263, 285}},
@@ -28832,9 +28832,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e96": {
+		'ẖ': {
 			HorizAdvX: 310,
-			Unicode:   "\u1e96",
+			Unicode:   'ẖ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{179, 461}},
@@ -28880,9 +28880,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e97": {
+		'ẗ': {
 			HorizAdvX: 262,
-			Unicode:   "\u1e97",
+			Unicode:   'ẗ',
 			GerberLP:  "dccdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{202, 458}},
@@ -28947,9 +28947,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e98": {
+		'ẘ': {
 			HorizAdvX: 383,
-			Unicode:   "\u1e98",
+			Unicode:   'ẘ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{86, 286}},
@@ -29001,9 +29001,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1e99": {
+		'ẙ': {
 			HorizAdvX: 309,
-			Unicode:   "\u1e99",
+			Unicode:   'ẙ',
 			GerberLP:  "ddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{310, 265}},
@@ -29056,9 +29056,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea0": {
+		'Ạ': {
 			HorizAdvX: 816,
-			Unicode:   "\u1ea0",
+			Unicode:   'Ạ',
 			GerberLP:  "dccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -29133,9 +29133,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea1": {
+		'ạ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ea1",
+			Unicode:   'ạ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -29171,9 +29171,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea4": {
+		'Ấ': {
 			HorizAdvX: 816,
-			Unicode:   "\u1ea4",
+			Unicode:   'Ấ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -29256,9 +29256,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea5": {
+		'ấ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ea5",
+			Unicode:   'ấ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -29302,9 +29302,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea6": {
+		'Ầ': {
 			HorizAdvX: 816,
-			Unicode:   "\u1ea6",
+			Unicode:   'Ầ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -29388,9 +29388,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ea7": {
+		'ầ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ea7",
+			Unicode:   'ầ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -29435,9 +29435,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eaa": {
+		'Ẫ': {
 			HorizAdvX: 816,
-			Unicode:   "\u1eaa",
+			Unicode:   'Ẫ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -29521,9 +29521,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eab": {
+		'ẫ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eab",
+			Unicode:   'ẫ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -29568,9 +29568,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eac": {
+		'Ậ': {
 			HorizAdvX: 816,
-			Unicode:   "\u1eac",
+			Unicode:   'Ậ',
 			GerberLP:  "ddccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -29652,9 +29652,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ead": {
+		'ậ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1ead",
+			Unicode:   'ậ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -29697,9 +29697,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eae": {
+		'Ắ': {
 			HorizAdvX: 816,
-			Unicode:   "\u1eae",
+			Unicode:   'Ắ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -29781,9 +29781,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eaf": {
+		'ắ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eaf",
+			Unicode:   'ắ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -29826,9 +29826,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb0": {
+		'Ằ': {
 			HorizAdvX: 816,
-			Unicode:   "\u1eb0",
+			Unicode:   'Ằ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -29911,9 +29911,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb1": {
+		'ằ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eb1",
+			Unicode:   'ằ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -29957,9 +29957,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb4": {
+		'Ẵ': {
 			HorizAdvX: 816,
-			Unicode:   "\u1eb4",
+			Unicode:   'Ẵ',
 			GerberLP:  "dddcc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -30042,9 +30042,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb5": {
+		'ẵ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eb5",
+			Unicode:   'ẵ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -30088,9 +30088,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb6": {
+		'Ặ': {
 			HorizAdvX: 816,
-			Unicode:   "\u1eb6",
+			Unicode:   'Ặ',
 			GerberLP:  "ddccd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{161, 115}},
@@ -30171,9 +30171,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb7": {
+		'ặ': {
 			HorizAdvX: 0,
-			Unicode:   "\u1eb7",
+			Unicode:   'ặ',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{274, 268}},
@@ -30215,9 +30215,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb8": {
+		'Ẹ': {
 			HorizAdvX: 492,
-			Unicode:   "\u1eb8",
+			Unicode:   'Ẹ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -30271,9 +30271,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eb9": {
+		'ẹ': {
 			HorizAdvX: 251,
-			Unicode:   "\u1eb9",
+			Unicode:   'ẹ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -30313,9 +30313,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebc": {
+		'Ẽ': {
 			HorizAdvX: 492,
-			Unicode:   "\u1ebc",
+			Unicode:   'Ẽ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -30371,9 +30371,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebd": {
+		'ẽ': {
 			HorizAdvX: 251,
-			Unicode:   "\u1ebd",
+			Unicode:   'ẽ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -30415,9 +30415,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebe": {
+		'Ế': {
 			HorizAdvX: 492,
-			Unicode:   "\u1ebe",
+			Unicode:   'Ế',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -30479,9 +30479,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ebf": {
+		'ế': {
 			HorizAdvX: 251,
-			Unicode:   "\u1ebf",
+			Unicode:   'ế',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -30529,9 +30529,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec0": {
+		'Ề': {
 			HorizAdvX: 492,
-			Unicode:   "\u1ec0",
+			Unicode:   'Ề',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -30594,9 +30594,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec1": {
+		'ề': {
 			HorizAdvX: 251,
-			Unicode:   "\u1ec1",
+			Unicode:   'ề',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -30645,9 +30645,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec4": {
+		'Ễ': {
 			HorizAdvX: 492,
-			Unicode:   "\u1ec4",
+			Unicode:   'Ễ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -30710,9 +30710,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec5": {
+		'ễ': {
 			HorizAdvX: 251,
-			Unicode:   "\u1ec5",
+			Unicode:   'ễ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -30761,9 +30761,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec6": {
+		'Ệ': {
 			HorizAdvX: 492,
-			Unicode:   "\u1ec6",
+			Unicode:   'Ệ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{172, 344}},
@@ -30824,9 +30824,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ec7": {
+		'ệ': {
 			HorizAdvX: 251,
-			Unicode:   "\u1ec7",
+			Unicode:   'ệ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{188, 286}},
@@ -30873,9 +30873,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1eca": {
+		'Ị': {
 			HorizAdvX: 500,
-			Unicode:   "\u1eca",
+			Unicode:   'Ị',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{85, 453}},
@@ -30920,9 +30920,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ecb": {
+		'ị': {
 			HorizAdvX: 181,
-			Unicode:   "\u1ecb",
+			Unicode:   'ị',
 			GerberLP:  "dcdd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{116, 282}},
@@ -30967,9 +30967,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ecc": {
+		'Ọ': {
 			HorizAdvX: 521,
-			Unicode:   "\u1ecc",
+			Unicode:   'Ọ',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -31005,9 +31005,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ecd": {
+		'ọ': {
 			HorizAdvX: 288,
-			Unicode:   "\u1ecd",
+			Unicode:   'ọ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -31051,9 +31051,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed0": {
+		'Ố': {
 			HorizAdvX: 521,
-			Unicode:   "\u1ed0",
+			Unicode:   'Ố',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -31097,9 +31097,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed1": {
+		'ố': {
 			HorizAdvX: 288,
-			Unicode:   "\u1ed1",
+			Unicode:   'ố',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -31151,9 +31151,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed2": {
+		'Ồ': {
 			HorizAdvX: 521,
-			Unicode:   "\u1ed2",
+			Unicode:   'Ồ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -31198,9 +31198,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed3": {
+		'ồ': {
 			HorizAdvX: 288,
-			Unicode:   "\u1ed3",
+			Unicode:   'ồ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -31253,9 +31253,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed6": {
+		'Ỗ': {
 			HorizAdvX: 521,
-			Unicode:   "\u1ed6",
+			Unicode:   'Ỗ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -31300,9 +31300,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed7": {
+		'ỗ': {
 			HorizAdvX: 288,
-			Unicode:   "\u1ed7",
+			Unicode:   'ỗ',
 			GerberLP:  "dddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -31355,9 +31355,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed8": {
+		'Ộ': {
 			HorizAdvX: 521,
-			Unicode:   "\u1ed8",
+			Unicode:   'Ộ',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{285, 0}},
@@ -31400,9 +31400,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ed9": {
+		'ộ': {
 			HorizAdvX: 288,
-			Unicode:   "\u1ed9",
+			Unicode:   'ộ',
 			GerberLP:  "ddcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{159, 286}},
@@ -31453,9 +31453,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee4": {
+		'Ụ': {
 			HorizAdvX: 898,
-			Unicode:   "\u1ee4",
+			Unicode:   'Ụ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{804, 14}},
@@ -31513,9 +31513,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ee5": {
+		'ụ': {
 			HorizAdvX: 347,
-			Unicode:   "\u1ee5",
+			Unicode:   'ụ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{83, 151}},
@@ -31560,9 +31560,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef2": {
+		'Ỳ': {
 			HorizAdvX: 819,
-			Unicode:   "\u1ef2",
+			Unicode:   'Ỳ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{860, 581}},
@@ -31633,9 +31633,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef3": {
+		'ỳ': {
 			HorizAdvX: 309,
-			Unicode:   "\u1ef3",
+			Unicode:   'ỳ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{310, 265}},
@@ -31686,9 +31686,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef4": {
+		'Ỵ': {
 			HorizAdvX: 819,
-			Unicode:   "\u1ef4",
+			Unicode:   'Ỵ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{860, 581}},
@@ -31757,9 +31757,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef5": {
+		'ỵ': {
 			HorizAdvX: 309,
-			Unicode:   "\u1ef5",
+			Unicode:   'ỵ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{310, 265}},
@@ -31808,9 +31808,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef8": {
+		'Ỹ': {
 			HorizAdvX: 819,
-			Unicode:   "\u1ef8",
+			Unicode:   'Ỹ',
 			GerberLP:  "dcd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{860, 581}},
@@ -31881,9 +31881,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u1ef9": {
+		'ỹ': {
 			HorizAdvX: 309,
-			Unicode:   "\u1ef9",
+			Unicode:   'ỹ',
 			GerberLP:  "ddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{310, 265}},
@@ -31934,9 +31934,9 @@ var konstytucyjaFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		"\u20ac": {
+		'€': {
 			HorizAdvX: 387,
-			Unicode:   "\u20ac",
+			Unicode:   '€',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{298, 28}},
