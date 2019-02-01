@@ -1820,9 +1820,9 @@ var printboldFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb02': {
+		'\ufb92': {
 			HorizAdvX: 597,
-			Unicode:   '\ufb02',
+			Unicode:   '\ufb92',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{290, 322}},

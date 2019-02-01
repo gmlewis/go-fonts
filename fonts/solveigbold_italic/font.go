@@ -1482,9 +1482,9 @@ var solveigbold_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb01': {
+		'\ufb91': {
 			HorizAdvX: 513,
-			Unicode:   '\ufb01',
+			Unicode:   '\ufb91',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{64, 391}},
@@ -1523,9 +1523,9 @@ var solveigbold_italicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb02': {
+		'\ufb92': {
 			HorizAdvX: 520,
-			Unicode:   '\ufb02',
+			Unicode:   '\ufb92',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{65, 391}},

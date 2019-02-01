@@ -2103,9 +2103,9 @@ var baskervville_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb00': {
+		'\ufb90': {
 			HorizAdvX: 634,
-			Unicode:   '\ufb00',
+			Unicode:   '\ufb90',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 724}},
@@ -2307,9 +2307,9 @@ var baskervville_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb03': {
+		'\ufb93': {
 			HorizAdvX: 839,
-			Unicode:   '\ufb03',
+			Unicode:   '\ufb93',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{813, 22}},
@@ -2521,9 +2521,9 @@ var baskervville_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb04': {
+		'\ufb94': {
 			HorizAdvX: 851,
-			Unicode:   '\ufb04',
+			Unicode:   '\ufb94',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{825, 22}},
@@ -2642,9 +2642,9 @@ var baskervville_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb01': {
+		'\ufb91': {
 			HorizAdvX: 567,
-			Unicode:   '\ufb01',
+			Unicode:   '\ufb91',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{541, 22}},
@@ -2793,9 +2793,9 @@ var baskervville_regularFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb02': {
+		'\ufb92': {
 			HorizAdvX: 568,
-			Unicode:   '\ufb02',
+			Unicode:   '\ufb92',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{542, 22}},

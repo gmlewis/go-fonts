@@ -1526,9 +1526,9 @@ var aileron_semibolditalicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb01': {
+		'\ufb91': {
 			HorizAdvX: 548,
-			Unicode:   '\ufb01',
+			Unicode:   '\ufb91',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{525, 527}},
@@ -1554,9 +1554,9 @@ var aileron_semibolditalicFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb02': {
+		'\ufb92': {
 			HorizAdvX: 564,
-			Unicode:   '\ufb02',
+			Unicode:   '\ufb92',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{451, 110}},

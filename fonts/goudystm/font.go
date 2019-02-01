@@ -2356,9 +2356,9 @@ var goudystmFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb00': {
+		'\ufb90': {
 			HorizAdvX: 607,
-			Unicode:   '\ufb00',
+			Unicode:   '\ufb90',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{29, 394}},
@@ -2604,9 +2604,9 @@ var goudystmFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb03': {
+		'\ufb93': {
 			HorizAdvX: 804,
-			Unicode:   '\ufb03',
+			Unicode:   '\ufb93',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{28, 394}},
@@ -2849,9 +2849,9 @@ var goudystmFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb04': {
+		'\ufb94': {
 			HorizAdvX: 808,
-			Unicode:   '\ufb04',
+			Unicode:   '\ufb94',
 			GerberLP:  "dc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{28, 394}},
@@ -2997,9 +2997,9 @@ var goudystmFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb01': {
+		'\ufb91': {
 			HorizAdvX: 543,
-			Unicode:   '\ufb01',
+			Unicode:   '\ufb91',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{29, 390}},
@@ -3167,9 +3167,9 @@ var goudystmFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb02': {
+		'\ufb92': {
 			HorizAdvX: 542,
-			Unicode:   '\ufb02',
+			Unicode:   '\ufb92',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{28, 390}},

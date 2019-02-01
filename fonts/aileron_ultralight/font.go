@@ -1542,9 +1542,9 @@ var aileron_ultralightFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb01': {
+		'\ufb91': {
 			HorizAdvX: 396,
-			Unicode:   '\ufb01',
+			Unicode:   '\ufb91',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{325, 522}},
@@ -1570,9 +1570,9 @@ var aileron_ultralightFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb02': {
+		'\ufb92': {
 			HorizAdvX: 378,
-			Unicode:   '\ufb02',
+			Unicode:   '\ufb92',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{296, 51}},

@@ -1942,9 +1942,9 @@ var kawoszehFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb00': {
+		'\ufb90': {
 			HorizAdvX: 638,
-			Unicode:   '\ufb00',
+			Unicode:   '\ufb90',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{256, 465}},
@@ -1997,9 +1997,9 @@ var kawoszehFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb03': {
+		'\ufb93': {
 			HorizAdvX: 803,
-			Unicode:   '\ufb03',
+			Unicode:   '\ufb93',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{303, 465}},
@@ -2067,9 +2067,9 @@ var kawoszehFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb04': {
+		'\ufb94': {
 			HorizAdvX: 762,
-			Unicode:   '\ufb04',
+			Unicode:   '\ufb94',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{398, 608}},
@@ -2181,9 +2181,9 @@ var kawoszehFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb01': {
+		'\ufb91': {
 			HorizAdvX: 524,
-			Unicode:   '\ufb01',
+			Unicode:   '\ufb91',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{89, -39}},
@@ -2284,9 +2284,9 @@ var kawoszehFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb02': {
+		'\ufb92': {
 			HorizAdvX: 483,
-			Unicode:   '\ufb02',
+			Unicode:   '\ufb92',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{119, 611}},

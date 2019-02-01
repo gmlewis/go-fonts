@@ -2798,9 +2798,9 @@ var scriptinaproFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb01': {
+		'\ufb91': {
 			HorizAdvX: 412,
-			Unicode:   '\ufb01',
+			Unicode:   '\ufb91',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{448, 52}},

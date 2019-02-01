@@ -1503,9 +1503,9 @@ var znikomitno24Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'Q': {
+		'\ufb8a': {
 			HorizAdvX: 2630,
-			Unicode:   'Q',
+			Unicode:   '\ufb8a',
 			GerberLP:  "dcddc",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{751, -5}},
@@ -1682,9 +1682,9 @@ var znikomitno24Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'T': {
+		'\ufb58': {
 			HorizAdvX: 2320,
-			Unicode:   'T',
+			Unicode:   '\ufb58',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{2105, -5}},
@@ -2152,9 +2152,9 @@ var znikomitno24Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'c': {
+		'\ufb87': {
 			HorizAdvX: 1840,
-			Unicode:   'c',
+			Unicode:   '\ufb87',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{555, 1045}},
@@ -2313,9 +2313,9 @@ var znikomitno24Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb00': {
+		'\ufb90': {
 			HorizAdvX: 1210,
-			Unicode:   '\ufb00',
+			Unicode:   '\ufb90',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 1000}},
@@ -2376,9 +2376,9 @@ var znikomitno24Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb03': {
+		'\ufb93': {
 			HorizAdvX: 1620,
-			Unicode:   '\ufb03',
+			Unicode:   '\ufb93',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 1020}},
@@ -2448,9 +2448,9 @@ var znikomitno24Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb04': {
+		'\ufb94': {
 			HorizAdvX: 1770,
-			Unicode:   '\ufb04',
+			Unicode:   '\ufb94',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 1020}},
@@ -2527,9 +2527,9 @@ var znikomitno24Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb01': {
+		'\ufb91': {
 			HorizAdvX: 1160,
-			Unicode:   '\ufb01',
+			Unicode:   '\ufb91',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{60, 15}},
@@ -2617,9 +2617,9 @@ var znikomitno24Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb02': {
+		'\ufb92': {
 			HorizAdvX: 1220,
-			Unicode:   '\ufb02',
+			Unicode:   '\ufb92',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 1020}},
@@ -3166,9 +3166,9 @@ var znikomitno24Font = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		's': {
+		'\ufb8b': {
 			HorizAdvX: 1840,
-			Unicode:   's',
+			Unicode:   '\ufb8b',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{485, 1045}},

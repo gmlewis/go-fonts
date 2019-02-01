@@ -2151,9 +2151,9 @@ var znikomitFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb00': {
+		'\ufb90': {
 			HorizAdvX: 1440,
-			Unicode:   '\ufb00',
+			Unicode:   '\ufb90',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{760, 1000}},
@@ -2216,9 +2216,9 @@ var znikomitFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb03': {
+		'\ufb93': {
 			HorizAdvX: 1940,
-			Unicode:   '\ufb03',
+			Unicode:   '\ufb93',
 			GerberLP:  "dddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 1000}},
@@ -2303,9 +2303,9 @@ var znikomitFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb04': {
+		'\ufb94': {
 			HorizAdvX: 1940,
-			Unicode:   '\ufb04',
+			Unicode:   '\ufb94',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 1000}},
@@ -2384,9 +2384,9 @@ var znikomitFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb01': {
+		'\ufb91': {
 			HorizAdvX: 1220,
-			Unicode:   '\ufb01',
+			Unicode:   '\ufb91',
 			GerberLP:  "ddd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{80, 1000}},

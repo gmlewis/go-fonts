@@ -1443,9 +1443,9 @@ var simpel_mediumFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb00': {
+		'\ufb90': {
 			HorizAdvX: 732,
-			Unicode:   '\ufb00',
+			Unicode:   '\ufb90',
 			GerberLP:  "d",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{569, 500}},
@@ -1480,9 +1480,9 @@ var simpel_mediumFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb03': {
+		'\ufb93': {
 			HorizAdvX: 1011,
-			Unicode:   '\ufb03',
+			Unicode:   '\ufb93',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{920, 500}},
@@ -1525,9 +1525,9 @@ var simpel_mediumFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		'\ufb01': {
+		'\ufb91': {
 			HorizAdvX: 649,
-			Unicode:   '\ufb01',
+			Unicode:   '\ufb91',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{582, 500}},
@@ -1941,9 +1941,9 @@ var simpel_mediumFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		't': {
+		'\ufb8c': {
 			HorizAdvX: 661,
-			Unicode:   't',
+			Unicode:   '\ufb8c',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{568, 500}},
@@ -1972,9 +1972,9 @@ var simpel_mediumFont = &fonts.Font{
 				{C: 'z'},
 			},
 		},
-		't': {
+		'\ufb8d': {
 			HorizAdvX: 644,
-			Unicode:   't',
+			Unicode:   '\ufb8d',
 			GerberLP:  "dd",
 			PathSteps: []*fonts.PathStep{
 				{C: 'M', P: []float64{587, 500}},
