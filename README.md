@@ -6,9 +6,9 @@ polygons using Go.
 See https://github.com/gmlewis/go-gerber for an example application
 of this package.
 
-## Docs
-
+## Status
 [![GoDoc](https://godoc.org/github.com/gmlewis/go-fonts/fonts?status.svg)](https://godoc.org/github.com/gmlewis/go-fonts/fonts)
+[![Build Status](https://travis-ci.org/gmlewis/go-fonts.png)](https://travis-ci.org/gmlewis/go-fonts)
 
 ----------------------------------------------------------------------
 
