@@ -6,13 +6,20 @@ To use this font in your code, simply import it:
 
 ```go
 import (
-	. "github.com/gmlewis/go-fonts/fonts"
-	_ "github.com/gmlewis/go-fonts/fonts/overlockregular"
+  . "github.com/gmlewis/go-fonts/fonts"
+  _ "github.com/gmlewis/go-fonts/fonts/overlockregular"
 )
 
 func main() {
-	// ...
-	render, err := Text(x, y, xs, ys, message, "overlockregular"),
-	// ...
+  // ...
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "overlockregular")
+  if err != nil {
+    return err
+  }
+  log.Printf("MBB: (%.2f,%.2f)-(%.2f,%.2f)", render.Xmin, render.Ymin,render.Xmax, render.Ymax)
+  for _, poly := range render.Polygons {
+    // ...
+  }
+  // ...
 }
 ```

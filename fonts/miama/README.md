@@ -6,13 +6,20 @@ To use this font in your code, simply import it:
 
 ```go
 import (
-	. "github.com/gmlewis/go-fonts/fonts"
-	_ "github.com/gmlewis/go-fonts/fonts/miama"
+  . "github.com/gmlewis/go-fonts/fonts"
+  _ "github.com/gmlewis/go-fonts/fonts/miama"
 )
 
 func main() {
-	// ...
-	render, err := Text(x, y, xs, ys, message, "miama"),
-	// ...
+  // ...
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "miama")
+  if err != nil {
+    return err
+  }
+  log.Printf("MBB: (%.2f,%.2f)-(%.2f,%.2f)", render.Xmin, render.Ymin,render.Xmax, render.Ymax)
+  for _, poly := range render.Polygons {
+    // ...
+  }
+  // ...
 }
 ```

@@ -6,13 +6,20 @@ To use this font in your code, simply import it:
 
 ```go
 import (
-	. "github.com/gmlewis/go-fonts/fonts"
-	_ "github.com/gmlewis/go-fonts/fonts/f20db"
+  . "github.com/gmlewis/go-fonts/fonts"
+  _ "github.com/gmlewis/go-fonts/fonts/f20db"
 )
 
 func main() {
-	// ...
-	render, err := Text(x, y, xs, ys, message, "f20db"),
-	// ...
+  // ...
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "f20db")
+  if err != nil {
+    return err
+  }
+  log.Printf("MBB: (%.2f,%.2f)-(%.2f,%.2f)", render.Xmin, render.Ymin,render.Xmax, render.Ymax)
+  for _, poly := range render.Polygons {
+    // ...
+  }
+  // ...
 }
 ```

@@ -6,13 +6,20 @@ To use this font in your code, simply import it:
 
 ```go
 import (
-	. "github.com/gmlewis/go-fonts/fonts"
-	_ "github.com/gmlewis/go-fonts/fonts/fantasquesansmono_regular"
+  . "github.com/gmlewis/go-fonts/fonts"
+  _ "github.com/gmlewis/go-fonts/fonts/fantasquesansmono_regular"
 )
 
 func main() {
-	// ...
-	render, err := Text(x, y, xs, ys, message, "fantasquesansmono_regular"),
-	// ...
+  // ...
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "fantasquesansmono_regular")
+  if err != nil {
+    return err
+  }
+  log.Printf("MBB: (%.2f,%.2f)-(%.2f,%.2f)", render.Xmin, render.Ymin,render.Xmax, render.Ymax)
+  for _, poly := range render.Polygons {
+    // ...
+  }
+  // ...
 }
 ```

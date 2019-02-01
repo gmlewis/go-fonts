@@ -1,18 +1,25 @@
-# ZnikomitNo24
+# znikomitno24
 
-![ZnikomitNo24](znikomitno24.png)
+![znikomitno24](znikomitno24.png)
 
 To use this font in your code, simply import it:
 
 ```go
 import (
-	. "github.com/gmlewis/go-fonts/fonts"
-	_ "github.com/gmlewis/go-fonts/fonts/znikomitno24"
+  . "github.com/gmlewis/go-fonts/fonts"
+  _ "github.com/gmlewis/go-fonts/fonts/znikomitno24"
 )
 
 func main() {
-	// ...
-	render, err := Text(x, y, xs, ys, message, "znikomitno24"),
-	// ...
+  // ...
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "znikomitno24")
+  if err != nil {
+    return err
+  }
+  log.Printf("MBB: (%.2f,%.2f)-(%.2f,%.2f)", render.Xmin, render.Ymin,render.Xmax, render.Ymax)
+  for _, poly := range render.Polygons {
+    // ...
+  }
+  // ...
 }
 ```

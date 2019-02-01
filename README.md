@@ -3,8 +3,38 @@
 This is an experimental package used to render open source fonts to
 polygons using Go.
 
+## Example usage
+
+To use one or more fonts within a Go program, import the main
+package and the font(s) you want, like this:
+
+```go
+import (
+  "github.com/gmlewis/go-fonts/fonts"
+  _ "github.com/gmlewis/go-fonts/fonts/ubuntumonoregular"
+)
+```
+
+Then render the text to polygons and use them however you want:
+
+```go
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "ubuntumonoregular")
+  if err != nil {
+    return err
+  }
+  log.Printf("MBB: (%.2f,%.2f)-(%.2f,%.2f)", render.Xmin, render.Ymin,render.Xmax, render.Ymax)
+  for _, poly := range render.Polygons {
+    // ...
+  }
+```
+
+Note that as of this writing, Go 1.11.5 has (uncharacteristic) incredibly slow
+compile times (minutes for the first, uncached compile) of each font file.
+I haven't investigated as to whether this is due to the map literals or
+the `float64` slices or what is causing the problem.
+
 See https://github.com/gmlewis/go-gerber for an example application
-of this package.
+that uses this package.
 
 ## Status
 [![GoDoc](https://godoc.org/github.com/gmlewis/go-fonts/fonts?status.svg)](https://godoc.org/github.com/gmlewis/go-fonts/fonts)
