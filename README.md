@@ -127,7 +127,6 @@ limitations under the License.
 [![font3933](images/sample_font3933.png)](fonts/font3933)
 [![fontleroybrown](images/sample_fontleroybrown.png)](fonts/fontleroybrown)
 [![freebooterscript](images/sample_freebooterscript.png)](fonts/freebooterscript)
-[![freebooterscript_alts](images/sample_freebooterscript_alts.png)](fonts/freebooterscript_alts)
 [![freemono](images/sample_freemono.png)](fonts/freemono)
 [![freemonobold](images/sample_freemonobold.png)](fonts/freemonobold)
 [![freemonoboldoblique](images/sample_freemonoboldoblique.png)](fonts/freemonoboldoblique)
