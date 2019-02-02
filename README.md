@@ -58,6 +58,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ----------------------------------------------------------------------
+
 ## Font samples
 [![aaarghnormal](images/sample_aaarghnormal.png)](fonts/aaarghnormal)
 [![abeezee_italic](images/sample_abeezee_italic.png)](fonts/abeezee_italic)
@@ -84,7 +85,6 @@ limitations under the License.
 [![alexbrush_regular](images/sample_alexbrush_regular.png)](fonts/alexbrush_regular)
 [![allura_regular](images/sample_allura_regular.png)](fonts/allura_regular)
 [![amerika](images/sample_amerika.png)](fonts/amerika)
-[![amerikaalternates](images/sample_amerikaalternates.png)](fonts/amerikaalternates)
 [![amerikasans](images/sample_amerikasans.png)](fonts/amerikasans)
 [![amita_bold](images/sample_amita_bold.png)](fonts/amita_bold)
 [![amita_regular](images/sample_amita_regular.png)](fonts/amita_regular)
