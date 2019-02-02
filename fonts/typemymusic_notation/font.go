@@ -8,11 +8,11 @@ import (
 
 var typemymusic_notationFont = &fonts.Font{
 	ID:               "typemymusic_notation",
-	HorizAdvX:        1187,
-	UnitsPerEm:       2048,
-	Ascent:           1649,
-	Descent:          -399,
-	MissingHorizAdvX: 395,
+	HorizAdvX:        270,
+	UnitsPerEm:       1000,
+	Ascent:           800,
+	Descent:          -200,
+	MissingHorizAdvX: 500,
 	Glyphs:           map[rune]*fonts.Glyph{},
 }
 

@@ -8,11 +8,11 @@ import (
 
 var heydingsiconsFont = &fonts.Font{
 	ID:               "heydingsicons",
-	HorizAdvX:        1187,
-	UnitsPerEm:       2048,
-	Ascent:           1649,
-	Descent:          -399,
-	MissingHorizAdvX: 395,
+	HorizAdvX:        1024,
+	UnitsPerEm:       1024,
+	Ascent:           819,
+	Descent:          -205,
+	MissingHorizAdvX: 0,
 	Glyphs:           map[rune]*fonts.Glyph{},
 }
 

@@ -8,11 +8,11 @@ import (
 
 var topsecret_boldFont = &fonts.Font{
 	ID:               "topsecret_bold",
-	HorizAdvX:        1187,
+	HorizAdvX:        1401,
 	UnitsPerEm:       2048,
-	Ascent:           1649,
-	Descent:          -399,
-	MissingHorizAdvX: 395,
+	Ascent:           1638,
+	Descent:          -410,
+	MissingHorizAdvX: 1247,
 	Glyphs:           map[rune]*fonts.Glyph{},
 }
 

@@ -134,7 +134,7 @@ func writeFont(fontData *FontData, fontDir string) {
 		g.ParsePath()
 		g.GenGerberLP(fontData.Font.FontFace)
 
-		if g.Unicode == nil || g.GerberLP == nil {
+		if g.Unicode == nil {
 			continue
 		}
 
@@ -142,10 +142,14 @@ func writeFont(fontData *FontData, fontDir string) {
 		for _, ps := range g.PathSteps {
 			pathSteps = append(pathSteps, &glyphs.PathStep{C: uint32(ps.C[0]), P: ps.P})
 		}
+		gerberLP := ""
+		if g.GerberLP != nil {
+			gerberLP = *g.GerberLP
+		}
 		gs.Glyphs = append(gs.Glyphs, &glyphs.Glyph{
 			HorizAdvX: g.HorizAdvX,
 			Unicode:   *g.Unicode,
-			GerberLP:  *g.GerberLP,
+			GerberLP:  gerberLP,
 			PathSteps: pathSteps,
 		})
 	}
@@ -311,11 +315,11 @@ import (
 
 var {{ .ID }}Font = &fonts.Font{
 	ID:               "{{ .ID }}",
-	HorizAdvX:        1187,
-	UnitsPerEm:       2048,
-	Ascent:           1649,
-	Descent:          -399,
-	MissingHorizAdvX: 395,
+	HorizAdvX:  {{ .HorizAdvX }},
+	UnitsPerEm: {{ .FontFace.UnitsPerEm }},
+	Ascent:     {{ .FontFace.Ascent }},
+	Descent:    {{ .FontFace.Descent }},
+	MissingHorizAdvX: {{ .MissingGlyph.HorizAdvX }},
 	Glyphs:           map[rune]*fonts.Glyph{},
 }
 

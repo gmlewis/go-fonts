@@ -80,6 +80,9 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 	if font.HorizAdvX == 0 {
 		font.HorizAdvX = font.UnitsPerEm
 	}
+	if font.MissingHorizAdvX == 0 {
+		font.MissingHorizAdvX = font.HorizAdvX
+	}
 
 	x, y := xPos, yPos
 	fsf := 1.0 / font.UnitsPerEm
@@ -101,7 +104,7 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 			if c != ' ' {
 				log.Printf("Warning: missing glyph %+q: skipping", c)
 			}
-			x += xScale * font.HorizAdvX
+			x += xScale * font.MissingHorizAdvX
 			continue
 		}
 		dx, r := g.Render(x, y, xScale, yScale)

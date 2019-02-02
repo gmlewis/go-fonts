@@ -8,11 +8,11 @@ import (
 
 var impactlabelFont = &fonts.Font{
 	ID:               "impactlabel",
-	HorizAdvX:        1187,
-	UnitsPerEm:       2048,
-	Ascent:           1649,
-	Descent:          -399,
-	MissingHorizAdvX: 395,
+	HorizAdvX:        599,
+	UnitsPerEm:       1000,
+	Ascent:           750,
+	Descent:          -250,
+	MissingHorizAdvX: 500,
 	Glyphs:           map[rune]*fonts.Glyph{},
 }
 

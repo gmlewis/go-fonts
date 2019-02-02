@@ -58,9 +58,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ----------------------------------------------------------------------
-
 ## Font samples
-
 [![aaarghnormal](images/sample_aaarghnormal.png)](fonts/aaarghnormal)
 [![abeezee_italic](images/sample_abeezee_italic.png)](fonts/abeezee_italic)
 [![abeezee_regular](images/sample_abeezee_regular.png)](fonts/abeezee_regular)
