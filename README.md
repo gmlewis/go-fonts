@@ -192,7 +192,6 @@ limitations under the License.
 [![plainblackwide_normal](images/sample_plainblackwide_normal.png)](fonts/plainblackwide_normal)
 [![plasmadripbrk](images/sample_plasmadripbrk.png)](fonts/plasmadripbrk)
 [![plasmadripemptybrk](images/sample_plasmadripemptybrk.png)](fonts/plasmadripemptybrk)
-[![plexifontbv](images/sample_plexifontbv.png)](fonts/plexifontbv)
 [![princesssofia](images/sample_princesssofia.png)](fonts/princesssofia)
 [![printbold](images/sample_printbold.png)](fonts/printbold)
 [![printclearly](images/sample_printclearly.png)](fonts/printclearly)
