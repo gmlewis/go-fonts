@@ -182,7 +182,6 @@ limitations under the License.
 [![monoton_regular](images/sample_monoton_regular.png)](fonts/monoton_regular)
 [![montez_regular](images/sample_montez_regular.png)](fonts/montez_regular)
 [![mothproofscript](images/sample_mothproofscript.png)](fonts/mothproofscript)
-[![mutluornamental](images/sample_mutluornamental.png)](fonts/mutluornamental)
 [![overlockregular](images/sample_overlockregular.png)](fonts/overlockregular)
 [![oxygen](images/sample_oxygen.png)](fonts/oxygen)
 [![oxygen_bold](images/sample_oxygen_bold.png)](fonts/oxygen_bold)
