@@ -154,7 +154,6 @@ limitations under the License.
 [![heavydata](images/sample_heavydata.png)](fonts/heavydata)
 [![helsinkiregular](images/sample_helsinkiregular.png)](fonts/helsinkiregular)
 [![heydingsicons](images/sample_heydingsicons.png)](fonts/heydingsicons)
-[![im_fell_flowers_1](images/sample_im_fell_flowers_1.png)](fonts/im_fell_flowers_1)
 [![im_fell_flowers_2](images/sample_im_fell_flowers_2.png)](fonts/im_fell_flowers_2)
 [![impactlabel](images/sample_impactlabel.png)](fonts/impactlabel)
 [![impactlabelreversed](images/sample_impactlabelreversed.png)](fonts/impactlabelreversed)
