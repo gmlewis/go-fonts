@@ -4,6 +4,7 @@ package main
 
 import (
 	"bytes"
+	"encoding/base64"
 	"encoding/xml"
 	"flag"
 	"fmt"
@@ -17,6 +18,9 @@ import (
 	"strings"
 	"text/template"
 	"unicode/utf8"
+
+	"github.com/gmlewis/go-fonts/pb/glyphs"
+	"github.com/golang/protobuf/proto"
 )
 
 const (
@@ -125,10 +129,32 @@ func writeFont(fontData *FontData, fontDir string) {
 	// re-sort with deduped glyph code points.
 	sort.Slice(fontData.Font.Glyphs, glyphLess)
 
+	gs := &glyphs.Glyphs{}
 	for _, g := range fontData.Font.Glyphs {
 		g.ParsePath()
 		g.GenGerberLP(fontData.Font.FontFace)
+
+		if g.Unicode == nil || g.GerberLP == nil {
+			continue
+		}
+
+		var pathSteps []*glyphs.PathStep
+		for _, ps := range g.PathSteps {
+			pathSteps = append(pathSteps, &glyphs.PathStep{C: uint32(ps.C[0]), P: ps.P})
+		}
+		gs.Glyphs = append(gs.Glyphs, &glyphs.Glyph{
+			HorizAdvX: g.HorizAdvX,
+			Unicode:   *g.Unicode,
+			GerberLP:  *g.GerberLP,
+			PathSteps: pathSteps,
+		})
 	}
+
+	data, err := proto.Marshal(gs)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fontData.Font.Data = base64.StdEncoding.EncodeToString(data)
 
 	var buf bytes.Buffer
 	if err := outTemp.Execute(&buf, fontData.Font); err != nil {
@@ -284,28 +310,21 @@ import (
 )
 
 var {{ .ID }}Font = &fonts.Font{
-	ID: "{{ .ID }}",
-	HorizAdvX:  {{ .HorizAdvX }},
-	UnitsPerEm: {{ .FontFace.UnitsPerEm }},
-	Ascent:     {{ .FontFace.Ascent }},
-	Descent:    {{ .FontFace.Descent }},
-	MissingHorizAdvX: {{ .MissingGlyph.HorizAdvX }},
-	Glyphs: map[rune]*fonts.Glyph{},
+	ID:               "{{ .ID }}",
+	HorizAdvX:        1187,
+	UnitsPerEm:       2048,
+	Ascent:           1649,
+	Descent:          -399,
+	MissingHorizAdvX: 395,
+	Glyphs:           map[rune]*fonts.Glyph{},
 }
 
 func init() {
-  fonts.Fonts["{{ .ID }}"] = {{ .ID }}Font
-
-	{{ $id := .ID }}{{ range .Glyphs }}{{ if .Unicode }}{{ if .PathSteps }}
-	{{ $id }}Font.Glyphs[{{ .Unicode | utf8 }}] = &fonts.Glyph{
-			HorizAdvX: {{ .HorizAdvX }},
-			Unicode: {{ .Unicode | utf8 }},
-			GerberLP: {{ .GerberLP | orEmpty }},
-			PathSteps: []*fonts.PathStep{ {{ range .PathSteps }}
-				{ C: '{{ .C }}'{{ if .P }}, P: {{ .P | floats }}{{ end }} },{{ end }}
-			},
-		};{{ end }}{{ end }}{{ end }}
+	fonts.Fonts["{{ .ID }}"] = {{ .ID }}Font
+	fonts.InitFromFontData({{ .ID }}Font, fontData)
 }
+
+var fontData = ` + "`{{ .Data }}`" + ` 
 `
 
 // This specialCase map converts non-unicode strings (e.g. "ffi" - which

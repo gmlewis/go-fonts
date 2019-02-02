@@ -24,6 +24,15 @@
 // order.
 package fonts
 
+import (
+	"encoding/base64"
+	"log"
+	"unicode/utf8"
+
+	"github.com/gmlewis/go-fonts/pb/glyphs"
+	"github.com/golang/protobuf/proto"
+)
+
 // Font represents a webfont.
 //
 // Each font uses its own units (typically not "ems") that are later
@@ -91,3 +100,37 @@ type PathStep struct {
 // in order to reduce the overall initial compile time
 // of the package.
 var Fonts = map[string]*Font{}
+
+// InitFromFontData is a workaround for a Go compiler error when
+// compiling large map literals. The data is marshaled to a string
+// from a protobuf then base64 encoded into a font package source file.
+//
+// This function decodes the base64 data, then unmarshals the protobuf
+// and populates the glyphs into the font. Fortunately, this happens
+// extremely quickly in the package's `init` function.
+func InitFromFontData(font *Font, fontData string) {
+	data, err := base64.StdEncoding.DecodeString(fontData)
+	if err != nil {
+		log.Fatalf("unable to base64 decode %v fontData: %v", font.ID, err)
+	}
+	gs := &glyphs.Glyphs{}
+	if err := proto.Unmarshal(data, gs); err != nil {
+		log.Fatalf("unable to unmarshal %v proto data: %v", font.ID, err)
+	}
+	for _, glyph := range gs.Glyphs {
+		r, _ := utf8.DecodeRuneInString(glyph.Unicode)
+		var pathSteps []*PathStep
+		for _, ps := range glyph.PathSteps {
+			pathSteps = append(pathSteps, &PathStep{
+				C: byte(ps.C),
+				P: ps.P,
+			})
+		}
+		font.Glyphs[r] = &Glyph{
+			HorizAdvX: glyph.HorizAdvX,
+			Unicode:   r,
+			GerberLP:  glyph.GerberLP,
+			PathSteps: pathSteps,
+		}
+	}
+}

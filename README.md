@@ -28,11 +28,6 @@ Then render the text to polygons and use them however you want:
   }
 ```
 
-Note that as of this writing, Go 1.11.5 has (uncharacteristic) incredibly slow
-compile times (minutes for the first, uncached compile) of each font file.
-I haven't investigated as to whether this is due to the map literals or
-the `float64` slices or what is causing the problem.
-
 See https://github.com/gmlewis/go-gerber for an example application
 that uses this package.
 

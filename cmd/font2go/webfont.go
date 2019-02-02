@@ -18,6 +18,8 @@ type Font struct {
 	FontFace     *FontFace     `xml:"font-face"`
 	MissingGlyph *MissingGlyph `xml:"missing-glyph"`
 	Glyphs       []*Glyph      `xml:"glyph"`
+
+	Data string // Used to send protobuf data to text/template.
 }
 
 // FontFace represents the <font-face> XML block of the webfont data.
