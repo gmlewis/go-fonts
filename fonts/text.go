@@ -20,15 +20,44 @@ const (
 // Render represents a collection of polygons and includes
 // the minimum bounding box of their union.
 type Render struct {
+	// Xmin, Ymin, Xmax, and Ymax represent the minimum bounding box (MBB)
+	// of the render.
 	Xmin, Ymin float64
 	Xmax, Ymax float64
-	Polygons   []*Polygon
+	// Polygons are the rendered polygons.
+	Polygons []*Polygon
+	// Info contains the MBB and base position of each glyph.
+	// The length of info is identical to the number of runes in
+	// the original text message.
+	Info []*GlyphInfo
+}
+
+// GlyphInfo contains the MBB and base position of a glyph.
+type GlyphInfo struct {
+	// Glyph is the rendered rune from the original text message.
+	Glyph rune
+	// X, Y represent the base position of the glyph.
+	X, Y float64
+	// Width represents the width of the glyph.
+	Width float64
+	// Xmin, Ymin, Xmax, and Ymax represent the minimum bounding box (MBB)
+	// of the glyph.
+	Xmin, Ymin float64
+	Xmax, Ymax float64
+	// N represents the number of polygons dedicated to rendering this
+	// glyph.
+	N int
 }
 
 // Polygon represents a dark or clear polygon.
 type Polygon struct {
+	// RuneIndex is the index of the rune that this polygon belongs
+	// to in the original rendered text message.
+	RuneIndex int
+	// Dark represents if this polygon is rendered dark (true) or clear (false).
 	Dark bool
-	Pts  []Pt
+	// Pts is the collection of points making up the polygon.
+	Pts []Pt
 }
 
 // Area calculates the area of the polygon by iterating
@@ -90,7 +119,18 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 	yScale *= fsf
 
 	result := &Render{}
-	for _, c := range message {
+	for runeIndex, c := range message {
+		gi := &GlyphInfo{
+			Glyph: c,
+			X:     x,
+			Y:     y,
+			Xmin:  x,
+			Xmax:  x,
+			Ymin:  y,
+			Ymax:  y,
+		}
+		result.Info = append(result.Info, gi)
+
 		if c == rune('\n') {
 			x, y = xPos, y-yScale*(font.Ascent-font.Descent)
 			continue
@@ -108,6 +148,11 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 			continue
 		}
 		dx, r := g.Render(x, y, xScale, yScale)
+		gi.Xmin = r.Xmin
+		gi.Xmax = r.Xmax
+		gi.Ymin = r.Ymin
+		gi.Ymax = r.Ymax
+		gi.N = len(r.Polygons)
 		if len(result.Polygons) == 0 || r.Xmin < result.Xmin {
 			result.Xmin = r.Xmin
 		}
@@ -120,11 +165,16 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 		if len(result.Polygons) == 0 || r.Ymax > result.Ymax {
 			result.Ymax = r.Ymax
 		}
+		for _, poly := range r.Polygons {
+			poly.RuneIndex = runeIndex
+		}
 		result.Polygons = append(result.Polygons, r.Polygons...)
 		if dx == 0 {
 			dx = font.HorizAdvX
 		}
-		x += dx * xScale
+		width := dx * xScale
+		gi.Width = width
+		x += width
 	}
 	return result, nil
 }
