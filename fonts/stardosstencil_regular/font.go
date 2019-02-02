@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿħĨĩıĲĳĴĵķĿŀŁłŃńŒœŔŖŗŘřŠšŸŽžƒȀȁȂȃȄȅȆȇȈȉȊȋȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȷˆˇˉ˘˙˚˛˜˝̦̇̏̑Ωμπ–—‘’‚“”„†‡•…‰‹›⁄€ℓ™Ω∂∆∏∑−∕∙√∞∫≈≠≤≥◊ﬁﬂ
+
 var stardosstencil_regularFont = &fonts.Font{
 	ID:               "stardosstencil_regular",
 	HorizAdvX:        1054,

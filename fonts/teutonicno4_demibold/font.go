@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"',-.0123456789:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzßˆ‘’“”†‡‰
+
 var teutonicno4_demiboldFont = &fonts.Font{
 	ID:               "teutonicno4_demibold",
 	HorizAdvX:        423,

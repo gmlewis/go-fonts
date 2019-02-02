@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿħĨĩıĲĳĴĵķĸĿŀŁłŃńŒœŔŖŗŘřŠšŸŽžƒˆˇ˘˙˚˛˜˝π–—‘’‚“”„†‡•…‰‹›⁄€™Ω∂∆∏∑−√∞∫≈≠≤≥◊ﬁﬂ
+
 var ruthie_regularFont = &fonts.Font{
 	ID:               "ruthie_regular",
 	HorizAdvX:        329,

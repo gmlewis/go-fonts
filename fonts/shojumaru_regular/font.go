@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžǼǽǾǿȷˆˇ˘˙˚˛˜˝̦̒̕πẀẁẂẃẄẅỲỳ–—‘’‚“”„†‡•…‰‹›⁄€™∂∏−≈≠≤≥ﮑﮒ
+
 var shojumaru_regularFont = &fonts.Font{
 	ID:               "shojumaru_regular",
 	HorizAdvX:        1688,

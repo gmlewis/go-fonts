@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿˆ˚˜μ‡
+
 var squadaone_regularFont = &fonts.Font{
 	ID:               "squadaone_regular",
 	HorizAdvX:        452,

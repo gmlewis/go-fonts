@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"&',-.0123456789:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ‘’“”
+
 var incisedblack_normalFont = &fonts.Font{
 	ID:               "incisedblack_normal",
 	HorizAdvX:        199,

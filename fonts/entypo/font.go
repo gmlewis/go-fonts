@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~©®ÄÅÇÉÑÖÜàáâãäåçèéêëìíîïñòóôöˇ˛™
+
 var entypoFont = &fonts.Font{
 	ID:               "entypo",
 	HorizAdvX:        600,

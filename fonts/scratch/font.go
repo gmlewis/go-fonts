@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĆćČčđıŁłŒœşŠšŸŽžƒˆˇˉ˘˙˚˛˜ΔΩμπ‐–—‘’‚“”„†‡•…‰‹›⁄™Ω∂∆∏∑−∙√∞∫≈≠≤≥⋲◊
+
 var scratchFont = &fonts.Font{
 	ID:               "scratch",
 	HorizAdvX:        1000,

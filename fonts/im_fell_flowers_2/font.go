@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  12345ABCDEFGHIJKLMNOPQRSTUVWXYZabcdgjklmnopqrstuvwxyz
+
 var im_fell_flowers_2Font = &fonts.Font{
 	ID:               "im_fell_flowers_2",
 	HorizAdvX:        1637,

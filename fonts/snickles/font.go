@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz|~ ¢­´;           ‐‑‒–—‘’“”•…  ™ﬁﬂﬃﬄ
+
 var snicklesFont = &fonts.Font{
 	ID:               "snickles",
 	HorizAdvX:        1013,

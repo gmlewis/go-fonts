@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćČčĒēĘęĢģħĨĩĪīĮįıĲĳĴĵķĸĿŀŁłŃńŒœŔŖŗŘřŚśŠšŢţŸŹźŻżŽžƒȀȁȂȃȄȅȆȇȈȉȊȋȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȷˆˇ˘˙˚˛˜˝̦̇̏̑Ωμπ–—‘’‚“”„†‡•…‰‹›⁄⁴€™∂∆∏∑−√∞∫≈≠≤≥◊ﬁﬂ
+
 var oxygenmono_regularFont = &fonts.Font{
 	ID:               "oxygenmono_regular",
 	HorizAdvX:        1229,

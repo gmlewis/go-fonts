@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĆćČčđĞğİıŁłŒœŞşŠšŸŽžƒˆˇ˘˙˚˛˜˝Ωπ–—‘’‚“”„†‡•…‰‹›€™∂∆∏∑−∕∙√∞∫≈≠≤≥◊ﬁﬂ
+
 var bitstreamverasansmono_boldFont = &fonts.Font{
 	ID:               "bitstreamverasansmono_bold",
 	HorizAdvX:        1233,

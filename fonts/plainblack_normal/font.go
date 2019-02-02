@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"&',-.0123456789:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ‘’“”
+
 var plainblack_normalFont = &fonts.Font{
 	ID:               "plainblack_normal",
 	HorizAdvX:        199,

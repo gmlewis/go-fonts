@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+// !*+-123458@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwy
+
 var heydingsiconsFont = &fonts.Font{
 	ID:               "heydingsicons",
 	HorizAdvX:        1024,

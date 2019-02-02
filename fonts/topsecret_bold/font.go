@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]_abcdefghijklmnopqrstuvwxyz{|} ¢¦§­±¶·;€™−∙
+
 var topsecret_boldFont = &fonts.Font{
 	ID:               "topsecret_bold",
 	HorizAdvX:        1401,

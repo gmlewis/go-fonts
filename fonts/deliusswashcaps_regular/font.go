@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĦħĨĩİıĲĳĴĵĶķĸĿŀŁłŃńŒœŔŖŗŘřŸˆˇ˘˙˚˛˜Ω–—‘’‚“”„†‡•…‰‹›⁄€™←↑→↓−≈≠≤≥ﬁﬂﬃ
+
 var deliusswashcaps_regularFont = &fonts.Font{
 	ID:               "deliusswashcaps_regular",
 	HorizAdvX:        224,

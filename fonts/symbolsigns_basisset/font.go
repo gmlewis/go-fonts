@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  ABCDEFGHIJKLMNOPQRSTUWXYabcdefghijklmnopqrstuwxy©
+
 var symbolsigns_basissetFont = &fonts.Font{
 	ID:               "symbolsigns_basisset",
 	HorizAdvX:        833,

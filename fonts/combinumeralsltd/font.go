@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !#$%&()*0123456789@\^eiopqrtuwy •①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳⓪⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴⓿➊➋➌➍➎➏➐➑➒➓﬐﬑﬒ﬓﬔﬕﬖﬗ﬘﬙
+
 var combinumeralsltdFont = &fonts.Font{
 	ID:               "combinumeralsltd",
 	HorizAdvX:        820,

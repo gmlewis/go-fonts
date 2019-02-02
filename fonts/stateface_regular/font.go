@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+
 var stateface_regularFont = &fonts.Font{
 	ID:               "stateface_regular",
 	HorizAdvX:        910,

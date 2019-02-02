@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"',-.0123456789:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ´×ýˇ̃–—‘’“”
+
 var rechtmanplainFont = &fonts.Font{
 	ID:               "rechtmanplain",
 	HorizAdvX:        190,

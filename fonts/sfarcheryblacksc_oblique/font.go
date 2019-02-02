@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦¨©«­®¯°±´¶·»¿ÀÁÂÃÄÅÆÈÉÊËÌÍÎÏÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæèéêëìíîïñòóôõö÷øùúûüýþÿŒœŠšŸˆ˜–—‘’‚“”„†‡•…‰‹›€™
+
 var sfarcheryblacksc_obliqueFont = &fonts.Font{
 	ID:               "sfarcheryblacksc_oblique",
 	HorizAdvX:        856,

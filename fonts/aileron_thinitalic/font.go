@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¤¥¦§¨©«¬®¯°±´¶·¸»¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĊċČčĎďĐđĒēĖėĘęĚěĞğĠġĢģĦħĪīĮįİıĲĳĶķĹĺĻļĽľĿŀŁłŃńŅņŇňŊŋŌōŐőŒœŔŕŖŗŘřŚśŞşŠšŢţŤťŦŧŪūŮůŰűŲųŴŵŶŷŸŹźŻżŽžȘșȚțˆˇ˘˙˚˛˜˝̦ẀẁẂẃẄẅỲỳ–—‘’‚“”„†‡•…‰‹›⁄€™∂∅∏∑−√∞∫≈≠≤≥◊ﮑﮒ
+
 var aileron_thinitalicFont = &fonts.Font{
 	ID:               "aileron_thinitalic",
 	HorizAdvX:        543,

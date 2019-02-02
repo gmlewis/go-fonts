@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£§¨©«¬®°±´µ¶¸»¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôõö÷øùúûüÿıŒœŸˆˇ˜ΣΩπ–—‘’‚“”„†•…‹›™∂∆∏∕∙√∞∫≈≠≤≥◊
+
 var englandhanddbFont = &fonts.Font{
 	ID:               "englandhanddb",
 	HorizAdvX:        858,

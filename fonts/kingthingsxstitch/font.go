@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]_abcdefghijklmnopqrstuvwxyz{}£­¼½¾×÷‐‘’“”−
+
 var kingthingsxstitchFont = &fonts.Font{
 	ID:               "kingthingsxstitch",
 	HorizAdvX:        0,

@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+
 var printersornamentsoneFont = &fonts.Font{
 	ID:               "printersornamentsone",
 	HorizAdvX:        1597,

@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦¨©«­®¯°±´¶·»¿ÀÁÂÃÄÅÆÈÉÊËÌÍÎÏÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæèéêëìíîïñòóôõö÷øùúûüýþÿŒœŠšŸˆ˜–—‘’‚“”„†‡•…‰‹›€™
+
 var sfarcheryblackscFont = &fonts.Font{
 	ID:               "sfarcheryblacksc",
 	HorizAdvX:        856,

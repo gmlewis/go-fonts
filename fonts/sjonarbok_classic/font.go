@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !#&()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]_abcdefghijklmnopqrs{|}¯·ÁÆÉÍÐÓÖ×ÚÝÞ÷—‘’“”„
+
 var sjonarbok_classicFont = &fonts.Font{
 	ID:               "sjonarbok_classic",
 	HorizAdvX:        384,

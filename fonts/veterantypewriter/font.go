@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()+,-./0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]abcdefghijklmnopqrstuvwxyz ¢­;⁄−∕
+
 var veterantypewriterFont = &fonts.Font{
 	ID:               "veterantypewriter",
 	HorizAdvX:        1014,

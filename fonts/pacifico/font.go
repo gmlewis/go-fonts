@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¢£¥©­®´           ‐‑‒–—‘’“”•…  €™ﬁﬂﬃﬄ
+
 var pacificoFont = &fonts.Font{
 	ID:               "pacifico",
 	HorizAdvX:        970,

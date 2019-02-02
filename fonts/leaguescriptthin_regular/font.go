@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¨«´¸»¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝàáâãäåæçèéêëìíîïñòóôõöøùúûüýÿıŁłŒœŠšŸŽžˆˇ˘˚˜‘’“”•⁄€ﬁﬂ
+
 var leaguescriptthin_regularFont = &fonts.Font{
 	ID:               "leaguescriptthin_regular",
 	HorizAdvX:        833,

@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !,-.0123456789:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ßˆ‘’“”†‡…‰
+
 var genzschetheyseFont = &fonts.Font{
 	ID:               "genzschetheyse",
 	HorizAdvX:        375,

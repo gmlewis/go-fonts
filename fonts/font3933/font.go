@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+// +-123456789<>ABCDEFGHJLMOPQRSTUVWXabcdegjlmopqrsuw
+
 var font3933Font = &fonts.Font{
 	ID:               "font3933",
 	HorizAdvX:        1024,

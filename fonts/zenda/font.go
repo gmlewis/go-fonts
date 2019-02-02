@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !,-.0123456789:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzßˆ‘’“”†‡‰
+
 var zendaFont = &fonts.Font{
 	ID:               "zenda",
 	HorizAdvX:        133,

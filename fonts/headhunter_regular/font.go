@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"&',-.:;?ABCDEFGHIJKLMNOPQRSTUVWXYZ`abcdefghijklmnopqrstuvwxyz ±µ÷ΣΩπ‘’“”∂∆∏√∞∫≈≠≤≥◊
+
 var headhunter_regularFont = &fonts.Font{
 	ID:               "headhunter_regular",
 	HorizAdvX:        549,

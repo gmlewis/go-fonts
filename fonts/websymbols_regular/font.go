@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !#%&'()*+,-./01234567:;<>?@ABCDFHIJKLMNOPQRSTUVWXZ[\]_`abcdefghijklmnopqrstuvwxyz{}~²³¹×
+
 var websymbols_regularFont = &fonts.Font{
 	ID:               "websymbols_regular",
 	HorizAdvX:        1000,

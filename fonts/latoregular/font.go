@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¢£¥©­®´           ‐‑‒–—‘’“”•…  €™
+
 var latoregularFont = &fonts.Font{
 	ID:               "latoregular",
 	HorizAdvX:        1187,

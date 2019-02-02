@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿħĨĩıĲĳĴĵķĸĿŀŁłŃńŒœŔŖŗŘřƒȷˆˇ˙˚˜μ–—‘’‚“”„†‡•…‰‹›€−
+
 var rye_regularFont = &fonts.Font{
 	ID:               "rye_regular",
 	HorizAdvX:        0,

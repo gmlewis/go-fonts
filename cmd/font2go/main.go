@@ -32,9 +32,10 @@ var (
 
 	outTemp = template.Must(template.New("out").Funcs(funcMap).Parse(goTemplate))
 	funcMap = template.FuncMap{
-		"floats":  floats,
-		"orEmpty": orEmpty,
-		"utf8":    utf8Escape,
+		"floats":     floats,
+		"orEmpty":    orEmpty,
+		"utf8":       utf8Escape,
+		"viewFilter": viewFilter,
 	}
 	readmeTemp = template.Must(template.New("readme").Parse(readmeTemplate))
 
@@ -108,6 +109,9 @@ func writeFont(fontData *FontData, fontDir string) {
 			continue
 		}
 		if _, ok := dedup[r]; ok {
+			if dst == 0xfeff { // BOM - disallowed in Go source.
+				dst++
+			}
 			for {
 				if _, ok := dedup[dst]; !ok {
 					break
@@ -267,6 +271,24 @@ func utf8Escape(s *string) string {
 	return v
 }
 
+func viewFilter(s *string) string {
+	if s == nil || !utf8.ValidString(*s) {
+		return ""
+	}
+
+	r := utf8toRune(s)
+	if r == 0xfeff {
+		return "" // BOM disallowed in Go source.
+	}
+
+	switch *s {
+	case "\n", "\r", "\t":
+		return ""
+	default:
+		return *s
+	}
+}
+
 func orEmpty(s *string) string {
 	if s == nil || *s == "" {
 		return `""`
@@ -312,6 +334,9 @@ package {{ .ID }}
 import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
+
+// Available glyphs:
+// {{ range .Glyphs }}{{ .Unicode | viewFilter }}{{ end }}
 
 var {{ .ID }}Font = &fonts.Font{
 	ID:               "{{ .ID }}",

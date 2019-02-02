@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¢£¥©­®´           ‐‑‒–—‘’“”•…  €™
+
 var overlockregularFont = &fonts.Font{
 	ID:               "overlockregular",
 	HorizAdvX:        1095,

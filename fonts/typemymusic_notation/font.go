@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¥§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÁÂÅÆÇÍÎÏÒÓÔØÚßåæç÷øıŒœƒˆˇ˘˙˚˛˜˝Ωπ–—‘’‚“”„†‡•…‰‹›⁄€™∂∆∏∑√∞∫≈≠≤≥◊ﬁﬂ
+
 var typemymusic_notationFont = &fonts.Font{
 	ID:               "typemymusic_notation",
 	HorizAdvX:        270,

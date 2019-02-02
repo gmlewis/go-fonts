@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"&',-.0123456789:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ‘’“”
+
 var embossedblackwide_normalFont = &fonts.Font{
 	ID:               "embossedblackwide_normal",
 	HorizAdvX:        300,

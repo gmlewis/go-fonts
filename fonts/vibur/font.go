@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿČčıŸƒˆˇ˘˙˚˛˜˝–—‘’‚“”„†‡•…‰‹›⁄⁴₂₄€−∕גּﭏﮠﮡﮢﮣﮤﮨﮩﮬﮭﮯﮰﮱ﮲﮳﮴﮵﮶﮻﮼﮽﮾﮿﯀﯁﯃﯄﯈﯉ﯮﯯﯰﯱﯲﯳ
+
 var viburFont = &fonts.Font{
 	ID:               "vibur",
 	HorizAdvX:        1280,

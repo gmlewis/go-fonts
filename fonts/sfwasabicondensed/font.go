@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢¥¦¨©«­®¯°±´¶·¸»¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖ×ØÙÚÛÜÝàáâãäåæçèéêëìíîïñòóôõö÷øùúûüýÿŒœŠšŸˆ˜–—‘’‚“”„•…‰‹›™
+
 var sfwasabicondensedFont = &fonts.Font{
 	ID:               "sfwasabicondensed",
 	HorizAdvX:        449,

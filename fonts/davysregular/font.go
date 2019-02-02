@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥§©ª«¬®°±µ¶ºÁÂÅÇÈÊËÌÍÎÏÒÓÔØÙÛßåæç÷ıŒœƒ˙˚̂̃ΣΩπ–—‘‚“„†‡•…‰‹›™∂∆∏∕∙√∞∫≈≠≤≥◊
+
 var davysregularFont = &fonts.Font{
 	ID:               "davysregular",
 	HorizAdvX:        1467,

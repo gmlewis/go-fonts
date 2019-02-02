@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢¥¦¨©«­®¯°±´¶·¸»¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖ×ØÙÚÛÜÝàáâãäåæçèéêëìíîïñòóôõö÷øùúûüýÿŒœŠšŸˆ˜–—‘’‚“”„•…‰‹›™
+
 var sfwasabiFont = &fonts.Font{
 	ID:               "sfwasabi",
 	HorizAdvX:        599,

@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¥§¨©ª«¬®¯°±´µ¶·¸º»¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôõö÷øùúûüÿıŒœŸƒˆˇ˘˙˚˛˜˝ΔΩπ–—‘’‚“”„†‡•…‰‹›⁄€™∂∏∑√∞∫≈≠≤≥◊ﬁﬂ
+
 var rothenburgdecorative_normalFont = &fonts.Font{
 	ID:               "rothenburgdecorative_normal",
 	HorizAdvX:        476,

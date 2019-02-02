@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}¡©°±ÒÓÖ×àáâäèéêëìíîïòóôöùúûü‐€
+
 var aaarghnormalFont = &fonts.Font{
 	ID:               "aaarghnormal",
 	HorizAdvX:        629,

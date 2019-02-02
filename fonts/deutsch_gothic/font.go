@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ƒ‚„†…
+
 var deutsch_gothicFont = &fonts.Font{
 	ID:               "deutsch_gothic",
 	HorizAdvX:        276,

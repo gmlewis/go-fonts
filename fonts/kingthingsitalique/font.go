@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]_`abcdefghijklmnopqrstuvwxyz{}¢£©­®¼½¾Ç×ç÷‐‘’“”…™−
+
 var kingthingsitaliqueFont = &fonts.Font{
 	ID:               "kingthingsitalique",
 	HorizAdvX:        629,

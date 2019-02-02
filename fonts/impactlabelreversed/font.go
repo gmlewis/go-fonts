@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ\^_`abcdefghijklmnopqrstuvwxyz~ ¡¢¥¨©«¬®±´·»¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖ×ØÙÚÛÜÝàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýÿıŒœŠšŸŽžˆˇ˘˜–—‘’‚“”„•…‰‹›⁄™∆−√≈
+
 var impactlabelreversedFont = &fonts.Font{
 	ID:               "impactlabelreversed",
 	HorizAdvX:        599,

@@ -6,6 +6,9 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
+// Available glyphs:
+//  !"#$%&'()*+,-./02345678:;=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijkopqrstuvwxyz{|}~ 
+
 var carrelectronicdingbatsFont = &fonts.Font{
 	ID:               "carrelectronicdingbats",
 	HorizAdvX:        4223,
