@@ -116,7 +116,6 @@ limitations under the License.
 [![entypo](images/sample_entypo.png)](fonts/entypo)
 [![f20db](images/sample_f20db.png)](fonts/f20db)
 [![f2dumb](images/sample_f2dumb.png)](fonts/f2dumb)
-[![f3dumb](images/sample_f3dumb.png)](fonts/f3dumb)
 [![fantasquesansmono_bold](images/sample_fantasquesansmono_bold.png)](fonts/fantasquesansmono_bold)
 [![fantasquesansmono_bolditalic](images/sample_fantasquesansmono_bolditalic.png)](fonts/fantasquesansmono_bolditalic)
 [![fantasquesansmono_italic](images/sample_fantasquesansmono_italic.png)](fonts/fantasquesansmono_italic)
