@@ -110,7 +110,6 @@ limitations under the License.
 [![deliusswashcaps_regular](images/sample_deliusswashcaps_regular.png)](fonts/deliusswashcaps_regular)
 [![diplomata_regular](images/sample_diplomata_regular.png)](fonts/diplomata_regular)
 [![dited](images/sample_dited.png)](fonts/dited)
-[![dutchinitials](images/sample_dutchinitials.png)](fonts/dutchinitials)
 [![embossedblack_normal](images/sample_embossedblack_normal.png)](fonts/embossedblack_normal)
 [![embossedblackwide_normal](images/sample_embossedblackwide_normal.png)](fonts/embossedblackwide_normal)
 [![englandhanddb](images/sample_englandhanddb.png)](fonts/englandhanddb)
