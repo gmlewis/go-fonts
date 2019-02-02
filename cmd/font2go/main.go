@@ -283,10 +283,6 @@ import (
 	"github.com/gmlewis/go-fonts/fonts"
 )
 
-func init() {
-  fonts.Fonts["{{ .ID }}"] = {{ .ID }}Font
-}
-
 var {{ .ID }}Font = &fonts.Font{
 	ID: "{{ .ID }}",
 	HorizAdvX:  {{ .HorizAdvX }},
@@ -294,16 +290,21 @@ var {{ .ID }}Font = &fonts.Font{
 	Ascent:     {{ .FontFace.Ascent }},
 	Descent:    {{ .FontFace.Descent }},
 	MissingHorizAdvX: {{ .MissingGlyph.HorizAdvX }},
-	Glyphs: map[rune]*fonts.Glyph{ {{ range .Glyphs }}{{ if .Unicode }}{{ if .PathSteps }}
-		{{ .Unicode | utf8 }}: {
+	Glyphs: map[rune]*fonts.Glyph{},
+}
+
+func init() {
+  fonts.Fonts["{{ .ID }}"] = {{ .ID }}Font
+
+	{{ $id := .ID }}{{ range .Glyphs }}{{ if .Unicode }}{{ if .PathSteps }}
+	{{ $id }}Font.Glyphs[{{ .Unicode | utf8 }}] = &fonts.Glyph{
 			HorizAdvX: {{ .HorizAdvX }},
 			Unicode: {{ .Unicode | utf8 }},
 			GerberLP: {{ .GerberLP | orEmpty }},
 			PathSteps: []*fonts.PathStep{ {{ range .PathSteps }}
 				{ C: '{{ .C }}'{{ if .P }}, P: {{ .P | floats }}{{ end }} },{{ end }}
 			},
-		},{{ end }}{{ end }}{{ end }}
-	},
+		};{{ end }}{{ end }}{{ end }}
 }
 `
 
