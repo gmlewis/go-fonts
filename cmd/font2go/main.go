@@ -4,6 +4,7 @@ package main
 
 import (
 	"bytes"
+	"compress/zlib"
 	"encoding/base64"
 	"encoding/xml"
 	"flag"
@@ -158,11 +159,22 @@ func writeFont(fontData *FontData, fontDir string) {
 		})
 	}
 
-	data, err := proto.Marshal(gs)
-	if err != nil {
-		log.Fatal(err)
+	{
+		data, err := proto.Marshal(gs)
+		if err != nil {
+			log.Fatal(err)
+		}
+		var b bytes.Buffer
+		w, err := zlib.NewWriterLevel(&b, zlib.BestCompression)
+		if err != nil {
+			log.Fatal(err)
+		}
+		w.Write(data)
+		if err := w.Close(); err != nil {
+			log.Fatalf("zlib.Close: %v", err)
+		}
+		fontData.Font.Data = base64.StdEncoding.EncodeToString(b.Bytes())
 	}
-	fontData.Font.Data = base64.StdEncoding.EncodeToString(data)
 
 	var buf bytes.Buffer
 	if err := outTemp.Execute(&buf, fontData.Font); err != nil {

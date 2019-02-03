@@ -25,7 +25,10 @@
 package fonts
 
 import (
+	"bytes"
+	"compress/zlib"
 	"encoding/base64"
+	"io"
 	"log"
 	"unicode/utf8"
 
@@ -113,8 +116,21 @@ func InitFromFontData(font *Font, fontData string) {
 	if err != nil {
 		log.Fatalf("unable to base64 decode %v fontData: %v", font.ID, err)
 	}
+	b := bytes.NewBuffer(data)
+	r, err := zlib.NewReader(b)
+	if err != nil {
+		log.Fatalf("zlib.NewReader: %v", err)
+	}
+	var buf bytes.Buffer
+	if _, err := io.Copy(&buf, r); err != nil {
+		log.Fatalf("io.Copy: %v", err)
+	}
+	if err := r.Close(); err != nil {
+		log.Fatalf("zlib.Close: %v", err)
+	}
+
 	gs := &glyphs.Glyphs{}
-	if err := proto.Unmarshal(data, gs); err != nil {
+	if err := proto.Unmarshal(buf.Bytes(), gs); err != nil {
 		log.Fatalf("unable to unmarshal %v proto data: %v", font.ID, err)
 	}
 	for _, glyph := range gs.Glyphs {
