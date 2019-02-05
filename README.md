@@ -18,11 +18,11 @@ import (
 Then render the text to polygons and use them however you want:
 
 ```go
-  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "ubuntumonoregular")
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "ubuntumonoregular", Center)
   if err != nil {
     return err
   }
-  log.Printf("MBB: (%.2f,%.2f)-(%.2f,%.2f)", render.Xmin, render.Ymin,render.Xmax, render.Ymax)
+  log.Printf("MBB: %v", render.MBB)
   for _, poly := range render.Polygons {
     // ...
   }
