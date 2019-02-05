@@ -15,15 +15,55 @@ const (
 	// If more resolution is needed in the rendered polygons,
 	// MaxSteps could be increased.
 	MaxSteps = 100
+
+	// These are convenience constants for aligning text.
+	XLeft   = 0
+	XCenter = 0.5
+	XRight  = 1
+	YBottom = 0
+	YCenter = 0.5
+	YTop    = 1
 )
+
+var (
+	// Convenience options for aligning the text.
+	BottomLeft   = &TextOpts{YAlign: YBottom, XAlign: XLeft}
+	BottomCenter = &TextOpts{YAlign: YBottom, XAlign: XCenter}
+	BottomRight  = &TextOpts{YAlign: YBottom, XAlign: XRight}
+	CenterLeft   = &TextOpts{YAlign: YCenter, XAlign: XLeft}
+	Center       = &TextOpts{YAlign: YCenter, XAlign: XCenter}
+	CenterRight  = &TextOpts{YAlign: YCenter, XAlign: XRight}
+	TopLeft      = &TextOpts{YAlign: YTop, XAlign: XLeft}
+	TopCenter    = &TextOpts{YAlign: YTop, XAlign: XCenter}
+	TopRight     = &TextOpts{YAlign: YTop, XAlign: XRight}
+)
+
+// TextOpts provides options for positioning (aligning) the text based on
+// its minimum bounding box.
+type TextOpts struct {
+	// XAlign represents the horizontal alignment of the text.
+	// 0=x origin at left (the default), 1=x origin at right, 0.5=center.
+	// XLeft, XCenter, and XRight are defined for convenience and
+	// readability of the code.
+	XAlign float64
+	// YAlign represents the vertical alignment of the text.
+	// 0=y origin at bottom (the default), 1=y origin at top, 0.5=center.
+	// YBottom, YCenter, and YTop are defined for convenience and
+	// readbility of the code.
+	YAlign float64
+}
+
+// Pt represents a 2D Point.
+type Pt = vec2.T
+
+// MBB represents a minimum bounding box.
+type MBB = vec2.Rect
 
 // Render represents a collection of polygons and includes
 // the minimum bounding box of their union.
 type Render struct {
-	// Xmin, Ymin, Xmax, and Ymax represent the minimum bounding box (MBB)
-	// of the render.
-	Xmin, Ymin float64
-	Xmax, Ymax float64
+	// MBB represents the minimum bounding box (MBB) of the render.
+	MBB MBB
 	// Polygons are the rendered polygons.
 	Polygons []*Polygon
 	// Info contains the MBB and base position of each glyph.
@@ -40,10 +80,8 @@ type GlyphInfo struct {
 	X, Y float64
 	// Width represents the width of the glyph.
 	Width float64
-	// Xmin, Ymin, Xmax, and Ymax represent the minimum bounding box (MBB)
-	// of the glyph.
-	Xmin, Ymin float64
-	Xmax, Ymax float64
+	// MBB represents the minimum bounding box (MBB) of the glyph.
+	MBB MBB
 	// N represents the number of polygons dedicated to rendering this
 	// glyph.
 	N int
@@ -58,41 +96,16 @@ type Polygon struct {
 	Dark bool
 	// Pts is the collection of points making up the polygon.
 	Pts []Pt
+	// MBB represents the MBB of the polygon.
+	MBB MBB
 }
 
-// Area calculates the area of the polygon by iterating
-// over all its points. Therefore, don't call this
-// function in a loop (such as a sort, for example).
+// Area calculates the area of the polygon.
 func (p *Polygon) Area() float64 {
-	var xmin, xmax, ymin, ymax float64
-	for i, pt := range p.Pts {
-		if i == 0 || pt.X < xmin {
-			xmin = pt.X
-		}
-		if i == 0 || pt.X > xmax {
-			xmax = pt.X
-		}
-		if i == 0 || pt.Y < ymin {
-			ymin = pt.Y
-		}
-		if i == 0 || pt.Y > ymax {
-			ymax = pt.Y
-		}
-	}
-	return (xmax - xmin) * (ymax - ymin)
+	return p.MBB.Area()
 }
 
-// Pt represents a 2D Point.
-type Pt struct {
-	X, Y float64
-}
-
-// Text returns a Render representing the rendered text.
-// All dimensions are in "em"s, the width of the character "M" in the
-// desired font.
-//
-// xScale and yScale are provided to convert the font to any scale desired.
-func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render, error) {
+func getFont(fontName string) (*Font, error) {
 	if len(Fonts) == 0 {
 		return nil, errors.New("No fonts available")
 	}
@@ -104,6 +117,98 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 			break
 		}
 		log.Printf("Could not find font %q: using %q instead", fontName, name)
+	}
+	return font, nil
+}
+
+// TextMBB calculates the minimum bounding box of a text message without
+// the overhead of rendering it.
+func TextMBB(xPos, yPos, xScale, yScale float64, message, fontName string) (*MBB, error) {
+	font, err := getFont(fontName)
+	if err != nil {
+		return nil, err
+	}
+
+	if font.HorizAdvX == 0 {
+		font.HorizAdvX = font.UnitsPerEm
+	}
+	if font.MissingHorizAdvX == 0 {
+		font.MissingHorizAdvX = font.HorizAdvX
+	}
+
+	var result *MBB
+	x, y := 0.0, 0.0
+	for _, c := range message {
+		if c == rune('\n') {
+			x, y = 0.0, y-(font.Ascent-font.Descent)
+			continue
+		}
+		if c == rune('\t') {
+			x += 2.0 * font.HorizAdvX
+			continue
+		}
+		g, ok := font.Glyphs[c]
+		if !ok {
+			if c != ' ' {
+				log.Printf("Warning: missing glyph %+q: skipping", c)
+			}
+			x += font.MissingHorizAdvX
+			continue
+		}
+		width := (g.MBB.Max[0] - g.MBB.Min[0])
+		height := (g.MBB.Max[1] - g.MBB.Min[1])
+		minx := x + g.MBB.Min[0]
+		miny := y + g.MBB.Min[1]
+		mbb := MBB{
+			Min: Pt{minx, miny},
+			Max: Pt{minx + width, miny + height},
+		}
+		dx := g.HorizAdvX
+		if dx == 0 {
+			dx = font.HorizAdvX
+		}
+		x += dx
+		// log.Printf("Glyph %+q: mbb=%v, x=%v", g.Unicode, mbb, x)
+		if result == nil {
+			result = &mbb
+		} else {
+			result.Join(&mbb)
+		}
+	}
+
+	// log.Printf("TextMBB: xScale,yScale=(%v,%v)", xScale, yScale)
+	fsf := 1.0 / font.UnitsPerEm
+	xScale *= fsf
+	yScale *= fsf
+	// log.Printf("TextMBB: UnitsPerEm=%v, fsf=%v, scale=(%v,%v), xPos,yPos=(%v,%v)", font.UnitsPerEm, fsf, xScale, yScale, xPos, yPos)
+
+	minx := xPos + xScale*result.Min[0]
+	miny := yPos + yScale*result.Min[1]
+	width := xScale * (result.Max[0] - result.Min[0])
+	height := yScale * (result.Max[1] - result.Min[1])
+	mbb := &MBB{
+		Min: Pt{minx, miny},
+		Max: Pt{minx + width, miny + height},
+	}
+
+	// log.Printf("TextMBB: message=%q, result=%v, mbb=%v", message, result, mbb)
+	return mbb, nil
+}
+
+// Text returns a Render representing the rendered text.
+// All dimensions are in "em"s, the width of the character "M" in the
+// desired font.
+//
+// xScale and yScale are provided to convert the font to any scale desired.
+func Text(xPos, yPos, xScale, yScale float64, message, fontName string, opts *TextOpts) (*Render, error) {
+	font, err := getFont(fontName)
+	if err != nil {
+		return nil, err
+	}
+
+	mbb, err := TextMBB(xPos, yPos, xScale, yScale, message, fontName)
+	if err != nil {
+		return nil, err
 	}
 
 	if font.HorizAdvX == 0 {
@@ -117,6 +222,20 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 	fsf := 1.0 / font.UnitsPerEm
 	xScale *= fsf
 	yScale *= fsf
+	var xAlign float64
+	var yAlign float64
+	if opts != nil {
+		xAlign = opts.XAlign
+		yAlign = opts.YAlign
+	}
+
+	width := (mbb.Max[0] - mbb.Min[0])
+	height := (mbb.Max[1] - mbb.Min[1])
+	xError := mbb.Min[0] - xPos
+	yError := mbb.Min[1] - yPos
+	x = xPos - xAlign*width - xError
+	y = yPos - yAlign*height - yError
+	// log.Printf("Text: TextMBB=%v, Pos=(%v,%v), error=(%v,%v), x,y=(%v,%v)", mbb, xPos, yPos, xError, yError, x, y)
 
 	result := &Render{}
 	for runeIndex, c := range message {
@@ -124,10 +243,7 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 			Glyph: c,
 			X:     x,
 			Y:     y,
-			Xmin:  x,
-			Xmax:  x,
-			Ymin:  y,
-			Ymax:  y,
+			MBB:   MBB{Min: Pt{x, y}, Max: Pt{x, y}},
 		}
 		result.Info = append(result.Info, gi)
 
@@ -148,22 +264,12 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 			continue
 		}
 		dx, r := g.Render(x, y, xScale, yScale)
-		gi.Xmin = r.Xmin
-		gi.Xmax = r.Xmax
-		gi.Ymin = r.Ymin
-		gi.Ymax = r.Ymax
+		gi.MBB = r.MBB
 		gi.N = len(r.Polygons)
-		if len(result.Polygons) == 0 || r.Xmin < result.Xmin {
-			result.Xmin = r.Xmin
-		}
-		if len(result.Polygons) == 0 || r.Xmax > result.Xmax {
-			result.Xmax = r.Xmax
-		}
-		if len(result.Polygons) == 0 || r.Ymin < result.Ymin {
-			result.Ymin = r.Ymin
-		}
-		if len(result.Polygons) == 0 || r.Ymax > result.Ymax {
-			result.Ymax = r.Ymax
+		if len(result.Polygons) == 0 {
+			result.MBB = r.MBB
+		} else {
+			result.MBB.Join(&r.MBB)
 		}
 		for _, poly := range r.Polygons {
 			poly.RuneIndex = runeIndex
@@ -176,6 +282,7 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string) (*Render
 		gi.Width = width
 		x += width
 	}
+	// log.Printf("FINAL MBB=%v", result.MBB)
 	return result, nil
 }
 
@@ -197,35 +304,23 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 
 		r := &Render{}
 		for i, pt := range pts {
-			if i == 0 || pt.X < r.Xmin {
-				r.Xmin = pt.X
-			}
-			if i == 0 || pt.X > r.Xmax {
-				r.Xmax = pt.X
-			}
-			if i == 0 || pt.Y < r.Ymin {
-				r.Ymin = pt.Y
-			}
-			if i == 0 || pt.Y > r.Ymax {
-				r.Ymax = pt.Y
+			v := MBB{Min: pt, Max: pt}
+			if i == 0 {
+				r.MBB = v
+			} else {
+				r.MBB.Join(&v)
 			}
 		}
-		if len(result.Polygons) == 0 || r.Xmin < result.Xmin {
-			result.Xmin = r.Xmin
-		}
-		if len(result.Polygons) == 0 || r.Xmax > result.Xmax {
-			result.Xmax = r.Xmax
-		}
-		if len(result.Polygons) == 0 || r.Ymin < result.Ymin {
-			result.Ymin = r.Ymin
-		}
-		if len(result.Polygons) == 0 || r.Ymax > result.Ymax {
-			result.Ymax = r.Ymax
+		if len(result.Polygons) == 0 {
+			result.MBB = r.MBB
+		} else {
+			result.MBB.Join(&r.MBB)
 		}
 
 		result.Polygons = append(result.Polygons, &Polygon{
 			Dark: currentPolarity == "d",
 			Pts:  pts,
+			MBB:  result.MBB,
 		})
 		pts = []Pt{}
 	}
@@ -240,42 +335,42 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 				dumpPoly()
 			}
 			x, y = oX+xScale*ps.P[0], oY+yScale*ps.P[1]
-			pts = []Pt{{X: x, Y: y}}
+			pts = []Pt{{x, y}}
 		case 'm':
 			if len(pts) > 0 {
 				dumpPoly()
 			}
 			x, y = x+xScale*ps.P[0], y+yScale*ps.P[1]
-			pts = []Pt{{X: x, Y: y}}
+			pts = []Pt{{x, y}}
 		case 'L':
 			for i := 0; i < len(ps.P); i += 2 {
 				x, y = oX+xScale*ps.P[i], oY+yScale*ps.P[i+1]
-				pts = append(pts, Pt{X: x, Y: y})
+				pts = append(pts, Pt{x, y})
 			}
 		case 'l':
 			for i := 0; i < len(ps.P); i += 2 {
 				x, y = x+xScale*ps.P[i], y+yScale*ps.P[i+1]
-				pts = append(pts, Pt{X: x, Y: y})
+				pts = append(pts, Pt{x, y})
 			}
 		case 'H':
 			for i := 0; i < len(ps.P); i++ {
 				x = oX + xScale*ps.P[i]
-				pts = append(pts, Pt{X: x, Y: y})
+				pts = append(pts, Pt{x, y})
 			}
 		case 'h':
 			for i := 0; i < len(ps.P); i++ {
 				x += xScale * ps.P[i]
-				pts = append(pts, Pt{X: x, Y: y})
+				pts = append(pts, Pt{x, y})
 			}
 		case 'V':
 			for i := 0; i < len(ps.P); i++ {
 				y = oY + yScale*ps.P[i]
-				pts = append(pts, Pt{X: x, Y: y})
+				pts = append(pts, Pt{x, y})
 			}
 		case 'v':
 			for i := 0; i < len(ps.P); i++ {
 				y += yScale * ps.P[i]
-				pts = append(pts, Pt{X: x, Y: y})
+				pts = append(pts, Pt{x, y})
 			}
 		case 'C':
 			for i := 0; i < len(ps.P); i += 6 {
@@ -298,7 +393,7 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 				for j := 1; j <= steps; j++ {
 					t := float64(j) / float64(steps)
 					p := b.Point(t)
-					pts = append(pts, Pt{X: p[0], Y: p[1]})
+					pts = append(pts, p)
 				}
 				x, y = ex, ey
 			}
@@ -323,7 +418,7 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 				for j := 1; j <= steps; j++ {
 					t := float64(j) / float64(steps)
 					p := b.Point(t)
-					pts = append(pts, Pt{X: p[0], Y: p[1]})
+					pts = append(pts, p)
 				}
 				x, y = x+dx, y+dy
 			}
@@ -353,7 +448,7 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 				for j := 1; j <= steps; j++ {
 					t := float64(j) / float64(steps)
 					p := b.Point(t)
-					pts = append(pts, Pt{X: p[0], Y: p[1]})
+					pts = append(pts, p)
 				}
 				x, y = x+dx, y+dy
 			}
@@ -378,7 +473,7 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 				for j := 1; j <= steps; j++ {
 					t := float64(j) / float64(steps)
 					p := b.Point(t)
-					pts = append(pts, Pt{X: p[0], Y: p[1]})
+					pts = append(pts, p)
 				}
 				x, y = x+dx, y+dy
 			}
@@ -407,7 +502,7 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 				for j := 1; j <= steps; j++ {
 					t := float64(j) / float64(steps)
 					p := lastQ.Point(t)
-					pts = append(pts, Pt{X: p[0], Y: p[1]})
+					pts = append(pts, p)
 				}
 				x, y = x+dx, y+dy
 			}

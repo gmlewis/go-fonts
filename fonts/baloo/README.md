@@ -12,11 +12,11 @@ import (
 
 func main() {
   // ...
-  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "baloo")
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "baloo", Center)
   if err != nil {
     return err
   }
-  log.Printf("MBB: (%.2f,%.2f)-(%.2f,%.2f)", render.Xmin, render.Ymin,render.Xmax, render.Ymax)
+  log.Printf("MBB: %v", render.MBB)
   for _, poly := range render.Polygons {
     // ...
   }

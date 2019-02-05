@@ -19,9 +19,17 @@ message Glyph {
   string unicode = 2;
   string gerber_l_p = 3;
   repeated PathStep path_steps = 4;
+  MBB mbb = 5;
 }
 
 message PathStep {
   uint32 c = 1;
   repeated double p = 2;
+}
+
+message MBB {
+  double xmin = 1;
+  double ymin = 2;
+  double xmax = 3;
+  double ymax = 4;
 }

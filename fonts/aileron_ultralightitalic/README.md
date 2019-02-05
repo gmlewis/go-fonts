@@ -12,11 +12,11 @@ import (
 
 func main() {
   // ...
-  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "aileron_ultralightitalic")
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "aileron_ultralightitalic", Center)
   if err != nil {
     return err
   }
-  log.Printf("MBB: (%.2f,%.2f)-(%.2f,%.2f)", render.Xmin, render.Ymin,render.Xmax, render.Ymax)
+  log.Printf("MBB: %v", render.MBB)
   for _, poly := range render.Polygons {
     // ...
   }

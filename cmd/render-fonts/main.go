@@ -59,19 +59,19 @@ func main() {
 			message = strings.Join(lines, "\n")
 		}
 
-		render, err := Text(0, 0, 1.0, 1.0, message, name)
+		render, err := Text(0, 0, 1.0, 1.0, message, name, nil)
 		if err != nil {
 			log.Fatal(err)
 		}
 
-		scale := float64(*width) / (render.Xmax - render.Xmin)
-		if yScale := float64(*height) / (render.Ymax - render.Ymin); yScale < scale {
+		scale := float64(*width) / (render.MBB.Max[0] - render.MBB.Min[0])
+		if yScale := float64(*height) / (render.MBB.Max[1] - render.MBB.Min[1]); yScale < scale {
 			scale = yScale
-			*width = int(0.5 + scale*(render.Xmax-render.Xmin))
+			*width = int(0.5 + scale*(render.MBB.Max[0]-render.MBB.Min[0]))
 		} else {
-			*height = int(0.5 + scale*(render.Ymax-render.Ymin))
+			*height = int(0.5 + scale*(render.MBB.Max[1]-render.MBB.Min[1]))
 		}
-		log.Printf("MBB: (%.2f,%.2f)-(%.2f,%.2f), scale=%.2f, size=(%v,%v)", render.Xmin, render.Ymin, render.Xmax, render.Ymax, scale, *width, *height)
+		log.Printf("MBB: %v, scale=%.2f, size=(%v,%v)", render.MBB, scale, *width, *height)
 
 		dc := gg.NewContext(*width, *height)
 		dc.SetRGB(1, 1, 1)
@@ -84,9 +84,9 @@ func main() {
 			}
 			for i, pt := range poly.Pts {
 				if i == 0 {
-					dc.MoveTo(scale*(pt.X-render.Xmin), float64(*height)-scale*(pt.Y-render.Ymin))
+					dc.MoveTo(scale*(pt[0]-render.MBB.Min[0]), float64(*height)-scale*(pt[1]-render.MBB.Min[1]))
 				} else {
-					dc.LineTo(scale*(pt.X-render.Xmin), float64(*height)-scale*(pt.Y-render.Ymin))
+					dc.LineTo(scale*(pt[0]-render.MBB.Min[0]), float64(*height)-scale*(pt[1]-render.MBB.Min[1]))
 				}
 			}
 			dc.Fill()

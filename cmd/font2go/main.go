@@ -156,7 +156,14 @@ func writeFont(fontData *FontData, fontDir string) {
 			Unicode:   *g.Unicode,
 			GerberLP:  gerberLP,
 			PathSteps: pathSteps,
+			Mbb: &glyphs.MBB{
+				Xmin: g.MBB.Min[0],
+				Ymin: g.MBB.Min[1],
+				Xmax: g.MBB.Max[0],
+				Ymax: g.MBB.Max[1],
+			},
 		})
+		// log.Printf("Glyph %+q: mbb=%v", *g.Unicode, g.MBB)
 	}
 
 	{
@@ -326,11 +333,11 @@ import (
 
 func main() {
   // ...
-  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "{{ .ID }}")
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "{{ .ID }}", Center)
   if err != nil {
     return err
   }
-  log.Printf("MBB: (%.2f,%.2f)-(%.2f,%.2f)", render.Xmin, render.Ymin,render.Xmax, render.Ymax)
+  log.Printf("MBB: %v", render.MBB)
   for _, poly := range render.Polygons {
     // ...
   }

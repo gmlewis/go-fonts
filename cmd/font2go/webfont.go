@@ -4,7 +4,12 @@ import (
 	"log"
 	"regexp"
 	"strconv"
+
+	"github.com/gmlewis/go3d/float64/vec2"
 )
+
+// MBB represents a minimum bounding box.
+type MBB = vec2.Rect
 
 // FontData represents the SVG webfont data.
 type FontData struct {
@@ -44,6 +49,9 @@ type Glyph struct {
 
 	// D is parsed into a sequence of PathSteps:
 	PathSteps []*PathStep
+
+	// MBB is the minimum bounding box of the glyph in native units.
+	MBB MBB
 }
 
 // PathStep represents a single path step.
@@ -76,7 +84,6 @@ func (g *Glyph) ParsePath() {
 	}
 	d := *g.D
 	if g.DOrig != nil && *g.DOrig != "" {
-		// log.Printf("Warning: ignoring DOrig for glyph %+q", *g.Unicode)
 		log.Printf("Warning: using DOrig for glyph %+q", *g.Unicode)
 		d = *g.DOrig
 	}

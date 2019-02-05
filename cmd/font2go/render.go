@@ -21,7 +21,7 @@ type polyInfoT struct {
 // and populate the GerberLP field. It also uses heuristics to
 // determine the proper rendering order of the path subcommands.
 func (g *Glyph) GenGerberLP(ff *FontFace) {
-	if g == nil || g.Unicode == nil || len(g.PathSteps) == 0 || (g.GerberLP != nil && len(*g.GerberLP) > 0) {
+	if g == nil || g.Unicode == nil || len(g.PathSteps) == 0 {
 		return
 	}
 
@@ -42,12 +42,13 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 		}
 		g.ReorderByArea(polyInfo)
 	}
-	// log.Printf("glyph %+q: MBB: (%v,%v)-(%v,%v)", *g.Unicode, render.Xmin, render.Ymin, render.Xmax, render.Ymax)
+	g.MBB = render.MBB
+	// log.Printf("GenGerberLP: Glyph %+q: mbb=%v", *g.Unicode, g.MBB)
 
-	width := int(0.5 + render.Xmax - render.Xmin)
-	height := int(0.5 + render.Ymax - render.Ymin)
+	width := int(0.5 + render.MBB.Max[0] - render.MBB.Min[0])
+	height := int(0.5 + render.MBB.Max[1] - render.MBB.Min[1])
 
-	oX, oY := -render.Xmin, -render.Ymin
+	oX, oY := -render.MBB.Min[0], -render.MBB.Min[1]
 	x, y := oX, oY
 	var lastC *bezier2.T
 	var lastQ *qbezier2.T

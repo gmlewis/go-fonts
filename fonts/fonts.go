@@ -38,7 +38,7 @@ import (
 
 // Font represents a webfont.
 //
-// Each font uses its own units (typically not "ems") that are later
+// Each font uses its own native units (typically not "ems") that are later
 // scaled to "ems" when rendered.
 type Font struct {
 	// ID is the name used to identify the font.
@@ -69,8 +69,11 @@ type Glyph struct {
 	// representing the nature of each subsequent font curve subpath
 	// contained within PathSteps. Its length matches the number of
 	// subpaths in PathSteps (Starting from 'M' or 'm' path commands.)
-	GerberLP  string
+	GerberLP string
+	// PathSteps represents the SVG commands that define the glyph.
 	PathSteps []*PathStep
+	// MBB represents the minimum bounding box of the glyph in native units.
+	MBB MBB
 }
 
 // PathStep represents a single subpath command.
@@ -142,11 +145,16 @@ func InitFromFontData(font *Font, fontData string) {
 				P: ps.P,
 			})
 		}
+		mbb := glyph.GetMbb()
 		font.Glyphs[r] = &Glyph{
 			HorizAdvX: glyph.HorizAdvX,
 			Unicode:   r,
 			GerberLP:  glyph.GerberLP,
 			PathSteps: pathSteps,
+			MBB: MBB{
+				Min: Pt{mbb.GetXmin(), mbb.GetYmin()},
+				Max: Pt{mbb.GetXmax(), mbb.GetYmax()},
+			},
 		}
 	}
 }
