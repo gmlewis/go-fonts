@@ -233,8 +233,9 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string, opts *Te
 	height := (mbb.Max[1] - mbb.Min[1])
 	xError := mbb.Min[0] - xPos
 	yError := mbb.Min[1] - yPos
-	x = xPos - xAlign*width - xError
-	y = yPos - yAlign*height - yError
+	xPos = xPos - xAlign*width - xError
+	yPos = yPos - yAlign*height - yError
+	x, y = xPos, yPos
 	// log.Printf("Text: TextMBB=%v, Pos=(%v,%v), error=(%v,%v), x,y=(%v,%v)", mbb, xPos, yPos, xError, yError, x, y)
 
 	result := &Render{}
