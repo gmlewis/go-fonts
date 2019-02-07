@@ -3,11 +3,9 @@
 
 package glyphs
 
-import (
-	fmt "fmt"
-	proto "github.com/golang/protobuf/proto"
-	math "math"
-)
+import proto "github.com/golang/protobuf/proto"
+import fmt "fmt"
+import math "math"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
@@ -18,7 +16,7 @@ var _ = math.Inf
 // is compatible with the proto package it is being compiled against.
 // A compilation error at this line likely means your copy of the
 // proto package needs to be updated.
-const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
+const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type Glyphs struct {
 	Glyphs               []*Glyph `protobuf:"bytes,1,rep,name=glyphs,proto3" json:"glyphs,omitempty"`
@@ -31,17 +29,16 @@ func (m *Glyphs) Reset()         { *m = Glyphs{} }
 func (m *Glyphs) String() string { return proto.CompactTextString(m) }
 func (*Glyphs) ProtoMessage()    {}
 func (*Glyphs) Descriptor() ([]byte, []int) {
-	return fileDescriptor_6bbe9e0d5eab4d4a, []int{0}
+	return fileDescriptor_glyphs_5b62025fda4d7cef, []int{0}
 }
-
 func (m *Glyphs) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Glyphs.Unmarshal(m, b)
 }
 func (m *Glyphs) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Glyphs.Marshal(b, m, deterministic)
 }
-func (m *Glyphs) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Glyphs.Merge(m, src)
+func (dst *Glyphs) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Glyphs.Merge(dst, src)
 }
 func (m *Glyphs) XXX_Size() int {
 	return xxx_messageInfo_Glyphs.Size(m)
@@ -74,17 +71,16 @@ func (m *Glyph) Reset()         { *m = Glyph{} }
 func (m *Glyph) String() string { return proto.CompactTextString(m) }
 func (*Glyph) ProtoMessage()    {}
 func (*Glyph) Descriptor() ([]byte, []int) {
-	return fileDescriptor_6bbe9e0d5eab4d4a, []int{1}
+	return fileDescriptor_glyphs_5b62025fda4d7cef, []int{1}
 }
-
 func (m *Glyph) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Glyph.Unmarshal(m, b)
 }
 func (m *Glyph) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Glyph.Marshal(b, m, deterministic)
 }
-func (m *Glyph) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Glyph.Merge(m, src)
+func (dst *Glyph) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Glyph.Merge(dst, src)
 }
 func (m *Glyph) XXX_Size() int {
 	return xxx_messageInfo_Glyph.Size(m)
@@ -142,17 +138,16 @@ func (m *PathStep) Reset()         { *m = PathStep{} }
 func (m *PathStep) String() string { return proto.CompactTextString(m) }
 func (*PathStep) ProtoMessage()    {}
 func (*PathStep) Descriptor() ([]byte, []int) {
-	return fileDescriptor_6bbe9e0d5eab4d4a, []int{2}
+	return fileDescriptor_glyphs_5b62025fda4d7cef, []int{2}
 }
-
 func (m *PathStep) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PathStep.Unmarshal(m, b)
 }
 func (m *PathStep) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_PathStep.Marshal(b, m, deterministic)
 }
-func (m *PathStep) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PathStep.Merge(m, src)
+func (dst *PathStep) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PathStep.Merge(dst, src)
 }
 func (m *PathStep) XXX_Size() int {
 	return xxx_messageInfo_PathStep.Size(m)
@@ -191,17 +186,16 @@ func (m *MBB) Reset()         { *m = MBB{} }
 func (m *MBB) String() string { return proto.CompactTextString(m) }
 func (*MBB) ProtoMessage()    {}
 func (*MBB) Descriptor() ([]byte, []int) {
-	return fileDescriptor_6bbe9e0d5eab4d4a, []int{3}
+	return fileDescriptor_glyphs_5b62025fda4d7cef, []int{3}
 }
-
 func (m *MBB) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MBB.Unmarshal(m, b)
 }
 func (m *MBB) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_MBB.Marshal(b, m, deterministic)
 }
-func (m *MBB) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MBB.Merge(m, src)
+func (dst *MBB) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MBB.Merge(dst, src)
 }
 func (m *MBB) XXX_Size() int {
 	return xxx_messageInfo_MBB.Size(m)
@@ -247,9 +241,9 @@ func init() {
 	proto.RegisterType((*MBB)(nil), "glyphs.MBB")
 }
 
-func init() { proto.RegisterFile("glyphs.proto", fileDescriptor_6bbe9e0d5eab4d4a) }
+func init() { proto.RegisterFile("glyphs.proto", fileDescriptor_glyphs_5b62025fda4d7cef) }
 
-var fileDescriptor_6bbe9e0d5eab4d4a = []byte{
+var fileDescriptor_glyphs_5b62025fda4d7cef = []byte{
 	// 271 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x34, 0x90, 0x4f, 0x6b, 0x83, 0x40,
 	0x14, 0xc4, 0x79, 0x6a, 0x6c, 0x7c, 0x26, 0x50, 0xf6, 0xb4, 0x87, 0xb6, 0x88, 0xd0, 0xe2, 0x29,
