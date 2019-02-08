@@ -76,7 +76,7 @@ func TestText(t *testing.T) {
 	tests := []struct {
 		name       string
 		xPos, yPos float64
-		opts       *fonts.TextOpts
+		opts       fonts.TextOpts
 		wantXmin   float64
 		wantYmin   float64
 		wantXmax   float64
@@ -246,7 +246,7 @@ func TestText(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(fmt.Sprintf("test Text %v", message), func(t *testing.T) {
-			got, err := fonts.Text(tt.xPos, tt.yPos, 1, 1, message, fontName, tt.opts)
+			got, err := fonts.Text(tt.xPos, tt.yPos, 1, 1, message, fontName, &tt.opts)
 			if err != nil {
 				t.Fatal(err)
 			}

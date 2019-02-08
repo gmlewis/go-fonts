@@ -27,15 +27,15 @@ const (
 
 var (
 	// Convenience options for aligning the text.
-	BottomLeft   = &TextOpts{YAlign: YBottom, XAlign: XLeft}
-	BottomCenter = &TextOpts{YAlign: YBottom, XAlign: XCenter}
-	BottomRight  = &TextOpts{YAlign: YBottom, XAlign: XRight}
-	CenterLeft   = &TextOpts{YAlign: YCenter, XAlign: XLeft}
-	Center       = &TextOpts{YAlign: YCenter, XAlign: XCenter}
-	CenterRight  = &TextOpts{YAlign: YCenter, XAlign: XRight}
-	TopLeft      = &TextOpts{YAlign: YTop, XAlign: XLeft}
-	TopCenter    = &TextOpts{YAlign: YTop, XAlign: XCenter}
-	TopRight     = &TextOpts{YAlign: YTop, XAlign: XRight}
+	BottomLeft   = TextOpts{YAlign: YBottom, XAlign: XLeft}
+	BottomCenter = TextOpts{YAlign: YBottom, XAlign: XCenter}
+	BottomRight  = TextOpts{YAlign: YBottom, XAlign: XRight}
+	CenterLeft   = TextOpts{YAlign: YCenter, XAlign: XLeft}
+	Center       = TextOpts{YAlign: YCenter, XAlign: XCenter}
+	CenterRight  = TextOpts{YAlign: YCenter, XAlign: XRight}
+	TopLeft      = TextOpts{YAlign: YTop, XAlign: XLeft}
+	TopCenter    = TextOpts{YAlign: YTop, XAlign: XCenter}
+	TopRight     = TextOpts{YAlign: YTop, XAlign: XRight}
 )
 
 // TextOpts provides options for positioning (aligning) the text based on
