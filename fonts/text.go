@@ -321,7 +321,7 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 		result.Polygons = append(result.Polygons, &Polygon{
 			Dark: currentPolarity == "d",
 			Pts:  pts,
-			MBB:  result.MBB,
+			MBB:  r.MBB,
 		})
 		pts = []Pt{}
 	}
@@ -491,7 +491,6 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 					P1: vec2.T{x + dx1, y + dy1},
 					P2: vec2.T{x + dx, y + dy},
 				}
-				lastCommand = ps.C
 				length := lastQ.Length(1)
 				steps := int(0.5 + length/resolution)
 				if steps < minSteps {

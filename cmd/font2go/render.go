@@ -194,7 +194,6 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 					P2: vec2.T{x + dx, y + dy},
 				}
 				dc.QuadraticTo(x+dx1, y+dy1, x+dx, y+dy)
-				lastCommand = ps.C
 				x, y = x+dx, y+dy
 			}
 			// case "A":
@@ -204,6 +203,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 		default:
 			log.Fatalf("Unsupported path command %q in glyph %+q: %v", ps.C, *g.Unicode, *g.D)
 		}
+		lastCommand = ps.C
 	}
 	// if *g.Unicode == "j" {
 	// 	dc.SavePNG(fmt.Sprintf("glyph-%v.png", *g.Unicode))
