@@ -32,6 +32,7 @@ nopqrstuvwxyz
 	width  = flag.Int("width", 800, "Image width")
 	height = flag.Int("height", 800, "Image height")
 	out    = flag.String("out", "out.png", "Output image filename")
+	rot    = flag.Float64("rot", 0, "Rotate message by this number of degrees")
 )
 
 func main() {
@@ -59,7 +60,13 @@ func main() {
 			message = strings.Join(lines, "\n")
 		}
 
-		render, err := Text(0, 0, 1.0, 1.0, message, name, nil)
+		var opts *TextOpts
+		if *rot != 0.0 {
+			opts = &TextOpts{
+				Rotate: *rot * math.Pi / 180.0,
+			}
+		}
+		render, err := Text(0, 0, 1.0, 1.0, message, name, opts)
 		if err != nil {
 			log.Fatal(err)
 		}

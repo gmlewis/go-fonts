@@ -3,6 +3,7 @@ package fonts
 import (
 	"errors"
 	"log"
+	"math"
 
 	"github.com/gmlewis/go3d/float64/bezier2"
 	"github.com/gmlewis/go3d/float64/qbezier2"
@@ -51,6 +52,9 @@ type TextOpts struct {
 	// YBottom, YCenter, and YTop are defined for convenience and
 	// readbility of the code.
 	YAlign float64
+	// Rotate rotates the entire message about its anchor point
+	// by this number of radians.
+	Rotate float64
 }
 
 // Pt represents a 2D Point.
@@ -238,13 +242,29 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string, opts *Te
 	x, y = xPos, yPos
 	// log.Printf("Text: TextMBB=%v, Pos=(%v,%v), error=(%v,%v), x,y=(%v,%v)", mbb, xPos, yPos, xError, yError, x, y)
 
+	var xformPt func(pt Pt) Pt
+	if opts == nil || opts.Rotate == 0.0 {
+		xformPt = func(pt Pt) Pt {
+			return pt
+		}
+	} else {
+		cos := math.Cos(opts.Rotate)
+		sin := math.Sin(opts.Rotate)
+		xformPt = func(pt Pt) Pt {
+			dx := pt[0] - xPos
+			dy := pt[1] - yPos
+			return Pt{xPos + dx*cos - dy*sin, yPos + dy*cos + dx*sin}
+		}
+	}
+
 	result := &Render{}
 	for runeIndex, c := range message {
+		newPt := xformPt(Pt{x, y})
 		gi := &GlyphInfo{
 			Glyph: c,
-			X:     x,
-			Y:     y,
-			MBB:   MBB{Min: Pt{x, y}, Max: Pt{x, y}},
+			X:     newPt[0],
+			Y:     newPt[1],
+			MBB:   MBB{Min: newPt, Max: newPt},
 		}
 		result.Info = append(result.Info, gi)
 
@@ -265,17 +285,33 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string, opts *Te
 			continue
 		}
 		dx, r := g.Render(x, y, xScale, yScale)
-		gi.MBB = r.MBB
 		gi.N = len(r.Polygons)
-		if len(result.Polygons) == 0 {
-			result.MBB = r.MBB
-		} else {
-			result.MBB.Join(&r.MBB)
-		}
-		for _, poly := range r.Polygons {
+		for pi, poly := range r.Polygons {
 			poly.RuneIndex = runeIndex
+			for i, pt := range poly.Pts {
+				newPt := xformPt(pt)
+				v := MBB{Min: newPt, Max: newPt}
+				if i == 0 {
+					poly.MBB = v
+				} else {
+					poly.MBB.Join(&v)
+				}
+				poly.Pts[i] = newPt
+			}
+			if pi == 0 {
+				r.MBB = poly.MBB
+			} else {
+				r.MBB.Join(&poly.MBB)
+			}
+			if len(result.Polygons) == 0 {
+				result.MBB = r.MBB
+			} else {
+				result.MBB.Join(&r.MBB)
+			}
+			result.Polygons = append(result.Polygons, poly)
 		}
-		result.Polygons = append(result.Polygons, r.Polygons...)
+		gi.MBB = r.MBB
+
 		if dx == 0 {
 			dx = font.HorizAdvX
 		}

@@ -71,11 +71,13 @@ func TestText(t *testing.T) {
 		message    = "012"
 		wantWidth  = 1.6591796875
 		wantHeight = 0.73193359375
+		angle      = math.Pi / 3.0
 	)
 
 	tests := []struct {
 		name       string
 		xPos, yPos float64
+		rotation   float64
 		opts       fonts.TextOpts
 		wantXmin   float64
 		wantYmin   float64
@@ -242,11 +244,192 @@ func TestText(t *testing.T) {
 			wantXmax: 10,
 			wantYmax: 20,
 		},
+		// Tests with rotation:
+		{
+			name:     "XLeft,YBottom w/ rotation",
+			rotation: angle,
+			wantXmin: -0.5454372744403848,
+			wantYmin: 0.1364595374423504,
+			wantXmax: 0.8146972656249999,
+			wantYmax: 1.7488829588350612,
+		},
+		{
+			name:     "XLeft,YBottom w/ offset w/ rotation",
+			rotation: angle,
+			xPos:     10,
+			yPos:     20,
+			wantXmin: 9.454562725559613,
+			wantYmin: 20.13645953744235,
+			wantXmax: 10.814697265625,
+			wantYmax: 21.74888295883506,
+		},
+		{
+			name:     "XCenter,YBottom w/ rotation",
+			rotation: angle,
+			opts:     fonts.BottomCenter,
+			wantXmin: -1.3750271181903848,
+			wantYmin: 0.13645953744235043,
+			wantXmax: -0.014892578125000111,
+			wantYmax: 1.7488829588350612,
+		},
+		{
+			name:     "XCenter,YBottom w/ offset w/ rotation",
+			rotation: angle,
+			xPos:     10,
+			yPos:     20,
+			opts:     fonts.BottomCenter,
+			wantXmin: 8.624972881809615,
+			wantYmin: 20.13645953744235,
+			wantXmax: 9.985107421875,
+			wantYmax: 21.74888295883506,
+		},
+		{
+			name:     "XRight,YBottom w/ rotation",
+			rotation: angle,
+			opts:     fonts.BottomRight,
+			wantXmin: -2.204616961940385,
+			wantYmin: 0.13645953744235034,
+			wantXmax: -0.8444824218750001,
+			wantYmax: 1.7488829588350612,
+		},
+		{
+			name:     "XRight,YBottom w/ offset w/ rotation",
+			rotation: angle,
+			xPos:     10,
+			yPos:     20,
+			opts:     fonts.BottomRight,
+			wantXmin: 7.795383038059613,
+			wantYmin: 20.13645953744235,
+			wantXmax: 9.155517578125,
+			wantYmax: 21.74888295883506,
+		},
+		{
+			name:     "XLeft,YCenter w/ rotation",
+			rotation: angle,
+			opts:     fonts.CenterLeft,
+			wantXmin: -0.5454372744403848,
+			wantYmin: -0.2295072594326496,
+			wantXmax: 0.8146972656249999,
+			wantYmax: 1.3829161619600612,
+		},
+		{
+			name:     "XLeft,YCenter w/ offset w/ rotation",
+			rotation: angle,
+			xPos:     10,
+			yPos:     20,
+			opts:     fonts.CenterLeft,
+			wantXmin: 9.454562725559613,
+			wantYmin: 19.77049274056735,
+			wantXmax: 10.814697265625,
+			wantYmax: 21.38291616196006,
+		},
+		{
+			name:     "XCenter,YCenter w/ rotation",
+			rotation: angle,
+			opts:     fonts.Center,
+			wantXmin: -1.3750271181903848,
+			wantYmin: -0.22950725943264957,
+			wantXmax: -0.014892578125000111,
+			wantYmax: 1.3829161619600612,
+		},
+		{
+			name:     "XCenter,YCenter w/ offset w/ rotation",
+			rotation: angle,
+			xPos:     10,
+			yPos:     20,
+			opts:     fonts.Center,
+			wantXmin: 8.624972881809615,
+			wantYmin: 19.77049274056735,
+			wantXmax: 9.985107421875,
+			wantYmax: 21.38291616196006,
+		},
+		{
+			name:     "XRight,YCenter w/ rotation",
+			rotation: angle,
+			opts:     fonts.CenterRight,
+			wantXmin: -2.204616961940385,
+			wantYmin: -0.22950725943264966,
+			wantXmax: -0.8444824218750001,
+			wantYmax: 1.3829161619600612,
+		},
+		{
+			name:     "XRight,YCenter w/ offset w/ rotation",
+			rotation: angle,
+			xPos:     10,
+			yPos:     20,
+			opts:     fonts.CenterRight,
+			wantXmin: 7.795383038059613,
+			wantYmin: 19.77049274056735,
+			wantXmax: 9.155517578125,
+			wantYmax: 21.38291616196006,
+		},
+		{
+			name:     "XLeft,YTop w/ rotation",
+			rotation: angle,
+			opts:     fonts.TopLeft,
+			wantXmin: -0.5454372744403848,
+			wantYmin: -0.5954740563076496,
+			wantXmax: 0.8146972656249999,
+			wantYmax: 1.0169493650850612,
+		},
+		{
+			name:     "XLeft,YTop w/ offset w/ rotation",
+			rotation: angle,
+			xPos:     10,
+			yPos:     20,
+			opts:     fonts.TopLeft,
+			wantXmin: 9.454562725559613,
+			wantYmin: 19.40452594369235,
+			wantXmax: 10.814697265625,
+			wantYmax: 21.01694936508506,
+		},
+		{
+			name:     "XCenter,YTop w/ rotation",
+			rotation: angle,
+			opts:     fonts.TopCenter,
+			wantXmin: -1.3750271181903848,
+			wantYmin: -0.5954740563076496,
+			wantXmax: -0.014892578125000111,
+			wantYmax: 1.0169493650850612,
+		},
+		{
+			name:     "XCenter,YTop w/ offset w/ rotation",
+			rotation: angle,
+			xPos:     10,
+			yPos:     20,
+			opts:     fonts.TopCenter,
+			wantXmin: 8.624972881809615,
+			wantYmin: 19.40452594369235,
+			wantXmax: 9.985107421875,
+			wantYmax: 21.01694936508506,
+		},
+		{
+			name:     "XRight,YTop w/ rotation",
+			rotation: angle,
+			opts:     fonts.TopRight,
+			wantXmin: -2.204616961940385,
+			wantYmin: -0.5954740563076497,
+			wantXmax: -0.8444824218750001,
+			wantYmax: 1.0169493650850612,
+		},
+		{
+			name:     "XRight,YTop w/ offset w/ rotation",
+			rotation: angle,
+			xPos:     10,
+			yPos:     20,
+			opts:     fonts.TopRight,
+			wantXmin: 7.795383038059613,
+			wantYmin: 19.40452594369235,
+			wantXmax: 9.155517578125,
+			wantYmax: 21.01694936508506,
+		},
 	}
 
 	for _, tt := range tests {
 		t.Run(fmt.Sprintf("test Text %v", message), func(t *testing.T) {
-			got, err := fonts.Text(tt.xPos, tt.yPos, 1, 1, message, fontName, &tt.opts)
+			opts := tt.opts // make a copy
+			opts.Rotate = tt.rotation
+			got, err := fonts.Text(tt.xPos, tt.yPos, 1, 1, message, fontName, &opts)
 			if err != nil {
 				t.Fatal(err)
 			}
