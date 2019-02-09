@@ -257,8 +257,7 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string, opts *Te
 		xformPt = func(pt Pt) Pt {
 			dx := pt[0] - xPos
 			dy := pt[1] - yPos
-			r := math.Sqrt(dx*dx + dy*dy)
-			return Pt{xPos + r*cos, yPos + r*sin}
+			return Pt{xPos + dx*cos - dy*sin, yPos + dy*cos + dx*sin}
 		}
 		xformMBB = func(mbb MBB) MBB {
 			pt1 := xformPt(mbb.Min)
