@@ -243,13 +243,9 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string, opts *Te
 	// log.Printf("Text: TextMBB=%v, Pos=(%v,%v), error=(%v,%v), x,y=(%v,%v)", mbb, xPos, yPos, xError, yError, x, y)
 
 	var xformPt func(pt Pt) Pt
-	var xformMBB func(mbb MBB) MBB
 	if opts == nil || opts.Rotate == 0.0 {
 		xformPt = func(pt Pt) Pt {
 			return pt
-		}
-		xformMBB = func(mbb MBB) MBB {
-			return mbb
 		}
 	} else {
 		cos := math.Cos(opts.Rotate)
@@ -258,12 +254,6 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string, opts *Te
 			dx := pt[0] - xPos
 			dy := pt[1] - yPos
 			return Pt{xPos + dx*cos - dy*sin, yPos + dy*cos + dx*sin}
-		}
-		xformMBB = func(mbb MBB) MBB {
-			pt1 := xformPt(mbb.Min)
-			pt2 := xformPt(mbb.Max)
-			r := vec2.NewRect(&pt1, &pt2)
-			return MBB(r)
 		}
 	}
 
@@ -295,22 +285,33 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string, opts *Te
 			continue
 		}
 		dx, r := g.Render(x, y, xScale, yScale)
-		r.MBB = xformMBB(r.MBB)
-		gi.MBB = r.MBB
 		gi.N = len(r.Polygons)
-		if len(result.Polygons) == 0 {
-			result.MBB = r.MBB
-		} else {
-			result.MBB.Join(&r.MBB)
-		}
-		for _, poly := range r.Polygons {
+		for pi, poly := range r.Polygons {
 			poly.RuneIndex = runeIndex
-			poly.MBB = xformMBB(poly.MBB)
 			for i, pt := range poly.Pts {
-				poly.Pts[i] = xformPt(pt)
+				newPt := xformPt(pt)
+				v := MBB{Min: newPt, Max: newPt}
+				if i == 0 {
+					poly.MBB = v
+				} else {
+					poly.MBB.Join(&v)
+				}
+				poly.Pts[i] = newPt
+			}
+			if pi == 0 {
+				r.MBB = poly.MBB
+			} else {
+				r.MBB.Join(&poly.MBB)
+			}
+			if len(result.Polygons) == 0 {
+				result.MBB = r.MBB
+			} else {
+				result.MBB.Join(&r.MBB)
 			}
 			result.Polygons = append(result.Polygons, poly)
 		}
+		gi.MBB = r.MBB
+
 		if dx == 0 {
 			dx = font.HorizAdvX
 		}
