@@ -3,12 +3,11 @@ package fonts
 import (
 	"errors"
 	"log"
+	"math"
 
 	"github.com/gmlewis/go3d/float64/bezier2"
-	"github.com/gmlewis/go3d/float64/mat3"
 	"github.com/gmlewis/go3d/float64/qbezier2"
 	"github.com/gmlewis/go3d/float64/vec2"
-	"github.com/gmlewis/go3d/float64/vec3"
 )
 
 const (
@@ -206,11 +205,24 @@ func TextMBB(xPos, yPos, xScale, yScale float64, message, fontName string) (*MBB
 //
 // xScale and yScale are provided to convert the font to any scale desired.
 func Text(xPos, yPos, xScale, yScale float64, message, fontName string, opts *TextOpts) (*Render, error) {
+	font, err := getFont(fontName)
+	if err != nil {
+		return nil, err
+	}
+
 	mbb, err := TextMBB(xPos, yPos, xScale, yScale, message, fontName)
 	if err != nil {
 		return nil, err
 	}
 
+	if font.HorizAdvX == 0 {
+		font.HorizAdvX = font.UnitsPerEm
+	}
+	if font.MissingHorizAdvX == 0 {
+		font.MissingHorizAdvX = font.HorizAdvX
+	}
+
+	x, y := xPos, yPos
 	fsf := 1.0 / font.UnitsPerEm
 	xScale *= fsf
 	yScale *= fsf
@@ -227,57 +239,52 @@ func Text(xPos, yPos, xScale, yScale float64, message, fontName string, opts *Te
 	yError := mbb.Min[1] - yPos
 	xPos = xPos - xAlign*width - xError
 	yPos = yPos - yAlign*height - yError
+	x, y = xPos, yPos
 	// log.Printf("Text: TextMBB=%v, Pos=(%v,%v), error=(%v,%v), x,y=(%v,%v)", mbb, xPos, yPos, xError, yError, x, y)
 
-	rotz := &mat3.T{}
-	if opts != nil {
-		rotz.AssignZRotation(opts.Rotate)
-	}
-	m1 := &mat3.T{}
-	m1.SetScaling(&vec3.T{xScale, yScale, 1.0}).Translate(&vec2.T{xPos, yPos})
-	m := &mat3.T{}
-	m.AssignMul(m1, rotz)
-	log.Printf("m=%v", m)
-
-	return TextMat3(message, fontName, m)
-}
-
-// TextMat3 returns a Render representing the rendered text.
-// All dimensions are in "em"s, the width of the character "M" in the
-// desired font.
-//
-// Mat3 is applied to translate, scale, and rotate all the points.
-func TextMat3(message, fontName string, m *mat3.T) (*Render, error) {
-	font, err := getFont(fontName)
-	if err != nil {
-		return nil, err
-	}
-
-	if font.HorizAdvX == 0 {
-		font.HorizAdvX = font.UnitsPerEm
-	}
-	if font.MissingHorizAdvX == 0 {
-		font.MissingHorizAdvX = font.HorizAdvX
+	var xformPt func(pt Pt) Pt
+	var xformMBB func(mbb MBB) MBB
+	if opts == nil || opts.Rotate == 0.0 {
+		xformPt = func(pt Pt) Pt {
+			return pt
+		}
+		xformMBB = func(mbb MBB) MBB {
+			return mbb
+		}
+	} else {
+		cos := math.Cos(opts.Rotate)
+		sin := math.Sin(opts.Rotate)
+		xformPt = func(pt Pt) Pt {
+			dx := pt[0] - xPos
+			dy := pt[1] - yPos
+			r := math.Sqrt(dx*dx + dy*dy)
+			return Pt{xPos + r*cos, yPos + r*sin}
+		}
+		xformMBB = func(mbb MBB) MBB {
+			pt1 := xformPt(mbb.Min)
+			pt2 := xformPt(mbb.Max)
+			r := vec2.NewRect(&pt1, &pt2)
+			return MBB(r)
+		}
 	}
 
-	x, y := 0.0, 0.0
 	result := &Render{}
 	for runeIndex, c := range message {
-		xfm := m.MulVec3(&vec3.T{x, y, 0.0})
+		newPt := xformPt(Pt{x, y})
 		gi := &GlyphInfo{
 			Glyph: c,
-			X:     xfm[0],
-			Y:     xfm[1],
-			MBB:   MBB{Min: Pt{xfm[0], xfm[1]}, Max: Pt{xfm[0], xfm[1]}},
+			X:     newPt[0],
+			Y:     newPt[1],
+			MBB:   MBB{Min: newPt, Max: newPt},
 		}
 		result.Info = append(result.Info, gi)
 
 		if c == rune('\n') {
-			x, y = 0.0, y-(font.Ascent-font.Descent)
+			x, y = xPos, y-yScale*(font.Ascent-font.Descent)
 			continue
 		}
 		if c == rune('\t') {
-			x += 2.0 * font.HorizAdvX
+			x += 2.0 * xScale * font.HorizAdvX
 			continue
 		}
 		g, ok := font.Glyphs[c]
@@ -285,10 +292,11 @@ func TextMat3(message, fontName string, m *mat3.T) (*Render, error) {
 			if c != ' ' {
 				log.Printf("Warning: missing glyph %+q: skipping", c)
 			}
-			x += font.MissingHorizAdvX
+			x += xScale * font.MissingHorizAdvX
 			continue
 		}
-		dx, r := g.RenderMat3(x, y, m)
+		dx, r := g.Render(x, y, xScale, yScale)
+		r.MBB = xformMBB(r.MBB)
 		gi.MBB = r.MBB
 		gi.N = len(r.Polygons)
 		if len(result.Polygons) == 0 {
@@ -298,13 +306,18 @@ func TextMat3(message, fontName string, m *mat3.T) (*Render, error) {
 		}
 		for _, poly := range r.Polygons {
 			poly.RuneIndex = runeIndex
+			poly.MBB = xformMBB(poly.MBB)
+			for i, pt := range poly.Pts {
+				poly.Pts[i] = xformPt(pt)
+			}
+			result.Polygons = append(result.Polygons, poly)
 		}
-		result.Polygons = append(result.Polygons, r.Polygons...)
 		if dx == 0 {
 			dx = font.HorizAdvX
 		}
-		gi.Width = dx
-		x += dx
+		width := dx * xScale
+		gi.Width = width
+		x += width
 	}
 	// log.Printf("FINAL MBB=%v", result.MBB)
 	return result, nil
