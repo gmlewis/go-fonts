@@ -2,6 +2,7 @@ package fonts
 
 import (
 	"errors"
+	"image/color"
 	"log"
 	"math"
 
@@ -74,6 +75,12 @@ type Render struct {
 	// The length of info is identical to the number of runes in
 	// the original text message.
 	Info []*GlyphInfo
+	// Background is the (optional) background color that the
+	// "clear" polygons will use for rendering (default=white).
+	Background color.Color
+	// Foreground is the (optional) foreground color that the
+	// "dark" polygons will use for rendering (default=black).
+	Foreground color.Color
 }
 
 // GlyphInfo contains the MBB and base position of a glyph.
