@@ -121,16 +121,16 @@ func (p *Polygon) ContainsPoint(pt *Pt) bool {
 	if len(p.Pts) < 3 {
 		return false
 	}
-	in := rayIntersectsSegment(pt, &p.Pts[len(p.Pts)-1], &p.Pts[0])
+	in := RayIntersectsSegment(pt, &p.Pts[len(p.Pts)-1], &p.Pts[0])
 	for i := 1; i < len(p.Pts); i++ {
-		if rayIntersectsSegment(pt, &p.Pts[i-1], &p.Pts[i]) {
+		if RayIntersectsSegment(pt, &p.Pts[i-1], &p.Pts[i]) {
 			in = !in
 		}
 	}
 	return in
 }
 
-func rayIntersectsSegment(p, a, b *Pt) bool {
+func RayIntersectsSegment(p, a, b *Pt) bool {
 	if a[1] > b[1] {
 		a, b = b, a
 	}
