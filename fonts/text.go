@@ -121,41 +121,15 @@ func (p *Polygon) ContainsPoint(pt *Pt) bool {
 	if len(p.Pts) < 3 {
 		return false
 	}
-	in := RayIntersectsSegment(pt, &p.Pts[len(p.Pts)-1], &p.Pts[0])
-	for i := 1; i < len(p.Pts); i++ {
-		if RayIntersectsSegment(pt, &p.Pts[i-1], &p.Pts[i]) {
+
+	var in bool
+	for i, j := 0, len(p.Pts)-1; i < len(p.Pts); i, j = i+1, i {
+		if (p.Pts[i][1] > pt[1]) != (p.Pts[j][1] > pt[1]) &&
+			pt[0] < (p.Pts[j][0]-p.Pts[i][0])*(pt[1]-p.Pts[i][1])/(p.Pts[j][1]-p.Pts[i][1])+p.Pts[i][0] {
 			in = !in
 		}
 	}
 	return in
-}
-
-func RayIntersectsSegment(p, a, b *Pt) bool {
-	if a[1] > b[1] {
-		a, b = b, a
-	}
-	for p[1] == a[1] || p[1] == b[1] {
-		p[1] = math.Nextafter(p[1], math.Inf(1))
-	}
-	if p[1] < a[1] || p[1] > b[1] {
-		return false
-	}
-	if a[0] > b[0] {
-		if p[0] > a[0] {
-			return false
-		}
-		if p[0] < b[0] {
-			return true
-		}
-	} else {
-		if p[0] > b[0] {
-			return false
-		}
-		if p[0] < a[0] {
-			return true
-		}
-	}
-	return (p[1]-a[1])/(p[0]-a[0]) >= (b[1]-a[1])/(b[0]-a[0])
 }
 
 func getFont(fontName string) (*Font, error) {
