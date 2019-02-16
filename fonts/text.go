@@ -116,22 +116,6 @@ func (p *Polygon) Area() float64 {
 	return p.MBB.Area()
 }
 
-// ContainsPoint returns true if the point is on the interior of the Polygon.
-func (p *Polygon) ContainsPoint(pt *Pt) bool {
-	if len(p.Pts) < 3 {
-		return false
-	}
-
-	var in bool
-	for i, j := 0, len(p.Pts)-1; i < len(p.Pts); i, j = i+1, i {
-		if (p.Pts[i][1] > pt[1]) != (p.Pts[j][1] > pt[1]) &&
-			pt[0] < (p.Pts[j][0]-p.Pts[i][0])*(pt[1]-p.Pts[i][1])/(p.Pts[j][1]-p.Pts[i][1])+p.Pts[i][0] {
-			in = !in
-		}
-	}
-	return in
-}
-
 func getFont(fontName string) (*Font, error) {
 	if len(Fonts) == 0 {
 		return nil, errors.New("No fonts available")
