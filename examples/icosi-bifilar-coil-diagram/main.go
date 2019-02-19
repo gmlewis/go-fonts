@@ -55,16 +55,16 @@ func main() {
 	}
 
 	outerHole := map[string]int{
-		"TR": 0, "TL": 10, "BR": 10, "BL": 20,
-		"2R": 1, "2L": 11, "3R": 9, "3L": 19,
-		"4R": 19, "4L": 9, "5R": 11, "5L": 1,
-		"6R": 2, "6L": 12, "7R": 8, "7L": 18,
-		"8R": 18, "8L": 8, "9R": 12, "9L": 2,
-		"10R": 3, "10L": 13, "11R": 7, "11L": 17,
-		"12R": 17, "12L": 7, "13R": 13, "13L": 3,
-		"14R": 4, "14L": 14, "15R": 6, "15L": 16,
-		"16R": 16, "16L": 6, "17R": 14, "17L": 4,
-		"18R": 15, "18L": 5, "19R": 15, "19L": 5,
+		"TR": 19, "TL": 9, "BR": 11, "BL": 1,
+		"2R": 0, "2L": 10, "3R": 10, "3L": 20,
+		"4R": 18, "4L": 8, "5R": 12, "5L": 2,
+		"6R": 1, "6L": 11, "7R": 9, "7L": 19,
+		"8R": 17, "8L": 7, "9R": 13, "9L": 3,
+		"10R": 2, "10L": 12, "11R": 8, "11L": 18,
+		"12R": 16, "12L": 6, "13R": 14, "13L": 4,
+		"14R": 3, "14L": 13, "15R": 7, "15L": 17,
+		"16R": 15, "16L": 5, "17R": 15, "17L": 5,
+		"18R": 14, "18L": 4, "19R": 16, "19L": 6,
 	}
 	outerHoleRev := map[int][]string{}
 	for k, v := range outerHole {
@@ -79,15 +79,17 @@ func main() {
 		outerConnection[v[1]] = v[0]
 	}
 
-	labels := []string{"TR"}
-	for {
+	labels := []string{"2R"}
+	for i := 0; i < 2*nlayers; i++ {
 		last := labels[len(labels)-1]
 		next := innerConnection[last]
+		log.Printf("A next: %v", next)
 		labels = append(labels, next)
-		if next == "BL" {
+		if outerHole[next] == 20 {
 			break
 		}
 		next = outerConnection[next]
+		log.Printf("B next: %v", next)
 		labels = append(labels, next)
 	}
 
