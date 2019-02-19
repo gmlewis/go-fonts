@@ -86,6 +86,11 @@ func (r *Render) SavePNG(filename string, width, height int) error {
 	dc := gg.NewContext(width, height)
 	background(dc, r)
 	dc.Clear()
+	r.RenderToDC(dc, 0, 0, scale, height)
+	return dc.SavePNG(filename)
+}
+
+func (r *Render) RenderToDC(dc *gg.Context, dx, dy, scale float64, height int) {
 	for _, poly := range r.Polygons {
 		if poly.Dark {
 			foreground(dc, r)
@@ -94,12 +99,11 @@ func (r *Render) SavePNG(filename string, width, height int) error {
 		}
 		for i, pt := range poly.Pts {
 			if i == 0 {
-				dc.MoveTo(scale*(pt[0]-r.MBB.Min[0]), float64(height)-scale*(pt[1]-r.MBB.Min[1]))
+				dc.MoveTo(dx+scale*(pt[0]-r.MBB.Min[0]), dy+float64(height)-scale*(pt[1]-r.MBB.Min[1]))
 			} else {
-				dc.LineTo(scale*(pt[0]-r.MBB.Min[0]), float64(height)-scale*(pt[1]-r.MBB.Min[1]))
+				dc.LineTo(dx+scale*(pt[0]-r.MBB.Min[0]), dy+float64(height)-scale*(pt[1]-r.MBB.Min[1]))
 			}
 		}
 		dc.Fill()
 	}
-	return dc.SavePNG(filename)
 }

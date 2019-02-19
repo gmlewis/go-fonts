@@ -1,4 +1,4 @@
-// icosi-bifilar-coil-diagram renders a diagram for the coil.
+// hex-bifilar-coil-diagram renders a diagram for the coil.
 package main
 
 import (
@@ -7,19 +7,22 @@ import (
 	"math"
 
 	"github.com/fogleman/gg"
+	. "github.com/gmlewis/go-fonts/fonts"
+	_ "github.com/gmlewis/go-fonts/fonts/latoregular"
 )
 
 var (
 	width  = flag.Int("width", 800, "Image width")
 	height = flag.Int("height", 800, "Image height")
-	out    = flag.String("out", "icosi-bifilar-coil-diagram.png", "PNG output filename")
+	out    = flag.String("out", "hex-bifilar-coil-diagram.png", "PNG output filename")
 
 	cx, cy float64
 	outerR float64
 )
 
 const (
-	nlayers    = 20
+	textFont   = "latoregular"
+	nlayers    = 6
 	angleDelta = math.Pi / nlayers
 	innerR     = 120
 	segment    = 20
@@ -30,16 +33,9 @@ func main() {
 	flag.Parse()
 
 	innerHole := map[string]int{
-		"TR": 17, "TL": 7, "BR": 13, "BL": 3,
-		"2R": 18, "2L": 8, "3R": 12, "3L": 2,
-		"4R": 16, "4L": 6, "5R": 14, "5L": 4,
-		"6R": 19, "6L": 9, "7R": 11, "7L": 1,
-		"8R": 15, "8L": 5, "9R": 15, "9L": 5,
-		"10R": 0, "10L": 10, "11R": 10, "11L": 0,
-		"12R": 14, "12L": 4, "13R": 16, "13L": 6,
-		"14R": 1, "14L": 11, "15R": 9, "15L": 19,
-		"16R": 13, "16L": 3, "17R": 17, "17L": 7,
-		"18R": 12, "18L": 2, "19R": 18, "19L": 8,
+		"TR": 3, "TL": 0, "BR": 3, "BL": 0,
+		"2R": 4, "2L": 1, "3R": 2, "3L": 5,
+		"4R": 2, "4L": 5, "5R": 4, "5L": 1,
 	}
 	innerHoleRev := map[int][]string{}
 	for k, v := range innerHole {
@@ -52,19 +48,13 @@ func main() {
 		}
 		innerConnection[v[0]] = v[1]
 		innerConnection[v[1]] = v[0]
+		log.Printf("Inner: %v <=> %v", v[0], v[1])
 	}
 
 	outerHole := map[string]int{
-		"TR": 18, "TL": 8, "BR": 12, "BL": 2,
-		"2R": 19, "2L": 9, "3R": 11, "3L": 1,
-		"4R": 17, "4L": 7, "5R": 13, "5L": 3,
-		"6R": 0, "6L": 10, "7R": 10, "7L": 20,
-		"8R": 16, "8L": 6, "9R": 14, "9L": 4,
-		"10R": 1, "10L": 11, "11R": 9, "11L": 19,
-		"12R": 15, "12L": 5, "13R": 15, "13L": 5,
-		"14R": 2, "14L": 12, "15R": 8, "15L": 18,
-		"16R": 14, "16L": 4, "17R": 16, "17L": 6,
-		"18R": 13, "18L": 3, "19R": 17, "19L": 7,
+		"TR": 5, "TL": 2, "BR": 4, "BL": 1,
+		"2R": 0, "2L": 3, "3R": 3, "3L": 6,
+		"4R": 4, "4L": 1, "5R": 5, "5L": 2,
 	}
 	outerHoleRev := map[int][]string{}
 	for k, v := range outerHole {
@@ -77,15 +67,16 @@ func main() {
 		}
 		outerConnection[v[0]] = v[1]
 		outerConnection[v[1]] = v[0]
+		log.Printf("Outer: %v <=> %v", v[0], v[1])
 	}
 
-	labels := []string{"6R"}
+	labels := []string{"2R"}
 	for i := 0; i < 2*nlayers; i++ {
 		last := labels[len(labels)-1]
 		next := innerConnection[last]
 		log.Printf("A next: %v", next)
 		labels = append(labels, next)
-		if outerHole[next] == 20 {
+		if outerHole[next] == nlayers {
 			break
 		}
 		next = outerConnection[next]
@@ -96,54 +87,58 @@ func main() {
 	cx = float64(*width) * 0.5
 	cy = float64(*height) * 0.5
 	outerR = float64(*width) * 0.25
+	innerTS := 4.0
+	outerTS := 6.0
 
 	dc := gg.NewContext(*width, *height)
 	dc.SetRGB(1, 1, 1)
 	dc.Clear()
 	dc.SetRGB(0, 0, 0)
 	for n := 0; n < 2*nlayers; n++ {
+		num := float64(n)
+		if n < len(labels) {
+			dc.Stroke()
+			label := labels[n]
+			log.Printf("labels[%v]=%v", n, label)
+			tp := innerPt(num, segment)
+			text, err := Text(tp.X, tp.Y, innerTS, innerTS, label, textFont, &Center)
+			check(err)
+			text.RenderToDC(dc, tp.X-2*innerTS, tp.Y+2*innerTS, innerTS, 0)
+			tp = outerPt(num, 1.5*segment)
+			text, err = Text(tp.X, tp.Y, outerTS, outerTS, label, textFont, &Center)
+			check(err)
+			text.RenderToDC(dc, tp.X-2*outerTS, tp.Y+2*outerTS, outerTS, 0)
+		}
+	}
+	for n := 0; n < 2*nlayers; n++ {
 		drawCoil(dc, n)
+		num := float64(n)
 		if n%2 == 0 {
-			num := float64(n)
 			ip1 := innerPt(num, 0)
 			ip2 := innerPt(num+1.0, 0)
 			dc.MoveTo(ip1.X, ip1.Y)
 			dc.LineTo(ip2.X, ip2.Y)
-			mid1 := innerPt(num+0.5, 0)
+			mid1 := gg.Point{X: 0.5 * (ip1.X + ip2.X), Y: 0.5 * (ip1.Y + ip2.Y)}
 			dc.Stroke()
 			dc.DrawCircle(mid1.X, mid1.Y, 0.2*segment)
 			dc.Fill()
-			if n < len(labels) {
-				label := labels[n]
-				tp := innerPt(num, segment)
-				dc.DrawStringAnchored(label, tp.X, tp.Y, 0.5, 0.5)
-				tp = outerPt(num, segment)
-				dc.DrawStringAnchored(label, tp.X, tp.Y, 0.5, 0.5)
-			}
-		} else if n != 39 {
+		} else if n != 2*nlayers-1 {
 			num := float64(n)
 			op1 := outerPt(num, 0)
 			op2 := outerPt(num+1.0, 0)
 			dc.MoveTo(op1.X, op1.Y)
 			dc.LineTo(op2.X, op2.Y)
-			mid1 := outerPt(num+0.5, 0)
+			mid1 := gg.Point{X: 0.5 * (op1.X + op2.X), Y: 0.5 * (op1.Y + op2.Y)}
 			dc.Stroke()
-			dc.DrawCircle(mid1.X, mid1.Y, 0.2*segment)
+			dc.DrawCircle(mid1.X, mid1.Y, 0.5*segment)
 			dc.Fill()
-			if n < len(labels) {
-				label := labels[n]
-				tp := innerPt(num, segment)
-				dc.DrawStringAnchored(label, tp.X, tp.Y, 0.5, 0.5)
-				tp = outerPt(num, segment)
-				dc.DrawStringAnchored(label, tp.X, tp.Y, 0.5, 0.5)
-			}
 		} else {
 			num := float64(n)
 			op1 := outerPt(num, 0)
 			op2 := outerPt(num+1.0, 0)
 			dc.Stroke()
-			dc.DrawCircle(op1.X, op1.Y, 0.2*segment)
-			dc.DrawCircle(op2.X, op2.Y, 0.2*segment)
+			dc.DrawCircle(op1.X, op1.Y, 0.5*segment)
+			dc.DrawCircle(op2.X, op2.Y, 0.5*segment)
 			dc.Fill()
 		}
 	}
@@ -187,4 +182,10 @@ func drawCoil(dc *gg.Context, n int) {
 	}
 	op := outerPt(num, 0)
 	dc.LineTo(op.X, op.Y)
+}
+
+func check(err error) {
+	if err != nil {
+		log.Fatal(err)
+	}
 }
