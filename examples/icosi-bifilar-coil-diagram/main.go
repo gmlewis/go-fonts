@@ -34,83 +34,31 @@ const (
 func main() {
 	flag.Parse()
 
-	innerHole := map[string]int{
-		"TR": 17, "TL": 7, "BR": 13, "BL": 3,
-		"2R": 18, "2L": 8, "3R": 12, "3L": 2,
-		"4R": 16, "4L": 6, "5R": 14, "5L": 4,
-		"6R": 19, "6L": 9, "7R": 11, "7L": 1,
-		"8R": 15, "8L": 5, "9R": 15, "9L": 5,
-		"10R": 0, "10L": 10, "11R": 10, "11L": 0,
-		"12R": 14, "12L": 4, "13R": 16, "13L": 6,
-		"14R": 1, "14L": 11, "15R": 9, "15L": 19,
-		"16R": 13, "16L": 3, "17R": 17, "17L": 7,
-		"18R": 12, "18L": 2, "19R": 18, "19L": 8,
-	}
-	innerHoleRev := map[int][]string{}
-	for k, v := range innerHole {
-		innerHoleRev[v] = append(innerHoleRev[v], k)
-	}
-	innerConnection := map[string]string{}
-	for _, v := range innerHoleRev {
-		if len(v) != 2 {
-			log.Fatalf("len(v)=%v, want 2", len(v))
-		}
-		innerConnection[v[0]] = v[1]
-		innerConnection[v[1]] = v[0]
-		// log.Printf("Inner: %v <=> %v", v[0], v[1])
-	}
-
-	startingPoint := findStartingPoint()
-	log.Printf("starting point: %v", startingPoint)
-	if startingPoint == "" {
+	solution := findSolution()
+	log.Printf("starting point: %v", solution)
+	if solution == nil {
 		log.Fatal("Unable to find acceptable starting point.")
 	}
 
-	outerHole := map[string]int{
-		"TR": 18, "TL": 8, "BR": 12, "BL": 2,
-		"2R": 19, "2L": 9, "3R": 11, "3L": 1,
-		"4R": 17, "4L": 7, "5R": 13, "5L": 3,
-		"6R": 0, "6L": 10, "7R": 10, "7L": 20,
-		"8R": 16, "8L": 6, "9R": 14, "9L": 4,
-		"10R": 1, "10L": 11, "11R": 9, "11L": 19,
-		"12R": 15, "12L": 5, "13R": 15, "13L": 5,
-		"14R": 2, "14L": 12, "15R": 8, "15L": 18,
-		"16R": 14, "16L": 4, "17R": 16, "17L": 6,
-		"18R": 13, "18L": 3, "19R": 17, "19L": 7,
-	}
-	outerHoleRev := map[int][]string{}
-	for k, v := range outerHole {
-		outerHoleRev[v] = append(outerHoleRev[v], k)
-	}
-	outerConnection := map[string]string{}
-	for _, v := range outerHoleRev {
-		if len(v) != 2 {
-			continue
-		}
-		outerConnection[v[0]] = v[1]
-		outerConnection[v[1]] = v[0]
-		log.Printf("Outer: %v <=> %v", v[0], v[1])
-	}
-
-	labels := []string{"6R"}
+	labels := []string{solution.startLabel}
 	for i := 0; i < 2*nlayers; i++ {
 		last := labels[len(labels)-1]
-		next := innerConnection[last]
-		log.Printf("A next: %v", next)
+		next := solution.innerConnection[last]
+		// log.Printf("A next: %v", next)
 		labels = append(labels, next)
-		if outerHole[next] == nlayers {
+		if solution.outerHole[next] == nlayers {
 			break
 		}
-		next = outerConnection[next]
-		log.Printf("B next: %v", next)
+		next = solution.outerConnection[next]
+		// log.Printf("B next: %v", next)
 		labels = append(labels, next)
 	}
 
 	cx = float64(*width) * 0.5
 	cy = float64(*height) * 0.5
 	outerR = float64(*width) * 0.25
-	innerTS := 4.0
-	outerTS := 6.0
+	innerTS := 3.0
+	outerTS := 4.0
 
 	dc := gg.NewContext(*width, *height)
 	dc.SetRGB(1, 1, 1)
@@ -122,14 +70,14 @@ func main() {
 			dc.Stroke()
 			label := labels[n]
 			log.Printf("labels[%v]=%v", n, label)
-			tp := innerPt(num, segment)
+			tp := innerPt(num, 0.5*segment)
 			text, err := Text(tp.X, tp.Y, innerTS, innerTS, label, textFont, &Center)
 			check(err)
-			text.RenderToDC(dc, tp.X-2*innerTS, tp.Y+2*innerTS, innerTS, 0)
-			tp = outerPt(num, 1.5*segment)
+			text.RenderToDC(dc, tp.X-1.75*innerTS, tp.Y+1.5*innerTS, innerTS, 0)
+			tp = outerPt(num, segment)
 			text, err = Text(tp.X, tp.Y, outerTS, outerTS, label, textFont, &Center)
 			check(err)
-			text.RenderToDC(dc, tp.X-2*outerTS, tp.Y+2*outerTS, outerTS, 0)
+			text.RenderToDC(dc, tp.X-1.75*outerTS, tp.Y+1.5*outerTS, outerTS, 0)
 		}
 	}
 	for n := 0; n < 2*nlayers; n++ {
@@ -212,14 +160,26 @@ func check(err error) {
 	}
 }
 
-func findStartingPoint() string {
-	opposite, mirror := genMaps(nlayers)
+type solution struct {
+	innerTR         int
+	outerTR         int
+	innerHole       map[string]int
+	outerHole       map[string]int
+	innerConnection map[string]string
+	outerConnection map[string]string
+	startLabel      string
+	endLabel        string
+}
+
+func findSolution() *solution {
+	opposite, onAxisMirror := genMaps(nlayers, true)
+	_, offAxisMirror := genMaps(nlayers, false)
 	var result []string
 	for innerTR := 0; innerTR < nlayers; innerTR++ {
-		_, _, _, innerConnection := wiring(innerTR, nlayers, opposite, mirror)
-		for startTR := 0; startTR < nlayers; startTR++ {
-			startLabel, _, _, outerConnection := wiring(startTR, nlayers, opposite, mirror)
-			log.Printf("attempt: innerTR=%v, startTR=%v", innerTR, startTR)
+		_, _, innerHole, innerConnection := wiring(innerTR, nlayers, opposite, onAxisMirror)
+		for outerTR := 0; outerTR < nlayers; outerTR++ {
+			startLabel, endLabel, outerHole, outerConnection := wiring(outerTR, nlayers, opposite, offAxisMirror)
+			log.Printf("attempt: innerTR=%v, outerTR=%v", innerTR, outerTR)
 
 			result = []string{startLabel}
 			seen := map[string]bool{startLabel: true}
@@ -239,13 +199,23 @@ func findStartingPoint() string {
 				result = append(result, next)
 			}
 			if len(result) == 2*nlayers {
-				log.Printf("SUCCESS! %v: innerTR=%v, startTR=%v, result: %v", len(result), innerTR, startTR, strings.Join(result, " "))
+				log.Printf("SUCCESS! %v: innerTR=%v, outerTR=%v, result: %v", len(result), innerTR, outerTR, strings.Join(result, " "))
+				return &solution{
+					innerTR:         innerTR,
+					outerTR:         outerTR,
+					innerHole:       innerHole,
+					outerHole:       outerHole,
+					innerConnection: innerConnection,
+					outerConnection: outerConnection,
+					startLabel:      startLabel,
+					endLabel:        endLabel,
+				}
 			} else {
 				log.Printf("failed: %v", len(result))
 			}
 		}
 	}
-	return ""
+	return nil
 }
 
 // wiring generates the startLabel (at point 0), the wiring map, and connection map
@@ -296,7 +266,7 @@ func wiring(startTR, total int, opposite, mirror map[int]int) (string, string, m
 	return startLabel, endLabel, result, connection
 }
 
-func genMaps(total int) (opposite, mirror map[int]int) {
+func genMaps(total int, onAxis bool) (opposite, mirror map[int]int) {
 	opposite, mirror = map[int]int{}, map[int]int{}
 
 	for n := 0; n < total/2; n++ {
@@ -304,12 +274,24 @@ func genMaps(total int) (opposite, mirror map[int]int) {
 		opposite[n] = o
 		opposite[o] = n
 	}
-	for n := 0; n <= total/4; n++ {
-		o := total/2 - n
-		mirror[n] = o
-		mirror[o] = n
-		if n > 0 {
-			m := total - n
+	if onAxis {
+		for n := 0; n <= total/4; n++ {
+			o := total/2 - n
+			mirror[n] = o
+			mirror[o] = n
+			if n > 0 {
+				m := total - n
+				o = total/2 + n
+				mirror[m] = o
+				mirror[o] = m
+			}
+		}
+	} else {
+		for n := 0; n <= total/4+1; n++ {
+			o := total/2 - n - 1
+			mirror[n] = o
+			mirror[o] = n
+			m := total - n - 1
 			o = total/2 + n
 			mirror[m] = o
 			mirror[o] = m
