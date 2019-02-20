@@ -3,10 +3,14 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 	"math"
+	"strings"
 
 	"github.com/fogleman/gg"
+	. "github.com/gmlewis/go-fonts/fonts"
+	_ "github.com/gmlewis/go-fonts/fonts/latoregular"
 )
 
 var (
@@ -19,6 +23,7 @@ var (
 )
 
 const (
+	textFont   = "latoregular"
 	nlayers    = 20
 	angleDelta = math.Pi / nlayers
 	innerR     = 120
@@ -52,6 +57,13 @@ func main() {
 		}
 		innerConnection[v[0]] = v[1]
 		innerConnection[v[1]] = v[0]
+		// log.Printf("Inner: %v <=> %v", v[0], v[1])
+	}
+
+	startingPoint := findStartingPoint(innerHole, innerHoleRev, innerConnection)
+	log.Printf("starting point: %v", startingPoint)
+	if startingPoint == "" {
+		log.Fatal("Unable to find acceptable starting point.")
 	}
 
 	outerHole := map[string]int{
@@ -77,6 +89,7 @@ func main() {
 		}
 		outerConnection[v[0]] = v[1]
 		outerConnection[v[1]] = v[0]
+		log.Printf("Outer: %v <=> %v", v[0], v[1])
 	}
 
 	labels := []string{"6R"}
@@ -85,7 +98,7 @@ func main() {
 		next := innerConnection[last]
 		log.Printf("A next: %v", next)
 		labels = append(labels, next)
-		if outerHole[next] == 20 {
+		if outerHole[next] == nlayers {
 			break
 		}
 		next = outerConnection[next]
@@ -96,47 +109,51 @@ func main() {
 	cx = float64(*width) * 0.5
 	cy = float64(*height) * 0.5
 	outerR = float64(*width) * 0.25
+	innerTS := 4.0
+	outerTS := 6.0
 
 	dc := gg.NewContext(*width, *height)
 	dc.SetRGB(1, 1, 1)
 	dc.Clear()
 	dc.SetRGB(0, 0, 0)
 	for n := 0; n < 2*nlayers; n++ {
+		num := float64(n)
+		if n < len(labels) {
+			dc.Stroke()
+			label := labels[n]
+			log.Printf("labels[%v]=%v", n, label)
+			tp := innerPt(num, segment)
+			text, err := Text(tp.X, tp.Y, innerTS, innerTS, label, textFont, &Center)
+			check(err)
+			text.RenderToDC(dc, tp.X-2*innerTS, tp.Y+2*innerTS, innerTS, 0)
+			tp = outerPt(num, 1.5*segment)
+			text, err = Text(tp.X, tp.Y, outerTS, outerTS, label, textFont, &Center)
+			check(err)
+			text.RenderToDC(dc, tp.X-2*outerTS, tp.Y+2*outerTS, outerTS, 0)
+		}
+	}
+	for n := 0; n < 2*nlayers; n++ {
 		drawCoil(dc, n)
+		num := float64(n)
 		if n%2 == 0 {
-			num := float64(n)
 			ip1 := innerPt(num, 0)
 			ip2 := innerPt(num+1.0, 0)
 			dc.MoveTo(ip1.X, ip1.Y)
 			dc.LineTo(ip2.X, ip2.Y)
-			mid1 := innerPt(num+0.5, 0)
+			mid1 := gg.Point{X: 0.5 * (ip1.X + ip2.X), Y: 0.5 * (ip1.Y + ip2.Y)}
 			dc.Stroke()
 			dc.DrawCircle(mid1.X, mid1.Y, 0.2*segment)
 			dc.Fill()
-			if n < len(labels) {
-				label := labels[n]
-				tp := innerPt(num, segment)
-				dc.DrawStringAnchored(label, tp.X, tp.Y, 0.5, 0.5)
-				tp = outerPt(num, segment)
-				dc.DrawStringAnchored(label, tp.X, tp.Y, 0.5, 0.5)
-			}
-		} else if n != 39 {
+		} else if n != 2*nlayers-1 {
 			num := float64(n)
 			op1 := outerPt(num, 0)
 			op2 := outerPt(num+1.0, 0)
 			dc.MoveTo(op1.X, op1.Y)
 			dc.LineTo(op2.X, op2.Y)
-			mid1 := outerPt(num+0.5, 0)
+			mid1 := gg.Point{X: 0.5 * (op1.X + op2.X), Y: 0.5 * (op1.Y + op2.Y)}
 			dc.Stroke()
 			dc.DrawCircle(mid1.X, mid1.Y, 0.2*segment)
 			dc.Fill()
-			if n < len(labels) {
-				label := labels[n]
-				tp := innerPt(num, segment)
-				dc.DrawStringAnchored(label, tp.X, tp.Y, 0.5, 0.5)
-				tp = outerPt(num, segment)
-				dc.DrawStringAnchored(label, tp.X, tp.Y, 0.5, 0.5)
-			}
 		} else {
 			num := float64(n)
 			op1 := outerPt(num, 0)
@@ -187,4 +204,111 @@ func drawCoil(dc *gg.Context, n int) {
 	}
 	op := outerPt(num, 0)
 	dc.LineTo(op.X, op.Y)
+}
+
+func check(err error) {
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
+func findStartingPoint(innerHole map[string]int, innerHoleRev map[int][]string, innerConnection map[string]string) string {
+	attempts := []string{"TR", "BR"}
+	for n := 2; n < nlayers; n++ {
+		attempts = append(attempts, fmt.Sprintf("%vR", n))
+	}
+
+	opposite, mirror := genMaps(nlayers)
+	var result []string
+	for startTR := 0; startTR < nlayers; startTR++ {
+		outerHole := wiring(startTR, nlayers, opposite, mirror)
+		log.Printf("attempt: %v = %v: %#v", startTR, len(outerHole), outerHole)
+
+		outerHoleRev := map[int][]string{}
+		for k, v := range outerHole {
+			outerHoleRev[v] = append(outerHoleRev[v], k)
+		}
+		outerConnection := map[string]string{}
+		for _, v := range outerHoleRev {
+			if len(v) != 2 {
+				continue
+			}
+			outerConnection[v[0]] = v[1]
+			outerConnection[v[1]] = v[0]
+			// log.Printf("Outer: %v <=> %v", v[0], v[1])
+		}
+
+		startLabels := outerHoleRev[0]
+		startLabel := startLabels[0]
+		if strings.HasSuffix(startLabel, "L") {
+			startLabel = startLabels[1] // Start with 'R' coil.
+		}
+		result = []string{startLabel}
+		seen := map[string]bool{startLabel: true}
+		for i := 0; i < 2*nlayers; i++ {
+			last := result[len(result)-1]
+			next := innerConnection[last]
+			if seen[next] {
+				break
+			}
+			seen[next] = true
+			result = append(result, next)
+			next = outerConnection[next]
+			if seen[next] {
+				break
+			}
+			seen[next] = true
+			result = append(result, next)
+		}
+		log.Printf("%v: result: %v", len(result), strings.Join(result, " "))
+	}
+	return ""
+}
+
+func wiring(startTR, total int, opposite, mirror map[int]int) map[string]int {
+	result := map[string]int{
+		"TR": startTR,
+		"TL": opposite[startTR],
+		"BR": mirror[startTR],
+		"BL": opposite[mirror[startTR]],
+	}
+
+	for n := 2; n < total; n += 2 {
+		var offset int
+		if (n+2)%4 == 0 {
+			offset = (n + 2) / 4
+		} else {
+			offset = -(n / 4)
+		}
+		nr := (startTR + offset + total) % total
+		result[fmt.Sprintf("%vR", n)] = nr
+		result[fmt.Sprintf("%vL", n)] = opposite[nr]
+		result[fmt.Sprintf("%vR", n+1)] = mirror[nr]
+		result[fmt.Sprintf("%vL", n+1)] = opposite[mirror[nr]]
+	}
+
+	return result
+}
+
+func genMaps(total int) (opposite, mirror map[int]int) {
+	opposite, mirror = map[int]int{}, map[int]int{}
+
+	for n := 0; n < total/2; n++ {
+		o := n + total/2
+		opposite[n] = o
+		opposite[o] = n
+	}
+	for n := 0; n <= total/4; n++ {
+		o := total/2 - n
+		mirror[n] = o
+		mirror[o] = n
+		if n > 0 {
+			m := total - n
+			o = total/2 + n
+			mirror[m] = o
+			mirror[o] = m
+		}
+	}
+
+	return opposite, mirror
 }
