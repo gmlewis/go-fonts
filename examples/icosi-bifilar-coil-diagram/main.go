@@ -60,7 +60,7 @@ func main() {
 		// log.Printf("Inner: %v <=> %v", v[0], v[1])
 	}
 
-	startingPoint := findStartingPoint(innerHole, innerHoleRev, innerConnection)
+	startingPoint := findStartingPoint(innerConnection)
 	log.Printf("starting point: %v", startingPoint)
 	if startingPoint == "" {
 		log.Fatal("Unable to find acceptable starting point.")
@@ -212,7 +212,7 @@ func check(err error) {
 	}
 }
 
-func findStartingPoint(innerHole map[string]int, innerHoleRev map[int][]string, innerConnection map[string]string) string {
+func findStartingPoint(innerConnection map[string]string) string {
 	attempts := []string{"TR", "BR"}
 	for n := 2; n < nlayers; n++ {
 		attempts = append(attempts, fmt.Sprintf("%vR", n))
@@ -221,28 +221,10 @@ func findStartingPoint(innerHole map[string]int, innerHoleRev map[int][]string, 
 	opposite, mirror := genMaps(nlayers)
 	var result []string
 	for startTR := 0; startTR < nlayers; startTR++ {
-		outerHole := wiring(startTR, nlayers, opposite, mirror)
+		startLabel, endLabel, outerHole, outerConnection := wiring(startTR, nlayers, opposite, mirror)
 		log.Printf("attempt: %v = %v: %#v", startTR, len(outerHole), outerHole)
+		_ = endLabel
 
-		outerHoleRev := map[int][]string{}
-		for k, v := range outerHole {
-			outerHoleRev[v] = append(outerHoleRev[v], k)
-		}
-		outerConnection := map[string]string{}
-		for _, v := range outerHoleRev {
-			if len(v) != 2 {
-				continue
-			}
-			outerConnection[v[0]] = v[1]
-			outerConnection[v[1]] = v[0]
-			// log.Printf("Outer: %v <=> %v", v[0], v[1])
-		}
-
-		startLabels := outerHoleRev[0]
-		startLabel := startLabels[0]
-		if strings.HasSuffix(startLabel, "L") {
-			startLabel = startLabels[1] // Start with 'R' coil.
-		}
 		result = []string{startLabel}
 		seen := map[string]bool{startLabel: true}
 		for i := 0; i < 2*nlayers; i++ {
@@ -265,7 +247,9 @@ func findStartingPoint(innerHole map[string]int, innerHoleRev map[int][]string, 
 	return ""
 }
 
-func wiring(startTR, total int, opposite, mirror map[int]int) map[string]int {
+// wiring generates the startLabel (at point 0), the wiring map, and connection map
+// for the given starting point of "TR" at position startTR.
+func wiring(startTR, total int, opposite, mirror map[int]int) (string, string, map[string]int, map[string]string) {
 	result := map[string]int{
 		"TR": startTR,
 		"TL": opposite[startTR],
@@ -287,7 +271,28 @@ func wiring(startTR, total int, opposite, mirror map[int]int) map[string]int {
 		result[fmt.Sprintf("%vL", n+1)] = opposite[mirror[nr]]
 	}
 
-	return result
+	startLabel, endLabel := "", ""
+	rev := map[int][]string{}
+	for k, v := range result {
+		if v == 0 {
+			if strings.HasSuffix(k, "R") {
+				startLabel = k
+			} else {
+				endLabel = k
+			}
+		}
+		rev[v] = append(rev[v], k)
+	}
+	connection := map[string]string{}
+	for _, v := range rev {
+		if len(v) != 2 {
+			continue
+		}
+		connection[v[0]] = v[1]
+		connection[v[1]] = v[0]
+	}
+
+	return startLabel, endLabel, result, connection
 }
 
 func genMaps(total int) (opposite, mirror map[int]int) {
