@@ -60,7 +60,7 @@ func main() {
 		// log.Printf("Inner: %v <=> %v", v[0], v[1])
 	}
 
-	startingPoint := findStartingPoint(innerConnection)
+	startingPoint := findStartingPoint()
 	log.Printf("starting point: %v", startingPoint)
 	if startingPoint == "" {
 		log.Fatal("Unable to find acceptable starting point.")
@@ -212,37 +212,38 @@ func check(err error) {
 	}
 }
 
-func findStartingPoint(innerConnection map[string]string) string {
-	attempts := []string{"TR", "BR"}
-	for n := 2; n < nlayers; n++ {
-		attempts = append(attempts, fmt.Sprintf("%vR", n))
-	}
-
+func findStartingPoint() string {
 	opposite, mirror := genMaps(nlayers)
 	var result []string
-	for startTR := 0; startTR < nlayers; startTR++ {
-		startLabel, endLabel, outerHole, outerConnection := wiring(startTR, nlayers, opposite, mirror)
-		log.Printf("attempt: %v = %v: %#v", startTR, len(outerHole), outerHole)
-		_ = endLabel
+	for innerTR := 0; innerTR < nlayers; innerTR++ {
+		_, _, _, innerConnection := wiring(innerTR, nlayers, opposite, mirror)
+		for startTR := 0; startTR < nlayers; startTR++ {
+			startLabel, _, _, outerConnection := wiring(startTR, nlayers, opposite, mirror)
+			log.Printf("attempt: innerTR=%v, startTR=%v", innerTR, startTR)
 
-		result = []string{startLabel}
-		seen := map[string]bool{startLabel: true}
-		for i := 0; i < 2*nlayers; i++ {
-			last := result[len(result)-1]
-			next := innerConnection[last]
-			if seen[next] {
-				break
+			result = []string{startLabel}
+			seen := map[string]bool{startLabel: true}
+			for i := 0; i < 2*nlayers; i++ {
+				last := result[len(result)-1]
+				next := innerConnection[last]
+				if seen[next] {
+					break
+				}
+				seen[next] = true
+				result = append(result, next)
+				next = outerConnection[next]
+				if seen[next] {
+					break
+				}
+				seen[next] = true
+				result = append(result, next)
 			}
-			seen[next] = true
-			result = append(result, next)
-			next = outerConnection[next]
-			if seen[next] {
-				break
+			if len(result) == 2*nlayers {
+				log.Printf("SUCCESS! %v: innerTR=%v, startTR=%v, result: %v", len(result), innerTR, startTR, strings.Join(result, " "))
+			} else {
+				log.Printf("failed: %v", len(result))
 			}
-			seen[next] = true
-			result = append(result, next)
 		}
-		log.Printf("%v: result: %v", len(result), strings.Join(result, " "))
 	}
 	return ""
 }
