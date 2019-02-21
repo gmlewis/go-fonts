@@ -200,15 +200,56 @@ func findSolution() *solution {
 			}
 			if len(result) == 2*nlayers {
 				log.Printf("SUCCESS! %v: innerTR=%v, outerTR=%v, result: %v", len(result), innerTR, outerTR, strings.Join(result, " "))
-				return &solution{
-					innerTR:         innerTR,
-					outerTR:         outerTR,
-					innerHole:       innerHole,
-					outerHole:       outerHole,
-					innerConnection: innerConnection,
-					outerConnection: outerConnection,
-					startLabel:      startLabel,
-					endLabel:        endLabel,
+				if innerTR == 17 {
+					fmt.Printf("\ninnerHole := map[string]int{\n")
+					fmt.Printf("  %q: %v, %q: %v, %q: %v, %q: %v,\n",
+						"TR", innerHole["TR"],
+						"TL", innerHole["TL"],
+						"BR", innerHole["BR"],
+						"BL", innerHole["BL"],
+					)
+					for n := 2; n < nlayers; n += 2 {
+						nr := fmt.Sprintf("%vR", n)
+						nl := fmt.Sprintf("%vL", n)
+						np1r := fmt.Sprintf("%vR", n+1)
+						np1l := fmt.Sprintf("%vL", n+1)
+						fmt.Printf("  %q: %v, %q: %v, %q: %v, %q: %v,\n",
+							nr, innerHole[nr],
+							nl, innerHole[nl],
+							np1r, innerHole[np1r],
+							np1l, innerHole[np1l],
+						)
+					}
+					fmt.Printf("}\n\nouterHole := map[string]int{\n")
+					fmt.Printf("  %q: %v, %q: %v, %q: %v, %q: %v,\n",
+						"TR", outerHole["TR"],
+						"TL", outerHole["TL"],
+						"BR", outerHole["BR"],
+						"BL", outerHole["BL"],
+					)
+					for n := 2; n < nlayers; n += 2 {
+						nr := fmt.Sprintf("%vR", n)
+						nl := fmt.Sprintf("%vL", n)
+						np1r := fmt.Sprintf("%vR", n+1)
+						np1l := fmt.Sprintf("%vL", n+1)
+						fmt.Printf("  %q: %v, %q: %v, %q: %v, %q: %v,\n",
+							nr, outerHole[nr],
+							nl, outerHole[nl],
+							np1r, outerHole[np1r],
+							np1l, outerHole[np1l],
+						)
+					}
+					fmt.Printf("}\n\n")
+					return &solution{
+						innerTR:         innerTR,
+						outerTR:         outerTR,
+						innerHole:       innerHole,
+						outerHole:       outerHole,
+						innerConnection: innerConnection,
+						outerConnection: outerConnection,
+						startLabel:      startLabel,
+						endLabel:        endLabel,
+					}
 				}
 			} else {
 				log.Printf("failed: %v", len(result))
