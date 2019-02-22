@@ -28,8 +28,10 @@ abcdefghijklm
 nopqrstuvwxyz
 ~!@#$%^&*()-_=/?
 +[]{}\|;':",.<>`, "Message to write to Gerber file silkscreen")
+	center = flag.Bool("center", false, "Center justify all text")
 	width  = flag.Int("width", 800, "Image width")
 	height = flag.Int("height", 800, "Image height")
+	dxf    = flag.String("dxf", "out.dxf", "Output DXF filename")
 	out    = flag.String("out", "out.png", "Output image filename")
 	rot    = flag.Float64("rot", 0, "Rotate message by this number of degrees")
 )
@@ -65,13 +67,41 @@ func main() {
 				Rotate: *rot * math.Pi / 180.0,
 			}
 		}
-		render, err := Text(0, 0, 1.0, 1.0, message, name, opts)
-		if err != nil {
-			log.Fatal(err)
+
+		var render *Render
+		if *center {
+			if opts == nil {
+				opts = &TextOpts{}
+			}
+			opts.XAlign, opts.YAlign = XCenter, YTop
+			var lines []*Render
+			lastY := 0.0
+			for _, line := range strings.Split(message, "\n") {
+				r, err := Text(0, lastY, 1.0, 1.0, line, name, opts)
+				if err != nil {
+					log.Fatal(err)
+				}
+				lastY = r.MBB.Min[1] + font.Descent/font.UnitsPerEm
+				lines = append(lines, r)
+			}
+			render = Merge(lines...)
+		} else {
+			var err error
+			render, err = Text(0, 0, 1.0, 1.0, message, name, opts)
+			if err != nil {
+				log.Fatal(err)
+			}
 		}
 
-		if err := render.SavePNG(*out, *width, *height); err != nil {
-			log.Fatal(err)
+		if *out != "" {
+			if err := render.SavePNG(*out, *width, *height); err != nil {
+				log.Fatal(err)
+			}
+		}
+		if *dxf != "" {
+			if err := render.SaveDXF(*dxf, *width, *height); err != nil {
+				log.Fatal(err)
+			}
 		}
 	}
 
