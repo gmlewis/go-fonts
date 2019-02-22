@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	resolution = 0.01 // ems
+	resolution = 0.1 // ems
 	minSteps   = 4
 	// If more resolution is needed in the rendered polygons,
 	// MaxSteps could be increased.

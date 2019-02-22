@@ -31,6 +31,7 @@ nopqrstuvwxyz
 	center = flag.Bool("center", false, "Center justify all text")
 	width  = flag.Int("width", 800, "Image width")
 	height = flag.Int("height", 800, "Image height")
+	scale  = flag.Float64("scale", 100.0, "Scale for DXF output")
 	dxf    = flag.String("dxf", "out.dxf", "Output DXF filename")
 	out    = flag.String("out", "out.png", "Output image filename")
 	rot    = flag.Float64("rot", 0, "Rotate message by this number of degrees")
@@ -99,7 +100,7 @@ func main() {
 			}
 		}
 		if *dxf != "" {
-			if err := render.SaveDXF(*dxf, *width, *height); err != nil {
+			if err := render.SaveDXF(*dxf, *scale); err != nil {
 				log.Fatal(err)
 			}
 		}
