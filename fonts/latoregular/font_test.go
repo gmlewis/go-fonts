@@ -10,7 +10,7 @@ import (
 
 const (
 	fontName = "latoregular"
-	eps      = 1e-6
+	eps      = 1e-3
 )
 
 func TestTextMBB(t *testing.T) {
