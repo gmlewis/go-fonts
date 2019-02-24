@@ -1,4 +1,4 @@
-// icosi-bifilar-coil-diagram renders a diagram for the coil.
+// n333-bifilar-coil-diagram renders a diagram for the coil.
 package main
 
 import (
@@ -14,9 +14,9 @@ import (
 )
 
 var (
-	width  = flag.Int("width", 800, "Image width")
-	height = flag.Int("height", 800, "Image height")
-	out    = flag.String("out", "icosi-bifilar-coil-diagram.png", "PNG output filename")
+	width  = flag.Int("width", 5400, "Image width")
+	height = flag.Int("height", 5400, "Image height")
+	out    = flag.String("out", "n333-bifilar-coil-diagram.png", "PNG output filename")
 
 	cx, cy float64
 	outerR float64
@@ -24,9 +24,9 @@ var (
 
 const (
 	textFont   = "latoregular"
-	nlayers    = 333
+	nlayers    = 334
 	angleDelta = math.Pi / nlayers
-	innerR     = 120
+	innerR     = 2400
 	segment    = 20
 	maxA       = 33.0 * math.Pi
 )
@@ -35,7 +35,7 @@ func main() {
 	flag.Parse()
 
 	solution := findSolution()
-	log.Printf("starting point: %v", solution)
+	log.Printf("innerTR=%v, outerTR=%v, startLabel=%q, endLabel=%q", solution.innerTR, solution.outerTR, solution.startLabel, solution.endLabel)
 	if solution == nil {
 		log.Fatal("Unable to find acceptable starting point.")
 	}
@@ -81,8 +81,15 @@ func main() {
 		}
 	}
 	for n := 0; n < 2*nlayers; n++ {
-		drawCoil(dc, n)
 		num := float64(n)
+		if labels[n] == "BL" || labels[n] == "BR" {
+			ip := innerPt(num, 0)
+			dc.MoveTo(ip.X, ip.Y)
+			op := outerPt(num, 0)
+			dc.LineTo(op.X, op.Y)
+		} else {
+			drawCoil(dc, n)
+		}
 		if n%2 == 0 {
 			ip1 := innerPt(num, 0)
 			ip2 := innerPt(num+1.0, 0)
@@ -93,7 +100,6 @@ func main() {
 			dc.DrawCircle(mid1.X, mid1.Y, 0.2*segment)
 			dc.Fill()
 		} else if n != 2*nlayers-1 {
-			num := float64(n)
 			op1 := outerPt(num, 0)
 			op2 := outerPt(num+1.0, 0)
 			dc.MoveTo(op1.X, op1.Y)
@@ -103,7 +109,6 @@ func main() {
 			dc.DrawCircle(mid1.X, mid1.Y, 0.2*segment)
 			dc.Fill()
 		} else {
-			num := float64(n)
 			op1 := outerPt(num, 0)
 			op2 := outerPt(num+1.0, 0)
 			dc.Stroke()
@@ -173,12 +178,12 @@ type solution struct {
 
 func findSolution() *solution {
 	opposite, onAxisMirror := genMaps(nlayers, true)
-	// _, offAxisMirror := genMaps(nlayers, false)
+	_, offAxisMirror := genMaps(nlayers, false)
 	var result []string
 	for innerTR := 0; innerTR < nlayers; innerTR++ {
 		_, _, innerHole, innerConnection := wiring(innerTR, nlayers, opposite, onAxisMirror)
 		for outerTR := 0; outerTR < nlayers; outerTR++ {
-			startLabel, endLabel, outerHole, outerConnection := wiring(outerTR, nlayers, opposite, onAxisMirror)
+			startLabel, endLabel, outerHole, outerConnection := wiring(outerTR, nlayers, opposite, offAxisMirror)
 			log.Printf("attempt: innerTR=%v, outerTR=%v", innerTR, outerTR)
 
 			result = []string{startLabel}
@@ -230,16 +235,84 @@ func findSolution() *solution {
 				for n := 2; n < nlayers; n += 2 {
 					nr := fmt.Sprintf("%vR", n)
 					nl := fmt.Sprintf("%vL", n)
+					nlv := outerHole[nl]
+					if nl == endLabel {
+						nlv = nlayers
+					}
 					np1r := fmt.Sprintf("%vR", n+1)
 					np1l := fmt.Sprintf("%vL", n+1)
+					np1lv := outerHole[np1l]
+					if np1l == endLabel {
+						np1lv = nlayers
+					}
 					fmt.Printf("  %q: %v, %q: %v, %q: %v, %q: %v,\n",
 						nr, outerHole[nr],
-						nl, outerHole[nl],
+						nl, nlv,
 						np1r, outerHole[np1r],
-						np1l, outerHole[np1l],
+						np1l, np1lv,
 					)
 				}
 				fmt.Printf("}\n\n")
+				seen := map[int]bool{}
+				fmtStr := "innerLabel(%q), "
+				fmtStr2 := "innerLabel2(%q), "
+				printit := func(label string) {
+					if seen[innerHole[label]] {
+						fmt.Printf(fmtStr2, label)
+					} else {
+						fmt.Printf(fmtStr, label)
+						seen[innerHole[label]] = true
+					}
+				}
+				printit("TR")
+				printit("TL")
+				printit("BR")
+				printit("BL")
+				fmt.Println()
+				for n := 2; n < nlayers; n += 2 {
+					nr := fmt.Sprintf("%vR", n)
+					nl := fmt.Sprintf("%vL", n)
+					np1r := fmt.Sprintf("%vR", n+1)
+					np1l := fmt.Sprintf("%vL", n+1)
+					printit(nr)
+					printit(nl)
+					printit(np1r)
+					printit(np1l)
+					fmt.Println()
+				}
+				fmt.Println()
+				seen = map[int]bool{}
+				fmtStr = "outerLabel(%q), "
+				fmtStr2 = "outerLabel2(%q), "
+				printit = func(label string) {
+					if label == endLabel {
+						fmt.Printf("outerLabel3(%q), ", label)
+						return
+					}
+					if seen[outerHole[label]] {
+						fmt.Printf(fmtStr2, label)
+					} else {
+						fmt.Printf(fmtStr, label)
+						seen[outerHole[label]] = true
+					}
+				}
+				printit("TR")
+				printit("TL")
+				printit("BR")
+				printit("BL")
+				fmt.Println()
+				for n := 2; n < nlayers; n += 2 {
+					nr := fmt.Sprintf("%vR", n)
+					nl := fmt.Sprintf("%vL", n)
+					np1r := fmt.Sprintf("%vR", n+1)
+					np1l := fmt.Sprintf("%vL", n+1)
+					printit(nr)
+					printit(nl)
+					printit(np1r)
+					printit(np1l)
+					fmt.Println()
+				}
+				fmt.Println()
 				return &solution{
 					innerTR:         innerTR,
 					outerTR:         outerTR,
@@ -251,8 +324,6 @@ func findSolution() *solution {
 					endLabel:        endLabel,
 				}
 				// }
-				// } else {
-				// log.Printf("failed: %v", len(result))
 			}
 		}
 	}
