@@ -1,15 +1,14 @@
-sudo: false
 language: go
 go:
+  - "1.x"
   - "1.11.x"
-  - "1.10.x"
-  - tip
+  - master
 env:
   global:
     - GO111MODULE=on
 matrix:
   allow_failures:
-    - go: tip
+    - go: master
   fast_finish: true
 install:
   - # Do not install yet, since we want it to happen inside the script step below.
