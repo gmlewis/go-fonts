@@ -3,6 +3,7 @@ package latoregular
 import (
 	"fmt"
 	"math"
+	"strings"
 	"testing"
 
 	"github.com/gmlewis/go-fonts/fonts"
@@ -14,12 +15,9 @@ const (
 )
 
 func TestTextMBB(t *testing.T) {
-	const (
-		message = "012"
-	)
-
 	tests := []struct {
 		name       string
+		message    string
 		xPos, yPos float64
 		wantXmin   float64
 		wantYmin   float64
@@ -28,6 +26,7 @@ func TestTextMBB(t *testing.T) {
 	}{
 		{
 			name:     "Origin",
+			message:  "012",
 			wantXmin: 0.02978515625,
 			wantYmin: -0.00732421875,
 			wantXmax: 1.68896484375,
@@ -35,6 +34,7 @@ func TestTextMBB(t *testing.T) {
 		},
 		{
 			name:     "Offset",
+			message:  "012",
 			xPos:     10,
 			yPos:     20,
 			wantXmin: 10 + 0.02978515625,
@@ -42,11 +42,19 @@ func TestTextMBB(t *testing.T) {
 			wantXmax: 10 + 1.68896484375,
 			wantYmax: 20 + 0.724609375,
 		},
+		{
+			name:     "Origin",
+			message:  "M",
+			wantXmin: 0.0869140625,
+			wantYmin: 0,
+			wantXmax: 0.83251953125,
+			wantYmax: 0.71630859375,
+		},
 	}
 
 	for _, tt := range tests {
-		t.Run(fmt.Sprintf("test %v", message), func(t *testing.T) {
-			mbb, err := fonts.TextMBB(tt.xPos, tt.yPos, 1, 1, message, fontName)
+		t.Run(fmt.Sprintf("%v %v", tt.name, tt.message), func(t *testing.T) {
+			mbb, err := fonts.TextMBB(tt.xPos, tt.yPos, 1, 1, tt.message, fontName)
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -66,6 +74,10 @@ func TestTextMBB(t *testing.T) {
 	}
 }
 
+func sp(s string) *string {
+	return &s
+}
+
 func TestText(t *testing.T) {
 	const (
 		message    = "012"
@@ -76,6 +88,7 @@ func TestText(t *testing.T) {
 
 	tests := []struct {
 		name       string
+		message    *string
 		xPos, yPos float64
 		rotation   float64
 		opts       fonts.TextOpts
@@ -84,6 +97,14 @@ func TestText(t *testing.T) {
 		wantXmax   float64
 		wantYmax   float64
 	}{
+		{
+			name:     "XLeft,YBottom",
+			message:  sp("M"),
+			wantXmin: 0,
+			wantYmin: 0,
+			wantXmax: 0.74560546875,
+			wantYmax: 0.71630859375,
+		},
 		{
 			name:     "XLeft,YBottom",
 			wantXmin: 0,
@@ -426,10 +447,14 @@ func TestText(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		t.Run(fmt.Sprintf("test Text %v", message), func(t *testing.T) {
+		m := message
+		if tt.message != nil {
+			m = *tt.message
+		}
+		t.Run(fmt.Sprintf("test %v %v", tt.name, m), func(t *testing.T) {
 			opts := tt.opts // make a copy
 			opts.Rotate = tt.rotation
-			got, err := fonts.Text(tt.xPos, tt.yPos, 1, 1, message, fontName, &opts)
+			got, err := fonts.Text(tt.xPos, tt.yPos, 1, 1, m, fontName, &opts)
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -445,6 +470,401 @@ func TestText(t *testing.T) {
 			}
 			if math.Abs(mbb.Max[1]-tt.wantYmax) > eps {
 				t.Errorf("Ymax = %v, want %v", mbb.Max[1], tt.wantYmax)
+			}
+		})
+	}
+}
+
+func TestFillBox(t *testing.T) {
+	const wideMsg = "this is a long, horizontal line"
+	var tallMsg = strings.Join(strings.Split("this is a tall, vertical line", ""), "\n")
+
+	tests := []struct {
+		name    string
+		mbb     fonts.MBB
+		xScale  float64
+		message string
+		opts    *fonts.TextOpts
+		want    fonts.MBB
+	}{
+		{
+			name:    "Square, no opts - XLeft,YBottom",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: "M",
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 96.07072691552064}},
+		},
+		{
+			name:    "Square, mirror, no opts - XLeft,YBottom",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: "M",
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 96.07072691552064}},
+		},
+
+		{
+			name:    "Wide, no opts - XLeft,YBottom",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: wideMsg,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 7.738168660828091}},
+		},
+		{
+			name:    "Wide, mirror, no opts - XLeft,YBottom",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: wideMsg,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 7.738168660828091}},
+		},
+
+		{
+			name:    "Wide, BottomLeft",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: wideMsg,
+			opts:    &fonts.BottomLeft,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 7.738168660828091}},
+		},
+		{
+			name:    "Wide, mirror, BottomLeft",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: wideMsg,
+			opts:    &fonts.BottomLeft,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 7.738168660828091}},
+		},
+
+		{
+			name:    "Wide, BottomCenter",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: wideMsg,
+			opts:    &fonts.BottomCenter,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 7.738168660828091}},
+		},
+		{
+			name:    "Wide, mirror, BottomCenter",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: wideMsg,
+			opts:    &fonts.BottomCenter,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 7.738168660828091}},
+		},
+
+		{
+			name:    "Wide, BottomRight",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: wideMsg,
+			opts:    &fonts.BottomRight,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 7.738168660828091}},
+		},
+		{
+			name:    "Wide, mirror, BottomRight",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: wideMsg,
+			opts:    &fonts.BottomRight,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 7.738168660828091}},
+		},
+
+		{
+			name:    "Wide, CenterLeft",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: wideMsg,
+			opts:    &fonts.CenterLeft,
+			want:    fonts.MBB{Min: fonts.Pt{0, 46.1309156696}, Max: fonts.Pt{100, 53.8690843304}},
+		},
+		{
+			name:    "Wide, mirror, CenterLeft",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: wideMsg,
+			opts:    &fonts.CenterLeft,
+			want:    fonts.MBB{Min: fonts.Pt{0, 46.1309156696}, Max: fonts.Pt{100, 53.8690843304}},
+		},
+
+		{
+			name:    "Wide, Center",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: wideMsg,
+			opts:    &fonts.Center,
+			want:    fonts.MBB{Min: fonts.Pt{0, 46.1309156696}, Max: fonts.Pt{100, 53.8690843304}},
+		},
+		{
+			name:    "Wide, mirror, Center",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: wideMsg,
+			opts:    &fonts.Center,
+			want:    fonts.MBB{Min: fonts.Pt{0, 46.1309156696}, Max: fonts.Pt{100, 53.8690843304}},
+		},
+
+		{
+			name:    "Wide, CenterRight",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: wideMsg,
+			opts:    &fonts.CenterRight,
+			want:    fonts.MBB{Min: fonts.Pt{0, 46.1309156696}, Max: fonts.Pt{100, 53.8690843304}},
+		},
+		{
+			name:    "Wide, mirror, CenterRight",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: wideMsg,
+			opts:    &fonts.CenterRight,
+			want:    fonts.MBB{Min: fonts.Pt{0, 46.1309156696}, Max: fonts.Pt{100, 53.8690843304}},
+		},
+
+		{
+			name:    "Wide, TopLeft",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: wideMsg,
+			opts:    &fonts.TopLeft,
+			want:    fonts.MBB{Min: fonts.Pt{0, 92.2618313391719}, Max: fonts.Pt{100, 100}},
+		},
+		{
+			name:    "Wide, mirror, TopLeft",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: wideMsg,
+			opts:    &fonts.TopLeft,
+			want:    fonts.MBB{Min: fonts.Pt{0, 92.2618313391719}, Max: fonts.Pt{100, 100}},
+		},
+
+		{
+			name:    "Wide, TopCenter",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: wideMsg,
+			opts:    &fonts.TopCenter,
+			want:    fonts.MBB{Min: fonts.Pt{0, 92.2618313391719}, Max: fonts.Pt{100, 100}},
+		},
+		{
+			name:    "Wide, mirror, TopCenter",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: wideMsg,
+			opts:    &fonts.TopCenter,
+			want:    fonts.MBB{Min: fonts.Pt{0, 92.2618313391719}, Max: fonts.Pt{100, 100}},
+		},
+
+		{
+			name:    "Wide, TopRight",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: wideMsg,
+			opts:    &fonts.TopRight,
+			want:    fonts.MBB{Min: fonts.Pt{0, 92.2618313391719}, Max: fonts.Pt{100, 100}},
+		},
+		{
+			name:    "Wide, mirror, TopRight",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: wideMsg,
+			opts:    &fonts.TopRight,
+			want:    fonts.MBB{Min: fonts.Pt{0, 92.2618313391719}, Max: fonts.Pt{100, 100}},
+		},
+
+		// Tall
+		{
+			name:    "Tall, no opts - XLeft,YBottom",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: tallMsg,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{1.721378464891371, 100}},
+		},
+		{
+			name:    "Tall, mirror, no opts - XLeft,YBottom",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: tallMsg,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{1.721378464891371, 100}},
+		},
+
+		{
+			name:    "Tall, BottomLeft",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: tallMsg,
+			opts:    &fonts.BottomLeft,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{1.721378464891371, 100}},
+		},
+		{
+			name:    "Tall, mirror, BottomLeft",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: tallMsg,
+			opts:    &fonts.BottomLeft,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{1.721378464891371, 100}},
+		},
+
+		{
+			name:    "Tall, BottomCenter",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: tallMsg,
+			opts:    &fonts.BottomCenter,
+			want:    fonts.MBB{Min: fonts.Pt{49.1393107676, 0}, Max: fonts.Pt{50.8606892324, 100}},
+		},
+		{
+			name:    "Tall, mirror, BottomCenter",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: tallMsg,
+			opts:    &fonts.BottomCenter,
+			want:    fonts.MBB{Min: fonts.Pt{49.1393107676, 0}, Max: fonts.Pt{50.8606892324, 100}},
+		},
+
+		{
+			name:    "Tall, BottomRight",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: tallMsg,
+			opts:    &fonts.BottomRight,
+			want:    fonts.MBB{Min: fonts.Pt{98.2786215351, 0}, Max: fonts.Pt{100, 100}},
+		},
+		{
+			name:    "Tall, mirror, BottomRight",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: tallMsg,
+			opts:    &fonts.BottomRight,
+			want:    fonts.MBB{Min: fonts.Pt{98.2786215351, 0}, Max: fonts.Pt{100, 100}},
+		},
+
+		{
+			name:    "Tall, CenterLeft",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: tallMsg,
+			opts:    &fonts.CenterLeft,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{1.721378464891371, 100}},
+		},
+		{
+			name:    "Tall, mirror, CenterLeft",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: tallMsg,
+			opts:    &fonts.CenterLeft,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{1.721378464891371, 100}},
+		},
+
+		{
+			name:    "Tall, Center",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: tallMsg,
+			opts:    &fonts.Center,
+			want:    fonts.MBB{Min: fonts.Pt{49.1393107676, 0}, Max: fonts.Pt{50.8606892324, 100}},
+		},
+		{
+			name:    "Tall, mirror, Center",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: tallMsg,
+			opts:    &fonts.Center,
+			want:    fonts.MBB{Min: fonts.Pt{49.1393107676, 0}, Max: fonts.Pt{50.8606892324, 100}},
+		},
+
+		{
+			name:    "Tall, CenterRight",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: tallMsg,
+			opts:    &fonts.CenterRight,
+			want:    fonts.MBB{Min: fonts.Pt{98.2786215351, 0}, Max: fonts.Pt{100, 100}},
+		},
+		{
+			name:    "Tall, mirror, CenterRight",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: tallMsg,
+			opts:    &fonts.CenterRight,
+			want:    fonts.MBB{Min: fonts.Pt{98.2786215351, 0}, Max: fonts.Pt{100, 100}},
+		},
+
+		{
+			name:    "Tall, TopLeft",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: tallMsg,
+			opts:    &fonts.TopLeft,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{1.721378464891371, 100}},
+		},
+		{
+			name:    "Tall, mirror, TopLeft",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: tallMsg,
+			opts:    &fonts.TopLeft,
+			want:    fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{1.721378464891371, 100}},
+		},
+
+		{
+			name:    "Tall, TopCenter",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: tallMsg,
+			opts:    &fonts.TopCenter,
+			want:    fonts.MBB{Min: fonts.Pt{49.1393107676, 0}, Max: fonts.Pt{50.8606892324, 100}},
+		},
+		{
+			name:    "Tall, mirror, TopCenter",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: tallMsg,
+			opts:    &fonts.TopCenter,
+			want:    fonts.MBB{Min: fonts.Pt{49.1393107676, 0}, Max: fonts.Pt{50.8606892324, 100}},
+		},
+
+		{
+			name:    "Tall, TopRight",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  1.0,
+			message: tallMsg,
+			opts:    &fonts.TopRight,
+			want:    fonts.MBB{Min: fonts.Pt{98.2786215351, 0}, Max: fonts.Pt{100, 100}},
+		},
+		{
+			name:    "Tall, mirror, TopRight",
+			mbb:     fonts.MBB{Min: fonts.Pt{0, 0}, Max: fonts.Pt{100, 100}},
+			xScale:  -1.0,
+			message: tallMsg,
+			opts:    &fonts.TopRight,
+			want:    fonts.MBB{Min: fonts.Pt{98.2786215351, 0}, Max: fonts.Pt{100, 100}},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			x, y, pts, err := fonts.FillBox(tt.mbb, tt.xScale, 1.0, tt.message, fontName, tt.opts)
+			if err != nil {
+				t.Fatalf("FillBox: %v", err)
+			}
+			// log.Printf("x=%v, y=%v, pts=%v", x, y, pts)
+			got, err := fonts.Text(x, y, tt.xScale*pts, pts, tt.message, fontName, tt.opts)
+			if err != nil {
+				t.Fatalf("Text: %v", err)
+			}
+			// log.Printf("w,h=(%v,%v), got=%#v", got.MBB.Max[0]-got.MBB.Min[0], got.MBB.Max[1]-got.MBB.Min[1], got.MBB)
+
+			mbb := got.MBB
+			if math.Abs(mbb.Min[0]-tt.want.Min[0]) > eps {
+				t.Errorf("Xmin = %v, want %v", mbb.Min[0], tt.want.Min[0])
+			}
+			if math.Abs(mbb.Min[1]-tt.want.Min[1]) > eps {
+				t.Errorf("Ymin = %v, want %v", mbb.Min[1], tt.want.Min[1])
+			}
+			if math.Abs(mbb.Max[0]-tt.want.Max[0]) > eps {
+				t.Errorf("Xmax = %v, want %v", mbb.Max[0], tt.want.Max[0])
+			}
+			if math.Abs(mbb.Max[1]-tt.want.Max[1]) > eps {
+				t.Errorf("Ymax = %v, want %v", mbb.Max[1], tt.want.Max[1])
 			}
 		})
 	}

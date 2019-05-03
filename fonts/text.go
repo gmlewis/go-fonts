@@ -210,7 +210,8 @@ func TextMBB(xPos, yPos, xScale, yScale float64, message, fontName string) (*MBB
 // All dimensions are in "em"s, the width of the character "M" in the
 // desired font.
 //
-// xScale and yScale are provided to convert the font to any scale desired.
+// xScale and yScale are provided to convert the font to any scale desired
+// (or mirror the font with negative values).
 func Text(xPos, yPos, xScale, yScale float64, message, fontName string, opts *TextOpts) (*Render, error) {
 	font, err := getFont(fontName)
 	if err != nil {
@@ -567,4 +568,40 @@ func (g *Glyph) Render(x, y, xScale, yScale float64) (float64, *Render) {
 	}
 
 	return g.HorizAdvX, result
+}
+
+// FillBox calculates the (x,y) offsets and pts values required (when using
+// the Text method above) to fill the MBB and align the text according to TextOpts.
+func FillBox(mbb MBB, xScale, yScale float64, message, fontName string, opts *TextOpts) (x, y, pts float64, err error) {
+	if opts == nil {
+		opts = &BottomLeft
+	}
+	r, err := Text(0.0, 0.0, xScale, yScale, message, fontName, opts)
+	if err != nil {
+		return x, y, pts, err
+	}
+	w := r.MBB.Max[0] - r.MBB.Min[0]
+	h := r.MBB.Max[1] - r.MBB.Min[1]
+	// log.Printf("1: w,h=(%v,%v), r=%#v", w, h, r.MBB)
+
+	pts = (mbb.Max[0] - mbb.Min[0]) / w
+	if ys := (mbb.Max[1] - mbb.Min[1]) / h; ys < pts {
+		pts = ys
+	}
+
+	if r, err = Text(0.0, 0.0, pts*xScale, pts*yScale, message, fontName, opts); err != nil {
+		return x, y, pts, err
+	}
+	// w = r.MBB.Max[0] - r.MBB.Min[0]
+	// h = r.MBB.Max[1] - r.MBB.Min[1]
+	// log.Printf("2: w,h=(%v,%v), r=%#v", w, h, r.MBB)
+
+	x = lerp(opts.XAlign, mbb.Min[0]-r.MBB.Min[0], mbb.Max[0]-r.MBB.Max[0])
+	y = lerp(opts.YAlign, mbb.Min[1]-r.MBB.Min[1], mbb.Max[1]-r.MBB.Max[1])
+
+	return x, y, pts, nil
+}
+
+func lerp(t, a, b float64) float64 {
+	return (1.0-t)*a + t*b
 }
