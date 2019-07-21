@@ -150,7 +150,11 @@ func (s *segment) xIntercepts(topY, botY float64) []vec2.T {
 func (s *segment) interpFunc(topY, botY float64) string {
 	switch s.segType {
 	case line:
-		return fmt.Sprintf("interpLine(vec2(%.2f,%.2f),vec2(%.2f,%.2f),xyz.y)", s.pts[0][0], s.pts[0][1], s.pts[1][0], s.pts[1][1])
+		top, bot := s.pts[0], s.pts[1]
+		if top[1] < bot[1] {
+			top, bot = bot, top
+		}
+		return fmt.Sprintf("interpLine(vec2(%.2f,%.2f),vec2(%.2f,%.2f),xyz.y)", bot[0], bot[1], top[0], top[1])
 	// case cubic:
 	// case quadratic:
 	default:

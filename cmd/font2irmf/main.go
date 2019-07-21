@@ -146,8 +146,8 @@ float blinnLoop(vec2 A, vec2 B, vec2 C) {
 }
 
 float interpLine(vec2 A, vec2 B, float y) {
-	float p = (y - A.y) / (B.y - A.y)
-	return p*(B.x-A.x) + A.x
+  float p = (y - A.y) / (B.y - A.y)
+  return p*(B.x-A.x) + A.x
 }
 `)
 
