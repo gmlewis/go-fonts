@@ -15,20 +15,27 @@ type recorder struct {
 	segments [][]*segment
 }
 
-func (r *recorder) process(f io.Writer, g *Gerber) {
+func (r *recorder) process(f io.Writer, g *Glyph) {
 	for i := range r.segments {
-		r.processGerberLP(f, g.GerberLP, i)
+		r.processGerberLP(f, *g.Unicode, *g.GerberLP, i)
 	}
 	fmt.Fprintf(f, `
 float glyph_%v(float height, vec3 xyz) {
   if (any(lessThan(xyz, vec3(%.2f,%.2f,0.0))) || any(greaterThan(xyz, vec3(%.2f,%.2f,height)))) { return 0.0; }
-`, *g.Unicode, g.MBB.Min[0], g.MBB.Min[1], g.MBB.Max[0], g.MBB.Max[1])
-
-	fmt.Fprintln(f, `  return 1.0;
+  float result = glyph_%v_1(xyz);
+`, *g.Unicode, g.MBB.Min[0], g.MBB.Min[1], g.MBB.Max[0], g.MBB.Max[1], *g.Unicode)
+	for i := range r.segments[1:] {
+		op := "+"
+		if (*g.GerberLP)[i+1:i+2] == "c" {
+			op = "-"
+		}
+		fmt.Fprintf(f, "  result %v= glyph_%v_%v(xyz);\n", op, *g.Unicode, i+2)
+	}
+	fmt.Fprintln(f, `  return result;
 }`)
 }
 
-func (r *recorder) processGerberLP(f io.Writer, gerberLP string, segNum int) {
+func (r *recorder) processGerberLP(f io.Writer, glyphName string, gerberLP string, segNum int) {
 	// Sort all Y values, descending.
 	var yvals []float64
 	for _, seg := range r.segments[segNum] {
@@ -38,6 +45,10 @@ func (r *recorder) processGerberLP(f io.Writer, gerberLP string, segNum int) {
 		return yvals[b] < yvals[a]
 	})
 
+	fmt.Fprintf(f, `
+float glyph_%v_%v(vec3 xyz) {
+`, glyphName, segNum+1)
+
 	r.lastY = yvals[0]
 	for _, y := range yvals {
 		if y >= r.lastY {
@@ -46,6 +57,8 @@ func (r *recorder) processGerberLP(f io.Writer, gerberLP string, segNum int) {
 		r.processSlice(f, r.lastY, y, segNum)
 		r.lastY = y
 	}
+	fmt.Fprintln(f, `  return 1.0;
+}`)
 }
 
 func (r *recorder) processSlice(f io.Writer, topY, botY float64, segNum int) {
