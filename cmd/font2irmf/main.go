@@ -123,22 +123,22 @@ func writeFont(fontData *FontData, fontDir string) {
 	// Write helper functions.
 	fmt.Fprintf(f, `
 float blinnLoop(vec2 A, vec2 B, vec2 C) {
-	vec2 v0 = C - A;
-	vec2 v1 = B - A;
-	vec2 v2 = vec2(0.75,0.5) - A;
-	// Compute dot products
-	float dot00 = dot(v0, v0);
-	float dot01 = dot(v0, v1);
-	float dot02 = dot(v0, v2);
-	float dot11 = dot(v1, v1);
-	float dot12 = dot(v1, v2);
-	// Compute barycentric coordinates
-	float invDenom = 1.0 / (dot00 * dot11 - dot01 * dot01);
-	float u = (dot11 * dot02 - dot01 * dot12) * invDenom;
-	float v = (dot00 * dot12 - dot01 * dot02) * invDenom;
-	// use the blinn and loop method
-	float w = (1.0 - u - v);
-	return w;
+  vec2 v0 = C - A;
+  vec2 v1 = B - A;
+  vec2 v2 = vec2(0.75,0.5) - A;
+  // Compute dot products
+  float dot00 = dot(v0, v0);
+  float dot01 = dot(v0, v1);
+  float dot02 = dot(v0, v2);
+  float dot11 = dot(v1, v1);
+  float dot12 = dot(v1, v2);
+  // Compute barycentric coordinates
+  float invDenom = 1.0 / (dot00 * dot11 - dot01 * dot01);
+  float u = (dot11 * dot02 - dot01 * dot12) * invDenom;
+  float v = (dot00 * dot12 - dot01 * dot02) * invDenom;
+  // use the blinn and loop method
+  float w = (1.0 - u - v);
+  return w;
 }
 `)
 
