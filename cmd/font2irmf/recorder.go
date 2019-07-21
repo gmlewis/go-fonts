@@ -20,6 +20,7 @@ func (r *recorder) process(f io.Writer, g *Glyph) {
 	for i := range r.segments {
 		r.processGerberLP(f, *g.Unicode, *g.GerberLP, i)
 	}
+	spew.Fdump(f, g)
 	fmt.Fprintf(f, `
 float glyph_%v(float height, vec3 xyz) {
   if (any(lessThan(xyz, vec3(%.2f,%.2f,0.0))) || any(greaterThan(xyz, vec3(%.2f,%.2f,height)))) { return 0.0; }
@@ -192,10 +193,12 @@ func newSeg(segType segmentType, pts []vec2.T) *segment {
 
 func (r *recorder) moveTo(x, y float64) {
 	r.lastX, r.lastY = x, y
+	log.Printf("moveTo(%v,%v)", r.lastX, r.lastY)
 	r.segments = append(r.segments, []*segment{})
 }
 
 func (r *recorder) lineTo(x, y float64) {
+	log.Printf("from(%v,%v) - lineTo(%v,%v)", r.lastX, r.lastY, x, y)
 	s := newSeg(line, []vec2.T{{r.lastX, r.lastY}, {x, y}})
 	if s.minY != s.maxY {
 		segNum := len(r.segments) - 1

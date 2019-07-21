@@ -152,10 +152,13 @@ float interpLine(vec2 A, vec2 B, float y) {
 `)
 
 	for _, g := range fontData.Font.Glyphs {
+		r := utf8toRune(g.Unicode)
+		if g.Unicode == nil || (msg != "" && !strings.ContainsRune(msg, r)) {
+			continue
+		}
 		g.ParsePath()
 		g.GenGerberLP(fontData.Font.FontFace)
-		r := utf8toRune(g.Unicode)
-		if g.Unicode == nil || g.MBB.Area() == 0.0 || (msg != "" && !strings.ContainsRune(msg, r)) {
+		if g.MBB.Area() == 0.0 {
 			continue
 		}
 		log.Printf("Glyph %+q: mbb=%v", *g.Unicode, g.MBB)
