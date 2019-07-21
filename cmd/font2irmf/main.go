@@ -164,7 +164,7 @@ float interpLine(vec2 A, vec2 B, float y) {
 	}
 
 	if msg != "" {
-		emSize := fontData.Font.FontFace.UnitsPerEm
+		emSize := fontData.Font.FontFace.Ascent
 
 		var lines []string
 		for _, r := range msg {
@@ -174,14 +174,14 @@ float interpLine(vec2 A, vec2 B, float y) {
 
 		fmt.Fprintf(f, `
 float textMessage(float emSize, float height, in vec3 xyz) {
-  xyz *= vec3(emSize/%.2f,emSize/%.2f,1.0);
+  xyz *= vec3(%.2f/emSize,%.2f/emSize,1.0);
   float result = 0.0;
   %v
   return result;
 }
 
 void mainModel4(out vec4 materials, in vec3 xyz) {
-  xyz =- vec3(5.0, 5.0, 1.5);
+  xyz += vec3(0.0, 5.0, 1.5);
   materials[0] = textMessage(10.0, 3.0, xyz);
 }
 `, emSize, emSize, strings.Join(lines, "\n"))
