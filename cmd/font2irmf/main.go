@@ -28,6 +28,7 @@ const (
 )
 
 var (
+	message = flag.String("msg", "l", "Message to spell. If empty, whole font is output.")
 	digitRE = regexp.MustCompile(`^\d`)
 )
 
@@ -57,13 +58,13 @@ func main() {
 			log.Fatal(err)
 		}
 
-		writeFont(fontData, fontDir)
+		writeFont(fontData, fontDir, *message)
 	}
 
 	fmt.Println("Done.")
 }
 
-func writeFont(fontData *FontData, fontDir string) {
+func writeFont(fontData *FontData, fontDir, msg string) {
 	glyphLess := func(a, b int) bool {
 		sa, sb := "", ""
 		if fontData.Font.Glyphs[a].Unicode != nil {
@@ -87,6 +88,9 @@ func writeFont(fontData *FontData, fontDir string) {
 		r := utf8toRune(g.Unicode)
 		if r == 0 {
 			log.Fatalf("Unicode %+q is mapping to r=0 !!!", *g.Unicode)
+			continue
+		}
+		if msg != "" && !strings.ContainsRune(msg, r) {
 			continue
 		}
 		if _, ok := dedup[r]; ok {
@@ -140,20 +144,27 @@ float blinnLoop(vec2 A, vec2 B, vec2 C) {
   float w = (1.0 - u - v);
   return w;
 }
+
+float interpLine(vec2 A, vec2 B, float y) {
+	float p = (y - A.y) / (B.y - A.y)
+	return p*(B.x-A.x) + A.x
+}
 `)
 
 	for _, g := range fontData.Font.Glyphs {
 		g.ParsePath()
 		g.GenGerberLP(fontData.Font.FontFace)
-		if g.Unicode == nil || g.MBB.Area() == 0.0 {
-			continue
-		}
-		if *g.Unicode != "e" { // For debugging
+		r := utf8toRune(g.Unicode)
+		if g.Unicode == nil || g.MBB.Area() == 0.0 || (msg != "" && !strings.ContainsRune(msg, r)) {
 			continue
 		}
 		log.Printf("Glyph %+q: mbb=%v", *g.Unicode, g.MBB)
 		g.rec.process(f, g)
 		spew.Dump(g)
+	}
+
+	if msg != "" {
+		// TODO: Write mainModel4 function that uses glyph spacing to write message.
 	}
 
 	if err := f.Close(); err != nil {

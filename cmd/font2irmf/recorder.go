@@ -64,13 +64,36 @@ float glyph_%v_%v(vec3 xyz) {
 
 func (r *recorder) processSlice(f io.Writer, topY, botY float64, segNum int) {
 	segs := r.getRange(topY, botY, segNum)
+	op := "<"
+	if segNum == 0 {
+		op = "<="
+	}
 	switch len(segs) {
 	case 1: // Only 1 segment falls within range?!?
 		log.Fatalf("only 1 segment falls between y=%v and y=%v: %#v", botY, topY, segs[0])
+	case 2:
+		r.processTwoSegs(f, op, topY, botY, segs)
 	default:
-		fmt.Fprintf(f, "  if (xyz.y <= %0.2f && xyz.y >= %0.2f) { return 0.0; } // %v segs\n", topY, botY, len(segs))
+		fmt.Fprintf(f, "  if (xyz.y %v %0.2f && xyz.y >= %0.2f) { return 0.0; } // %v segs\n", op, topY, botY, len(segs))
 		spew.Fdump(f, segs)
 	}
+}
+
+func (r *recorder) processTwoSegs(f io.Writer, op string, topY, botY float64, segs []*segment) {
+	xs := [][]vec2.T{}
+	xs = append(xs, segs[0].xIntercepts(topY, botY))
+	xs = append(xs, segs[1].xIntercepts(topY, botY))
+	left, right := segs[0], segs[1]
+	if xs[0][0][0] <= xs[1][0][0] && xs[0][1][0] <= xs[1][1][0] {
+		// left is left of right.
+	} else if xs[0][0][0] >= xs[1][0][0] && xs[0][1][0] >= xs[1][1][0] {
+		left, right = right, left // swap
+	} else {
+		log.Fatalf("two segments cross mid-y-slice: %v", spew.Sdump(segs))
+	}
+
+	fmt.Fprintf(f, "  if (xyz.y %v %0.2f && xyz.y >= %0.2f && (xyz.x < %v || xyz.x > %v)) { return 0.0; }\n",
+		op, topY, botY, left.interpFunc(topY, botY), right.interpFunc(topY, botY))
 }
 
 func (r *recorder) getRange(topY, botY float64, segNum int) []*segment {
@@ -108,6 +131,37 @@ type segment struct {
 	pts        []vec2.T
 	minX, maxX float64
 	minY, maxY float64
+}
+
+func (s *segment) xIntercepts(topY, botY float64) []vec2.T {
+	var result []vec2.T
+	switch s.segType {
+	case line:
+		result = append(result, vec2.T{interpLine(s.pts[0][0], s.pts[1][0], topY, s.pts[0][1], s.pts[1][1]), topY})
+		result = append(result, vec2.T{interpLine(s.pts[0][0], s.pts[1][0], botY, s.pts[0][1], s.pts[1][1]), botY})
+	// case cubic:
+	// case quadratic:
+	default:
+		log.Fatalf("Unknown segment type %v", s.segType)
+	}
+	return result
+}
+
+func (s *segment) interpFunc(topY, botY float64) string {
+	switch s.segType {
+	case line:
+		return fmt.Sprintf("interpLine(vec2(%.2f,%.2f),vec2(%.2f,%.2f),xyz.y)", s.pts[0][0], s.pts[0][1], s.pts[1][0], s.pts[1][1])
+	// case cubic:
+	// case quadratic:
+	default:
+		log.Fatalf("Unknown segment type %v", s.segType)
+	}
+	return ""
+}
+
+func interpLine(to1, to2, val, from1, from2 float64) float64 {
+	p := (val - from1) / (from2 - from1)
+	return p*(to2-to1) + to1
 }
 
 func newSeg(segType segmentType, pts []vec2.T) *segment {
