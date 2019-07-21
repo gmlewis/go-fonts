@@ -146,8 +146,8 @@ float blinnLoop(vec2 A, vec2 B, vec2 C) {
 }
 
 float interpLine(vec2 A, vec2 B, float y) {
-  float p = (y - A.y) / (B.y - A.y)
-  return p*(B.x-A.x) + A.x
+  float p = (y - A.y) / (B.y - A.y);
+  return p*(B.x-A.x) + A.x;
 }
 `)
 
@@ -164,7 +164,27 @@ float interpLine(vec2 A, vec2 B, float y) {
 	}
 
 	if msg != "" {
-		// TODO: Write mainModel4 function that uses glyph spacing to write message.
+		emSize := fontData.Font.FontFace.UnitsPerEm
+
+		var lines []string
+		for _, r := range msg {
+			g := dedup[r]
+			lines = append(lines, fmt.Sprintf("result += glyph_%v(height, xyz);", *g.Unicode))
+		}
+
+		fmt.Fprintf(f, `
+float textMessage(float emSize, float height, in vec3 xyz) {
+  xyz *= vec3(emSize/%.2f,emSize/%.2f,1.0);
+  float result = 0.0;
+  %v
+  return result;
+}
+
+void mainModel4(out vec4 materials, in vec3 xyz) {
+  xyz =- vec3(5.0, 5.0, 1.5);
+  materials[0] = textMessage(10.0, 3.0, xyz);
+}
+`, emSize, emSize, strings.Join(lines, "\n"))
 	}
 
 	if err := f.Close(); err != nil {
