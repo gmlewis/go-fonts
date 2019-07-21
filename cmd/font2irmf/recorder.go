@@ -20,12 +20,13 @@ func (r *recorder) process(f io.Writer, g *Glyph) {
 	for i := range r.segments {
 		r.processGerberLP(f, *g.Unicode, *g.GerberLP, i)
 	}
-	spew.Fdump(f, g)
+	// spew.Fdump(f, g)
 	fmt.Fprintf(f, `
 float glyph_%v(float height, vec3 xyz) {
   if (any(lessThan(xyz, vec3(%.2f,%.2f,0.0))) || any(greaterThan(xyz, vec3(%.2f,%.2f,height)))) { return 0.0; }
+  xyz -= vec3(%.2f,%.2f,0.0);
   float result = glyph_%v_1(xyz);
-`, *g.Unicode, g.MBB.Min[0], g.MBB.Min[1], g.MBB.Max[0], g.MBB.Max[1], *g.Unicode)
+`, *g.Unicode, g.MBB.Min[0], g.MBB.Min[1], g.MBB.Max[0], g.MBB.Max[1], g.MBB.Min[0], g.MBB.Min[1], *g.Unicode)
 	for i := range r.segments[1:] {
 		op := "+"
 		if (*g.GerberLP)[i+1:i+2] == "c" {
