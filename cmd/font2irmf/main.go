@@ -19,6 +19,8 @@ import (
 	"sort"
 	"strings"
 	"unicode/utf8"
+
+	"github.com/davecgh/go-spew/spew"
 )
 
 const (
@@ -120,10 +122,21 @@ func writeFont(fontData *FontData, fontDir string) {
 
 	for _, g := range fontData.Font.Glyphs {
 		g.ParsePath()
-		if g.Unicode == nil {
+		g.GenGerberLP(fontData.Font.FontFace)
+		if g.Unicode == nil || g.MBB.Area() == 0.0 {
+			continue
+		}
+		if *g.Unicode != "e" { // For debugging
 			continue
 		}
 		log.Printf("Glyph %+q: mbb=%v", *g.Unicode, g.MBB)
+
+		fmt.Fprintf(f, `float glyph_%v(float height, vec3 xyz) {
+  if (any(lessThan(xyz, vec3(%.2f,%.2f,0.0))) || any(greaterThan(xyz, vec3(%.2f,%.2f,height)))) { return 0.0; }
+`, *g.Unicode, g.MBB.Min[0], g.MBB.Min[1], g.MBB.Max[0], g.MBB.Max[1])
+
+		fmt.Fprintln(f, "}")
+		spew.Dump(g)
 	}
 
 	if err := f.Close(); err != nil {
@@ -162,57 +175,9 @@ func utf8toRune(s *string) rune {
 	return 0
 }
 
-func utf8Escape(s *string) string {
-	r := utf8toRune(s)
-	if r == 0 {
-		log.Fatalf("%+q is mapping to r=0!!!", *s)
-		return `''`
-	}
-
-	switch r {
-	case '\n':
-		return `'\n'`
-	case '\\':
-		return `'\\'`
-	case '\'':
-		return `'\''`
-	}
-
-	v := fmt.Sprintf("'%v'", *s)
-	if v == "''" {
-		log.Fatalf("%+q is mapping to '' !!!", *s)
-	}
-
-	return v
-}
-
-func viewFilter(s *string) string {
-	if s == nil || !utf8.ValidString(*s) {
-		return ""
-	}
-
-	r := utf8toRune(s)
-	if r == 0xfeff {
-		return "" // BOM disallowed in Go source.
-	}
-
-	switch *s {
-	case "\n", "\r", "\t":
-		return ""
-	default:
-		return *s
-	}
-}
-
-func orEmpty(s *string) string {
-	if s == nil || *s == "" {
-		return `""`
-	}
-	return fmt.Sprintf("%q", *s)
-}
-
-func floats(f []float64) string {
-	return fmt.Sprintf("%#v", f)
+func safeName(s string) string {
+	// TODO: Make sure all glyph name are safe for GLSL ES 3.00 function names.
+	return s
 }
 
 // This specialCase map converts non-unicode strings (e.g. "ffi" - which
