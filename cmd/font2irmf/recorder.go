@@ -6,6 +6,7 @@ import (
 	"log"
 	"sort"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/gmlewis/go3d/float64/vec2"
 )
 
@@ -68,6 +69,7 @@ func (r *recorder) processSlice(f io.Writer, topY, botY float64, segNum int) {
 		log.Fatalf("only 1 segment falls between y=%v and y=%v: %#v", botY, topY, segs[0])
 	default:
 		fmt.Fprintf(f, "  if (xyz.y <= %0.2f && xyz.y >= %0.2f) { return 0.0; } // %v segs\n", topY, botY, len(segs))
+		spew.Fdump(f, segs)
 	}
 }
 
