@@ -52,6 +52,10 @@ type Glyph struct {
 
 	// MBB is the minimum bounding box of the glyph in native units.
 	MBB MBB
+
+	// rec keeps a list of line segments, cubic, and quadratic curves
+	// that make up the shape.
+	rec *recorder
 }
 
 // PathStep represents a single path step.

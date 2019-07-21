@@ -131,11 +131,13 @@ func writeFont(fontData *FontData, fontDir string) {
 		}
 		log.Printf("Glyph %+q: mbb=%v", *g.Unicode, g.MBB)
 
-		fmt.Fprintf(f, `float glyph_%v(float height, vec3 xyz) {
+		fmt.Fprintf(f, `
+float glyph_%v(float height, vec3 xyz) {
   if (any(lessThan(xyz, vec3(%.2f,%.2f,0.0))) || any(greaterThan(xyz, vec3(%.2f,%.2f,height)))) { return 0.0; }
 `, *g.Unicode, g.MBB.Min[0], g.MBB.Min[1], g.MBB.Max[0], g.MBB.Max[1])
-
-		fmt.Fprintln(f, "}")
+		g.rec.process(f, *g.GerberLP)
+		fmt.Fprintln(f, `  return 1.0;
+}`)
 		spew.Dump(g)
 	}
 
