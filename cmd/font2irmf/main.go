@@ -28,7 +28,7 @@ const (
 )
 
 var (
-	message = flag.String("msg", "l", "Message to spell. If empty, whole font is output.")
+	message = flag.String("msg", "il", "Message to spell. If empty, whole font is output.")
 	digitRE = regexp.MustCompile(`^\d`)
 )
 
@@ -125,7 +125,21 @@ func writeFont(fontData *FontData, fontDir, msg string) {
 	}
 
 	// Write helper functions.
-	fmt.Fprintf(f, `
+	fmt.Fprintf(f, `/*{
+  "author": "",
+  "copyright": "",
+  "date": "",
+  "irmf": "1.0",
+  "materials": ["PLA"],
+  "max": [5,5,5],
+  "min": [-5,-5,-5],
+  "notes": "",
+  "options": {},
+  "title": "",
+  "units": "mm",
+  "version": ""
+}*/
+
 float blinnLoop(vec2 A, vec2 B, vec2 C) {
   vec2 v0 = C - A;
   vec2 v1 = B - A;
@@ -148,6 +162,34 @@ float blinnLoop(vec2 A, vec2 B, vec2 C) {
 float interpLine(vec2 A, vec2 B, float y) {
   float p = (y - A.y) / (B.y - A.y);
   return p*(B.x-A.x) + A.x;
+}
+
+float interpQuadraticLeft(vec2 p0, vec2 p1, vec2 p2, float y) {
+  float a = p0.y + p2.y - 2.0*p1.y;
+  float b = 2.0 * (p1.y - p2.y);
+  float c = p2.y - y;
+  if (b*b < 4.0*a*c) {  // bad (imaginary) quadratic
+    return 0.0;
+  }
+  float det = sqrt(b*b - 4.0*a*c);
+  float x1 = (-b + det) / (2.0 * a);
+  float x2 = (-b - det) / (2.0 * a);
+  if (x2 < x1) { return x2; }
+  return x1;
+}
+
+float interpQuadraticRight(vec2 p0, vec2 p1, vec2 p2, float y) {
+  float a = p0.y + p2.y - 2.0*p1.y;
+  float b = 2.0 * (p1.y - p2.y);
+  float c = p2.y - y;
+  if (b*b < 4.0*a*c) {  // bad (imaginary) quadratic
+    return 0.0;
+  }
+  float det = sqrt(b*b - 4.0*a*c);
+  float x1 = (-b + det) / (2.0 * a);
+  float x2 = (-b - det) / (2.0 * a);
+  if (x2 > x1) { return x2; }
+  return x1;
 }
 `)
 

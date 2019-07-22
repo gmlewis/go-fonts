@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"sort"
 
 	"github.com/davecgh/go-spew/spew"
@@ -83,6 +84,7 @@ func (r *recorder) processSlice(f io.Writer, topY, botY float64, segNum int) {
 
 func (r *recorder) processTwoSegs(f io.Writer, op string, topY, botY float64, segs []*segment) {
 	xs := [][]vec2.T{}
+	// spew.Fdump(f, segs)
 	xs = append(xs, segs[0].xIntercepts(topY, botY))
 	xs = append(xs, segs[1].xIntercepts(topY, botY))
 	left, right := segs[0], segs[1]
@@ -95,7 +97,7 @@ func (r *recorder) processTwoSegs(f io.Writer, op string, topY, botY float64, se
 	}
 
 	fmt.Fprintf(f, "  if (xyz.y %v %0.2f && xyz.y >= %0.2f && (xyz.x < %v || xyz.x > %v)) { return 0.0; }\n",
-		op, topY, botY, left.interpFunc(topY, botY), right.interpFunc(topY, botY))
+		op, topY, botY, left.interpFunc(true), right.interpFunc(false))
 }
 
 func (r *recorder) getRange(topY, botY float64, segNum int) []*segment {
@@ -142,14 +144,16 @@ func (s *segment) xIntercepts(topY, botY float64) []vec2.T {
 		result = append(result, vec2.T{interpLine(s.pts[0][0], s.pts[1][0], topY, s.pts[0][1], s.pts[1][1]), topY})
 		result = append(result, vec2.T{interpLine(s.pts[0][0], s.pts[1][0], botY, s.pts[0][1], s.pts[1][1]), botY})
 	// case cubic:
-	// case quadratic:
+	case quadratic:
+		result = append(result, vec2.T{interpQuadratic(s.pts, topY), topY})
+		result = append(result, vec2.T{interpQuadratic(s.pts, botY), botY})
 	default:
 		log.Fatalf("Unknown segment type %v", s.segType)
 	}
 	return result
 }
 
-func (s *segment) interpFunc(topY, botY float64) string {
+func (s *segment) interpFunc(leftSide bool) string {
 	switch s.segType {
 	case line:
 		top, bot := s.pts[0], s.pts[1]
@@ -158,7 +162,15 @@ func (s *segment) interpFunc(topY, botY float64) string {
 		}
 		return fmt.Sprintf("interpLine(vec2(%.2f,%.2f),vec2(%.2f,%.2f),xyz.y)", bot[0], bot[1], top[0], top[1])
 	// case cubic:
-	// case quadratic:
+	case quadratic:
+		p0, p1, p2 := s.pts[0], s.pts[1], s.pts[2]
+		if p2[1] < p0[1] {
+			p0, p2 = p2, p0
+		}
+		if leftSide {
+			return fmt.Sprintf("interpQuadraticLeft(vec2(%.2f,%.2f),vec2(%.2f,%.2f),vec2(%.2f,%.2f),xyz.y)", p0[0], p0[1], p1[0], p1[1], p2[0], p2[1])
+		}
+		return fmt.Sprintf("interpQuadraticRight(vec2(%.2f,%.2f),vec2(%.2f,%.2f),vec2(%.2f,%.2f),xyz.y)", p0[0], p0[1], p1[0], p1[1], p2[0], p2[1])
 	default:
 		log.Fatalf("Unknown segment type %v", s.segType)
 	}
@@ -168,6 +180,21 @@ func (s *segment) interpFunc(topY, botY float64) string {
 func interpLine(to1, to2, val, from1, from2 float64) float64 {
 	p := (val - from1) / (from2 - from1)
 	return p*(to2-to1) + to1
+}
+
+func interpQuadratic(pts []vec2.T, val float64) float64 {
+	a := pts[0][1] + pts[2][1] - 2*pts[1][1]
+	b := 2 * (pts[1][1] - pts[2][1])
+	c := pts[2][1] - val
+	if b*b < 4*a*c {
+		log.Printf("pts[0]=%#v, pts[1]=%#v, pts[2]=%#v", pts[0], pts[1], pts[2])
+		log.Fatalf("bad quadratic equation: b^2=%v, 4ac=%v", b*b, 4*a*c)
+	}
+	det := math.Sqrt(b*b - 4*a*c)
+	x1 := (-b + det) / (2 * a)
+	x2 := (-b - det) / (2 * a)
+	log.Printf("x1=%v, x2=%v", x1, x2)
+	return x1
 }
 
 func newSeg(segType segmentType, pts []vec2.T) *segment {
@@ -218,6 +245,7 @@ func (r *recorder) cubicTo(x1, y1, x2, y2, ex, ey float64) {
 }
 
 func (r *recorder) quadraticTo(x1, y1, x2, y2 float64) {
+	log.Printf("from(%v,%v) - quadraticTo(%v,%v,%v,%v)", r.lastX, r.lastY, x1, y1, x2, y2)
 	s := newSeg(quadratic, []vec2.T{{r.lastX, r.lastY}, {x1, y1}, {x2, y2}})
 	if s.minY != s.maxY {
 		segNum := len(r.segments) - 1
