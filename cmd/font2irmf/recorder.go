@@ -236,6 +236,7 @@ func (r *recorder) lineTo(x, y float64) {
 }
 
 func (r *recorder) cubicTo(x1, y1, x2, y2, ex, ey float64) {
+	log.Printf("from(%v,%v) - cubicTo((%v,%v),(%v,%v),(%v,%v))", r.lastX, r.lastY, x1, y1, x2, y2, ex, ey)
 	s := newSeg(cubic, []vec2.T{{r.lastX, r.lastY}, {x1, y1}, {x2, y2}, {ex, ey}})
 	if s.minY != s.maxY {
 		segNum := len(r.segments) - 1
@@ -245,7 +246,7 @@ func (r *recorder) cubicTo(x1, y1, x2, y2, ex, ey float64) {
 }
 
 func (r *recorder) quadraticTo(x1, y1, x2, y2 float64) {
-	log.Printf("from(%v,%v) - quadraticTo(%v,%v,%v,%v)", r.lastX, r.lastY, x1, y1, x2, y2)
+	log.Printf("from(%v,%v) - quadraticTo((%v,%v),(%v,%v))", r.lastX, r.lastY, x1, y1, x2, y2)
 	s := newSeg(quadratic, []vec2.T{{r.lastX, r.lastY}, {x1, y1}, {x2, y2}})
 	if s.minY != s.maxY {
 		segNum := len(r.segments) - 1

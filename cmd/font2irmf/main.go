@@ -212,9 +212,11 @@ float interpQuadraticRight(vec2 p0, vec2 p1, vec2 p2, float y) {
 		emSize := fontData.Font.FontFace.Ascent
 
 		var lines []string
+		var offset float64
 		for _, r := range msg {
 			g := dedup[r]
-			lines = append(lines, fmt.Sprintf("result += glyph_%v(height, xyz);", *g.Unicode))
+			lines = append(lines, fmt.Sprintf("  result += glyph_%v(height, xyz-vec3(%.2f,0,0));", *g.Unicode, offset))
+			offset += g.HorizAdvX
 		}
 
 		fmt.Fprintf(f, `
