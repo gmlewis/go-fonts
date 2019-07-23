@@ -6,6 +6,7 @@ import (
 	"log"
 	"math"
 	"sort"
+	"strings"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/gmlewis/go3d/float64/vec2"
@@ -93,7 +94,7 @@ func (r *recorder) processSlice(f io.Writer, topY, botY float64, sliceNum, segNu
 	case 4:
 		r.processFourSegs(f, op, topY, botY, segs)
 	default:
-		log.Fatalf("%v segments not yet supported: botY=%v, topY=%v", len(segs), botY, topY)
+		r.processNSegs(f, op, topY, botY, segs)
 	}
 }
 
@@ -117,10 +118,7 @@ func (r *recorder) processTwoSegs(f io.Writer, op string, topY, botY float64, se
 
 func (r *recorder) processFourSegs(f io.Writer, op string, topY, botY float64, segs []*segment) {
 	midY := 0.5 * (topY + botY)
-	sortSegs := []struct {
-		seg  *segment
-		midX float64
-	}{
+	sortSegs := []sortSegT{
 		{seg: segs[0], midX: segs[0].xIntercept(midY)},
 		{seg: segs[1], midX: segs[1].xIntercept(midY)},
 		{seg: segs[2], midX: segs[2].xIntercept(midY)},
@@ -132,6 +130,30 @@ func (r *recorder) processFourSegs(f io.Writer, op string, topY, botY float64, s
 
 	fmt.Fprintf(f, "  if (xyz.y >= %0.2f && xyz.y %v %0.2f && (xyz.x < %v || (xyz.x > %v && xyz.x < %v) || xyz.x > %v)) { return 0.0; }\n",
 		botY, op, topY, sortSegs[0].seg.interpFunc(), sortSegs[1].seg.interpFunc(), sortSegs[2].seg.interpFunc(), sortSegs[3].seg.interpFunc())
+}
+
+type sortSegT struct {
+	seg  *segment
+	midX float64
+}
+
+func (r *recorder) processNSegs(f io.Writer, op string, topY, botY float64, segs []*segment) {
+	// TODO: account for two intersection points in quadratic curves, three in cubic.
+	sortSegs := []sortSegT{}
+	for i := range segs {
+		sortSegs = append(sortSegs, sortSegT{seg: segs[i], midX: segs[i].evalX(0.5)})
+	}
+	sort.Slice(sortSegs, func(a, b int) bool {
+		return sortSegs[a].midX < sortSegs[b].midX
+	})
+
+	// TODO: account for odd number of segments.
+	var expr []string
+	for i := 1; i < len(segs)-1; i += 2 {
+		expr = append(expr, fmt.Sprintf("(xyz.x > %v && xyz.x < %v)", sortSegs[i].seg.interpFunc(), sortSegs[i+1].seg.interpFunc()))
+	}
+	fmt.Fprintf(f, "  if (xyz.y >= %0.2f && xyz.y %v %0.2f && (xyz.x < %v || %v || xyz.x > %v)) { return 0.0; }\n",
+		botY, op, topY, sortSegs[0].seg.interpFunc(), strings.Join(expr, " || "), sortSegs[len(segs)-1].seg.interpFunc())
 }
 
 func (r *recorder) getRange(topY, botY float64, segNum int) []*segment {
@@ -172,6 +194,19 @@ type segment struct {
 	pts        []vec2.T
 	minX, maxX float64
 	minY, maxY float64
+}
+
+func (s *segment) evalX(t float64) float64 {
+	switch s.segType {
+	case line:
+		return t*(s.pts[1][0]-s.pts[0][0]) + s.pts[0][0]
+	// case cubic:
+	case quadratic:
+		return (1.0-t)*(1.0-t)*s.pts[0][0] + 2.0*(1.0-t)*t*s.pts[1][0] + t*t*s.pts[2][0]
+	default:
+		log.Fatalf("Unknown segment type %v", s.segType)
+	}
+	return 0
 }
 
 func (s *segment) xIntercept(y float64) float64 {
@@ -225,7 +260,7 @@ func interpQuadratic(pts []vec2.T, y float64) float64 {
 	b := 2 * (pts[1][1] - pts[0][1])
 	c := pts[0][1] - y
 	if b*b < 4*a*c {
-		log.Printf("pts[0]=%#v, pts[1]=%#v, pts[2]=%#v", pts[0], pts[1], pts[2])
+		log.Printf("a=%v, b=%v, c=%v, pts[0]=%#v, pts[1]=%#v, pts[2]=%#v, y=%v", a, b, c, pts[0], pts[1], pts[2], y)
 		log.Fatalf("bad quadratic equation: b^2=%v, 4ac=%v", b*b, 4*a*c)
 	}
 	det := math.Sqrt(b*b - 4*a*c)
