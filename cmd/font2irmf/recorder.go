@@ -42,7 +42,13 @@ float glyph_%v(float height, vec3 xyz) {
 func (r *recorder) processGerberLP(f io.Writer, glyphName string, gerberLP string, segNum int) {
 	// Sort all Y values, descending.
 	var yvals []float64
-	for _, seg := range r.segments[segNum] {
+	var mbb vec2.Rect
+	for i, seg := range r.segments[segNum] {
+		if i == 0 {
+			mbb = vec2.Rect{vec2.T{seg.minX, seg.minY}, vec2.T{seg.maxX, seg.maxY}}
+		} else {
+			mbb.Join(&vec2.Rect{vec2.T{seg.minX, seg.minY}, vec2.T{seg.maxX, seg.maxY}})
+		}
 		yvals = append(yvals, seg.maxY, seg.minY)
 	}
 	sort.Slice(yvals, func(a, b int) bool {
@@ -51,24 +57,28 @@ func (r *recorder) processGerberLP(f io.Writer, glyphName string, gerberLP strin
 
 	fmt.Fprintf(f, `
 float glyph_%v_%v(vec3 xyz) {
-`, glyphName, segNum+1)
+  if (any(lessThan(xyz.xy, vec2(%.2f,%.2f))) || any(greaterThan(xyz.xy, vec2(%.2f,%.2f)))) { return 0.0; }
+
+`, glyphName, segNum+1, mbb.Min[0], mbb.Min[1], mbb.Max[0], mbb.Max[1])
 
 	r.lastY = yvals[0]
+	var sliceNum int
 	for _, y := range yvals {
 		if y >= r.lastY {
 			continue
 		}
-		r.processSlice(f, r.lastY, y, segNum)
+		r.processSlice(f, r.lastY, y, sliceNum, segNum)
 		r.lastY = y
+		sliceNum++
 	}
 	fmt.Fprintln(f, `  return 1.0;
 }`)
 }
 
-func (r *recorder) processSlice(f io.Writer, topY, botY float64, segNum int) {
+func (r *recorder) processSlice(f io.Writer, topY, botY float64, sliceNum, segNum int) {
 	segs := r.getRange(topY, botY, segNum)
 	op := "<"
-	if segNum == 0 {
+	if sliceNum == 0 {
 		op = "<="
 	}
 	switch len(segs) {
@@ -77,12 +87,13 @@ func (r *recorder) processSlice(f io.Writer, topY, botY float64, segNum int) {
 	case 2:
 		r.processTwoSegs(f, op, topY, botY, segs)
 	default:
-		fmt.Fprintf(f, "  if (xyz.y %v %0.2f && xyz.y >= %0.2f) { return 0.0; } // %v segs\n", op, topY, botY, len(segs))
+		fmt.Fprintf(f, "  if (xyz.y >= %0.2f && xyz.y %v %0.2f) { return 0.0; } // %v segs\n", botY, op, topY, len(segs))
 		spew.Fdump(f, segs)
 	}
 }
 
 func (r *recorder) processTwoSegs(f io.Writer, op string, topY, botY float64, segs []*segment) {
+	log.Printf("processTwoSegs(topY=%v, botY=%v, segs=%v", topY, botY, spew.Sdump(segs))
 	xs := [][]vec2.T{}
 	// spew.Fdump(f, segs)
 	xs = append(xs, segs[0].xIntercepts(topY, botY))
@@ -96,8 +107,8 @@ func (r *recorder) processTwoSegs(f io.Writer, op string, topY, botY float64, se
 		log.Fatalf("two segments cross mid-y-slice: %v", spew.Sdump(segs))
 	}
 
-	fmt.Fprintf(f, "  if (xyz.y %v %0.2f && xyz.y >= %0.2f && (xyz.x < %v || xyz.x > %v)) { return 0.0; }\n",
-		op, topY, botY, left.interpFunc(true), right.interpFunc(false))
+	fmt.Fprintf(f, "  if (xyz.y >= %0.2f && xyz.y %v %0.2f && (xyz.x < %v || xyz.x > %v)) { return 0.0; }\n",
+		botY, op, topY, left.interpFunc(), right.interpFunc())
 }
 
 func (r *recorder) getRange(topY, botY float64, segNum int) []*segment {
@@ -153,7 +164,7 @@ func (s *segment) xIntercepts(topY, botY float64) []vec2.T {
 	return result
 }
 
-func (s *segment) interpFunc(leftSide bool) string {
+func (s *segment) interpFunc() string {
 	switch s.segType {
 	case line:
 		top, bot := s.pts[0], s.pts[1]
@@ -167,10 +178,7 @@ func (s *segment) interpFunc(leftSide bool) string {
 		if p2[1] < p0[1] {
 			p0, p2 = p2, p0
 		}
-		if leftSide {
-			return fmt.Sprintf("interpQuadraticLeft(vec2(%.2f,%.2f),vec2(%.2f,%.2f),vec2(%.2f,%.2f),xyz.y)", p0[0], p0[1], p1[0], p1[1], p2[0], p2[1])
-		}
-		return fmt.Sprintf("interpQuadraticRight(vec2(%.2f,%.2f),vec2(%.2f,%.2f),vec2(%.2f,%.2f),xyz.y)", p0[0], p0[1], p1[0], p1[1], p2[0], p2[1])
+		return fmt.Sprintf("interpQuadratic(vec2(%.2f,%.2f),vec2(%.2f,%.2f),vec2(%.2f,%.2f),xyz.y)", p0[0], p0[1], p1[0], p1[1], p2[0], p2[1])
 	default:
 		log.Fatalf("Unknown segment type %v", s.segType)
 	}
@@ -182,19 +190,21 @@ func interpLine(to1, to2, val, from1, from2 float64) float64 {
 	return p*(to2-to1) + to1
 }
 
-func interpQuadratic(pts []vec2.T, val float64) float64 {
-	a := pts[0][1] + pts[2][1] - 2*pts[1][1]
-	b := 2 * (pts[1][1] - pts[2][1])
-	c := pts[2][1] - val
+func interpQuadratic(pts []vec2.T, y float64) float64 {
+	a := pts[2][1] + pts[0][1] - 2*pts[1][1]
+	b := 2 * (pts[1][1] - pts[0][1])
+	c := pts[0][1] - y
 	if b*b < 4*a*c {
 		log.Printf("pts[0]=%#v, pts[1]=%#v, pts[2]=%#v", pts[0], pts[1], pts[2])
 		log.Fatalf("bad quadratic equation: b^2=%v, 4ac=%v", b*b, 4*a*c)
 	}
 	det := math.Sqrt(b*b - 4*a*c)
-	x1 := (-b + det) / (2 * a)
-	x2 := (-b - det) / (2 * a)
-	log.Printf("x1=%v, x2=%v", x1, x2)
-	return x1
+	t := (-b + det) / (2 * a)
+	if t2 := (-b - det) / (2 * a); t2 >= 0 && t2 <= 1 {
+		t = t2
+	}
+	x := (1-t)*(1-t)*pts[0][0] + 2*(1-t)*t*pts[1][0] + t*t*pts[2][0]
+	return x
 }
 
 func newSeg(segType segmentType, pts []vec2.T) *segment {
