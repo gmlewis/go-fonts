@@ -86,14 +86,14 @@ func (r *recorder) processSlice(f io.Writer, topY, botY float64, sliceNum, segNu
 		log.Fatalf("only 1 segment falls between y=%v and y=%v: %#v", botY, topY, segs[0])
 	case 2:
 		r.processTwoSegs(f, op, topY, botY, segs)
+	case 4:
+		r.processFourSegs(f, op, topY, botY, segs)
 	default:
-		fmt.Fprintf(f, "  if (xyz.y >= %0.2f && xyz.y %v %0.2f) { return 0.0; } // %v segs\n", botY, op, topY, len(segs))
-		spew.Fdump(f, segs)
+		log.Fatalf("%v segments not yet supported: botY=%v, topY=%v", len(segs), botY, topY)
 	}
 }
 
 func (r *recorder) processTwoSegs(f io.Writer, op string, topY, botY float64, segs []*segment) {
-	log.Printf("processTwoSegs(topY=%v, botY=%v, segs=%v", topY, botY, spew.Sdump(segs))
 	xs := [][]vec2.T{}
 	// spew.Fdump(f, segs)
 	xs = append(xs, segs[0].xIntercepts(topY, botY))
@@ -109,6 +109,17 @@ func (r *recorder) processTwoSegs(f io.Writer, op string, topY, botY float64, se
 
 	fmt.Fprintf(f, "  if (xyz.y >= %0.2f && xyz.y %v %0.2f && (xyz.x < %v || xyz.x > %v)) { return 0.0; }\n",
 		botY, op, topY, left.interpFunc(), right.interpFunc())
+}
+
+func (r *recorder) processFourSegs(f io.Writer, op string, topY, botY float64, segs []*segment) {
+	sort.Slice(segs, func(a, b int) bool { // TODO: Precalculate the xIntercepts if slow.
+		ax := segs[a].xIntercept(0.5 * (topY + botY))
+		bx := segs[b].xIntercept(0.5 * (topY + botY))
+		return ax < bx
+	})
+
+	fmt.Fprintf(f, "  if (xyz.y >= %0.2f && xyz.y %v %0.2f && (xyz.x < %v || (xyz.x > %v && xyz.x < %v) || xyz.x > %v)) { return 0.0; }\n",
+		botY, op, topY, segs[0].interpFunc(), segs[1].interpFunc(), segs[2].interpFunc(), segs[3].interpFunc())
 }
 
 func (r *recorder) getRange(topY, botY float64, segNum int) []*segment {
@@ -148,19 +159,23 @@ type segment struct {
 	minY, maxY float64
 }
 
-func (s *segment) xIntercepts(topY, botY float64) []vec2.T {
-	var result []vec2.T
+func (s *segment) xIntercept(y float64) float64 {
 	switch s.segType {
 	case line:
-		result = append(result, vec2.T{interpLine(s.pts[0][0], s.pts[1][0], topY, s.pts[0][1], s.pts[1][1]), topY})
-		result = append(result, vec2.T{interpLine(s.pts[0][0], s.pts[1][0], botY, s.pts[0][1], s.pts[1][1]), botY})
+		return interpLine(s.pts[0][0], s.pts[1][0], y, s.pts[0][1], s.pts[1][1])
 	// case cubic:
 	case quadratic:
-		result = append(result, vec2.T{interpQuadratic(s.pts, topY), topY})
-		result = append(result, vec2.T{interpQuadratic(s.pts, botY), botY})
+		return interpQuadratic(s.pts, y)
 	default:
 		log.Fatalf("Unknown segment type %v", s.segType)
 	}
+	return 0
+}
+
+func (s *segment) xIntercepts(topY, botY float64) []vec2.T {
+	var result []vec2.T
+	result = append(result, vec2.T{s.xIntercept(topY), topY})
+	result = append(result, vec2.T{s.xIntercept(botY), botY})
 	return result
 }
 

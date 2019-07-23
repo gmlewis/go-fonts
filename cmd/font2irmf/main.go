@@ -28,7 +28,7 @@ const (
 )
 
 var (
-	message = flag.String("msg", "i", "Message to spell. If empty, whole font is output.")
+	message = flag.String("msg", "iel", "Message to spell. If empty, whole font is output.")
 	digitRE = regexp.MustCompile(`^\d`)
 )
 
