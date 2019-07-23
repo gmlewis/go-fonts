@@ -28,7 +28,7 @@ const (
 )
 
 var (
-	message = flag.String("msg", "iel", "Message to spell. If empty, whole font is output.")
+	message = flag.String("msg", "$", "Message to spell. If empty, whole font is output.")
 	digitRE = regexp.MustCompile(`^\d`)
 )
 
@@ -202,7 +202,11 @@ float interpQuadratic(vec2 p0, vec2 p1, vec2 p2, float y) {
 		var offset float64
 		for _, r := range msg {
 			g := dedup[r]
-			lines = append(lines, fmt.Sprintf("  result += glyph_%v(height, xyz-vec3(%.2f,0,0));", *g.Unicode, offset))
+			glyphName := *g.Unicode
+			if gn, ok := safeGlyphName[glyphName]; ok {
+				glyphName = gn
+			}
+			lines = append(lines, fmt.Sprintf("  result += glyph_%v(height, xyz-vec3(%.2f,0,0));", glyphName, offset))
 			offset += g.HorizAdvX
 		}
 
@@ -255,11 +259,6 @@ func utf8toRune(s *string) rune {
 		return r
 	}
 	return 0
-}
-
-func safeName(s string) string {
-	// TODO: Make sure all glyph name are safe for GLSL ES 3.00 function names.
-	return s
 }
 
 // This specialCase map converts non-unicode strings (e.g. "ffi" - which

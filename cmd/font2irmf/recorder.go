@@ -18,22 +18,25 @@ type recorder struct {
 }
 
 func (r *recorder) process(f io.Writer, g *Glyph) {
-	for i := range r.segments {
-		r.processGerberLP(f, *g.Unicode, *g.GerberLP, i)
+	glyphName := *g.Unicode
+	if gn, ok := safeGlyphName[glyphName]; ok {
+		glyphName = gn
 	}
-	// spew.Fdump(f, g)
+	for i := range r.segments {
+		r.processGerberLP(f, glyphName, *g.GerberLP, i)
+	}
 	fmt.Fprintf(f, `
 float glyph_%v(float height, vec3 xyz) {
   if (any(lessThan(xyz, vec3(%.2f,%.2f,0.0))) || any(greaterThan(xyz, vec3(%.2f,%.2f,height)))) { return 0.0; }
   xyz -= vec3(%.2f,%.2f,0.0);
   float result = glyph_%v_1(xyz);
-`, *g.Unicode, g.MBB.Min[0], g.MBB.Min[1], g.MBB.Max[0], g.MBB.Max[1], g.MBB.Min[0], g.MBB.Min[1], *g.Unicode)
+`, glyphName, g.MBB.Min[0], g.MBB.Min[1], g.MBB.Max[0], g.MBB.Max[1], g.MBB.Min[0], g.MBB.Min[1], glyphName)
 	for i := range r.segments[1:] {
 		op := "+"
 		if (*g.GerberLP)[i+1:i+2] == "c" {
 			op = "-"
 		}
-		fmt.Fprintf(f, "  result %v= glyph_%v_%v(xyz);\n", op, *g.Unicode, i+2)
+		fmt.Fprintf(f, "  result %v= glyph_%v_%v(xyz);\n", op, glyphName, i+2)
 	}
 	fmt.Fprintln(f, `  return result;
 }`)
@@ -76,6 +79,7 @@ float glyph_%v_%v(vec3 xyz) {
 }
 
 func (r *recorder) processSlice(f io.Writer, topY, botY float64, sliceNum, segNum int) {
+	log.Printf("processSlice(topY=%v, botY=%v, segNum=%v) segments=%v", topY, botY, segNum, spew.Sdump(r.segments[segNum]))
 	segs := r.getRange(topY, botY, segNum)
 	op := "<"
 	if sliceNum == 0 {
@@ -112,21 +116,32 @@ func (r *recorder) processTwoSegs(f io.Writer, op string, topY, botY float64, se
 }
 
 func (r *recorder) processFourSegs(f io.Writer, op string, topY, botY float64, segs []*segment) {
-	sort.Slice(segs, func(a, b int) bool { // TODO: Precalculate the xIntercepts if slow.
-		ax := segs[a].xIntercept(0.5 * (topY + botY))
-		bx := segs[b].xIntercept(0.5 * (topY + botY))
-		return ax < bx
+	midY := 0.5 * (topY + botY)
+	sortSegs := []struct {
+		seg  *segment
+		midX float64
+	}{
+		{seg: segs[0], midX: segs[0].xIntercept(midY)},
+		{seg: segs[1], midX: segs[1].xIntercept(midY)},
+		{seg: segs[2], midX: segs[2].xIntercept(midY)},
+		{seg: segs[3], midX: segs[3].xIntercept(midY)},
+	}
+	sort.Slice(sortSegs, func(a, b int) bool {
+		return sortSegs[a].midX < sortSegs[b].midX
 	})
 
 	fmt.Fprintf(f, "  if (xyz.y >= %0.2f && xyz.y %v %0.2f && (xyz.x < %v || (xyz.x > %v && xyz.x < %v) || xyz.x > %v)) { return 0.0; }\n",
-		botY, op, topY, segs[0].interpFunc(), segs[1].interpFunc(), segs[2].interpFunc(), segs[3].interpFunc())
+		botY, op, topY, sortSegs[0].seg.interpFunc(), sortSegs[1].seg.interpFunc(), sortSegs[2].seg.interpFunc(), sortSegs[3].seg.interpFunc())
 }
 
 func (r *recorder) getRange(topY, botY float64, segNum int) []*segment {
 	var result []*segment
 	for _, seg := range r.segments[segNum] {
 		if seg.minY <= botY && seg.maxY >= topY {
+			log.Printf("getRange(%v,%v): adding seg=%#v", topY, botY, *seg)
 			result = append(result, seg)
+		} else {
+			log.Printf("getRange(%v,%v): SKIPPING seg=%#v", topY, botY, *seg)
 		}
 	}
 	return result
@@ -256,6 +271,8 @@ func (r *recorder) lineTo(x, y float64) {
 	if s.minY != s.maxY {
 		segNum := len(r.segments) - 1
 		r.segments[segNum] = append(r.segments[segNum], s)
+	} else {
+		log.Printf("IGNORING horizontal straight line segment %#v !!!", *s)
 	}
 	r.lastX, r.lastY = x, y
 }
@@ -266,6 +283,8 @@ func (r *recorder) cubicTo(x1, y1, x2, y2, ex, ey float64) {
 	if s.minY != s.maxY {
 		segNum := len(r.segments) - 1
 		r.segments[segNum] = append(r.segments[segNum], s)
+	} else {
+		log.Printf("IGNORING horizontal straight line segment %#v !!!", *s)
 	}
 	r.lastX, r.lastY = ex, ey
 }
@@ -276,6 +295,12 @@ func (r *recorder) quadraticTo(x1, y1, x2, y2 float64) {
 	if s.minY != s.maxY {
 		segNum := len(r.segments) - 1
 		r.segments[segNum] = append(r.segments[segNum], s)
+	} else {
+		log.Printf("IGNORING horizontal straight line segment %#v !!!", *s)
 	}
 	r.lastX, r.lastY = x2, y2
+}
+
+var safeGlyphName = map[string]string{
+	`"`: "DoubleQuote",
 }

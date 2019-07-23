@@ -60,12 +60,15 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 	dc.SetRGB(0, 0, 0)
 	dc.Clear()
 	dc.SetRGB(1, 1, 1)
+	// for IRMF fill:
+	fillToX, fillToY := oX, oY
 	for _, ps := range g.PathSteps {
 		switch ps.C {
 		case "M":
 			x, y = oX+ps.P[0], oY+ps.P[1]
 			dc.MoveTo(x, y)
 			g.rec.moveTo(x, y)
+			fillToX, fillToY = x, y
 			if len(result) == 0 {
 				result = append(result, "d")
 			} else {
@@ -83,6 +86,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 			x, y = x+ps.P[0], y+ps.P[1]
 			dc.MoveTo(x, y)
 			g.rec.moveTo(x, y)
+			fillToX, fillToY = x, y
 			if len(result) == 0 {
 				result = append(result, "d")
 			} else {
@@ -213,6 +217,9 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 			// case "A":
 			// case "a":
 		case "Z", "z":
+			if x != fillToX || y != fillToY {
+				g.rec.lineTo(fillToX, fillToY)
+			}
 			dc.Fill()
 		default:
 			log.Fatalf("Unsupported path command %q in glyph %+q: %v", ps.C, *g.Unicode, *g.D)
