@@ -8,6 +8,7 @@
 package main
 
 import (
+	"bytes"
 	"encoding/xml"
 	"flag"
 	"fmt"
@@ -19,12 +20,18 @@ import (
 	"sort"
 	"strings"
 	"unicode/utf8"
+
+	"github.com/gmlewis/go3d/float64/vec2"
 )
 
 var (
 	message = flag.String("msg", "IRMF fonts", "Message to spell. If empty, whole font is output.")
 
 	digitRE = regexp.MustCompile(`^\d`)
+)
+
+const (
+	mmPerEm = 10
 )
 
 func main() {
@@ -118,15 +125,124 @@ func writeFont(w io.Writer, fontData *FontData, msg string) {
 	// re-sort with deduped glyph code points.
 	sort.Slice(fontData.Font.Glyphs, glyphLess)
 
-	// Write helper functions.
-	fmt.Fprintf(w, `/*{
+	buf := &bytes.Buffer{}
+
+	for _, g := range fontData.Font.Glyphs {
+		r := utf8toRune(g.Unicode)
+		if g.Unicode == nil || (msg != "" && !strings.ContainsRune(msg, r)) {
+			continue
+		}
+		g.ParsePath()
+		g.GenGerberLP(fontData.Font.FontFace)
+		if g.MBB.Area() == 0.0 {
+			continue
+		}
+		log.Printf("\n\nGlyph %+q: mbb=%v", *g.Unicode, g.MBB)
+		g.rec.process(buf, g)
+	}
+
+	emSize := fontData.Font.FontFace.Ascent
+
+	var mbb *MBB
+	if msg != "" {
+		var lines []string
+		var offset float64
+		for _, r := range msg {
+			g := dedup[r]
+			glyphName := *g.Unicode
+			if gn, ok := safeGlyphName[glyphName]; ok {
+				glyphName = gn
+			}
+			log.Printf("glyph %q: mbb=%v", glyphName, g.MBB)
+			if g.MBB.Min[0] < g.MBB.Max[0] {
+				lines = append(lines, fmt.Sprintf("  result += glyph_%v(xyz.xy-vec2(%v,0));", glyphName, offset))
+			}
+
+			if mbb == nil {
+				mbb = &MBB{Min: g.MBB.Min, Max: g.MBB.Max}
+				log.Printf("Initial mbb=%v", mbb)
+			} else {
+				shiftedMBB := &MBB{
+					Min: vec2.T{g.MBB.Min[0] + offset, g.MBB.Min[1]},
+					Max: vec2.T{g.MBB.Max[0] + offset, g.MBB.Max[1]},
+				}
+				log.Printf("shiftedMBB=%v", shiftedMBB)
+				mbb.Join(shiftedMBB)
+				log.Printf("Updated mbb=%v", mbb)
+			}
+
+			offset += g.HorizAdvX
+		}
+
+		fmt.Fprintf(buf, `
+float textMessage(in float mmPerEm, in float height, in vec3 xyz) {
+  xyz *= vec3(%v,%v,1) / vec3(mmPerEm,mmPerEm,height);
+  xyz += vec3(%v,%v,0);
+  if (abs(xyz.z) > 0.5) { return 0.0; }
+  float result = 0.0;
+%v
+  return result;
+}
+
+void mainModel4(out vec4 materials, in vec3 xyz) {
+  materials[0] = textMessage(float(%v),0.1,xyz);
+}
+`, emSize, emSize,
+			0.5*(mbb.Min[0]+mbb.Max[0]), 0.5*(mbb.Min[1]+mbb.Max[1]),
+			strings.Join(lines, "\n"),
+			mmPerEm)
+	}
+
+	log.Printf("\n\nFinal mbb=%v", mbb)
+
+	// Write header with helper functions.
+	width := (mbb.Max[0] - mbb.Min[0]) * mmPerEm / emSize
+	height := (mbb.Max[1] - mbb.Min[1]) * mmPerEm / emSize
+	fmt.Fprintf(w, header, 0.5*width, 0.5*height, -0.5*width, -0.5*height)
+
+	// Write methods.
+	fmt.Fprintf(w, "%s", buf.Bytes())
+}
+
+func utf8toRune(s *string) rune {
+	if s == nil || *s == "" {
+		return 0
+	}
+
+	switch *s {
+	case "\n":
+		return '\n'
+	case `\`:
+		return '\\'
+	case `'`:
+		return '\''
+	}
+
+	if utf8.RuneCountInString(*s) == 1 {
+		r, _ := utf8.DecodeRuneInString(*s)
+		return r
+	}
+	if r, ok := specialCase[*s]; ok {
+		return r
+	}
+
+	if len(*s) > 1 {
+		log.Printf("WARNING: Unhandled unicode seqence: %+q", *s)
+	}
+	for _, r := range *s { // Return the first rune
+		return r
+	}
+	return 0
+}
+
+var header = `/*{
   "author": "",
   "copyright": "",
   "date": "",
   "irmf": "1.0",
   "materials": ["PLA"],
-  "max": [5,5,5],
-  "min": [-5,-5,-5],
+  "max": [%v,%v,0.5],
+  "min": [%v,%v,-0.5],
   "notes": "",
   "options": {},
   "title": "",
@@ -172,81 +288,4 @@ float interpQuadratic(in vec2 p0, in vec2 p1, in vec2 p2, in float y) {
   float x = (1.0-t)*(1.0-t)*p0.x + 2.0*(1.0-t)*t*p1.x + t*t*p2.x;
   return x;
 }
-`)
-
-	for _, g := range fontData.Font.Glyphs {
-		r := utf8toRune(g.Unicode)
-		if g.Unicode == nil || (msg != "" && !strings.ContainsRune(msg, r)) {
-			continue
-		}
-		g.ParsePath()
-		g.GenGerberLP(fontData.Font.FontFace)
-		if g.MBB.Area() == 0.0 {
-			continue
-		}
-		log.Printf("\n\nGlyph %+q: mbb=%v", *g.Unicode, g.MBB)
-		g.rec.process(w, g)
-		// spew.Dump(g)
-	}
-
-	if msg != "" {
-		emSize := fontData.Font.FontFace.Ascent
-
-		var lines []string
-		var offset float64
-		for _, r := range msg {
-			g := dedup[r]
-			glyphName := *g.Unicode
-			if gn, ok := safeGlyphName[glyphName]; ok {
-				glyphName = gn
-			}
-			lines = append(lines, fmt.Sprintf("  result += glyph_%v(height, xyz-vec3(%v,0,0));", glyphName, offset))
-			offset += g.HorizAdvX
-		}
-
-		fmt.Fprintf(w, `
-float textMessage(in float emSize, in float height, in vec3 xyz) {
-  xyz *= vec3(%v,%v,1) / vec3(emSize,emSize,1);
-  float result = 0.0;
-  %v
-  return result;
-}
-
-void mainModel4(out vec4 materials, in vec3 xyz) {
-  xyz += vec3(0, 5, 1.5);
-  materials[0] = textMessage(10.0, 3.0, xyz);
-}
-`, emSize, emSize, strings.Join(lines, "\n"))
-	}
-}
-
-func utf8toRune(s *string) rune {
-	if s == nil || *s == "" {
-		return 0
-	}
-
-	switch *s {
-	case "\n":
-		return '\n'
-	case `\`:
-		return '\\'
-	case `'`:
-		return '\''
-	}
-
-	if utf8.RuneCountInString(*s) == 1 {
-		r, _ := utf8.DecodeRuneInString(*s)
-		return r
-	}
-	if r, ok := specialCase[*s]; ok {
-		return r
-	}
-
-	if len(*s) > 1 {
-		log.Printf("WARNING: Unhandled unicode seqence: %+q", *s)
-	}
-	for _, r := range *s { // Return the first rune
-		return r
-	}
-	return 0
-}
+`

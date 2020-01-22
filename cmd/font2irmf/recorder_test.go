@@ -57,7 +57,7 @@ func TestRecorder_interpFunc(t *testing.T) {
 			pts: []vec2.T{
 				{79.5, 1484}, {103, 1494}, {129, 1494},
 			},
-			want: "interpQuadratic(vec2(79.5,1484),vec2(103,1494),vec2(129,1494),xyz.y)",
+			want: "interpQuadratic(vec2(79.5,1484),vec2(103,1494),vec2(129,1494),xy.y)",
 		},
 	}
 

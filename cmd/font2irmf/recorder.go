@@ -26,17 +26,17 @@ func (r *recorder) process(f io.Writer, g *Glyph) {
 		r.processGerberLP(f, glyphName, *g.GerberLP, i)
 	}
 	fmt.Fprintf(f, `
-float glyph_%v(float height, vec3 xyz) {
-  if (any(lessThan(xyz, vec3(%v,%v,0))) || any(greaterThan(xyz, vec3(%v,%v,height)))) { return 0.0; }
-  xyz -= vec3(%v,%v,0);
-  float result = glyph_%v_1(xyz);
+float glyph_%v(in vec2 xy) {
+  if (any(lessThan(xy, vec2(%v,%v))) || any(greaterThan(xy, vec2(%v,%v)))) { return 0.0; }
+  xy -= vec2(%v,%v);
+  float result = glyph_%v_1(xy);
 `, glyphName, g.MBB.Min[0], g.MBB.Min[1], g.MBB.Max[0], g.MBB.Max[1], g.MBB.Min[0], g.MBB.Min[1], glyphName)
 	for i := range r.segments[1:] {
 		op := "+"
 		if (*g.GerberLP)[i+1:i+2] == "c" {
 			op = "-"
 		}
-		fmt.Fprintf(f, "  result %v= glyph_%v_%v(xyz);\n", op, glyphName, i+2)
+		fmt.Fprintf(f, "  result %v= glyph_%v_%v(xy);\n", op, glyphName, i+2)
 	}
 	fmt.Fprintln(f, `  return result;
 }`)
@@ -59,8 +59,8 @@ func (r *recorder) processGerberLP(f io.Writer, glyphName string, gerberLP strin
 	})
 
 	fmt.Fprintf(f, `
-float glyph_%v_%v(vec3 xyz) {
-  if (any(lessThan(xyz.xy, vec2(%v,%v))) || any(greaterThan(xyz.xy, vec2(%v,%v)))) { return 0.0; }
+float glyph_%v_%v(in vec2 xy) {
+  if (any(lessThan(xy, vec2(%v,%v))) || any(greaterThan(xy, vec2(%v,%v)))) { return 0.0; }
 
 `, glyphName, segNum+1, mbb.Min[0], mbb.Min[1], mbb.Max[0], mbb.Max[1])
 
@@ -112,7 +112,7 @@ func (r *recorder) processTwoSegs(f io.Writer, op string, topY, botY float64, se
 		log.Fatalf("two segments cross mid-y-slice: %#v", segs)
 	}
 
-	fmt.Fprintf(f, "  if (xyz.y >= %0.2f && xyz.y %v %0.2f && (xyz.x < %v || xyz.x > %v)) { return 0.0; }\n",
+	fmt.Fprintf(f, "  if (xy.y >= %0.2f && xy.y %v %0.2f) { return (xy.x < %v || xy.x > %v) ? 0.0 : 1.0; }\n",
 		botY, op, topY, left.interpFunc(), right.interpFunc())
 }
 
@@ -128,7 +128,7 @@ func (r *recorder) processFourSegs(f io.Writer, op string, topY, botY float64, s
 		return sortSegs[a].midX < sortSegs[b].midX
 	})
 
-	fmt.Fprintf(f, "  if (xyz.y >= %0.2f && xyz.y %v %0.2f && (xyz.x < %v || (xyz.x > %v && xyz.x < %v) || xyz.x > %v)) { return 0.0; }\n",
+	fmt.Fprintf(f, "  if (xy.y >= %0.2f && xy.y %v %0.2f) { return (xy.x < %v || (xy.x > %v && xy.x < %v) || xy.x > %v) ? 0.0 : 1.0; }\n",
 		botY, op, topY, sortSegs[0].seg.interpFunc(), sortSegs[1].seg.interpFunc(), sortSegs[2].seg.interpFunc(), sortSegs[3].seg.interpFunc())
 }
 
@@ -150,9 +150,9 @@ func (r *recorder) processNSegs(f io.Writer, op string, topY, botY float64, segs
 	// TODO: account for odd number of segments.
 	var expr []string
 	for i := 1; i < len(segs)-1; i += 2 {
-		expr = append(expr, fmt.Sprintf("(xyz.x > %v && xyz.x < %v)", sortSegs[i].seg.interpFunc(), sortSegs[i+1].seg.interpFunc()))
+		expr = append(expr, fmt.Sprintf("(xy.x > %v && xy.x < %v)", sortSegs[i].seg.interpFunc(), sortSegs[i+1].seg.interpFunc()))
 	}
-	fmt.Fprintf(f, "  if (xyz.y >= %0.2f && xyz.y %v %0.2f && (xyz.x < %v || %v || xyz.x > %v)) { return 0.0; }\n",
+	fmt.Fprintf(f, "  if (xy.y >= %0.2f && xy.y %v %0.2f) { return (xy.x < %v || %v || xy.x > %v) ? 0.0 : 1.0; }\n",
 		botY, op, topY, sortSegs[0].seg.interpFunc(), strings.Join(expr, " || "), sortSegs[len(segs)-1].seg.interpFunc())
 }
 
@@ -236,14 +236,14 @@ func (s *segment) interpFunc() string {
 		if top[1] < bot[1] {
 			top, bot = bot, top
 		}
-		return fmt.Sprintf("interpLine(vec2(%v,%v),vec2(%v,%v),xyz.y)", bot[0], bot[1], top[0], top[1])
+		return fmt.Sprintf("interpLine(vec2(%v,%v),vec2(%v,%v),xy.y)", bot[0], bot[1], top[0], top[1])
 	// case cubic:
 	case quadratic:
 		p0, p1, p2 := s.pts[0], s.pts[1], s.pts[2]
 		if p2[1] < p0[1] {
 			p0, p2 = p2, p0
 		}
-		return fmt.Sprintf("interpQuadratic(vec2(%v,%v),vec2(%v,%v),vec2(%v,%v),xyz.y)", p0[0], p0[1], p1[0], p1[1], p2[0], p2[1])
+		return fmt.Sprintf("interpQuadratic(vec2(%v,%v),vec2(%v,%v),vec2(%v,%v),xy.y)", p0[0], p0[1], p1[0], p1[1], p2[0], p2[1])
 	default:
 		log.Fatalf("Unknown segment type %v", s.segType)
 	}
