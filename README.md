@@ -1,6 +1,6 @@
 # go-fonts: Render open source fonts to polygons in Go
 
-[![GoDoc](https://godoc.org/github.com/gmlewis/go-fonts?status.svg)](https://godoc.org/github.com/gmlewis/go-fonts)
+[![GoDoc](https://godoc.org/github.com/gmlewis/go-fonts/fonts?status.svg)](https://godoc.org/github.com/gmlewis/go-fonts/fonts)
 [![Test Status](https://github.com/gmlewis/go-fonts/workflows/tests/badge.svg)](https://github.com/gmlewis/go-fonts/actions?query=workflow%3Atests)
 
 This is an experimental package used to render open source fonts to
