@@ -11,24 +11,19 @@ import (
 	"encoding/xml"
 	"flag"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 	"os"
-	"path/filepath"
 	"regexp"
 	"sort"
 	"strings"
 	"unicode/utf8"
-
-	"github.com/davecgh/go-spew/spew"
-)
-
-const (
-	prefix = "fonts"
 )
 
 var (
 	message = flag.String("msg", "IRMF fonts", "Message to spell. If empty, whole font is output.")
+
 	digitRE = regexp.MustCompile(`^\d`)
 )
 
@@ -36,7 +31,7 @@ func main() {
 	flag.Parse()
 
 	for _, arg := range flag.Args() {
-		log.Printf("Processing file %q ...", arg)
+		log.Printf("\n\nProcessing file %q ...", arg)
 
 		fontData := &FontData{}
 		if buf, err := ioutil.ReadFile(arg); err != nil {
@@ -53,18 +48,23 @@ func main() {
 			fontData.Font.ID = "f" + fontData.Font.ID
 		}
 
-		fontDir := filepath.Join(prefix, fontData.Font.ID)
-		if err := os.MkdirAll(fontDir, 0755); err != nil {
-			log.Fatal(err)
+		outFilename := fmt.Sprintf("%v.irmf", fontData.Font.ID)
+		w, err := os.Create(outFilename)
+		if err != nil {
+			log.Fatalf("Create: %v", err)
 		}
 
-		writeFont(fontData, fontDir, *message)
+		writeFont(w, fontData, *message)
+
+		if err := w.Close(); err != nil {
+			log.Fatal(err)
+		}
 	}
 
 	fmt.Println("Done.")
 }
 
-func writeFont(fontData *FontData, fontDir, msg string) {
+func writeFont(w io.Writer, fontData *FontData, msg string) {
 	glyphLess := func(a, b int) bool {
 		sa, sb := "", ""
 		if fontData.Font.Glyphs[a].Unicode != nil {
@@ -118,14 +118,8 @@ func writeFont(fontData *FontData, fontDir, msg string) {
 	// re-sort with deduped glyph code points.
 	sort.Slice(fontData.Font.Glyphs, glyphLess)
 
-	filename := filepath.Join(fontDir, "font.irmf")
-	f, err := os.Create(filename)
-	if err != nil {
-		log.Fatalf("Create: %v", err)
-	}
-
 	// Write helper functions.
-	fmt.Fprintf(f, `/*{
+	fmt.Fprintf(w, `/*{
   "author": "",
   "copyright": "",
   "date": "",
@@ -140,7 +134,7 @@ func writeFont(fontData *FontData, fontDir, msg string) {
   "version": ""
 }*/
 
-float blinnLoop(vec2 A, vec2 B, vec2 C) {
+float blinnLoop(in vec2 A, in vec2 B, in vec2 C) {
   vec2 v0 = C - A;
   vec2 v1 = B - A;
   vec2 v2 = vec2(0.75,0.5) - A;
@@ -159,12 +153,12 @@ float blinnLoop(vec2 A, vec2 B, vec2 C) {
   return w;
 }
 
-float interpLine(vec2 A, vec2 B, float y) {
+float interpLine(in vec2 A, in vec2 B, in float y) {
   float p = (y - A.y) / (B.y - A.y);
   return p*(B.x-A.x) + A.x;
 }
 
-float interpQuadratic(vec2 p0, vec2 p1, vec2 p2, float y) {
+float interpQuadratic(in vec2 p0, in vec2 p1, in vec2 p2, in float y) {
   float a = p2.y + p0.y - 2.0*p1.y;
   float b = 2.0 * (p1.y - p0.y);
   float c = p0.y - y;
@@ -190,9 +184,9 @@ float interpQuadratic(vec2 p0, vec2 p1, vec2 p2, float y) {
 		if g.MBB.Area() == 0.0 {
 			continue
 		}
-		log.Printf("Glyph %+q: mbb=%v", *g.Unicode, g.MBB)
-		g.rec.process(f, g)
-		spew.Dump(g)
+		log.Printf("\n\nGlyph %+q: mbb=%v", *g.Unicode, g.MBB)
+		g.rec.process(w, g)
+		// spew.Dump(g)
 	}
 
 	if msg != "" {
@@ -206,27 +200,23 @@ float interpQuadratic(vec2 p0, vec2 p1, vec2 p2, float y) {
 			if gn, ok := safeGlyphName[glyphName]; ok {
 				glyphName = gn
 			}
-			lines = append(lines, fmt.Sprintf("  result += glyph_%v(height, xyz-vec3(%.2f,0,0));", glyphName, offset))
+			lines = append(lines, fmt.Sprintf("  result += glyph_%v(height, xyz-vec3(%v,0,0));", glyphName, offset))
 			offset += g.HorizAdvX
 		}
 
-		fmt.Fprintf(f, `
-float textMessage(float emSize, float height, in vec3 xyz) {
-  xyz *= vec3(%.2f/emSize,%.2f/emSize,1.0);
+		fmt.Fprintf(w, `
+float textMessage(in float emSize, in float height, in vec3 xyz) {
+  xyz *= vec3(%v,%v,1) / vec3(emSize,emSize,1);
   float result = 0.0;
   %v
   return result;
 }
 
 void mainModel4(out vec4 materials, in vec3 xyz) {
-  xyz += vec3(0.0, 5.0, 1.5);
+  xyz += vec3(0, 5, 1.5);
   materials[0] = textMessage(10.0, 3.0, xyz);
 }
 `, emSize, emSize, strings.Join(lines, "\n"))
-	}
-
-	if err := f.Close(); err != nil {
-		log.Fatal(err)
 	}
 }
 

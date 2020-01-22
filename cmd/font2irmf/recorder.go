@@ -8,7 +8,6 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/davecgh/go-spew/spew"
 	"github.com/gmlewis/go3d/float64/vec2"
 )
 
@@ -28,8 +27,8 @@ func (r *recorder) process(f io.Writer, g *Glyph) {
 	}
 	fmt.Fprintf(f, `
 float glyph_%v(float height, vec3 xyz) {
-  if (any(lessThan(xyz, vec3(%.2f,%.2f,0.0))) || any(greaterThan(xyz, vec3(%.2f,%.2f,height)))) { return 0.0; }
-  xyz -= vec3(%.2f,%.2f,0.0);
+  if (any(lessThan(xyz, vec3(%v,%v,0))) || any(greaterThan(xyz, vec3(%v,%v,height)))) { return 0.0; }
+  xyz -= vec3(%v,%v,0);
   float result = glyph_%v_1(xyz);
 `, glyphName, g.MBB.Min[0], g.MBB.Min[1], g.MBB.Max[0], g.MBB.Max[1], g.MBB.Min[0], g.MBB.Min[1], glyphName)
 	for i := range r.segments[1:] {
@@ -61,7 +60,7 @@ func (r *recorder) processGerberLP(f io.Writer, glyphName string, gerberLP strin
 
 	fmt.Fprintf(f, `
 float glyph_%v_%v(vec3 xyz) {
-  if (any(lessThan(xyz.xy, vec2(%.2f,%.2f))) || any(greaterThan(xyz.xy, vec2(%.2f,%.2f)))) { return 0.0; }
+  if (any(lessThan(xyz.xy, vec2(%v,%v))) || any(greaterThan(xyz.xy, vec2(%v,%v)))) { return 0.0; }
 
 `, glyphName, segNum+1, mbb.Min[0], mbb.Min[1], mbb.Max[0], mbb.Max[1])
 
@@ -80,7 +79,8 @@ float glyph_%v_%v(vec3 xyz) {
 }
 
 func (r *recorder) processSlice(f io.Writer, topY, botY float64, sliceNum, segNum int) {
-	log.Printf("processSlice(topY=%v, botY=%v, segNum=%v) segments=%v", topY, botY, segNum, spew.Sdump(r.segments[segNum]))
+	// log.Printf("processSlice(topY=%v, botY=%v, segNum=%v) segments=%v", topY, botY, segNum, spew.Sdump(r.segments[segNum]))
+	log.Printf("\n\nprocessSlice(topY=%v, botY=%v, segNum=%v) len(segments)=%v", topY, botY, segNum, len(r.segments[segNum]))
 	segs := r.getRange(topY, botY, segNum)
 	op := "<"
 	if sliceNum == 0 {
@@ -109,7 +109,7 @@ func (r *recorder) processTwoSegs(f io.Writer, op string, topY, botY float64, se
 	} else if xs[0][0][0] >= xs[1][0][0] && xs[0][1][0] >= xs[1][1][0] {
 		left, right = right, left // swap
 	} else {
-		log.Fatalf("two segments cross mid-y-slice: %v", spew.Sdump(segs))
+		log.Fatalf("two segments cross mid-y-slice: %#v", segs)
 	}
 
 	fmt.Fprintf(f, "  if (xyz.y >= %0.2f && xyz.y %v %0.2f && (xyz.x < %v || xyz.x > %v)) { return 0.0; }\n",
@@ -177,7 +177,7 @@ const (
 	quadratic
 )
 
-func segTypeName(segType segmentType) string {
+func (segType segmentType) String() string {
 	switch segType {
 	case line:
 		return "line"
@@ -236,14 +236,14 @@ func (s *segment) interpFunc() string {
 		if top[1] < bot[1] {
 			top, bot = bot, top
 		}
-		return fmt.Sprintf("interpLine(vec2(%.2f,%.2f),vec2(%.2f,%.2f),xyz.y)", bot[0], bot[1], top[0], top[1])
+		return fmt.Sprintf("interpLine(vec2(%v,%v),vec2(%v,%v),xyz.y)", bot[0], bot[1], top[0], top[1])
 	// case cubic:
 	case quadratic:
 		p0, p1, p2 := s.pts[0], s.pts[1], s.pts[2]
 		if p2[1] < p0[1] {
 			p0, p2 = p2, p0
 		}
-		return fmt.Sprintf("interpQuadratic(vec2(%.2f,%.2f),vec2(%.2f,%.2f),vec2(%.2f,%.2f),xyz.y)", p0[0], p0[1], p1[0], p1[1], p2[0], p2[1])
+		return fmt.Sprintf("interpQuadratic(vec2(%v,%v),vec2(%v,%v),vec2(%v,%v),xyz.y)", p0[0], p0[1], p1[0], p1[1], p2[0], p2[1])
 	default:
 		log.Fatalf("Unknown segment type %v", s.segType)
 	}
