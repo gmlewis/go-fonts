@@ -1,6 +1,7 @@
 module github.com/gmlewis/go-fonts
 
 require (
+	github.com/davecgh/go-spew v1.1.1
 	github.com/fogleman/gg v1.3.0
 	github.com/gmlewis/go3d v0.0.1
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
@@ -13,3 +14,5 @@ require (
 	golang.org/x/text v0.3.2 // indirect
 	golang.org/x/tools v0.0.0-20190525145741-7be61e1b0e51 // indirect
 )
+
+go 1.13
