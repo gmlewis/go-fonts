@@ -48,9 +48,9 @@ func (r *recorder) processGerberLP(f io.Writer, glyphName string, gerberLP strin
 	var mbb vec2.Rect
 	for i, seg := range r.segments[segNum] {
 		if i == 0 {
-			mbb = vec2.Rect{vec2.T{seg.minX, seg.minY}, vec2.T{seg.maxX, seg.maxY}}
+			mbb = vec2.Rect{Min: vec2.T{seg.minX, seg.minY}, Max: vec2.T{seg.maxX, seg.maxY}}
 		} else {
-			mbb.Join(&vec2.Rect{vec2.T{seg.minX, seg.minY}, vec2.T{seg.maxX, seg.maxY}})
+			mbb.Join(&vec2.Rect{Min: vec2.T{seg.minX, seg.minY}, Max: vec2.T{seg.maxX, seg.maxY}})
 		}
 		yvals = append(yvals, seg.maxY, seg.minY)
 	}
