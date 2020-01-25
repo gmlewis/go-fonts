@@ -59,7 +59,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 	dc.SetRGB(0, 0, 0)
 	dc.Clear()
 	dc.SetRGB(1, 1, 1)
-	// for IRMF fill:
+	// for Processor:
 	fillToX, fillToY := oX, oY
 	for _, ps := range g.PathSteps {
 		switch ps.C {

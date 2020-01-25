@@ -8,37 +8,46 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/gmlewis/go-fonts/webfont"
 	"github.com/gmlewis/go3d/float64/vec2"
 )
 
+// recorder implements the webfont.Processor interface.
 type recorder struct {
 	lastX, lastY float64
 
 	segments [][]*segment
+
+	f     io.Writer
+	dedup map[rune]*webfont.Glyph
 }
 
-func (r *recorder) process(f io.Writer, g *Glyph) {
+func (r *recorder) ProcessGlyph(ru rune, g *webfont.Glyph) {
+	log.Printf("\n\nGlyph %+q: mbb=%v", *g.Unicode, g.MBB)
+	r.dedup[ru] = g
+
 	glyphName := *g.Unicode
 	if gn, ok := safeGlyphName[glyphName]; ok {
 		glyphName = gn
 	}
 	for i := range r.segments {
-		r.processGerberLP(f, glyphName, *g.GerberLP, i)
+		r.processGerberLP(r.f, glyphName, *g.GerberLP, i)
 	}
-	fmt.Fprintf(f, `
+	fmt.Fprintf(r.f, `
 float glyph_%v(in vec2 xy) {
   if (any(lessThan(xy, vec2(%v,%v))) || any(greaterThan(xy, vec2(%v,%v)))) { return 0.0; }
   xy -= vec2(%v,%v);
   float result = glyph_%v_1(xy);
 `, glyphName, g.MBB.Min[0], g.MBB.Min[1], g.MBB.Max[0], g.MBB.Max[1], g.MBB.Min[0], g.MBB.Min[1], glyphName)
 	for i := range r.segments[1:] {
+		log.Printf("i=%v, g.GerberLP=%v", i, *g.GerberLP)
 		op := "+"
-		if (*g.GerberLP)[i+1:i+2] == "c" {
+		if len(*g.GerberLP) > i && (*g.GerberLP)[i:i+1] == "c" {
 			op = "-"
 		}
-		fmt.Fprintf(f, "  result %v= glyph_%v_%v(xy);\n", op, glyphName, i+2)
+		fmt.Fprintf(r.f, "  result %v= glyph_%v_%v(xy);\n", op, glyphName, i+2)
 	}
-	fmt.Fprintln(f, `  return result;
+	fmt.Fprintln(r.f, `  return result;
 }`)
 }
 
@@ -294,13 +303,13 @@ func newSeg(segType segmentType, pts []vec2.T) *segment {
 	return s
 }
 
-func (r *recorder) moveTo(x, y float64) {
+func (r *recorder) MoveTo(x, y float64) {
 	r.lastX, r.lastY = x, y
 	log.Printf("moveTo(%v,%v)", r.lastX, r.lastY)
 	r.segments = append(r.segments, []*segment{})
 }
 
-func (r *recorder) lineTo(x, y float64) {
+func (r *recorder) LineTo(x, y float64) {
 	log.Printf("from(%v,%v) - lineTo(%v,%v)", r.lastX, r.lastY, x, y)
 	s := newSeg(line, []vec2.T{{r.lastX, r.lastY}, {x, y}})
 	if s.minY != s.maxY {
@@ -312,7 +321,7 @@ func (r *recorder) lineTo(x, y float64) {
 	r.lastX, r.lastY = x, y
 }
 
-func (r *recorder) cubicTo(x1, y1, x2, y2, ex, ey float64) {
+func (r *recorder) CubicTo(x1, y1, x2, y2, ex, ey float64) {
 	log.Printf("from(%v,%v) - cubicTo((%v,%v),(%v,%v),(%v,%v))", r.lastX, r.lastY, x1, y1, x2, y2, ex, ey)
 	s := newSeg(cubic, []vec2.T{{r.lastX, r.lastY}, {x1, y1}, {x2, y2}, {ex, ey}})
 	if s.minY != s.maxY {
@@ -324,7 +333,7 @@ func (r *recorder) cubicTo(x1, y1, x2, y2, ex, ey float64) {
 	r.lastX, r.lastY = ex, ey
 }
 
-func (r *recorder) quadraticTo(x1, y1, x2, y2 float64) {
+func (r *recorder) QuadraticTo(x1, y1, x2, y2 float64) {
 	log.Printf("from(%v,%v) - quadraticTo((%v,%v),(%v,%v))", r.lastX, r.lastY, x1, y1, x2, y2)
 	s := newSeg(quadratic, []vec2.T{{r.lastX, r.lastY}, {x1, y1}, {x2, y2}})
 	if s.minY != s.maxY {

@@ -17,10 +17,9 @@ import (
 	"log"
 	"os"
 	"regexp"
-	"sort"
 	"strings"
-	"unicode/utf8"
 
+	"github.com/gmlewis/go-fonts/webfont"
 	"github.com/gmlewis/go3d/float64/vec2"
 )
 
@@ -40,7 +39,7 @@ func main() {
 	for _, arg := range flag.Args() {
 		log.Printf("\n\nProcessing file %q ...", arg)
 
-		fontData := &FontData{}
+		fontData := &webfont.FontData{}
 		if buf, err := ioutil.ReadFile(arg); err != nil {
 			log.Fatal(err)
 		} else {
@@ -71,84 +70,26 @@ func main() {
 	fmt.Println("Done.")
 }
 
-func writeFont(w io.Writer, fontData *FontData, msg string) {
-	glyphLess := func(a, b int) bool {
-		sa, sb := "", ""
-		if fontData.Font.Glyphs[a].Unicode != nil {
-			sa = *fontData.Font.Glyphs[a].Unicode
-		}
-		if fontData.Font.Glyphs[b].Unicode != nil {
-			sb = *fontData.Font.Glyphs[b].Unicode
-		}
-		return strings.Compare(sa, sb) < 0
-	}
-
-	sort.Slice(fontData.Font.Glyphs, glyphLess)
-
-	// Fix UTF8 rune errors and de-duplicate identical code points.
-	dedup := map[rune]*Glyph{}
-	var dst rune = 0xfbf0
-	for _, g := range fontData.Font.Glyphs {
-		if g.Unicode == nil {
-			continue
-		}
-		r := utf8toRune(g.Unicode)
-		if r == 0 {
-			log.Fatalf("Unicode %+q is mapping to r=0 !!!", *g.Unicode)
-			continue
-		}
-		if msg != "" && !strings.ContainsRune(msg, r) {
-			continue
-		}
-		if _, ok := dedup[r]; ok {
-			if dst == 0xfeff { // BOM - disallowed in Go source.
-				dst++
-			}
-			for {
-				if _, ok := dedup[dst]; !ok {
-					break
-				}
-				dst++
-			}
-			log.Printf("WARNING: unicode %+q found multiple times in font. Moving code point to %+q", r, dst)
-			rs := fmt.Sprintf("%c", dst)
-			g.Unicode = &rs
-			dedup[dst] = g
-			dst++
-			continue
-		}
-		rs := fmt.Sprintf("%c", r)
-		g.Unicode = &rs
-		dedup[r] = g
-	}
-
-	// re-sort with deduped glyph code points.
-	sort.Slice(fontData.Font.Glyphs, glyphLess)
-
+func writeFont(w io.Writer, fontData *webfont.FontData, msg string) {
 	buf := &bytes.Buffer{}
-
-	for _, g := range fontData.Font.Glyphs {
-		r := utf8toRune(g.Unicode)
-		if g.Unicode == nil || (msg != "" && !strings.ContainsRune(msg, r)) {
-			continue
-		}
-		g.ParsePath()
-		g.GenGerberLP(fontData.Font.FontFace)
-		if g.MBB.Area() == 0.0 {
-			continue
-		}
-		log.Printf("\n\nGlyph %+q: mbb=%v", *g.Unicode, g.MBB)
-		g.rec.process(buf, g)
+	rec := &recorder{f: buf, dedup: map[rune]*webfont.Glyph{}}
+	if err := webfont.ParseNeededGlyphs(fontData, msg, rec); err != nil {
+		log.Fatalf("webfont: %v", err)
 	}
 
 	emSize := fontData.Font.FontFace.Ascent
 
-	var mbb *MBB
+	var mbb *webfont.MBB
 	if msg != "" {
 		var lines []string
 		var offset float64
 		for _, r := range msg {
-			g := dedup[r]
+			g := rec.dedup[r]
+			if g == nil {
+				offset += emSize
+				continue
+			}
+
 			glyphName := *g.Unicode
 			if gn, ok := safeGlyphName[glyphName]; ok {
 				glyphName = gn
@@ -159,10 +100,10 @@ func writeFont(w io.Writer, fontData *FontData, msg string) {
 			}
 
 			if mbb == nil {
-				mbb = &MBB{Min: g.MBB.Min, Max: g.MBB.Max}
+				mbb = &webfont.MBB{Min: g.MBB.Min, Max: g.MBB.Max}
 				log.Printf("Initial mbb=%v", mbb)
 			} else {
-				shiftedMBB := &MBB{
+				shiftedMBB := &webfont.MBB{
 					Min: vec2.T{g.MBB.Min[0] + offset, g.MBB.Min[1]},
 					Max: vec2.T{g.MBB.Max[0] + offset, g.MBB.Max[1]},
 				}
@@ -202,37 +143,6 @@ void mainModel4(out vec4 materials, in vec3 xyz) {
 
 	// Write methods.
 	fmt.Fprintf(w, "%s", buf.Bytes())
-}
-
-func utf8toRune(s *string) rune {
-	if s == nil || *s == "" {
-		return 0
-	}
-
-	switch *s {
-	case "\n":
-		return '\n'
-	case `\`:
-		return '\\'
-	case `'`:
-		return '\''
-	}
-
-	if utf8.RuneCountInString(*s) == 1 {
-		r, _ := utf8.DecodeRuneInString(*s)
-		return r
-	}
-	if r, ok := specialCase[*s]; ok {
-		return r
-	}
-
-	if len(*s) > 1 {
-		log.Printf("WARNING: Unhandled unicode seqence: %+q", *s)
-	}
-	for _, r := range *s { // Return the first rune
-		return r
-	}
-	return 0
 }
 
 var header = `/*{

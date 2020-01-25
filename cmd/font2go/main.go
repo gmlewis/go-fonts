@@ -87,7 +87,7 @@ type processor struct {
 	gs *glyphs.Glyphs
 }
 
-func (p *processor) ProcessGlyph(g *webfont.Glyph) {
+func (p *processor) ProcessGlyph(r rune, g *webfont.Glyph) {
 	var pathSteps []*glyphs.PathStep
 	for _, ps := range g.PathSteps {
 		pathSteps = append(pathSteps, &glyphs.PathStep{C: uint32(ps.C[0]), P: ps.P})

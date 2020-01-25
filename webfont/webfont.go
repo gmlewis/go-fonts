@@ -13,7 +13,7 @@ import (
 // Processor is an interface used to process glyphs.
 type Processor interface {
 	// ProcessGlyph is called when the glyph has been fully parsed.
-	ProcessGlyph(g *Glyph)
+	ProcessGlyph(r rune, g *Glyph)
 	// The following operations can be used to record SVG font paths with lossless detail.
 	MoveTo(x, y float64)
 	LineTo(x, y float64)
@@ -86,6 +86,8 @@ func ParseNeededGlyphs(fontData *FontData, message string, processor Processor) 
 		if g.Unicode == nil || (message != "" && !strings.ContainsRune(message, r)) {
 			continue
 		}
+		g.Processor = processor
+		log.Printf("r=%c, message=%v, ContainsRune=%v", r, message, strings.ContainsRune(message, r))
 		g.ParsePath()
 		g.GenGerberLP(fontData.Font.FontFace)
 		if g.MBB.Area() == 0.0 {
@@ -93,7 +95,7 @@ func ParseNeededGlyphs(fontData *FontData, message string, processor Processor) 
 		}
 
 		if processor != nil {
-			processor.ProcessGlyph(g)
+			processor.ProcessGlyph(r, g)
 		}
 	}
 
