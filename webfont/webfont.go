@@ -49,7 +49,7 @@ func ParseNeededGlyphs(fontData *FontData, message string, processor Processor) 
 		if g.Unicode == nil {
 			continue
 		}
-		r := utf8toRune(g.Unicode)
+		r := UTF8toRune(g.Unicode)
 		if r == 0 {
 			return fmt.Errorf("unicode %+q maps to r=0", *g.Unicode)
 		}
@@ -82,7 +82,7 @@ func ParseNeededGlyphs(fontData *FontData, message string, processor Processor) 
 	sort.Slice(fontData.Font.Glyphs, glyphLess)
 
 	for _, g := range fontData.Font.Glyphs {
-		r := utf8toRune(g.Unicode)
+		r := UTF8toRune(g.Unicode)
 		if g.Unicode == nil || (message != "" && !strings.ContainsRune(message, r)) {
 			continue
 		}
@@ -100,7 +100,8 @@ func ParseNeededGlyphs(fontData *FontData, message string, processor Processor) 
 	return nil
 }
 
-func utf8toRune(s *string) rune {
+// UTF8toRune converts the utf8 codepoint to a rune.
+func UTF8toRune(s *string) rune {
 	if s == nil || *s == "" {
 		return 0
 	}
