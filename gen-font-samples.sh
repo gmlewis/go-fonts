@@ -1,4 +1,5 @@
 #!/bin/bash -ex
+# -*- compile-command: "./gen-font-samples.sh"; -*-
 echo "## Font samples" >> README.md
 for i in $(ls fonts | grep -v .go) ; do
     echo $i
