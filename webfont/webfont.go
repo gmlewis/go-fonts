@@ -87,7 +87,7 @@ func ParseNeededGlyphs(fontData *FontData, message string, processor Processor) 
 			continue
 		}
 		g.Processor = processor
-		log.Printf("r=%c, message=%v, ContainsRune=%v", r, message, strings.ContainsRune(message, r))
+		// log.Printf("r=%c, message=%v, ContainsRune=%v", r, message, strings.ContainsRune(message, r))
 		g.ParsePath()
 		g.GenGerberLP(fontData.Font.FontFace)
 		if g.MBB.Area() == 0.0 {

@@ -23,7 +23,7 @@ type recorder struct {
 }
 
 func (r *recorder) ProcessGlyph(ru rune, g *webfont.Glyph) {
-	log.Printf("\n\nGlyph %+q: mbb=%v", *g.Unicode, g.MBB)
+	logf("\n\nGlyph %+q: mbb=%v", *g.Unicode, g.MBB)
 	r.dedup[ru] = g
 
 	glyphName := *g.Unicode
@@ -40,7 +40,7 @@ float glyph_%v(in vec2 xy) {
   float result = glyph_%v_1(xy);
 `, glyphName, g.MBB.Min[0], g.MBB.Min[1], g.MBB.Max[0], g.MBB.Max[1], g.MBB.Min[0], g.MBB.Min[1], glyphName)
 	for i := range r.segments[1:] {
-		log.Printf("i=%v, g.GerberLP=%v", i, *g.GerberLP)
+		logf("i=%v, g.GerberLP=%v", i, *g.GerberLP)
 		op := "+"
 		if len(*g.GerberLP) > i && (*g.GerberLP)[i:i+1] == "c" {
 			op = "-"
@@ -88,8 +88,8 @@ float glyph_%v_%v(in vec2 xy) {
 }
 
 func (r *recorder) processSlice(f io.Writer, topY, botY float64, sliceNum, segNum int) {
-	// log.Printf("processSlice(topY=%v, botY=%v, segNum=%v) segments=%v", topY, botY, segNum, spew.Sdump(r.segments[segNum]))
-	log.Printf("\n\nprocessSlice(topY=%v, botY=%v, segNum=%v) len(segments)=%v", topY, botY, segNum, len(r.segments[segNum]))
+	// logf("processSlice(topY=%v, botY=%v, segNum=%v) segments=%v", topY, botY, segNum, spew.Sdump(r.segments[segNum]))
+	logf("\n\nprocessSlice(topY=%v, botY=%v, segNum=%v) len(segments)=%v", topY, botY, segNum, len(r.segments[segNum]))
 	segs := r.getRange(topY, botY, segNum)
 	op := "<"
 	if sliceNum == 0 {
@@ -169,10 +169,10 @@ func (r *recorder) getRange(topY, botY float64, segNum int) []*segment {
 	var result []*segment
 	for _, seg := range r.segments[segNum] {
 		if seg.minY <= botY && seg.maxY >= topY {
-			log.Printf("getRange(%v,%v): adding seg=%#v", topY, botY, *seg)
+			logf("getRange(%v,%v): adding seg=%#v", topY, botY, *seg)
 			result = append(result, seg)
 		} else {
-			log.Printf("getRange(%v,%v): SKIPPING seg=%#v", topY, botY, *seg)
+			logf("getRange(%v,%v): SKIPPING seg=%#v", topY, botY, *seg)
 		}
 	}
 	return result
@@ -269,7 +269,7 @@ func interpQuadratic(pts []vec2.T, y float64) float64 {
 	b := 2 * (pts[1][1] - pts[0][1])
 	c := pts[0][1] - y
 	if b*b < 4*a*c {
-		log.Printf("a=%v, b=%v, c=%v, pts[0]=%#v, pts[1]=%#v, pts[2]=%#v, y=%v", a, b, c, pts[0], pts[1], pts[2], y)
+		logf("a=%v, b=%v, c=%v, pts[0]=%#v, pts[1]=%#v, pts[2]=%#v, y=%v", a, b, c, pts[0], pts[1], pts[2], y)
 		log.Fatalf("bad quadratic equation: b^2=%v, 4ac=%v", b*b, 4*a*c)
 	}
 	det := math.Sqrt(b*b - 4*a*c)
@@ -305,42 +305,42 @@ func newSeg(segType segmentType, pts []vec2.T) *segment {
 
 func (r *recorder) MoveTo(x, y float64) {
 	r.lastX, r.lastY = x, y
-	log.Printf("moveTo(%v,%v)", r.lastX, r.lastY)
+	logf("moveTo(%v,%v)", r.lastX, r.lastY)
 	r.segments = append(r.segments, []*segment{})
 }
 
 func (r *recorder) LineTo(x, y float64) {
-	log.Printf("from(%v,%v) - lineTo(%v,%v)", r.lastX, r.lastY, x, y)
+	logf("from(%v,%v) - lineTo(%v,%v)", r.lastX, r.lastY, x, y)
 	s := newSeg(line, []vec2.T{{r.lastX, r.lastY}, {x, y}})
 	if s.minY != s.maxY {
 		segNum := len(r.segments) - 1
 		r.segments[segNum] = append(r.segments[segNum], s)
 	} else {
-		log.Printf("IGNORING horizontal straight line segment %#v !!!", *s)
+		logf("IGNORING horizontal straight line segment %#v !!!", *s)
 	}
 	r.lastX, r.lastY = x, y
 }
 
 func (r *recorder) CubicTo(x1, y1, x2, y2, ex, ey float64) {
-	log.Printf("from(%v,%v) - cubicTo((%v,%v),(%v,%v),(%v,%v))", r.lastX, r.lastY, x1, y1, x2, y2, ex, ey)
+	logf("from(%v,%v) - cubicTo((%v,%v),(%v,%v),(%v,%v))", r.lastX, r.lastY, x1, y1, x2, y2, ex, ey)
 	s := newSeg(cubic, []vec2.T{{r.lastX, r.lastY}, {x1, y1}, {x2, y2}, {ex, ey}})
 	if s.minY != s.maxY {
 		segNum := len(r.segments) - 1
 		r.segments[segNum] = append(r.segments[segNum], s)
 	} else {
-		log.Printf("IGNORING horizontal straight line segment %#v !!!", *s)
+		logf("IGNORING horizontal straight line segment %#v !!!", *s)
 	}
 	r.lastX, r.lastY = ex, ey
 }
 
 func (r *recorder) QuadraticTo(x1, y1, x2, y2 float64) {
-	log.Printf("from(%v,%v) - quadraticTo((%v,%v),(%v,%v))", r.lastX, r.lastY, x1, y1, x2, y2)
+	logf("from(%v,%v) - quadraticTo((%v,%v),(%v,%v))", r.lastX, r.lastY, x1, y1, x2, y2)
 	s := newSeg(quadratic, []vec2.T{{r.lastX, r.lastY}, {x1, y1}, {x2, y2}})
 	if s.minY != s.maxY {
 		segNum := len(r.segments) - 1
 		r.segments[segNum] = append(r.segments[segNum], s)
 	} else {
-		log.Printf("IGNORING horizontal straight line segment %#v !!!", *s)
+		logf("IGNORING horizontal straight line segment %#v !!!", *s)
 	}
 	r.lastX, r.lastY = x2, y2
 }

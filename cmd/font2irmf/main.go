@@ -25,6 +25,7 @@ import (
 
 var (
 	message = flag.String("msg", "IRMF fonts", "Message to spell. If empty, whole font is output.")
+	verbose = flag.Bool("v", false, "Verbose debugging output")
 
 	digitRE = regexp.MustCompile(`^\d`)
 )
@@ -94,22 +95,22 @@ func writeFont(w io.Writer, fontData *webfont.FontData, msg string) {
 			if gn, ok := safeGlyphName[glyphName]; ok {
 				glyphName = gn
 			}
-			log.Printf("glyph %q: mbb=%v", glyphName, g.MBB)
+			logf("glyph %q: mbb=%v", glyphName, g.MBB)
 			if g.MBB.Min[0] < g.MBB.Max[0] {
 				lines = append(lines, fmt.Sprintf("  result += glyph_%v(xyz.xy-vec2(%v,0));", glyphName, offset))
 			}
 
 			if mbb == nil {
 				mbb = &webfont.MBB{Min: g.MBB.Min, Max: g.MBB.Max}
-				log.Printf("Initial mbb=%v", mbb)
+				logf("Initial mbb=%v", mbb)
 			} else {
 				shiftedMBB := &webfont.MBB{
 					Min: vec2.T{g.MBB.Min[0] + offset, g.MBB.Min[1]},
 					Max: vec2.T{g.MBB.Max[0] + offset, g.MBB.Max[1]},
 				}
-				log.Printf("shiftedMBB=%v", shiftedMBB)
+				logf("shiftedMBB=%v", shiftedMBB)
 				mbb.Join(shiftedMBB)
-				log.Printf("Updated mbb=%v", mbb)
+				logf("Updated mbb=%v", mbb)
 			}
 
 			offset += g.HorizAdvX
@@ -134,7 +135,7 @@ void mainModel4(out vec4 materials, in vec3 xyz) {
 			mmPerEm)
 	}
 
-	log.Printf("\n\nFinal mbb=%v", mbb)
+	logf("\n\nFinal mbb=%v", mbb)
 
 	// Write header with helper functions.
 	width := (mbb.Max[0] - mbb.Min[0]) * mmPerEm / emSize
@@ -143,6 +144,12 @@ void mainModel4(out vec4 materials, in vec3 xyz) {
 
 	// Write methods.
 	fmt.Fprintf(w, "%s", buf.Bytes())
+}
+
+func logf(fmtStr string, args ...interface{}) {
+	if *verbose {
+		log.Printf(fmtStr, args...)
+	}
 }
 
 var header = `/*{
