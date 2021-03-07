@@ -42,7 +42,7 @@ Enjoy!
 
 # License
 
-Copyright 2019 Glenn M. Lewis. All Rights Reserved.
+Copyright 2019-2021 Glenn M. Lewis. All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -109,6 +109,10 @@ limitations under the License.
 [![deliusswashcaps_regular](images/sample_deliusswashcaps_regular.png)](fonts/deliusswashcaps_regular)
 [![diplomata_regular](images/sample_diplomata_regular.png)](fonts/diplomata_regular)
 [![dited](images/sample_dited.png)](fonts/dited)
+[![edwin_bdita](images/sample_edwin_bdita.png)](fonts/edwin_bdita)
+[![edwin_bold](images/sample_edwin_bold.png)](fonts/edwin_bold)
+[![edwin_italic](images/sample_edwin_italic.png)](fonts/edwin_italic)
+[![edwin_roman](images/sample_edwin_roman.png)](fonts/edwin_roman)
 [![embossedblack_normal](images/sample_embossedblack_normal.png)](fonts/embossedblack_normal)
 [![embossedblackwide_normal](images/sample_embossedblackwide_normal.png)](fonts/embossedblackwide_normal)
 [![englandhanddb](images/sample_englandhanddb.png)](fonts/englandhanddb)
