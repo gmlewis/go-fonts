@@ -7,11 +7,11 @@ import (
 	"github.com/fogleman/gg"
 )
 
-func SavePNG(filename string, width, height int, renders ...*Render) error {
+func GetRenderMBB(inWidth, inHeight int, renders ...*Render) (mbb MBB, scale float64, width, height int, err error) {
 	if len(renders) == 0 {
-		return errors.New("must have at least one render")
+		return mbb, 0, 0, 0, errors.New("must have at least one render")
 	}
-	mbb := MBB{}
+
 	for i, render := range renders {
 		if i == 0 {
 			mbb = render.MBB
@@ -20,8 +20,15 @@ func SavePNG(filename string, width, height int, renders ...*Render) error {
 		}
 	}
 
-	var scale float64
-	scale, width, height = maximize(&mbb, width, height)
+	scale, width, height = maximize(&mbb, inWidth, inHeight)
+	return mbb, scale, width, height, nil
+}
+
+func SavePNG(filename string, inWidth, inHeight int, renders ...*Render) error {
+	mbb, scale, width, height, err := GetRenderMBB(inWidth, inHeight, renders...)
+	if err != nil {
+		return err
+	}
 	log.Printf("MBB: %v, scale=%.2f, size=(%v,%v)", mbb, scale, width, height)
 
 	dc := gg.NewContext(width, height)
