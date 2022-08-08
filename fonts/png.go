@@ -2,6 +2,7 @@ package fonts
 
 import (
 	"errors"
+	"image"
 	"log"
 
 	"github.com/fogleman/gg"
@@ -85,7 +86,17 @@ func maximize(mbb *MBB, width, height int) (float64, int, int) {
 	return scale, width, height
 }
 
+func (r *Render) ToImage(width, height int) image.Image {
+	dc := r.ToContext(width, height)
+	return dc.Image()
+}
+
 func (r *Render) SavePNG(filename string, width, height int) error {
+	dc := r.ToContext(width, height)
+	return dc.SavePNG(filename)
+}
+
+func (r *Render) ToContext(width, height int) *gg.Context {
 	var scale float64
 	scale, width, height = maximize(&r.MBB, width, height)
 	log.Printf("MBB: %v, scale=%.2f, size=(%v,%v)", r.MBB, scale, width, height)
@@ -94,7 +105,7 @@ func (r *Render) SavePNG(filename string, width, height int) error {
 	background(dc, r)
 	dc.Clear()
 	r.RenderToDC(dc, 0, 0, scale, height)
-	return dc.SavePNG(filename)
+	return dc
 }
 
 func (r *Render) RenderToDC(dc *gg.Context, dx, dy, scale float64, height int) {
