@@ -187,6 +187,10 @@ func TextMBB(xPos, yPos, xScale, yScale float64, message, fontName string) (*MBB
 		}
 	}
 
+	if result == nil {
+		return nil, errors.New("message must not be empty")
+	}
+
 	// log.Printf("TextMBB: xScale,yScale=(%v,%v)", xScale, yScale)
 	fsf := 1.0 / font.UnitsPerEm
 	xScale *= fsf
