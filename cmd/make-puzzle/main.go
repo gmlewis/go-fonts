@@ -19,6 +19,7 @@ import (
 var (
 	filename = flag.String("filename", "out.dxf", "DXF file to write output")
 	overlap  = flag.Float64("overlap", 0.025, "Overlap for adjacent glyphs")
+	scale    = flag.Float64("scale", 288, "Font scale")
 )
 
 func main() {
@@ -31,6 +32,7 @@ func main() {
 	squishTogether(t)
 
 	must(t.SaveDXF(*filename, 1.0))
+	must(t.SaveSVG("baloo", strings.Replace(*filename, ".dxf", ".svg", -1), *scale))
 
 	log.Printf("Done.")
 }
