@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/fogleman/gg v1.3.0
-	github.com/gmlewis/go3d v0.0.2
+	github.com/gmlewis/go3d v0.0.4
 	github.com/gmlewis/ponoko2d v0.0.0-20190404133045-d77d370bec9a
 	github.com/golang/protobuf v1.5.3
 	github.com/yofu/dxf v0.0.0-20190710012328-5a6d1e83f16c
