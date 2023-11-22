@@ -45,29 +45,30 @@ var (
 func main() {
 	flag.Parse()
 
-	for _, arg := range flag.Args() {
-		log.Printf("Processing file %q ...", arg)
+	// for _, arg := range flag.Args() {
+	arg := "../../fonts/freesans/FreeSans.svg"
+	log.Printf("Processing file %q ...", arg)
 
-		fontData := &webfont.FontData{}
-		if buf, err := os.ReadFile(arg); err != nil {
+	fontData := &webfont.FontData{}
+	if buf, err := os.ReadFile(arg); err != nil {
+		log.Fatal(err)
+	} else {
+		if err := xml.Unmarshal(buf, fontData); err != nil {
 			log.Fatal(err)
-		} else {
-			if err := xml.Unmarshal(buf, fontData); err != nil {
-				log.Fatal(err)
-			}
 		}
-
-		fontData.Font.ID = strings.ToLower(fontData.Font.ID)
-		fontData.Font.ID = strings.Replace(fontData.Font.ID, "-", "_", -1)
-		if digitRE.MatchString(fontData.Font.ID) {
-			fontData.Font.ID = "f" + fontData.Font.ID
-		}
-
-		readme := genReadme(fontData)
-		license := genLicense(filepath.Dir(arg))
-
-		writeFont(fontData, readme, license)
 	}
+
+	fontData.Font.ID = strings.ToLower(fontData.Font.ID)
+	fontData.Font.ID = strings.Replace(fontData.Font.ID, "-", "_", -1)
+	if digitRE.MatchString(fontData.Font.ID) {
+		fontData.Font.ID = "f" + fontData.Font.ID
+	}
+
+	readme := genReadme(fontData)
+	license := genLicense(filepath.Dir(arg))
+
+	writeFont(fontData, readme, license)
+	// }
 
 	fmt.Println("Done.")
 }
@@ -146,43 +147,61 @@ func (p *processor) findDParts(cmd string) string {
 		face := glyph.faces[len(glyph.faces)-1]
 		dParts = face.dParts[len(face.dParts)-1]
 	}
-	strIdx := strings.Index(dParts, cmd)
+	var strIdx int
 	if len(glyph.faces) > 0 {
+		strIdx = 1 + strings.Index(dParts[1:], cmd)
 		face := glyph.faces[len(glyph.faces)-1]
 		dIdx := len(face.dParts) - 1
 		face.dParts[dIdx] = face.dParts[dIdx][:strIdx]
+		if face.dParts[dIdx] == "" {
+			log.Fatalf("programming error: findDParts(%q): face.dParts[%v]='' glyph=%#v", cmd, dIdx, *glyph)
+		}
 	}
-	return dParts[strIdx:]
+	result := dParts[strIdx:]
+	if result == "" {
+		log.Fatalf("programming error: findDParts(%q): glyph=%#v", cmd, *glyph)
+	}
+	return result
 }
 
-func (p *processor) MoveTo(g *webfont.Glyph, cmd string, x, y float64) {
-	glyph := p.current
-	// log.Printf("p.MoveTo(%q, %v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
-	glyph.faces = append(glyph.faces, &faceT{
-		dParts: []string{p.findDParts(cmd)},
-		verts:  []vec2{{x + glyph.xmin, y + glyph.ymin}},
-	})
-}
-
-func (p *processor) LineTo(g *webfont.Glyph, cmd string, x, y float64) {
-	glyph := p.current
-	// log.Printf("p.LineTo(%q, %v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
-	if len(glyph.faces) == 0 {
-		log.Fatalf("LineTo: expected start of face, got nil")
-	}
+func (p *processor) addCmd(glyph *glyphT, cmd string, x, y float64) {
 	dParts := p.findDParts(cmd)
+	if cmd == "M" { // start a new face
+		glyph.faces = append(glyph.faces, &faceT{
+			dParts: []string{dParts},
+			verts:  []vec2{{x + glyph.xmin, y + glyph.ymin}},
+		})
+		return
+	}
+
 	face := len(glyph.faces) - 1
 	glyph.faces[face].dParts = append(glyph.faces[face].dParts, dParts)
 	glyph.faces[face].verts = append(glyph.faces[face].verts,
 		vec2{x + glyph.xmin, y + glyph.ymin})
 }
 
+func (p *processor) MoveTo(g *webfont.Glyph, cmd string, x, y float64) {
+	glyph := p.current
+	log.Printf("p.MoveTo(g,%q, %v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
+	p.addCmd(glyph, cmd, x, y)
+}
+
+func (p *processor) LineTo(g *webfont.Glyph, cmd string, x, y float64) {
+	glyph := p.current
+	log.Printf("p.LineTo(g,%q, %v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
+	p.addCmd(glyph, cmd, x, y)
+}
+
 func (p *processor) CubicTo(g *webfont.Glyph, cmd string, x1, y1, x2, y2, ex, ey float64) {
-	// log.Printf("p.CubicTo(%0.2f,%0.2f)", ex, ey)
+	glyph := p.current
+	log.Printf("p.CubicTo(g,%q,%v,%v,%v,%v,%v,%v)", cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
+	p.addCmd(glyph, cmd, ex, ey)
 }
 
 func (p *processor) QuadraticTo(g *webfont.Glyph, cmd string, x1, y1, x2, y2 float64) {
-	// log.Printf("p.QuadraticTo(%0.2f,%0.2f)", x2, y2)
+	glyph := p.current
+	log.Printf("p.QuadraticTo(g,%q,%v,%v,%v,%v)", cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
+	p.addCmd(glyph, cmd, x2, y2)
 }
 
 func (g *glyphT) regenerateFace() {
@@ -190,7 +209,7 @@ func (g *glyphT) regenerateFace() {
 	log.Printf("c=%q: got %v faces", g.unicode, len(g.faces))
 
 	for faceIdx, face := range g.faces {
-		log.Printf("c=%q: face[%v]: verts(%v): %+v", g.unicode, faceIdx, len(face.verts), face.verts)
+		log.Printf("c=%q: face[%v]: verts(%v): %#v", g.unicode, faceIdx, len(face.verts), face.verts)
 		log.Printf("c=%q: face[%v]: dParts(%v): %#v", g.unicode, faceIdx, len(face.dParts), face.dParts)
 		if len(face.verts) != len(face.dParts) {
 			log.Fatalf("programming error - dParts not split correctly")
@@ -234,12 +253,29 @@ func (g *glyphT) regenerateFace() {
 	}
 
 	// Now re-generate the 'd' path so that it is one closed path with no holes.
-
+	var d strings.Builder
+	face0 := g.faces[0]
+	for f0vertIdx, f0vert := range face0.verts {
+		log.Printf("face0[%v]=%v", f0vertIdx, f0vert)
+		d.WriteString(face0.dParts[f0vertIdx])
+		for _, face := range g.faces[1:] {
+			if face.cut0Idx != f0vertIdx {
+				continue
+			}
+			v := face.verts[face.cutIdx]
+			d.WriteString(fmt.Sprintf("L%v %v", v[0], v[1]))
+			for i, vert := range face.verts {
+				log.Printf("facei[%v]=%v", i, vert)
+				newIdx := (i + face.cutIdx) % len(face.verts)
+				d.WriteString(face.dParts[newIdx])
+			}
+		}
+	}
 }
 
 func writeFont(fontData *webfont.FontData, readme, license string) {
 	p := &processor{glyphs: map[string]*glyphT{}}
-	if err := webfont.ParseNeededGlyphs(fontData, "aB", p); err != nil { // DEBUGGING ONLY
+	if err := webfont.ParseNeededGlyphs(fontData, "a", p); err != nil { // DEBUGGING ONLY
 		log.Fatalf("webfont: %v", err)
 	}
 
@@ -264,7 +300,7 @@ func writeFont(fontData *webfont.FontData, readme, license string) {
 		log.Fatal(err)
 	}
 
-	filename := fmt.Sprintf("%v.lua", fontData.Font.ID)
+	filename := fmt.Sprintf("font_%v.lua", fontData.Font.ID)
 	if err := os.WriteFile(filename, buf.Bytes(), 0644); err != nil {
 		log.Fatal(err)
 	}
