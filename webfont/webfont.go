@@ -12,13 +12,19 @@ import (
 
 // Processor is an interface used to process glyphs.
 type Processor interface {
-	// ProcessGlyph is called when the glyph has been fully parsed.
-	ProcessGlyph(r rune, g *Glyph)
+	// NewGlyph is called before the processing of a new glyph.
+	NewGlyph(g *Glyph)
+
 	// The following operations can be used to record SVG font paths with lossless detail.
-	MoveTo(x, y float64)
-	LineTo(x, y float64)
-	CubicTo(x1, y1, x2, y2, ex, ey float64)
-	QuadraticTo(x1, y1, x2, y2 float64)
+	// For each rune, they are called _before_ ProcessGlyph.
+	MoveTo(g *Glyph, cmd string, x, y float64)
+	LineTo(g *Glyph, cmd string, x, y float64)
+	CubicTo(g *Glyph, cmd string, x1, y1, x2, y2, ex, ey float64)
+	QuadraticTo(g *Glyph, cmd string, x1, y1, x2, y2 float64)
+
+	// ProcessGlyph is called when the glyph has been fully parsed
+	// and after all the operations above are completed.
+	ProcessGlyph(r rune, g *Glyph)
 }
 
 // ParseNeededGlyphs parses the needed glyphs from the font and

@@ -87,6 +87,8 @@ type processor struct {
 	gs *glyphs.Glyphs
 }
 
+var _ webfont.Processor = &processor{}
+
 func (p *processor) ProcessGlyph(r rune, g *webfont.Glyph) {
 	var pathSteps []*glyphs.PathStep
 	for _, ps := range g.PathSteps {
@@ -110,10 +112,10 @@ func (p *processor) ProcessGlyph(r rune, g *webfont.Glyph) {
 	})
 }
 
-func (p *processor) MoveTo(x, y float64)                    {}
-func (p *processor) LineTo(x, y float64)                    {}
-func (p *processor) CubicTo(x1, y1, x2, y2, ex, ey float64) {}
-func (p *processor) QuadraticTo(x1, y1, x2, y2 float64)     {}
+func (p *processor) MoveTo(g *webfont.Glyph, x, y float64)                    {}
+func (p *processor) LineTo(g *webfont.Glyph, x, y float64)                    {}
+func (p *processor) CubicTo(g *webfont.Glyph, x1, y1, x2, y2, ex, ey float64) {}
+func (p *processor) QuadraticTo(g *webfont.Glyph, x1, y1, x2, y2 float64)     {}
 
 func writeFont(fontData *webfont.FontData, fontDir string) {
 	p := &processor{gs: &glyphs.Glyphs{}}

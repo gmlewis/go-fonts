@@ -1,6 +1,8 @@
 module github.com/gmlewis/go-fonts
 
-go 1.19
+go 1.21.3
+
+toolchain go1.21.4
 
 require (
 	github.com/fogleman/gg v1.3.0
