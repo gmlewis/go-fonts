@@ -136,6 +136,7 @@ func (p *processor) ProcessGlyph(r rune, g *webfont.Glyph) {
 		glyph.gerberLP = *g.GerberLP
 	}
 	if glyph.gerberLP != "" {
+		log.Printf("glyph.gerberLP=%q", glyph.gerberLP)
 		glyph.regenerateFace()
 	}
 }
@@ -182,25 +183,25 @@ func (p *processor) addCmd(glyph *glyphT, cmd string, x, y float64) {
 
 func (p *processor) MoveTo(g *webfont.Glyph, cmd string, x, y float64) {
 	glyph := p.current
-	log.Printf("p.MoveTo(g,%q, %v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
+	// log.Printf("p.MoveTo(g,%q, %v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
 	p.addCmd(glyph, cmd, x, y)
 }
 
 func (p *processor) LineTo(g *webfont.Glyph, cmd string, x, y float64) {
 	glyph := p.current
-	log.Printf("p.LineTo(g,%q, %v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
+	// log.Printf("p.LineTo(g,%q, %v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
 	p.addCmd(glyph, cmd, x, y)
 }
 
 func (p *processor) CubicTo(g *webfont.Glyph, cmd string, x1, y1, x2, y2, ex, ey float64) {
 	glyph := p.current
-	log.Printf("p.CubicTo(g,%q,%v,%v,%v,%v,%v,%v)", cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
+	// log.Printf("p.CubicTo(g,%q,%v,%v,%v,%v,%v,%v)", cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
 	p.addCmd(glyph, cmd, ex, ey)
 }
 
 func (p *processor) QuadraticTo(g *webfont.Glyph, cmd string, x1, y1, x2, y2 float64) {
 	glyph := p.current
-	log.Printf("p.QuadraticTo(g,%q,%v,%v,%v,%v)", cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
+	// log.Printf("p.QuadraticTo(g,%q,%v,%v,%v,%v)", cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
 	p.addCmd(glyph, cmd, x2, y2)
 }
 
@@ -209,7 +210,7 @@ func (g *glyphT) regenerateFace() {
 	log.Printf("c=%q: got %v faces", g.unicode, len(g.faces))
 
 	for faceIdx, face := range g.faces {
-		log.Printf("c=%q: face[%v]: verts(%v): %#v", g.unicode, faceIdx, len(face.verts), face.verts)
+		log.Printf("c=%q: face[%v]: verts(%v): %+v", g.unicode, faceIdx, len(face.verts), face.verts)
 		log.Printf("c=%q: face[%v]: dParts(%v): %#v", g.unicode, faceIdx, len(face.dParts), face.dParts)
 		if len(face.verts) != len(face.dParts) {
 			log.Fatalf("programming error - dParts not split correctly")
