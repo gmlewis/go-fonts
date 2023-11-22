@@ -98,8 +98,10 @@ type glyphT struct {
 type vec2 [2]float64
 
 type faceT struct {
-	dParts  []string
-	verts   []vec2
+	dParts []string
+	before []vec2
+	after  []vec2
+
 	center  vec2
 	cut0Idx int // face[0] vertIdx to cut to connect to this face
 	cutIdx  int // vertIdx to cut to connect to face[0]
@@ -165,44 +167,40 @@ func (p *processor) findDParts(cmd string) string {
 	return result
 }
 
-func (p *processor) addCmd(glyph *glyphT, cmd string, x, y float64) {
+func (p *processor) addCmd(glyph *glyphT, oldX, oldY float64, cmd string, x, y float64) {
 	dParts := p.findDParts(cmd)
 	if cmd == "M" { // start a new face
 		glyph.faces = append(glyph.faces, &faceT{
 			dParts: []string{dParts},
-			verts:  []vec2{{x + glyph.xmin, y + glyph.ymin}},
+			before: []vec2{{oldX + glyph.xmin, oldY + glyph.ymin}}, // meaningless/origin for first command
+			after:  []vec2{{x + glyph.xmin, y + glyph.ymin}},
 		})
 		return
 	}
 
 	face := len(glyph.faces) - 1
 	glyph.faces[face].dParts = append(glyph.faces[face].dParts, dParts)
-	glyph.faces[face].verts = append(glyph.faces[face].verts,
+	glyph.faces[face].before = append(glyph.faces[face].before,
+		vec2{oldX + glyph.xmin, oldY + glyph.ymin})
+	glyph.faces[face].after = append(glyph.faces[face].after,
 		vec2{x + glyph.xmin, y + glyph.ymin})
 }
 
-func (p *processor) MoveTo(g *webfont.Glyph, cmd string, x, y float64) {
+func (p *processor) MoveTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x, y float64) {
 	glyph := p.current
-	// log.Printf("p.MoveTo(g,%q, %v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
-	p.addCmd(glyph, cmd, x, y)
+	log.Printf("p.MoveTo(g,%v,%v,%q,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x+glyph.xmin, y+glyph.ymin)
+	p.addCmd(glyph, oldX, oldY, cmd, x, y)
 }
 
-func (p *processor) LineTo(g *webfont.Glyph, cmd string, x, y float64) {
+func (p *processor) LineTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x, y float64) {
 	glyph := p.current
-	// log.Printf("p.LineTo(g,%q, %v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
-	p.addCmd(glyph, cmd, x, y)
+	log.Printf("p.LineTo(g,%v,%v,%q,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x+glyph.xmin, y+glyph.ymin)
+	p.addCmd(glyph, oldX, oldY, cmd, x, y)
 }
 
-func (p *processor) CubicTo(g *webfont.Glyph, cmd string, x1, y1, x2, y2, ex, ey float64) {
-	glyph := p.current
-	// log.Printf("p.CubicTo(g,%q,%v,%v,%v,%v,%v,%v)", cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
-	p.addCmd(glyph, cmd, ex, ey)
+func (p *processor) CubicTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x1, y1, x2, y2, ex, ey float64) {
 }
-
-func (p *processor) QuadraticTo(g *webfont.Glyph, cmd string, x1, y1, x2, y2 float64) {
-	glyph := p.current
-	// log.Printf("p.QuadraticTo(g,%q,%v,%v,%v,%v)", cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
-	p.addCmd(glyph, cmd, x2, y2)
+func (p *processor) QuadraticTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x1, y1, x2, y2 float64) {
 }
 
 func (g *glyphT) regenerateFace() {
@@ -210,24 +208,26 @@ func (g *glyphT) regenerateFace() {
 	log.Printf("c=%q: got %v faces", g.unicode, len(g.faces))
 
 	for faceIdx, face := range g.faces {
-		log.Printf("c=%q: face[%v]: verts(%v): %+v", g.unicode, faceIdx, len(face.verts), face.verts)
 		log.Printf("c=%q: face[%v]: dParts(%v): %#v", g.unicode, faceIdx, len(face.dParts), face.dParts)
-		if len(face.verts) != len(face.dParts) {
-			log.Fatalf("programming error - dParts not split correctly")
+		log.Printf("c=%q: face[%v]: before(%v): %+v", g.unicode, faceIdx, len(face.before), face.before)
+		log.Printf("c=%q: face[%v]: after(%v): %+v", g.unicode, faceIdx, len(face.after), face.after)
+		if len(face.after) != len(face.dParts) || len(face.before) != len(face.after) {
+			log.Fatalf("programming error - dParts not split correctly with before/after")
 		}
 		if faceIdx == 0 {
 			continue
 		}
-		for _, vert := range face.verts {
-			face.center[0] += vert[0]
-			face.center[1] += vert[1]
+		for i, vert := range face.after {
+			face.center[0] += vert[0] + face.before[i][0]
+			face.center[1] += vert[1] + face.before[i][0]
 		}
-		numVerts := float64(len(face.verts))
-		face.center[0] /= numVerts
-		face.center[1] /= numVerts
+
+		numVerts := float64(len(face.after))
+		face.center[0] /= (2 * numVerts) // add both before and after verts.
+		face.center[1] /= (2 * numVerts)
 		log.Printf("c=%q: face[%v] center=%v", g.unicode, faceIdx, face.center)
 		var bestDistSq float64
-		for vertIdx, vert := range g.faces[0].verts {
+		for vertIdx, vert := range g.faces[0].after {
 			dx := face.center[0] - vert[0]
 			dy := face.center[1] - vert[1]
 			distSq := dx*dx + dy*dy
@@ -237,10 +237,10 @@ func (g *glyphT) regenerateFace() {
 				// log.Printf("c=%q: vert[%v]=%v - bestDistSq=%v", g.unicode, vertIdx, vert, distSq)
 			}
 		}
-		f0x := g.faces[0].verts[face.cut0Idx][0]
-		f0y := g.faces[0].verts[face.cut0Idx][1]
+		f0x := g.faces[0].after[face.cut0Idx][0]
+		f0y := g.faces[0].after[face.cut0Idx][1]
 		log.Printf("c=%q: face[%v] cut0Idx=%v [%v %v]", g.unicode, faceIdx, face.cut0Idx, f0x, f0y)
-		for vertIdx, vert := range face.verts {
+		for vertIdx, vert := range face.after {
 			dx := f0x - vert[0]
 			dy := f0y - vert[1]
 			distSq := dx*dx + dy*dy
@@ -250,24 +250,24 @@ func (g *glyphT) regenerateFace() {
 				// log.Printf("c=%q: vert[%v]=%v - bestDistSq=%v", g.unicode, vertIdx, vert, distSq)
 			}
 		}
-		log.Printf("c=%q: face[%v] cutIdx=%v %v", g.unicode, faceIdx, face.cutIdx, face.verts[face.cutIdx])
+		log.Printf("c=%q: face[%v] cutIdx=%v %v", g.unicode, faceIdx, face.cutIdx, face.after[face.cutIdx])
 	}
 
 	// Now re-generate the 'd' path so that it is one closed path with no holes.
 	var d strings.Builder
 	face0 := g.faces[0]
-	for f0vertIdx, f0vert := range face0.verts {
+	for f0vertIdx, f0vert := range face0.after {
 		log.Printf("face0[%v]=%v", f0vertIdx, f0vert)
 		d.WriteString(face0.dParts[f0vertIdx])
 		for _, face := range g.faces[1:] {
 			if face.cut0Idx != f0vertIdx {
 				continue
 			}
-			v := face.verts[face.cutIdx]
+			v := face.after[face.cutIdx]
 			d.WriteString(fmt.Sprintf("L%v %v", v[0], v[1]))
-			for i, vert := range face.verts {
+			for i, vert := range face.after {
 				log.Printf("facei[%v]=%v", i, vert)
-				newIdx := (i + face.cutIdx) % len(face.verts)
+				newIdx := (i + face.cutIdx) % len(face.after)
 				d.WriteString(face.dParts[newIdx])
 			}
 		}

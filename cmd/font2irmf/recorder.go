@@ -305,13 +305,14 @@ func newSeg(segType segmentType, pts []vec2.T) *segment {
 	return s
 }
 
-func (r *recorder) MoveTo(g *webfont.Glyph, x, y float64) {
+func (r *recorder) NewGlyph(g *webfont.Glyph) {}
+func (r *recorder) MoveTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x, y float64) {
 	r.lastX, r.lastY = x, y
 	logf("moveTo(%v,%v)", r.lastX, r.lastY)
 	r.segments = append(r.segments, []*segment{})
 }
 
-func (r *recorder) LineTo(g *webfont.Glyph, x, y float64) {
+func (r *recorder) LineTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x, y float64) {
 	logf("from(%v,%v) - lineTo(%v,%v)", r.lastX, r.lastY, x, y)
 	s := newSeg(line, []vec2.T{{r.lastX, r.lastY}, {x, y}})
 	if s.minY != s.maxY {
@@ -323,7 +324,7 @@ func (r *recorder) LineTo(g *webfont.Glyph, x, y float64) {
 	r.lastX, r.lastY = x, y
 }
 
-func (r *recorder) CubicTo(g *webfont.Glyph, x1, y1, x2, y2, ex, ey float64) {
+func (r *recorder) CubicTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x1, y1, x2, y2, ex, ey float64) {
 	logf("from(%v,%v) - cubicTo((%v,%v),(%v,%v),(%v,%v))", r.lastX, r.lastY, x1, y1, x2, y2, ex, ey)
 	s := newSeg(cubic, []vec2.T{{r.lastX, r.lastY}, {x1, y1}, {x2, y2}, {ex, ey}})
 	if s.minY != s.maxY {
@@ -335,7 +336,7 @@ func (r *recorder) CubicTo(g *webfont.Glyph, x1, y1, x2, y2, ex, ey float64) {
 	r.lastX, r.lastY = ex, ey
 }
 
-func (r *recorder) QuadraticTo(g *webfont.Glyph, x1, y1, x2, y2 float64) {
+func (r *recorder) QuadraticTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x1, y1, x2, y2 float64) {
 	logf("from(%v,%v) - quadraticTo((%v,%v),(%v,%v))", r.lastX, r.lastY, x1, y1, x2, y2)
 	s := newSeg(quadratic, []vec2.T{{r.lastX, r.lastY}, {x1, y1}, {x2, y2}})
 	if s.minY != s.maxY {
