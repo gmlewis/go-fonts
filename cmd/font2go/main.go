@@ -112,13 +112,11 @@ func (p *processor) ProcessGlyph(r rune, g *webfont.Glyph) {
 	})
 }
 
-func (p *processor) NewGlyph(g *webfont.Glyph)                                             {}
-func (p *processor) MoveTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x, y float64) {}
-func (p *processor) LineTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x, y float64) {}
-func (p *processor) CubicTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x1, y1, x2, y2, ex, ey float64) {
-}
-func (p *processor) QuadraticTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x1, y1, x2, y2 float64) {
-}
+func (p *processor) NewGlyph(g *webfont.Glyph)                                            {}
+func (p *processor) MoveTo(g *webfont.Glyph, cmd string, x, y float64)                    {}
+func (p *processor) LineTo(g *webfont.Glyph, cmd string, x, y float64)                    {}
+func (p *processor) CubicTo(g *webfont.Glyph, cmd string, x1, y1, x2, y2, ex, ey float64) {}
+func (p *processor) QuadraticTo(g *webfont.Glyph, cmd string, x1, y1, x2, y2 float64)     {}
 
 func writeFont(fontData *webfont.FontData, fontDir string) {
 	p := &processor{gs: &glyphs.Glyphs{}}

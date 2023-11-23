@@ -68,7 +68,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 		switch ps.C {
 		case "M":
 			if g.Processor != nil {
-				g.Processor.MoveTo(g, x, y, ps.C, oX+ps.P[0], oY+ps.P[1])
+				g.Processor.MoveTo(g, ps.C, oX+ps.P[0], oY+ps.P[1])
 			}
 			x, y = oX+ps.P[0], oY+ps.P[1]
 			dc.MoveTo(x, y)
@@ -88,7 +88,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 			}
 		case "m":
 			if g.Processor != nil {
-				g.Processor.MoveTo(g, x, y, ps.C, x+ps.P[0], y+ps.P[1])
+				g.Processor.MoveTo(g, ps.C, x+ps.P[0], y+ps.P[1])
 			}
 			x, y = x+ps.P[0], y+ps.P[1]
 			dc.MoveTo(x, y)
@@ -109,7 +109,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 		case "L":
 			for i := 0; i < len(ps.P); i += 2 {
 				if g.Processor != nil {
-					g.Processor.LineTo(g, x, y, ps.C, oX+ps.P[i], oY+ps.P[i+1])
+					g.Processor.LineTo(g, ps.C, oX+ps.P[i], oY+ps.P[i+1])
 				}
 				x, y = oX+ps.P[i], oY+ps.P[i+1]
 				dc.LineTo(x, y)
@@ -117,7 +117,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 		case "l":
 			for i := 0; i < len(ps.P); i += 2 {
 				if g.Processor != nil {
-					g.Processor.LineTo(g, x, y, ps.C, x+ps.P[i], y+ps.P[i+1])
+					g.Processor.LineTo(g, ps.C, x+ps.P[i], y+ps.P[i+1])
 				}
 				x, y = x+ps.P[i], y+ps.P[i+1]
 				dc.LineTo(x, y)
@@ -125,7 +125,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 		case "H":
 			for i := 0; i < len(ps.P); i++ {
 				if g.Processor != nil {
-					g.Processor.LineTo(g, x, y, ps.C, oX+ps.P[i], y)
+					g.Processor.LineTo(g, ps.C, oX+ps.P[i], y)
 				}
 				x = oX + ps.P[i]
 				dc.LineTo(x, y)
@@ -133,7 +133,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 		case "h":
 			for i := 0; i < len(ps.P); i++ {
 				if g.Processor != nil {
-					g.Processor.LineTo(g, x, y, ps.C, x+ps.P[i], y)
+					g.Processor.LineTo(g, ps.C, x+ps.P[i], y)
 				}
 				x += ps.P[i]
 				dc.LineTo(x, y)
@@ -141,7 +141,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 		case "V":
 			for i := 0; i < len(ps.P); i++ {
 				if g.Processor != nil {
-					g.Processor.LineTo(g, x, y, ps.C, x, oY+ps.P[i])
+					g.Processor.LineTo(g, ps.C, x, oY+ps.P[i])
 				}
 				y = oY + ps.P[i]
 				dc.LineTo(x, y)
@@ -149,7 +149,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 		case "v":
 			for i := 0; i < len(ps.P); i++ {
 				if g.Processor != nil {
-					g.Processor.LineTo(g, x, y, ps.C, x, y+ps.P[i])
+					g.Processor.LineTo(g, ps.C, x, y+ps.P[i])
 				}
 				y += ps.P[i]
 				dc.LineTo(x, y)
@@ -166,7 +166,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 				lastC = b
 				dc.CubicTo(x1, y1, x2, y2, ex, ey)
 				if g.Processor != nil {
-					g.Processor.CubicTo(g, x, y, ps.C, x1, y1, x2, y2, ex, ey)
+					g.Processor.CubicTo(g, ps.C, x1, y1, x2, y2, ex, ey)
 				}
 				x, y = ex, ey
 			}
@@ -182,7 +182,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 				lastC = b
 				dc.CubicTo(x+dx1, y+dy1, x+dx2, y+dy2, x+dx, y+dy)
 				if g.Processor != nil {
-					g.Processor.CubicTo(g, x, y, ps.C, x+dx1, y+dy1, x+dx2, y+dy2, x+dx, y+dy)
+					g.Processor.CubicTo(g, ps.C, x+dx1, y+dy1, x+dx2, y+dy2, x+dx, y+dy)
 				}
 				x, y = x+dx, y+dy
 			}
@@ -202,7 +202,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 				}
 				dc.CubicTo(x+dx1, y+dy1, x+dx2, y+dy2, x+dx, y+dy)
 				if g.Processor != nil {
-					g.Processor.CubicTo(g, x, y, ps.C, x+dx1, y+dy1, x+dx2, y+dy2, x+dx, y+dy)
+					g.Processor.CubicTo(g, ps.C, x+dx1, y+dy1, x+dx2, y+dy2, x+dx, y+dy)
 				}
 				lastC = b
 				x, y = x+dx, y+dy
@@ -218,7 +218,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 				}
 				dc.QuadraticTo(x+dx1, y+dy1, x+dx, y+dy)
 				if g.Processor != nil {
-					g.Processor.QuadraticTo(g, x, y, ps.C, x+dx1, y+dy1, x+dx, y+dy)
+					g.Processor.QuadraticTo(g, ps.C, x+dx1, y+dy1, x+dx, y+dy)
 				}
 				lastQ = b
 				x, y = x+dx, y+dy
@@ -238,7 +238,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 				}
 				dc.QuadraticTo(x+dx1, y+dy1, x+dx, y+dy)
 				if g.Processor != nil {
-					g.Processor.QuadraticTo(g, x, y, ps.C, x+dx1, y+dy1, x+dx, y+dy)
+					g.Processor.QuadraticTo(g, ps.C, x+dx1, y+dy1, x+dx, y+dy)
 				}
 				x, y = x+dx, y+dy
 			}
@@ -247,7 +247,7 @@ func (g *Glyph) GenGerberLP(ff *FontFace) {
 		case "Z", "z":
 			if x != fillToX || y != fillToY {
 				if g.Processor != nil {
-					g.Processor.LineTo(g, x, y, ps.C, fillToX, fillToY)
+					g.Processor.LineTo(g, ps.C, fillToX, fillToY)
 				}
 			}
 			dc.Fill()

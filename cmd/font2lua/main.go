@@ -7,7 +7,7 @@
 //
 // Usage:
 //
-//	font2lua
+//	font2lua fonts/*/*.svg
 package main
 
 import (
@@ -140,7 +140,7 @@ func (p *processor) ProcessGlyph(r rune, g *webfont.Glyph) {
 	}
 }
 
-func (p *processor) addCmd(glyph *glyphT, oldX, oldY float64, cmd string, x, y float64, absCmd string) {
+func (p *processor) addCmd(glyph *glyphT, cmd string, x, y float64, absCmd string) {
 	if cmd == "M" { // start a new face
 		glyph.faces = append(glyph.faces, &faceT{
 			absCmds: []string{absCmd},
@@ -155,32 +155,50 @@ func (p *processor) addCmd(glyph *glyphT, oldX, oldY float64, cmd string, x, y f
 		vec2{x + glyph.xmin, y + glyph.ymin})
 }
 
-func (p *processor) MoveTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x, y float64) {
-	glyph := p.current
-	logf("p.MoveTo(g,%v,%v,%q,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x+glyph.xmin, y+glyph.ymin)
-	absCmd := fmt.Sprintf("M%v %v", x+glyph.xmin, y+glyph.ymin)
-	p.addCmd(glyph, oldX, oldY, cmd, x, y, absCmd)
+func mySprintf(fmtStr string, coords ...float64) string {
+	args := make([]any, 0, len(coords))
+	for _, arg := range coords {
+		v := fmt.Sprintf("%v", arg)
+		if len(v) > 14 {
+			v = fmt.Sprintf("%0.2f", arg)
+			dotIdx := len(v) - 3
+			if strings.HasSuffix(v, ".00") {
+				v = v[:dotIdx]
+			} else if v[dotIdx+2] == '0' {
+				v = v[:dotIdx+2]
+			}
+		}
+		args = append(args, v)
+	}
+	return fmt.Sprintf(fmtStr, args...)
 }
 
-func (p *processor) LineTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x, y float64) {
+func (p *processor) MoveTo(g *webfont.Glyph, cmd string, x, y float64) {
 	glyph := p.current
-	logf("p.LineTo(g,%v,%v,%q,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x+glyph.xmin, y+glyph.ymin)
-	absCmd := fmt.Sprintf("L%v %v", x+glyph.xmin, y+glyph.ymin)
-	p.addCmd(glyph, oldX, oldY, cmd, x, y, absCmd)
+	logf("p.MoveTo(g,%q,%v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
+	absCmd := mySprintf("M%v %v", x+glyph.xmin, y+glyph.ymin)
+	p.addCmd(glyph, cmd, x, y, absCmd)
 }
 
-func (p *processor) CubicTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x1, y1, x2, y2, ex, ey float64) {
+func (p *processor) LineTo(g *webfont.Glyph, cmd string, x, y float64) {
 	glyph := p.current
-	logf("p.CubicTo(g,%v,%v,%q,%v,%v,%v,%v,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
-	absCmd := fmt.Sprintf("C%v %v %v %v %v %v", x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
-	p.addCmd(glyph, oldX, oldY, cmd, ex, ey, absCmd)
+	logf("p.LineTo(g,%q,%v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
+	absCmd := mySprintf("L%v %v", x+glyph.xmin, y+glyph.ymin)
+	p.addCmd(glyph, cmd, x, y, absCmd)
 }
 
-func (p *processor) QuadraticTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x1, y1, x2, y2 float64) {
+func (p *processor) CubicTo(g *webfont.Glyph, cmd string, x1, y1, x2, y2, ex, ey float64) {
 	glyph := p.current
-	logf("p.QuadraticTo(g,%v,%v,%q,%v,%v,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
-	absCmd := fmt.Sprintf("Q%v %v %v %v", x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
-	p.addCmd(glyph, oldX, oldY, cmd, x2, y2, absCmd)
+	logf("p.CubicTo(g,%q,%v,%v,%v,%v,%v,%v)", cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
+	absCmd := mySprintf("C%v %v %v %v %v %v", x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
+	p.addCmd(glyph, cmd, ex, ey, absCmd)
+}
+
+func (p *processor) QuadraticTo(g *webfont.Glyph, cmd string, x1, y1, x2, y2 float64) {
+	glyph := p.current
+	logf("p.QuadraticTo(g,%q,%v,%v,%v,%v)", cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
+	absCmd := mySprintf("Q%v %v %v %v", x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
+	p.addCmd(glyph, cmd, x2, y2, absCmd)
 }
 
 func (g *glyphT) findClosestVerts(face *faceT) {
@@ -237,7 +255,7 @@ func (g *glyphT) regenerateFace() {
 				continue
 			}
 			v := face.after[face.cutIdx]
-			d.WriteString(fmt.Sprintf("L%v %v", v[0], v[1])) // jump over to face
+			d.WriteString(mySprintf("L%v %v", v[0], v[1])) // jump over to face
 			for i := range face.after {
 				newIdx := (i + face.cutIdx + 1) % len(face.after)
 				if newIdx == 0 {
@@ -246,7 +264,7 @@ func (g *glyphT) regenerateFace() {
 				d.WriteString(face.absCmds[newIdx])
 			}
 			v = face0.after[face.cut0Idx]
-			d.WriteString(fmt.Sprintf("L%v %v", v[0], v[1])) // jump back to face0
+			d.WriteString(mySprintf("L%v %v", v[0], v[1])) // jump back to face0
 		}
 	}
 	d.WriteString("Z") // terminate the face.
@@ -365,7 +383,9 @@ F:addFonts(
 //             all_glyphs = [[{{ range .Glyphs }}{{ .Unicode | viewFilter }}{{ end }}]],
 
 var luaMap = map[string]string{
-	"":  "ctrlm",
+	"\t": "tab",
+	"\n": "newline",
+	"\r": "ctrlm",
 	" ":  "space",
 	"!":  "bang",
 	`"`:  "dblquote",
