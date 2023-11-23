@@ -18,7 +18,6 @@ import (
 	"log"
 	"math"
 	"os"
-	"path/filepath"
 	"regexp"
 	"strings"
 	"text/template"
@@ -32,13 +31,14 @@ const (
 )
 
 var (
+	debug = flag.Bool("debug", false, "Turn on debugging info")
+
 	outTemp = template.Must(template.New("out").Funcs(funcMap).Parse(luaTemplate))
 	funcMap = template.FuncMap{
 		"floats":     floats,
 		"orEmpty":    orEmpty,
 		"viewFilter": viewFilter,
 	}
-	readmeTemp = template.Must(template.New("readme").Parse(readmeTemplate))
 
 	digitRE = regexp.MustCompile(`^\d`)
 )
@@ -46,30 +46,26 @@ var (
 func main() {
 	flag.Parse()
 
-	// for _, arg := range flag.Args() {
-	arg := "../../fonts/freesans/FreeSans.svg"
-	log.Printf("Processing file %q ...", arg)
+	for _, arg := range flag.Args() {
+		logf("Processing file %q ...", arg)
 
-	fontData := &webfont.FontData{}
-	if buf, err := os.ReadFile(arg); err != nil {
-		log.Fatal(err)
-	} else {
-		if err := xml.Unmarshal(buf, fontData); err != nil {
+		fontData := &webfont.FontData{}
+		if buf, err := os.ReadFile(arg); err != nil {
 			log.Fatal(err)
+		} else {
+			if err := xml.Unmarshal(buf, fontData); err != nil {
+				log.Fatal(err)
+			}
 		}
+
+		fontData.Font.ID = strings.ToLower(fontData.Font.ID)
+		fontData.Font.ID = strings.Replace(fontData.Font.ID, "-", "_", -1)
+		if digitRE.MatchString(fontData.Font.ID) {
+			fontData.Font.ID = "f" + fontData.Font.ID
+		}
+
+		writeFont(fontData)
 	}
-
-	fontData.Font.ID = strings.ToLower(fontData.Font.ID)
-	fontData.Font.ID = strings.Replace(fontData.Font.ID, "-", "_", -1)
-	if digitRE.MatchString(fontData.Font.ID) {
-		fontData.Font.ID = "f" + fontData.Font.ID
-	}
-
-	readme := genReadme(fontData)
-	license := genLicense(filepath.Dir(arg))
-
-	writeFont(fontData, readme, license)
-	// }
 
 	fmt.Println("Done.")
 }
@@ -99,7 +95,6 @@ type glyphT struct {
 type vec2 [2]float64
 
 type faceT struct {
-	dParts  []string
 	absCmds []string
 	after   []vec2
 
@@ -138,40 +133,14 @@ func (p *processor) ProcessGlyph(r rune, g *webfont.Glyph) {
 		glyph.gerberLP = *g.GerberLP
 	}
 	if glyph.gerberLP != "" {
-		log.Printf("glyph.gerberLP=%q", glyph.gerberLP)
+		logf("glyph.gerberLP=%q", glyph.gerberLP)
 		glyph.regenerateFace()
 	}
 }
 
-func (p *processor) findDParts(cmd string) string {
-	glyph := p.current
-	dParts := glyph.d
-	if len(glyph.faces) > 0 {
-		face := glyph.faces[len(glyph.faces)-1]
-		dParts = face.dParts[len(face.dParts)-1]
-	}
-	var strIdx int
-	if len(glyph.faces) > 0 {
-		strIdx = 1 + strings.Index(dParts[1:], cmd)
-		face := glyph.faces[len(glyph.faces)-1]
-		dIdx := len(face.dParts) - 1
-		face.dParts[dIdx] = face.dParts[dIdx][:strIdx]
-		if face.dParts[dIdx] == "" {
-			log.Fatalf("programming error: findDParts(%q): face.dParts[%v]='' glyph=%#v", cmd, dIdx, *glyph)
-		}
-	}
-	result := dParts[strIdx:]
-	if result == "" {
-		log.Fatalf("programming error: findDParts(%q): glyph=%#v", cmd, *glyph)
-	}
-	return result
-}
-
 func (p *processor) addCmd(glyph *glyphT, oldX, oldY float64, cmd string, x, y float64, absCmd string) {
-	dParts := p.findDParts(cmd)
 	if cmd == "M" { // start a new face
 		glyph.faces = append(glyph.faces, &faceT{
-			dParts:  []string{dParts},
 			absCmds: []string{absCmd},
 			after:   []vec2{{x + glyph.xmin, y + glyph.ymin}},
 		})
@@ -179,7 +148,6 @@ func (p *processor) addCmd(glyph *glyphT, oldX, oldY float64, cmd string, x, y f
 	}
 
 	face := len(glyph.faces) - 1
-	glyph.faces[face].dParts = append(glyph.faces[face].dParts, dParts)
 	glyph.faces[face].absCmds = append(glyph.faces[face].absCmds, absCmd)
 	glyph.faces[face].after = append(glyph.faces[face].after,
 		vec2{x + glyph.xmin, y + glyph.ymin})
@@ -187,33 +155,29 @@ func (p *processor) addCmd(glyph *glyphT, oldX, oldY float64, cmd string, x, y f
 
 func (p *processor) MoveTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x, y float64) {
 	glyph := p.current
-	log.Printf("p.MoveTo(g,%v,%v,%q,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x+glyph.xmin, y+glyph.ymin)
+	logf("p.MoveTo(g,%v,%v,%q,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x+glyph.xmin, y+glyph.ymin)
 	absCmd := fmt.Sprintf("M%v %v", x+glyph.xmin, y+glyph.ymin)
-	// absCmd := fmt.Sprintf("M%v %v", x, y)
 	p.addCmd(glyph, oldX, oldY, cmd, x, y, absCmd)
 }
 
 func (p *processor) LineTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x, y float64) {
 	glyph := p.current
-	log.Printf("p.LineTo(g,%v,%v,%q,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x+glyph.xmin, y+glyph.ymin)
+	logf("p.LineTo(g,%v,%v,%q,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x+glyph.xmin, y+glyph.ymin)
 	absCmd := fmt.Sprintf("L%v %v", x+glyph.xmin, y+glyph.ymin)
-	// absCmd := fmt.Sprintf("L%v %v", x, y)
 	p.addCmd(glyph, oldX, oldY, cmd, x, y, absCmd)
 }
 
 func (p *processor) CubicTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x1, y1, x2, y2, ex, ey float64) {
 	glyph := p.current
-	log.Printf("p.CubicTo(g,%v,%v,%q,%v,%v,%v,%v,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
+	logf("p.CubicTo(g,%v,%v,%q,%v,%v,%v,%v,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
 	absCmd := fmt.Sprintf("C%v %v %v %v %v %v", x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
-	// absCmd := fmt.Sprintf("%v%v %v,%v %v,%v %v", strings.ToUpper(cmd), x1, y1, x2, y2, ex, ey)
 	p.addCmd(glyph, oldX, oldY, cmd, ex, ey, absCmd)
 }
 
 func (p *processor) QuadraticTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x1, y1, x2, y2 float64) {
 	glyph := p.current
-	log.Printf("p.QuadraticTo(g,%v,%v,%q,%v,%v,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
+	logf("p.QuadraticTo(g,%v,%v,%q,%v,%v,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
 	absCmd := fmt.Sprintf("Q%v %v %v %v", x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
-	// absCmd := fmt.Sprintf("%v%v %v,%v %v", strings.ToUpper(cmd), x1, y1, x2, y2)
 	p.addCmd(glyph, oldX, oldY, cmd, x2, y2, absCmd)
 }
 
@@ -225,7 +189,7 @@ func (g *glyphT) findClosestVerts(face *faceT) {
 			dy := fivertAfter[1] - f0vertAfter[1]
 			distSq := dx*dx + dy*dy
 			if distSq < bestDistSq {
-				log.Printf("c=%q: fivertAfter[%v]=%v, f0vertAfter[%v]=%v, distSq=%v", g.unicode, fivertIdx, fivertAfter, f0vertIdx, f0vertAfter, distSq)
+				logf("c=%q: fivertAfter[%v]=%v, f0vertAfter[%v]=%v, distSq=%v", g.unicode, fivertIdx, fivertAfter, f0vertIdx, f0vertAfter, distSq)
 				bestDistSq = distSq
 				face.cut0Idx = f0vertIdx
 				face.cutIdx = fivertIdx
@@ -235,14 +199,14 @@ func (g *glyphT) findClosestVerts(face *faceT) {
 }
 
 func (g *glyphT) findCutPoints() {
-	log.Printf("c=%q: d=%v", g.unicode, g.d)
-	log.Printf("c=%q: got %v faces", g.unicode, len(g.faces))
+	logf("c=%q: d=%v", g.unicode, g.d)
+	logf("c=%q: got %v faces", g.unicode, len(g.faces))
 
 	for faceIdx, face := range g.faces {
-		log.Printf("c=%q: face[%v]: dParts(%v): %#v", g.unicode, faceIdx, len(face.dParts), face.dParts)
-		log.Printf("c=%q: face[%v]: after(%v): %+v", g.unicode, faceIdx, len(face.after), face.after)
-		if len(face.after) != len(face.dParts) {
-			log.Fatalf("programming error - dParts not split correctly with 'after' verts")
+		logf("c=%q: face[%v]: absCmds(%v): %#v", g.unicode, faceIdx, len(face.absCmds), face.absCmds)
+		logf("c=%q: face[%v]: after(%v): %+v", g.unicode, faceIdx, len(face.after), face.after)
+		if len(face.after) != len(face.absCmds) {
+			log.Fatalf("programming error - absCmds not split correctly with 'after' verts")
 		}
 		if faceIdx == 0 {
 			continue
@@ -250,8 +214,8 @@ func (g *glyphT) findCutPoints() {
 
 		g.findClosestVerts(face)
 
-		log.Printf("c=%q: face[%v] cut0Idx=%v %v", g.unicode, faceIdx, face.cut0Idx, g.faces[0].after[face.cut0Idx])
-		log.Printf("c=%q: face[%v] cutIdx=%v %v", g.unicode, faceIdx, face.cutIdx, face.after[face.cutIdx])
+		logf("c=%q: face[%v] cut0Idx=%v %v", g.unicode, faceIdx, face.cut0Idx, g.faces[0].after[face.cut0Idx])
+		logf("c=%q: face[%v] cutIdx=%v %v", g.unicode, faceIdx, face.cutIdx, face.after[face.cutIdx])
 	}
 }
 
@@ -259,31 +223,34 @@ func (g *glyphT) regenerateFace() {
 	g.findCutPoints()
 
 	for i, face := range g.faces {
-		log.Printf("face[%v] new absCmd:\n%v", i, strings.Join(face.absCmds, ""))
+		logf("face[%v] new absCmd:\n%v", i, strings.Join(face.absCmds, ""))
 	}
 
-	// Now re-generate the 'd' path so that it is one closed path with no holes.
 	var d strings.Builder
 	face0 := g.faces[0]
-	for f0vertIdx, f0vert := range face0.after {
-		log.Printf("face0[%v]=%v", f0vertIdx, f0vert)
-		d.WriteString(face0.dParts[f0vertIdx])
+	for f0vertIdx := range face0.after {
+		d.WriteString(face0.absCmds[f0vertIdx])
 		for _, face := range g.faces[1:] {
 			if face.cut0Idx != f0vertIdx {
 				continue
 			}
 			v := face.after[face.cutIdx]
-			d.WriteString(fmt.Sprintf("L%v %v", v[0], v[1]))
-			for i, vert := range face.after {
-				log.Printf("facei[%v]=%v", i, vert)
-				newIdx := (i + face.cutIdx) % len(face.after)
-				d.WriteString(face.dParts[newIdx])
+			d.WriteString(fmt.Sprintf("L%v %v", v[0], v[1])) // jump over to face
+			for i := range face.after {
+				newIdx := (i + face.cutIdx + 1) % len(face.after)
+				if newIdx == 0 {
+					continue // skip after[0] - initial "M"
+				}
+				d.WriteString(face.absCmds[newIdx])
 			}
+			v = face0.after[face.cut0Idx]
+			d.WriteString(fmt.Sprintf("L%v %v", v[0], v[1])) // jump back to face0
 		}
 	}
+	g.d = d.String()
 }
 
-func writeFont(fontData *webfont.FontData, readme, license string) {
+func writeFont(fontData *webfont.FontData) {
 	p := &processor{glyphs: map[string]*glyphT{}}
 	if err := webfont.ParseNeededGlyphs(fontData, "a", p); err != nil { // DEBUGGING ONLY
 		log.Fatalf("webfont: %v", err)
@@ -316,32 +283,10 @@ func writeFont(fontData *webfont.FontData, readme, license string) {
 	}
 }
 
-func genReadme(fontData *webfont.FontData) string {
-	var buf bytes.Buffer
-	if err := readmeTemp.Execute(&buf, fontData.Font); err != nil {
-		log.Fatal(err)
+func logf(fmt string, args ...any) {
+	if *debug {
+		log.Printf(fmt, args...)
 	}
-	return buf.String()
-}
-
-func genLicense(srcDir string) string {
-	// Copy any license along with the font.
-	txtFiles, err := filepath.Glob(filepath.Join(srcDir, "*.txt"))
-	if err != nil || len(txtFiles) == 0 {
-		log.Printf("WARNING: unable to find license file in %v : %v", srcDir, err)
-		return ""
-	}
-	var lines []string
-	for _, txtFile := range txtFiles {
-		buf, err := os.ReadFile(txtFile)
-		if err != nil {
-			log.Printf("WARNING: unable to read text file %v : %v", txtFile, err)
-			continue
-		}
-		lines = append(lines, string(buf))
-	}
-
-	return strings.Join(lines, "\n")
 }
 
 func viewFilter(s *string) string {
