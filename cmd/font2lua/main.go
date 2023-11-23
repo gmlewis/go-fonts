@@ -99,14 +99,12 @@ type glyphT struct {
 type vec2 [2]float64
 
 type faceT struct {
-	dParts []string
-	before []vec2
-	after  []vec2
+	dParts  []string
+	absCmds []string
+	after   []vec2
 
-	cut0IdxAfter bool // determines if cut0Idx is from the 'after' verts or 'before'
-	cut0Idx      int  // face[0] vertIdx to cut to connect to this face
-	cutIdxAfter  bool // determines if cutIdx is from the 'after' verts or 'before'
-	cutIdx       int  // vertIdx to cut to connect to face[0]
+	cut0Idx int // face[0] vertIdx (in 'after') to cut to connect to this face
+	cutIdx  int // vertIdx (in 'after') to cut to connect to face[0]
 }
 
 func (p *processor) NewGlyph(g *webfont.Glyph) {
@@ -169,21 +167,20 @@ func (p *processor) findDParts(cmd string) string {
 	return result
 }
 
-func (p *processor) addCmd(glyph *glyphT, oldX, oldY float64, cmd string, x, y float64) {
+func (p *processor) addCmd(glyph *glyphT, oldX, oldY float64, cmd string, x, y float64, absCmd string) {
 	dParts := p.findDParts(cmd)
 	if cmd == "M" { // start a new face
 		glyph.faces = append(glyph.faces, &faceT{
-			dParts: []string{dParts},
-			before: []vec2{{oldX + glyph.xmin, oldY + glyph.ymin}}, // meaningless/origin for first command
-			after:  []vec2{{x + glyph.xmin, y + glyph.ymin}},
+			dParts:  []string{dParts},
+			absCmds: []string{absCmd},
+			after:   []vec2{{x + glyph.xmin, y + glyph.ymin}},
 		})
 		return
 	}
 
 	face := len(glyph.faces) - 1
 	glyph.faces[face].dParts = append(glyph.faces[face].dParts, dParts)
-	glyph.faces[face].before = append(glyph.faces[face].before,
-		vec2{oldX + glyph.xmin, oldY + glyph.ymin})
+	glyph.faces[face].absCmds = append(glyph.faces[face].absCmds, absCmd)
 	glyph.faces[face].after = append(glyph.faces[face].after,
 		vec2{x + glyph.xmin, y + glyph.ymin})
 }
@@ -191,90 +188,46 @@ func (p *processor) addCmd(glyph *glyphT, oldX, oldY float64, cmd string, x, y f
 func (p *processor) MoveTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x, y float64) {
 	glyph := p.current
 	log.Printf("p.MoveTo(g,%v,%v,%q,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x+glyph.xmin, y+glyph.ymin)
-	p.addCmd(glyph, oldX, oldY, cmd, x, y)
+	absCmd := fmt.Sprintf("M%v %v", x+glyph.xmin, y+glyph.ymin)
+	// absCmd := fmt.Sprintf("M%v %v", x, y)
+	p.addCmd(glyph, oldX, oldY, cmd, x, y, absCmd)
 }
 
 func (p *processor) LineTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x, y float64) {
 	glyph := p.current
 	log.Printf("p.LineTo(g,%v,%v,%q,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x+glyph.xmin, y+glyph.ymin)
-	p.addCmd(glyph, oldX, oldY, cmd, x, y)
+	absCmd := fmt.Sprintf("L%v %v", x+glyph.xmin, y+glyph.ymin)
+	// absCmd := fmt.Sprintf("L%v %v", x, y)
+	p.addCmd(glyph, oldX, oldY, cmd, x, y, absCmd)
 }
 
 func (p *processor) CubicTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x1, y1, x2, y2, ex, ey float64) {
+	glyph := p.current
+	log.Printf("p.CubicTo(g,%v,%v,%q,%v,%v,%v,%v,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
+	absCmd := fmt.Sprintf("C%v %v %v %v %v %v", x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin, ex+glyph.xmin, ey+glyph.ymin)
+	// absCmd := fmt.Sprintf("%v%v %v,%v %v,%v %v", strings.ToUpper(cmd), x1, y1, x2, y2, ex, ey)
+	p.addCmd(glyph, oldX, oldY, cmd, ex, ey, absCmd)
 }
+
 func (p *processor) QuadraticTo(g *webfont.Glyph, oldX, oldY float64, cmd string, x1, y1, x2, y2 float64) {
+	glyph := p.current
+	log.Printf("p.QuadraticTo(g,%v,%v,%q,%v,%v,%v,%v)", oldX+glyph.xmin, oldY+glyph.ymin, cmd, x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
+	absCmd := fmt.Sprintf("Q%v %v %v %v", x1+glyph.xmin, y1+glyph.ymin, x2+glyph.xmin, y2+glyph.ymin)
+	// absCmd := fmt.Sprintf("%v%v %v,%v %v", strings.ToUpper(cmd), x1, y1, x2, y2)
+	p.addCmd(glyph, oldX, oldY, cmd, x2, y2, absCmd)
 }
 
 func (g *glyphT) findClosestVerts(face *faceT) {
 	bestDistSq := math.MaxFloat64
-	for f0vertIdx, f0vertBefore := range g.faces[0].before {
-		if f0vertIdx == 0 {
-			continue // skip before[0]
-		}
-		for fivertIdx, fivertBefore := range face.before {
-			{
-				fivertAfter := face.after[fivertIdx]
-				dx := fivertAfter[0] - f0vertBefore[0]
-				dy := fivertAfter[1] - f0vertBefore[1]
-				distSq := dx*dx + dy*dy
-				if distSq < bestDistSq {
-					log.Printf("c=%q: fivertAfter[%v]=%v, f0vertBefore[%v]=%v, distSq=%v", g.unicode, fivertIdx, fivertAfter, f0vertIdx, f0vertBefore, distSq)
-					bestDistSq = distSq
-					face.cut0IdxAfter = false
-					face.cut0Idx = f0vertIdx
-					face.cutIdxAfter = true
-					face.cutIdx = fivertIdx
-				}
-			}
-
-			if fivertIdx == 0 {
-				continue // skip before[0]
-			}
-
-			dx := fivertBefore[0] - f0vertBefore[0]
-			dy := fivertBefore[1] - f0vertBefore[1]
-			distSq := dx*dx + dy*dy
-			if distSq < bestDistSq {
-				log.Printf("c=%q: fivertBefore[%v]=%v, f0vertBefore[%v]=%v, distSq=%v", g.unicode, fivertIdx, fivertBefore, f0vertIdx, f0vertBefore, distSq)
-				bestDistSq = distSq
-				face.cut0IdxAfter = false
-				face.cut0Idx = f0vertIdx
-				face.cutIdxAfter = false
-				face.cutIdx = fivertIdx
-			}
-		}
-	}
-
 	for f0vertIdx, f0vertAfter := range g.faces[0].after {
 		for fivertIdx, fivertAfter := range face.after {
-			{
-				dx := fivertAfter[0] - f0vertAfter[0]
-				dy := fivertAfter[1] - f0vertAfter[1]
-				distSq := dx*dx + dy*dy
-				if distSq < bestDistSq {
-					log.Printf("c=%q: fivertAfter[%v]=%v, f0vertAfter[%v]=%v, distSq=%v", g.unicode, fivertIdx, fivertAfter, f0vertIdx, f0vertAfter, distSq)
-					bestDistSq = distSq
-					face.cut0IdxAfter = true
-					face.cut0Idx = f0vertIdx
-					face.cutIdxAfter = true
-					face.cutIdx = fivertIdx
-				}
-			}
-
-			if fivertIdx == 0 {
-				continue // skip before[0]
-			}
-
-			fivertBefore := face.before[fivertIdx]
-			dx := fivertBefore[0] - f0vertAfter[0]
-			dy := fivertBefore[1] - f0vertAfter[1]
+			dx := fivertAfter[0] - f0vertAfter[0]
+			dy := fivertAfter[1] - f0vertAfter[1]
 			distSq := dx*dx + dy*dy
 			if distSq < bestDistSq {
-				log.Printf("c=%q: fivertBefore[%v]=%v, f0vertAfter[%v]=%v, distSq=%v", g.unicode, fivertIdx, fivertBefore, f0vertIdx, f0vertAfter, distSq)
+				log.Printf("c=%q: fivertAfter[%v]=%v, f0vertAfter[%v]=%v, distSq=%v", g.unicode, fivertIdx, fivertAfter, f0vertIdx, f0vertAfter, distSq)
 				bestDistSq = distSq
-				face.cut0IdxAfter = true
 				face.cut0Idx = f0vertIdx
-				face.cutIdxAfter = false
 				face.cutIdx = fivertIdx
 			}
 		}
@@ -287,10 +240,9 @@ func (g *glyphT) findCutPoints() {
 
 	for faceIdx, face := range g.faces {
 		log.Printf("c=%q: face[%v]: dParts(%v): %#v", g.unicode, faceIdx, len(face.dParts), face.dParts)
-		log.Printf("c=%q: face[%v]: before(%v): %+v", g.unicode, faceIdx, len(face.before), face.before)
 		log.Printf("c=%q: face[%v]: after(%v): %+v", g.unicode, faceIdx, len(face.after), face.after)
-		if len(face.after) != len(face.dParts) || len(face.before) != len(face.after) {
-			log.Fatalf("programming error - dParts not split correctly with before/after")
+		if len(face.after) != len(face.dParts) {
+			log.Fatalf("programming error - dParts not split correctly with 'after' verts")
 		}
 		if faceIdx == 0 {
 			continue
@@ -298,22 +250,17 @@ func (g *glyphT) findCutPoints() {
 
 		g.findClosestVerts(face)
 
-		if face.cut0IdxAfter {
-			log.Printf("c=%q: face[%v] cut0IdxAfter=%v, cut0Idx=%v %v", g.unicode, faceIdx, face.cut0IdxAfter, face.cut0Idx, g.faces[0].after[face.cut0Idx])
-		} else {
-			log.Printf("c=%q: face[%v] cut0IdxAfter=%v, cut0Idx=%v %v", g.unicode, faceIdx, face.cut0IdxAfter, face.cut0Idx, g.faces[0].before[face.cut0Idx])
-		}
-
-		if face.cutIdxAfter {
-			log.Printf("c=%q: face[%v] cutIdxAfter=%v, cutIdx=%v %v", g.unicode, faceIdx, face.cutIdxAfter, face.cutIdx, face.after[face.cutIdx])
-		} else {
-			log.Printf("c=%q: face[%v] cutIdxAfter=%v, cutIdx=%v %v", g.unicode, faceIdx, face.cutIdxAfter, face.cutIdx, face.before[face.cutIdx])
-		}
+		log.Printf("c=%q: face[%v] cut0Idx=%v %v", g.unicode, faceIdx, face.cut0Idx, g.faces[0].after[face.cut0Idx])
+		log.Printf("c=%q: face[%v] cutIdx=%v %v", g.unicode, faceIdx, face.cutIdx, face.after[face.cutIdx])
 	}
 }
 
 func (g *glyphT) regenerateFace() {
 	g.findCutPoints()
+
+	for i, face := range g.faces {
+		log.Printf("face[%v] new absCmd:\n%v", i, strings.Join(face.absCmds, ""))
+	}
 
 	// Now re-generate the 'd' path so that it is one closed path with no holes.
 	var d strings.Builder
