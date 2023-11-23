@@ -10,7 +10,6 @@ import (
 	"flag"
 	"fmt"
 	"go/format"
-	"io/ioutil"
 	"log"
 	"os"
 	"path/filepath"
@@ -21,7 +20,7 @@ import (
 
 	"github.com/gmlewis/go-fonts/pb/glyphs"
 	"github.com/gmlewis/go-fonts/webfont"
-	"github.com/golang/protobuf/proto"
+	"google.golang.org/protobuf/proto"
 )
 
 const (
@@ -49,7 +48,7 @@ func main() {
 		log.Printf("Processing file %q ...", arg)
 
 		fontData := &webfont.FontData{}
-		if buf, err := ioutil.ReadFile(arg); err != nil {
+		if buf, err := os.ReadFile(arg); err != nil {
 			log.Fatal(err)
 		} else {
 			if err := xml.Unmarshal(buf, fontData); err != nil {
@@ -149,11 +148,11 @@ func writeFont(fontData *webfont.FontData, fontDir string) {
 	filename := filepath.Join(fontDir, "font.go")
 	fmtBuf, err := format.Source(buf.Bytes())
 	if err != nil {
-		ioutil.WriteFile(filename, buf.Bytes(), 0644) // Dump the unformatted output.
+		os.WriteFile(filename, buf.Bytes(), 0644) // Dump the unformatted output.
 		log.Fatalf("error formating generated Go code: %v : %v", filename, err)
 	}
 
-	if err := ioutil.WriteFile(filename, fmtBuf, 0644); err != nil {
+	if err := os.WriteFile(filename, fmtBuf, 0644); err != nil {
 		log.Fatal(err)
 	}
 }
@@ -165,7 +164,7 @@ func writeReadme(fontData *webfont.FontData, fontDir string) {
 		log.Fatal(err)
 	}
 	readmeName := filepath.Join(fontDir, "README.md")
-	if err := ioutil.WriteFile(readmeName, buf.Bytes(), 0644); err != nil {
+	if err := os.WriteFile(readmeName, buf.Bytes(), 0644); err != nil {
 		log.Printf("WARNING: unable to write %v : %v", readmeName, err)
 	}
 }
@@ -178,14 +177,14 @@ func writeLicense(srcDir, fontDir string) {
 		return
 	}
 	for _, txtFile := range txtFiles {
-		buf, err := ioutil.ReadFile(txtFile)
+		buf, err := os.ReadFile(txtFile)
 		if err != nil {
 			log.Printf("WARNING: unable to read text file %v : %v", txtFile, err)
 			continue
 		}
 		baseName := filepath.Base(txtFile)
 		dstName := filepath.Join(fontDir, baseName)
-		if err := ioutil.WriteFile(dstName, buf, 0644); err != nil {
+		if err := os.WriteFile(dstName, buf, 0644); err != nil {
 			log.Printf("WARNING: unable to write text file %v : %v", dstName, err)
 			continue
 		}

@@ -28,10 +28,6 @@ import (
 	"golang.org/x/exp/maps"
 )
 
-const (
-	prefix = "fonts"
-)
-
 var (
 	debug = flag.Bool("debug", false, "Turn on debugging info")
 

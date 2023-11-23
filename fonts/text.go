@@ -118,7 +118,7 @@ func (p *Polygon) Area() float64 {
 
 func getFont(fontName string) (*Font, error) {
 	if len(Fonts) == 0 {
-		return nil, errors.New("No fonts available")
+		return nil, errors.New("no fonts available")
 	}
 
 	font, ok := Fonts[fontName]

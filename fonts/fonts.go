@@ -6,14 +6,16 @@
 // For example:
 //
 // import (
-//   "github.com/gmlewis/go-fonts/fonts"
-//   _ "github.com/gmlewis/go-fonts/fonts/znikomitno24"
+//
+//	"github.com/gmlewis/go-fonts/fonts"
+//	_ "github.com/gmlewis/go-fonts/fonts/znikomitno24"
+//
 // )
 //
-// func main() {
-//   polys := fonts.Text(x, y, xs, ys, "znikomitno24")
-//   //...
-// }
+//	func main() {
+//	  polys := fonts.Text(x, y, xs, ys, "znikomitno24")
+//	  //...
+//	}
 //
 // Default units are in "em"s which typically represent the width of the
 // character "M" in the font. Note that positive X is to the right
@@ -33,7 +35,7 @@ import (
 	"unicode/utf8"
 
 	"github.com/gmlewis/go-fonts/pb/glyphs"
-	"github.com/golang/protobuf/proto"
+	"google.golang.org/protobuf/proto"
 )
 
 // Font represents a webfont.

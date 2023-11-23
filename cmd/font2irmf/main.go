@@ -13,7 +13,6 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"os"
 	"regexp"
@@ -41,7 +40,7 @@ func main() {
 		log.Printf("\n\nProcessing file %q ...", arg)
 
 		fontData := &webfont.FontData{}
-		if buf, err := ioutil.ReadFile(arg); err != nil {
+		if buf, err := os.ReadFile(arg); err != nil {
 			log.Fatal(err)
 		} else {
 			if err := xml.Unmarshal(buf, fontData); err != nil {

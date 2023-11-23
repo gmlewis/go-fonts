@@ -10,6 +10,8 @@
 syntax = "proto3";
 package glyphs;
 
+option go_package = "github.com/gmlewis/go-fonts/pb/glyphs";
+
 message Glyphs {
   repeated Glyph glyphs = 1;
 }
