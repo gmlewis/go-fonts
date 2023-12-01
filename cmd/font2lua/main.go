@@ -20,6 +20,7 @@ import (
 	"os"
 	"regexp"
 	"sort"
+	"strconv"
 	"strings"
 	"text/template"
 	"unicode/utf8"
@@ -28,8 +29,12 @@ import (
 	"golang.org/x/exp/maps"
 )
 
+const (
+	maxMluaUnicode = 8204
+)
+
 var (
-	debug = flag.Bool("debug", false, "Turn on debugging info")
+	debug = flag.String("debug", "", "Turn on debugging info for specific glyph ('all' for all glyphs)")
 
 	outTemp = template.Must(template.New("out").Funcs(funcMap).Parse(luaTemplate))
 	funcMap = template.FuncMap{
@@ -45,7 +50,7 @@ func main() {
 	flag.Parse()
 
 	for _, arg := range flag.Args() {
-		logf("Processing file %q ...", arg)
+		logf("all", "Processing file %q ...", arg)
 
 		fontData := &webfont.FontData{}
 		if buf, err := os.ReadFile(arg); err != nil {
@@ -130,10 +135,12 @@ func (p *processor) ProcessGlyph(r rune, g *webfont.Glyph) {
 	if g.GerberLP != nil {
 		glyph.gerberLP = *g.GerberLP
 	}
-	if glyph.gerberLP != "" {
-		logf("glyph.gerberLP=%q", glyph.gerberLP)
-		glyph.regenerateFace()
-	}
+	/*
+		if glyph.gerberLP != "" {
+			logf(glyph.unicode, "r=%q, unicode=%q, glyph.gerberLP=%q", r, glyph.unicode, glyph.gerberLP)
+			glyph.regenerateFace()
+		}
+	*/
 }
 
 func (p *processor) addCmd(glyph *glyphT, cmd string, x, y float64, absCmd string) {
@@ -171,7 +178,7 @@ func mySprintf(fmtStr string, coords ...float64) string {
 
 func (p *processor) MoveTo(g *webfont.Glyph, cmd string, x, y float64) {
 	glyph := p.current
-	logf("p.MoveTo(g,%q,%v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
+	logf(glyph.unicode, "p.MoveTo(g,%q,%v,%v)", cmd, x+glyph.xmin, y+glyph.ymin)
 	absCmd := mySprintf("M%v %v", x+glyph.xmin, y+glyph.ymin)
 	p.addCmd(glyph, cmd, x, y, absCmd)
 }
@@ -239,7 +246,7 @@ func (g *glyphT) regenerateFace() {
 	g.findCutPoints()
 
 	for i, face := range g.faces {
-		logf("face[%v] new absCmd:\n%v", i, strings.Join(face.absCmds, ""))
+		logf(g.unicode, "face[%v] new absCmd:\n%v", i, strings.Join(face.absCmds, ""))
 	}
 
 	var d strings.Builder
@@ -292,7 +299,20 @@ func writeFont(fontData *webfont.FontData) {
 			}
 		}
 
+		charOrHex := fmt.Sprintf("%q", unicode)
+		if strings.HasPrefix(charOrHex, `"\u`) {
+			v, err := strconv.ParseInt(charOrHex[3:len(charOrHex)-1], 16, 64)
+			if err != nil {
+				log.Fatalf("unable to parse hex '%v': %v", charOrHex, err)
+			}
+			if v >= maxMluaUnicode {
+				continue // too large for mlua (not for gopher-lua coincidentally)
+			}
+			charOrHex = fmt.Sprintf(`"\%v"`, v)
+		}
+
 		lines = append(lines, fmt.Sprintf("%v={", luaChar))
+		lines = append(lines, fmt.Sprintf(`    char=%v,`, charOrHex))
 		lines = append(lines, fmt.Sprintf("    horiz_adv_x=%v,", glyph.horizAdvX))
 		// lines = append(lines, fmt.Sprintf(`    gerber_lp="%v",`, glyph.gerberLP))
 		lines = append(lines, fmt.Sprintf(`    d="%v",`, glyph.d))
@@ -319,8 +339,8 @@ func writeFont(fontData *webfont.FontData) {
 	}
 }
 
-func logf(fmt string, args ...any) {
-	if *debug {
+func logf(unicode, fmt string, args ...any) {
+	if *debug == "all" || *debug == unicode {
 		log.Printf(fmt, args...)
 	}
 }
