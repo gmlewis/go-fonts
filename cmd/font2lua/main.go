@@ -29,10 +29,6 @@ import (
 	"golang.org/x/exp/maps"
 )
 
-const (
-	maxMluaUnicode = 8204
-)
-
 var (
 	debug = flag.String("debug", "", "Turn on debugging info for specific glyph ('all' for all glyphs)")
 
@@ -135,12 +131,11 @@ func (p *processor) ProcessGlyph(r rune, g *webfont.Glyph) {
 	if g.GerberLP != nil {
 		glyph.gerberLP = *g.GerberLP
 	}
-	/*
-		if glyph.gerberLP != "" {
-			logf(glyph.unicode, "r=%q, unicode=%q, glyph.gerberLP=%q", r, glyph.unicode, glyph.gerberLP)
-			glyph.regenerateFace()
-		}
-	*/
+
+	// if glyph.gerberLP != "" {
+	logf(glyph.unicode, "r=%q, unicode=%q, glyph.gerberLP=%q", r, glyph.unicode, glyph.gerberLP)
+	glyph.regenerateFace()
+	// }
 }
 
 func (p *processor) addCmd(glyph *glyphT, cmd string, x, y float64, absCmd string) {
@@ -243,34 +238,42 @@ func (g *glyphT) findCutPoints() {
 }
 
 func (g *glyphT) regenerateFace() {
-	g.findCutPoints()
+	// g.findCutPoints()
 
 	for i, face := range g.faces {
 		logf(g.unicode, "face[%v] new absCmd:\n%v", i, strings.Join(face.absCmds, ""))
 	}
 
 	var d strings.Builder
-	face0 := g.faces[0]
-	for f0vertIdx := range face0.after {
-		d.WriteString(face0.absCmds[f0vertIdx])
-		for _, face := range g.faces[1:] {
-			if face.cut0Idx != f0vertIdx {
-				continue
-			}
-			v := face.after[face.cutIdx]
-			d.WriteString(mySprintf("L%v %v", v[0], v[1])) // jump over to face
-			for i := range face.after {
-				newIdx := (i + face.cutIdx + 1) % len(face.after)
-				if newIdx == 0 {
-					continue // skip after[0] - initial "M"
+	/*
+		face0 := g.faces[0]
+		for f0vertIdx := range face0.after {
+			d.WriteString(face0.absCmds[f0vertIdx])
+			for _, face := range g.faces[1:] {
+				if face.cut0Idx != f0vertIdx {
+					continue
 				}
-				d.WriteString(face.absCmds[newIdx])
+				v := face.after[face.cutIdx]
+				d.WriteString(mySprintf("L%v %v", v[0], v[1])) // jump over to face
+				for i := range face.after {
+					newIdx := (i + face.cutIdx + 1) % len(face.after)
+					if newIdx == 0 {
+						continue // skip after[0] - initial "M"
+					}
+					d.WriteString(face.absCmds[newIdx])
+				}
+				v = face0.after[face.cut0Idx]
+				d.WriteString(mySprintf("L%v %v", v[0], v[1])) // jump back to face0
 			}
-			v = face0.after[face.cut0Idx]
-			d.WriteString(mySprintf("L%v %v", v[0], v[1])) // jump back to face0
 		}
+		d.WriteString("Z") // terminate the face.
+	*/
+
+	for _, face := range g.faces {
+		d.WriteString(strings.Join(face.absCmds, ""))
+		d.WriteString("Z") // terminate each face.
 	}
-	d.WriteString("Z") // terminate the face.
+
 	g.d = d.String()
 }
 
@@ -305,10 +308,7 @@ func writeFont(fontData *webfont.FontData) {
 			if err != nil {
 				log.Fatalf("unable to parse hex '%v': %v", charOrHex, err)
 			}
-			if v >= maxMluaUnicode {
-				continue // too large for mlua (not for gopher-lua coincidentally)
-			}
-			charOrHex = fmt.Sprintf(`"\%v"`, v)
+			charOrHex = hex2luaUnicode(v) // fmt.Sprintf(`"\%v"`, v)
 		}
 
 		lines = append(lines, fmt.Sprintf("%v={", luaChar))
@@ -337,6 +337,21 @@ func writeFont(fontData *webfont.FontData) {
 	if err := os.WriteFile(filename, buf.Bytes(), 0644); err != nil {
 		log.Fatal(err)
 	}
+}
+
+func hex2luaUnicode(v int64) string {
+	if v == 0 {
+		return `"\000"`
+	}
+	var out strings.Builder
+	out.WriteString(`"`)
+	for v > 0 {
+		rem := v % 256
+		out.WriteString(fmt.Sprintf(`\%03d`, rem))
+		v /= 256
+	}
+	out.WriteString(`"`)
+	return out.String()
 }
 
 func logf(unicode, fmt string, args ...any) {

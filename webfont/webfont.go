@@ -10,10 +10,6 @@ import (
 	"unicode/utf8"
 )
 
-const (
-	maxMluaUnicode = 8204
-)
-
 // Processor is an interface used to process glyphs.
 type Processor interface {
 	// NewGlyph is called before the processing of a new glyph.
@@ -54,7 +50,7 @@ func ParseNeededGlyphs(fontData *FontData, message string, processor Processor) 
 
 	// Fix UTF8 rune errors and de-duplicate identical code points.
 	dedup := map[rune]*Glyph{}
-	var dst rune = maxMluaUnicode - 1
+	var dst rune = 0xfbf0
 	for _, g := range fontData.Font.Glyphs {
 		if g.Unicode == nil {
 			continue
@@ -68,19 +64,19 @@ func ParseNeededGlyphs(fontData *FontData, message string, processor Processor) 
 		}
 		if _, ok := dedup[r]; ok {
 			if dst == 0xfeff { // BOM - disallowed in Go source.
-				dst--
+				dst++
 			}
 			for {
 				if _, ok := dedup[dst]; !ok {
 					break
 				}
-				dst--
+				dst++
 			}
-			// log.Printf("WARNING: unicode %+q found multiple times in font. Moving code point to %+q", r, dst)
+			log.Printf("WARNING: unicode %+q found multiple times in font. Moving code point to %+q", r, dst)
 			rs := fmt.Sprintf("%c", dst)
 			g.Unicode = &rs
 			dedup[dst] = g
-			dst--
+			dst++
 			continue
 		}
 		rs := fmt.Sprintf("%c", r)
