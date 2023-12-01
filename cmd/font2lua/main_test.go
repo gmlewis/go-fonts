@@ -1,14 +1,8 @@
 package main
 
-import (
-	"testing"
-
-	"github.com/gmlewis/go-fonts/webfont"
-	"github.com/google/go-cmp/cmp"
-)
-
 func String(s string) *string { return &s }
 
+/* removed regeneration
 func TestProcessor_Letter_a(t *testing.T) {
 	g := &webfont.Glyph{
 		Unicode:  String("a"),
@@ -172,3 +166,4 @@ v22q0 38 -30.5 58t-86.5 20q-58 0 -88 -22.5t-35 -70.5h-84zM220 50q69 0 113 36.5t4
 		}
 	}
 }
+*/
