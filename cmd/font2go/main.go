@@ -58,6 +58,7 @@ func main() {
 
 		fontData.Font.ID = strings.ToLower(fontData.Font.ID)
 		fontData.Font.ID = strings.Replace(fontData.Font.ID, "-", "_", -1)
+		fontData.Font.ID = strings.TrimSuffix(fontData.Font.ID, "_")
 		if digitRE.MatchString(fontData.Font.ID) {
 			fontData.Font.ID = "f" + fontData.Font.ID
 		}
@@ -169,26 +170,35 @@ func writeReadme(fontData *webfont.FontData, fontDir string) {
 	}
 }
 
-func writeLicense(srcDir, fontDir string) {
-	// Copy any license along with the font.
-	txtFiles, err := filepath.Glob(filepath.Join(srcDir, "*.txt"))
-	if err != nil || len(txtFiles) == 0 {
-		log.Printf("WARNING: unable to find license file in %v : %v", srcDir, err)
-		return
-	}
-	for _, txtFile := range txtFiles {
-		buf, err := os.ReadFile(txtFile)
+func copyFiles(filenames []string, fontDir string) {
+	for _, filename := range filenames {
+		buf, err := os.ReadFile(filename)
 		if err != nil {
-			log.Printf("WARNING: unable to read text file %v : %v", txtFile, err)
+			log.Printf("WARNING: unable to read text file %v : %v", filename, err)
 			continue
 		}
-		baseName := filepath.Base(txtFile)
+		baseName := filepath.Base(filename)
 		dstName := filepath.Join(fontDir, baseName)
 		if err := os.WriteFile(dstName, buf, 0644); err != nil {
 			log.Printf("WARNING: unable to write text file %v : %v", dstName, err)
 			continue
 		}
-		log.Printf("Copied license file to %v", dstName)
+		log.Printf("Copied file to %v", dstName)
+	}
+}
+
+func writeLicense(srcDir, fontDir string) {
+	// Copy any license along with the font.
+	txtFiles, err := filepath.Glob(filepath.Join(srcDir, "*.txt"))
+	if err == nil && len(txtFiles) > 0 {
+		copyFiles(txtFiles, fontDir)
+	} else {
+		log.Printf("WARNING: unable to find license file in %v : %v", srcDir, err)
+	}
+	// Also copy any README-orig.md files.
+	txtFiles, err = filepath.Glob(filepath.Join(srcDir, "README-orig.md"))
+	if err == nil && len(txtFiles) > 0 {
+		copyFiles(txtFiles, fontDir)
 	}
 }
 
