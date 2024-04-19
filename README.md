@@ -173,7 +173,6 @@ limitations under the License.
 [![landliebe](images/sample_landliebe.png)](fonts/landliebe)
 [![latoregular](images/sample_latoregular.png)](fonts/latoregular)
 [![leaguescriptthin_regular](images/sample_leaguescriptthin_regular.png)](fonts/leaguescriptthin_regular)
-[![lelandtext](images/sample_lelandtext.png)](fonts/lelandtext)
 [![lobstertwo](images/sample_lobstertwo.png)](fonts/lobstertwo)
 [![lobstertwo_bold](images/sample_lobstertwo_bold.png)](fonts/lobstertwo_bold)
 [![lobstertwo_bolditalic](images/sample_lobstertwo_bolditalic.png)](fonts/lobstertwo_bolditalic)
