@@ -2,7 +2,7 @@
 
 // font2lua reads one or more standard SVG webfont file(s) and writes Lua file(s)
 // used to render them to polygons in Blackjack and go-bjk.
-// See: https://github.com/setzer22/blackjack
+// See: https://github.com/gmlewis/blackjack
 // and: https://github.com/gmlewis/go-bjk
 //
 // Usage:
