@@ -58,6 +58,7 @@ func main() {
 
 		fontData.Font.ID = strings.ToLower(fontData.Font.ID)
 		fontData.Font.ID = strings.Replace(fontData.Font.ID, "-", "_", -1)
+		fontData.Font.ID = strings.TrimSuffix(fontData.Font.ID, "_")
 		if digitRE.MatchString(fontData.Font.ID) {
 			fontData.Font.ID = "f" + fontData.Font.ID
 		}
