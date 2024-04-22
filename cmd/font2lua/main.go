@@ -26,7 +26,6 @@ import (
 	"unicode/utf8"
 
 	"github.com/gmlewis/go-fonts/webfont"
-	"golang.org/x/exp/maps"
 )
 
 var (
@@ -283,7 +282,10 @@ func writeFont(fontData *webfont.FontData) {
 		log.Fatalf("webfont: %v", err)
 	}
 
-	keys := maps.Keys(p.glyphs)
+	keys := make([]string, 0, len(p.glyphs))
+	for k := range p.glyphs {
+		keys = append(keys, k)
+	}
 	sort.Strings(keys)
 
 	var lines []string
