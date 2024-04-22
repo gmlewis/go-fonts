@@ -282,11 +282,9 @@ func writeFont(fontData *webfont.FontData) {
 		log.Fatalf("webfont: %v", err)
 	}
 
-	keys := make([]string, len(p.glyphs))
-	i := 0
+	keys := make([]string, 0, len(p.glyphs))
 	for k := range p.glyphs {
-		keys[i] = k
-		i++
+		keys = append(keys, k)
 	}
 	sort.Strings(keys)
 
