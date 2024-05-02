@@ -21,18 +21,22 @@ import (
 Then render the text to polygons and use them however you want:
 
 ```go
-  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "ubuntumonoregular", Center)
+  xPos, yPos, xScale, yScale := 0.0, 0.0, 1.0, 1.0
+  message := "Sample from ubuntumonoregular"
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "ubuntumonoregular", &fonts.Center)
   if err != nil {
-    return err
+    log.Fatal(err)
   }
   log.Printf("MBB: %v", render.MBB)
-  for _, poly := range render.Polygons {
+  for i, poly := range render.Polygons {
+    log.Printf("Polygon #%v/%v has %v points. MBB: %v", i+1, len(render.Polygons), len(poly.Pts), poly.MBB)
     // ...
   }
 ```
 
-See https://github.com/gmlewis/go-gerber for an example application
-that uses this package.
+See https://github.com/gmlewis/go-gerber
+or https://github.com/gmlewis/blackjack
+for example applications that use this package.
 
 ----------------------------------------------------------------------
 
@@ -334,8 +338,8 @@ limitations under the License.
 [![latoregular](images/sample_latoregular.png)](fonts/latoregular)
 [![leaguescriptthin_regular](images/sample_leaguescriptthin_regular.png)](fonts/leaguescriptthin_regular)
 [![ledger_regular](images/sample_ledger_regular.png)](fonts/ledger_regular)
-[![leland](images/sample_leland.png)](fonts/leland)
-[![lelandtext](images/sample_lelandtext.png)](fonts/lelandtext)
+[leland](fonts/leland)
+[lelandtext](fonts/lelandtext)
 [![librebaskerville_bold](images/sample_librebaskerville_bold.png)](fonts/librebaskerville_bold)
 [![librebaskerville_italic](images/sample_librebaskerville_italic.png)](fonts/librebaskerville_italic)
 [![librebaskerville_regular](images/sample_librebaskerville_regular.png)](fonts/librebaskerville_regular)
