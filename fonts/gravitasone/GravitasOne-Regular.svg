@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20190801 at Wed Jun 15 16:17:38 2011
- By Glenn
+Created by FontForge 20230101 at Wed Jun 15 16:17:38 2011
+ By Glenn Lewis
 Copyright (c) 2011, Sorkin Type Co (www.sorkintype.com)
 with Reserved Font Name "Gravitas".
 
@@ -37,6 +37,8 @@ http://scripts.sil.org/OFL
     <glyph glyph-name="nonmarkingreturn" horiz-adv-x="756" 
  />
     <glyph glyph-name="space" unicode=" " horiz-adv-x="756" 
+ />
+    <glyph glyph-name="space" unicode="&#xa0;" horiz-adv-x="756" 
  />
     <glyph glyph-name="space" unicode="&#xa0;" horiz-adv-x="756" 
  />
@@ -383,6 +385,9 @@ t-29.5 -100t-83.5 -69.5t-129 -41t-165 -13.5q-89 0 -162 10.5t-125.5 31.5t-81 52t-
 d="M129 1351q5 3 19 14.5t36 30.5q28 24 66 56.5t80.5 67t85.5 69.5t80.5 64.5t66.5 51t44 30.5q17 10 34 14t34 4q28 0 52.5 -12t43.5 -32t30 -46.5t11 -54.5q0 -33 -16 -62.5t-51 -49.5q-14 -8 -47 -22.5t-77 -32.5t-95 -38t-102 -39t-97.5 -36t-81.5 -29
 q-26 -9 -43 -15.5t-23 -9.5z" />
     <glyph glyph-name="mu" unicode="&#xb5;" horiz-adv-x="1910" 
+d="M213 1113h595q-10 -201 -16 -371t-6 -327q0 -89 15 -145t38.5 -88t52.5 -43.5t57 -11.5q36 0 63 17t45 46.5t26.5 69t8.5 85.5v768h595v-973q0 -22 11 -31.5t26 -9.5t26 10t18.5 33.5t11 62.5t3.5 97h84v-33q0 -99 -22 -159.5t-69.5 -93.5t-123 -43.5t-181.5 -10.5
+q-84 0 -144.5 11t-103 32t-68.5 52.5t-40 73.5q-8 -28 -21.5 -52t-34.5 -42t-49.5 -28t-66.5 -10q-110 0 -161 111l26 -619h-595v1622z" />
+    <glyph glyph-name="mu" unicode="&#x3bc;" horiz-adv-x="1910" 
 d="M213 1113h595q-10 -201 -16 -371t-6 -327q0 -89 15 -145t38.5 -88t52.5 -43.5t57 -11.5q36 0 63 17t45 46.5t26.5 69t8.5 85.5v768h595v-973q0 -22 11 -31.5t26 -9.5t26 10t18.5 33.5t11 62.5t3.5 97h84v-33q0 -99 -22 -159.5t-69.5 -93.5t-123 -43.5t-181.5 -10.5
 q-84 0 -144.5 11t-103 32t-68.5 52.5t-40 73.5q-8 -28 -21.5 -52t-34.5 -42t-49.5 -28t-66.5 -10q-110 0 -161 111l26 -619h-595v1622z" />
     <glyph glyph-name="mu" unicode="&#x3bc;" horiz-adv-x="1910" 

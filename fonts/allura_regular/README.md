@@ -6,18 +6,21 @@ To use this font in your code, simply import it:
 
 ```go
 import (
-  . "github.com/gmlewis/go-fonts/fonts"
+  "github.com/gmlewis/go-fonts/fonts"
   _ "github.com/gmlewis/go-fonts/fonts/allura_regular"
 )
 
 func main() {
   // ...
-  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "allura_regular", Center)
+  xPos, yPos, xScale, yScale := 0.0, 0.0, 1.0, 1.0
+  message := "Sample from allura_regular"
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "allura_regular", &fonts.Center)
   if err != nil {
-    return err
+    log.Fatal(err)
   }
   log.Printf("MBB: %v", render.MBB)
-  for _, poly := range render.Polygons {
+  for i, poly := range render.Polygons {
+    log.Printf("Polygon #%v/%v has %v points. MBB: %v", i+1, len(render.Polygons), len(poly.Pts), poly.MBB)
     // ...
   }
   // ...

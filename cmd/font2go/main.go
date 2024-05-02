@@ -189,16 +189,16 @@ func copyFiles(filenames []string, fontDir string) {
 
 func writeLicense(srcDir, fontDir string) {
 	// Copy any license along with the font.
-	txtFiles, err := filepath.Glob(filepath.Join(srcDir, "*.txt"))
-	if err == nil && len(txtFiles) > 0 {
-		copyFiles(txtFiles, fontDir)
+	filesToCopy, err := filepath.Glob(filepath.Join(srcDir, "*.txt"))
+	if err == nil && len(filesToCopy) > 0 {
+		copyFiles(filesToCopy, fontDir)
 	} else {
 		log.Printf("WARNING: unable to find license file in %v : %v", srcDir, err)
 	}
 	// Also copy any README-orig.md files.
-	txtFiles, err = filepath.Glob(filepath.Join(srcDir, "README-orig.md"))
-	if err == nil && len(txtFiles) > 0 {
-		copyFiles(txtFiles, fontDir)
+	filesToCopy, err = filepath.Glob(filepath.Join(srcDir, "README-orig.md"))
+	if err == nil && len(filesToCopy) > 0 {
+		copyFiles(filesToCopy, fontDir)
 	}
 }
 
@@ -239,18 +239,21 @@ To use this font in your code, simply import it:
 
 ` + "```" + `go
 import (
-  . "github.com/gmlewis/go-fonts/fonts"
+  "github.com/gmlewis/go-fonts/fonts"
   _ "github.com/gmlewis/go-fonts/fonts/{{ .ID }}"
 )
 
 func main() {
   // ...
-  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "{{ .ID }}", Center)
+  xPos, yPos, xScale, yScale := 0.0, 0.0, 1.0, 1.0
+  message := "Sample from {{ .ID }}"
+  render, err := fonts.Text(xPos, yPos, xScale, yScale, message, "{{ .ID }}", &fonts.Center)
   if err != nil {
-    return err
+    log.Fatal(err)
   }
   log.Printf("MBB: %v", render.MBB)
-  for _, poly := range render.Polygons {
+  for i, poly := range render.Polygons {
+    log.Printf("Polygon #%v/%v has %v points. MBB: %v", i+1, len(render.Polygons), len(poly.Pts), poly.MBB)
     // ...
   }
   // ...
