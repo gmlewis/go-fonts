@@ -6,6 +6,19 @@
 This is an experimental package used to render open source fonts to
 polygons using Go.
 
+As of version `v0.18.0`, all fonts have been moved to separate repos
+due to the original repo being [just too huge](https://github.com/golang/go/issues/67996#issuecomment-2197565901).
+
+They are now organized by the first letter of the name of the font:
+
+```
+github.com/gmlewis/go-fonts-a/fonts/aaarghnormal
+...
+github.com/gmlewis/go-fonts-b/fonts/baloo
+...
+github.com/gmlewis/go-fonts-z/fonts/znikomitno24
+```
+
 ## Example usage
 
 To use one or more fonts within a Go program, import the main
