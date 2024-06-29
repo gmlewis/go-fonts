@@ -7,15 +7,15 @@ import (
 	"image/color"
 	"log"
 
+	_ "github.com/gmlewis/go-fonts-l/fonts/latoregular"
+	_ "github.com/gmlewis/go-fonts-p/fonts/printersornamentsone"
+	_ "github.com/gmlewis/go-fonts-s/fonts/scriptinapro"
+	_ "github.com/gmlewis/go-fonts-s/fonts/sofia_regular"
+	_ "github.com/gmlewis/go-fonts-s/fonts/spirax_regular"
+	_ "github.com/gmlewis/go-fonts-t/fonts/tangerine_bold"
+	_ "github.com/gmlewis/go-fonts-t/fonts/topsecret_bold"
+	_ "github.com/gmlewis/go-fonts-t/fonts/typemymusic_notation"
 	. "github.com/gmlewis/go-fonts/fonts"
-	_ "github.com/gmlewis/go-fonts/fonts/latoregular"
-	_ "github.com/gmlewis/go-fonts/fonts/printersornamentsone"
-	_ "github.com/gmlewis/go-fonts/fonts/scriptinapro"
-	_ "github.com/gmlewis/go-fonts/fonts/sofia_regular"
-	_ "github.com/gmlewis/go-fonts/fonts/spirax_regular"
-	_ "github.com/gmlewis/go-fonts/fonts/tangerine_bold"
-	_ "github.com/gmlewis/go-fonts/fonts/topsecret_bold"
-	_ "github.com/gmlewis/go-fonts/fonts/typemymusic_notation"
 )
 
 var (

@@ -12,8 +12,8 @@ import (
 	"log"
 	"strings"
 
+	_ "github.com/gmlewis/go-fonts-b/fonts/baloo"
 	. "github.com/gmlewis/go-fonts/fonts"
-	_ "github.com/gmlewis/go-fonts/fonts/baloo"
 )
 
 var (

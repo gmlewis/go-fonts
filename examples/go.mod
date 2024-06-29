@@ -4,18 +4,18 @@ go 1.22.4
 
 require (
 	github.com/fogleman/gg v1.3.0
-	github.com/gmlewis/go-fonts v0.17.0
-	github.com/gmlewis/go-fonts/fonts/carrelectronicdingbats v0.0.0-20240626194532-dfc547a1f7ce
-	github.com/gmlewis/go-fonts/fonts/freeserif v0.0.0-20240626194532-dfc547a1f7ce
-	github.com/gmlewis/go-fonts/fonts/latoregular v0.0.0-20240626194532-dfc547a1f7ce
-	github.com/gmlewis/go-fonts/fonts/modak v0.0.0-20240626194532-dfc547a1f7ce
-	github.com/gmlewis/go-fonts/fonts/printersornamentsone v0.0.0-20240626194532-dfc547a1f7ce
-	github.com/gmlewis/go-fonts/fonts/scriptinapro v0.0.0-20240626194532-dfc547a1f7ce
-	github.com/gmlewis/go-fonts/fonts/sofia_regular v0.0.0-20240626194532-dfc547a1f7ce
-	github.com/gmlewis/go-fonts/fonts/spirax_regular v0.0.0-20240626194532-dfc547a1f7ce
-	github.com/gmlewis/go-fonts/fonts/tangerine_bold v0.0.0-20240626194532-dfc547a1f7ce
-	github.com/gmlewis/go-fonts/fonts/topsecret_bold v0.0.0-20240626194532-dfc547a1f7ce
-	github.com/gmlewis/go-fonts/fonts/typemymusic_notation v0.0.0-20240626194532-dfc547a1f7ce
+	github.com/gmlewis/go-fonts v0.18.0
+	github.com/gmlewis/go-fonts-c/fonts/carrelectronicdingbats v0.1.0
+	github.com/gmlewis/go-fonts-f/fonts/freeserif v0.1.0
+	github.com/gmlewis/go-fonts-l/fonts/latoregular v0.1.0
+	github.com/gmlewis/go-fonts-m/fonts/modak v0.1.0
+	github.com/gmlewis/go-fonts-p/fonts/printersornamentsone v0.1.0
+	github.com/gmlewis/go-fonts-s/fonts/scriptinapro v0.1.0
+	github.com/gmlewis/go-fonts-s/fonts/sofia_regular v0.1.0
+	github.com/gmlewis/go-fonts-s/fonts/spirax_regular v0.1.0
+	github.com/gmlewis/go-fonts-t/fonts/tangerine_bold v0.1.0
+	github.com/gmlewis/go-fonts-t/fonts/topsecret_bold v0.1.0
+	github.com/gmlewis/go-fonts-t/fonts/typemymusic_notation v0.1.0
 )
 
 require (
@@ -27,4 +27,26 @@ require (
 	google.golang.org/protobuf v1.34.2 // indirect
 )
 
-replace github.com/gmlewis/go-fonts v0.17.0 => ../
+replace github.com/gmlewis/go-fonts v0.18.0 => ../
+
+replace github.com/gmlewis/go-fonts-c/fonts/carrelectronicdingbats v0.1.0 => ../../go-fonts-c/fonts/carrelectronicdingbats
+
+replace github.com/gmlewis/go-fonts-f/fonts/freeserif v0.1.0 => ../../go-fonts-f/fonts/freeserif
+
+replace github.com/gmlewis/go-fonts-l/fonts/latoregular v0.1.0 => ../../go-fonts-l/fonts/latoregular
+
+replace github.com/gmlewis/go-fonts-m/fonts/modak v0.1.0 => ../../go-fonts-m/fonts/modak
+
+replace github.com/gmlewis/go-fonts-p/fonts/printersornamentsone v0.1.0 => ../../go-fonts-p/fonts/printersornamentsone
+
+replace github.com/gmlewis/go-fonts-s/fonts/scriptinapro v0.1.0 => ../../go-fonts-s/fonts/scriptinapro
+
+replace github.com/gmlewis/go-fonts-s/fonts/sofia_regular v0.1.0 => ../../go-fonts-s/fonts/sofia_regular
+
+replace github.com/gmlewis/go-fonts-s/fonts/spirax_regular v0.1.0 => ../../go-fonts-s/fonts/spirax_regular
+
+replace github.com/gmlewis/go-fonts-t/fonts/tangerine_bold v0.1.0 => ../../go-fonts-t/fonts/tangerine_bold
+
+replace github.com/gmlewis/go-fonts-t/fonts/topsecret_bold v0.1.0 => ../../go-fonts-t/fonts/topsecret_bold
+
+replace github.com/gmlewis/go-fonts-t/fonts/typemymusic_notation v0.1.0 => ../../go-fonts-t/fonts/typemymusic_notation

@@ -9,10 +9,10 @@ import (
 	"log"
 	"math"
 
+	_ "github.com/gmlewis/go-fonts-c/fonts/carrelectronicdingbats"
+	_ "github.com/gmlewis/go-fonts-f/fonts/freeserif"
+	_ "github.com/gmlewis/go-fonts-l/fonts/latoregular"
 	. "github.com/gmlewis/go-fonts/fonts"
-	_ "github.com/gmlewis/go-fonts/fonts/carrelectronicdingbats"
-	_ "github.com/gmlewis/go-fonts/fonts/freeserif"
-	_ "github.com/gmlewis/go-fonts/fonts/latoregular"
 )
 
 var (

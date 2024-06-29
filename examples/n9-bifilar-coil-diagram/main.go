@@ -9,8 +9,8 @@ import (
 	"strings"
 
 	"github.com/fogleman/gg"
+	_ "github.com/gmlewis/go-fonts-l/fonts/latoregular"
 	. "github.com/gmlewis/go-fonts/fonts"
-	_ "github.com/gmlewis/go-fonts/fonts/latoregular"
 )
 
 var (

@@ -8,7 +8,7 @@
 // import (
 //
 //	"github.com/gmlewis/go-fonts/fonts"
-//	_ "github.com/gmlewis/go-fonts/fonts/znikomitno24"
+//	_ "github.com/gmlewis/go-fonts-z/fonts/znikomitno24"
 //
 // )
 //

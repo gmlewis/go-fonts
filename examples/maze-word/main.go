@@ -7,8 +7,8 @@ import (
 	"image/color"
 	"log"
 
+	_ "github.com/gmlewis/go-fonts-m/fonts/modak"
 	. "github.com/gmlewis/go-fonts/fonts"
-	_ "github.com/gmlewis/go-fonts/fonts/modak"
 )
 
 var (
