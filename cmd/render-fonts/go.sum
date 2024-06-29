@@ -1,6 +1,8 @@
 github.com/ajstarks/deck v0.0.0-20190324184121-6fe4637ccacd/go.mod h1:j3f/59diR4DorW5A78eDYvRkdrkh+nps4p5LA1Tl05U=
 github.com/fogleman/gg v1.3.0 h1:/7zJX8F6AaYQc57WQCyN9cAIz+4bCJGO9B+dyW29am8=
 github.com/fogleman/gg v1.3.0/go.mod h1:R/bRT+9gY/C5z7JzPU0zXsXHKM4/ayA+zqcVNZzPa1k=
+github.com/gmlewis/go-fonts/fonts/latoregular v0.0.0-20240626233958-3409c190883f h1:EcqRpvFwYjCpQFcQYrakXGkDhprL55N7hyZnA3bcG1k=
+github.com/gmlewis/go-fonts/fonts/latoregular v0.0.0-20240626233958-3409c190883f/go.mod h1:4/+kYhK9FmS9l5nMDFdziZHunom0qCQ9T3yACEIR7hQ=
 github.com/gmlewis/go3d v0.0.4 h1:2ymApzgFXKZJ0nFgItUAAXt2z8n5tPOz5Wtu/SGZ1As=
 github.com/gmlewis/go3d v0.0.4/go.mod h1:kmNbdpGuKWLQCUigppF9tBmoHDLrsymSy6se+eBUOVk=
 github.com/gmlewis/ponoko2d v0.0.0-20190404133045-d77d370bec9a h1:+f/EwY1eQ5vL78T1LwqOKSGoEGtZ3kkwAvONoJtDay0=
