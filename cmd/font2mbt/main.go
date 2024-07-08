@@ -28,7 +28,10 @@ import (
 var (
 	debug = flag.String("debug", "", "Turn on debugging info for specific glyph ('all' for all glyphs)")
 
-	outTemp = template.Must(template.New("out").Parse(mbtTemplate))
+	outTemp = template.Must(template.New("out").Funcs(funcMap).Parse(mbtTemplate))
+	funcMap = template.FuncMap{
+		"writeDouble": writeDouble,
+	}
 
 	digitRE = regexp.MustCompile(`^\d`)
 )
@@ -297,13 +300,13 @@ func writeFont(fontData *webfont.FontData) {
 
 		lines = append(lines, fmt.Sprintf(`"%v": {`, mbtChar))
 		lines = append(lines, fmt.Sprintf(`  char: "%v",`, mbtChar))
-		lines = append(lines, fmt.Sprintf("  horiz_adv_x: %v,", glyph.horizAdvX))
+		lines = append(lines, fmt.Sprintf("  horiz_adv_x: %v,", writeDouble(glyph.horizAdvX)))
 		// lines = append(lines, fmt.Sprintf(`  gerber_lp: "%v",`, glyph.gerberLP))
 		lines = append(lines, fmt.Sprintf(`  d: "%v",`, glyph.d))
-		lines = append(lines, fmt.Sprintf("  xmin: %v,", glyph.xmin))
-		lines = append(lines, fmt.Sprintf("  ymin: %v,", glyph.ymin))
-		lines = append(lines, fmt.Sprintf("  xmax: %v,", glyph.xmax))
-		lines = append(lines, fmt.Sprintf("  ymax: %v,", glyph.ymax))
+		lines = append(lines, fmt.Sprintf("  xmin: %v,", writeDouble(glyph.xmin)))
+		lines = append(lines, fmt.Sprintf("  ymin: %v,", writeDouble(glyph.ymin)))
+		lines = append(lines, fmt.Sprintf("  xmax: %v,", writeDouble(glyph.xmax)))
+		lines = append(lines, fmt.Sprintf("  ymax: %v,", writeDouble(glyph.ymax)))
 		lines = append(lines, "},")
 	}
 
@@ -319,8 +322,16 @@ func writeFont(fontData *webfont.FontData) {
 	must(os.MkdirAll(fontDir, 0755))
 	filename := filepath.Join(fontDir, fmt.Sprintf("%v.mbt", fontData.Font.ID))
 	must(os.WriteFile(filename, buf.Bytes(), 0644))
-	filename = filepath.Join(fontDir, "mod.pkg.json")
-	must(os.WriteFile(filename, []byte(modPkgJSON), 0644))
+	filename = filepath.Join(fontDir, "moon.pkg.json")
+	must(os.WriteFile(filename, []byte(moonPkgJSON), 0644))
+}
+
+func writeDouble(f float64) string {
+	s := fmt.Sprintf("%v", f)
+	if strings.Contains(s, ".") {
+		return s
+	}
+	return s + ".0"
 }
 
 func must(err error) {
@@ -344,15 +355,15 @@ let glyphs : Map[String, @fonts.Glyph] = {
 
 pub let font : @fonts.Font = {
   id: "{{ .ID }}",
-  horiz_adv_x: {{ .HorizAdvX }},
-  units_per_em: {{ .FontFace.UnitsPerEm }},
-  ascent: {{ .FontFace.Ascent }},
-  descent: {{ .FontFace.Descent }},
+  horiz_adv_x: {{ .HorizAdvX | writeDouble }},
+  units_per_em: {{ .FontFace.UnitsPerEm | writeDouble }},
+  ascent: {{ .FontFace.Ascent | writeDouble }},
+  descent: {{ .FontFace.Descent | writeDouble }},
   glyphs,
 }
 `
 
-var modPkgJSON = `{
+var moonPkgJSON = `{
   "import": [
     "gmlewis/moonbit-fonts/fonts"
   ]

@@ -72,7 +72,7 @@ func ParseNeededGlyphs(fontData *FontData, message string, processor Processor) 
 				}
 				dst++
 			}
-			log.Printf("WARNING: unicode %+q found multiple times in font. Moving code point to %+q", r, dst)
+			// log.Printf("WARNING: unicode %+q found multiple times in font. Moving code point to %+q", r, dst)
 			rs := fmt.Sprintf("%c", dst)
 			g.Unicode = &rs
 			dedup[dst] = g
