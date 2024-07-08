@@ -59,6 +59,9 @@ Enjoy!
 
 # License
 
+Please note that all fonts have their own licenses which are included
+in their respective directories.
+
 Copyright 2019-2024 Glenn M. Lewis. All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
