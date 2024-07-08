@@ -56,17 +56,22 @@ func main() {
 			}
 		}
 
-		fontData.Font.ID = strings.ToLower(fontData.Font.ID)
-		fontData.Font.ID = strings.Replace(fontData.Font.ID, "-", "_", -1)
-		fontData.Font.ID = strings.TrimSuffix(fontData.Font.ID, "_")
-		if digitRE.MatchString(fontData.Font.ID) {
-			fontData.Font.ID = "f" + fontData.Font.ID
-		}
+		sanitizeFontName(fontData)
 
 		writeFont(fontData)
 	}
 
 	fmt.Println("Done.")
+}
+
+func sanitizeFontName(fontData *webfont.FontData) {
+	fontData.Font.ID = strings.ToLower(fontData.Font.ID)
+	fontData.Font.ID = strings.Replace(fontData.Font.ID, "'", "", -1)
+	fontData.Font.ID = strings.Replace(fontData.Font.ID, "-", "_", -1)
+	fontData.Font.ID = strings.TrimSuffix(fontData.Font.ID, "_")
+	if digitRE.MatchString(fontData.Font.ID) {
+		fontData.Font.ID = "f" + fontData.Font.ID
+	}
 }
 
 // processor implements the webfont.Processor interface.

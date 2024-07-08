@@ -15,8 +15,8 @@ import (
 	"sort"
 	"strings"
 
+	_ "github.com/gmlewis/go-fonts-l/fonts/latoregular"
 	. "github.com/gmlewis/go-fonts/fonts"
-	_ "github.com/gmlewis/go-fonts/fonts/latoregular"
 )
 
 var (

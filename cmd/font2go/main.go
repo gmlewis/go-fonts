@@ -32,11 +32,12 @@ var (
 
 	outTemp = template.Must(template.New("out").Funcs(funcMap).Parse(goTemplate))
 	funcMap = template.FuncMap{
-		"floats":     floats,
-		"orEmpty":    orEmpty,
-		"viewFilter": viewFilter,
+		"firstLetter": firstLetter,
+		"floats":      floats,
+		"orEmpty":     orEmpty,
+		"viewFilter":  viewFilter,
 	}
-	readmeTemp = template.Must(template.New("readme").Parse(readmeTemplate))
+	readmeTemp = template.Must(template.New("readme").Funcs(funcMap).Parse(readmeTemplate))
 
 	digitRE = regexp.MustCompile(`^\d`)
 )
@@ -56,12 +57,7 @@ func main() {
 			}
 		}
 
-		fontData.Font.ID = strings.ToLower(fontData.Font.ID)
-		fontData.Font.ID = strings.Replace(fontData.Font.ID, "-", "_", -1)
-		fontData.Font.ID = strings.TrimSuffix(fontData.Font.ID, "_")
-		if digitRE.MatchString(fontData.Font.ID) {
-			fontData.Font.ID = "f" + fontData.Font.ID
-		}
+		sanitizeFontName(fontData)
 
 		fontDir := filepath.Join(prefix, fontData.Font.ID)
 		if err := os.MkdirAll(fontDir, 0755); err != nil {
@@ -80,6 +76,16 @@ func main() {
 	}
 
 	fmt.Println("Done.")
+}
+
+func sanitizeFontName(fontData *webfont.FontData) {
+	fontData.Font.ID = strings.ToLower(fontData.Font.ID)
+	fontData.Font.ID = strings.Replace(fontData.Font.ID, "'", "", -1)
+	fontData.Font.ID = strings.Replace(fontData.Font.ID, "-", "_", -1)
+	fontData.Font.ID = strings.TrimSuffix(fontData.Font.ID, "_")
+	if digitRE.MatchString(fontData.Font.ID) {
+		fontData.Font.ID = "f" + fontData.Font.ID
+	}
 }
 
 // processor implements the webfont.Processor interface.
@@ -227,6 +233,10 @@ func orEmpty(s *string) string {
 	return fmt.Sprintf("%q", *s)
 }
 
+func firstLetter(s string) string {
+	return s[0:1]
+}
+
 func floats(f []float64) string {
 	return fmt.Sprintf("%#v", f)
 }
@@ -240,7 +250,7 @@ To use this font in your code, simply import it:
 ` + "```" + `go
 import (
   "github.com/gmlewis/go-fonts/fonts"
-  _ "github.com/gmlewis/go-fonts/fonts/{{ .ID }}"
+  _ "github.com/gmlewis/go-fonts-{{ .ID | firstLetter }}/fonts/{{ .ID }}"
 )
 
 func main() {

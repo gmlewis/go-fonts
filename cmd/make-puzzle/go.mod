@@ -3,7 +3,7 @@ module github.com/gmlewis/go-fonts/cmd/make-puzzle
 go 1.22.4
 
 require (
-	github.com/gmlewis/go-fonts v0.18.0
+	github.com/gmlewis/go-fonts v0.19.0
 	github.com/gmlewis/go-fonts-b/fonts/baloo v0.1.0
 )
 
@@ -17,6 +17,6 @@ require (
 	google.golang.org/protobuf v1.34.2 // indirect
 )
 
-replace github.com/gmlewis/go-fonts v0.18.0 => ../../
+replace github.com/gmlewis/go-fonts v0.19.0 => ../../
 
 replace github.com/gmlewis/go-fonts-b/fonts/baloo v0.1.0 => ../../../go-fonts-b/fonts/baloo
