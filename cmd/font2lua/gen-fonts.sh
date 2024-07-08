@@ -1,2 +1,2 @@
 #!/bin/bash -ex
-go run main.go ../../fonts/*/*.svg
+go run main.go ../../../go-fonts-*/fonts/*/*.svg
