@@ -274,6 +274,19 @@ func (g *glyphT) regenerateFace() {
 	g.d = d.String()
 }
 
+func runeToMbtString(s string) string {
+	switch s {
+	case `"`:
+		return `\"`
+	case `\`:
+		return `\\`
+	case "\t", "\n", "\r":
+		return fmt.Sprintf(`\x%x`, s)
+	default:
+		return s
+	}
+}
+
 func writeFont(fontData *webfont.FontData) {
 	p := &processor{glyphs: map[string]*glyphT{}}
 	if err := webfont.ParseNeededGlyphs(fontData, "", p); err != nil { // DEBUGGING ONLY
@@ -290,13 +303,7 @@ func writeFont(fontData *webfont.FontData) {
 	for _, unicode := range keys {
 		glyph := p.glyphs[unicode]
 
-		mbtChar := string(unicode)
-		switch mbtChar {
-		case `"`:
-			mbtChar = `\"`
-		case `\`:
-			mbtChar = `\\`
-		}
+		mbtChar := runeToMbtString(unicode)
 
 		lines = append(lines, fmt.Sprintf(`"%v": {`, mbtChar))
 		lines = append(lines, fmt.Sprintf(`  char: "%v",`, mbtChar))

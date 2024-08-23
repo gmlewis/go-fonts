@@ -1,6 +1,39 @@
 package main
 
+import "testing"
+
 func String(s string) *string { return &s }
+
+func TestRuneToMbtString(t *testing.T) {
+	t.Parallel()
+	tests := []struct {
+		s    string
+		want string
+	}{
+		{
+			s:    "\t",
+			want: `\x09`,
+		},
+		{
+			s:    "\r",
+			want: `\x0d`,
+		},
+		{
+			s:    "\n",
+			want: `\x0a`,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.s, func(t *testing.T) {
+			got := runeToMbtString(tt.s)
+
+			if got != tt.want {
+				t.Errorf("runeToMbtString(%q) = '%v', want '%v'", tt.s, got, tt.want)
+			}
+		})
+	}
+}
 
 /* removed regeneration
 func TestProcessor_Letter_a(t *testing.T) {
