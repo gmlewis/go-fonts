@@ -33,7 +33,8 @@ import (
 )
 
 const (
-	pdfMarginMM   = 10
+	pdfXMarginMM  = 15
+	pdfYMarginMM  = 25
 	pdfDPI        = 300
 	mmPerInch     = 25.4
 	dpmm          = pdfDPI / mmPerInch // pixels/mm for 300DPI images
@@ -71,21 +72,13 @@ func process(filename string) {
 	addresses := strings.Split(string(buf), "\n\n")
 	log.Printf("Got %v addresses from %v", len(addresses), filename)
 
-	p := fpdf.NewCustom(&fpdf.InitType{
-		UnitStr: "mm",
-		Size:    fpdf.SizeType{Wd: widthMM, Ht: heightMM},
-	})
-	p.AddPage()
-	p.AddFontFromBytes(font1Family, "", BalsamiqSansRegularJSON, BalsamiqSansRegularZ)
-	p.SetAutoPageBreak(false, 0)
-	p.SetTextColor(0, 0, 0)
-	p.SetFont(font1Family, "", 10)
+	p := newPage()
 	_, lineHeight1 := p.GetFontSize()
 
 	for i, label := range addresses {
 		nx, ny := i%numLabelsX, i/numLabelsX
-		x := pdfMarginMM + float64(nx)*widthMM/numLabelsX
-		y := float64(ny) * (heightMM - pdfMarginMM) / numLabelsY
+		x := pdfXMarginMM + float64(nx)*(widthMM-pdfXMarginMM)/numLabelsX
+		y := 2*lineHeight1 + float64(ny)*(heightMM-pdfYMarginMM)/numLabelsY
 		lines := strings.Split(label, "\n")
 		for j, line := range lines {
 			p.SetXY(x, y+(lineHeight1+1.0)*float64(j))
@@ -97,6 +90,19 @@ func process(filename string) {
 	pdfFilename := filepath.Join(filepath.Dir(filename), filepath.Base(filename)+".pdf")
 	must(p.OutputFileAndClose(pdfFilename))
 	log.Printf("Wrote %v", pdfFilename)
+}
+
+func newPage() fpdf.Pdf {
+	p := fpdf.NewCustom(&fpdf.InitType{
+		UnitStr: "mm",
+		Size:    fpdf.SizeType{Wd: widthMM, Ht: heightMM},
+	})
+	p.AddPage()
+	p.AddFontFromBytes(font1Family, "", BalsamiqSansRegularJSON, BalsamiqSansRegularZ)
+	p.SetAutoPageBreak(false, 0)
+	p.SetTextColor(0, 0, 0)
+	p.SetFont(font1Family, "", 10)
+	return p
 }
 
 func must(err error) {
