@@ -24,6 +24,7 @@ package main
 import (
 	_ "embed"
 	"flag"
+	"fmt"
 	"log"
 	"os"
 	"path/filepath"
@@ -46,6 +47,7 @@ const (
 	labelHeightMM = 25
 	numLabelsX    = 3
 	numLabelsY    = 10
+	labelsPerPage = numLabelsX * numLabelsY
 	font1Family   = "Balsamiq Sans"
 )
 
@@ -70,26 +72,36 @@ func process(filename string) {
 	must(err)
 
 	addresses := strings.Split(string(buf), "\n\n")
-	log.Printf("Got %v addresses from %v", len(addresses), filename)
+	totalPages := 1 + (len(addresses)-1)/(labelsPerPage)
+	log.Printf("Got %v addresses from %v - printing %v pages", len(addresses), filename, totalPages)
 
 	p := newPage()
 	_, lineHeight1 := p.GetFontSize()
+	pageNum := 1
 
 	for i, label := range addresses {
-		nx, ny := i%numLabelsX, i/numLabelsX
+		labelIndex := i % labelsPerPage
+		nx, ny := labelIndex%numLabelsX, labelIndex/numLabelsX
 		x := pdfXMarginMM + float64(nx)*(widthMM-pdfXMarginMM)/numLabelsX
 		y := 2*lineHeight1 + float64(ny)*(heightMM-pdfYMarginMM)/numLabelsY
 		lines := strings.Split(label, "\n")
 		for j, line := range lines {
 			p.SetXY(x, y+(lineHeight1+1.0)*float64(j))
-			// log.Printf("(%v,%v)(%v,%v): %q", nx, ny, x, y, line)
 			p.CellFormat(1, lineHeight1+10.0, line, "", 2, "AL", false, 0, "")
 		}
-	}
 
-	pdfFilename := filepath.Join(filepath.Dir(filename), filepath.Base(filename)+".pdf")
-	must(p.OutputFileAndClose(pdfFilename))
-	log.Printf("Wrote %v", pdfFilename)
+		if i == len(addresses)-1 || i%labelsPerPage == labelsPerPage-1 {
+			outBaseName := filepath.Join(filepath.Dir(filename), filepath.Base(filename))
+			pdfFilename := outBaseName + ".pdf"
+			if totalPages > 1 {
+				pdfFilename = fmt.Sprintf("%v-page-%v-of-%v.pdf", outBaseName, pageNum, totalPages)
+			}
+			must(p.OutputFileAndClose(pdfFilename))
+			log.Printf("Wrote %v", pdfFilename)
+			pageNum++
+			p = newPage()
+		}
+	}
 }
 
 func newPage() fpdf.Pdf {
